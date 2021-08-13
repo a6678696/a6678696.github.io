@@ -14,6 +14,21 @@
       </tags>
   </entry>
   <entry>
+    <title>解决：关于CKEditor的代码高亮</title>
+    <url>/101.html</url>
+    <content><![CDATA[<h3 id="去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）"><a href="#去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）" class="headerlink" title="去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）"></a><strong>去代码在线高亮网站获得高亮后的HTML代码：</strong>（网站如下图所示）</h3><p>地址：<a href="https://c.runoob.com/front-end/5536">https://c.runoob.com/front-end/5536</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194044.jpg" alt="img"></p>
+<p>说明：①处填入要高亮的原始代码，②处是高亮后的HTML代码（是我们需要的），③处是高亮后的代码的效果预览</p>
+<h3 id="点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可"><a href="#点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可" class="headerlink" title="点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可"></a><strong>点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194504.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>利用highlight.js实现代码高亮：<a href="/126.html">highlight.js实现代码高亮</a></p>]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>CKEditor</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一个非常好用的Java工具包：HulTool</title>
     <url>/100.html</url>
     <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a><strong>官方网站</strong></h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
@@ -32,21 +47,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决：关于CKEditor的代码高亮</title>
-    <url>/101.html</url>
-    <content><![CDATA[<h3 id="去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）"><a href="#去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）" class="headerlink" title="去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）"></a><strong>去代码在线高亮网站获得高亮后的HTML代码：</strong>（网站如下图所示）</h3><p>地址：<a href="https://c.runoob.com/front-end/5536">https://c.runoob.com/front-end/5536</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194044.jpg" alt="img"></p>
-<p>说明：①处填入要高亮的原始代码，②处是高亮后的HTML代码（是我们需要的），③处是高亮后的代码的效果预览</p>
-<h3 id="点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可"><a href="#点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可" class="headerlink" title="点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可"></a><strong>点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194504.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>利用highlight.js实现代码高亮：<a href="/126.html">highlight.js实现代码高亮</a></p>]]></content>
-      <categories>
-        <category>其它</category>
-      </categories>
-      <tags>
-        <tag>CKEditor</tag>
       </tags>
   </entry>
   <entry>
@@ -180,6 +180,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Github私有仓库改为公开</title>
+    <url>/11.html</url>
+    <content><![CDATA[<h3 id="进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）"><a href="#进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）" class="headerlink" title="进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）"></a><strong>进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）</strong></h3><p><img src="https://i.loli.net/2021/07/29/u3lyp6t9j2k4V1F.png" alt="20210227090442.jpg"></p>
+<h3 id="在出现的页面找到Danger-Zone（在最下面），点击Change-visibility按钮"><a href="#在出现的页面找到Danger-Zone（在最下面），点击Change-visibility按钮" class="headerlink" title="在出现的页面找到Danger Zone（在最下面），点击Change visibility按钮"></a><strong>在出现的页面找到Danger Zone（在最下面），点击Change visibility按钮</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165133.jpg"></p>
+<h3 id="然后选择Make-public，并根据提示输入指定内容，点击同意按钮，然后输入GitHub账号的密码即可修改完成"><a href="#然后选择Make-public，并根据提示输入指定内容，点击同意按钮，然后输入GitHub账号的密码即可修改完成" class="headerlink" title="然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入GitHub账号的密码即可修改完成"></a><strong>然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入GitHub账号的密码即可修改完成</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165306.jpg"></p>]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>部落冲突攻略</title>
     <url>/110.html</url>
     <content><![CDATA[<h3 id="部落冲突指导网站"><a href="#部落冲突指导网站" class="headerlink" title="部落冲突指导网站"></a><strong>部落冲突指导网站</strong></h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
@@ -223,19 +236,6 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github私有仓库改为公开</title>
-    <url>/11.html</url>
-    <content><![CDATA[<h3 id="进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）"><a href="#进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）" class="headerlink" title="进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）"></a><strong>进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）</strong></h3><p><img src="https://i.loli.net/2021/07/29/u3lyp6t9j2k4V1F.png" alt="20210227090442.jpg"></p>
-<h3 id="在出现的页面找到Danger-Zone（在最下面），点击Change-visibility按钮"><a href="#在出现的页面找到Danger-Zone（在最下面），点击Change-visibility按钮" class="headerlink" title="在出现的页面找到Danger Zone（在最下面），点击Change visibility按钮"></a><strong>在出现的页面找到Danger Zone（在最下面），点击Change visibility按钮</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165133.jpg"></p>
-<h3 id="然后选择Make-public，并根据提示输入指定内容，点击同意按钮，然后输入GitHub账号的密码即可修改完成"><a href="#然后选择Make-public，并根据提示输入指定内容，点击同意按钮，然后输入GitHub账号的密码即可修改完成" class="headerlink" title="然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入GitHub账号的密码即可修改完成"></a><strong>然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入GitHub账号的密码即可修改完成</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165306.jpg"></p>]]></content>
-      <categories>
-        <category>GitHub</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -789,29 +789,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MyBatis动态SQL示例</title>
-    <url>/124.html</url>
-    <content><![CDATA[<h3 id="if"><a href="#if" class="headerlink" title="if"></a><strong>if</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BlogResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_blog</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null and title != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and title like #&#123;title&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;blogTypeId != null&quot;</span>&gt;</span></span><br><span class="line">			and blogTypeId = #&#123;blogTypeId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlog != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog = #&#123;isMenuBlog&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlogKey != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog != 1</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;releaseDateStr != null and releaseDateStr != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and date_format(releaseDate, &#x27;%Y年%m月&#x27;) = #&#123;releaseDateStr&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;sortByReleaseDate == null&quot;</span>&gt;</span></span><br><span class="line">		order by releaseDate desc</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="choose、when、otherwise"><a href="#choose、when、otherwise" class="headerlink" title="choose、when、otherwise"></a><strong>choose、when、otherwise</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findActiveBlogLike&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM BLOG WHERE state = ‘ACTIVE’</span><br><span class="line">  <span class="tag">&lt;<span class="name">choose</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">      AND title like #&#123;title&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">      AND author_name like #&#123;author.name&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">otherwise</span>&gt;</span></span><br><span class="line">      AND featured = 1</span><br><span class="line">    <span class="tag">&lt;/<span class="name">otherwise</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">choose</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="trim、where、set"><a href="#trim、where、set" class="headerlink" title="trim、where、set"></a><strong>trim、where、set</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;WHERE&quot;</span> <span class="attr">prefixOverrides</span>=<span class="string">&quot;AND |OR &quot;</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findActiveBlogLike&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;state != null&quot;</span>&gt;</span></span><br><span class="line">         state = #&#123;state&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">        AND title like #&#123;title&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">        AND author_name like #&#123;author.name&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;updateAuthorIfNecessary&quot;</span>&gt;</span></span><br><span class="line">  update Author</span><br><span class="line">    <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;username != null&quot;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;password != null&quot;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;email != null&quot;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;bio != null&quot;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">  where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a><strong>foreach</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectPostIn&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;domain.blog.Post&quot;</span>&gt;</span></span><br><span class="line">  SELECT *</span><br><span class="line">  FROM POST P</span><br><span class="line">  WHERE ID in</span><br><span class="line">  <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;list&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">        #&#123;item&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="script"><a href="#script" class="headerlink" title="script"></a><strong>script</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">@Update(&#123;&quot;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;update Author&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;username != null&#x27;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;password != null&#x27;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;email != null&#x27;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;bio != null&#x27;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;/<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;where id=#&#123;id&#125;&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>&quot;&#125;)</span><br><span class="line">void updateAuthorValues(Author author);</span><br></pre></td></tr></table></figure>
-
-<h3 id="bind"><a href="#bind" class="headerlink" title="bind"></a><strong>bind</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectBlogsLike&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bind</span> <span class="attr">name</span>=<span class="string">&quot;pattern&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#x27;%&#x27; + _parameter.getTitle() + &#x27;%&#x27;&quot;</span> /&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  WHERE title LIKE #&#123;pattern&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>详情查看：<a href="https://mybatis.org/mybatis-3/zh/dynamic-sql.html">mybatis – MyBatis 3 | 动态 SQL</a></p>]]></content>
-      <categories>
-        <category>MyBatis</category>
-      </categories>
-      <tags>
-        <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MyBatis的关联（association）元素</title>
     <url>/125.html</url>
     <content><![CDATA[<h3 id="关联（association）元素处理“有一个”类型的关系。-比如，在示例中，一个博客有一个用户。"><a href="#关联（association）元素处理“有一个”类型的关系。-比如，在示例中，一个博客有一个用户。" class="headerlink" title="关联（association）元素处理“有一个”类型的关系。 比如，在示例中，一个博客有一个用户。"></a><strong>关联（association）元素处理“有一个”类型的关系。 比如，在示例中，一个博客有一个用户。</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;blogResult&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;author&quot;</span> <span class="attr">column</span>=<span class="string">&quot;author_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;Author&quot;</span> <span class="attr">select</span>=<span class="string">&quot;selectAuthor&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectAuthor&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Author&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM AUTHOR WHERE ID = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -844,6 +821,29 @@
       <tags>
         <tag>前端</tag>
         <tag>highlight.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis动态SQL示例</title>
+    <url>/124.html</url>
+    <content><![CDATA[<h3 id="if"><a href="#if" class="headerlink" title="if"></a><strong>if</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BlogResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_blog</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null and title != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and title like #&#123;title&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;blogTypeId != null&quot;</span>&gt;</span></span><br><span class="line">			and blogTypeId = #&#123;blogTypeId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlog != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog = #&#123;isMenuBlog&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlogKey != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog != 1</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;releaseDateStr != null and releaseDateStr != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and date_format(releaseDate, &#x27;%Y年%m月&#x27;) = #&#123;releaseDateStr&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;sortByReleaseDate == null&quot;</span>&gt;</span></span><br><span class="line">		order by releaseDate desc</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="choose、when、otherwise"><a href="#choose、when、otherwise" class="headerlink" title="choose、when、otherwise"></a><strong>choose、when、otherwise</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findActiveBlogLike&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM BLOG WHERE state = ‘ACTIVE’</span><br><span class="line">  <span class="tag">&lt;<span class="name">choose</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">      AND title like #&#123;title&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">      AND author_name like #&#123;author.name&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">otherwise</span>&gt;</span></span><br><span class="line">      AND featured = 1</span><br><span class="line">    <span class="tag">&lt;/<span class="name">otherwise</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">choose</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="trim、where、set"><a href="#trim、where、set" class="headerlink" title="trim、where、set"></a><strong>trim、where、set</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;WHERE&quot;</span> <span class="attr">prefixOverrides</span>=<span class="string">&quot;AND |OR &quot;</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findActiveBlogLike&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;state != null&quot;</span>&gt;</span></span><br><span class="line">         state = #&#123;state&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">        AND title like #&#123;title&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">        AND author_name like #&#123;author.name&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;updateAuthorIfNecessary&quot;</span>&gt;</span></span><br><span class="line">  update Author</span><br><span class="line">    <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;username != null&quot;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;password != null&quot;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;email != null&quot;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;bio != null&quot;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">  where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a><strong>foreach</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectPostIn&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;domain.blog.Post&quot;</span>&gt;</span></span><br><span class="line">  SELECT *</span><br><span class="line">  FROM POST P</span><br><span class="line">  WHERE ID in</span><br><span class="line">  <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;list&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">        #&#123;item&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="script"><a href="#script" class="headerlink" title="script"></a><strong>script</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">@Update(&#123;&quot;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;update Author&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;username != null&#x27;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;password != null&#x27;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;email != null&#x27;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;bio != null&#x27;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;/<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;where id=#&#123;id&#125;&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>&quot;&#125;)</span><br><span class="line">void updateAuthorValues(Author author);</span><br></pre></td></tr></table></figure>
+
+<h3 id="bind"><a href="#bind" class="headerlink" title="bind"></a><strong>bind</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectBlogsLike&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bind</span> <span class="attr">name</span>=<span class="string">&quot;pattern&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#x27;%&#x27; + _parameter.getTitle() + &#x27;%&#x27;&quot;</span> /&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  WHERE title LIKE #&#123;pattern&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>详情查看：<a href="https://mybatis.org/mybatis-3/zh/dynamic-sql.html">mybatis – MyBatis 3 | 动态 SQL</a></p>]]></content>
+      <categories>
+        <category>MyBatis</category>
+      </categories>
+      <tags>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
   <entry>
@@ -1113,22 +1113,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java截取两个字符串之间的字符串</title>
-    <url>/137.html</url>
-    <content><![CDATA[<h3 id="使用的方法"><a href="#使用的方法" class="headerlink" title="使用的方法"></a>使用的方法</h3><h4 id="String-indexOf"><a href="#String-indexOf" class="headerlink" title="String.indexOf"></a><strong>String.indexOf</strong></h4><p>传入的数据类型为String，返回传入字符串第一次出现的位置（索引从0开始，返回字符串第一个字符的位置）</p>
-<h4 id="String-substring"><a href="#String-substring" class="headerlink" title="String.substring"></a><strong>String.substring</strong></h4><p>传入数据类型为两个int，用于截取字符串（包括头，不包括尾）</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a><strong>Java代码</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-07 7:25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;12345678923&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> begin = str.indexOf(<span class="string">&quot;23&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> last = str.indexOf(<span class="string">&quot;89&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;23\&quot;第一次出现的位置为:&quot;</span> + begin);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;89\&quot;第一次出现的位置为:&quot;</span> + last);</span><br><span class="line">        String substring = str.substring(begin + <span class="number">2</span>, last);</span><br><span class="line">        System.out.println(<span class="string">&quot;截取的结果为:&quot;</span> + substring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607092942.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>要截取什么样的字符串可根据String.substring包括头不包括尾的特性来灵活截取</p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java实现HTTP请求</title>
     <url>/136.html</url>
     <content><![CDATA[<h3 id="commons-httpclient"><a href="#commons-httpclient" class="headerlink" title="commons-httpclient"></a><strong>commons-httpclient</strong></h3><p>pom.xml代码：</p>
@@ -1142,6 +1126,22 @@
 
 <p>Java代码：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	String ip = <span class="string">&quot;116.179.32.87&quot;</span>;</span><br><span class="line">	String url = <span class="string">&quot;http://ip.ws.126.net/ipquery?ip=&quot;</span> + ip;</span><br><span class="line">	String str = HttpUtil.get(url);</span><br><span class="line">	System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java截取两个字符串之间的字符串</title>
+    <url>/137.html</url>
+    <content><![CDATA[<h3 id="使用的方法"><a href="#使用的方法" class="headerlink" title="使用的方法"></a>使用的方法</h3><h4 id="String-indexOf"><a href="#String-indexOf" class="headerlink" title="String.indexOf"></a><strong>String.indexOf</strong></h4><p>传入的数据类型为String，返回传入字符串第一次出现的位置（索引从0开始，返回字符串第一个字符的位置）</p>
+<h4 id="String-substring"><a href="#String-substring" class="headerlink" title="String.substring"></a><strong>String.substring</strong></h4><p>传入数据类型为两个int，用于截取字符串（包括头，不包括尾）</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a><strong>Java代码</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-07 7:25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;12345678923&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> begin = str.indexOf(<span class="string">&quot;23&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> last = str.indexOf(<span class="string">&quot;89&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;23\&quot;第一次出现的位置为:&quot;</span> + begin);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;89\&quot;第一次出现的位置为:&quot;</span> + last);</span><br><span class="line">        String substring = str.substring(begin + <span class="number">2</span>, last);</span><br><span class="line">        System.out.println(<span class="string">&quot;截取的结果为:&quot;</span> + substring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607092942.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>要截取什么样的字符串可根据String.substring包括头不包括尾的特性来灵活截取</p>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -1213,6 +1213,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Maven找依赖包或下载jar包</title>
+    <url>/139.html</url>
+    <content><![CDATA[<h3 id="进入网站"><a href="#进入网站" class="headerlink" title="进入网站"></a><strong>进入网站</strong></h3><p><a href="https://mvnrepository.com/">https://mvnrepository.com/</a></p>
+<h3 id="搜索要使用的依赖包（搜索gson）"><a href="#搜索要使用的依赖包（搜索gson）" class="headerlink" title="搜索要使用的依赖包（搜索gson）"></a><strong>搜索要使用的依赖包（搜索gson）</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104110.jpg" alt="img"></p>
+<h3 id="选择要使用的版本，点击Version列的版本号"><a href="#选择要使用的版本，点击Version列的版本号" class="headerlink" title="选择要使用的版本，点击Version列的版本号"></a><strong>选择要使用的版本，点击Version列的版本号</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104226.jpg" alt="img"></p>
+<h3 id="点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom-xml的引入代码"><a href="#点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom-xml的引入代码" class="headerlink" title="点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom.xml的引入代码"></a><strong>点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom.xml的引入代码</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104520.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>Maven</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring Boot2.0实现自定义404页面渲染</title>
     <url>/14.html</url>
     <content><![CDATA[<h3 id="第一种写法"><a href="#第一种写法" class="headerlink" title="第一种写法"></a><strong>第一种写法</strong></h3><p>实现ErrorPageRegistrar(404.html放在项目webapp下)</p>
@@ -1226,20 +1240,6 @@
       <tags>
         <tag>Java</tag>
         <tag>Spring Boot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Maven找依赖包或下载jar包</title>
-    <url>/139.html</url>
-    <content><![CDATA[<h3 id="进入网站"><a href="#进入网站" class="headerlink" title="进入网站"></a><strong>进入网站</strong></h3><p><a href="https://mvnrepository.com/">https://mvnrepository.com/</a></p>
-<h3 id="搜索要使用的依赖包（搜索gson）"><a href="#搜索要使用的依赖包（搜索gson）" class="headerlink" title="搜索要使用的依赖包（搜索gson）"></a><strong>搜索要使用的依赖包（搜索gson）</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104110.jpg" alt="img"></p>
-<h3 id="选择要使用的版本，点击Version列的版本号"><a href="#选择要使用的版本，点击Version列的版本号" class="headerlink" title="选择要使用的版本，点击Version列的版本号"></a><strong>选择要使用的版本，点击Version列的版本号</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104226.jpg" alt="img"></p>
-<h3 id="点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom-xml的引入代码"><a href="#点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom-xml的引入代码" class="headerlink" title="点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom.xml的引入代码"></a><strong>点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom.xml的引入代码</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104520.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>Maven</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -1516,20 +1516,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安装Tomcat</title>
-    <url>/147.html</url>
-    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a><strong>下载</strong></h3><p>网站地址：<a href="https://tomcat.apache.org/download-90.cgi">https://tomcat.apache.org/download-90.cgi</a></p>
-<p>下载第三（32位）或者第四个（64位），根据自己的电脑选择（解压版，无需安装）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615051649.jpg" alt="img"></p>
-<h3 id="解压到指定文件夹即可"><a href="#解压到指定文件夹即可" class="headerlink" title="解压到指定文件夹即可"></a><strong>解压到指定文件夹即可</strong></h3>]]></content>
-      <categories>
-        <category>Tomcat</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea配置Tomcat</title>
     <url>/148.html</url>
     <content><![CDATA[<h3 id="打开配置界面"><a href="#打开配置界面" class="headerlink" title="打开配置界面"></a>打开配置界面</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615051928.jpg" alt="img"></p>
@@ -1547,6 +1533,20 @@
       <tags>
         <tag>Tomcat</tag>
         <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装Tomcat</title>
+    <url>/147.html</url>
+    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a><strong>下载</strong></h3><p>网站地址：<a href="https://tomcat.apache.org/download-90.cgi">https://tomcat.apache.org/download-90.cgi</a></p>
+<p>下载第三（32位）或者第四个（64位），根据自己的电脑选择（解压版，无需安装）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615051649.jpg" alt="img"></p>
+<h3 id="解压到指定文件夹即可"><a href="#解压到指定文件夹即可" class="headerlink" title="解压到指定文件夹即可"></a><strong>解压到指定文件夹即可</strong></h3>]]></content>
+      <categories>
+        <category>Tomcat</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -1577,6 +1577,21 @@
       <tags>
         <tag>Windows10</tag>
         <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Xshell连接CentOS7</title>
+    <url>/150.html</url>
+    <content><![CDATA[<h3 id="新建连接"><a href="#新建连接" class="headerlink" title="新建连接"></a><strong>新建连接</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616102910.jpg" alt="img"></p>
+<h3 id="填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）"><a href="#填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）" class="headerlink" title="填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）"></a><strong>填写会话属性（如果不知道CentOS7的ip，查看博客：<a href="http://www.zoutl.cn/blog/183">查看虚拟机里的CentOS7的IP</a>）</strong></h3><p>为了方便辨认，名称和主机填CentOS7的ip，端口号填22</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103147.jpg" alt="img"></p>
+<h3 id="点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可"><a href="#点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可" class="headerlink" title="点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可"></a><strong>点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103530.jpg" alt="img"></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103916.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
       </tags>
   </entry>
   <entry>
@@ -1875,21 +1890,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Xshell连接CentOS7</title>
-    <url>/150.html</url>
-    <content><![CDATA[<h3 id="新建连接"><a href="#新建连接" class="headerlink" title="新建连接"></a><strong>新建连接</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616102910.jpg" alt="img"></p>
-<h3 id="填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）"><a href="#填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）" class="headerlink" title="填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）"></a><strong>填写会话属性（如果不知道CentOS7的ip，查看博客：<a href="http://www.zoutl.cn/blog/183">查看虚拟机里的CentOS7的IP</a>）</strong></h3><p>为了方便辨认，名称和主机填CentOS7的ip，端口号填22</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103147.jpg" alt="img"></p>
-<h3 id="点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可"><a href="#点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可" class="headerlink" title="点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可"></a><strong>点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103530.jpg" alt="img"></p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103916.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
         <tag>CentOS7</tag>
       </tags>
   </entry>
@@ -2858,20 +2858,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Maven出现错误：Plugin &#39;org.springframework.boot:spring-boot-maven-plugin:&#39; not found</title>
-    <url>/177.html</url>
-    <content><![CDATA[<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a><strong>解决办法</strong></h3><p>给spring-boot-maven-plugin指定版本</p>
-<h3 id="修改前"><a href="#修改前" class="headerlink" title="修改前"></a><strong>修改前</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改后"><a href="#修改后" class="headerlink" title="修改后"></a><strong>修改后</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Maven</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>a标签实现文件下载</title>
     <url>/178.html</url>
     <content><![CDATA[<h3 id="通过纯前端技术实现文件下载，直接把a标签的href属性设置为文件路径即可"><a href="#通过纯前端技术实现文件下载，直接把a标签的href属性设置为文件路径即可" class="headerlink" title="通过纯前端技术实现文件下载，直接把a标签的href属性设置为文件路径即可"></a><strong>通过纯前端技术实现文件下载，直接把a标签的href属性设置为文件路径即可</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://www.zoutl.cn/fileDownload/nhdogjmejiglipccpnnnanhbledajbpd.zip&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;下载&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;下载&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2911,6 +2897,20 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maven出现错误：Plugin &#39;org.springframework.boot:spring-boot-maven-plugin:&#39; not found</title>
+    <url>/177.html</url>
+    <content><![CDATA[<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a><strong>解决办法</strong></h3><p>给spring-boot-maven-plugin指定版本</p>
+<h3 id="修改前"><a href="#修改前" class="headerlink" title="修改前"></a><strong>修改前</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改后"><a href="#修改后" class="headerlink" title="修改后"></a><strong>修改后</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Maven</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -3415,7 +3415,7 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
 <p>安装是否安装成功，分别输入命令node –version，npm -v都可以看到版本号说明Node.js安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
-<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a><strong>安装vue-cli脚手架</strong></h3><p>打开cmd，输入命令：npm install -g <a href="mailto:&#x76;&#x75;&#x65;&#45;&#x63;&#x6c;&#105;&#x40;&#50;&#x2e;&#x39;&#x2e;&#54;">&#x76;&#x75;&#x65;&#45;&#x63;&#x6c;&#105;&#x40;&#50;&#x2e;&#x39;&#x2e;&#54;</a>，运行</p>
+<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a><strong>安装vue-cli脚手架</strong></h3><p>打开cmd，输入命令：npm install -g <a href="mailto:&#x76;&#x75;&#x65;&#45;&#99;&#108;&#x69;&#64;&#50;&#46;&#x39;&#x2e;&#54;">&#x76;&#x75;&#x65;&#45;&#99;&#108;&#x69;&#64;&#50;&#46;&#x39;&#x2e;&#54;</a>，运行</p>
 <p>等待安装完成，输入命令：vue -V，看到版本号说明脚手架安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>]]></content>
       <categories>
@@ -3870,6 +3870,21 @@
       </tags>
   </entry>
   <entry>
+    <title>线性查找</title>
+    <url>/219.html</url>
+    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h3><p>线性查找又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a><strong>Java代码</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">3</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">21</span>, <span class="number">34</span>, <span class="number">65</span>, <span class="number">13</span>, <span class="number">67</span>, <span class="number">23</span>, <span class="number">89</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入你要查找的数：&quot;</span>);</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> num = sc.nextInt();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (num == arr[i]) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;你要查找的数的数组下标为：&quot;</span> + i);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i == arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;你要查找的数不存在！！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720225427.jpg" alt="img"> <img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720225213.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java的HTML解析器：jsoup</title>
     <url>/218.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h3><p>jsoup 是一款Java 的HTML解析器，可直接解析某个URL地址、HTML文本内容。它提供了一套非常省力的API，可通过DOM，CSS以及类似于jQuery的操作方法来取出和操作数据。</p>
@@ -3895,21 +3910,6 @@
       <tags>
         <tag>Java</tag>
         <tag>jsoup</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>线性查找</title>
-    <url>/219.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h3><p>线性查找又称顺序查找，是一种最简单的查找方法，它的基本思想是从第一个记录开始，逐个比较记录的关键字，直到和给定的K值相等，则查找成功；若比较结果与文件中n个记录的关键字都不等，则查找失败。</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a><strong>Java代码</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">3</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">9</span>, <span class="number">21</span>, <span class="number">34</span>, <span class="number">65</span>, <span class="number">13</span>, <span class="number">67</span>, <span class="number">23</span>, <span class="number">89</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入你要查找的数：&quot;</span>);</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> num = sc.nextInt();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (num == arr[i]) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;你要查找的数的数组下标为：&quot;</span> + i);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (i == arr.length - <span class="number">1</span>) &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;你要查找的数不存在！！&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720225427.jpg" alt="img"> <img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720225213.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -4370,10 +4370,34 @@
 <p>连续按下回车键三次，至此本机的ssh密匙创建完成，该密钥一般存放在C盘的用户文件夹的.ssh文件夹中（我的是C:\Users\LeDao.ssh）</p>
 <h4 id="配置Github的SSH-Key"><a href="#配置Github的SSH-Key" class="headerlink" title="配置Github的SSH Key"></a><strong>配置Github的SSH Key</strong></h4><p>进入Github首页，点击右上角的头像选择Settings，选择左侧菜单的SSH and GPG keys，然后点击右侧的New SSH key按钮，打开上面第三步的本地密钥id_rsa.pub文件（用记事本打开并复制其内容），复制到GitHub的key文本框中，title可以随意设置</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729123108.jpg" alt="img"></p>
-<h4 id="输入-ssh-T-103-105-116-64-x67-x69-116-x68-x75-98-x2e-99-x6f-x6d-测试是否配置成功"><a href="#输入-ssh-T-103-105-116-64-x67-x69-116-x68-x75-98-x2e-99-x6f-x6d-测试是否配置成功" class="headerlink" title="输入 ssh -T &#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d; 测试是否配置成功"></a><strong>输入 ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#116;&#x68;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;</a> 测试是否配置成功</strong></h4><p>出现：Are you sure you want to continue connecting (yes/no/[fingerprint])?</p>
+<h4 id="输入-ssh-T-103-105-x74-x40-x67-105-x74-104-x75-98-46-x63-111-109-测试是否配置成功"><a href="#输入-ssh-T-103-105-x74-x40-x67-105-x74-104-x75-98-46-x63-111-109-测试是否配置成功" class="headerlink" title="输入 ssh -T &#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#109; 测试是否配置成功"></a><strong>输入 ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#109;">&#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#46;&#x63;&#111;&#109;</a> 测试是否配置成功</strong></h4><p>出现：Are you sure you want to continue connecting (yes/no/[fingerprint])?</p>
 <p>输入yes</p>
 <p>看到 Hi a6678696! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 <p>说明配置成功</p>]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git上传本地代码到GitHub</title>
+    <url>/237.html</url>
+    <content><![CDATA[<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a><strong>初始化仓库</strong></h3><p>初始化一个 Git 仓库，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变（需要进入要初始化的文件夹内部，右键点击选择Git Bash Here）</p>
+<p>输入初始化命令：git init</p>
+<p>输入命令查看当前状态：git status，文件名颜色为红色</p>
+<h3 id="将项目的所有文件添加到仓库中"><a href="#将项目的所有文件添加到仓库中" class="headerlink" title="将项目的所有文件添加到仓库中"></a><strong>将项目的所有文件添加到仓库中</strong></h3><p>输入添加命令：git add .</p>
+<p>输入命令查看当前状态：git status，文件名颜色为绿色</p>
+<h3 id="将add的文件commit到仓库"><a href="#将add的文件commit到仓库" class="headerlink" title="将add的文件commit到仓库"></a><strong>将add的文件commit到仓库</strong></h3><p>输入提交命令：git commit -m “提交备注”</p>
+<p>输入命令查看当前状态：git status，发现没有东西可以提交</p>
+<h3 id="复制Github项目的SSH地址"><a href="#复制Github项目的SSH地址" class="headerlink" title="复制Github项目的SSH地址"></a><strong>复制Github项目的SSH地址</strong></h3><p>记得先配置GitHub的SSH Key，如何配置查看博客：<a href="/236.html">GitHub配置SSH Key</a></p>
+<h3 id="将本地的仓库关联到GitHub上"><a href="#将本地的仓库关联到GitHub上" class="headerlink" title="将本地的仓库关联到GitHub上"></a><strong>将本地的仓库关联到GitHub上</strong></h3><p>把上一步复制的地址放到下面，覆盖绿色字体，如果已经关联过则省略本步骤</p>
+<p>输入命令：git remote add origin <font color="#00dd00">git@github.com:*****/*****.git </font></p>
+<h3 id="上传GitHub之前，要先pull一下"><a href="#上传GitHub之前，要先pull一下" class="headerlink" title="上传GitHub之前，要先pull一下"></a><strong>上传GitHub之前，要先pull一下</strong></h3><p>如果仓库为空的话，直接push就可以了</p>
+<p>输入命令：git pull origin master</p>
+<h3 id="上传代码到GitHub远程仓库"><a href="#上传代码到GitHub远程仓库" class="headerlink" title="上传代码到GitHub远程仓库"></a><strong>上传代码到GitHub远程仓库</strong></h3><p>输入命令：git push -u origin master</p>
+<h3 id="去GitHub查看结果"><a href="#去GitHub查看结果" class="headerlink" title="去GitHub查看结果"></a><strong>去GitHub查看结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729132853.jpg" alt="img"></p>]]></content>
       <categories>
         <category>GitHub</category>
       </categories>
@@ -4387,7 +4411,7 @@
     <content><![CDATA[<h3 id="新建config文本"><a href="#新建config文本" class="headerlink" title="新建config文本"></a><strong>新建config文本</strong></h3><p>在存放公钥私钥（id_rsa 和 id_rsa.pub）的文件夹里，新建config文本，内容如下：</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 注册GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port <span class="number">443</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="测试连接是否成功"><a href="#测试连接是否成功" class="headerlink" title="测试连接是否成功"></a><strong>测试连接是否成功</strong></h3><p>再次执行 ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;</a> 时，会出现提示如下，回车”yes”即可。</p>]]></content>
+<h3 id="测试连接是否成功"><a href="#测试连接是否成功" class="headerlink" title="测试连接是否成功"></a><strong>测试连接是否成功</strong></h3><p>再次执行 ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#64;&#103;&#x69;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a> 时，会出现提示如下，回车”yes”即可。</p>]]></content>
       <categories>
         <category>GitHub</category>
       </categories>
@@ -4414,30 +4438,6 @@
       <tags>
         <tag>GitHub</tag>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git上传本地代码到GitHub</title>
-    <url>/237.html</url>
-    <content><![CDATA[<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a><strong>初始化仓库</strong></h3><p>初始化一个 Git 仓库，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变（需要进入要初始化的文件夹内部，右键点击选择Git Bash Here）</p>
-<p>输入初始化命令：git init</p>
-<p>输入命令查看当前状态：git status，文件名颜色为红色</p>
-<h3 id="将项目的所有文件添加到仓库中"><a href="#将项目的所有文件添加到仓库中" class="headerlink" title="将项目的所有文件添加到仓库中"></a><strong>将项目的所有文件添加到仓库中</strong></h3><p>输入添加命令：git add .</p>
-<p>输入命令查看当前状态：git status，文件名颜色为绿色</p>
-<h3 id="将add的文件commit到仓库"><a href="#将add的文件commit到仓库" class="headerlink" title="将add的文件commit到仓库"></a><strong>将add的文件commit到仓库</strong></h3><p>输入提交命令：git commit -m “提交备注”</p>
-<p>输入命令查看当前状态：git status，发现没有东西可以提交</p>
-<h3 id="复制Github项目的SSH地址"><a href="#复制Github项目的SSH地址" class="headerlink" title="复制Github项目的SSH地址"></a><strong>复制Github项目的SSH地址</strong></h3><p>记得先配置GitHub的SSH Key，如何配置查看博客：<a href="/236.html">GitHub配置SSH Key</a></p>
-<h3 id="将本地的仓库关联到GitHub上"><a href="#将本地的仓库关联到GitHub上" class="headerlink" title="将本地的仓库关联到GitHub上"></a><strong>将本地的仓库关联到GitHub上</strong></h3><p>把上一步复制的地址放到下面，覆盖绿色字体，如果已经关联过则省略本步骤</p>
-<p>输入命令：git remote add origin <font color="#00dd00">git@github.com:*****/*****.git </font></p>
-<h3 id="上传GitHub之前，要先pull一下"><a href="#上传GitHub之前，要先pull一下" class="headerlink" title="上传GitHub之前，要先pull一下"></a><strong>上传GitHub之前，要先pull一下</strong></h3><p>如果仓库为空的话，直接push就可以了</p>
-<p>输入命令：git pull origin master</p>
-<h3 id="上传代码到GitHub远程仓库"><a href="#上传代码到GitHub远程仓库" class="headerlink" title="上传代码到GitHub远程仓库"></a><strong>上传代码到GitHub远程仓库</strong></h3><p>输入命令：git push -u origin master</p>
-<h3 id="去GitHub查看结果"><a href="#去GitHub查看结果" class="headerlink" title="去GitHub查看结果"></a><strong>去GitHub查看结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729132853.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>GitHub</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -4797,34 +4797,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用Dubbo Admin控制台</title>
-    <url>/254.html</url>
-    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>阿里云盘链接：<a href="https://www.aliyundrive.com/s/nZaiPAfGKnq">https://www.aliyundrive.com/s/nZaiPAfGKnq</a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装一个Tomcat7，平时不使用，专门用来运行Dubbo Admin控制台，安装步骤 ：<a href="/147.html">安装Tomcat</a></p>
-<p>删除Tomcat7的安装目录webapp/ROOT文件夹中的全部文件（该ROOT文件夹为直接输入端口号时显示的Tomcat主页）</p>
-<p>解压下载的dubbo-admin-2.6.0.war，复制解压后的所有文件到webapp/ROOT文件夹中</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20234017.png"></p>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>必须先启动Zookeeper，如何启动查看：<a href="/251.html#%E8%BF%90%E8%A1%8C">Windows10安装ZooKeeper</a></p>
-<p>双击Tomcat7的安装目录bin文件夹中的startup.bat运行Tomcat7，在浏览器地址栏输入localhost:8080，输入用户名和密码，默认用户名和密码都是root</p>
-<p>如果输入localhost:8080后出现下面图片所示的界面，说明8080端口被占用了，那么直接修改Tomcat7的默认端口，去修改Tomcat7的配置文件server.xml（在conf文件夹中）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20235223.png"></p>
-<p>修改前：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">&quot;8080&quot;</span> <span class="attr">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>修改后：（我修改为8888）</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">&quot;8888&quot;</span> <span class="attr">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在地址栏中输入localhost:8888，输入用户名和密码，即可进入Dubbo Admin控制台</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20235847.png"></p>]]></content>
-      <categories>
-        <category>Dubbo</category>
-      </categories>
-      <tags>
-        <tag>ZooKeeper</tag>
-        <tag>Dubbo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>发布Dubbo服务</title>
     <url>/255.html</url>
     <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>新建一个Maven项目名称为DubboDemo，在该项目下新建一个子模块项目名称为Provider</p>
@@ -4851,6 +4823,34 @@
       </categories>
       <tags>
         <tag>Java</tag>
+        <tag>Dubbo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Dubbo Admin控制台</title>
+    <url>/254.html</url>
+    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>阿里云盘链接：<a href="https://www.aliyundrive.com/s/nZaiPAfGKnq">https://www.aliyundrive.com/s/nZaiPAfGKnq</a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装一个Tomcat7，平时不使用，专门用来运行Dubbo Admin控制台，安装步骤 ：<a href="/147.html">安装Tomcat</a></p>
+<p>删除Tomcat7的安装目录webapp/ROOT文件夹中的全部文件（该ROOT文件夹为直接输入端口号时显示的Tomcat主页）</p>
+<p>解压下载的dubbo-admin-2.6.0.war，复制解压后的所有文件到webapp/ROOT文件夹中</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20234017.png"></p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>必须先启动Zookeeper，如何启动查看：<a href="/251.html#%E8%BF%90%E8%A1%8C">Windows10安装ZooKeeper</a></p>
+<p>双击Tomcat7的安装目录bin文件夹中的startup.bat运行Tomcat7，在浏览器地址栏输入localhost:8080，输入用户名和密码，默认用户名和密码都是root</p>
+<p>如果输入localhost:8080后出现下面图片所示的界面，说明8080端口被占用了，那么直接修改Tomcat7的默认端口，去修改Tomcat7的配置文件server.xml（在conf文件夹中）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20235223.png"></p>
+<p>修改前：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">&quot;8080&quot;</span> <span class="attr">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>修改后：（我修改为8888）</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">&quot;8888&quot;</span> <span class="attr">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在地址栏中输入localhost:8888，输入用户名和密码，即可进入Dubbo Admin控制台</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20235847.png"></p>]]></content>
+      <categories>
+        <category>Dubbo</category>
+      </categories>
+      <tags>
+        <tag>ZooKeeper</tag>
         <tag>Dubbo</tag>
       </tags>
   </entry>
@@ -5417,6 +5417,50 @@
       <tags>
         <tag>Spring Cloud</tag>
         <tag>Feign</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Hystrix断路器</title>
+    <url>/274.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>hystrix对应的中文名字是“豪猪”，豪猪周身长满了刺，能保护自己不受天敌的伤害，代表了一种防御机制，这与hystrix本身的功能不谋而合，因此Netflix团队将该框架命名为Hystrix，并使用了对应的卡通形象做作为logo。</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20033811.jpg"></p>
+<p>在一个分布式系统里，许多依赖不可避免的会调用失败，比如超时、异常等，如何能够保证在一个依赖出问题的情况下，不会导致整体服务失败，这个就是Hystrix需要做的事情。Hystrix提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。</p>
+<h3 id="服务雪崩效应"><a href="#服务雪崩效应" class="headerlink" title="服务雪崩效应"></a><strong>服务雪崩效应</strong></h3><p>当一个请求依赖多个服务的时候：</p>
+<p>正常情况下的访问 </p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034111.jpg"></p>
+<p>但是，当请求的服务中出现无法访问、异常、超时等问题时（图中的I），那么用户的请求将会被阻塞</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034116.jpg"></p>
+<p>如果多个用户的请求中，都存在无法访问的服务，那么他们都将陷入阻塞的状态中</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034122.jpg"></p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>Hystrix断路器可以通过服务熔断和服务降级来解决上述的服务雪崩效应</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>熔断机制是应对雪崩效应的一种微服务链路保护机制，当某个服务不可用或者响应时间超时，会进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息</p>
+<h4 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h4><p>命名为microservice-student-provider-hystrix-1004，把microservice-student-provider-1001的配置和代码都复制一份到新建的Module中</p>
+<h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><p>引入Hystrix断路器依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--Hystrix断路器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-hystrix<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>修改server.port为1004，eureka.instance.instance-id为microservice-student-hystrix:1004</p>
+<h4 id="修改启动类"><a href="#修改启动类" class="headerlink" title="修改启动类"></a>修改启动类</h4><p>如果是复制过来的，重命名为StudentProviderHystrixApplication_1004，并添加@EnableCircuitBreaker注解支持Hystrix断路器</p>
+<h4 id="修改消费者Controller"><a href="#修改消费者Controller" class="headerlink" title="修改消费者Controller"></a>修改消费者Controller</h4><p>StudentConsumerController.java在microservice-student-consumer-80项目中</p>
+<p>添加getInfo方法，用于调用服务的getInfo方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> restTemplate.getForObject(PRE_HOST + <span class="string">&quot;/student/getInfo&quot;</span>, Map.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改提供者Controller"><a href="#修改提供者Controller" class="headerlink" title="修改提供者Controller"></a>修改提供者Controller</h4><p>StudentProviderController.java在microservice-student-provider-hystrix-1004项目中</p>
+<p>添加两个方法：getInfo方法和getInfoFallback方法</p>
+<p>在hystrix中默认1秒算超时，使用Thread.sleep(2000)模拟请求超时（@HystrixCommand注解定义了请求超时的时候就请求getInfoFallback方法，返回<font color="#dd0000">500 系统出错，稍后重试</font>），不使用就不会超时（执行完getInfo方法，返回<font color="#dd0000">200  业务数据</font>）。由于请求超时的时候进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息，所以可以有效地解决雪崩效应</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@HystrixCommand(fallbackMethod = &quot;getInfoFallback&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求超时就请求我</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfoFallback</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
+<p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
+<p>使用Thread.sleep(2000)时会超时，返回<font color="#dd0000">500 系统出错，稍后重试</font>，如下图：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043656.png"></p>
+<p>注释掉Thread.sleep(2000)时不会超时，返回<font color="#dd0000">200  业务数据</font>，如下图：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043727.png"></p>]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Hystrix断路器</tag>
       </tags>
   </entry>
   <entry>
@@ -7642,22 +7686,6 @@
       </tags>
   </entry>
   <entry>
-    <title>实现鼠标移动到div块时自动加阴影效果</title>
-    <url>/95.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a><strong>HTML代码</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;shadow&quot;</span>&gt;</span></span><br><span class="line">    //已省略无关代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a><strong>CSS代码</strong></h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.shadow</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">transition-duration</span>: <span class="number">0.5s</span>; <span class="comment">/*停留时间显示*/</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.shadow</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">    -moz-<span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">5px</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a><strong>效果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311223347.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://blog.csdn.net/tenggeer0789/article/details/89478859">css怎么实现鼠标移动到div块时自动加阴影效果？_tenggeer0789的博客-CSDN博客</a></p>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>遍历HashMap的四种方法</title>
     <url>/94.html</url>
     <content><![CDATA[<h3 id="创建HashMap集合"><a href="#创建HashMap集合" class="headerlink" title="创建HashMap集合"></a><strong>创建HashMap集合</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">HashMap hashMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">hashMap.put(<span class="number">1</span>, <span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">hashMap.put(<span class="number">2</span>, <span class="string">&quot;bbb&quot;</span>);</span><br><span class="line">hashMap.put(<span class="number">3</span>, <span class="string">&quot;ccc&quot;</span>);</span><br><span class="line">hashMap.put(<span class="number">4</span>, <span class="string">&quot;ddd&quot;</span>);</span><br></pre></td></tr></table></figure>
@@ -7676,6 +7704,22 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实现鼠标移动到div块时自动加阴影效果</title>
+    <url>/95.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a><strong>HTML代码</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;shadow&quot;</span>&gt;</span></span><br><span class="line">    //已省略无关代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a><strong>CSS代码</strong></h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.shadow</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">transition-duration</span>: <span class="number">0.5s</span>; <span class="comment">/*停留时间显示*/</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.shadow</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">    -moz-<span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">5px</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a><strong>效果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311223347.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://blog.csdn.net/tenggeer0789/article/details/89478859">css怎么实现鼠标移动到div块时自动加阴影效果？_tenggeer0789的博客-CSDN博客</a></p>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -11301,50 +11345,6 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Hystrix断路器</title>
-    <url>/274.html</url>
-    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>hystrix对应的中文名字是“豪猪”，豪猪周身长满了刺，能保护自己不受天敌的伤害，代表了一种防御机制，这与hystrix本身的功能不谋而合，因此Netflix团队将该框架命名为Hystrix，并使用了对应的卡通形象做作为logo。</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20033811.jpg"></p>
-<p>在一个分布式系统里，许多依赖不可避免的会调用失败，比如超时、异常等，如何能够保证在一个依赖出问题的情况下，不会导致整体服务失败，这个就是Hystrix需要做的事情。Hystrix提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。</p>
-<h3 id="服务雪崩效应"><a href="#服务雪崩效应" class="headerlink" title="服务雪崩效应"></a><strong>服务雪崩效应</strong></h3><p>当一个请求依赖多个服务的时候：</p>
-<p>正常情况下的访问 </p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034111.jpg"></p>
-<p>但是，当请求的服务中出现无法访问、异常、超时等问题时（图中的I），那么用户的请求将会被阻塞</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034116.jpg"></p>
-<p>如果多个用户的请求中，都存在无法访问的服务，那么他们都将陷入阻塞的状态中</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034122.jpg"></p>
-<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>Hystrix断路器可以通过服务熔断和服务降级来解决上述的服务雪崩效应</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>熔断机制是应对雪崩效应的一种微服务链路保护机制，当某个服务不可用或者响应时间超时，会进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息</p>
-<h4 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h4><p>命名为microservice-student-provider-hystrix-1004，把microservice-student-provider-1001的配置和代码都复制一份到新建的Module中</p>
-<h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><p>引入Hystrix断路器依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--Hystrix断路器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-hystrix<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>修改server.port为1004，eureka.instance.instance-id为microservice-student-hystrix:1004</p>
-<h4 id="修改启动类"><a href="#修改启动类" class="headerlink" title="修改启动类"></a>修改启动类</h4><p>如果是复制过来的，重命名为StudentProviderHystrixApplication_1004，并添加@EnableCircuitBreaker注解支持Hystrix断路器</p>
-<h4 id="修改消费者Controller"><a href="#修改消费者Controller" class="headerlink" title="修改消费者Controller"></a>修改消费者Controller</h4><p>StudentConsumerController.java在microservice-student-consumer-80项目中</p>
-<p>添加getInfo方法，用于调用服务的getInfo方法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> restTemplate.getForObject(PRE_HOST + <span class="string">&quot;/student/getInfo&quot;</span>, Map.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改提供者Controller"><a href="#修改提供者Controller" class="headerlink" title="修改提供者Controller"></a>修改提供者Controller</h4><p>StudentProviderController.java在microservice-student-provider-hystrix-1004项目中</p>
-<p>添加两个方法：getInfo方法和getInfoFallback方法</p>
-<p>在hystrix中默认1秒算超时，使用Thread.sleep(2000)模拟请求超时（@HystrixCommand注解定义了请求超时的时候就请求getInfoFallback方法，返回<font color="#dd0000">500 系统出错，稍后重试</font>），不使用就不会超时（执行完getInfo方法，返回<font color="#dd0000">200  业务数据</font>）。由于请求超时的时候进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息，所以可以有效地解决雪崩效应</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@HystrixCommand(fallbackMethod = &quot;getInfoFallback&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求超时就请求我</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfoFallback</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
-<p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
-<p>使用Thread.sleep(2000)时会超时，返回<font color="#dd0000">500 系统出错，稍后重试</font>，如下图：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043656.png"></p>
-<p>注释掉Thread.sleep(2000)时不会超时，返回<font color="#dd0000">200  业务数据</font>，如下图：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043727.png"></p>]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-        <tag>Hystrix断路器</tag>
       </tags>
   </entry>
 </search>

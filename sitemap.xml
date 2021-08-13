@@ -1978,14 +1978,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Java/</loc>
+    <loc>http://example.com/tags/CKEditor/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/CKEditor/</loc>
+    <loc>http://example.com/tags/Java/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2013,14 +2013,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E9%83%A8%E8%90%BD%E5%86%B2%E7%AA%81/</loc>
+    <loc>http://example.com/tags/GitHub/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/GitHub/</loc>
+    <loc>http://example.com/tags/%E9%83%A8%E8%90%BD%E5%86%B2%E7%AA%81/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2146,14 +2146,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/jsoup/</loc>
+    <loc>http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>http://example.com/tags/jsoup/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2223,6 +2223,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/Hystrix%E6%96%AD%E8%B7%AF%E5%99%A8/</loc>
+    <lastmod>2021-08-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/Git/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
@@ -2257,13 +2264,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>http://example.com/tags/Hystrix%E6%96%AD%E8%B7%AF%E5%99%A8/</loc>
-    <lastmod>2021-08-13</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   
   <url>
@@ -2274,14 +2274,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Java/</loc>
+    <loc>http://example.com/categories/%E5%85%B6%E5%AE%83/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%85%B6%E5%AE%83/</loc>
+    <loc>http://example.com/categories/Java/</loc>
     <lastmod>2021-08-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
