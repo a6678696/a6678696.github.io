@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-13T13:22:37.357Z</updated>
+  <updated>2021-08-13T20:39:18.725Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Hystrix断路器</title>
+    <link href="http://example.com/274.html"/>
+    <id>http://example.com/274.html</id>
+    <published>2021-08-13T19:31:01.000Z</published>
+    <updated>2021-08-13T20:39:18.725Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>hystrix对应的中文名字是“豪猪”，豪猪周身长满了刺，能保护自己不受天敌的伤害，代表了一种防御机制，这与hystrix本身的功能不谋而合，因此Netflix团队将该框架命名为Hystrix，并使用了对应的卡通形象做作为logo。</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20033811.jpg"></p><p>在一个分布式系统里，许多依赖不可避免的会调用失败，比如超时、异常等，如何能够保证在一个依赖出问题的情况下，不会导致整体服务失败，这个就是Hystrix需要做的事情。Hystrix提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。</p><h3 id="服务雪崩效应"><a href="#服务雪崩效应" class="headerlink" title="服务雪崩效应"></a><strong>服务雪崩效应</strong></h3><p>当一个请求依赖多个服务的时候：</p><p>正常情况下的访问 </p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034111.jpg"></p><p>但是，当请求的服务中出现无法访问、异常、超时等问题时（图中的I），那么用户的请求将会被阻塞</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034116.jpg"></p><p>如果多个用户的请求中，都存在无法访问的服务，那么他们都将陷入阻塞的状态中</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034122.jpg"></p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>Hystrix断路器可以通过服务熔断和服务降级来解决上述的服务雪崩效应</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>熔断机制是应对雪崩效应的一种微服务链路保护机制，当某个服务不可用或者响应时间超时，会进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息</p><h4 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h4><p>命名为microservice-student-provider-hystrix-1004，把microservice-student-provider-1001的配置和代码都复制一份到新建的Module中</p><h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><p>引入Hystrix断路器依赖</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Hystrix断路器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-hystrix<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>修改server.port为1004，eureka.instance.instance-id为microservice-student-hystrix:1004</p><h4 id="修改启动类"><a href="#修改启动类" class="headerlink" title="修改启动类"></a>修改启动类</h4><p>如果是复制过来的，重命名为StudentProviderHystrixApplication_1004，并添加@EnableCircuitBreaker注解支持Hystrix断路器</p><h4 id="修改StudentConsumerController-java"><a href="#修改StudentConsumerController-java" class="headerlink" title="修改StudentConsumerController.java"></a>修改StudentConsumerController.java</h4><p>StudentConsumerController.java在microservice-student-consumer-80项目中</p><p>添加getInfo方法，用于调用服务的getInfo方法</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> restTemplate.getForObject(PRE_HOST + <span class="string">&quot;/student/getInfo&quot;</span>, Map.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="修改StudentProviderController-java"><a href="#修改StudentProviderController-java" class="headerlink" title="修改StudentProviderController.java"></a>修改StudentProviderController.java</h4><p>StudentProviderController.java在microservice-student-provider-hystrix-1004项目中</p><p>添加两个方法：getInfo方法和getInfoFallback方法</p><p>在hystrix中默认1秒算超时，使用Thread.sleep(2000)模拟请求超时（@HystrixCommand注解定义了请求超时的时候就请求getInfoFallback方法，返回<font color="#dd0000">500 系统出错，稍后重试</font>），不使用就不会超时（执行完getInfo方法，返回<font color="#dd0000">200  业务数据</font>）。由于请求超时的时候进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息，可以有效地解决雪崩效应</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@HystrixCommand(fallbackMethod = &quot;getInfoFallback&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfoFallback</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p><p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p><p>使用Thread.sleep(2000)时会超时，返回<font color="#dd0000">500 系统出错，稍后重试</font>，如下图：</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043656.png"></p><p>注释掉Thread.sleep(2000)时不会超时，返回<font color="#dd0000">200  业务数据</font>，如下图：</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043727.png"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/43.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Spring Cloud" scheme="http://example.com/categories/Spring-Cloud/"/>
+    
+    
+    <category term="Spring Cloud" scheme="http://example.com/tags/Spring-Cloud/"/>
+    
+    <category term="Hystrix断路器" scheme="http://example.com/tags/Hystrix%E6%96%AD%E8%B7%AF%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>Markdown 代码块编程语言清单</title>
@@ -442,29 +465,6 @@
     
     
     <category term="Java" scheme="http://example.com/tags/Java/"/>
-    
-    <category term="Dubbo" scheme="http://example.com/tags/Dubbo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Dubbo Admin控制台</title>
-    <link href="http://example.com/254.html"/>
-    <id>http://example.com/254.html</id>
-    <published>2021-08-09T15:29:59.000Z</published>
-    <updated>2021-08-10T13:43:59.324Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>阿里云盘链接：<a href="https://www.aliyundrive.com/s/nZaiPAfGKnq">https://www.aliyundrive.com/s/nZaiPAfGKnq</a></p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装一个Tomcat7，平时不使用，专门用来运行Dubbo Admin控制台，安装步骤 ：<a href="/147.html">安装Tomcat</a></p><p>删除Tomcat7的安装目录webapp/ROOT文件夹中的全部文件（该ROOT文件夹为直接输入端口号时显示的Tomcat主页）</p><p>解压下载的dubbo-admin-2.6.0.war，复制解压后的所有文件到webapp/ROOT文件夹中</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20234017.png"></p><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>必须先启动Zookeeper，如何启动查看：<a href="/251.html#%E8%BF%90%E8%A1%8C">Windows10安装ZooKeeper</a></p><p>双击Tomcat7的安装目录bin文件夹中的startup.bat运行Tomcat7，在浏览器地址栏输入localhost:8080，输入用户名和密码，默认用户名和密码都是root</p><p>如果输入localhost:8080后出现下面图片所示的界面，说明8080端口被占用了，那么直接修改Tomcat7的默认端口，去修改Tomcat7的配置文件server.xml（在conf文件夹中）</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20235223.png"></p><p>修改前：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">&quot;8080&quot;</span> <span class="attr">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><p>修改后：（我修改为8888）</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">&quot;8888&quot;</span> <span class="attr">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><p>在地址栏中输入localhost:8888，输入用户名和密码，即可进入Dubbo Admin控制台</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20235847.png"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/54.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Dubbo" scheme="http://example.com/categories/Dubbo/"/>
-    
-    
-    <category term="ZooKeeper" scheme="http://example.com/tags/ZooKeeper/"/>
     
     <category term="Dubbo" scheme="http://example.com/tags/Dubbo/"/>
     
