@@ -11347,4 +11347,26 @@
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Hystrix修改默认超时时间</title>
+    <url>/275.html</url>
+    <content><![CDATA[<p>Hystrix的默认超时时间是1秒，有时候正常请求响应的时间就超过了1秒，所以1秒钟并不能满足日常的开发需求，需要根据实际情况设置超时时间</p>
+<h3 id="源码位置"><a href="#源码位置" class="headerlink" title="源码位置"></a>源码位置</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer default_executionTimeoutInMilliseconds = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20005052.png"></p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>在application.yml中添加下面配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hystrix:</span> </span><br><span class="line">  <span class="attr">command:</span> </span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">      <span class="attr">execution:</span> </span><br><span class="line">        <span class="attr">isolation:</span> </span><br><span class="line">          <span class="attr">thread:</span> </span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure>
+
+<p>数值的单位为毫秒，1000毫秒==1秒</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
+<p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
+<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Hystrix</tag>
+      </tags>
+  </entry>
 </search>
