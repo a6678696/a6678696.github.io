@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/277.html</loc>
+    
+    <lastmod>2021-08-15</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/276.html</loc>
     
     <lastmod>2021-08-15</lastmod>
@@ -2273,6 +2280,13 @@
   
   <url>
     <loc>http://example.com/tags/Hystrix/</loc>
+    <lastmod>2021-08-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/turbine/</loc>
     <lastmod>2021-08-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
