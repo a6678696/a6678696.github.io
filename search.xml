@@ -5423,40 +5423,12 @@
   <entry>
     <title>使用Hystrix断路器</title>
     <url>/274.html</url>
-    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>hystrix对应的中文名字是“豪猪”，豪猪周身长满了刺，能保护自己不受天敌的伤害，代表了一种防御机制，这与hystrix本身的功能不谋而合，因此Netflix团队将该框架命名为Hystrix，并使用了对应的卡通形象做作为logo。</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20033811.jpg" alt="img"></p>
-<p>在一个分布式系统里，许多依赖不可避免的会调用失败，比如超时、异常等，如何能够保证在一个依赖出问题的情况下，不会导致整体服务失败，这个就是Hystrix需要做的事情。Hystrix提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。</p>
-<h3 id="服务雪崩效应"><a href="#服务雪崩效应" class="headerlink" title="服务雪崩效应"></a><strong>服务雪崩效应</strong></h3><p>当一个请求依赖多个服务的时候：</p>
-<p>正常情况下的访问</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034111.jpg" alt="img"></p>
-<p>但是，当请求的服务中出现无法访问、异常、超时等问题时（图中的I），那么用户的请求将会被阻塞</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034116.jpg" alt="img"></p>
-<p>如果多个用户的请求中，都存在无法访问的服务，那么他们都将陷入阻塞的状态中</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034122.jpg" alt="img"></p>
-<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>Hystrix断路器可以通过服务熔断和服务降级来解决上述的服务雪崩效应</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>熔断机制是应对雪崩效应的一种微服务链路保护机制，当某个服务不可用或者响应时间超时，会进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息</p>
-<h4 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h4><p>命名为microservice-student-provider-hystrix-1004，把microservice-student-provider-1001的配置和代码都复制一份到新建的Module中</p>
-<h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><p>引入Hystrix断路器依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--Hystrix断路器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-hystrix<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>修改server.port为1004，eureka.instance.instance-id为microservice-student-hystrix:1004</p>
-<h4 id="修改启动类"><a href="#修改启动类" class="headerlink" title="修改启动类"></a>修改启动类</h4><p>如果是复制过来的，重命名为StudentProviderHystrixApplication_1004，并添加@EnableCircuitBreaker注解支持Hystrix断路器</p>
-<h4 id="修改消费者Controller"><a href="#修改消费者Controller" class="headerlink" title="修改消费者Controller"></a>修改消费者Controller</h4><p>StudentConsumerController.java在microservice-student-consumer-80项目中</p>
-<p>添加getInfo方法，用于调用服务的getInfo方法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> restTemplate.getForObject(PRE_HOST + <span class="string">&quot;/student/getInfo&quot;</span>, Map.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改提供者Controller"><a href="#修改提供者Controller" class="headerlink" title="修改提供者Controller"></a>修改提供者Controller</h4><p>StudentProviderController.java在microservice-student-provider-hystrix-1004项目中</p>
-<p>添加两个方法：getInfo方法和getInfoFallback方法</p>
-<p>在hystrix中默认1秒算超时，使用Thread.sleep(2000)模拟请求超时（@HystrixCommand注解定义了请求超时的时候就请求getInfoFallback方法，返回500 系统出错，稍后重试），不使用就不会超时（执行完getInfo方法，返回200 业务数据）。由于请求超时的时候进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息，所以可以有效地解决雪崩效应</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@HystrixCommand(fallbackMethod = &quot;getInfoFallback&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求超时就请求我</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfoFallback</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
+    <content><![CDATA[<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
 <p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
 <p>使用Thread.sleep(2000)时会超时，返回500 系统出错，稍后重试，如下图：</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043656.png" alt="img"></p>
 <p>注释掉Thread.sleep(2000)时不会超时，返回200 业务数据，如下图：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043727.png" alt="img"></p>
-]]></content>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043727.png" alt="img"></p>]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -5478,8 +5450,7 @@
 <p>数值的单位为毫秒，1000毫秒==1秒</p>
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
 <p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
-<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>
-]]></content>
+<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -5509,8 +5480,7 @@
 <p>如果要使用图形界面监控，浏览器地址栏输入：<a href="http://localhost:90/hystrix">http://localhost:90/hystrix</a> ，出现上图，在第一个输入框输入：<a href="http://localhost:1004/hystrix.stream">http://localhost:1004/hystrix.stream</a> ，然后点击Monitor Stream按钮即可，会出现下面界面</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182527.png" alt="img"></p>
 <h4 id="指标含义"><a href="#指标含义" class="headerlink" title="指标含义"></a>指标含义</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182601.png" alt="img"></p>
-<h4 id="各种情况"><a href="#各种情况" class="headerlink" title="各种情况"></a>各种情况</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182633.jpg" alt="img"></p>
-]]></content>
+<h4 id="各种情况"><a href="#各种情况" class="headerlink" title="各种情况"></a>各种情况</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182633.jpg" alt="img"></p>]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -5546,8 +5516,7 @@
 <p>microservice-student-consumer-hystrix-turbine-91</p>
 <h4 id="调用服务集群"><a href="#调用服务集群" class="headerlink" title="调用服务集群"></a>调用服务集群</h4><p>浏览器地址栏输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
 <h4 id="监控数据"><a href="#监控数据" class="headerlink" title="监控数据"></a>监控数据</h4><p>浏览器地址栏输入：<a href="http://localhost:91/turbine.stream">http://localhost:91/turbine.stream</a></p>
-<p>如果使用图形界面监控，则先输入：<a href="http://localhost:90/hystrix">http://localhost:90/hystrix</a> 打开图形监控界面，在第一个输入框输入：<a href="http://localhost:91/turbine.stream">http://localhost:91/turbine.stream</a> ，再点击按钮即可</p>
-]]></content>
+<p>如果使用图形界面监控，则先输入：<a href="http://localhost:90/hystrix">http://localhost:90/hystrix</a> 打开图形监控界面，在第一个输入框输入：<a href="http://localhost:91/turbine.stream">http://localhost:91/turbine.stream</a> ，再点击按钮即可</p>]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -11485,6 +11454,49 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git恢复之前的版本</title>
+    <url>/279.html</url>
+    <content><![CDATA[<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>回退（reset）、反做（revert）</p>
+<h3 id="回退（reset）"><a href="#回退（reset）" class="headerlink" title="回退（reset）"></a>回退（reset）</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>git reset的作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本，如下图所示，假设我们要回退到版本一</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041222.png"></p>
+<h4 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p>
+<h4 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h4><p>先查看当前库有哪些版本号，查看方法有两种：</p>
+<p>①Git命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<p>commit后的黄色字符串就是版本号</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20042055.png"></p>
+<p>②在GitHub中查看</p>
+<p>点击下图的提交数</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041534.png"></p>
+<p>点击下图的复制按钮即可复制完整版本号</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041538.png"></p>
+<p>使用下面命令将版本回退</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git reset --hard 目标版本号</span><br></pre></td></tr></table></figure>
+
+<p>使用下面命令提交更改，-f代表强制</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -f</span><br></pre></td></tr></table></figure>
+
+<h3 id="反做（revert）"><a href="#反做（revert）" class="headerlink" title="反做（revert）"></a>反做（revert）</h3><h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>git revert是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们commit了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西<br><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041230.png"></p>
+<h4 id="适用场景-1"><a href="#适用场景-1" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p>
+<h4 id="具体操作-1"><a href="#具体操作-1" class="headerlink" title="具体操作"></a>具体操作</h4><p>查看版本号，上面有具体操作</p>
+<p>使用下面命令反做，这里可能会出现冲突，那么需要手动修改冲突的文件，而且要git add 文件名</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git revert -n 版本号</span><br></pre></td></tr></table></figure>
+
+<p>使用下面命令提交</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注信息&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用下面命令提交更改到远程库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
 </search>
