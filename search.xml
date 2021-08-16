@@ -289,21 +289,6 @@
       </tags>
   </entry>
   <entry>
-    <title>定时自动备份MySQL数据库</title>
-    <url>/116.html</url>
-    <content><![CDATA[<h3 id="方法一-使用任务计划程序"><a href="#方法一-使用任务计划程序" class="headerlink" title="方法一.使用任务计划程序"></a><strong>方法一.使用任务计划程序</strong></h3><p>①<a href="/113.html">Windows脚本代码备份MySQL数据库</a></p>
-<p>②<a href="/115.html">Windows10使用任务计划程序</a></p>
-<h3 id="方法二-使用Quartz定时任务（Java代码实现）"><a href="#方法二-使用Quartz定时任务（Java代码实现）" class="headerlink" title="方法二.使用Quartz定时任务（Java代码实现）"></a><strong>方法二.使用Quartz定时任务（Java代码实现）</strong></h3><p>①<a href="/109.html">Spring Boot引入Quartz定时任务</a></p>
-<p>②<a href="/4.html">常用cron表达式</a></p>
-<p>③<a href="/114.html">Java备份MySQL数据库</a></p>]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows10使用任务计划程序</title>
     <url>/115.html</url>
     <content><![CDATA[<h3 id="打开控制面板，搜索管理工具–-gt-任务计划程序"><a href="#打开控制面板，搜索管理工具–-gt-任务计划程序" class="headerlink" title="打开控制面板，搜索管理工具–&gt;任务计划程序"></a><strong>打开控制面板，搜索管理工具–&gt;任务计划程序</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012241.jpg" alt="img"></p>
@@ -320,6 +305,21 @@
       </categories>
       <tags>
         <tag>Windows10</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>定时自动备份MySQL数据库</title>
+    <url>/116.html</url>
+    <content><![CDATA[<h3 id="方法一-使用任务计划程序"><a href="#方法一-使用任务计划程序" class="headerlink" title="方法一.使用任务计划程序"></a><strong>方法一.使用任务计划程序</strong></h3><p>①<a href="/113.html">Windows脚本代码备份MySQL数据库</a></p>
+<p>②<a href="/115.html">Windows10使用任务计划程序</a></p>
+<h3 id="方法二-使用Quartz定时任务（Java代码实现）"><a href="#方法二-使用Quartz定时任务（Java代码实现）" class="headerlink" title="方法二.使用Quartz定时任务（Java代码实现）"></a><strong>方法二.使用Quartz定时任务（Java代码实现）</strong></h3><p>①<a href="/109.html">Spring Boot引入Quartz定时任务</a></p>
+<p>②<a href="/4.html">常用cron表达式</a></p>
+<p>③<a href="/114.html">Java备份MySQL数据库</a></p>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -3415,7 +3415,7 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
 <p>安装是否安装成功，分别输入命令node –version，npm -v都可以看到版本号说明Node.js安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
-<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a><strong>安装vue-cli脚手架</strong></h3><p>打开cmd，输入命令：npm install -g <a href="mailto:&#118;&#x75;&#101;&#x2d;&#x63;&#x6c;&#x69;&#64;&#50;&#46;&#57;&#46;&#x36;">&#118;&#x75;&#101;&#x2d;&#x63;&#x6c;&#x69;&#64;&#50;&#46;&#57;&#46;&#x36;</a>，运行</p>
+<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a><strong>安装vue-cli脚手架</strong></h3><p>打开cmd，输入命令：npm install -g <a href="mailto:&#118;&#x75;&#x65;&#x2d;&#99;&#x6c;&#x69;&#64;&#50;&#46;&#x39;&#x2e;&#54;">&#118;&#x75;&#x65;&#x2d;&#99;&#x6c;&#x69;&#64;&#50;&#46;&#x39;&#x2e;&#54;</a>，运行</p>
 <p>等待安装完成，输入命令：vue -V，看到版本号说明脚手架安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>]]></content>
       <categories>
@@ -3564,37 +3564,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot+Mybatis使用Element UI分页</title>
-    <url>/207.html</url>
-    <content><![CDATA[<p>前端向后端发送的数据有当前页、每页记录数，后端向前端发送的数据有查询到的数据集合、数据总记录数（满足查询条件的全部数据的总记录数）</p>
-<h3 id="前端分页代码"><a href="#前端分页代码" class="headerlink" title="前端分页代码"></a><strong>前端分页代码</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-pagination</span></span></span><br><span class="line"><span class="tag">      <span class="attr">align</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">style</span>=<span class="string">&quot;margin-top: 8px&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">background</span></span></span><br><span class="line"><span class="tag">      <span class="attr">layout</span>=<span class="string">&quot;prev, pager, next&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:current-page.sync</span>=<span class="string">&quot;pagination.page&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:page-size.sync</span>=<span class="string">&quot;pagination.size&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:total</span>=<span class="string">&quot;pagination.count&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="分页属性（包括当前页，每页记录数，数据总记录数）"><a href="#分页属性（包括当前页，每页记录数，数据总记录数）" class="headerlink" title="分页属性（包括当前页，每页记录数，数据总记录数）"></a><strong>分页属性（包括当前页，每页记录数，数据总记录数）</strong></h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pagination: &#123;</span><br><span class="line">  <span class="attr">page</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">size</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>更新当前页的值</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//刷新当前页的值</span></span><br><span class="line"><span class="function"><span class="title">handleCurrentChange</span>(<span class="params">page</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.pagination.page = page;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="请求后台"><a href="#请求后台" class="headerlink" title="请求后台"></a><strong>请求后台</strong></h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(<span class="string">&#x27;http://localhost/paper/getListFindByUserId?userId=&#x27;</span> + sessionStorage.getItem(<span class="string">&quot;userId&quot;</span>) + <span class="string">&#x27;&amp;page=&#x27;</span> + <span class="built_in">this</span>.pagination.page + <span class="string">&#x27;&amp;size=&#x27;</span> + <span class="built_in">this</span>.pagination.size)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> (<span class="built_in">this</span>.myPaper = response.data.rows, <span class="built_in">this</span>.pagination.count = response.data.total))</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="mapper-xml代码"><a href="#mapper-xml代码" class="headerlink" title="mapper.xml代码"></a><strong>mapper.xml代码</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;paperResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	order by id desc</span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getCount&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.Long&quot;</span>&gt;</span></span><br><span class="line">	select count(*)</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="请求的后端方法"><a href="#请求的后端方法" class="headerlink" title="请求的后端方法"></a><strong>请求的后端方法</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据用户id获取试卷(分页)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> userId</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getListFindByUserId&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">getListFindByUserId</span><span class="params">(Integer userId, <span class="meta">@RequestParam(value = &quot;page&quot;,required = false)</span>Integer page, <span class="meta">@RequestParam(value = &quot;size&quot;,required = false)</span>Integer size)</span> </span>&#123;</span><br><span class="line">	PageBean pageBean = <span class="keyword">new</span> PageBean(page, size);</span><br><span class="line">	Map resultMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	Map map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;userId&quot;</span>, userId);</span><br><span class="line">	map.put(<span class="string">&quot;start&quot;</span>, pageBean.getStart());</span><br><span class="line">	map.put(<span class="string">&quot;size&quot;</span>, pageBean.getPageSize());</span><br><span class="line">	List&lt;Paper&gt; paperList = paperService.list(map);</span><br><span class="line">	resultMap.put(<span class="string">&quot;total&quot;</span>, paperService.getCount(map));</span><br><span class="line">	resultMap.put(<span class="string">&quot;rows&quot;</span>, paperList);</span><br><span class="line">	<span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>分页Model类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 分页Model类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-10 21:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PageBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第几页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> page;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 每页记录数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> pageSize;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 起始页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> start;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PageBean</span><span class="params">(<span class="keyword">int</span> page, <span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPage</span><span class="params">(<span class="keyword">int</span> page)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPageSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPageSize</span><span class="params">(<span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (page - <span class="number">1</span>) * pageSize;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210701223215.jpg" alt="img"></strong></p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Spring Boot</tag>
-        <tag>MyBatis</tag>
-        <tag>Element UI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>在线考试系统</title>
     <url>/208.html</url>
     <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a><strong>项目地址</strong></h3><p>GitHub前端代码地址：<a href="https://github.com/a6678696/ExamSystem2">https://github.com/a6678696/ExamSystem2</a></p>
@@ -3631,6 +3600,37 @@
       </categories>
       <tags>
         <tag>个人项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot+Mybatis使用Element UI分页</title>
+    <url>/207.html</url>
+    <content><![CDATA[<p>前端向后端发送的数据有当前页、每页记录数，后端向前端发送的数据有查询到的数据集合、数据总记录数（满足查询条件的全部数据的总记录数）</p>
+<h3 id="前端分页代码"><a href="#前端分页代码" class="headerlink" title="前端分页代码"></a><strong>前端分页代码</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-pagination</span></span></span><br><span class="line"><span class="tag">      <span class="attr">align</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">style</span>=<span class="string">&quot;margin-top: 8px&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">background</span></span></span><br><span class="line"><span class="tag">      <span class="attr">layout</span>=<span class="string">&quot;prev, pager, next&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:current-page.sync</span>=<span class="string">&quot;pagination.page&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:page-size.sync</span>=<span class="string">&quot;pagination.size&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:total</span>=<span class="string">&quot;pagination.count&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分页属性（包括当前页，每页记录数，数据总记录数）"><a href="#分页属性（包括当前页，每页记录数，数据总记录数）" class="headerlink" title="分页属性（包括当前页，每页记录数，数据总记录数）"></a><strong>分页属性（包括当前页，每页记录数，数据总记录数）</strong></h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pagination: &#123;</span><br><span class="line">  <span class="attr">page</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">size</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>更新当前页的值</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//刷新当前页的值</span></span><br><span class="line"><span class="function"><span class="title">handleCurrentChange</span>(<span class="params">page</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.pagination.page = page;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="请求后台"><a href="#请求后台" class="headerlink" title="请求后台"></a><strong>请求后台</strong></h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(<span class="string">&#x27;http://localhost/paper/getListFindByUserId?userId=&#x27;</span> + sessionStorage.getItem(<span class="string">&quot;userId&quot;</span>) + <span class="string">&#x27;&amp;page=&#x27;</span> + <span class="built_in">this</span>.pagination.page + <span class="string">&#x27;&amp;size=&#x27;</span> + <span class="built_in">this</span>.pagination.size)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> (<span class="built_in">this</span>.myPaper = response.data.rows, <span class="built_in">this</span>.pagination.count = response.data.total))</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="mapper-xml代码"><a href="#mapper-xml代码" class="headerlink" title="mapper.xml代码"></a><strong>mapper.xml代码</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;paperResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	order by id desc</span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getCount&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.Long&quot;</span>&gt;</span></span><br><span class="line">	select count(*)</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="请求的后端方法"><a href="#请求的后端方法" class="headerlink" title="请求的后端方法"></a><strong>请求的后端方法</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据用户id获取试卷(分页)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> userId</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getListFindByUserId&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">getListFindByUserId</span><span class="params">(Integer userId, <span class="meta">@RequestParam(value = &quot;page&quot;,required = false)</span>Integer page, <span class="meta">@RequestParam(value = &quot;size&quot;,required = false)</span>Integer size)</span> </span>&#123;</span><br><span class="line">	PageBean pageBean = <span class="keyword">new</span> PageBean(page, size);</span><br><span class="line">	Map resultMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	Map map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;userId&quot;</span>, userId);</span><br><span class="line">	map.put(<span class="string">&quot;start&quot;</span>, pageBean.getStart());</span><br><span class="line">	map.put(<span class="string">&quot;size&quot;</span>, pageBean.getPageSize());</span><br><span class="line">	List&lt;Paper&gt; paperList = paperService.list(map);</span><br><span class="line">	resultMap.put(<span class="string">&quot;total&quot;</span>, paperService.getCount(map));</span><br><span class="line">	resultMap.put(<span class="string">&quot;rows&quot;</span>, paperList);</span><br><span class="line">	<span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分页Model类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 分页Model类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-10 21:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PageBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第几页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> page;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 每页记录数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> pageSize;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 起始页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> start;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PageBean</span><span class="params">(<span class="keyword">int</span> page, <span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPage</span><span class="params">(<span class="keyword">int</span> page)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPageSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPageSize</span><span class="params">(<span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (page - <span class="number">1</span>) * pageSize;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210701223215.jpg" alt="img"></strong></p>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+        <tag>MyBatis</tag>
+        <tag>Element UI</tag>
       </tags>
   </entry>
   <entry>
@@ -4370,7 +4370,7 @@
 <p>连续按下回车键三次，至此本机的ssh密匙创建完成，该密钥一般存放在C盘的用户文件夹的.ssh文件夹中（我的是C:\Users\LeDao.ssh）</p>
 <h4 id="配置Github的SSH-Key"><a href="#配置Github的SSH-Key" class="headerlink" title="配置Github的SSH Key"></a><strong>配置Github的SSH Key</strong></h4><p>进入Github首页，点击右上角的头像选择Settings，选择左侧菜单的SSH and GPG keys，然后点击右侧的New SSH key按钮，打开上面第三步的本地密钥id_rsa.pub文件（用记事本打开并复制其内容），复制到GitHub的key文本框中，title可以随意设置</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729123108.jpg" alt="img"></p>
-<h4 id="输入-ssh-T-x67-105-x74-64-103-105-116-x68-117-x62-x2e-x63-x6f-109-测试是否配置成功"><a href="#输入-ssh-T-x67-105-x74-64-103-105-116-x68-117-x62-x2e-x63-x6f-109-测试是否配置成功" class="headerlink" title="输入 ssh -T &#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109; 测试是否配置成功"></a><strong>输入 ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;</a> 测试是否配置成功</strong></h4><p>出现：Are you sure you want to continue connecting (yes/no/[fingerprint])?</p>
+<h4 id="输入-ssh-T-103-x69-116-x40-103-x69-116-104-117-x62-x2e-99-x6f-x6d-测试是否配置成功"><a href="#输入-ssh-T-103-x69-116-x40-103-x69-116-104-117-x62-x2e-99-x6f-x6d-测试是否配置成功" class="headerlink" title="输入 ssh -T &#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d; 测试是否配置成功"></a><strong>输入 ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#103;&#x69;&#116;&#x40;&#103;&#x69;&#116;&#104;&#117;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a> 测试是否配置成功</strong></h4><p>出现：Are you sure you want to continue connecting (yes/no/[fingerprint])?</p>
 <p>输入yes</p>
 <p>看到 Hi a6678696! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 <p>说明配置成功</p>]]></content>
@@ -4399,10 +4399,11 @@
 <h3 id="上传代码到GitHub远程仓库"><a href="#上传代码到GitHub远程仓库" class="headerlink" title="上传代码到GitHub远程仓库"></a><strong>上传代码到GitHub远程仓库</strong></h3><p>输入命令：git push -u origin master</p>
 <h3 id="去GitHub查看结果"><a href="#去GitHub查看结果" class="headerlink" title="去GitHub查看结果"></a><strong>去GitHub查看结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729132853.jpg" alt="img"></p>]]></content>
       <categories>
-        <category>GitHub</category>
+        <category>Git</category>
       </categories>
       <tags>
         <tag>GitHub</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -4411,7 +4412,7 @@
     <content><![CDATA[<h3 id="新建config文本"><a href="#新建config文本" class="headerlink" title="新建config文本"></a><strong>新建config文本</strong></h3><p>在存放公钥私钥（id_rsa 和 id_rsa.pub）的文件夹里，新建config文本，内容如下：</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 注册GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port <span class="number">443</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="测试连接是否成功"><a href="#测试连接是否成功" class="headerlink" title="测试连接是否成功"></a><strong>测试连接是否成功</strong></h3><p>再次执行 ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a> 时，会出现提示如下，回车”yes”即可。</p>]]></content>
+<h3 id="测试连接是否成功"><a href="#测试连接是否成功" class="headerlink" title="测试连接是否成功"></a><strong>测试连接是否成功</strong></h3><p>再次执行 ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#x62;&#46;&#x63;&#x6f;&#109;</a> 时，会出现提示如下，回车”yes”即可。</p>]]></content>
       <categories>
         <category>GitHub</category>
       </categories>
@@ -5423,15 +5424,15 @@
     <title>使用Hystrix断路器</title>
     <url>/274.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>hystrix对应的中文名字是“豪猪”，豪猪周身长满了刺，能保护自己不受天敌的伤害，代表了一种防御机制，这与hystrix本身的功能不谋而合，因此Netflix团队将该框架命名为Hystrix，并使用了对应的卡通形象做作为logo。</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20033811.jpg"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20033811.jpg" alt="img"></p>
 <p>在一个分布式系统里，许多依赖不可避免的会调用失败，比如超时、异常等，如何能够保证在一个依赖出问题的情况下，不会导致整体服务失败，这个就是Hystrix需要做的事情。Hystrix提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。</p>
 <h3 id="服务雪崩效应"><a href="#服务雪崩效应" class="headerlink" title="服务雪崩效应"></a><strong>服务雪崩效应</strong></h3><p>当一个请求依赖多个服务的时候：</p>
-<p>正常情况下的访问 </p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034111.jpg"></p>
+<p>正常情况下的访问</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034111.jpg" alt="img"></p>
 <p>但是，当请求的服务中出现无法访问、异常、超时等问题时（图中的I），那么用户的请求将会被阻塞</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034116.jpg"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034116.jpg" alt="img"></p>
 <p>如果多个用户的请求中，都存在无法访问的服务，那么他们都将陷入阻塞的状态中</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034122.jpg"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034122.jpg" alt="img"></p>
 <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>Hystrix断路器可以通过服务熔断和服务降级来解决上述的服务雪崩效应</p>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>熔断机制是应对雪崩效应的一种微服务链路保护机制，当某个服务不可用或者响应时间超时，会进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息</p>
 <h4 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h4><p>命名为microservice-student-provider-hystrix-1004，把microservice-student-provider-1001的配置和代码都复制一份到新建的Module中</p>
@@ -5446,15 +5447,16 @@
 
 <h4 id="修改提供者Controller"><a href="#修改提供者Controller" class="headerlink" title="修改提供者Controller"></a>修改提供者Controller</h4><p>StudentProviderController.java在microservice-student-provider-hystrix-1004项目中</p>
 <p>添加两个方法：getInfo方法和getInfoFallback方法</p>
-<p>在hystrix中默认1秒算超时，使用Thread.sleep(2000)模拟请求超时（@HystrixCommand注解定义了请求超时的时候就请求getInfoFallback方法，返回<font color="#dd0000">500 系统出错，稍后重试</font>），不使用就不会超时（执行完getInfo方法，返回<font color="#dd0000">200  业务数据</font>）。由于请求超时的时候进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息，所以可以有效地解决雪崩效应</p>
+<p>在hystrix中默认1秒算超时，使用Thread.sleep(2000)模拟请求超时（@HystrixCommand注解定义了请求超时的时候就请求getInfoFallback方法，返回500 系统出错，稍后重试），不使用就不会超时（执行完getInfo方法，返回200 业务数据）。由于请求超时的时候进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息，所以可以有效地解决雪崩效应</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@HystrixCommand(fallbackMethod = &quot;getInfoFallback&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求超时就请求我</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfoFallback</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
 <p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
-<p>使用Thread.sleep(2000)时会超时，返回<font color="#dd0000">500 系统出错，稍后重试</font>，如下图：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043656.png"></p>
-<p>注释掉Thread.sleep(2000)时不会超时，返回<font color="#dd0000">200  业务数据</font>，如下图：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043727.png"></p>]]></content>
+<p>使用Thread.sleep(2000)时会超时，返回500 系统出错，稍后重试，如下图：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043656.png" alt="img"></p>
+<p>注释掉Thread.sleep(2000)时不会超时，返回200 业务数据，如下图：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043727.png" alt="img"></p>
+]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -5469,14 +5471,15 @@
     <content><![CDATA[<p>Hystrix的默认超时时间是1秒，有时候正常请求响应的时间就超过了1秒，所以1秒钟并不能满足日常的开发需求，需要根据实际情况设置超时时间</p>
 <h3 id="源码位置"><a href="#源码位置" class="headerlink" title="源码位置"></a>源码位置</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer default_executionTimeoutInMilliseconds = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20005052.png"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20005052.png" alt="img"></p>
 <h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>在application.yml中添加下面配置：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hystrix:</span> </span><br><span class="line">  <span class="attr">command:</span> </span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">      <span class="attr">execution:</span> </span><br><span class="line">        <span class="attr">isolation:</span> </span><br><span class="line">          <span class="attr">thread:</span> </span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure>
 
 <p>数值的单位为毫秒，1000毫秒==1秒</p>
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
 <p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
-<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>]]></content>
+<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>
+]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -5500,13 +5503,14 @@
 <h4 id="启动类"><a href="#启动类" class="headerlink" title="启动类"></a>启动类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Hystrix服务监控90启动类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-15 17:46</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableHystrixDashboard</span></span><br><span class="line"><span class="meta">@SpringBootApplication(exclude = &#123;DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentConsumerDashBoardApplication_90</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(StudentConsumerDashBoardApplication_90.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h4><p>在浏览器地址栏输入：<a href="http://localhost:90/hystrix">http://localhost:90/hystrix</a> ，出现下面界面说明配置成功</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20181605.png"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20181605.png" alt="img"></p>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>先启动三个eureka，然后再启动microservice-student-provider-hystrix-1004</p>
 <h4 id="开始监控"><a href="#开始监控" class="headerlink" title="开始监控"></a>开始监控</h4><p>输入：<a href="http://localhost:1004/hystrix.stream">http://localhost:1004/hystrix.stream</a> ，一直是ping，然后data返回数据</p>
-<p>如果要使用图形界面监控，浏览器地址栏输入：<a href="http://localhost:90/hystrix">http://localhost:90/hystrix</a> ，出现上图，在第一个输入框输入：<a href="http://localhost:1004/hystrix.stream">http://localhost:1004/hystrix.stream</a> ，然后点击<font color="#dd0000">Monitor Stream</font>按钮即可，会出现下面界面</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182527.png"></p>
-<h4 id="指标含义"><a href="#指标含义" class="headerlink" title="指标含义"></a>指标含义</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182601.png"></p>
-<h4 id="各种情况"><a href="#各种情况" class="headerlink" title="各种情况"></a>各种情况</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182633.jpg"></p>]]></content>
+<p>如果要使用图形界面监控，浏览器地址栏输入：<a href="http://localhost:90/hystrix">http://localhost:90/hystrix</a> ，出现上图，在第一个输入框输入：<a href="http://localhost:1004/hystrix.stream">http://localhost:1004/hystrix.stream</a> ，然后点击Monitor Stream按钮即可，会出现下面界面</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182527.png" alt="img"></p>
+<h4 id="指标含义"><a href="#指标含义" class="headerlink" title="指标含义"></a>指标含义</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182601.png" alt="img"></p>
+<h4 id="各种情况"><a href="#各种情况" class="headerlink" title="各种情况"></a>各种情况</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20182633.jpg" alt="img"></p>
+]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -5542,21 +5546,54 @@
 <p>microservice-student-consumer-hystrix-turbine-91</p>
 <h4 id="调用服务集群"><a href="#调用服务集群" class="headerlink" title="调用服务集群"></a>调用服务集群</h4><p>浏览器地址栏输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
 <h4 id="监控数据"><a href="#监控数据" class="headerlink" title="监控数据"></a>监控数据</h4><p>浏览器地址栏输入：<a href="http://localhost:91/turbine.stream">http://localhost:91/turbine.stream</a></p>
-<p>如果使用图形界面监控，则先输入：<a href="http://localhost:90/hystrix">http://localhost:90/hystrix</a> 打开图形监控界面，在第一个输入框输入：<a href="http://localhost:91/turbine.stream">http://localhost:91/turbine.stream</a> ，再点击按钮即可</p>]]></content>
+<p>如果使用图形界面监控，则先输入：<a href="http://localhost:90/hystrix">http://localhost:90/hystrix</a> 打开图形监控界面，在第一个输入框输入：<a href="http://localhost:91/turbine.stream">http://localhost:91/turbine.stream</a> ，再点击按钮即可</p>
+]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
       <tags>
         <tag>Spring Cloud</tag>
         <tag>Hystrix</tag>
-        <tag>turbine</tag>
       </tags>
   </entry>
   <entry>
     <title>整合Feign和Hystrix实现服务熔断服务降级彻底解耦</title>
     <url>/278.html</url>
     <content><![CDATA[<h3 id="解耦原因"><a href="#解耦原因" class="headerlink" title="解耦原因"></a>解耦原因</h3><p>下面代码使用<font color="#dd0000">@HystrixCommand(fallbackMethod = “getInfoFallback”)</font>业务代码耦合度太高，不利于维护，所以需要整合Feign和Hystrix进行解耦</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@HystrixCommand(fallbackMethod = &quot;getInfoFallback&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">100</span>);</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据1004&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求超时就请求我</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfoFallback</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@HystrixCommand(fallbackMethod = &quot;getInfoFallback&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">100</span>);</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据1004&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求超时就请求我</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfoFallback</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="修改Hystrix服务提供者项目"><a href="#修改Hystrix服务提供者项目" class="headerlink" title="修改Hystrix服务提供者项目"></a>修改Hystrix服务提供者项目</h4><p>项目名为：microservice-student-provider-hystrix-1004和microservice-student-provider-hystrix-1005</p>
+<p>在StudentService.java中添加新的接口：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function">Map&lt;String,Object&gt; <span class="title">getInfo</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>在StudentServiceImpl.java中实现上面的接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据1004&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在StudentProviderController.java中调用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">500</span>);</span><br><span class="line">    <span class="keyword">return</span> studentService.getInfo();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改公共项目"><a href="#修改公共项目" class="headerlink" title="修改公共项目"></a>修改公共项目</h4><p>项目名为：microservice-common</p>
+<p>在StudentClientService.java中添加getInfo接口方法，并修改@FeignClient注解为：@FeignClient(value = “MICROSERVICE-STUDENT”, fallbackFactory = StudentClientFallbackFactory.class)</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/student/getInfo&quot;)</span></span><br><span class="line"><span class="function">Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>新建StudentClientFallbackFactory.java，实现FallbackFactory&lt;StudentClientService&gt;接口</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> feign.hystrix.FallbackFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-16 2:18</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentClientFallbackFactory</span> <span class="keyword">implements</span> <span class="title">FallbackFactory</span>&lt;<span class="title">StudentClientService</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> StudentClientService <span class="title">create</span><span class="params">(Throwable throwable)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> StudentClientService() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> Student <span class="title">get</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> List&lt;Student&gt; <span class="title">list</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">save</span><span class="params">(Student student)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">delete</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">                map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">                map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> map;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改Feign消费者项目"><a href="#修改Feign消费者项目" class="headerlink" title="修改Feign消费者项目"></a>修改Feign消费者项目</h4><p>项目名为：microservice-student-consumer-feign-80</p>
+<p>在StudentConsumerFeignController.java中添加调用方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> studentClientService.getInfo();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>application.yml加上hystrix支持</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">feign:</span></span><br><span class="line">  <span class="attr">hystrix:</span></span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>启动以下项目：</p>
+<p>microservice-eureka-server-2001</p>
+<p>microservice-eureka-server-2002</p>
+<p>microservice-eureka-server-2003</p>
+<p>microservice-student-provider-hystrix-1004</p>
+<p>microservice-student-provider-hystrix-1005</p>
+<p>microservice-student-consumer-feign-80</p>
+<p>如果超时的情况返回错误信息（<font color="#dd0000">500  系统出错，稍后重试</font>），说明配置成功</p>]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -5597,19 +5634,6 @@
       </tags>
   </entry>
   <entry>
-    <title>第一个Java程序:HelloWorld</title>
-    <url>/3.html</url>
-    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010130141.jpg"></p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea彻底删除一个项目</title>
     <url>/30.html</url>
     <content><![CDATA[<h3 id="在idea的project栏中右键点击项目-选择Remove-Module"><a href="#在idea的project栏中右键点击项目-选择Remove-Module" class="headerlink" title="在idea的project栏中右键点击项目,选择Remove Module"></a><strong>在idea的project栏中右键点击项目,选择Remove Module</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018010656.jpg" alt="img"></p>
@@ -5644,6 +5668,19 @@
       </tags>
   </entry>
   <entry>
+    <title>第一个Java程序:HelloWorld</title>
+    <url>/3.html</url>
+    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello World!&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010130141.jpg"></p>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>EasyUI标签页右键单击事件添加</title>
     <url>/32.html</url>
     <content><![CDATA[<h3 id="在主页面main-html添加以下代码"><a href="#在主页面main-html添加以下代码" class="headerlink" title="在主页面main.html添加以下代码:"></a><strong>在主页面main.html添加以下代码:</strong></h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码:"></a>HTML代码:</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;menu&quot;</span> <span class="attr">class</span>=<span class="string">&quot;easyui-menu&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabrefresh&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;1&#x27;,iconCls:&#x27;icon-refresh&#x27;&quot;</span>&gt;</span> 刷新当前标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;menu-sep&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabclose&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;2&#x27;,iconCls:&#x27;icon-closetab&#x27;&quot;</span>&gt;</span>关闭当前标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseall&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;3&#x27;,iconCls:&#x27;icon-closealltab&#x27;&quot;</span>&gt;</span>关闭全部标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseother&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;4&#x27;,iconCls:&#x27;icon-closeothertab&#x27;&quot;</span>&gt;</span>关闭其他标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseright&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;5&#x27;,iconCls:&#x27;icon-closerighttab&#x27;&quot;</span>&gt;</span>关闭右侧标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseleft&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;6&#x27;,iconCls:&#x27;icon-closelefttab&#x27;&quot;</span>&gt;</span>关闭左侧标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -5657,6 +5694,25 @@
       <tags>
         <tag>前端</tag>
         <tag>EasyUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基本数据类型之间的转换（显式转换和隐式转换）</title>
+    <url>/34.html</url>
+    <content><![CDATA[<h3 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a><strong>隐式转换</strong></h3><p>从表示范围小的类型转换为表示范围大的类型，可以直接转换，称为隐式转换。隐式类型转换又可以称为自动类型转换，就是由系统自动完成的类型转换。</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//数据类型转换之隐式转换（小的赋值给大的）</span></span><br><span class="line">        <span class="comment">//4个字节，占4个8位，int类型转换成byte时，去掉前3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">3</span>;</span><br><span class="line">        <span class="comment">//1个字节，占1个8位，byte类型转换成int时，在前面添加3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">byte</span> b=<span class="number">4</span>;</span><br><span class="line">        <span class="comment">/*小的数据类型和大的数据类型转换时，会将小的数据类型转换成大的数据类型，</span></span><br><span class="line"><span class="comment">        然后再进行运算，本程序中将byte类型转换成int类型,最终结果是int类型*/</span></span><br><span class="line">        x=x+b;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//控制台输出7</span></span><br><span class="line">        System.out.println(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="显式转换"><a href="#显式转换" class="headerlink" title="显式转换"></a><strong>显式转换</strong></h3><p>从表示范围大的类型转换为表示范围小的类型，需要强制转换，称为显式转换。强制类型转换的语法格式就是加一个括号，然后给出想要转换的目标类型。</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//int类型300转换成2进制为00000000 00000000 00000001 00101100</span></span><br><span class="line">        <span class="comment">//转换成byte去掉前3个8位：00101100</span></span><br><span class="line">        <span class="comment">//32+8+4=44</span></span><br><span class="line">        <span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)<span class="number">300</span>;</span><br><span class="line">        <span class="comment">//控制台输出44</span></span><br><span class="line">        System.out.println(b1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>自动类型转换规则：<a href="http://www.zoutl.cn/blog/106">二元运算符连接两个值</a></p>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -5678,25 +5734,6 @@
 
 <h3 id="char型（文本型）"><a href="#char型（文本型）" class="headerlink" title="char型（文本型）"></a><strong>char型（文本型）</strong></h3><p>用于存放字符的数据类型，占用2个字节，采用unicode编码，它的前128字节编码与ASCII兼容</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020142626.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基本数据类型之间的转换（显式转换和隐式转换）</title>
-    <url>/34.html</url>
-    <content><![CDATA[<h3 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a><strong>隐式转换</strong></h3><p>从表示范围小的类型转换为表示范围大的类型，可以直接转换，称为隐式转换。隐式类型转换又可以称为自动类型转换，就是由系统自动完成的类型转换。</p>
-<p>例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//数据类型转换之隐式转换（小的赋值给大的）</span></span><br><span class="line">        <span class="comment">//4个字节，占4个8位，int类型转换成byte时，去掉前3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">3</span>;</span><br><span class="line">        <span class="comment">//1个字节，占1个8位，byte类型转换成int时，在前面添加3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">byte</span> b=<span class="number">4</span>;</span><br><span class="line">        <span class="comment">/*小的数据类型和大的数据类型转换时，会将小的数据类型转换成大的数据类型，</span></span><br><span class="line"><span class="comment">        然后再进行运算，本程序中将byte类型转换成int类型,最终结果是int类型*/</span></span><br><span class="line">        x=x+b;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//控制台输出7</span></span><br><span class="line">        System.out.println(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="显式转换"><a href="#显式转换" class="headerlink" title="显式转换"></a><strong>显式转换</strong></h3><p>从表示范围大的类型转换为表示范围小的类型，需要强制转换，称为显式转换。强制类型转换的语法格式就是加一个括号，然后给出想要转换的目标类型。</p>
-<p>例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//int类型300转换成2进制为00000000 00000000 00000001 00101100</span></span><br><span class="line">        <span class="comment">//转换成byte去掉前3个8位：00101100</span></span><br><span class="line">        <span class="comment">//32+8+4=44</span></span><br><span class="line">        <span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)<span class="number">300</span>;</span><br><span class="line">        <span class="comment">//控制台输出44</span></span><br><span class="line">        System.out.println(b1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>自动类型转换规则：<a href="http://www.zoutl.cn/blog/106">二元运算符连接两个值</a></p>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -5804,33 +5841,6 @@
       </tags>
   </entry>
   <entry>
-    <title>十大经典排序算法之插入排序</title>
-    <url>/39.html</url>
-    <content><![CDATA[<p>插入排序（Insertion-Sort）的算法描述是一种简单直观的排序算法。它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>
-<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a><strong>算法描述</strong></h3><p>一般来说，插入排序都采用in-place在数组上实现。具体算法描述如下：</p>
-<p>*从第一个元素开始，该元素可以认为已经被排序；</p>
-<p>*取出下一个元素，在已经排序的元素序列中从后向前扫描；</p>
-<p>*如果该元素（已排序）大于新元素，将该元素移到下一位置；</p>
-<p>*重复步骤3，直到找到已排序的元素小于或者等于新元素的位置；</p>
-<p>*将新元素插入到该位置后；</p>
-<p>*重复步骤2~5。</p>
-<h3 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a><strong>动图演示</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022132343.jpg" alt="img"></p>
-<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a><strong>算法实现</strong></h3><p>Java代码:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] number = &#123;<span class="number">11</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    System.out.println(<span class="string">&quot;排序前：&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : number) &#123;</span><br><span class="line">        System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> temp, j;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; number.length; i++) &#123;</span><br><span class="line">        temp = number[i];</span><br><span class="line">        <span class="keyword">for</span> (j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; number[j] &gt; temp; j--) &#123;</span><br><span class="line">            number[j + <span class="number">1</span>] = number[j];</span><br><span class="line">        &#125;</span><br><span class="line">        number[j + <span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;\n排序后：&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : number) &#123;</span><br><span class="line">        System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行结果:</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022132757.jpg" alt="img"></p>
-<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a><strong>算法分析</strong></h3><p>插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间。</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>搬运地址: <a href="https://www.cnblogs.com/onepixel/p/7674659.html">十大经典排序算法（动图演示） - 一像素 - 博客园 (cnblogs.com)</a></p>]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>常用cron表达式</title>
     <url>/4.html</url>
     <content><![CDATA[<p>（1）<strong>0 0 2 1 * ? *</strong>  表示在每月的1日的凌晨2点调整任务</p>
@@ -5863,6 +5873,33 @@
       </categories>
       <tags>
         <tag>cron</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十大经典排序算法之插入排序</title>
+    <url>/39.html</url>
+    <content><![CDATA[<p>插入排序（Insertion-Sort）的算法描述是一种简单直观的排序算法。它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。</p>
+<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a><strong>算法描述</strong></h3><p>一般来说，插入排序都采用in-place在数组上实现。具体算法描述如下：</p>
+<p>*从第一个元素开始，该元素可以认为已经被排序；</p>
+<p>*取出下一个元素，在已经排序的元素序列中从后向前扫描；</p>
+<p>*如果该元素（已排序）大于新元素，将该元素移到下一位置；</p>
+<p>*重复步骤3，直到找到已排序的元素小于或者等于新元素的位置；</p>
+<p>*将新元素插入到该位置后；</p>
+<p>*重复步骤2~5。</p>
+<h3 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a><strong>动图演示</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022132343.jpg" alt="img"></p>
+<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a><strong>算法实现</strong></h3><p>Java代码:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] number = &#123;<span class="number">11</span>, <span class="number">3</span>, <span class="number">45</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">7</span>&#125;;</span><br><span class="line">    System.out.println(<span class="string">&quot;排序前：&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : number) &#123;</span><br><span class="line">        System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> temp, j;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; number.length; i++) &#123;</span><br><span class="line">        temp = number[i];</span><br><span class="line">        <span class="keyword">for</span> (j = i - <span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; number[j] &gt; temp; j--) &#123;</span><br><span class="line">            number[j + <span class="number">1</span>] = number[j];</span><br><span class="line">        &#125;</span><br><span class="line">        number[j + <span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;\n排序后：&quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i : number) &#123;</span><br><span class="line">        System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果:</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022132757.jpg" alt="img"></p>
+<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a><strong>算法分析</strong></h3><p>插入排序在实现上，通常采用in-place排序（即只需用到O(1)的额外空间的排序），因而在从后向前扫描过程中，需要反复把已排序元素逐步向后挪位，为最新元素提供插入空间。</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>搬运地址: <a href="https://www.cnblogs.com/onepixel/p/7674659.html">十大经典排序算法（动图演示） - 一像素 - 博客园 (cnblogs.com)</a></p>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -7740,19 +7777,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端实现返回顶部</title>
-    <url>/91.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a><strong>HTML代码</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#gotop&quot;</span> <span class="attr">title</span>=<span class="string">&quot;返回顶部&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/images/top2.png&#125;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;gotop&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">style</span>=<span class="string">&quot;position: fixed;bottom: 10%;display: none;height: 40px;margin-left: 96%&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a><strong>JavaScript代码</strong></h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回顶部图标出现或者消失</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> ($(<span class="built_in">window</span>).scrollTop() &gt; <span class="number">100</span>) &#123;</span><br><span class="line">                $(<span class="string">&quot;#gotop&quot;</span>).fadeIn(<span class="number">1000</span>);<span class="comment">//一秒渐入动画</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                $(<span class="string">&quot;#gotop&quot;</span>).fadeOut(<span class="number">1000</span>);<span class="comment">//一秒渐隐动画</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"> </span><br><span class="line">        $(<span class="string">&quot;#gotop&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            $(<span class="string">&#x27;body,html&#x27;</span>).animate(&#123;<span class="attr">scrollTop</span>: <span class="number">0</span>&#125;, <span class="number">1000</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea版本更新</title>
     <url>/92.html</url>
     <content><![CDATA[<h3 id="去官网下载最新版"><a href="#去官网下载最新版" class="headerlink" title="去官网下载最新版"></a><strong>去官网下载最新版</strong></h3><p><a href="https://www.jetbrains.com/zh-cn/">JetBrains: 软件开发人员和团队的必备工具</a></p>
@@ -7771,6 +7795,19 @@
       </categories>
       <tags>
         <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端实现返回顶部</title>
+    <url>/91.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a><strong>HTML代码</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#gotop&quot;</span> <span class="attr">title</span>=<span class="string">&quot;返回顶部&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/images/top2.png&#125;&quot;</span> <span class="attr">id</span>=<span class="string">&quot;gotop&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">style</span>=<span class="string">&quot;position: fixed;bottom: 10%;display: none;height: 40px;margin-left: 96%&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a><strong>JavaScript代码</strong></h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回顶部图标出现或者消失</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> ($(<span class="built_in">window</span>).scrollTop() &gt; <span class="number">100</span>) &#123;</span><br><span class="line">                $(<span class="string">&quot;#gotop&quot;</span>).fadeIn(<span class="number">1000</span>);<span class="comment">//一秒渐入动画</span></span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                $(<span class="string">&quot;#gotop&quot;</span>).fadeOut(<span class="number">1000</span>);<span class="comment">//一秒渐隐动画</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"> </span><br><span class="line">        $(<span class="string">&quot;#gotop&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            $(<span class="string">&#x27;body,html&#x27;</span>).animate(&#123;<span class="attr">scrollTop</span>: <span class="number">0</span>&#125;, <span class="number">1000</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
