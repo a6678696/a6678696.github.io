@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-16T20:40:33.965Z</updated>
+  <updated>2021-08-16T21:02:51.673Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows10输入法获取当前时间</title>
+    <link href="http://example.com/280.html"/>
+    <id>http://example.com/280.html</id>
+    <published>2021-08-16T20:44:49.000Z</published>
+    <updated>2021-08-16T21:02:51.673Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="打开输入法设置"><a href="#打开输入法设置" class="headerlink" title="打开输入法设置"></a>打开输入法设置</h3><p><strong>右击单击右下角的输入法选项，选择设置</strong></p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045135.png" style="zoom:67%;" /><h3 id="选择词库和自学习"><a href="#选择词库和自学习" class="headerlink" title="选择词库和自学习"></a><strong>选择词库和自学习</strong></h3><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045223.png" style="zoom:67%;" /><h3 id="点击添加或编辑自定义短语"><a href="#点击添加或编辑自定义短语" class="headerlink" title="点击添加或编辑自定义短语"></a><strong>点击添加或编辑自定义短语</strong></h3><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045244.png" style="zoom:67%;" /><h3 id="添加短语"><a href="#添加短语" class="headerlink" title="添加短语"></a>添加短语</h3><p>添加短语：<font color="#dd0000">%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</font></p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045457.png" style="zoom:67%;" /><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a><strong>使用</strong></h3><p>在中文模式下输入sj即可获取当前时间</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/28.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="Windows10" scheme="http://example.com/tags/Windows10/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git恢复之前的版本</title>
     <link href="http://example.com/279.html"/>
     <id>http://example.com/279.html</id>
     <published>2021-08-16T20:01:26.000Z</published>
-    <updated>2021-08-16T20:40:33.965Z</updated>
+    <updated>2021-08-16T20:48:20.744Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>回退（reset）、反做（revert）</p><h3 id="回退（reset）"><a href="#回退（reset）" class="headerlink" title="回退（reset）"></a>回退（reset）</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>git reset的作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本，如下图所示，假设我们要回退到版本一</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041222.png"></p><h4 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p><h4 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h4><p>先查看当前库有哪些版本号，查看方法有两种：</p><p>①Git命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure><p>commit后的黄色字符串就是版本号</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20042055.png"></p><p>②在GitHub中查看</p><p>点击下图的提交数</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041534.png"></p><p>点击下图的复制按钮即可复制完整版本号</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041538.png"></p><p>使用下面命令将版本回退</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 目标版本号</span><br></pre></td></tr></table></figure><p>使用下面命令提交更改，-f代表强制</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -f</span><br></pre></td></tr></table></figure><h3 id="反做（revert）"><a href="#反做（revert）" class="headerlink" title="反做（revert）"></a>反做（revert）</h3><h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>git revert是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们commit了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西<br><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041230.png"></p><h4 id="适用场景-1"><a href="#适用场景-1" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p><h4 id="具体操作-1"><a href="#具体操作-1" class="headerlink" title="具体操作"></a>具体操作</h4><p>查看版本号，上面有具体操作</p><p>使用下面命令反做，这里可能会出现冲突，那么需要手动修改冲突的文件，而且要git add 文件名</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git revert -n 版本号</span><br></pre></td></tr></table></figure><p>使用下面命令提交</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注信息&quot;</span></span><br></pre></td></tr></table></figure><p>使用下面命令提交更改到远程库</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>回退（reset）、反做（revert）</p><h3 id="回退（reset）"><a href="#回退（reset）" class="headerlink" title="回退（reset）"></a>回退（reset）</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>git reset的作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本，如下图所示，假设我们要回退到版本一</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041222.png"></p><h4 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p><h4 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h4><p>先查看当前库有哪些版本号，查看方法有两种：</p><p>①Git命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure><p>commit后的黄色字符串就是版本号</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20042055.png"></p><p>②在GitHub中查看</p><p>点击下图的提交数</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041534.png"></p><p>点击下图的复制按钮即可复制完整版本号</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041538.png"></p><p>使用下面命令将版本回退</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 目标版本号</span><br></pre></td></tr></table></figure><p>使用下面命令提交更改，-f代表强制</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -f</span><br></pre></td></tr></table></figure><h3 id="反做（revert）"><a href="#反做（revert）" class="headerlink" title="反做（revert）"></a>反做（revert）</h3><h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>git revert是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们commit了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西<br><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041230.png"></p><h4 id="适用场景-1"><a href="#适用场景-1" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p><h4 id="具体操作-1"><a href="#具体操作-1" class="headerlink" title="具体操作"></a>具体操作</h4><p>查看版本号，上面有具体操作</p><p>使用下面命令反做，这里可能会出现冲突，那么需要手动修改冲突的文件，而且要git add 文件名</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git revert -n 版本号</span><br></pre></td></tr></table></figure><p>使用下面命令提交</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注信息&quot;</span></span><br></pre></td></tr></table></figure><p>使用下面命令提交更改到远程库</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/yxlshk/article/details/79944535">https://blog.csdn.net/yxlshk/article/details/79944535</a></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/88.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
@@ -470,27 +491,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/84.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Dubbo" scheme="http://example.com/categories/Dubbo/"/>
-    
-    
-    <category term="Dubbo" scheme="http://example.com/tags/Dubbo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dubbo抽取服务提供者和消费者的共同接口</title>
-    <link href="http://example.com/260.html"/>
-    <id>http://example.com/260.html</id>
-    <published>2021-08-10T06:25:12.000Z</published>
-    <updated>2021-08-10T12:36:36.991Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="抽取原因"><a href="#抽取原因" class="headerlink" title="抽取原因"></a>抽取原因</h3><p>抽取前需要在服务提供者以及消费者模块中分别定义一次接口，抽取后只需要定义一次即可，可以提高开发的效率</p><h3 id="新建模块"><a href="#新建模块" class="headerlink" title="新建模块"></a>新建模块</h3><p>新建一个子模块项目存放接口，我命令为Api</p><h3 id="新建接口"><a href="#新建接口" class="headerlink" title="新建接口"></a>新建接口</h3><p>在java文件夹中新建service文件夹，再创建一个接口，该接口和服务提供者以及消费者的接口路径、名称要一样</p><h3 id="删除接口"><a href="#删除接口" class="headerlink" title="删除接口"></a>删除接口</h3><p>然后删除掉服务提供者和消费者的接口，删除后服务提供者以及消费者会报错</p><h3 id="引入存放接口模块的依赖"><a href="#引入存放接口模块的依赖" class="headerlink" title="引入存放接口模块的依赖"></a>引入存放接口模块的依赖</h3><p>引入的依赖路径在Api模块的pom.xml，如下图：</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-10%20143533.png"></p><p>在服务提供者以及消费者pom.xml的dependencies节点中引入依赖</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>Api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><p>至此，共同接口抽取完成</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/36.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
