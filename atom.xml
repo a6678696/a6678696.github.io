@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-17T13:36:09.185Z</updated>
+  <updated>2021-08-17T13:36:26.838Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/281.html"/>
     <id>http://example.com/281.html</id>
     <published>2021-08-17T13:05:39.000Z</published>
-    <updated>2021-08-17T13:36:09.185Z</updated>
+    <updated>2021-08-17T13:36:26.838Z</updated>
     
     <content type="html"><![CDATA[<p>Feign和Hystrix整合后,原来服务提供者的Hystrix超时时间配置没用了</p><p>把microservice-student-provider-hystrix-1004和microservice-student-provider-hystrix-1005的超时时间配置删除，添加到带Feign的服务消费项目的application.yml中（项目名为：microservice-student-consumer-feign-80）</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hystrix:</span></span><br><span class="line">  <span class="attr">command:</span></span><br><span class="line">    <span class="attr">default:</span></span><br><span class="line">      <span class="attr">execution:</span></span><br><span class="line">        <span class="attr">isolation:</span></span><br><span class="line">          <span class="attr">thread:</span></span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure><p>虽然添加了超时时间配置，但是还是无效，无效原因为：feign 也有一个超时时间的设置，feign底层是ribbon的封装，所以直接配置ribbon，ribbon默认超时也是1秒。所以这里都是强制要求，ribbon的超时时间要大于hystrix的超时时间，否则 hystrix自定义的超时时间毫无意义</p><p>所以还得加个 ribbon超时时间设置</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ribbon:</span></span><br><span class="line">  <span class="attr">ReadTimeout:</span> <span class="number">10000</span></span><br><span class="line">  <span class="attr">ConnectTimeout:</span> <span class="number">9000</span></span><br></pre></td></tr></table></figure><p>到此，超时时间配置完成，新的超时时间已经生效</p>]]></content>
     
