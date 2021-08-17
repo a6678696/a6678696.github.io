@@ -11612,4 +11612,27 @@
         <tag>Zull</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Zuul路由映射规则配置</title>
+    <url>/283.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>默认路由请求地址，很容易暴露接口细节，可以通过配置映射规则来提高服务的安全性</p>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在application.yml中添加以下配置</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br></pre></td></tr></table></figure>
+
+<p>现在可以通过 <a href="http://zuul.ledao.com:3001/studentServer/student/list">http://zuul.ledao.com:3001/studentServer/student/list</a> 访问了</p>
+<p>但是也可以通过 <a href="http://zuul.ledao.com:3001/microservice-student/student/list">http://zuul.ledao.com:3001/microservice-student/student/list</a> 访问，这样是不安全的，如果要忽略microservice-student服务就添加配置：ignored-services: “microservice-student”，如果要忽略所有的服务名称则修改为：ignored-services: “*”，完整配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br><span class="line">  <span class="attr">ignored-services:</span> <span class="string">&quot;*&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果添加请求前缀，就添加配置：prefix: /ledao，<font color="#dd0000"><strong>最终配置</strong></font>如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Zuul路由配置</span></span><br><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br><span class="line">  <span class="attr">ignored-services:</span> <span class="string">&quot;*&quot;</span> <span class="comment">#忽略的服务</span></span><br><span class="line">  <span class="attr">prefix:</span> <span class="string">/ledao</span> <span class="comment">#前缀</span></span><br></pre></td></tr></table></figure>
+
+<p>现在只能通过 <a href="http://zuul.ledao.com:3001/ledao/studentServer/student/list">http://zuul.ledao.com:3001/ledao/studentServer/student/list</a> 访问，其它请求方式的结果都是404</p>]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Zuul</tag>
+      </tags>
+  </entry>
 </search>
