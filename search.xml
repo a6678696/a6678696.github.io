@@ -50,19 +50,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL数据库中text字段长度不够</title>
-    <url>/102.html</url>
-    <content><![CDATA[<p>text类型是可变长度的字符串，最多65535个字符；</p>
-<p>可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://blog.csdn.net/u014417619/article/details/76798233">mysql的text字段长度？mysql数据库中text字段长度不够的问题_u014417619的专栏-CSDN博客_mysql的text字段长度</a></p>]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>制作网站logo</title>
     <url>/103.html</url>
     <content><![CDATA[<h3 id="网站地址："><a href="#网站地址：" class="headerlink" title="网站地址："></a><strong>网站地址：</strong></h3><p><a href="http://www.uugai.com/">http://www.uugai.com/</a></p>
@@ -77,6 +64,19 @@
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL数据库中text字段长度不够</title>
+    <url>/102.html</url>
+    <content><![CDATA[<p>text类型是可变长度的字符串，最多65535个字符；</p>
+<p>可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://blog.csdn.net/u014417619/article/details/76798233">mysql的text字段长度？mysql数据库中text字段长度不够的问题_u014417619的专栏-CSDN博客_mysql的text字段长度</a></p>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -114,21 +114,6 @@
       </tags>
   </entry>
   <entry>
-    <title>给网页添加背景图片（网页缩小放大都不受影响）</title>
-    <url>/107.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a><strong>HTML代码</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a><strong>CSS代码</strong></h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决：Tomcat运行项目时Quartz定时任务执行两次</title>
     <url>/106.html</url>
     <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a><strong>原因</strong></h3><p>在Tomcat的配置文件conf/server.xml中：</p>
@@ -146,6 +131,21 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给网页添加背景图片（网页缩小放大都不受影响）</title>
+    <url>/107.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a><strong>HTML代码</strong></h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a><strong>CSS代码</strong></h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -3415,7 +3415,7 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
 <p>安装是否安装成功，分别输入命令node –version，npm -v都可以看到版本号说明Node.js安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
-<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a><strong>安装vue-cli脚手架</strong></h3><p>打开cmd，输入命令：npm install -g <a href="mailto:&#118;&#x75;&#101;&#45;&#99;&#x6c;&#x69;&#x40;&#x32;&#46;&#x39;&#46;&#54;">&#118;&#x75;&#101;&#45;&#99;&#x6c;&#x69;&#x40;&#x32;&#46;&#x39;&#46;&#54;</a>，运行</p>
+<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a><strong>安装vue-cli脚手架</strong></h3><p>打开cmd，输入命令：npm install -g <a href="mailto:&#x76;&#x75;&#x65;&#45;&#x63;&#108;&#105;&#64;&#50;&#x2e;&#57;&#46;&#x36;">&#x76;&#x75;&#x65;&#45;&#x63;&#108;&#105;&#64;&#50;&#x2e;&#57;&#46;&#x36;</a>，运行</p>
 <p>等待安装完成，输入命令：vue -V，看到版本号说明脚手架安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>]]></content>
       <categories>
@@ -4297,6 +4297,24 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub创建第三方应用</title>
+    <url>/234.html</url>
+    <content><![CDATA[<h3 id="点击右上角头像选择Settings进入设置"><a href="#点击右上角头像选择Settings进入设置" class="headerlink" title="点击右上角头像选择Settings进入设置"></a><strong>点击右上角头像选择Settings进入设置</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075055.jpg" alt="img"></p>
+<h3 id="左侧菜单选择Developer-settings"><a href="#左侧菜单选择Developer-settings" class="headerlink" title="左侧菜单选择Developer settings"></a><strong>左侧菜单选择Developer settings</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075108.jpg" alt="img"></p>
+<h3 id="左侧菜单选择OAuth-Apps，点击右边的New-OAuth-App按钮"><a href="#左侧菜单选择OAuth-Apps，点击右边的New-OAuth-App按钮" class="headerlink" title="左侧菜单选择OAuth Apps，点击右边的New OAuth App按钮"></a><strong>左侧菜单选择OAuth Apps，点击右边的New OAuth App按钮</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075122.jpg" alt="img"></p>
+<h3 id="填写信息后，点击下方绿色的Register-applaction按钮创建应用"><a href="#填写信息后，点击下方绿色的Register-applaction按钮创建应用" class="headerlink" title="填写信息后，点击下方绿色的Register applaction按钮创建应用"></a><strong>填写信息后，点击下方绿色的Register applaction按钮创建应用</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075131.jpg" alt="img"></p>
+<p>Application name 一般填写自己的网站名称即可</p>
+<p>Application description 一般填写自己的应用描述即可</p>
+<p>Homepage URL 填写自己的网站首页地址</p>
+<p>Authorization callback URL 重点，该地址为用户授权后需要跳转到的自己网站的地址，默认携带一个code参数以上信息输入完成后</p>]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JustAuth实现GitHub登录</title>
     <url>/235.html</url>
     <content><![CDATA[<h3 id="GitHub创建第三方应用"><a href="#GitHub创建第三方应用" class="headerlink" title="GitHub创建第三方应用"></a><strong>GitHub创建第三方应用</strong></h3><p>具体步骤查看博客：<a href="/234.html">GitHub创建第三方应用</a></p>
@@ -4339,24 +4357,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub创建第三方应用</title>
-    <url>/234.html</url>
-    <content><![CDATA[<h3 id="点击右上角头像选择Settings进入设置"><a href="#点击右上角头像选择Settings进入设置" class="headerlink" title="点击右上角头像选择Settings进入设置"></a><strong>点击右上角头像选择Settings进入设置</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075055.jpg" alt="img"></p>
-<h3 id="左侧菜单选择Developer-settings"><a href="#左侧菜单选择Developer-settings" class="headerlink" title="左侧菜单选择Developer settings"></a><strong>左侧菜单选择Developer settings</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075108.jpg" alt="img"></p>
-<h3 id="左侧菜单选择OAuth-Apps，点击右边的New-OAuth-App按钮"><a href="#左侧菜单选择OAuth-Apps，点击右边的New-OAuth-App按钮" class="headerlink" title="左侧菜单选择OAuth Apps，点击右边的New OAuth App按钮"></a><strong>左侧菜单选择OAuth Apps，点击右边的New OAuth App按钮</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075122.jpg" alt="img"></p>
-<h3 id="填写信息后，点击下方绿色的Register-applaction按钮创建应用"><a href="#填写信息后，点击下方绿色的Register-applaction按钮创建应用" class="headerlink" title="填写信息后，点击下方绿色的Register applaction按钮创建应用"></a><strong>填写信息后，点击下方绿色的Register applaction按钮创建应用</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075131.jpg" alt="img"></p>
-<p>Application name 一般填写自己的网站名称即可</p>
-<p>Application description 一般填写自己的应用描述即可</p>
-<p>Homepage URL 填写自己的网站首页地址</p>
-<p>Authorization callback URL 重点，该地址为用户授权后需要跳转到的自己网站的地址，默认携带一个code参数以上信息输入完成后</p>]]></content>
-      <categories>
-        <category>GitHub</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub配置SSH Key</title>
     <url>/236.html</url>
     <content><![CDATA[<h3 id="配置SSH-Keys的好处"><a href="#配置SSH-Keys的好处" class="headerlink" title="配置SSH Keys的好处"></a><strong>配置SSH Keys的好处</strong></h3><p>在管理Git项目上，很多时候都是直接使用https url克隆到本地，当然也有有些人使用SSH url克隆到本地。</p>
@@ -4370,7 +4370,7 @@
 <p>连续按下回车键三次，至此本机的ssh密匙创建完成，该密钥一般存放在C盘的用户文件夹的.ssh文件夹中（我的是C:\Users\LeDao.ssh）</p>
 <h4 id="配置Github的SSH-Key"><a href="#配置Github的SSH-Key" class="headerlink" title="配置Github的SSH Key"></a><strong>配置Github的SSH Key</strong></h4><p>进入Github首页，点击右上角的头像选择Settings，选择左侧菜单的SSH and GPG keys，然后点击右侧的New SSH key按钮，打开上面第三步的本地密钥id_rsa.pub文件（用记事本打开并复制其内容），复制到GitHub的key文本框中，title可以随意设置</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729123108.jpg" alt="img"></p>
-<h4 id="输入-ssh-T-x67-105-x74-64-103-105-x74-x68-x75-x62-x2e-99-x6f-x6d-测试是否配置成功"><a href="#输入-ssh-T-x67-105-x74-64-103-105-x74-x68-x75-x62-x2e-99-x6f-x6d-测试是否配置成功" class="headerlink" title="输入 ssh -T &#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d; 测试是否配置成功"></a><strong>输入 ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#x6f;&#x6d;</a> 测试是否配置成功</strong></h4><p>出现：Are you sure you want to continue connecting (yes/no/[fingerprint])?</p>
+<h4 id="输入-ssh-T-103-x69-x74-x40-103-x69-116-104-x75-98-46-99-111-x6d-测试是否配置成功"><a href="#输入-ssh-T-103-x69-x74-x40-103-x69-116-104-x75-98-46-99-111-x6d-测试是否配置成功" class="headerlink" title="输入 ssh -T &#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d; 测试是否配置成功"></a><strong>输入 ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#x6d;</a> 测试是否配置成功</strong></h4><p>出现：Are you sure you want to continue connecting (yes/no/[fingerprint])?</p>
 <p>输入yes</p>
 <p>看到 Hi a6678696! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
 <p>说明配置成功</p>]]></content>
@@ -4412,7 +4412,7 @@
     <content><![CDATA[<h3 id="新建config文本"><a href="#新建config文本" class="headerlink" title="新建config文本"></a><strong>新建config文本</strong></h3><p>在存放公钥私钥（id_rsa 和 id_rsa.pub）的文件夹里，新建config文本，内容如下：</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 注册GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port <span class="number">443</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="测试连接是否成功"><a href="#测试连接是否成功" class="headerlink" title="测试连接是否成功"></a><strong>测试连接是否成功</strong></h3><p>再次执行 ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#x74;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#46;&#99;&#111;&#109;</a> 时，会出现提示如下，回车”yes”即可。</p>]]></content>
+<h3 id="测试连接是否成功"><a href="#测试连接是否成功" class="headerlink" title="测试连接是否成功"></a><strong>测试连接是否成功</strong></h3><p>再次执行 ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a> 时，会出现提示如下，回车”yes”即可。</p>]]></content>
       <categories>
         <category>GitHub</category>
       </categories>
@@ -4540,22 +4540,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Gitalk显示：未找到相关的 Issues 进行评论</title>
-    <url>/244.html</url>
-    <content><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>已经正确安装Gitalk</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="GitHub网站登录"><a href="#GitHub网站登录" class="headerlink" title="GitHub网站登录"></a>GitHub网站登录</h4><p>进入GitHub网站，登录Gitalk评论仓库的所有者账号</p>
-<h4 id="Gitalk评论登录GitHub账号"><a href="#Gitalk评论登录GitHub账号" class="headerlink" title="Gitalk评论登录GitHub账号"></a>Gitalk评论登录GitHub账号</h4><p>进入显示<font color="#dd0000">未找到相关的 Issues 进行评论</font>的网页，点击<font color="#dd0000">使用GitHub登录</font>按钮，Gitalk评论仓库将自动创建一个当前网页的 Issues ，然后每进入一个显示<font color="#dd0000">未找到相关的 Issues 进行评论</font>的网页，将会自动创建 Issues</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20134819.png"></p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20140545.png"></p>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo next创建标签页</title>
     <url>/243.html</url>
     <content><![CDATA[<h3 id="创建命令"><a href="#创建命令" class="headerlink" title="创建命令"></a>创建命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;tags&quot;</span></span><br></pre></td></tr></table></figure>
@@ -4580,6 +4564,22 @@
         <category>hexo</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Gitalk显示：未找到相关的 Issues 进行评论</title>
+    <url>/244.html</url>
+    <content><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>已经正确安装Gitalk</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="GitHub网站登录"><a href="#GitHub网站登录" class="headerlink" title="GitHub网站登录"></a>GitHub网站登录</h4><p>进入GitHub网站，登录Gitalk评论仓库的所有者账号</p>
+<h4 id="Gitalk评论登录GitHub账号"><a href="#Gitalk评论登录GitHub账号" class="headerlink" title="Gitalk评论登录GitHub账号"></a>Gitalk评论登录GitHub账号</h4><p>进入显示<font color="#dd0000">未找到相关的 Issues 进行评论</font>的网页，点击<font color="#dd0000">使用GitHub登录</font>按钮，Gitalk评论仓库将自动创建一个当前网页的 Issues ，然后每进入一个显示<font color="#dd0000">未找到相关的 Issues 进行评论</font>的网页，将会自动创建 Issues</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20134819.png"></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20140545.png"></p>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
         <tag>hexo</tag>
       </tags>
   </entry>
@@ -4922,19 +4922,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Maven出现错误：&quot;Parent, please verify your project structure&quot;</title>
-    <url>/259.html</url>
-    <content><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>该错误出现在使用parent节点继承其它模块的依赖版本号时</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>在parent节点加入&lt;relativePath/&gt;，完整parent节点如下：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>Parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Maven</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL对表数据进行增删改查</title>
     <url>/26.html</url>
     <content><![CDATA[<h3 id="插入表数据"><a href="#插入表数据" class="headerlink" title="插入表数据"></a><strong>插入表数据</strong></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `db_student`.`t_student` (`id`, `stuName`, `age`, `sex`, `gradeName`)<span class="keyword">VALUES</span>(<span class="string">&#x27;15&#x27;</span>,<span class="string">&#x27;tom&#x27;</span>, <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;大四&#x27;</span>); </span><br></pre></td></tr></table></figure>
@@ -4969,6 +4956,19 @@
       </categories>
       <tags>
         <tag>Dubbo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maven出现错误：&quot;Parent, please verify your project structure&quot;</title>
+    <url>/259.html</url>
+    <content><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>该错误出现在使用parent节点继承其它模块的依赖版本号时</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>在parent节点加入&lt;relativePath/&gt;，完整parent节点如下：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>Parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Maven</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -5009,23 +5009,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Cloud搭建父项目</title>
-    <url>/262.html</url>
-    <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>新建一个名称为SpringCloud普通项目，删除src文件夹</p>
-<h3 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h3><h4 id="Module-概述"><a href="#Module-概述" class="headerlink" title="Module 概述"></a>Module 概述</h4><p>在SpringCloud下新建一个Module Maven项目，名称为microservice，删除src文件夹，用于管理依赖版本，pom.xml文件的packaging节点修改为pom</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><p>引入Spring Cloud、Spring Boot、连接池依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>microservice<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>microservice Maven Webapp<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- FIXME change it to the project&#x27;s website --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://www.example.com<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>1.7<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>1.7<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">druid.version</span>&gt;</span>1.1.10<span class="tag">&lt;/<span class="name">druid.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--Spring Cloud--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>Edgware.SR4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--Spring Boot--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.13.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--连接池--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;druid.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Spring Cloud</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring Cloud搭建公共模块项目</title>
     <url>/263.html</url>
     <content><![CDATA[<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>存放一些其他项目公用的东西，比如实体类，工具类等</p>
@@ -5041,6 +5024,23 @@
 <h4 id="新建Student实体类"><a href="#新建Student实体类" class="headerlink" title="新建Student实体类"></a>新建Student实体类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.persistence.*;</span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 学生实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 13:27</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table(name = &quot;t_student&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名字</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Column(length = 50)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 年纪</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Column(length = 50)</span></span><br><span class="line">    <span class="keyword">private</span> String grade;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getGrade</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> grade;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setGrade</span><span class="params">(String grade)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.grade = grade;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="新建数据库"><a href="#新建数据库" class="headerlink" title="新建数据库"></a>新建数据库</h4><p>新建一个名为db_springcloud的数据库，不需要添加表，jpa会根据实体类自动生成</p>]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring Cloud搭建父项目</title>
+    <url>/262.html</url>
+    <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>新建一个名称为SpringCloud普通项目，删除src文件夹</p>
+<h3 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h3><h4 id="Module-概述"><a href="#Module-概述" class="headerlink" title="Module 概述"></a>Module 概述</h4><p>在SpringCloud下新建一个Module Maven项目，名称为microservice，删除src文件夹，用于管理依赖版本，pom.xml文件的packaging节点修改为pom</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><p>引入Spring Cloud、Spring Boot、连接池依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>microservice<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>microservice Maven Webapp<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- FIXME change it to the project&#x27;s website --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://www.example.com<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>1.7<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>1.7<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">druid.version</span>&gt;</span>1.1.10<span class="tag">&lt;/<span class="name">druid.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--Spring Cloud--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>Edgware.SR4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--Spring Boot--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5.13.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--连接池--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;druid.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Spring Cloud</category>
       </categories>
@@ -5423,7 +5423,34 @@
   <entry>
     <title>使用Hystrix断路器</title>
     <url>/274.html</url>
-    <content><![CDATA[<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>hystrix对应的中文名字是“豪猪”，豪猪周身长满了刺，能保护自己不受天敌的伤害，代表了一种防御机制，这与hystrix本身的功能不谋而合，因此Netflix团队将该框架命名为Hystrix，并使用了对应的卡通形象做作为logo。</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20033811.jpg" alt="img"></p>
+<p>在一个分布式系统里，许多依赖不可避免的会调用失败，比如超时、异常等，如何能够保证在一个依赖出问题的情况下，不会导致整体服务失败，这个就是Hystrix需要做的事情。Hystrix提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。</p>
+<h3 id="服务雪崩效应"><a href="#服务雪崩效应" class="headerlink" title="服务雪崩效应"></a><strong>服务雪崩效应</strong></h3><p>当一个请求依赖多个服务的时候：</p>
+<p>正常情况下的访问</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034111.jpg" alt="img"></p>
+<p>但是，当请求的服务中出现无法访问、异常、超时等问题时（图中的I），那么用户的请求将会被阻塞</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034116.jpg" alt="img"></p>
+<p>如果多个用户的请求中，都存在无法访问的服务，那么他们都将陷入阻塞的状态中</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20034122.jpg" alt="img"></p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>Hystrix断路器可以通过服务熔断和服务降级来解决上述的服务雪崩效应</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>熔断机制是应对雪崩效应的一种微服务链路保护机制，当某个服务不可用或者响应时间超时，会进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息</p>
+<h4 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h4><p>命名为microservice-student-provider-hystrix-1004，把microservice-student-provider-1001的配置和代码都复制一份到新建的Module中</p>
+<h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><p>引入Hystrix断路器依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--Hystrix断路器--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-hystrix<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>修改server.port为1004，eureka.instance.instance-id为microservice-student-hystrix:1004</p>
+<h4 id="修改启动类"><a href="#修改启动类" class="headerlink" title="修改启动类"></a>修改启动类</h4><p>如果是复制过来的，重命名为StudentProviderHystrixApplication_1004，并添加@EnableCircuitBreaker注解支持Hystrix断路器</p>
+<h4 id="修改消费者Controller"><a href="#修改消费者Controller" class="headerlink" title="修改消费者Controller"></a>修改消费者Controller</h4><p>StudentConsumerController.java在microservice-student-consumer-80项目中</p>
+<p>添加getInfo方法，用于调用服务的getInfo方法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> restTemplate.getForObject(PRE_HOST + <span class="string">&quot;/student/getInfo&quot;</span>, Map.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改提供者Controller"><a href="#修改提供者Controller" class="headerlink" title="修改提供者Controller"></a>修改提供者Controller</h4><p>StudentProviderController.java在microservice-student-provider-hystrix-1004项目中</p>
+<p>添加两个方法：getInfo方法和getInfoFallback方法</p>
+<p>在hystrix中默认1秒算超时，使用Thread.sleep(2000)模拟请求超时（@HystrixCommand注解定义了请求超时的时候就请求getInfoFallback方法，返回500 系统出错，稍后重试），不使用就不会超时（执行完getInfo方法，返回200 业务数据）。由于请求超时的时候进行服务降级，进而熔断该节点的服务调用，快速返回自定义的错误影响页面信息，所以可以有效地解决雪崩效应</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 获取信息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> InterruptedException</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getInfo&quot;)</span></span><br><span class="line"><span class="meta">@HystrixCommand(fallbackMethod = &quot;getInfoFallback&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfo</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">    Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">200</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;业务数据&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 请求超时就请求我</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map&lt;String, Object&gt; <span class="title">getInfoFallback</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;code&quot;</span>, <span class="number">500</span>);</span><br><span class="line">    map.put(<span class="string">&quot;info&quot;</span>, <span class="string">&quot;系统出错，稍后重试&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> map;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
 <p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
 <p>使用Thread.sleep(2000)时会超时，返回500 系统出错，稍后重试，如下图：</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043656.png" alt="img"></p>
@@ -5573,6 +5600,51 @@
       </tags>
   </entry>
   <entry>
+    <title>Git恢复之前的版本</title>
+    <url>/279.html</url>
+    <content><![CDATA[<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>回退（reset）、反做（revert）</p>
+<h3 id="回退（reset）"><a href="#回退（reset）" class="headerlink" title="回退（reset）"></a>回退（reset）</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>git reset的作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本，如下图所示，假设我们要回退到版本一</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041222.png"></p>
+<h4 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p>
+<h4 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h4><p>先查看当前库有哪些版本号，查看方法有两种：</p>
+<p>①Git命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<p>commit后的黄色字符串就是版本号</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20042055.png"></p>
+<p>②在GitHub中查看</p>
+<p>点击下图的提交数</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041534.png"></p>
+<p>点击下图的复制按钮即可复制完整版本号</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041538.png"></p>
+<p>使用下面命令将版本回退</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git reset --hard 目标版本号</span><br></pre></td></tr></table></figure>
+
+<p>使用下面命令提交更改，-f代表强制</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -f</span><br></pre></td></tr></table></figure>
+
+<h3 id="反做（revert）"><a href="#反做（revert）" class="headerlink" title="反做（revert）"></a>反做（revert）</h3><h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>git revert是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们commit了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西<br><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041230.png"></p>
+<h4 id="适用场景-1"><a href="#适用场景-1" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p>
+<h4 id="具体操作-1"><a href="#具体操作-1" class="headerlink" title="具体操作"></a>具体操作</h4><p>查看版本号，上面有具体操作</p>
+<p>使用下面命令反做，这里可能会出现冲突，那么需要手动修改冲突的文件，而且要git add 文件名</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git revert -n 版本号</span><br></pre></td></tr></table></figure>
+
+<p>使用下面命令提交</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注信息&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用下面命令提交更改到远程库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/yxlshk/article/details/79944535">https://blog.csdn.net/yxlshk/article/details/79944535</a></p>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>idea创建Spring Boot项目</title>
     <url>/28.html</url>
     <content><![CDATA[<h3 id="选择项目的类别"><a href="#选择项目的类别" class="headerlink" title="选择项目的类别"></a><strong>选择项目的类别</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201017235309.jpg" alt="img"></p>
@@ -5585,6 +5657,27 @@
       <tags>
         <tag>Spring Boot</tag>
         <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows10输入法获取当前时间</title>
+    <url>/280.html</url>
+    <content><![CDATA[<h3 id="打开输入法设置"><a href="#打开输入法设置" class="headerlink" title="打开输入法设置"></a>打开输入法设置</h3><p><strong>右击单击右下角的输入法选项，选择设置</strong></p>
+<img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045135.png" style="zoom:67%;" />
+
+<h3 id="选择词库和自学习"><a href="#选择词库和自学习" class="headerlink" title="选择词库和自学习"></a><strong>选择词库和自学习</strong></h3><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045223.png" style="zoom:67%;" />
+
+<h3 id="点击添加或编辑自定义短语"><a href="#点击添加或编辑自定义短语" class="headerlink" title="点击添加或编辑自定义短语"></a><strong>点击添加或编辑自定义短语</strong></h3><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045244.png" style="zoom:67%;" />
+
+<h3 id="添加短语"><a href="#添加短语" class="headerlink" title="添加短语"></a>添加短语</h3><p>添加短语：<font color="#dd0000">%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</font></p>
+<img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045457.png" style="zoom:67%;" />
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a><strong>使用</strong></h3><p>在中文模式下输入sj即可获取当前时间</p>]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>Windows10</tag>
       </tags>
   </entry>
   <entry>
@@ -7244,6 +7337,27 @@
       </tags>
   </entry>
   <entry>
+    <title>SQL里面的排序语句DESC和ASC</title>
+    <url>/69.html</url>
+    <content><![CDATA[<p>SQL默认的是ASC排序（升序）</p>
+<h3 id="DESC"><a href="#DESC" class="headerlink" title="DESC"></a>DESC</h3><p>用 DESC表示按倒序排序(即：从大到小排序) —降序排列</p>
+<p>例如：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="type">DATE</span> <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210113040231.jpg" alt="img"></p>
+<h3 id="ACS"><a href="#ACS" class="headerlink" title="ACS"></a>ACS</h3><p>用 ACS表示按正序排序(即：从小到大排序)—升序排列</p>
+<p>例如：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="type">DATE</span> <span class="keyword">ASC</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210113035957.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java中的关键字</title>
     <url>/7.html</url>
     <content><![CDATA[<p>关键字的定义和特点：</p>
@@ -7291,27 +7405,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQL里面的排序语句DESC和ASC</title>
-    <url>/69.html</url>
-    <content><![CDATA[<p>SQL默认的是ASC排序（升序）</p>
-<h3 id="DESC"><a href="#DESC" class="headerlink" title="DESC"></a>DESC</h3><p>用 DESC表示按倒序排序(即：从大到小排序) —降序排列</p>
-<p>例如：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="type">DATE</span> <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210113040231.jpg" alt="img"></p>
-<h3 id="ACS"><a href="#ACS" class="headerlink" title="ACS"></a>ACS</h3><p>用 ACS表示按正序排序(即：从小到大排序)—升序排列</p>
-<p>例如：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="type">DATE</span> <span class="keyword">ASC</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210113035957.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -11454,72 +11547,6 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git恢复之前的版本</title>
-    <url>/279.html</url>
-    <content><![CDATA[<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>回退（reset）、反做（revert）</p>
-<h3 id="回退（reset）"><a href="#回退（reset）" class="headerlink" title="回退（reset）"></a>回退（reset）</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>git reset的作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本，如下图所示，假设我们要回退到版本一</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041222.png"></p>
-<h4 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p>
-<h4 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h4><p>先查看当前库有哪些版本号，查看方法有两种：</p>
-<p>①Git命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-
-<p>commit后的黄色字符串就是版本号</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20042055.png"></p>
-<p>②在GitHub中查看</p>
-<p>点击下图的提交数</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041534.png"></p>
-<p>点击下图的复制按钮即可复制完整版本号</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041538.png"></p>
-<p>使用下面命令将版本回退</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git reset --hard 目标版本号</span><br></pre></td></tr></table></figure>
-
-<p>使用下面命令提交更改，-f代表强制</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -f</span><br></pre></td></tr></table></figure>
-
-<h3 id="反做（revert）"><a href="#反做（revert）" class="headerlink" title="反做（revert）"></a>反做（revert）</h3><h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>git revert是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们commit了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西<br><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041230.png"></p>
-<h4 id="适用场景-1"><a href="#适用场景-1" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p>
-<h4 id="具体操作-1"><a href="#具体操作-1" class="headerlink" title="具体操作"></a>具体操作</h4><p>查看版本号，上面有具体操作</p>
-<p>使用下面命令反做，这里可能会出现冲突，那么需要手动修改冲突的文件，而且要git add 文件名</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git revert -n 版本号</span><br></pre></td></tr></table></figure>
-
-<p>使用下面命令提交</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注信息&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>使用下面命令提交更改到远程库</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/yxlshk/article/details/79944535">https://blog.csdn.net/yxlshk/article/details/79944535</a></p>]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows10输入法获取当前时间</title>
-    <url>/280.html</url>
-    <content><![CDATA[<h3 id="打开输入法设置"><a href="#打开输入法设置" class="headerlink" title="打开输入法设置"></a>打开输入法设置</h3><p><strong>右击单击右下角的输入法选项，选择设置</strong></p>
-<img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045135.png" style="zoom:67%;" />
-
-<h3 id="选择词库和自学习"><a href="#选择词库和自学习" class="headerlink" title="选择词库和自学习"></a><strong>选择词库和自学习</strong></h3><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045223.png" style="zoom:67%;" />
-
-<h3 id="点击添加或编辑自定义短语"><a href="#点击添加或编辑自定义短语" class="headerlink" title="点击添加或编辑自定义短语"></a><strong>点击添加或编辑自定义短语</strong></h3><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045244.png" style="zoom:67%;" />
-
-<h3 id="添加短语"><a href="#添加短语" class="headerlink" title="添加短语"></a>添加短语</h3><p>添加短语：<font color="#dd0000">%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</font></p>
-<img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045457.png" style="zoom:67%;" />
-
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a><strong>使用</strong></h3><p>在中文模式下输入sj即可获取当前时间</p>]]></content>
-      <categories>
-        <category>其它</category>
-      </categories>
-      <tags>
-        <tag>Windows10</tag>
       </tags>
   </entry>
 </search>
