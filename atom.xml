@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-18T16:06:26.760Z</updated>
+  <updated>2021-08-18T17:23:14.009Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Config配置搜索路径</title>
+    <link href="http://example.com/289.html"/>
+    <id>http://example.com/289.html</id>
+    <published>2021-08-18T16:42:23.000Z</published>
+    <updated>2021-08-18T17:23:14.009Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当配置文件一多，如果配置文件只放在根目录下，后期会不好管理，所以根据项目分类配置文件是很有必要的</p><h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在microservice-config-server-4001项目的application.yml文件中配置search-paths</p><p>完整application.yml如下：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">4001</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-config</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">config:</span></span><br><span class="line">      <span class="attr">server:</span></span><br><span class="line">        <span class="attr">git:</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">https://github.com/a6678696/microservice-config</span></span><br><span class="line">          <span class="attr">search-paths:</span> <span class="comment">#后面接文件夹名称,没有配置的文件夹里的配置文件是访问不到的</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">aa</span> <span class="comment">#文件夹名称</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">bb</span></span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>新建三个文件夹：aa、bb、cc，文件夹中分别放3个配置文件 nns.yml，nns2.yml，nns3.yml，上传这三个配置文件到GitHub的microservice-config库中，文件内容如下：</p><mark class="hl-label blue">nns.yml</mark> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaadev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaatest</span></span><br></pre></td></tr></table></figure><mark class="hl-label blue">nns2.yml</mark> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbtest</span></span><br></pre></td></tr></table></figure><mark class="hl-label blue">nns3.yml</mark> <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">cccdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">ccctest</span></span><br></pre></td></tr></table></figure><p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns-dev.yml">http://configserver.ledao.com:4001/nns-dev.yml</a> ，访问到了，有name属性</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011929.png"></p><p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns3-dev.yml">http://configserver.ledao.com:4001/nns3-dev.yml</a> ，没有访问到了，没有name属性</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011947.png"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/111.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Spring Cloud" scheme="http://example.com/categories/Spring-Cloud/"/>
+    
+    
+    <category term="Spring Cloud" scheme="http://example.com/tags/Spring-Cloud/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring Cloud Config整合Eureka</title>
@@ -433,29 +454,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/52.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Spring Cloud" scheme="http://example.com/categories/Spring-Cloud/"/>
-    
-    
-    <category term="Spring Cloud" scheme="http://example.com/tags/Spring-Cloud/"/>
-    
-    <category term="Ribbon" scheme="http://example.com/tags/Ribbon/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ribbon负载均衡</title>
-    <link href="http://example.com/270.html"/>
-    <id>http://example.com/270.html</id>
-    <published>2021-08-11T16:12:50.000Z</published>
-    <updated>2021-08-11T19:53:38.503Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h3><p>新建两个Module，一个名称为：microservice-student-provider-1002，另一个名称为：microservice-student-provider-1003，通过三个服务提供者实现集群，然后才能演示负载均衡，以及负载均衡策略</p><h3 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h3><p>pom.xml，application.yml，以及java类都复制一份，启动类名称对应Module的名称的数字进行修改</p><p>yml配置文件有两处要修改：port端口和服务实例名称对应Module的名称的数字进行修改</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20021214.png"></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20021239.png"></p><h3 id="修改代码"><a href="#修改代码" class="headerlink" title="修改代码"></a>修改代码</h3><p>为了方便查看具体执行了哪个服务提供者，在三个服务提供者的StudentProviderController的list方法中添加一条打印语句，打印语句的数字对应Module的名称的数字进行修改</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20021619.png"></p><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka集群，再启动三个服务提供者集群</p><p>测试服务提供者：</p><p><a href="http://localhost:1001/student/list">http://localhost:1001/student/list</a></p><p><a href="http://localhost:1002/student/list">http://localhost:1002/student/list</a></p><p><a href="http://localhost:1003/student/list">http://localhost:1003/student/list</a></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20032238.png"></p><p>测试下Eureka：</p><p><a href="http://eureka2001.ledao.com:2001/">http://eureka2001.ledao.com:2001/</a></p><p><a href="http://eureka2002.ledao.com:2002/">http://eureka2002.ledao.com:2002/</a></p><p><a href="http://eureka2003.ledao.com:2003/">http://eureka2003.ledao.com:2003/</a></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20032132.png"></p><p>启动服务消费者：</p><p><a href="http://localhost/student/list">http://localhost/student/list</a></p><p>每刷新一次页面，就消费一次服务，消费了哪个服务就在该服务的控制台打印下面语句</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20032830.png"></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20032843.png"></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20032855.png"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/62.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
