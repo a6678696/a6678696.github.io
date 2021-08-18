@@ -11658,4 +11658,19 @@
         <tag>Zuul</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Git查看远程库地址</title>
+    <url>/285.html</url>
+    <content><![CDATA[<p>命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-18%20182819.png"></p>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
 </search>
