@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-18T10:29:12.931Z</updated>
+  <updated>2021-08-18T10:29:27.353Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/285.html"/>
     <id>http://example.com/285.html</id>
     <published>2021-08-18T10:25:40.000Z</published>
-    <updated>2021-08-18T10:29:12.931Z</updated>
+    <updated>2021-08-18T10:29:27.353Z</updated>
     
     <content type="html"><![CDATA[<p>命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure><p>结果：</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-18%20182819.png"></p>]]></content>
     

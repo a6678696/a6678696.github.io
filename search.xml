@@ -4387,18 +4387,31 @@
     <title>Git上传本地代码到GitHub</title>
     <url>/237.html</url>
     <content><![CDATA[<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a><strong>初始化仓库</strong></h3><p>初始化一个 Git 仓库，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变（需要进入要初始化的文件夹内部，右键点击选择Git Bash Here）</p>
-<p>输入初始化命令：git init</p>
-<p>输入命令查看当前状态：git status，文件名颜色为红色</p>
-<h3 id="将项目的所有文件添加到仓库中"><a href="#将项目的所有文件添加到仓库中" class="headerlink" title="将项目的所有文件添加到仓库中"></a><strong>将项目的所有文件添加到仓库中</strong></h3><p>输入添加命令：git add .</p>
-<p>输入命令查看当前状态：git status，文件名颜色为绿色</p>
-<h3 id="将add的文件commit到仓库"><a href="#将add的文件commit到仓库" class="headerlink" title="将add的文件commit到仓库"></a><strong>将add的文件commit到仓库</strong></h3><p>输入提交命令：git commit -m “提交备注”</p>
-<p>输入命令查看当前状态：git status，发现没有东西可以提交</p>
+<p>输入初始化命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，文件名颜色为红色</p>
+<h3 id="将项目的所有文件添加到仓库中"><a href="#将项目的所有文件添加到仓库中" class="headerlink" title="将项目的所有文件添加到仓库中"></a><strong>将项目的所有文件添加到仓库中</strong></h3><p>输入添加命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，文件名颜色为绿色</p>
+<h3 id="将add的文件commit到仓库"><a href="#将add的文件commit到仓库" class="headerlink" title="将add的文件commit到仓库"></a><strong>将add的文件commit到仓库</strong></h3><p>输入提交命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，发现没有东西可以提交</p>
 <h3 id="复制Github项目的SSH地址"><a href="#复制Github项目的SSH地址" class="headerlink" title="复制Github项目的SSH地址"></a><strong>复制Github项目的SSH地址</strong></h3><p>记得先配置GitHub的SSH Key，如何配置查看博客：<a href="/236.html">GitHub配置SSH Key</a></p>
-<h3 id="将本地的仓库关联到GitHub上"><a href="#将本地的仓库关联到GitHub上" class="headerlink" title="将本地的仓库关联到GitHub上"></a><strong>将本地的仓库关联到GitHub上</strong></h3><p>把上一步复制的地址放到下面，覆盖绿色字体，如果已经关联过则省略本步骤</p>
-<p>输入命令：git remote add origin <font color="#00dd00">git@github.com:*****/*****.git </font></p>
-<h3 id="上传GitHub之前，要先pull一下"><a href="#上传GitHub之前，要先pull一下" class="headerlink" title="上传GitHub之前，要先pull一下"></a><strong>上传GitHub之前，要先pull一下</strong></h3><p>如果仓库为空的话，直接push就可以了</p>
-<p>输入命令：git pull origin master</p>
-<h3 id="上传代码到GitHub远程仓库"><a href="#上传代码到GitHub远程仓库" class="headerlink" title="上传代码到GitHub远程仓库"></a><strong>上传代码到GitHub远程仓库</strong></h3><p>输入命令：git push -u origin master</p>
+<h3 id="将本地的仓库关联到GitHub上"><a href="#将本地的仓库关联到GitHub上" class="headerlink" title="将本地的仓库关联到GitHub上"></a><strong>将本地的仓库关联到GitHub上</strong></h3><p>把上一步复制的地址放到origin后，如果已经关联过则省略本步骤</p>
+<p>输入关联命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin SSH地址</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传GitHub之前，要先pull一下"><a href="#上传GitHub之前，要先pull一下" class="headerlink" title="上传GitHub之前，要先pull一下"></a><strong>上传GitHub之前，要先pull一下</strong></h3><mark class="hl-label red">如果仓库为空的话，直接push就可以了</mark> 
+
+<p>输入拉取命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传代码到GitHub远程仓库"><a href="#上传代码到GitHub远程仓库" class="headerlink" title="上传代码到GitHub远程仓库"></a><strong>上传代码到GitHub远程仓库</strong></h3><p>输入推送命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
 <h3 id="去GitHub查看结果"><a href="#去GitHub查看结果" class="headerlink" title="去GitHub查看结果"></a><strong>去GitHub查看结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729132853.jpg" alt="img"></p>]]></content>
       <categories>
         <category>Git</category>
