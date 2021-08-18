@@ -1583,9 +1583,11 @@
     <title>Xshell连接CentOS7</title>
     <url>/150.html</url>
     <content><![CDATA[<h3 id="新建连接"><a href="#新建连接" class="headerlink" title="新建连接"></a><strong>新建连接</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616102910.jpg" alt="img"></p>
-<h3 id="填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）"><a href="#填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）" class="headerlink" title="填写会话属性（如果不知道CentOS7的ip，查看博客：查看虚拟机里的CentOS7的IP）"></a><strong>填写会话属性（如果不知道CentOS7的ip，查看博客：<a href="http://www.zoutl.cn/blog/183">查看虚拟机里的CentOS7的IP</a>）</strong></h3><p>为了方便辨认，名称和主机填CentOS7的ip，端口号填22</p>
+<h3 id="填写会话属性"><a href="#填写会话属性" class="headerlink" title="填写会话属性"></a><strong>填写会话属性</strong></h3><p>如果不知道CentOS7的ip，查看博客：<a href="http://www.zoutl.cn/blog/183">查看虚拟机里的CentOS7的IP</a></p>
+<p>为了方便辨认，名称和主机填CentOS7的ip，端口号填22</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103147.jpg" alt="img"></p>
-<h3 id="点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可"><a href="#点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可" class="headerlink" title="点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可"></a><strong>点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103530.jpg" alt="img"></p>
+<h3 id="用户身份验证"><a href="#用户身份验证" class="headerlink" title="用户身份验证"></a><strong>用户身份验证</strong></h3><p>点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103530.jpg" alt="img"></p>
 <h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103916.jpg" alt="img"></p>]]></content>
       <categories>
         <category>CentOS7</category>
