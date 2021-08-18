@@ -172,7 +172,7 @@
 
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>常用cron表达式：<a href="http://www.zoutl.cn/blog/13">常用cron表达式</a></p>]]></content>
       <categories>
-        <category>Java</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -460,7 +460,7 @@
 
 <h4 id="BlogService接口的实现类"><a href="#BlogService接口的实现类" class="headerlink" title="BlogService接口的实现类"></a>BlogService接口的实现类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.service.impl;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Blog;</span><br><span class="line"><span class="keyword">import</span> com.ledao.mapper.BlogMapper;</span><br><span class="line"><span class="keyword">import</span> com.ledao.service.BlogService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 博客Service接口实现类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-11 00:34</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Service(&quot;blogService&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BlogServiceImpl</span> <span class="keyword">implements</span> <span class="title">BlogService</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> BlogMapper blogMapper;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Blog&gt; <span class="title">list</span><span class="params">(Map map)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.list(map);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Long <span class="title">getCount</span><span class="params">(Map map)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.getCount(map);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">add</span><span class="params">(Blog blog)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.add(blog);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">update</span><span class="params">(Blog blog)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.update(blog);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">delete</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.delete(id);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Blog <span class="title">findById</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.findById(id);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Blog&gt; <span class="title">countList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.countList();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Blog&gt; <span class="title">findByBlogTypeId</span><span class="params">(Integer blogTypeId)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.findByBlogTypeId(blogTypeId);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Blog <span class="title">getPreviousBlog</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.getPreviousBlog(id);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Blog <span class="title">getNextBlog</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.getNextBlog(id);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Blog&gt; <span class="title">getMenuBlogList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> blogMapper.getMenuBlogList();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Java</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -1235,7 +1235,7 @@
 <h3 id="第二种写法"><a href="#第二种写法" class="headerlink" title="第二种写法"></a><strong>第二种写法</strong></h3><p>Spring Boot2.0之后的写法(404.html文件放在resources的static文件夹中)</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorPageConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> WebServerFactoryCustomizer <span class="title">webServerFactoryCustomizer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//第二种写法：java8 lambda写法</span></span><br><span class="line">        <span class="keyword">return</span> (factory -&gt; &#123;</span><br><span class="line">            ErrorPage errorPage404 = <span class="keyword">new</span> ErrorPage(HttpStatus.NOT_FOUND, <span class="string">&quot;/404.html&quot;</span>);</span><br><span class="line">            factory.addErrorPages(errorPage404);</span><br><span class="line">        &#125;);</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Java</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -2978,7 +2978,7 @@
 <h3 id="添加web-xml文件"><a href="#添加web-xml文件" class="headerlink" title="添加web.xml文件"></a><strong>添加web.xml文件</strong></h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624111135.jpg" alt="img"></strong></p>
 <h3 id="选择web-xml的文件路径，然后连续点击OK键即可成功添加webapp目录"><a href="#选择web-xml的文件路径，然后连续点击OK键即可成功添加webapp目录" class="headerlink" title="选择web.xml的文件路径，然后连续点击OK键即可成功添加webapp目录"></a><strong>选择web.xml的文件路径，然后连续点击OK键即可成功添加webapp目录</strong></h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624111146.jpg" alt="img"></strong></p>]]></content>
       <categories>
-        <category>idea使用</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
         <tag>Spring Boot</tag>
@@ -3287,7 +3287,7 @@
 <h4 id="单个方法"><a href="#单个方法" class="headerlink" title="单个方法"></a><strong>单个方法</strong></h4><p>在指定方法上方添加注解</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625235531.jpg" alt="img"></p>]]></content>
       <categories>
-        <category>Java</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -3587,7 +3587,7 @@
 
 <h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210701223215.jpg" alt="img"></strong></p>]]></content>
       <categories>
-        <category>Java</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -4031,7 +4031,7 @@
 
 <h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210722235115.jpg" alt="img"></p>]]></content>
       <categories>
-        <category>Java</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -7762,7 +7762,7 @@
 <p>为了让HTML代码页面变得美观，可加入<!--suppress ALL-->抑制所有警告（html标签头部<html>前加入即可）</p>
 <p>至此，Spring Boot引入Thymeleaf的操作已完成</p>]]></content>
       <categories>
-        <category>Java</category>
+        <category>Spring Boot</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -11725,6 +11725,27 @@
       <tags>
         <tag>Spring Cloud</tag>
         <tag>Config Server</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot启动报错：Cannot determine embedded database driver class for database type NONE</title>
+    <url>/287.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Spring Boot项目启动时报错：Cannot determine embedded database driver class for database type NONE</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-18%20201505.png"></p>
+<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>这是因为spring boot默认会加载org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration类，DataSourceAutoConfiguration类使用了@Configuration注解向spring注入了dataSource bean。因为工程中没有关于dataSource相关的配置信息，所以当spring创建dataSource bean因缺少相关的信息就会报错</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>解决办法有两种：一种是修改启动类注解，另一种是配置数据源</p>
+<h4 id="修改注解"><a href="#修改注解" class="headerlink" title="修改注解"></a>修改注解</h4><p>在启动类中修改注解@SpringBootApplication为：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication(exclude = &#123;DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class&#125;)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="配置数据源"><a href="#配置数据源" class="headerlink" title="配置数据源"></a>配置数据源</h4><p>在application.yml中配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://wuwenliang.net/2018/07/15/springboot%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B9%8B%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99Cannot-determine-embedded-database/">springboot常见问题之启动报错Cannot determine embedded database</a></p>]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Spring Boot</tag>
       </tags>
   </entry>
 </search>
