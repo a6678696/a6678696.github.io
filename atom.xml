@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-18T17:23:14.009Z</updated>
+  <updated>2021-08-19T11:13:00.572Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS7安装Docker</title>
+    <link href="http://example.com/290.html"/>
+    <id>http://example.com/290.html</id>
+    <published>2021-08-19T10:33:56.000Z</published>
+    <updated>2021-08-19T11:13:00.572Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="登录身份"><a href="#登录身份" class="headerlink" title="登录身份"></a>登录身份</h3><p>使用root身份登录，一般默认都是用root身份</p><h3 id="查看系统内核"><a href="#查看系统内核" class="headerlink" title="查看系统内核"></a>查看系统内核</h3><p>Docker要求CentOS系统的内核版本高于3.10，安装前先查看自己的CentOS系统能否安装Docker</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure><h3 id="更新yum包"><a href="#更新yum包" class="headerlink" title="更新yum包"></a>更新yum包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure><h3 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h3><p>如果安装过旧版本的话，没有就跳过此步骤</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove docker  docker-common docker-selinux docker-engine</span><br></pre></td></tr></table></figure><h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><p>安装需要的软件包，yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure><h3 id="设置yum源"><a href="#设置yum源" class="headerlink" title="设置yum源"></a>设置yum源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure><h3 id="安装新版本"><a href="#安装新版本" class="headerlink" title="安装新版本"></a>安装新版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure><h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure><h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>看到版本号说明安装成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h4 id="安装hello-world容器"><a href="#安装hello-world容器" class="headerlink" title="安装hello-world容器"></a>安装hello-world容器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull hello-world</span><br></pre></td></tr></table></figure><h4 id="启动hello-world容器"><a href="#启动hello-world容器" class="headerlink" title="启动hello-world容器"></a>启动hello-world容器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure><p>看到<font color="#dd0000">Hello from Docker!</font>，说明hello-world容器启动成功</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/25.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
+    
+    
+    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Config配置搜索路径</title>
@@ -440,29 +463,6 @@
     <category term="Spring Cloud" scheme="http://example.com/tags/Spring-Cloud/"/>
     
     <category term="Feign" scheme="http://example.com/tags/Feign/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ribbon策略</title>
-    <link href="http://example.com/271.html"/>
-    <id>http://example.com/271.html</id>
-    <published>2021-08-11T17:53:57.000Z</published>
-    <updated>2021-08-13T08:05:37.668Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>Ribbon默认的策略是轮询策略，这种默认的轮询策略肯定是不能满足实际需求的，比如有3个服务提供者，突然挂了一个，这样的话，默认轮询 ，总有1/3的概率访问失败，会出现下面的错误，所以需要选择合适的策略</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-12%20033945.png"></p><h3 id="策略大全"><a href="#策略大全" class="headerlink" title="策略大全"></a>策略大全</h3><table><thead><tr><th align="left">策略名</th><th>策略声明</th><th>策略描述</th><th>实现说明</th></tr></thead><tbody><tr><td align="left">BestAvailableRule</td><td>public class BestAvailableRule extends ClientConfigEnabledRoundRobinRule</td><td>选择一个最小的并发请求的server</td><td>逐个考察Server，如果Server被tripped了，则忽略，在选择其中ActiveRequestsCount最小的server</td></tr><tr><td align="left">AvailabilityFilteringRule</td><td>public class AvailabilityFilteringRule extends PredicateBasedRule</td><td>过滤掉那些因为一直连接失败的被标记为circuit tripped的后端server，并过滤掉那些高并发的的后端server（active connections 超过配置的阈值）</td><td>使用一个AvailabilityPredicate来包含过滤server的逻辑，其实就就是检查status里记录的各个server的运行状态</td></tr><tr><td align="left">WeightedResponseTimeRule</td><td>public class WeightedResponseTimeRule extends RoundRobinRule</td><td>根据响应时间分配一个weight，响应时间越长，weight越小，被选中的可能性越低。</td><td>一个后台线程定期的从status里面读取评价响应时间，为每个server计算一个weight。Weight的计算也比较简单responsetime 减去每个server自己平均的responsetime是server的权重。当刚开始运行，没有形成status时，使用roubine策略选择server。</td></tr><tr><td align="left">RetryRule</td><td>public class RetryRule extends AbstractLoadBalancerRule</td><td>对选定的负载均衡策略机上重试机制。</td><td>在一个配置时间段内当选择server不成功，则一直尝试使用subRule的方式选择一个可用的server</td></tr><tr><td align="left">RoundRobinRule</td><td>public class RoundRobinRule extends AbstractLoadBalancerRule</td><td>roundRobin方式轮询选择server</td><td>轮询index，选择index对应位置的server</td></tr><tr><td align="left">RandomRule</td><td>public class RandomRule extends AbstractLoadBalancerRule</td><td>随机选择一个server</td><td>在index上随机，选择index对应位置的server</td></tr><tr><td align="left">ZoneAvoidanceRule</td><td>public class ZoneAvoidanceRule extends PredicateBasedRule</td><td>复合判断server所在区域的性能和server的可用性选择server</td><td>使用ZoneAvoidancePredicate和AvailabilityPredicate来判断是否选择某个server，前一个判断判定一个zone的运行性能是否可用，剔除不可用的zone（的所有server），AvailabilityPredicate用于过滤掉连接数过多的Server。</td></tr></tbody></table><h3 id="使用策略"><a href="#使用策略" class="headerlink" title="使用策略"></a>使用策略</h3><p>在服务消费端 SpringCloudConfig 配置类自定义策略，用IRule实现，以实现RetryRule策略为例：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自定义轮询算法</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> IRule <span class="title">myRule</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> RetryRule();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/52.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Spring Cloud" scheme="http://example.com/categories/Spring-Cloud/"/>
-    
-    
-    <category term="Spring Cloud" scheme="http://example.com/tags/Spring-Cloud/"/>
-    
-    <category term="Ribbon" scheme="http://example.com/tags/Ribbon/"/>
     
   </entry>
   

@@ -1927,35 +1927,41 @@
   <entry>
     <title>CentOS7安装Redis</title>
     <url>/160.html</url>
-    <content><![CDATA[<h3 id="安装gcc（gcc编译c的，因为redis是c编写的，所以我们先安装下gcc）"><a href="#安装gcc（gcc编译c的，因为redis是c编写的，所以我们先安装下gcc）" class="headerlink" title="安装gcc（gcc编译c的，因为redis是c编写的，所以我们先安装下gcc）"></a><strong>安装gcc（gcc编译c的，因为redis是c编写的，所以我们先安装下gcc）</strong></h3><p>yum install gcc-c++</p>
-<h3 id="wget方式下载redis压缩包，并解压，以及编译"><a href="#wget方式下载redis压缩包，并解压，以及编译" class="headerlink" title="wget方式下载redis压缩包，并解压，以及编译"></a><strong>wget方式下载redis压缩包，并解压，以及编译</strong></h3><p>下载</p>
+    <content><![CDATA[<h3 id="安装gcc"><a href="#安装gcc" class="headerlink" title="安装gcc"></a><strong>安装gcc</strong></h3><p>gcc编译c的，因为redis是c编写的，所以我们先安装下gcc</p>
+<p>yum install gcc-c++</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>wget方式下载redis压缩包，并解压，以及编译</p>
+<p>下载命令</p>
 <p>wget <a href="http://download.redis.io/releases/redis-3.2.9.tar.gz">http://download.redis.io/releases/redis-3.2.9.tar.gz</a></p>
-<p>解压</p>
+<p>解压命令</p>
 <p>tar -zxvf redis-3.2.9.tar.gz</p>
-<p>编译</p>
+<p>编译命令</p>
 <p>[root@izy4gmk7hhqg1ez ~]# cd redis-3.2.9<br>[root@izy4gmk7hhqg1ez redis-3.2.9]# make</p>
-<h3 id="开始安装Redis"><a href="#开始安装Redis" class="headerlink" title="开始安装Redis"></a><strong>开始安装Redis</strong></h3><p>[root@izy4gmk7hhqg1ez redis-3.2.9]# make PREFIX=/usr/local/redis install</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h3><p>[root@izy4gmk7hhqg1ez redis-3.2.9]# make PREFIX=/usr/local/redis install</p>
 <p>安装完后，需要将刚刚解压的文件夹内 redis.conf 复制到 redis 的安装目录/usr/local/redis/中</p>
 <p>[root@izy4gmk7hhqg1ez redis-3.2.9]# cp /root/redis-3.2.9/redis.conf /usr/local/redis/</p>
-<h3 id="前台启动和关闭Redis"><a href="#前台启动和关闭Redis" class="headerlink" title="前台启动和关闭Redis"></a><strong>前台启动和关闭Redis</strong></h3><p>[root@izy4gmk7hhqg1ez ~]# /usr/local/redis/bin/redis-server </p>
+<h3 id="启动和关闭Redis"><a href="#启动和关闭Redis" class="headerlink" title="启动和关闭Redis"></a><strong>启动和关闭Redis</strong></h3><h4 id="前台启动和关闭"><a href="#前台启动和关闭" class="headerlink" title="前台启动和关闭"></a>前台启动和关闭</h4><p>[root@izy4gmk7hhqg1ez ~]# /usr/local/redis/bin/redis-server </p>
 <p>看到下面的界面说明已经启动成功了</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620003402.jpg" alt="img"></p>
 <p>按ctrl+c退出</p>
 <p>这种启动是前端或者前台启动，假如退出 程序就终止或者退出了。</p>
 <p>所以这种服务程序，必须后端运行；</p>
-<h3 id="修改配置文件redis-conf"><a href="#修改配置文件redis-conf" class="headerlink" title="修改配置文件redis.conf"></a><strong>修改配置文件redis.conf</strong></h3><p>打开配置文件（打开后按/键，并输入关键字按下回车键可快速搜索文本内容）</p>
+<h4 id="后台启动和关闭"><a href="#后台启动和关闭" class="headerlink" title="后台启动和关闭"></a>后台启动和关闭</h4><p><strong>修改配置文件redis.conf</strong></p>
+<p>打开配置文件（打开后按/键，并输入关键字按下回车键可快速搜索文本内容）</p>
 <p>[root@izy4gmk7hhqg1ez ~]# vi /usr/local/redis/redis.conf</p>
 <p>daemonize no 修改成：daemonize yes</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620003417.jpg" alt="img"></p>
-<h3 id="加载配置文件运行Redis"><a href="#加载配置文件运行Redis" class="headerlink" title="加载配置文件运行Redis"></a><strong>加载配置文件运行Redis</strong></h3><p>[root@izy4gmk7hhqg1ez ~]# /usr/local/redis/bin/redis-server /usr/local/redis/redis.conf</p>
-<h3 id="搜索Redis服务"><a href="#搜索Redis服务" class="headerlink" title="搜索Redis服务"></a><strong>搜索Redis服务</strong></h3><p>[root@izy4gmk7hhqg1ez ~]# ps -ef | grep -i redis</p>
+<p><strong>加载配置文件运行Redis</strong></p>
+<p>[root@izy4gmk7hhqg1ez ~]# /usr/local/redis/bin/redis-server /usr/local/redis/redis.conf</p>
+<p><strong>搜索Redis服务</strong></p>
+<p>[root@izy4gmk7hhqg1ez ~]# ps -ef | grep -i redis</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620003448.jpg" alt="img"></p>
 <p>看到端口号说明已经启动成功了</p>
-<h3 id="停止Redis服务"><a href="#停止Redis服务" class="headerlink" title="停止Redis服务"></a><strong>停止Redis服务</strong></h3><p>[root@izy4gmk7hhqg1ez ~]# /usr/local/redis/bin/redis-cli shutdown</p>
+<p><strong>停止Redis服务</strong></p>
+<p>[root@izy4gmk7hhqg1ez ~]# /usr/local/redis/bin/redis-cli shutdown</p>
 <p>再次搜索Redis服务，发现端口号没了，说明Redis服务已经停止了</p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="http://blog.java1234.com/blog/articles/311.html">Redis安装_Java开源博客系统-Powered by java1234</a></p>]]></content>
       <categories>
-        <category>CentOS7</category>
+        <category>Redis</category>
       </categories>
       <tags>
         <tag>CentOS7</tag>
@@ -2040,7 +2046,7 @@
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>查看Redis服务是否开启（有端口号说明Redis服务已经启动，没有则说明服务已停止）</p>
 <p>[root@localhost redis]# ps -ef | grep -i redis</p>]]></content>
       <categories>
-        <category>CentOS7</category>
+        <category>Redis</category>
       </categories>
       <tags>
         <tag>CentOS7</tag>
@@ -11850,6 +11856,45 @@
       </categories>
       <tags>
         <tag>Spring Cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS7安装Docker</title>
+    <url>/290.html</url>
+    <content><![CDATA[<h3 id="登录身份"><a href="#登录身份" class="headerlink" title="登录身份"></a>登录身份</h3><p>使用root身份登录，一般默认都是用root身份</p>
+<h3 id="查看系统内核"><a href="#查看系统内核" class="headerlink" title="查看系统内核"></a>查看系统内核</h3><p>Docker要求CentOS系统的内核版本高于3.10，安装前先查看自己的CentOS系统能否安装Docker</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure>
+
+<h3 id="更新yum包"><a href="#更新yum包" class="headerlink" title="更新yum包"></a>更新yum包</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure>
+
+<h3 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h3><p>如果安装过旧版本的话，没有就跳过此步骤</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum remove docker  docker-common docker-selinux docker-engine</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><p>安装需要的软件包，yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置yum源"><a href="#设置yum源" class="headerlink" title="设置yum源"></a>设置yum源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装新版本"><a href="#安装新版本" class="headerlink" title="安装新版本"></a>安装新版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>看到版本号说明安装成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h4 id="安装hello-world容器"><a href="#安装hello-world容器" class="headerlink" title="安装hello-world容器"></a>安装hello-world容器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull hello-world</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动hello-world容器"><a href="#启动hello-world容器" class="headerlink" title="启动hello-world容器"></a>启动hello-world容器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure>
+
+<p>看到<font color="#dd0000">Hello from Docker!</font>，说明hello-world容器启动成功</p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
 </search>
