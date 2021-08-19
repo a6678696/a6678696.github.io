@@ -12060,6 +12060,9 @@
 <p>守护方式创建容器：创建容器但是不进入（容器为<font color="#00dd00">运行</font>状态）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -di --name 自定义名称 镜像id</span><br></pre></td></tr></table></figure>
 
+<p>端口映射，可以通过：<a href="http://192.168.0.140:8888/">http://192.168.0.140:8888/</a> 访问</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name 自定义名称 -d -p 8888:8080 镜像id</span><br></pre></td></tr></table></figure>
+
 <h4 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h4><p>容器停止并退出，命令为：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
