@@ -12148,4 +12148,18 @@
         <tag>Docker</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker启动Tomcat成功后外部却无法访问</title>
+    <url>/294.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在创建Docker的Tomcat容器时使用了端口映射，外部无法通过 <font color="#dd0000">http://虚拟机IP:映射的端口号</font> 来访问</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>Docker某些Tomcat版本的webapps是空的，直接访问是访问不到的</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以使用的Tomcat版本有：8.0.52、8.5.28</p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-19T20:28:13.560Z</updated>
+  <updated>2021-08-19T20:55:20.056Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker启动Tomcat成功后外部却无法访问</title>
+    <link href="http://example.com/294.html"/>
+    <id>http://example.com/294.html</id>
+    <published>2021-08-19T20:48:29.000Z</published>
+    <updated>2021-08-19T20:55:20.056Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在创建Docker的Tomcat容器时使用了端口映射，外部无法通过 <font color="#dd0000">http://虚拟机IP:映射的端口号</font> 来访问</p><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>Docker某些Tomcat版本的webapps是空的，直接访问是访问不到的</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以使用的Tomcat版本有：8.0.52、8.5.28</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/61.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
+    
+    
+    <category term="Tomcat" scheme="http://example.com/tags/Tomcat/"/>
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker常用命令</title>
@@ -427,29 +450,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/47.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Spring Cloud" scheme="http://example.com/categories/Spring-Cloud/"/>
-    
-    
-    <category term="Spring Cloud" scheme="http://example.com/tags/Spring-Cloud/"/>
-    
-    <category term="Hystrix" scheme="http://example.com/tags/Hystrix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hystrix修改默认超时时间</title>
-    <link href="http://example.com/275.html"/>
-    <id>http://example.com/275.html</id>
-    <published>2021-08-16T19:13:49.000Z</published>
-    <updated>2021-08-16T19:42:39.820Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hystrix的默认超时时间是1秒，有时候正常请求响应的时间就超过了1秒，所以1秒钟并不能满足日常的开发需求，需要根据实际情况设置超时时间</p><h3 id="源码位置"><a href="#源码位置" class="headerlink" title="源码位置"></a>源码位置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer default_executionTimeoutInMilliseconds = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20005052.png" alt="img"></p><h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>在application.yml中添加下面配置：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hystrix:</span> </span><br><span class="line">  <span class="attr">command:</span> </span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">      <span class="attr">execution:</span> </span><br><span class="line">        <span class="attr">isolation:</span> </span><br><span class="line">          <span class="attr">thread:</span> </span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure><p>数值的单位为毫秒，1000毫秒==1秒</p><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p><p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p><p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/51.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
