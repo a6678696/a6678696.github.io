@@ -1601,76 +1601,124 @@
     <url>/151.html</url>
     <content><![CDATA[<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616122714.jpg" alt="img"></p>
 <p>root代表当前登录用户，localhost代表主机名， ~代表当前主机目录，#代表用户权限（#表示超级用户，$表示普通用户）</p>
-<h3 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a><strong>ls命令</strong></h3><p>./和.</p>
-<p>均可表示当前目录</p>
-<p>ls</p>
+<h3 id="ls命令"><a href="#ls命令" class="headerlink" title="ls命令"></a><strong>ls命令</strong></h3><p>均可表示当前目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">./和.</span><br></pre></td></tr></table></figure>
+
 <p>列出当前工作目录的内容（不包括隐藏文件）</p>
-<p>ls root/ledao/</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+
 <p>列出root/ledao目录的内容</p>
-<p>ls -a</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls root/ledao/</span><br></pre></td></tr></table></figure>
+
 <p>列出当前工作目录的内容（包括隐藏文件）</p>
-<p>ls -l（或者ll）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -a</span><br></pre></td></tr></table></figure>
+
 <p>列出当前工作目录的内容（查看详细信息）</p>
-<p>ls -lt</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -l（或者ll）</span><br></pre></td></tr></table></figure>
+
 <p>列出当前工作目录的内容（按日期排序，降序）</p>
-<p>ls -ltr</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -lt</span><br></pre></td></tr></table></figure>
+
 <p>列出当前工作目录的内容（按日期排序，升序）</p>
-<p>ls -l | grep “^-“ | wc -l</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -ltr</span><br></pre></td></tr></table></figure>
+
 <p>获取当前文件夹的文件个数</p>
-<h3 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a><strong>cd命令</strong></h3><p>cd /</p>
-<p>回到根目录（根目录：[root@localhost /]）</p>
-<p>cd 或者 cd ~</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls -l | grep <span class="string">&quot;^-&quot;</span> | wc -l</span><br></pre></td></tr></table></figure>
+
+<h3 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a><strong>cd命令</strong></h3><p>回到根目录（根目录：[root@localhost /]）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br></pre></td></tr></table></figure>
+
 <p>回到家目录（家目录：[root@localhost ~]）</p>
-<p>cd ..</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> 或者 <span class="built_in">cd</span> ~</span><br></pre></td></tr></table></figure>
+
 <p>回到上一级目录</p>
-<p>cd ../..</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ..</span><br></pre></td></tr></table></figure>
+
 <p>回到上两级目录</p>
-<p>cd ledao</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ../..</span><br></pre></td></tr></table></figure>
+
 <p>进入ledao目录</p>
-<p>cd ledao/11</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ledao</span><br></pre></td></tr></table></figure>
+
 <p>进入ledao目录的11目录</p>
-<h3 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a><strong>pwd命令</strong></h3><p>pwd</p>
-<p>打印当前所在目录</p>
-<h3 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a><strong>mkdir命令</strong></h3><p>mkdir dir1</p>
-<p>创建一个叫dir1的目录（文件夹）</p>
-<h3 id="rmdir命令"><a href="#rmdir命令" class="headerlink" title="rmdir命令"></a><strong>rmdir命令</strong></h3><p>rmdir dir1</p>
-<p>删除名为dir1的空目录（目录非空时则会提示删除失败）</p>
-<h3 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a><strong>rm命令</strong></h3><p>删除文件可以直接使用rm命令，若删除目录则必须配合选项”-r”，文件一旦通过rm命令删除，则无法恢复，所以必须格外小心地使用该命令。</p>
-<p>rm 1.txt</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ledao/11</span><br></pre></td></tr></table></figure>
+
+<h3 id="pwd命令"><a href="#pwd命令" class="headerlink" title="pwd命令"></a>pwd命令</h3><p>打印当前所在目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">pwd</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="mkdir命令"><a href="#mkdir命令" class="headerlink" title="mkdir命令"></a>mkdir命令</h3><p>创建一个叫dir1的目录（文件夹）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir dir1</span><br></pre></td></tr></table></figure>
+
+<h3 id="rmdir命令"><a href="#rmdir命令" class="headerlink" title="rmdir命令"></a>rmdir命令</h3><p>删除名为dir1的空目录（目录非空时则会提示删除失败）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rmdir dir1</span><br></pre></td></tr></table></figure>
+
+<h3 id="rm命令"><a href="#rm命令" class="headerlink" title="rm命令"></a>rm命令</h3><p>删除文件可以直接使用rm命令，若删除目录则必须配合选项”-r”，文件一旦通过rm命令删除，则无法恢复，所以必须格外小心地使用该命令。</p>
 <p>删除文件1.txt</p>
-<p>rm -r dir1</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm 1.txt</span><br></pre></td></tr></table></figure>
+
 <p>删除目录dir1，如果是空目录则询问是否删除（输入y删除输入n不删除），是非空目录则先删除目录里的目录及文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -r dir1</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616124133.jpg" alt="img"></p>
-<p>rm -r *</p>
 <p>删除当前目录的所有目录及文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -r *</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616124223.jpg" alt="img"></p>
-<h3 id="touch命令"><a href="#touch命令" class="headerlink" title="touch命令"></a><strong>touch命令</strong></h3><p>touch 1.txt</p>
-<p>1.txt不存在则创建文件1.txt，存在则更改1.txt的时间属性为当前时间</p>
-<p>touch 2.txt 3.txt</p>
+<h3 id="touch命令"><a href="#touch命令" class="headerlink" title="touch命令"></a>touch命令</h3><p>1.txt不存在则创建文件1.txt，存在则更改1.txt的时间属性为当前时间</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">touch 1.txt</span><br></pre></td></tr></table></figure>
+
 <p>创建文件2.txt，3.txt（用于创建多个文件）</p>
-<h3 id="gt-命令"><a href="#gt-命令" class="headerlink" title="&gt;命令"></a><strong>&gt;命令</strong></h3><p>&gt;1.txt</p>
-<p>1.txt不存在则创建文件1.txt，存在则直接覆盖原文件，不会有任何提示</p>
-<h3 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a><strong>cp命令</strong></h3><p>cp aa/* bb</p>
-<p>复制aa目录的所有目录及文件到bb目录</p>
-<p>cp 3.txt bb</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">touch 2.txt 3.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="gt-命令"><a href="#gt-命令" class="headerlink" title="&gt;命令"></a>&gt;命令</h3><p>1.txt不存在则创建文件1.txt，存在则直接覆盖原文件，不会有任何提示</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&gt;1.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="cp命令"><a href="#cp命令" class="headerlink" title="cp命令"></a>cp命令</h3><p>复制aa目录的所有目录及文件到bb目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp aa/* bb</span><br></pre></td></tr></table></figure>
+
 <p>复制当前所在目录的3.txt文件到bb目录</p>
-<h3 id="vi命令"><a href="#vi命令" class="headerlink" title="vi命令"></a><strong>vi命令</strong></h3><p>vi 1.txt</p>
-<p>打开1.txt进入命令模式，没有就新建文件（按下i键进入输入模式，按ESC退出输入模式进入命令模式，在命令模式下按下:（英文冒号）就进入了底线命令模式，按w保存，按q退出，按wq则保存后退出）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp 3.txt bb</span><br></pre></td></tr></table></figure>
+
+<h3 id="vi命令"><a href="#vi命令" class="headerlink" title="vi命令"></a>vi命令</h3><p>打开1.txt进入命令模式，没有就新建文件（按下i键进入输入模式，按ESC退出输入模式进入命令模式，在命令模式下按下:（英文冒号）就进入了底线命令模式，按w保存，按q退出，按wq则保存后退出）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi 1.txt</span><br></pre></td></tr></table></figure>
+
 <p>详细介绍：<a href="https://www.runoob.com/linux/linux-vim.html">Linux vi/vim | 菜鸟教程</a></p>
-<h3 id="查看ip"><a href="#查看ip" class="headerlink" title="查看ip"></a><strong>查看ip</strong></h3><p>ip addr</p>
-<h3 id="重启网络服务"><a href="#重启网络服务" class="headerlink" title="重启网络服务"></a><strong>重启网络服务</strong></h3><p>sudo service network restart</p>
-<h3 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a><strong>mv命令</strong></h3><p>mv source_file(文件) dest_file(文件)</p>
-<p>例如：mv aaa bbb（将文件 aaa 改名为 bbb）</p>
-<p>mv source_file(文件) dest_directory(目录)</p>
-<p>例如：mv 1.txt dir1（将 1.txt 放入 dir1 目录中。注意，如果 logs 目录不存在，则该命令将 1.txt 改名为 dir1）</p>
-<p>mv source_directory(目录) dest_directory(目录)</p>
+<h3 id="查看ip"><a href="#查看ip" class="headerlink" title="查看ip"></a>查看ip</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+
+<h3 id="重启网络服务"><a href="#重启网络服务" class="headerlink" title="重启网络服务"></a>重启网络服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo service network restart</span><br></pre></td></tr></table></figure>
+
+<h3 id="mv命令"><a href="#mv命令" class="headerlink" title="mv命令"></a>mv命令</h3><p>例如：mv aaa bbb（将文件 aaa 改名为 bbb）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv source_file(文件) dest_file(文件)</span><br></pre></td></tr></table></figure>
+
+<p>例如：mv 1.txt dir1（将 1.txt 放入 dir1 目录中。注意，如果 dir1目录不存在，则该命令将 1.txt 改名为 dir1）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv source_file(文件) dest_directory(目录)</span><br></pre></td></tr></table></figure>
+
 <p>例如：mv /usr/runoob/*  .（将 /usr/runoob 下的所有文件和目录移到当前目录下）</p>
-<h3 id="find命令"><a href="#find命令" class="headerlink" title="find命令"></a><strong>find命令</strong></h3><p>find / -name mysql</p>
-<p>查找所有目录中名称为mysql的文件</p>
-<p>find /etc -name mysql</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv source_directory(目录) dest_directory(目录)</span><br></pre></td></tr></table></figure>
+
+<h3 id="find命令"><a href="#find命令" class="headerlink" title="find命令"></a>find命令</h3><p>查找所有目录中名称为mysql的文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name mysql</span><br></pre></td></tr></table></figure>
+
 <p>查找/etc目录中名称为mysql的文件</p>
-<p>find -name mysql</p>
-<p>查找当前目录中名称为mysql的文件</p>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find /etc -name mysql</span><br></pre></td></tr></table></figure>
+
+<p>查找当前目录中名称为mysql的文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find -name mysql</span><br></pre></td></tr></table></figure>
+
+<h3 id="firewall-cmd"><a href="#firewall-cmd" class="headerlink" title="firewall-cmd"></a>firewall-cmd</h3><p>开放端口：8889，开放后要更新防火墙配置才能生效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=8889/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<p>删除端口：6666，删除后要更新防火墙配置才能生效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --remove-port=6666/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<p>更新防火墙配置</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<p>查看端口：8889是否可用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=8889/tcp</span><br></pre></td></tr></table></figure>
+
+<p>列出所有开放的端口</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
@@ -1822,7 +1870,7 @@
 <p>[root@localhost tomcat9]# vi /home/tomcat9/apache-tomcat-9.0.46/conf/server.xml</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617031259.jpg" alt="img"></p>
 <h3 id="配置防火墙"><a href="#配置防火墙" class="headerlink" title="配置防火墙"></a>配置防火墙</h3><p>开放80端口</p>
-<p>firewall-cmd --zone=public –add-port=80/tcp –permanent</p>
+<p>firewall-cmd --zone=public --add-port=80/tcp --permanent</p>
 <p>重启防火墙</p>
 <p>firewall-cmd --reload</p>
 <h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>[root@localhost tomcat9]# /home/tomcat9/apache-tomcat-9.0.46/bin/startup.sh</p>
