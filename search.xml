@@ -11897,4 +11897,42 @@
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker配置阿里云镜像仓库</title>
+    <url>/291.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Docker默认远程仓库是 <a href="https://hub.docker.com/">https://hub.docker.com/</a> ，下载速度会很慢，所以要配置一下国内镜像</p>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><h4 id="获取镜像地址"><a href="#获取镜像地址" class="headerlink" title="获取镜像地址"></a>获取镜像地址</h4><p>进入阿里云容器镜像服务地址：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">点这里快速进入</a>，登录后复制镜像地址</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20200741.png"></p>
+<h4 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h4><p>在/etc/docker文件夹下新建一个名为 <mark class="hl-label blue">daemon.json</mark>  的配置文件，内容如下：（链接填自己的）</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://*********.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启daemon"><a href="#重启daemon" class="headerlink" title="重启daemon"></a>重启daemon</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>下载一个tomcat，命令为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
+
+<p>发现速度快了很多</p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker使用pull命令时报错</title>
+    <url>/292.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用pull命令安装容器时报错：Error response from daemon: Get “<a href="https://registry-1.docker.io/v2/&quot;">https://registry-1.docker.io/v2/&quot;</a>: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置国内镜像"><a href="#配置国内镜像" class="headerlink" title="配置国内镜像"></a>配置国内镜像</h4><p>查看博客：<a href="/291.html">Docker配置阿里云镜像仓库</a></p>
+<h4 id="添加DNS地址"><a href="#添加DNS地址" class="headerlink" title="添加DNS地址"></a>添加DNS地址</h4><p>配置了国内镜像如果还是没有用，就添加DNS地址，在/etc/resolv.conf中添加两行代码：</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">nameserver <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nameserver <span class="number">8.8</span>.<span class="number">4.4</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
 </search>
