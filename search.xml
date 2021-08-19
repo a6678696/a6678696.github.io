@@ -1730,22 +1730,33 @@
     <title>CentOS7安装vsftp服务</title>
     <url>/152.html</url>
     <content><![CDATA[<p>我们需要向CentOS7操作系统的服务器上上传文件或者下载文件，这时候，ftp有必要安装下，我们选择主流的vsftp；</p>
-<h3 id="安装vsftp"><a href="#安装vsftp" class="headerlink" title="安装vsftp"></a><strong>安装vsftp</strong></h3><p>yum install -y vsftpd</p>
-<h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a><strong>设置开机启动</strong></h3><p>systemctl enable vsftpd</p>
-<h3 id="启动ftp服务"><a href="#启动ftp服务" class="headerlink" title="启动ftp服务"></a><strong>启动ftp服务</strong></h3><p>systemctl start vsftpd.service</p>
-<h3 id="打开防火墙"><a href="#打开防火墙" class="headerlink" title="打开防火墙"></a><strong>打开防火墙</strong></h3><p>firewall-cmd –zone=public –add-port=21/tcp –permanent</p>
-<p>永久添加tcp 21端口</p>
-<p>firewall-cmd –permanent –zone=public –add-service=ftp</p>
+<h3 id="安装vsftp"><a href="#安装vsftp" class="headerlink" title="安装vsftp"></a>安装vsftp</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动ftp服务"><a href="#启动ftp服务" class="headerlink" title="启动ftp服务"></a>启动ftp服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start vsftpd.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开防火墙"><a href="#打开防火墙" class="headerlink" title="打开防火墙"></a>打开防火墙</h3><p>永久添加tcp 21端口</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=21/tcp --permanent</span><br></pre></td></tr></table></figure>
+
 <p>添加ftp服务</p>
-<p>firewall-cmd –reload</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --add-service=ftp</span><br></pre></td></tr></table></figure>
+
 <p>重启防火墙</p>
-<h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a><strong>添加用户</strong></h3><p>useradd -g root -d /home/data -s /sbin/nologin java1234</p>
-<p>新建java1234用户 添加到root组，但是不允许用户登录，仅仅可以ftp登录，ftp登录后的默认目录是/home/data</p>
-<h3 id="设置用户密码"><a href="#设置用户密码" class="headerlink" title="设置用户密码"></a><strong>设置用户密码</strong></h3><p>passwd java1234</p>
-<h3 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a><strong>设置权限</strong></h3><p>chown -R java1234:root /home/data</p>
-<p>setsebool -P ftpd_full_access on</p>
-<h3 id="修改vsftp配置文件，禁止匿名登录"><a href="#修改vsftp配置文件，禁止匿名登录" class="headerlink" title="修改vsftp配置文件，禁止匿名登录"></a><strong>修改vsftp配置文件，禁止匿名登录</strong></h3><p>vi /etc/vsftpd/vsftpd.conf</p>
-<p>把：anonymous_enable=YES 改为： anonymous_enable=NO</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><p>新建java1234用户 添加到root组，但是不允许用户登录，仅仅可以ftp登录，ftp登录后的默认目录是/home/data</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">useradd -g root -d /home/data -s /sbin/nologin java1234</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置用户密码"><a href="#设置用户密码" class="headerlink" title="设置用户密码"></a>设置用户密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd java1234</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown -R java1234:root /home/data</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">setsebool -P ftpd_full_access on</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改vsftp配置文件，禁止匿名登录"><a href="#修改vsftp配置文件，禁止匿名登录" class="headerlink" title="修改vsftp配置文件，禁止匿名登录"></a>修改vsftp配置文件，禁止匿名登录</h3><p>把：anonymous_enable=YES 改为： anonymous_enable=NO</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/vsftpd/vsftpd.conf</span><br></pre></td></tr></table></figure>
+
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="http://blog.java1234.com/blog/articles/306.html">Centos7.3安装vsftp服务_Java开源博客系统-Powered by java1234</a></p>]]></content>
       <categories>
         <category>CentOS7</category>
@@ -1827,8 +1838,8 @@
 <p>修改密码为 Caofeng2012@   (备注 mysql5.7默认密码策略要求密码必须是大小写字母数字特殊字母的组合，至少8位) </p>
 <h3 id="设置允许远程登录"><a href="#设置允许远程登录" class="headerlink" title="设置允许远程登录"></a><strong>设置允许远程登录</strong></h3><p>Mysql默认不允许远程登录，我们需要设置下，并且防火墙开放3306端口；</p>
 <p>mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO ‘root‘@’%’ IDENTIFIED BY ‘Caofeng2012@’ WITH GRANT OPTION;</p>
-<h3 id="设置防火墙"><a href="#设置防火墙" class="headerlink" title="设置防火墙"></a><strong>设置防火墙</strong></h3><p>[root@localhost ~]# firewall-cmd –zone=public –add-port=3306/tcp –permanent</p>
-<p>[root@localhost ~]# firewall-cmd –reload</p>
+<h3 id="设置防火墙"><a href="#设置防火墙" class="headerlink" title="设置防火墙"></a><strong>设置防火墙</strong></h3><p>[root@localhost ~]# firewall-cmd --zone=public --add-port=3306/tcp --permanent</p>
+<p>[root@localhost ~]# firewall-cmd --reload</p>
 <h3 id="1配置默认编码为utf8"><a href="#1配置默认编码为utf8" class="headerlink" title="1配置默认编码为utf8"></a><strong>1配置默认编码为utf8</strong></h3><p>修改/etc/my.cnf配置文件，在[mysqld]下添加编码配置，如下所示：</p>
 <p>[mysqld]</p>
 <p>character_set_server=utf8</p>
@@ -2030,12 +2041,12 @@
 
 <h3 id="运行代码时出现错误"><a href="#运行代码时出现错误" class="headerlink" title="运行代码时出现错误"></a><strong>运行代码时出现错误</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082302.jpg" alt="img"></p>
 <p>代表连接超时了，我们配置下防火墙，开一个6379端口权限</p>
-<p>[root@localhost redis]# firewall-cmd –zone=public –add-port=6379/tcp –permanent<br>success<br>[root@localhost redis]# firewall-cmd –reload<br>success</p>
+<p>[root@localhost redis]# firewall-cmd --zone=public --add-port=6379/tcp --permanent<br>success<br>[root@localhost redis]# firewall-cmd --reload<br>success</p>
 <p>修改 /usr/local/redis/redis.conf 配置文件：将bind 127.0.0.1注释掉，在前面加#号即可（因为这里绑定了本机）</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082316.jpg" alt="img"></p>
-<h3 id="重启Redis服务，再次运行Java代码"><a href="#重启Redis服务，再次运行Java代码" class="headerlink" title="重启Redis服务，再次运行Java代码"></a><strong>重启Redis服务，再次运行Java代码</strong></h3><p>[root@localhost redis]# ./bin/redis-cli shutdown<br>[root@localhost redis]# ps -ef | grep -i redis<br>root    4620  4534  0 02:32 pts/0   00:00:00 grep –color=auto -i redis<br>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ps -ef | grep -i redis<br>root    4622    1  0 02:32 ?     00:00:00 ./bin/redis-server *:6379<br>root    4626  4534  0 02:32 pts/0   00:00:00 grep –color=auto -i redis</p>
+<h3 id="重启Redis服务，再次运行Java代码"><a href="#重启Redis服务，再次运行Java代码" class="headerlink" title="重启Redis服务，再次运行Java代码"></a><strong>重启Redis服务，再次运行Java代码</strong></h3><p>[root@localhost redis]# ./bin/redis-cli shutdown<br>[root@localhost redis]# ps -ef | grep -i redis<br>root    4620  4534  0 02:32 pts/0   00:00:00 grep --color=auto -i redis<br>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ps -ef | grep -i redis<br>root    4622    1  0 02:32 ?     00:00:00 ./bin/redis-server *:6379<br>root    4626  4534  0 02:32 pts/0   00:00:00 grep --color=auto -i redis</p>
 <p>再次出现错误（下面是错误信息）</p>
-<p>Exception in thread “main” redis.clients.jedis.exceptions.JedisDataException: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command ‘CONFIG SET protected-mode no’ from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to ‘no’, and then restarting the server. 3) If you started the server manually just for testing, restart it with the ‘–protected-mode no’ option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.<br>   at redis.clients.jedis.Protocol.processError(Protocol.java:127)<br>   at redis.clients.jedis.Protocol.process(Protocol.java:161)<br>   at redis.clients.jedis.Protocol.read(Protocol.java:215)<br>   at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)<br>   at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)<br>   at redis.clients.jedis.Jedis.set(Jedis.java:121)<br>   at com.ledao.jedis.JedisTest.main(JedisTest.java:14)</p>
+<p>Exception in thread “main” redis.clients.jedis.exceptions.JedisDataException: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command ‘CONFIG SET protected-mode no’ from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to ‘no’, and then restarting the server. 3) If you started the server manually just for testing, restart it with the ‘--protected-mode no’ option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.<br>   at redis.clients.jedis.Protocol.processError(Protocol.java:127)<br>   at redis.clients.jedis.Protocol.process(Protocol.java:161)<br>   at redis.clients.jedis.Protocol.read(Protocol.java:215)<br>   at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)<br>   at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)<br>   at redis.clients.jedis.Jedis.set(Jedis.java:121)<br>   at com.ledao.jedis.JedisTest.main(JedisTest.java:14)</p>
 <p>出现错误的原因是因为远程连接redis，redis自我保护，拒绝访问，解决办法有两种：（推荐使用第二种方法：设置Redis连接密码）</p>
 <p>①关闭Redis的自我保护（不推荐使用）</p>
 <p>protected-mode yes 的yes修改为no即可</p>
