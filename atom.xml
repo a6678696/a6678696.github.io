@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-20T07:10:35.236Z</updated>
+  <updated>2021-08-20T07:24:31.738Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/296.html"/>
     <id>http://example.com/296.html</id>
     <published>2021-08-20T07:06:21.000Z</published>
-    <updated>2021-08-20T07:10:35.236Z</updated>
+    <updated>2021-08-20T07:24:31.738Z</updated>
     
     <content type="html"><![CDATA[<p>命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit -a=<span class="string">&#x27;作者&#x27;</span> -m=<span class="string">&#x27;备注&#x27;</span> 运行时容器ID 新镜像名称:b</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20150855.jpg"></p>]]></content>
     
