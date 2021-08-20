@@ -12448,4 +12448,18 @@
         <tag>Docker</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker提交运行时容器为镜像</title>
+    <url>/296.html</url>
+    <content><![CDATA[<p>命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker commit -a=<span class="string">&#x27;作者&#x27;</span> -m=<span class="string">&#x27;备注&#x27;</span> 运行时容器ID 新镜像名称:b</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20150855.jpg"></p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
 </search>
