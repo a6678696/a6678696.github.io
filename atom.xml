@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-20T16:21:03.270Z</updated>
+  <updated>2021-08-20T19:14:48.754Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker修改已创建容器的挂载目录</title>
+    <link href="http://example.com/300.html"/>
+    <id>http://example.com/300.html</id>
+    <published>2021-08-20T18:31:21.000Z</published>
+    <updated>2021-08-20T19:14:48.754Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>一般来说，都是创建容器时进行目录挂载，对于已经创建好的容器如果忘了挂载目录但是又想挂载目录</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>①提交这个容器为新的镜像，然后创建这个新镜像的容器同时进行目录挂载（此方式较简单）②修改这个容器的配置文件</p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="提交新镜像再创建容器"><a href="#提交新镜像再创建容器" class="headerlink" title="提交新镜像再创建容器"></a>提交新镜像再创建容器</h4><p>查看下面两篇博客即可实现修改已创建容器的挂载目录</p><p>① <a href="/296.html">Docker提交运行时容器为镜像</a> ，将要挂载目录的已创建容器提交为本地新镜像</p><p>② <a href="/299.html">Docker创建容器时目录挂载 </a>，创建容器时使用新镜像的镜像id顺便挂载目录</p><h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>停止Docker</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure><p>配置文件路径</p><p>/var/lib/docker/containers/[容器id]</p><p>修改配置文件hostconfig.json，在”Binds”节点中增加挂载目录的关系，前面的<font color="#dd0000">/home/hData/</font>是宿主机目录，后面的<font color="#dd0000">/cData</font>是容器目录，如果是多个用英文逗号隔开</p><p>单个目录例子：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Binds&quot;</span>:[<span class="string">&quot;/home/hData/:/cData&quot;</span>]</span><br></pre></td></tr></table></figure><p>多个目录例子：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Binds&quot;</span>:[<span class="string">&quot;/home/hData:/cData&quot;</span>,<span class="string">&quot;/home/hData2:/cData2&quot;</span>]</span><br></pre></td></tr></table></figure><p>修改配置文件config.v2.json，在”MountPoints” 节点中增加挂载目录</p><p>单个目录例子：（第一段代码是原始的，第二段代码是格式化过的，格式化后更好修改）</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;MountPoints&quot;</span>:&#123;<span class="attr">&quot;/cData&quot;</span>:&#123;<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData&quot;</span>,<span class="attr">&quot;Destination&quot;</span>:<span class="string">&quot;/cData&quot;</span>,<span class="attr">&quot;RW&quot;</span>:<span class="literal">true</span>,<span class="attr">&quot;Name&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Driver&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Propagation&quot;</span>:<span class="string">&quot;rprivate&quot;</span>,<span class="attr">&quot;Spec&quot;</span>:&#123;<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData/&quot;</span>,<span class="attr">&quot;Target&quot;</span>:<span class="string">&quot;/cData&quot;</span>&#125;,<span class="attr">&quot;SkipMountpointCreation&quot;</span>:<span class="literal">false</span>&#125;&#125;</span><br></pre></td></tr></table></figure><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;MountPoints&quot;</span>: &#123;</span><br><span class="line"><span class="attr">&quot;/cData&quot;</span>: &#123;</span><br><span class="line"><span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Destination&quot;</span>: <span class="string">&quot;/cData&quot;</span>,</span><br><span class="line"><span class="attr">&quot;RW&quot;</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="attr">&quot;Name&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Driver&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Propagation&quot;</span>: <span class="string">&quot;rprivate&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Spec&quot;</span>: &#123;</span><br><span class="line"><span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData/&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Target&quot;</span>: <span class="string">&quot;/cData&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">&quot;SkipMountpointCreation&quot;</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>多个目录例子：（第一段代码是原始的，第二段代码是格式化过的，格式化后更好修改）</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;MountPoints&quot;</span>:&#123;<span class="attr">&quot;/cData&quot;</span>:&#123;<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData&quot;</span>,<span class="attr">&quot;Destination&quot;</span>:<span class="string">&quot;/cData&quot;</span>,<span class="attr">&quot;RW&quot;</span>:<span class="literal">true</span>,<span class="attr">&quot;Name&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Driver&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Propagation&quot;</span>:<span class="string">&quot;rprivate&quot;</span>,<span class="attr">&quot;Spec&quot;</span>:&#123;<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData&quot;</span>,<span class="attr">&quot;Target&quot;</span>:<span class="string">&quot;/cData&quot;</span>&#125;,<span class="attr">&quot;SkipMountpointCreation&quot;</span>:<span class="literal">false</span>&#125;,<span class="attr">&quot;/cData2&quot;</span>:&#123;<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData2&quot;</span>,<span class="attr">&quot;Destination&quot;</span>:<span class="string">&quot;/cData2&quot;</span>,<span class="attr">&quot;RW&quot;</span>:<span class="literal">true</span>,<span class="attr">&quot;Name&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Driver&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Propagation&quot;</span>:<span class="string">&quot;rprivate&quot;</span>,<span class="attr">&quot;Spec&quot;</span>:&#123;<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData2&quot;</span>,<span class="attr">&quot;Target&quot;</span>:<span class="string">&quot;/cData2&quot;</span>&#125;,<span class="attr">&quot;SkipMountpointCreation&quot;</span>:<span class="literal">false</span>&#125;&#125;</span><br></pre></td></tr></table></figure><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;MountPoints&quot;</span>: &#123;</span><br><span class="line"><span class="attr">&quot;/cData&quot;</span>: &#123;</span><br><span class="line"><span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Destination&quot;</span>: <span class="string">&quot;/cData&quot;</span>,</span><br><span class="line"><span class="attr">&quot;RW&quot;</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="attr">&quot;Name&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Driver&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Propagation&quot;</span>: <span class="string">&quot;rprivate&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Spec&quot;</span>: &#123;</span><br><span class="line"><span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Target&quot;</span>: <span class="string">&quot;/cData&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">&quot;SkipMountpointCreation&quot;</span>: <span class="literal">false</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">&quot;/cData2&quot;</span>: &#123;</span><br><span class="line"><span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData2&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Destination&quot;</span>: <span class="string">&quot;/cData2&quot;</span>,</span><br><span class="line"><span class="attr">&quot;RW&quot;</span>: <span class="literal">true</span>,</span><br><span class="line"><span class="attr">&quot;Name&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Driver&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Propagation&quot;</span>: <span class="string">&quot;rprivate&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Spec&quot;</span>: &#123;</span><br><span class="line"><span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData2&quot;</span>,</span><br><span class="line"><span class="attr">&quot;Target&quot;</span>: <span class="string">&quot;/cData2&quot;</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">&quot;SkipMountpointCreation&quot;</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>启动Docker</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure><p>启动刚刚修改的容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start 容器id</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/12.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
+    
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker创建容器时目录挂载</title>
+    <link href="http://example.com/299.html"/>
+    <id>http://example.com/299.html</id>
+    <published>2021-08-20T17:21:08.000Z</published>
+    <updated>2021-08-20T18:34:08.645Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样我们就可以实现宿主机和容器目录的双向自动同步</p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>Docker可以使用cp命令来实现数据传递，这种方式非常麻烦，通过容器目录挂载，能够轻松实现代码上传，配置修改，日志同步等需求</p><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h4 id="单个目录"><a href="#单个目录" class="headerlink" title="单个目录"></a>单个目录</h4><p>拥有全部权限</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v  /宿主机目录:/容器目录 镜像名</span><br></pre></td></tr></table></figure><p>挂载目录只读</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v  /宿主机目录:/容器目录:ro 镜像名</span><br></pre></td></tr></table></figure><h4 id="多个目录"><a href="#多个目录" class="headerlink" title="多个目录"></a>多个目录</h4><p>拥有全部权限</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v /宿主机目录:/容器目录 -v /宿主机目录2:/容器目录2  镜像名</span><br></pre></td></tr></table></figure><p>挂载目录只读</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v /宿主机目录:/容器目录:ro -v /宿主机目录2:/容器目录2:ro  镜像名</span><br></pre></td></tr></table></figure><h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>同步的是多级目录，可能会出现权限不足的提示，这是因为Centos7中的安全模块selinux把权限禁掉了，我们需要在命令的后面添加<mark class="hl-label red">--privileged=true</mark> 来解决挂载的目录没有权限的问题</p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>一般来说，都是创建容器时进行目录挂载，对于已经创建好的容器如果忘了挂载目录但是又想挂载目录，方法有两种：①提交这个容器为新的镜像，然后创建这个新镜像的容器同时进行目录挂载（此方式较简单）②修改这个容器的配置文件，具体步骤查看博客：<a href="/300.html">Docker修改已创建容器的挂载目录</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/5.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
+    
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker推送镜像到阿里云</title>
@@ -403,52 +445,6 @@
     <category term="Spring Cloud" scheme="http://example.com/tags/Spring-Cloud/"/>
     
     <category term="Zuul" scheme="http://example.com/tags/Zuul/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Feign和Hystrix整合后配置超时时间</title>
-    <link href="http://example.com/281.html"/>
-    <id>http://example.com/281.html</id>
-    <published>2021-08-17T13:05:39.000Z</published>
-    <updated>2021-08-17T13:36:26.838Z</updated>
-    
-    <content type="html"><![CDATA[<p>Feign和Hystrix整合后,原来服务提供者的Hystrix超时时间配置没用了</p><p>把microservice-student-provider-hystrix-1004和microservice-student-provider-hystrix-1005的超时时间配置删除，添加到带Feign的服务消费项目的application.yml中（项目名为：microservice-student-consumer-feign-80）</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">hystrix:</span></span><br><span class="line">  <span class="attr">command:</span></span><br><span class="line">    <span class="attr">default:</span></span><br><span class="line">      <span class="attr">execution:</span></span><br><span class="line">        <span class="attr">isolation:</span></span><br><span class="line">          <span class="attr">thread:</span></span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure><p>虽然添加了超时时间配置，但是还是无效，无效原因为：feign 也有一个超时时间的设置，feign底层是ribbon的封装，所以直接配置ribbon，ribbon默认超时也是1秒。所以这里都是强制要求，ribbon的超时时间要大于hystrix的超时时间，否则 hystrix自定义的超时时间毫无意义</p><p>所以还得加个 ribbon超时时间设置</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">ribbon:</span></span><br><span class="line">  <span class="attr">ReadTimeout:</span> <span class="number">10000</span></span><br><span class="line">  <span class="attr">ConnectTimeout:</span> <span class="number">9000</span></span><br></pre></td></tr></table></figure><p>到此，超时时间配置完成，新的超时时间已经生效</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/2.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Spring Cloud" scheme="http://example.com/categories/Spring-Cloud/"/>
-    
-    
-    <category term="Spring Cloud" scheme="http://example.com/tags/Spring-Cloud/"/>
-    
-    <category term="Feign" scheme="http://example.com/tags/Feign/"/>
-    
-    <category term="Hystrix" scheme="http://example.com/tags/Hystrix/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows10输入法获取当前时间</title>
-    <link href="http://example.com/280.html"/>
-    <id>http://example.com/280.html</id>
-    <published>2021-08-16T20:44:49.000Z</published>
-    <updated>2021-08-16T21:02:51.673Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="打开输入法设置"><a href="#打开输入法设置" class="headerlink" title="打开输入法设置"></a>打开输入法设置</h3><p><strong>右击单击右下角的输入法选项，选择设置</strong></p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045135.png" style="zoom:67%;" /><h3 id="选择词库和自学习"><a href="#选择词库和自学习" class="headerlink" title="选择词库和自学习"></a><strong>选择词库和自学习</strong></h3><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045223.png" style="zoom:67%;" /><h3 id="点击添加或编辑自定义短语"><a href="#点击添加或编辑自定义短语" class="headerlink" title="点击添加或编辑自定义短语"></a><strong>点击添加或编辑自定义短语</strong></h3><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045244.png" style="zoom:67%;" /><h3 id="添加短语"><a href="#添加短语" class="headerlink" title="添加短语"></a>添加短语</h3><p>添加短语：<font color="#dd0000">%yyyy%-%MM%-%dd% %HH%:%mm%:%ss%</font></p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20045457.png" style="zoom:67%;" /><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a><strong>使用</strong></h3><p>在中文模式下输入sj即可获取当前时间</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/28.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
-    
-    
-    <category term="Windows10" scheme="http://example.com/tags/Windows10/"/>
     
   </entry>
   
