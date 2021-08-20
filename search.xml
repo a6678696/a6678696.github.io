@@ -12482,4 +12482,34 @@
         <tag>Docker</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker推送镜像到阿里云</title>
+    <url>/298.html</url>
+    <content><![CDATA[<h3 id="进入阿里云镜像控制台"><a href="#进入阿里云镜像控制台" class="headerlink" title="进入阿里云镜像控制台"></a>进入阿里云镜像控制台</h3><p>控制台地址：<a href="https://cr.console.aliyun.com/">https://cr.console.aliyun.com</a> ，登录</p>
+<h3 id="创建命令空间"><a href="#创建命令空间" class="headerlink" title="创建命令空间"></a>创建命令空间</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232121.jpg"></p>
+<h3 id="创建镜像仓库"><a href="#创建镜像仓库" class="headerlink" title="创建镜像仓库"></a>创建镜像仓库</h3><h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232151.jpg"></p>
+<h4 id="填写仓库信息"><a href="#填写仓库信息" class="headerlink" title="填写仓库信息"></a>填写仓库信息</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232215.jpg"></p>
+<h4 id="选择本地仓库"><a href="#选择本地仓库" class="headerlink" title="选择本地仓库"></a>选择本地仓库</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232235.jpg"></p>
+<h4 id="阿里云提供的命令"><a href="#阿里云提供的命令" class="headerlink" title="阿里云提供的命令"></a>阿里云提供的命令</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232417.jpg"></p>
+<h3 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h3><p>登录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login --username=用户名 registry.cn-hangzhou.aliyuncs.com</span><br></pre></td></tr></table></figure>
+
+<p>创建一个阿里云专用镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker tag 要推送的镜像id registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[镜像版本号]</span><br></pre></td></tr></table></figure>
+
+<p>下图中版本号为1.1的就是刚刚创建的</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20001143.jpg"></p>
+<p>推送</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker push registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[镜像版本号]</span><br></pre></td></tr></table></figure>
+
+<p>查看阿里云的镜像仓库中成功推送的镜像</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20001002.jpg"></p>
+<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight gradle"><table><tr><td class="code"><pre><span class="line">docker <span class="keyword">push</span> registry.cn-hangzhou.aliyuncs.com<span class="regexp">/ledao/</span>tomcat:[阿里云的镜像版本号]</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-20T13:30:12.596Z</updated>
+  <updated>2021-08-20T16:16:12.522Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker推送镜像到阿里云</title>
+    <link href="http://example.com/298.html"/>
+    <id>http://example.com/298.html</id>
+    <published>2021-08-20T15:26:34.000Z</published>
+    <updated>2021-08-20T16:16:12.522Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="进入阿里云镜像控制台"><a href="#进入阿里云镜像控制台" class="headerlink" title="进入阿里云镜像控制台"></a>进入阿里云镜像控制台</h3><p>控制台地址：<a href="https://cr.console.aliyun.com/">https://cr.console.aliyun.com</a> ，登录</p><h3 id="创建命令空间"><a href="#创建命令空间" class="headerlink" title="创建命令空间"></a>创建命令空间</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232121.jpg"></p><h3 id="创建镜像仓库"><a href="#创建镜像仓库" class="headerlink" title="创建镜像仓库"></a>创建镜像仓库</h3><h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232151.jpg"></p><h4 id="填写仓库信息"><a href="#填写仓库信息" class="headerlink" title="填写仓库信息"></a>填写仓库信息</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232215.jpg"></p><h4 id="选择本地仓库"><a href="#选择本地仓库" class="headerlink" title="选择本地仓库"></a>选择本地仓库</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232235.jpg"></p><h4 id="阿里云提供的命令"><a href="#阿里云提供的命令" class="headerlink" title="阿里云提供的命令"></a>阿里云提供的命令</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232417.jpg"></p><h3 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h3><p>登录</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login --username=用户名 registry.cn-hangzhou.aliyuncs.com</span><br></pre></td></tr></table></figure><p>创建一个阿里云专用镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag 要推送的镜像id registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[镜像版本号]</span><br></pre></td></tr></table></figure><p>下图中版本号为1.1的就是刚刚创建的</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20001143.jpg"></p><p>推送</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[镜像版本号]</span><br></pre></td></tr></table></figure><p>查看阿里云的镜像仓库中成功推送的镜像</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20001002.jpg"></p><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">push</span> registry.cn-hangzhou.aliyuncs.com<span class="regexp">/ledao/</span>tomcat:[阿里云的镜像版本号]</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/103.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
+    
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker推送镜像到hub服务器</title>
@@ -428,29 +449,6 @@
     
     
     <category term="Windows10" scheme="http://example.com/tags/Windows10/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git恢复之前的版本</title>
-    <link href="http://example.com/279.html"/>
-    <id>http://example.com/279.html</id>
-    <published>2021-08-16T20:01:26.000Z</published>
-    <updated>2021-08-16T20:48:20.744Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>回退（reset）、反做（revert）</p><h3 id="回退（reset）"><a href="#回退（reset）" class="headerlink" title="回退（reset）"></a>回退（reset）</h3><h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>git reset的作用是修改HEAD的位置，即将HEAD指向的位置改变为之前存在的某个版本，如下图所示，假设我们要回退到版本一</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041222.png"></p><h4 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p><h4 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h4><p>先查看当前库有哪些版本号，查看方法有两种：</p><p>①Git命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure><p>commit后的黄色字符串就是版本号</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20042055.png"></p><p>②在GitHub中查看</p><p>点击下图的提交数</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041534.png"></p><p>点击下图的复制按钮即可复制完整版本号</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041538.png"></p><p>使用下面命令将版本回退</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 目标版本号</span><br></pre></td></tr></table></figure><p>使用下面命令提交更改，-f代表强制</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -f</span><br></pre></td></tr></table></figure><h3 id="反做（revert）"><a href="#反做（revert）" class="headerlink" title="反做（revert）"></a>反做（revert）</h3><h4 id="原理-1"><a href="#原理-1" class="headerlink" title="原理"></a>原理</h4><p>git revert是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们commit了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西<br><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-17%20041230.png"></p><h4 id="适用场景-1"><a href="#适用场景-1" class="headerlink" title="适用场景"></a>适用场景</h4><p>如果我们想撤销之前的某一版本，但是又想保留该目标版本后面的版本，记录下这整个版本变动流程，就可以用这种方法</p><h4 id="具体操作-1"><a href="#具体操作-1" class="headerlink" title="具体操作"></a>具体操作</h4><p>查看版本号，上面有具体操作</p><p>使用下面命令反做，这里可能会出现冲突，那么需要手动修改冲突的文件，而且要git add 文件名</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git revert -n 版本号</span><br></pre></td></tr></table></figure><p>使用下面命令提交</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注信息&quot;</span></span><br></pre></td></tr></table></figure><p>使用下面命令提交更改到远程库</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br></pre></td></tr></table></figure><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/yxlshk/article/details/79944535">https://blog.csdn.net/yxlshk/article/details/79944535</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/88.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Git" scheme="http://example.com/categories/Git/"/>
-    
-    
-    <category term="GitHub" scheme="http://example.com/tags/GitHub/"/>
-    
-    <category term="Git" scheme="http://example.com/tags/Git/"/>
     
   </entry>
   
