@@ -12534,7 +12534,8 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -it -v /宿主机目录:/容器目录:ro -v /宿主机目录2:/容器目录2:ro  镜像名</span><br></pre></td></tr></table></figure>
 
 <h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>同步的是多级目录，可能会出现权限不足的提示，这是因为Centos7中的安全模块selinux把权限禁掉了，我们需要在命令的后面添加<mark class="hl-label red">--privileged=true</mark> 来解决挂载的目录没有权限的问题</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>一般来说，都是创建容器时进行目录挂载，对于已经创建好的容器如果忘了挂载目录但是又想挂载目录，方法有两种：①提交这个容器为新的镜像，然后创建这个新镜像的容器同时进行目录挂载（此方式较简单）②修改这个容器的配置文件，具体步骤查看博客：<a href="/300.html">Docker修改已创建容器的挂载目录</a></p>]]></content>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>一般来说，都是创建容器时进行目录挂载，对于已经创建好的容器如果忘了挂载目录但是又想挂载目录，方法有两种：①提交这个容器为新的镜像，然后创建这个新镜像的容器同时进行目录挂载（此方式较简单）②修改这个容器的配置文件</p>
+<p>具体步骤查看博客：<a href="/300.html">Docker修改已创建容器的挂载目录</a></p>]]></content>
       <categories>
         <category>Docker</category>
       </categories>
