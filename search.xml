@@ -2748,12 +2748,16 @@
   <entry>
     <title>图片压缩</title>
     <url>/172.html</url>
-    <content><![CDATA[<h3 id="为什么要图片压缩？"><a href="#为什么要图片压缩？" class="headerlink" title="为什么要图片压缩？"></a><strong>为什么要图片压缩？</strong></h3><p>使用更少的带宽，可以加快网站加载速度</p>
-<h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a><strong>网站地址</strong></h3><p><a href="https://tinypng.com/">https://tinypng.com/</a></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a><strong>使用</strong></h3><p>点击虚线框可以选择要压缩的图片，或将图片（最多20张）拖到虚线框</p>
+    <content><![CDATA[<h3 id="为什么要图片压缩？"><a href="#为什么要图片压缩？" class="headerlink" title="为什么要图片压缩？"></a>为什么要图片压缩？</h3><p>使用更少的带宽，可以加快网站加载速度</p>
+<h3 id="tinypng"><a href="#tinypng" class="headerlink" title="tinypng"></a>tinypng</h3><h4 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h4><p><a href="https://tinypng.com/">https://tinypng.com/</a></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>点击虚线框可以选择要压缩的图片，或将图片（最多20张）拖到虚线框</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621130101.jpg" alt="img"></p>
 <p>压缩成功，点击下载按钮即可下载到本地</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621130113.jpg" alt="img"></p>]]></content>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621130113.jpg" alt="img"></p>
+<h3 id="squoosh"><a href="#squoosh" class="headerlink" title="squoosh"></a>squoosh</h3><h4 id="网站地址-1"><a href="#网站地址-1" class="headerlink" title="网站地址"></a>网站地址</h4><p><a href="https://squoosh.app/">https://squoosh.app/</a> ，可以安装到电脑上</p>
+<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><p>上传图片后会自动压缩，点击下载按钮即可下载到本地</p>
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>squoosh更加方便，squoosh压缩后下载的是图片，tinypng下载的是图片的压缩包还要解压一下；squoosh还可以安装到电脑上，不需要打开浏览器</p>
+<p>对压缩的效率和质量我并不关心，所以不进行研究</p>]]></content>
       <categories>
         <category>其它</category>
       </categories>
@@ -11990,8 +11994,11 @@
     <url>/292.html</url>
     <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用pull命令安装容器时报错：Error response from daemon: Get “<a href="https://registry-1.docker.io/v2/&quot;">https://registry-1.docker.io/v2/&quot;</a>: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)</p>
 <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置国内镜像"><a href="#配置国内镜像" class="headerlink" title="配置国内镜像"></a>配置国内镜像</h4><p>查看博客：<a href="/291.html">Docker配置阿里云镜像仓库</a></p>
-<h4 id="添加DNS地址"><a href="#添加DNS地址" class="headerlink" title="添加DNS地址"></a>添加DNS地址</h4><p>配置了国内镜像地址如果还是没有用，就添加DNS地址，在/etc/resolv.conf中添加两行代码：</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">nameserver <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nameserver <span class="number">8.8</span>.<span class="number">4.4</span></span><br></pre></td></tr></table></figure>]]></content>
+<h4 id="添加DNS地址"><a href="#添加DNS地址" class="headerlink" title="添加DNS地址"></a>添加DNS地址</h4><p>如果配置了国内镜像地址还是报错，就添加DNS地址，在/etc/resolv.conf中添加两行代码：</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">nameserver <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nameserver <span class="number">8.8</span>.<span class="number">4.4</span></span><br></pre></td></tr></table></figure>
+
+<p>重启一下Docker</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Docker</category>
       </categories>
@@ -12159,6 +12166,285 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker映射端口6666时无法访问</title>
+    <url>/295.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在创建Docker的Tomcat容器时使用了端口映射，我映射的端口号是6666，外部使用谷歌浏览器却无法访问</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>6666端口使用谷歌浏览器、火狐浏览器、新版Edge浏览器是无法访问的，被我们遗忘的IE浏览器却可以访问！！</p>
+<p>上述浏览器我都亲自验证过，其它浏览器不清楚情况</p>
+<p>更多无法访问的端口号如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">端口</th>
+<th align="left">原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">tcpmux</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">echo</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">discard</td>
+</tr>
+<tr>
+<td align="left">11</td>
+<td align="left">systat</td>
+</tr>
+<tr>
+<td align="left">13</td>
+<td align="left">daytime</td>
+</tr>
+<tr>
+<td align="left">15</td>
+<td align="left">netstat</td>
+</tr>
+<tr>
+<td align="left">17</td>
+<td align="left">qotd</td>
+</tr>
+<tr>
+<td align="left">19</td>
+<td align="left">chargen</td>
+</tr>
+<tr>
+<td align="left">20</td>
+<td align="left">ftp data</td>
+</tr>
+<tr>
+<td align="left">21</td>
+<td align="left">ftp access</td>
+</tr>
+<tr>
+<td align="left">22</td>
+<td align="left">ssh</td>
+</tr>
+<tr>
+<td align="left">23</td>
+<td align="left">telnet</td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">smtp</td>
+</tr>
+<tr>
+<td align="left">37</td>
+<td align="left">time</td>
+</tr>
+<tr>
+<td align="left">42</td>
+<td align="left">name</td>
+</tr>
+<tr>
+<td align="left">43</td>
+<td align="left">nicname</td>
+</tr>
+<tr>
+<td align="left">53</td>
+<td align="left">domain</td>
+</tr>
+<tr>
+<td align="left">77</td>
+<td align="left">priv-rjs</td>
+</tr>
+<tr>
+<td align="left">79</td>
+<td align="left">finger</td>
+</tr>
+<tr>
+<td align="left">87</td>
+<td align="left">ttylink</td>
+</tr>
+<tr>
+<td align="left">95</td>
+<td align="left">supdup</td>
+</tr>
+<tr>
+<td align="left">101</td>
+<td align="left">hostriame</td>
+</tr>
+<tr>
+<td align="left">102</td>
+<td align="left">iso-tsap</td>
+</tr>
+<tr>
+<td align="left">103</td>
+<td align="left">gppitnp</td>
+</tr>
+<tr>
+<td align="left">104</td>
+<td align="left">acr-nema</td>
+</tr>
+<tr>
+<td align="left">109</td>
+<td align="left">pop2</td>
+</tr>
+<tr>
+<td align="left">110</td>
+<td align="left">pop3</td>
+</tr>
+<tr>
+<td align="left">111</td>
+<td align="left">sunrpc</td>
+</tr>
+<tr>
+<td align="left">113</td>
+<td align="left">auth</td>
+</tr>
+<tr>
+<td align="left">115</td>
+<td align="left">sftp</td>
+</tr>
+<tr>
+<td align="left">117</td>
+<td align="left">uucp-path</td>
+</tr>
+<tr>
+<td align="left">119</td>
+<td align="left">nntp</td>
+</tr>
+<tr>
+<td align="left">123</td>
+<td align="left">NTP</td>
+</tr>
+<tr>
+<td align="left">135</td>
+<td align="left">loc-srv /epmap</td>
+</tr>
+<tr>
+<td align="left">139</td>
+<td align="left">netbios</td>
+</tr>
+<tr>
+<td align="left">143</td>
+<td align="left">imap2</td>
+</tr>
+<tr>
+<td align="left">179</td>
+<td align="left">BGP</td>
+</tr>
+<tr>
+<td align="left">389</td>
+<td align="left">ldap</td>
+</tr>
+<tr>
+<td align="left">465</td>
+<td align="left">smtp+ssl</td>
+</tr>
+<tr>
+<td align="left">512</td>
+<td align="left">print / exec</td>
+</tr>
+<tr>
+<td align="left">513</td>
+<td align="left">login</td>
+</tr>
+<tr>
+<td align="left">514</td>
+<td align="left">shell</td>
+</tr>
+<tr>
+<td align="left">515</td>
+<td align="left">printer</td>
+</tr>
+<tr>
+<td align="left">526</td>
+<td align="left">tempo</td>
+</tr>
+<tr>
+<td align="left">530</td>
+<td align="left">courier</td>
+</tr>
+<tr>
+<td align="left">531</td>
+<td align="left">chat</td>
+</tr>
+<tr>
+<td align="left">532</td>
+<td align="left">netnews</td>
+</tr>
+<tr>
+<td align="left">540</td>
+<td align="left">uucp</td>
+</tr>
+<tr>
+<td align="left">556</td>
+<td align="left">remotefs</td>
+</tr>
+<tr>
+<td align="left">563</td>
+<td align="left">nntp+ssl</td>
+</tr>
+<tr>
+<td align="left">587</td>
+<td align="left">stmp?</td>
+</tr>
+<tr>
+<td align="left">601</td>
+<td align="left">??</td>
+</tr>
+<tr>
+<td align="left">636</td>
+<td align="left">ldap+ssl</td>
+</tr>
+<tr>
+<td align="left">993</td>
+<td align="left">ldap+ssl</td>
+</tr>
+<tr>
+<td align="left">995</td>
+<td align="left">pop3+ssl</td>
+</tr>
+<tr>
+<td align="left">2049</td>
+<td align="left">nfs</td>
+</tr>
+<tr>
+<td align="left">3659</td>
+<td align="left">apple-sasl / PasswordServer</td>
+</tr>
+<tr>
+<td align="left">4045</td>
+<td align="left">lockd</td>
+</tr>
+<tr>
+<td align="left">6000</td>
+<td align="left">X11</td>
+</tr>
+<tr>
+<td align="left">6665</td>
+<td align="left">Alternate IRC [Apple addition]</td>
+</tr>
+<tr>
+<td align="left">6666</td>
+<td align="left">Alternate IRC [Apple addition]</td>
+</tr>
+<tr>
+<td align="left">6667</td>
+<td align="left">Standard IRC [Apple addition]</td>
+</tr>
+<tr>
+<td align="left">6668</td>
+<td align="left">Alternate IRC [Apple addition]</td>
+</tr>
+<tr>
+<td align="left">6669</td>
+<td align="left">Alternate IRC [Apple addition]</td>
+</tr>
+</tbody></table>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>修改端口号，避免使用上表的端口号</p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
         <tag>Docker</tag>
       </tags>
   </entry>
