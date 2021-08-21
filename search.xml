@@ -1721,7 +1721,10 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=8889/tcp</span><br></pre></td></tr></table></figure>
 
 <p>列出所有开放的端口</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure>
+
+<h3 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h3><p>查看1.txt的内容（不进入文件）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat 1.txt</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
@@ -12158,6 +12161,8 @@
 <p>强制删除，即使镜像正在运行也可以删除</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker rmi -f 镜像名称:版本号</span><br></pre></td></tr></table></figure>
 
+<h4 id="查看元数据"><a href="#查看元数据" class="headerlink" title="查看元数据"></a>查看元数据</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect 镜像id</span><br></pre></td></tr></table></figure>
+
 <h3 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h3><h4 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h4><p>普通方式创建容器：创建容器（容器为<font color="#dd0000">停止</font>状态）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name 自定义名称 镜像id</span><br></pre></td></tr></table></figure>
 
@@ -12236,7 +12241,9 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 需要拷贝的文件或者目录 容器名称:容器目录</span><br></pre></td></tr></table></figure>
 
 <p>容器文件或者目录拷贝到宿主机内</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 容器名称:容器文件或者目录 宿主机目录</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 容器名称:容器文件或者目录 宿主机目录</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看元数据-1"><a href="#查看元数据-1" class="headerlink" title="查看元数据"></a>查看元数据</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect 容器id</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Docker</category>
       </categories>
