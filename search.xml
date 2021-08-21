@@ -12586,4 +12586,48 @@
         <tag>Docker</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker创建Tomcat容器并部署Java项目</title>
+    <url>/301.html</url>
+    <content><![CDATA[<h3 id="创建Tomcat容器"><a href="#创建Tomcat容器" class="headerlink" title="创建Tomcat容器"></a>创建Tomcat容器</h3><p>创建的这个容器只是用来获取文件路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name 自定义名称 -di -p 8080:8080 Tomcat镜像id</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取文件路径"><a href="#获取文件路径" class="headerlink" title="获取文件路径"></a>获取文件路径</h3><p>进入容器的文件夹中</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it Tomcat容器id /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>获取三个文件夹<font color="#dd0000">conf、webapps、logs</font>的文件路径</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20095054.jpg"></p>
+<h3 id="复制文件到宿主机"><a href="#复制文件到宿主机" class="headerlink" title="复制文件到宿主机"></a>复制文件到宿主机</h3><p>复制容器里的 <font color="#dd0000">conf,webapps</font> 到宿主机</p>
+<p>复制 conf</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp  14ae81edec7f:/usr/<span class="built_in">local</span>/tomcat/conf  /home/tomcat/</span><br></pre></td></tr></table></figure>
+
+<p>复制webapps</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp  14ae81edec7f:/usr/<span class="built_in">local</span>/tomcat/webapps  /home/tomcat/</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建新的Tomcat容器"><a href="#创建新的Tomcat容器" class="headerlink" title="创建新的Tomcat容器"></a>创建新的Tomcat容器</h3><p>这个容器是用来部署Java项目的，创建时挂载 <font color="#dd0000">conf、webapps、logs</font> 目录</p>
+<p>在宿主机的 home 目录下新建 tomcat 目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir /home/tomcat</span><br></pre></td></tr></table></figure>
+
+<p>创建容器并挂载目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name 自定义名称 -di -p 80:8080 -v /home/tomcat/conf:/usr/<span class="built_in">local</span>/tomcat/conf -v /home/tomcat/webapps:/usr/<span class="built_in">local</span>/tomcat/webapps -v /home/tomcat/logs:/usr/<span class="built_in">local</span>/tomcat/logs Tomcat镜像id</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传Java项目"><a href="#上传Java项目" class="headerlink" title="上传Java项目"></a>上传Java项目</h3><p>上传到 <font color="#dd0000">/home/tomcat/webapps</font> 目录下，我上传的文件名为：WebTest.war，Docker 的 Tomcat 是热部署的所以会自动部署Java项目，过了一会儿就可以访问这个项目了，访问路径为：<font color="#dd0000">http://虚拟机的ip/WebTest</font></p>
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>修改宿主机的 <font color="#dd0000">/home/tomcat/conf</font> 目录下的 <font color="#dd0000">server.xml</font>，添加以下代码：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;/usr/local/tomcat/webapps/WebTest&quot;</span> <span class="attr">debug</span>=<span class="string">&quot;0&quot;</span> <span class="attr">reloadable</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>添加位置如下图：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20102700.png"></p>
+<p>重启新创建的Tomcat容器，即部署Java项目的容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker restart 容器id</span><br></pre></td></tr></table></figure>
+
+<p>然后访问项目可以不加项目名了，访问路径为：<font color="#dd0000">http://虚拟机的ip</font></p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+        <tag>Java</tag>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
 </search>
