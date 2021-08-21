@@ -12925,4 +12925,35 @@
         <tag>DockerFile</tag>
       </tags>
   </entry>
+  <entry>
+    <title>DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载</title>
+    <url>/308.html</url>
+    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>DockerFile创建镜像时通过VOLUME指令创建几个容器卷，然后创建这个镜像的容器时，这个容器就有了这几个容器卷目录，并与宿主机自动创建的对应目录实现了挂载</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">VOLUME[<span class="string">&#x27;目录1&#x27;</span>,<span class="string">&#x27;目录2&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h4><p>新建一个文件，命名为：myVolumeDockerFile，没有后缀名，内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">VOLUME [<span class="string">&quot;/home/v1&quot;</span>,<span class="string">&quot;/home/v2&quot;</span>]</span><br><span class="line"></span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h4 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker build -f myVolumeDockerFile -t a6678696/mycentos:1.2 .</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040035.jpg"></p>
+<h4 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -it 9123279cfb4f</span><br></pre></td></tr></table></figure>
+
+<h4 id="找到挂载的目录"><a href="#找到挂载的目录" class="headerlink" title="找到挂载的目录"></a>找到挂载的目录</h4><p>①找到容器挂载的容器卷v1，v2</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040322.jpg"></p>
+<p>②找到宿主机挂载的容器卷</p>
+<p>通过inspect命令获取容器的元数据</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect 容器id</span><br></pre></td></tr></table></figure>
+
+<p>找到Mounts节点，Source为宿主机的目录，Destination为容器的目录，两个目录是挂载的</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040846.jpg"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>docker run -v 命令创建挂载目录更好，可以自定义宿主机目录</p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>DockerFile</tag>
+      </tags>
+  </entry>
 </search>
