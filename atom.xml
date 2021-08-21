@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-21T13:14:50.113Z</updated>
+  <updated>2021-08-21T13:16:37.390Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/303.html"/>
     <id>http://example.com/303.html</id>
     <published>2021-08-21T13:01:27.000Z</published>
-    <updated>2021-08-21T13:14:50.113Z</updated>
+    <updated>2021-08-21T13:16:37.390Z</updated>
     
     <content type="html"><![CDATA[<h3 id="备份镜像"><a href="#备份镜像" class="headerlink" title="备份镜像"></a>备份镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o 备份镜像的名称  源镜像名称:tag版本</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20211044.jpg"></p><h3 id="恢复镜像"><a href="#恢复镜像" class="headerlink" title="恢复镜像"></a>恢复镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -i 镜像文件</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20211126.jpg"></p>]]></content>
     
