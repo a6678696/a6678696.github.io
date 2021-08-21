@@ -12673,4 +12673,20 @@
         <tag>Docker</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker备份和恢复镜像</title>
+    <url>/303.html</url>
+    <content><![CDATA[<h3 id="备份镜像"><a href="#备份镜像" class="headerlink" title="备份镜像"></a>备份镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker save -o 备份镜像的名称  源镜像名称:tag版本</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20211044.jpg"></p>
+<h3 id="恢复镜像"><a href="#恢复镜像" class="headerlink" title="恢复镜像"></a>恢复镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker load -i 镜像文件</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20211126.jpg"></p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
 </search>
