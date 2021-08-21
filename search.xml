@@ -12867,7 +12867,15 @@
     <title>DockerFile构建自定义CentOS</title>
     <url>/305.html</url>
     <content><![CDATA[<h3 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h3><p>新建一个文件，命名为：mycentosDockerFile，没有后缀名，内容如下：</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FROM centos</span><br><span class="line">MAINTAINER ledao&lt;f1203007469@gmail.com&gt;</span><br><span class="line"></span><br><span class="line">LABEL name=<span class="string">&quot;LeDao CentOS Image&quot;</span> \</span><br><span class="line">	build-date=<span class="string">&quot;2021-08-21 23:12:11&quot;</span></span><br><span class="line"></span><br><span class="line">ENV WORKPATH /home/</span><br><span class="line">WORKDIR <span class="variable">$WORKPATH</span></span><br><span class="line"></span><br><span class="line">RUN yum -y install net-tools</span><br><span class="line">RUN yum -y install vim</span><br><span class="line"></span><br><span class="line">EXPOSE 80</span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h3><p>命令的最后面有个英文句号.（少了句号不行）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker build -f /home/dockerfile/mycentosDockerFile -t a6678696/mycentos:1.1 .</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20232745.png"></p>
+<h3 id="查看镜像构建历史"><a href="#查看镜像构建历史" class="headerlink" title="查看镜像构建历史"></a>查看镜像构建历史</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">history</span> 镜像id</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20233507.jpg"></p>]]></content>
       <categories>
         <category>Docker</category>
       </categories>
