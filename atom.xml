@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-22T17:44:12.245Z</updated>
+  <updated>2021-08-22T17:44:38.158Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/310.html"/>
     <id>http://example.com/310.html</id>
     <published>2021-08-22T17:05:56.000Z</published>
-    <updated>2021-08-22T17:44:12.245Z</updated>
+    <updated>2021-08-22T17:44:38.158Z</updated>
     
     <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>父镜像在被子镜像继承后父镜像的ONBUILD被触发，可以把ONBUID理解为一个触发器。编写Dockerfile的时候，其他命令都是为了自身镜像服务的，只有ONBUILD是为了子镜像服务</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="构建父镜像"><a href="#构建父镜像" class="headerlink" title="构建父镜像"></a>构建父镜像</h4><p>编写父镜像DockerFile，命名为：parent_df，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">ONBUILD RUN yum -y install vim</span><br><span class="line"></span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure><p>构建父镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f parent_df -t parent .</span><br></pre></td></tr></table></figure><h4 id="构建子镜像"><a href="#构建子镜像" class="headerlink" title="构建子镜像"></a>构建子镜像</h4><p>编写子镜像DockerFile，命名为：son_df，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM parent</span><br></pre></td></tr></table></figure><p>构建子镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> docker build -f son_df -t son .</span><br></pre></td></tr></table></figure><h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>当构建子镜像的时候，父镜像的ONBUILD会触发，子镜像直接安装vim，父镜像是没有安装vim的。所以使用父镜像创建的容器使用vim命令会报错，而用子镜像创建的容器可以使用vim命令</p>]]></content>
     
