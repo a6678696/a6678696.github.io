@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-22T16:15:55.516Z</updated>
+  <updated>2021-08-22T17:44:12.245Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>DockerFile中CMD, ENTRYPOINT的区别与联系</title>
+    <title>DockerFile的ONBUILD指令</title>
+    <link href="http://example.com/310.html"/>
+    <id>http://example.com/310.html</id>
+    <published>2021-08-22T17:05:56.000Z</published>
+    <updated>2021-08-22T17:44:12.245Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>父镜像在被子镜像继承后父镜像的ONBUILD被触发，可以把ONBUID理解为一个触发器。编写Dockerfile的时候，其他命令都是为了自身镜像服务的，只有ONBUILD是为了子镜像服务</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="构建父镜像"><a href="#构建父镜像" class="headerlink" title="构建父镜像"></a>构建父镜像</h4><p>编写父镜像DockerFile，命名为：parent_df，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">ONBUILD RUN yum -y install vim</span><br><span class="line"></span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure><p>构建父镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f parent_df -t parent .</span><br></pre></td></tr></table></figure><h4 id="构建子镜像"><a href="#构建子镜像" class="headerlink" title="构建子镜像"></a>构建子镜像</h4><p>编写子镜像DockerFile，命名为：son_df，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM parent</span><br></pre></td></tr></table></figure><p>构建子镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> docker build -f son_df -t son .</span><br></pre></td></tr></table></figure><h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>当构建子镜像的时候，父镜像的ONBUILD会触发，子镜像直接安装vim，父镜像是没有安装vim的。所以使用父镜像创建的容器使用vim命令会报错，而用子镜像创建的容器可以使用vim命令</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/4.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
+    
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+    <category term="DockerFile" scheme="http://example.com/tags/DockerFile/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DockerFile的CMD, ENTRYPOINT指令</title>
     <link href="http://example.com/309.html"/>
     <id>http://example.com/309.html</id>
     <published>2021-08-22T15:33:20.000Z</published>
-    <updated>2021-08-22T16:15:55.516Z</updated>
+    <updated>2021-08-22T17:01:35.103Z</updated>
     
     <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>CMD，ENTRYPOINT都是容器启动的时候，执行执行命令，都支持exec和shell方式</p><p>一般用法有两种：①单独一个CMD②先使用ENTRYPOINT（用于执行命令），然后结合CMD使用（用于追加参数）</p><p>有多个CMD时，只有最后一个CMD生效</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>一般开发和Docker官方都建议用 exec格式</p><h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h4><p>第一种用法：运行一个可执行的文件并提供参数</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD [<span class="string">&quot;executable&quot;</span>,<span class="string">&quot;param1&quot;</span>,<span class="string">&quot;param2&quot;</span>]</span><br></pre></td></tr></table></figure><p>第二种用法：为ENTRYPOINT指定参数</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD [<span class="string">&quot;param1&quot;</span>,<span class="string">&quot;param2&quot;</span>] </span><br></pre></td></tr></table></figure><p>第三种用法(shell格式)：是以”/bin/sh -c”的方法执行的命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD <span class="built_in">command</span> param1 param2</span><br></pre></td></tr></table></figure><h4 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h4><p> exec 格式, 推荐</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT [“executable”, “param1”, “param2”]</span><br></pre></td></tr></table></figure><p> shell 格式</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT <span class="built_in">command</span> param1 param2</span><br></pre></td></tr></table></figure><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="单个CMD"><a href="#单个CMD" class="headerlink" title="单个CMD"></a>单个CMD</h4><p>编写DockerFile，命名为df1，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">CMD <span class="built_in">echo</span> <span class="string">&quot;第一个CMD&quot;</span></span><br></pre></td></tr></table></figure><p>构建镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f df1 -t a6678696/df:1.1 .</span><br></pre></td></tr></table></figure><p>创建和运行该镜像的容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run 镜像id</span><br></pre></td></tr></table></figure><p>结果如下图</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20000826.jpg"></p><h4 id="多个CMD"><a href="#多个CMD" class="headerlink" title="多个CMD"></a>多个CMD</h4><p>编写DockerFile，命名为df2，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">CMD <span class="built_in">echo</span> <span class="string">&quot;第一个CMD&quot;</span></span><br><span class="line">CMD <span class="built_in">echo</span> <span class="string">&quot;第二个CMD&quot;</span></span><br></pre></td></tr></table></figure><p>构建镜像</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker</span> build -f df<span class="number">2</span> -t a<span class="number">6678696</span>/df:<span class="number">1</span>.<span class="number">2</span> .</span><br></pre></td></tr></table></figure><p>创建和运行该镜像的容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run 镜像id</span><br></pre></td></tr></table></figure><p>结果如下图，第一个CMD命令没有生效，生效的是最后一个CMD</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20000929.jpg"></p><h4 id="先ENTRYPOINT后CMD"><a href="#先ENTRYPOINT后CMD" class="headerlink" title="先ENTRYPOINT后CMD"></a>先ENTRYPOINT后CMD</h4><p>编写DockerFile，命名为df3，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">ENTRYPOINT [<span class="string">&quot;ls&quot;</span>]</span><br><span class="line"></span><br><span class="line">CMD [<span class="string">&quot;-l&quot;</span>]</span><br></pre></td></tr></table></figure><p>构建镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f df3 -t a6678696/df:1.3 .</span><br></pre></td></tr></table></figure><p>创建和运行该镜像的容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run 镜像id</span><br></pre></td></tr></table></figure><p>结果如下图，以ls -l格式查看文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20001442.png"></p>]]></content>
     
@@ -432,29 +455,6 @@
     
     <category term="Docker" scheme="http://example.com/categories/Docker/"/>
     
-    
-    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7安装Docker</title>
-    <link href="http://example.com/290.html"/>
-    <id>http://example.com/290.html</id>
-    <published>2021-08-19T10:33:56.000Z</published>
-    <updated>2021-08-19T15:00:05.069Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="登录身份"><a href="#登录身份" class="headerlink" title="登录身份"></a>登录身份</h3><p>使用root身份登录，一般默认都是用root身份</p><h3 id="查看系统内核"><a href="#查看系统内核" class="headerlink" title="查看系统内核"></a>查看系统内核</h3><p>Docker要求CentOS系统的内核版本高于3.10，安装前先查看自己的CentOS系统能否安装Docker</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uname -r</span><br></pre></td></tr></table></figure><h3 id="更新yum包"><a href="#更新yum包" class="headerlink" title="更新yum包"></a>更新yum包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br></pre></td></tr></table></figure><h3 id="卸载旧版本"><a href="#卸载旧版本" class="headerlink" title="卸载旧版本"></a>卸载旧版本</h3><p>如果安装过旧版本的话，没有就跳过此步骤</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove docker  docker-common docker-selinux docker-engine</span><br></pre></td></tr></table></figure><h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><p>安装需要的软件包，yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure><h3 id="设置yum源"><a href="#设置yum源" class="headerlink" title="设置yum源"></a>设置yum源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure><h3 id="安装新版本"><a href="#安装新版本" class="headerlink" title="安装新版本"></a>安装新版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure><h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure><h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure><h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><p>看到版本号说明安装成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h4 id="安装hello-world镜像"><a href="#安装hello-world镜像" class="headerlink" title="安装hello-world镜像"></a>安装hello-world镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull hello-world</span><br></pre></td></tr></table></figure><h4 id="创建hello-world的一个容器并启动"><a href="#创建hello-world的一个容器并启动" class="headerlink" title="创建hello-world的一个容器并启动"></a>创建hello-world的一个容器并启动</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run hello-world</span><br></pre></td></tr></table></figure><p>看到<font color="#dd0000">Hello from Docker!</font>，说明容器启动成功</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/25.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
-    
-    
-    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
     
     <category term="Docker" scheme="http://example.com/tags/Docker/"/>
     
