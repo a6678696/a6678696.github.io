@@ -13140,7 +13140,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Windoxs10释放被占用端口</title>
+    <title>Windows10释放被占用端口</title>
     <url>/314.html</url>
     <content><![CDATA[<h3 id="查看PID"><a href="#查看PID" class="headerlink" title="查看PID"></a>查看PID</h3><p>打开CMD，输入命令查看端口4000的PID</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;端口号&quot;</span></span><br></pre></td></tr></table></figure>
@@ -13159,10 +13159,10 @@
 <p>右键点击并选择结束任务</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044745.jpg"></p>]]></content>
       <categories>
-        <category>Windoxs10</category>
+        <category>Windows10</category>
       </categories>
       <tags>
-        <tag>Windoxs10</tag>
+        <tag>Windows10</tag>
       </tags>
   </entry>
 </search>

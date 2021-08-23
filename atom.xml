@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-23T20:51:50.670Z</updated>
+  <updated>2021-08-23T20:53:38.614Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Windoxs10释放被占用端口</title>
+    <title>Windows10释放被占用端口</title>
     <link href="http://example.com/314.html"/>
     <id>http://example.com/314.html</id>
     <published>2021-08-23T20:17:09.000Z</published>
-    <updated>2021-08-23T20:51:50.670Z</updated>
+    <updated>2021-08-23T20:53:38.614Z</updated>
     
     <content type="html"><![CDATA[<h3 id="查看PID"><a href="#查看PID" class="headerlink" title="查看PID"></a>查看PID</h3><p>打开CMD，输入命令查看端口4000的PID</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;端口号&quot;</span></span><br></pre></td></tr></table></figure><p>看下图的0.0.0.0:4000，LISTENING后的数值就是PID</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044304.png"></p><h3 id="释放端口"><a href="#释放端口" class="headerlink" title="释放端口"></a>释放端口</h3><h4 id="CMD方式释放"><a href="#CMD方式释放" class="headerlink" title="CMD方式释放"></a>CMD方式释放</h4><p>输入以下命令，PID为上图LISTENING后的数值</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /T /F /PID PID</span><br></pre></td></tr></table></figure><h4 id="任务管理器释放"><a href="#任务管理器释放" class="headerlink" title="任务管理器释放"></a>任务管理器释放</h4><p>查看指定 PID 的进程（也可以不看，记住PID即可）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tasklist|findstr <span class="string">&quot;PID&quot;</span></span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044328.png"></p><p>打开任务管理，选择详细信息选项，根据进程名称或者PID找到进程</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044726.jpg"></p><p>右键点击并选择结束任务</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044745.jpg"></p>]]></content>
     
@@ -30,10 +30,10 @@
     
     
     
-    <category term="Windoxs10" scheme="http://example.com/categories/Windoxs10/"/>
+    <category term="Windows10" scheme="http://example.com/categories/Windows10/"/>
     
     
-    <category term="Windoxs10" scheme="http://example.com/tags/Windoxs10/"/>
+    <category term="Windows10" scheme="http://example.com/tags/Windows10/"/>
     
   </entry>
   
