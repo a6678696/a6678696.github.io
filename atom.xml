@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-23T20:53:38.614Z</updated>
+  <updated>2021-08-24T01:12:19.733Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>form表单无法提交input disabled内容</title>
+    <link href="http://example.com/315.html"/>
+    <id>http://example.com/315.html</id>
+    <published>2021-08-24T01:06:16.000Z</published>
+    <updated>2021-08-24T01:12:19.733Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用了disable属性让文本框无法编辑，但是提交form表单时无法获取该文本框的值，代码如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/student/update&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center;margin-top: 10%&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;student.id&#125;&quot;</span> <span class="attr">name</span>=<span class="string">&quot;id&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;编号&quot;</span> <span class="attr">required</span>=<span class="string">&quot;required&quot;</span> <span class="attr">disabled</span>=<span class="string">&quot;disabled&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;student.name&#125;&quot;</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">required</span>=<span class="string">&quot;required&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;student.age&#125;&quot;</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;年龄&quot;</span> <span class="attr">required</span>=<span class="string">&quot;required&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span>修改<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>disabled=”disabled”修改为readonly=”readonly”即可</p><h3 id="readonly和disabled的区别"><a href="#readonly和disabled的区别" class="headerlink" title="readonly和disabled的区别"></a>readonly和disabled的区别</h3><p>readonly：针对input(text / password)和textarea有效，在设置为true的情况下，用户可以获得焦点，但是不能编辑，在提交表单时，输入项会作为form的内容提交</p><p>disabled：针对所有表单元素（select，button，input，textarea等），在设置为disabled为true的情况下，表单输入项不能获得焦点，用户的所有操作无意义，在提交表单时，表单输入项不会被提交。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/56.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows10释放被占用端口</title>
@@ -429,27 +450,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/83.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
-    
-    
-    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker映射端口6666时无法访问</title>
-    <link href="http://example.com/295.html"/>
-    <id>http://example.com/295.html</id>
-    <published>2021-08-20T04:36:03.000Z</published>
-    <updated>2021-08-20T04:57:34.200Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在创建Docker的Tomcat容器时使用了端口映射，我映射的端口号是6666，外部使用谷歌浏览器却无法访问</p><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>6666端口使用谷歌浏览器、火狐浏览器、新版Edge浏览器是无法访问的，被我们遗忘的IE浏览器却可以访问！！</p><p>上述浏览器我都亲自验证过，其它浏览器不清楚情况</p><p>更多无法访问的端口号如下：</p><table><thead><tr><th align="left">端口</th><th align="left">原因</th></tr></thead><tbody><tr><td align="left">1</td><td align="left">tcpmux</td></tr><tr><td align="left">7</td><td align="left">echo</td></tr><tr><td align="left">9</td><td align="left">discard</td></tr><tr><td align="left">11</td><td align="left">systat</td></tr><tr><td align="left">13</td><td align="left">daytime</td></tr><tr><td align="left">15</td><td align="left">netstat</td></tr><tr><td align="left">17</td><td align="left">qotd</td></tr><tr><td align="left">19</td><td align="left">chargen</td></tr><tr><td align="left">20</td><td align="left">ftp data</td></tr><tr><td align="left">21</td><td align="left">ftp access</td></tr><tr><td align="left">22</td><td align="left">ssh</td></tr><tr><td align="left">23</td><td align="left">telnet</td></tr><tr><td align="left">25</td><td align="left">smtp</td></tr><tr><td align="left">37</td><td align="left">time</td></tr><tr><td align="left">42</td><td align="left">name</td></tr><tr><td align="left">43</td><td align="left">nicname</td></tr><tr><td align="left">53</td><td align="left">domain</td></tr><tr><td align="left">77</td><td align="left">priv-rjs</td></tr><tr><td align="left">79</td><td align="left">finger</td></tr><tr><td align="left">87</td><td align="left">ttylink</td></tr><tr><td align="left">95</td><td align="left">supdup</td></tr><tr><td align="left">101</td><td align="left">hostriame</td></tr><tr><td align="left">102</td><td align="left">iso-tsap</td></tr><tr><td align="left">103</td><td align="left">gppitnp</td></tr><tr><td align="left">104</td><td align="left">acr-nema</td></tr><tr><td align="left">109</td><td align="left">pop2</td></tr><tr><td align="left">110</td><td align="left">pop3</td></tr><tr><td align="left">111</td><td align="left">sunrpc</td></tr><tr><td align="left">113</td><td align="left">auth</td></tr><tr><td align="left">115</td><td align="left">sftp</td></tr><tr><td align="left">117</td><td align="left">uucp-path</td></tr><tr><td align="left">119</td><td align="left">nntp</td></tr><tr><td align="left">123</td><td align="left">NTP</td></tr><tr><td align="left">135</td><td align="left">loc-srv /epmap</td></tr><tr><td align="left">139</td><td align="left">netbios</td></tr><tr><td align="left">143</td><td align="left">imap2</td></tr><tr><td align="left">179</td><td align="left">BGP</td></tr><tr><td align="left">389</td><td align="left">ldap</td></tr><tr><td align="left">465</td><td align="left">smtp+ssl</td></tr><tr><td align="left">512</td><td align="left">print / exec</td></tr><tr><td align="left">513</td><td align="left">login</td></tr><tr><td align="left">514</td><td align="left">shell</td></tr><tr><td align="left">515</td><td align="left">printer</td></tr><tr><td align="left">526</td><td align="left">tempo</td></tr><tr><td align="left">530</td><td align="left">courier</td></tr><tr><td align="left">531</td><td align="left">chat</td></tr><tr><td align="left">532</td><td align="left">netnews</td></tr><tr><td align="left">540</td><td align="left">uucp</td></tr><tr><td align="left">556</td><td align="left">remotefs</td></tr><tr><td align="left">563</td><td align="left">nntp+ssl</td></tr><tr><td align="left">587</td><td align="left">stmp?</td></tr><tr><td align="left">601</td><td align="left">??</td></tr><tr><td align="left">636</td><td align="left">ldap+ssl</td></tr><tr><td align="left">993</td><td align="left">ldap+ssl</td></tr><tr><td align="left">995</td><td align="left">pop3+ssl</td></tr><tr><td align="left">2049</td><td align="left">nfs</td></tr><tr><td align="left">3659</td><td align="left">apple-sasl / PasswordServer</td></tr><tr><td align="left">4045</td><td align="left">lockd</td></tr><tr><td align="left">6000</td><td align="left">X11</td></tr><tr><td align="left">6665</td><td align="left">Alternate IRC [Apple addition]</td></tr><tr><td align="left">6666</td><td align="left">Alternate IRC [Apple addition]</td></tr><tr><td align="left">6667</td><td align="left">Standard IRC [Apple addition]</td></tr><tr><td align="left">6668</td><td align="left">Alternate IRC [Apple addition]</td></tr><tr><td align="left">6669</td><td align="left">Alternate IRC [Apple addition]</td></tr></tbody></table><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>修改端口号，避免使用上表的端口号</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/77.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
