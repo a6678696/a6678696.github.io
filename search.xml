@@ -13283,9 +13283,9 @@
 <h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>浏览器地址栏输入：虚拟机IP或者与它绑定的本机域名，不断刷新页面，有时候请求的是tomcat1，有时候是tomcat2，如果停掉tomcat2那么就只请求tomcat1</p>]]></content>
       <categories>
         <category>Nginx</category>
-        <category>Tomcat</category>
       </categories>
       <tags>
+        <tag>Tomcat</tag>
         <tag>Nginx</tag>
       </tags>
   </entry>
