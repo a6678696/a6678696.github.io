@@ -13324,7 +13324,7 @@
 
 <h3 id="least-conn"><a href="#least-conn" class="headerlink" title="least_conn"></a>least_conn</h3><p>web请求会被分发到连接数最少的服务器上</p>
 <p>实例：</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line">	least_conn;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.2</span>:<span class="number">8080</span>;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.3</span>:<span class="number">9090</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line">	 least_conn;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.2</span>:<span class="number">8080</span>;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.3</span>:<span class="number">9090</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Nginx</category>
       </categories>
