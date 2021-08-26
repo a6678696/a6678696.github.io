@@ -6241,6 +6241,27 @@
 <p>端口映射，可以通过：<a href="http://192.168.0.140:8888/">http://192.168.0.140:8888/</a> 访问</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name 自定义名称 -d -p 8888:8080 镜像id</span><br></pre></td></tr></table></figure>
 
+<p>参数：</p>
+<ul>
+<li><strong>-a stdin:</strong> 指定标准输入输出内容类型，可选 STDIN/STDOUT/STDERR 三项；</li>
+<li><strong>-d:</strong> 后台运行容器，并返回容器ID；</li>
+<li><strong>-i:</strong> 以交互模式运行容器，通常与 -t 同时使用；</li>
+<li><strong>-P:</strong> 随机端口映射，容器内部端口<strong>随机</strong>映射到主机的端口</li>
+<li><strong>-p:</strong> 指定端口映射，格式为：<strong>主机(宿主)端口:容器端口</strong></li>
+<li><strong>-t:</strong> 为容器重新分配一个伪输入终端，通常与 -i 同时使用；</li>
+<li><strong>–name=”nginx-lb”:</strong> 为容器指定一个名称；</li>
+<li><strong>–dns 8.8.8.8:</strong> 指定容器使用的DNS服务器，默认和宿主一致；</li>
+<li><strong>–dns-search example.com:</strong> 指定容器DNS搜索域名，默认和宿主一致；</li>
+<li><strong>-h “mars”:</strong> 指定容器的hostname；</li>
+<li><strong>-e username=”ritchie”:</strong> 设置环境变量；</li>
+<li><strong>–env-file=[]:</strong> 从指定文件读入环境变量；</li>
+<li><strong>–cpuset=”0-2” or –cpuset=”0,1,2”:</strong> 绑定容器到指定CPU运行；</li>
+<li>**-m :**设置容器使用内存最大值；</li>
+<li><strong>–net=”bridge”:</strong> 指定容器的网络连接类型，支持 bridge/host/none/container: 四种类型；</li>
+<li><strong>–link=[]:</strong> 添加链接到另一个容器；</li>
+<li><strong>–expose=[]:</strong> 开放一个端口或一组端口；</li>
+<li><strong>–volume , -v:</strong> 绑定一个卷</li>
+</ul>
 <h4 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h4><p>容器停止并退出，命令为：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
@@ -6295,6 +6316,12 @@
 <p>删除所有容器</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker rm -f $(docker ps -qa)</span><br></pre></td></tr></table></figure>
 
+<p>参数：</p>
+<ul>
+<li>**-f :**通过 SIGKILL 信号强制删除一个运行中的容器。</li>
+<li>**-l :**移除容器间的网络连接，而非容器本身。</li>
+<li>**-v :**删除与容器关联的卷。</li>
+</ul>
 <h4 id="执行容器命令"><a href="#执行容器命令" class="headerlink" title="执行容器命令"></a>执行容器命令</h4><p>不进入容器并执行容器的命令，例子：<font color="#dd0000">docker exec 0f4c269bb2cf ls -l /sys/</font>，本例子的容器为CentOS系统</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it 容器id 容器的可执行命令</span><br></pre></td></tr></table></figure>
 
@@ -13179,6 +13206,24 @@
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker安装Nginx</title>
+    <url>/316.html</url>
+    <content><![CDATA[<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建并运行容器"><a href="#创建并运行容器" class="headerlink" title="创建并运行容器"></a>创建并运行容器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -v /home/data/nginx:/etc/nginx -p 80:80 nginx镜像id</span><br></pre></td></tr></table></figure>
+
+<h3 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it nginx容器id bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入<font color="#dd0000">虚拟机IP</font>，看到<mark class="hl-label blue">Welcome to nginx!</mark> 说明安装成功</p>]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>Nginx</tag>
       </tags>
   </entry>
 </search>

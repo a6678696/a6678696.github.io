@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-24T01:13:28.050Z</updated>
+  <updated>2021-08-26T13:37:04.170Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker安装Nginx</title>
+    <link href="http://example.com/316.html"/>
+    <id>http://example.com/316.html</id>
+    <published>2021-08-26T13:14:31.000Z</published>
+    <updated>2021-08-26T13:37:04.170Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nginx</span><br></pre></td></tr></table></figure><h3 id="创建并运行容器"><a href="#创建并运行容器" class="headerlink" title="创建并运行容器"></a>创建并运行容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -v /home/data/nginx:/etc/nginx -p 80:80 nginx镜像id</span><br></pre></td></tr></table></figure><h3 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it nginx容器id bash</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入<font color="#dd0000">虚拟机IP</font>，看到<mark class="hl-label blue">Welcome to nginx!</mark> 说明安装成功</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/68.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Nginx" scheme="http://example.com/categories/Nginx/"/>
+    
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>form表单无法提交input disabled内容</title>
@@ -429,27 +452,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/99.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
-    
-    
-    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker提交运行时容器为镜像</title>
-    <link href="http://example.com/296.html"/>
-    <id>http://example.com/296.html</id>
-    <published>2021-08-20T07:06:21.000Z</published>
-    <updated>2021-08-20T13:08:36.971Z</updated>
-    
-    <content type="html"><![CDATA[<p>命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit -a=<span class="string">&#x27;作者&#x27;</span> -m=<span class="string">&#x27;备注&#x27;</span> 运行时容器ID Docker用户名/新镜像名称:版本号</span><br></pre></td></tr></table></figure><p>下图中划红线的镜像就是刚刚提交的镜像</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20150855.jpg"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/83.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
