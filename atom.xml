@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-26T13:37:04.170Z</updated>
+  <updated>2021-08-26T16:14:57.627Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx实现反向代理</title>
+    <link href="http://example.com/317.html"/>
+    <id>http://example.com/317.html</id>
+    <published>2021-08-26T15:00:29.000Z</published>
+    <updated>2021-08-26T16:14:57.627Z</updated>
+    
+    <content type="html"><![CDATA[<p>本博客主要实现访问Nginx时，代理请求Tomcat服务器</p><h3 id="启动Nginx"><a href="#启动Nginx" class="headerlink" title="启动Nginx"></a>启动Nginx</h3><p>创建并启动Nginx容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -v /home/data/nginx:/etc/nginx -p 80:80 nginx镜像id</span><br></pre></td></tr></table></figure><h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>创建并启动Tomcat容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -p 8080:8080 tomcat镜像id</span><br></pre></td></tr></table></figure><p>查看Docker给Tomcat容器分配的IP</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect Tomcat容器id</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-27%20000102.png"></p><h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>在宿主机 <font color="#dd0000">/home/data/nginx/conf.d</font> 目录下修改 <mark class="hl-label blue">default.conf</mark>  文件（下面的IP为Docker给Tomcat容器分配的IP）</p><p>location / { }中添加：<mark class="hl-label blue">proxy_pass  http://172.17.0.3:8080;</mark> </p><p>server_name修改为：<mark class="hl-label blue">http://172.17.0.3:8080</mark> （server_name内容随意，主要是用于区分）</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-26%20235921.png"></p><h3 id="添加本地域名"><a href="#添加本地域名" class="headerlink" title="添加本地域名"></a>添加本地域名</h3><p>找到 C:\Windows\System32\drivers\etc 打开hosts，底部加配置：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">虚拟机IP www.<span class="number">123</span>.com</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入：<a href="http://www.123.com/">www.123.com</a> （也可以输入虚拟机IP）访问Nginx时，通过代理请求了Tomcat服务器</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/72.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Nginx" scheme="http://example.com/categories/Nginx/"/>
+    
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker安装Nginx</title>
@@ -431,27 +452,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/103.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
-    
-    
-    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker推送镜像到hub服务器</title>
-    <link href="http://example.com/297.html"/>
-    <id>http://example.com/297.html</id>
-    <published>2021-08-20T12:56:12.000Z</published>
-    <updated>2021-08-20T16:26:29.792Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="注册Docker账号"><a href="#注册Docker账号" class="headerlink" title="注册Docker账号"></a>注册Docker账号</h3><p>在Docker的hub官网注册，官网地址为：<a href="https://hub.docker.com/">https://hub.docker.com/</a> ，注册后记住用户名和密码</p><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>输入登录命令，在输入自己的用户名和密码即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login</span><br></pre></td></tr></table></figure><h3 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h3><p>推送命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push Docker用户名/新镜像名称:版本号</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20211111.jpg"></p><h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>在Docker的hub官网登录后即可看到刚刚推送的镜像</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20212908.jpg"></p><h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><p>查看镜像时有个拉取命令,如下图所示</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20002354.jpg"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/99.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
