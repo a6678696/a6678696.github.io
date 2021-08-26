@@ -13290,7 +13290,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx负载均衡backup和down</title>
+    <title>Nginx负载均衡backup和down配置</title>
     <url>/320.html</url>
     <content><![CDATA[<p>这两个配置很多时候用于运维，维护某个机器的时候用</p>
 <h3 id="backup"><a href="#backup" class="headerlink" title="backup"></a>backup</h3><p>其他非backup机器挂掉后，才会请求backup机器</p>
@@ -13298,7 +13298,7 @@
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.2</span>:<span class="number">8080</span>;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.3</span>:<span class="number">9090</span> backup;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="down"><a href="#down" class="headerlink" title="down"></a>down</h3><p>配置down的服务器不参与负载均衡，</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.2</span>:<span class="number">8080</span>;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.3</span>:<span class="number">9090</span> d;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.2</span>:<span class="number">8080</span>;</span><br><span class="line">     server <span class="number">172.17</span>.<span class="number">0.3</span>:<span class="number">9090</span> down;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Nginx</category>
       </categories>
