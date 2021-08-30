@@ -13450,4 +13450,31 @@
         <tag>Nginx</tag>
       </tags>
   </entry>
+  <entry>
+    <title>CentOS7安装Keepalived</title>
+    <url>/324.html</url>
+    <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install keepalived</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>启动</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start keepalived.service</span><br></pre></td></tr></table></figure>
+
+<p>关闭</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop keepalived.service</span><br></pre></td></tr></table></figure>
+
+<p>重启</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart keepalived.service</span><br></pre></td></tr></table></figure>
+
+<p>查看日志</p>
+<p>tail -f /var/log/messages</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>配置文件在/etc/keepalived目录下，名称为：keepalived.conf</p>
+<p>日志文件在/var/log目录下，名称为：messages</p>]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+        <tag>Nginx</tag>
+        <tag>Keepalived</tag>
+      </tags>
+  </entry>
 </search>
