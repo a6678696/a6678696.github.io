@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-01T05:57:46.003Z</updated>
+  <updated>2021-09-01T17:31:47.167Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Keepalived+Nginx+Tomcat负载均衡</title>
+    <link href="http://example.com/330.html"/>
+    <id>http://example.com/330.html</id>
+    <published>2021-09-01T12:41:02.000Z</published>
+    <updated>2021-09-01T17:31:47.167Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>主机和备用机分别使用Docker启动一个Tomcat，版本号最好不同，启动成功后有可能通过外部浏览器无法访问，解决方法查看博客：<a href="https://blog.zoutl.cn/294.html">Docker启动Tomcat成功后外部却无法访问</a></p><h3 id="修改Nginx配置"><a href="#修改Nginx配置" class="headerlink" title="修改Nginx配置"></a>修改Nginx配置</h3><p>修改主机和备用机的Nginx配置，修改内容一样</p><p>修改nginx.conf配置文件（在/etc/nginx目录下），在include /etc/nginx/conf.d/*.conf上方加上：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line"> server <span class="number">192.168</span>.<span class="number">0.106</span>:<span class="number">8080</span> weight=<span class="number">5</span>;</span><br><span class="line"> server <span class="number">192.168</span>.<span class="number">0.107</span>:<span class="number">8080</span> weight=<span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>修改default.conf配置文件（在/etc/nginx/conf.d目录下），在location /节点加上：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxy_pass  http://www.<span class="number">123</span>.com;</span><br></pre></td></tr></table></figure><p>server_name可以修改成 <a href="http://www.123.com/">www.123.com</a> ，也可以不修改</p><h3 id="重启Nginx"><a href="#重启Nginx" class="headerlink" title="重启Nginx"></a>重启Nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址输入：<a href="http://192.168.0.106/">http://192.168.0.106/</a>或者<a href="http://192.168.0.107/">http://192.168.0.107/</a></p><p>不断刷新页面，访问了主机和备用机的Tomcat，此时Nginx+Tomcat负载均衡完成</p><p>如果出现错误：502 Bad Gateway，这是因为Nginx 主机的 SELinux 服务限制了其（即 Nginx）使用 http 访问权限引起的，输入以下命令即可解决此问题，如果不生效再重启Nginx</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setsebool -P httpd_can_network_connect 1    <span class="comment"># “1”为开启，“0”为关闭</span></span><br></pre></td></tr></table></figure><p>打开Keepalived服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start keepalived</span><br></pre></td></tr></table></figure><p>浏览器地址输入Keepalived配置的virtual_ipaddress，该配置文件在/etc/keepalived目录下，此时已经完成了Keepalived+Nginx+Tomcat负载均衡</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/47.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Nginx" scheme="http://example.com/categories/Nginx/"/>
+    
+    
+    <category term="Tomcat" scheme="http://example.com/tags/Tomcat/"/>
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    
+    <category term="Keepalived" scheme="http://example.com/tags/Keepalived/"/>
+    
+  </entry>
   
   <entry>
     <title>通过shell脚本优化Keepalived+Nginx高可用集群</title>
@@ -432,29 +457,6 @@
     
     
     <category term="Docker" scheme="http://example.com/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DockerFile的ONBUILD指令</title>
-    <link href="http://example.com/310.html"/>
-    <id>http://example.com/310.html</id>
-    <published>2021-08-22T17:05:56.000Z</published>
-    <updated>2021-08-22T17:44:38.158Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>父镜像在被子镜像继承后父镜像的ONBUILD被触发，可以把ONBUID理解为一个触发器。编写Dockerfile的时候，其他命令都是为了自身镜像服务的，只有ONBUILD是为了子镜像服务</p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="构建父镜像"><a href="#构建父镜像" class="headerlink" title="构建父镜像"></a>构建父镜像</h4><p>编写父镜像DockerFile，命名为：parent_df，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">ONBUILD RUN yum -y install vim</span><br><span class="line"></span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure><p>构建父镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f parent_df -t parent .</span><br></pre></td></tr></table></figure><h4 id="构建子镜像"><a href="#构建子镜像" class="headerlink" title="构建子镜像"></a>构建子镜像</h4><p>编写子镜像DockerFile，命名为：son_df，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM parent</span><br></pre></td></tr></table></figure><p>构建子镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> docker build -f son_df -t son .</span><br></pre></td></tr></table></figure><h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>当构建子镜像的时候，父镜像的ONBUILD会触发，子镜像直接安装vim，父镜像是没有安装vim的。所以使用父镜像创建的容器使用vim命令会报错，而用子镜像创建的容器可以使用vim命令</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/4.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
-    
-    
-    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
-    
-    <category term="DockerFile" scheme="http://example.com/tags/DockerFile/"/>
     
   </entry>
   

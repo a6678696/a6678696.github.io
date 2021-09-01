@@ -13667,4 +13667,36 @@
         <tag>shell</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Keepalived+Nginx+Tomcat负载均衡</title>
+    <url>/330.html</url>
+    <content><![CDATA[<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>主机和备用机分别使用Docker启动一个Tomcat，版本号最好不同，启动成功后有可能通过外部浏览器无法访问，解决方法查看博客：<a href="https://blog.zoutl.cn/294.html">Docker启动Tomcat成功后外部却无法访问</a></p>
+<h3 id="修改Nginx配置"><a href="#修改Nginx配置" class="headerlink" title="修改Nginx配置"></a>修改Nginx配置</h3><p>修改主机和备用机的Nginx配置，修改内容一样</p>
+<p>修改nginx.conf配置文件（在/etc/nginx目录下），在include /etc/nginx/conf.d/*.conf上方加上：</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line">	 server <span class="number">192.168</span>.<span class="number">0.106</span>:<span class="number">8080</span> weight=<span class="number">5</span>;</span><br><span class="line">	 server <span class="number">192.168</span>.<span class="number">0.107</span>:<span class="number">8080</span> weight=<span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改default.conf配置文件（在/etc/nginx/conf.d目录下），在location /节点加上：</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">proxy_pass  http://www.<span class="number">123</span>.com;</span><br></pre></td></tr></table></figure>
+
+<p>server_name可以修改成 <a href="http://www.123.com/">www.123.com</a> ，也可以不修改</p>
+<h3 id="重启Nginx"><a href="#重启Nginx" class="headerlink" title="重启Nginx"></a>重启Nginx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址输入：<a href="http://192.168.0.106/">http://192.168.0.106/</a>或者<a href="http://192.168.0.107/">http://192.168.0.107/</a></p>
+<p>不断刷新页面，访问了主机和备用机的Tomcat，此时Nginx+Tomcat负载均衡完成</p>
+<p>如果出现错误：502 Bad Gateway，这是因为Nginx 主机的 SELinux 服务限制了其（即 Nginx）使用 http 访问权限引起的，输入以下命令即可解决此问题，如果不生效再重启Nginx</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">setsebool -P httpd_can_network_connect 1    <span class="comment"># “1”为开启，“0”为关闭</span></span><br></pre></td></tr></table></figure>
+
+<p>打开Keepalived服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start keepalived</span><br></pre></td></tr></table></figure>
+
+<p>浏览器地址输入Keepalived配置的virtual_ipaddress，该配置文件在/etc/keepalived目录下，此时已经完成了Keepalived+Nginx+Tomcat负载均衡</p>]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+        <tag>Nginx</tag>
+        <tag>Keepalived</tag>
+      </tags>
+  </entry>
 </search>
