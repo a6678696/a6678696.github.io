@@ -1724,7 +1724,10 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --list-ports</span><br></pre></td></tr></table></figure>
 
 <h3 id="cat命令"><a href="#cat命令" class="headerlink" title="cat命令"></a>cat命令</h3><p>查看1.txt的内容（不进入文件）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat 1.txt</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cat 1.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="清空文件内容"><a href="#清空文件内容" class="headerlink" title="清空文件内容"></a>清空文件内容</h3><p>清空1.txt的内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> &gt; 1.txt</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
