@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-08-31T05:53:05.217Z</updated>
+  <updated>2021-09-01T04:44:33.220Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS7使用Crontab定时任务</title>
+    <link href="http://example.com/328.html"/>
+    <id>http://example.com/328.html</id>
+    <published>2021-09-01T04:01:53.000Z</published>
+    <updated>2021-09-01T04:44:33.220Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>启动</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start crond</span><br></pre></td></tr></table></figure><p>停止</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop crond</span><br></pre></td></tr></table></figure><p>重启</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart crond</span><br></pre></td></tr></table></figure><p>查看状态</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status crond</span><br></pre></td></tr></table></figure><h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><p>Crontab定时任务是没有权限执行shell脚本的，要先赋予脚本777权限</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 脚本名称（不在当前目录要加上路径）</span><br></pre></td></tr></table></figure><h3 id="执行方式"><a href="#执行方式" class="headerlink" title="执行方式"></a>执行方式</h3><h4 id="脚本放在目录"><a href="#脚本放在目录" class="headerlink" title="脚本放在目录"></a>脚本放在目录</h4><p>把脚本放在/etc/cron.hourly、/etc/cron.daily、/etc/cron.weekly、/etc/cron.monthly目录中，让它每小时/天/星期、月执行一次</p><h4 id="编写crontab命令"><a href="#编写crontab命令" class="headerlink" title="编写crontab命令"></a>编写crontab命令</h4><p>进入当前用户的工作表编辑，是常见的vim界面，每行是一条命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure><p>crontab的命令构成为 时间+动作，下面的* * * * *是时间，shell脚本路径为动作</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-01%20123513.png"></p><p>时间有分、时、日、月、周五种，操作符有：</p><p><font color="#dd0000">*****</font> ：取值范围内的所有数字</p><p><font color="#dd0000"><strong>/</strong></font> ：每过多少个数字</p><p><font color="#dd0000"><strong>-</strong></font> ：从X到Z</p><p><font color="#dd0000"><strong>,</strong></font> ：散列数字</p><p>一些实例：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">实例<span class="number">1</span>：每<span class="number">1</span>分钟执行一次myCommand</span><br><span class="line">* * * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">2</span>：每小时的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> * * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">3</span>：在上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">4</span>：每隔两天的上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> */<span class="number">2</span>  *  * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">5</span>：每周一上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> * * <span class="number">1</span> myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">6</span>：每晚的<span class="number">21</span>:<span class="number">30</span>重启smb</span><br><span class="line"><span class="number">30</span> <span class="number">21</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">7</span>：每月<span class="number">1</span>、<span class="number">10</span>、<span class="number">22</span>日的<span class="number">4</span> : <span class="number">45</span>重启smb</span><br><span class="line"><span class="number">45</span> <span class="number">4</span> <span class="number">1</span>,<span class="number">10</span>,<span class="number">22</span> * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">8</span>：每周六、周日的<span class="number">1</span> : <span class="number">10</span>重启smb</span><br><span class="line"><span class="number">10</span> <span class="number">1</span> * * <span class="number">6</span>,<span class="number">0</span> /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">9</span>：每天<span class="number">18</span> : <span class="number">00</span>至<span class="number">23</span> : <span class="number">00</span>之间每隔<span class="number">30</span>分钟重启smb</span><br><span class="line"><span class="number">0</span>,<span class="number">30</span> <span class="number">18</span>-<span class="number">23</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">10</span>：每星期六的晚上<span class="number">11</span> : <span class="number">00</span> pm重启smb</span><br><span class="line"><span class="number">0</span> <span class="number">23</span> * * <span class="number">6</span> /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">11</span>：每一小时重启smb</span><br><span class="line"><span class="number">0</span> */<span class="number">1</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">12</span>：晚上<span class="number">11</span>点到早上<span class="number">7</span>点之间，每隔一小时重启smb</span><br><span class="line"><span class="number">0</span> <span class="number">23</span>-<span class="number">7</span>/<span class="number">1</span> * * * /etc/init.d/smb restart</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/17.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CentOS7" scheme="http://example.com/categories/CentOS7/"/>
+    
+    
+    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    
+    <category term="Crontab" scheme="http://example.com/tags/Crontab/"/>
+    
+  </entry>
   
   <entry>
     <title>PotPlayer安装皮肤</title>
@@ -421,29 +444,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/106.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
-    
-    
-    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
-    
-    <category term="DockerFile" scheme="http://example.com/tags/DockerFile/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载</title>
-    <link href="http://example.com/308.html"/>
-    <id>http://example.com/308.html</id>
-    <published>2021-08-21T19:46:11.000Z</published>
-    <updated>2021-08-21T20:13:31.847Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>DockerFile创建镜像时通过VOLUME指令创建几个容器卷，然后创建这个镜像的容器时，这个容器就有了这几个容器卷目录，并与宿主机自动创建的对应目录实现了挂载</p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VOLUME[<span class="string">&#x27;目录1&#x27;</span>,<span class="string">&#x27;目录2&#x27;</span>]</span><br></pre></td></tr></table></figure><h4 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h4><p>新建一个文件，命名为：myVolumeDockerFile，没有后缀名，内容如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">VOLUME [<span class="string">&quot;/home/v1&quot;</span>,<span class="string">&quot;/home/v2&quot;</span>]</span><br><span class="line"></span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure><h4 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f myVolumeDockerFile -t a6678696/mycentos:1.2 .</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040035.jpg"></p><h4 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it 9123279cfb4f</span><br></pre></td></tr></table></figure><h4 id="找到挂载的目录"><a href="#找到挂载的目录" class="headerlink" title="找到挂载的目录"></a>找到挂载的目录</h4><p>①找到容器挂载的容器卷v1，v2</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040322.jpg"></p><p>②找到宿主机挂载的容器卷</p><p>通过inspect命令获取容器的元数据</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect 容器id</span><br></pre></td></tr></table></figure><p>找到Mounts节点，Source为宿主机的目录，Destination为容器的目录，两个目录是挂载的</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040846.jpg"></p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>docker run -v 命令创建挂载目录更好，可以自定义宿主机目录</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/90.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     

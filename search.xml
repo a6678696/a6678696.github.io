@@ -13582,4 +13582,43 @@
         <tag>其它</tag>
       </tags>
   </entry>
+  <entry>
+    <title>CentOS7使用Crontab定时任务</title>
+    <url>/328.html</url>
+    <content><![CDATA[<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>启动</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start crond</span><br></pre></td></tr></table></figure>
+
+<p>停止</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop crond</span><br></pre></td></tr></table></figure>
+
+<p>重启</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart crond</span><br></pre></td></tr></table></figure>
+
+<p>查看状态</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status crond</span><br></pre></td></tr></table></figure>
+
+<h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><p>Crontab定时任务是没有权限执行shell脚本的，要先赋予脚本777权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chmod 777 脚本名称（不在当前目录要加上路径）</span><br></pre></td></tr></table></figure>
+
+<h3 id="执行方式"><a href="#执行方式" class="headerlink" title="执行方式"></a>执行方式</h3><h4 id="脚本放在目录"><a href="#脚本放在目录" class="headerlink" title="脚本放在目录"></a>脚本放在目录</h4><p>把脚本放在/etc/cron.hourly、/etc/cron.daily、/etc/cron.weekly、/etc/cron.monthly目录中，让它每小时/天/星期、月执行一次</p>
+<h4 id="编写crontab命令"><a href="#编写crontab命令" class="headerlink" title="编写crontab命令"></a>编写crontab命令</h4><p>进入当前用户的工作表编辑，是常见的vim界面，每行是一条命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+
+<p>crontab的命令构成为 时间+动作，下面的* * * * *是时间，shell脚本路径为动作</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-01%20123513.png"></p>
+<p>时间有分、时、日、月、周五种，操作符有：</p>
+<p><font color="#dd0000">*****</font> ：取值范围内的所有数字</p>
+<p><font color="#dd0000"><strong>/</strong></font> ：每过多少个数字</p>
+<p><font color="#dd0000"><strong>-</strong></font> ：从X到Z</p>
+<p><font color="#dd0000"><strong>,</strong></font> ：散列数字</p>
+<p>一些实例：</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">实例<span class="number">1</span>：每<span class="number">1</span>分钟执行一次myCommand</span><br><span class="line">* * * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">2</span>：每小时的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> * * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">3</span>：在上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">4</span>：每隔两天的上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> */<span class="number">2</span>  *  * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">5</span>：每周一上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> * * <span class="number">1</span> myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">6</span>：每晚的<span class="number">21</span>:<span class="number">30</span>重启smb</span><br><span class="line"><span class="number">30</span> <span class="number">21</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">7</span>：每月<span class="number">1</span>、<span class="number">10</span>、<span class="number">22</span>日的<span class="number">4</span> : <span class="number">45</span>重启smb</span><br><span class="line"><span class="number">45</span> <span class="number">4</span> <span class="number">1</span>,<span class="number">10</span>,<span class="number">22</span> * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">8</span>：每周六、周日的<span class="number">1</span> : <span class="number">10</span>重启smb</span><br><span class="line"><span class="number">10</span> <span class="number">1</span> * * <span class="number">6</span>,<span class="number">0</span> /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">9</span>：每天<span class="number">18</span> : <span class="number">00</span>至<span class="number">23</span> : <span class="number">00</span>之间每隔<span class="number">30</span>分钟重启smb</span><br><span class="line"><span class="number">0</span>,<span class="number">30</span> <span class="number">18</span>-<span class="number">23</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">10</span>：每星期六的晚上<span class="number">11</span> : <span class="number">00</span> pm重启smb</span><br><span class="line"><span class="number">0</span> <span class="number">23</span> * * <span class="number">6</span> /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">11</span>：每一小时重启smb</span><br><span class="line"><span class="number">0</span> */<span class="number">1</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">12</span>：晚上<span class="number">11</span>点到早上<span class="number">7</span>点之间，每隔一小时重启smb</span><br><span class="line"><span class="number">0</span> <span class="number">23</span>-<span class="number">7</span>/<span class="number">1</span> * * * /etc/init.d/smb restart</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+        <tag>Crontab</tag>
+      </tags>
+  </entry>
 </search>
