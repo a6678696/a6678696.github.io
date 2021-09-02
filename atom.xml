@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-01T17:31:47.167Z</updated>
+  <updated>2021-09-02T01:08:42.580Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Docker安装Redis</title>
+    <link href="http://example.com/331.html"/>
+    <id>http://example.com/331.html</id>
+    <published>2021-09-02T00:06:24.000Z</published>
+    <updated>2021-09-02T01:08:42.580Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull redis:5</span><br></pre></td></tr></table></figure><h3 id="创建并运行容器"><a href="#创建并运行容器" class="headerlink" title="创建并运行容器"></a>创建并运行容器</h3><p>只运行不进入，要创建并运行就把 -d 改为 -it ，或者使用下面的进入Redis容器命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 6379:6379 Redis镜像id</span><br></pre></td></tr></table></figure><h3 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h3><p>进入容器命令行界面后就可以愉快地玩耍了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it Redis容器id redis-cli</span><br></pre></td></tr></table></figure><h3 id="Redis可视化工具"><a href="#Redis可视化工具" class="headerlink" title="Redis可视化工具"></a>Redis可视化工具</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p>我使用的是AnotherRedisDesktopManager，下载地址：<a href="https://gitee.com/qishibo/AnotherRedisDesktopManager/releases">AnotherRedisDesktopManager 发行版 - Gitee.com</a>，Windows下载第一个，像一般软件那般安装接口</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-02%20090145.jpg"></p><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>点击新建连接，地址填Linux服务器IP地址，端口一般都是6379，连接名称根据自己的需求填</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-02%20090427.jpg"></p><p>连接成功后，就可以管理Redis了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-02%20090733.jpg"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/58.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
+    
+    
+    <category term="Redis" scheme="http://example.com/tags/Redis/"/>
+    
+    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Keepalived+Nginx+Tomcat负载均衡</title>
     <link href="http://example.com/330.html"/>
     <id>http://example.com/330.html</id>
     <published>2021-09-01T12:41:02.000Z</published>
-    <updated>2021-09-01T17:31:47.167Z</updated>
+    <updated>2021-09-01T17:32:01.868Z</updated>
     
     <content type="html"><![CDATA[<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>主机和备用机分别使用Docker启动一个Tomcat，版本号最好不同，启动成功后有可能通过外部浏览器无法访问，解决方法查看博客：<a href="https://blog.zoutl.cn/294.html">Docker启动Tomcat成功后外部却无法访问</a></p><h3 id="修改Nginx配置"><a href="#修改Nginx配置" class="headerlink" title="修改Nginx配置"></a>修改Nginx配置</h3><p>修改主机和备用机的Nginx配置，修改内容一样</p><p>修改nginx.conf配置文件（在/etc/nginx目录下），在include /etc/nginx/conf.d/*.conf上方加上：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line"> server <span class="number">192.168</span>.<span class="number">0.106</span>:<span class="number">8080</span> weight=<span class="number">5</span>;</span><br><span class="line"> server <span class="number">192.168</span>.<span class="number">0.107</span>:<span class="number">8080</span> weight=<span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>修改default.conf配置文件（在/etc/nginx/conf.d目录下），在location /节点加上：</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxy_pass  http://www.<span class="number">123</span>.com;</span><br></pre></td></tr></table></figure><p>server_name可以修改成 <a href="http://www.123.com/">www.123.com</a> ，也可以不修改</p><h3 id="重启Nginx"><a href="#重启Nginx" class="headerlink" title="重启Nginx"></a>重启Nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址输入：<a href="http://192.168.0.106/">http://192.168.0.106/</a>或者<a href="http://192.168.0.107/">http://192.168.0.107/</a></p><p>不断刷新页面，访问了主机和备用机的Tomcat，此时Nginx+Tomcat负载均衡完成</p><p>如果出现错误：502 Bad Gateway，这是因为Nginx 主机的 SELinux 服务限制了其（即 Nginx）使用 http 访问权限引起的，输入以下命令即可解决此问题，如果不生效再重启Nginx</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setsebool -P httpd_can_network_connect 1    <span class="comment"># “1”为开启，“0”为关闭</span></span><br></pre></td></tr></table></figure><p>打开Keepalived服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start keepalived</span><br></pre></td></tr></table></figure><p>浏览器地址输入Keepalived配置的virtual_ipaddress，该配置文件在/etc/keepalived目录下，此时已经完成了Keepalived+Nginx+Tomcat负载均衡</p>]]></content>
     
@@ -335,7 +358,7 @@
     <link href="http://example.com/316.html"/>
     <id>http://example.com/316.html</id>
     <published>2021-08-26T13:14:31.000Z</published>
-    <updated>2021-08-26T13:37:04.170Z</updated>
+    <updated>2021-09-02T00:07:45.726Z</updated>
     
     <content type="html"><![CDATA[<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nginx</span><br></pre></td></tr></table></figure><h3 id="创建并运行容器"><a href="#创建并运行容器" class="headerlink" title="创建并运行容器"></a>创建并运行容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -v /home/data/nginx:/etc/nginx -p 80:80 nginx镜像id</span><br></pre></td></tr></table></figure><h3 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it nginx容器id bash</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入<font color="#dd0000">虚拟机IP</font>，看到<mark class="hl-label blue">Welcome to nginx!</mark> 说明安装成功</p>]]></content>
     
@@ -344,7 +367,7 @@
     
     
     
-    <category term="Nginx" scheme="http://example.com/categories/Nginx/"/>
+    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
     
     
     <category term="Docker" scheme="http://example.com/tags/Docker/"/>
@@ -429,27 +452,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/26.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Docker" scheme="http://example.com/categories/Docker/"/>
-    
-    
-    <category term="Docker" scheme="http://example.com/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Docker搭建私有仓库</title>
-    <link href="http://example.com/311.html"/>
-    <id>http://example.com/311.html</id>
-    <published>2021-08-22T18:33:53.000Z</published>
-    <updated>2021-08-22T20:03:55.983Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Docker私有仓库程序本身就是一个镜像，主要是企业内部用来存放镜像的仓库，相对官方仓库以及阿里云仓库，具有更高的保密安全级别</p><h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><h4 id="拉取私有仓库镜像"><a href="#拉取私有仓库镜像" class="headerlink" title="拉取私有仓库镜像"></a>拉取私有仓库镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull registry</span><br></pre></td></tr></table></figure><h4 id="创建并启动容器"><a href="#创建并启动容器" class="headerlink" title="创建并启动容器"></a>创建并启动容器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -di --name=myRegistry -p 5000:5000 registry</span><br></pre></td></tr></table></figure><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>浏览器地址栏输入：<font color="#dd0000">http://虚拟机id:5000/v2/_catalog</font>，看到下图说明搭建成功</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20024525.jpg"></p><h4 id="修改daemon-json"><a href="#修改daemon-json" class="headerlink" title="修改daemon.json"></a>修改daemon.json</h4><p>该文件在 <font color="#dd0000">/etc/docker</font> 目录下，添加以下代码让Docker信任私有仓库</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;insecure-registries&quot;</span>: [<span class="string">&quot;虚拟机id:5000&quot;</span>]</span><br></pre></td></tr></table></figure><h4 id="重启Docker"><a href="#重启Docker" class="headerlink" title="重启Docker"></a>重启Docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure><h3 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h3><h4 id="上传镜像"><a href="#上传镜像" class="headerlink" title="上传镜像"></a>上传镜像</h4><p>标记要上传到私有仓库的镜像为私有仓库的镜像（标记只是引用，镜像id还是被标记的镜像的id）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag 镜像id 虚拟机id:5000/自定义名称</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20033246.png"></p><p>推送镜像到私有仓库，推送前先启动私有仓库的容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push 上图划红线的镜像名称</span><br></pre></td></tr></table></figure><p>查看结果</p><p>浏览器地址栏输入：<font color="#dd0000">http://虚拟机id:5000/v2/_catalog</font>，从下图可以看到镜像上传成功</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20033447.jpg"></p><h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><p>先删除刚刚上传的本地镜像，然后再从私有仓库拉取镜像</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull 虚拟机id:5000/上图的镜像名称</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/19.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
