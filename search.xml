@@ -13790,7 +13790,8 @@
 <h3 id="添加本机域名"><a href="#添加本机域名" class="headerlink" title="添加本机域名"></a>添加本机域名</h3><p>找到 C:\Windows\System32\drivers\etc 打开hosts，底部加配置：</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">虚拟机IP www.<span class="number">123</span>.com</span><br></pre></td></tr></table></figure>
 
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入：<a href="http://www.123.com/">http://www.123.com/</a> ，测试时可以发现：交替访问两个Tomcat运行的项目</p>]]></content>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入：<a href="http://www.123.com/">http://www.123.com/</a> ，测试时可以发现：交替访问两个Tomcat运行的项目</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-02%20152135.gif"></p>]]></content>
       <categories>
         <category>Nginx</category>
       </categories>
