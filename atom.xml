@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-02T07:22:07.691Z</updated>
+  <updated>2021-09-02T16:34:33.049Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SELECT语句的ORDER BY子句</title>
+    <link href="http://example.com/334.html"/>
+    <id>http://example.com/334.html</id>
+    <published>2021-09-02T15:43:11.000Z</published>
+    <updated>2021-09-02T16:34:33.049Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="学生表数据"><a href="#学生表数据" class="headerlink" title="学生表数据"></a>学生表数据</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-02%20234928.png"></p><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="升序"><a href="#升序" class="headerlink" title="升序"></a>升序</h4><p>默认就是升序排序，即可以不加ASC关键字</p><p>下面SQL语句的意思是：按年龄升序排序</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t_student <span class="keyword">ORDER</span> <span class="keyword">BY</span> age <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure><h4 id="降序"><a href="#降序" class="headerlink" title="降序"></a>降序</h4><p>使用DESC关键字</p><p>下面SQL语句的意思是：按年龄降序排序</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t_student <span class="keyword">ORDER</span> <span class="keyword">BY</span> age <span class="keyword">DESC</span>;</span><br></pre></td></tr></table></figure><h4 id="多个列排序"><a href="#多个列排序" class="headerlink" title="多个列排序"></a>多个列排序</h4><p>下面SQL语句的意思是：先根据age排序,如果age相同再排序classId</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t_student <span class="keyword">ORDER</span> <span class="keyword">BY</span> age,classId;</span><br></pre></td></tr></table></figure><h4 id="取最大值"><a href="#取最大值" class="headerlink" title="取最大值"></a>取最大值</h4><p>使用ORDER BY和LIMIT的组合，能够找出一个列中最高或最低的值</p><p>下面SQL语句的意思是：选出年龄最大的</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t_student <span class="keyword">ORDER</span> <span class="keyword">BY</span> age <span class="keyword">DESC</span> LIMIT <span class="number">1</span>;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/68.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="MySQL" scheme="http://example.com/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="http://example.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>Nginx+Redis+Tomcat实现多个项目共享session</title>
@@ -442,27 +463,6 @@
     
     
     <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows10释放被占用端口</title>
-    <link href="http://example.com/314.html"/>
-    <id>http://example.com/314.html</id>
-    <published>2021-08-23T20:17:09.000Z</published>
-    <updated>2021-08-24T11:58:01.980Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="查看PID"><a href="#查看PID" class="headerlink" title="查看PID"></a>查看PID</h3><p>打开CMD，输入命令查看端口4000的PID</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;4000&quot;</span></span><br></pre></td></tr></table></figure><p>看下图的0.0.0.0:4000，LISTENING后的数值：16388就是PID</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044304.png"></p><h3 id="释放端口"><a href="#释放端口" class="headerlink" title="释放端口"></a>释放端口</h3><h4 id="CMD方式释放"><a href="#CMD方式释放" class="headerlink" title="CMD方式释放"></a>CMD方式释放</h4><p>输入以下命令，PID为上图LISTENING后的数值</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">taskkill /T /F /PID 16388</span><br></pre></td></tr></table></figure><h4 id="任务管理器释放"><a href="#任务管理器释放" class="headerlink" title="任务管理器释放"></a>任务管理器释放</h4><p>查看指定 PID 的进程（也可以不看，记住PID即可）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tasklist|findstr <span class="string">&quot;16388&quot;</span></span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044328.png"></p><p>打开任务管理，选择详细信息选项，根据进程名称或者PID找到进程</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044726.jpg"></p><p>右键点击并选择结束任务</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044745.jpg"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/49.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Windows10" scheme="http://example.com/categories/Windows10/"/>
-    
-    
-    <category term="Windows10" scheme="http://example.com/tags/Windows10/"/>
     
   </entry>
   
