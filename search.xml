@@ -6348,7 +6348,7 @@
 <h4 id="查看容器进程"><a href="#查看容器进程" class="headerlink" title="查看容器进程"></a>查看容器进程</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker top 容器id</span><br></pre></td></tr></table></figure>
 
 <h4 id="文件拷贝"><a href="#文件拷贝" class="headerlink" title="文件拷贝"></a>文件拷贝</h4><p>宿主机（当前系统：VM虚拟机正在运行的系统）文件或者目录拷贝到容器内</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 需要拷贝的文件或者目录 容器名称:容器目录</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 需要拷贝的文件或者目录 容器名称或r:容器目录</span><br></pre></td></tr></table></figure>
 
 <p>容器文件或者目录拷贝到宿主机内</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 容器名称:容器文件或者目录 宿主机目录</span><br></pre></td></tr></table></figure>
@@ -14732,7 +14732,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Rabbit实现死信队列</title>
+    <title>RabbitMQ实现死信队列</title>
     <url>/355.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>当消息成为Dead Message后，可以重新被发送到另一个交换机，这个交换机就是死信交换机DLX（死信交换机），然后这个Dead Message会发送到与之绑定的死信队列。</p>
 <p>消息成为Dead Message的三种情况： ①消息由于消息有效期(per-message TTL)过期，队列的有效期并不会导致其中的消息过期 ②消息由于队列超过其长度限制而被丢弃 ③消息被消费者使用basic.reject或basic.nack方法并且requeue参数值设置为false的方式进行消息确认(negatively acknowledged)</p>
@@ -14782,10 +14782,85 @@
 </blockquote>
 <p>先启动rabbitmq-producer模块发送20条ttl消息，会有10条消息直接变成死信，然后启动rabbitmq-consumer模块消费消息，10条消息都会消费失败变成死信而不会等到消息有效期过期才变成死信</p>]]></content>
       <categories>
-        <category>Rabbit</category>
+        <category>RabbitMQ</category>
       </categories>
       <tags>
-        <tag>Rabbit</tag>
+        <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RabbitMQ实现延时队列</title>
+    <url>/356.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>延时队列，首先，它是一种队列，队列意味着内部的元素是有序的，元素出队和入队是有方向性的，元素从一端进入，从另一端取出。</p>
+<p>其次，延时队列，最重要的特性就体现在它的延时属性上，跟普通的队列不一样的是，普通队列中的元素总是等着希望被早点取出处理，而延时队列中的元素则是希望被在指定时间得到取出和处理，所以延时队列中的元素是都是带时间属性的，通常来说是需要被处理的消息或者任务。</p>
+<p>简单来说，延时队列就是用来存放需要在指定时间被处理的元素的队列，<font color="#dd0000">延时时间到了消息才会进入队列中等待着被消费</font></p>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><p>那么什么时候需要用延时队列呢？考虑一下以下场景：</p>
+<p>订单在十分钟之内未支付则自动取消。</p>
+<p>新创建的店铺，如果在十天内都没有上传过商品，则自动发送消息提醒。</p>
+<p>账单在一周内未支付，则自动结算。</p>
+<p>用户注册成功后，如果三天内没有登陆则进行短信提醒。</p>
+<p>用户发起退款，如果三天内没有得到处理则通知相关运营人员。</p>
+<p>预定会议后，需要在预定的时间点前十分钟通知各个与会人员参加会议。</p>
+<h3 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h3><p>实现方式有两种：① 使用TTL+死信队列 ② 利用RabbitMQ插件，<font color="#dd0000">推荐使用此方式</font></p>
+<h4 id="TTL-死信队列"><a href="#TTL-死信队列" class="headerlink" title="TTL+死信队列"></a>TTL+死信队列</h4><p>生产者生产一条延时消息，根据需要延时时间的不同，利用不同的routingkey将消息路由到不同的延时队列，每个队列都设置了不同的TTL属性，并绑定在同一个死信交换机中，消息过期后，根据routingkey的不同，又会被路由到不同的死信队列中，消费者只需要监听对应的死信队列进行处理即可。</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-09%20113157.png"></p>
+<p>这种方式的弊端，无法做到通用性，每搞一个新的延迟任务，都要去实现一个实现的TTL+死信队列，比较麻烦，所以<font color="#dd0000">不推荐使用</font></p>
+<h4 id="利用RabbitMQ插件"><a href="#利用RabbitMQ插件" class="headerlink" title="利用RabbitMQ插件"></a>利用RabbitMQ插件</h4><blockquote>
+<p>下载插件</p>
+</blockquote>
+<p>RabbitMQ插件地址：<a href="https://www.rabbitmq.com/community-plugins.html">Community Plugins — RabbitMQ</a> ，进入GitHub下载页面插件</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-09%20114906.jpg"></p>
+<p>下载最新版本，直接点击链接即可下载</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-09%20115645.jpg"></p>
+<blockquote>
+<p>安装插件</p>
+</blockquote>
+<p>先将插件上传到虚拟机的 /home/data 目录下，然后将插件复制到RabbitMQ容器的 /plugins 目录下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp /home/data/rabbitmq_delayed_message_exchange-3.9.0.ez RabbitMQ容器id或名称:/plugins</span><br></pre></td></tr></table></figure>
+
+<p>进入RabbitMQ容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it RabbitMQ容器id或名称 /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>安装命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rabbitmq-plugins <span class="built_in">enable</span> rabbitmq_delayed_message_exchange</span><br></pre></td></tr></table></figure>
+
+<p>重启Rabbit容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker restart RabbitMQ容器id或名称</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>实现过程</p>
+</blockquote>
+<p>rabbitmq-common模块的RabbitMQConfig添加以下配置创建delayed交换机、队列，以及队列和交换机绑定</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * delayed交换机</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DELAYED_EXCHANGE = <span class="string">&quot;delayedExchange&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * delayed队列</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DELAYED_QUEUE = <span class="string">&quot;delayedQueue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * delayed路由key</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DELAYED_ROUTING_KEY = <span class="string">&quot;delayedRoutingKey&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义delayed交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> CustomExchange <span class="title">delayedExchange</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;x-delayed-type&quot;</span>, <span class="string">&quot;direct&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> CustomExchange(DELAYED_EXCHANGE, <span class="string">&quot;x-delayed-message&quot;</span>, <span class="keyword">true</span>, <span class="keyword">false</span>, map);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义delayed队列</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">delayedQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> Queue(DELAYED_QUEUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * delayed队列绑定delayed交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">delayedBinding</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> BindingBuilder.bind(delayedQueue()).to(delayedExchange()).with(DELAYED_ROUTING_KEY).noargs();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>rabbitmq-producer模块的RabbitMQProducerService类添加一个接口方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 发送延时消息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message 消息内容</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> delayTime 延时时间,单位为毫秒</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sendMessageDelayed</span><span class="params">(String message, Integer delayTime)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>rabbitmq-producer模块的RabbitMQProducerServiceImpl类实现上面的接口方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendMessageDelayed</span><span class="params">(String message, Integer delayTime)</span> </span>&#123;</span><br><span class="line">    rabbitTemplate.convertAndSend(RabbitMQConfig.DELAYED_EXCHANGE,RabbitMQConfig.DELAYED_ROUTING_KEY,message,a-&gt;&#123;</span><br><span class="line">        a.getMessageProperties().setDelay(delayTime);</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改rabbitmq-producer模块的启动类，实现启动就发送两条延时消息</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.producer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.producer.service.RabbitMQProducerService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 提供者启动类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-04 12:26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProducerApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ApplicationContext ac = SpringApplication.run(ProducerApplication.class, args);</span><br><span class="line">        RabbitMQProducerService rabbitMQProducerService = (RabbitMQProducerService) ac.getBean(<span class="string">&quot;rabbitMQProducerService&quot;</span>);</span><br><span class="line">        rabbitMQProducerService.sendMessageDelayed(<span class="string">&quot;延时消息1&quot;</span>,<span class="number">10000</span>);</span><br><span class="line">        rabbitMQProducerService.sendMessageDelayed(<span class="string">&quot;延时消息2&quot;</span>,<span class="number">20000</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>rabbitmq-consumer模块的RabbitMQConsumerService类添加一个接口方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 监听队列接收delayed消息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">receiveMessageDelayed</span><span class="params">(String message)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>rabbitmq-consumer模块的RabbitMQConsumerServiceImpl类实现上面的接口方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DELAYED_QUEUE&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveMessageDelayed</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;接收到的延时消息:&quot;</span>+message+<span class="string">&quot; , 当前时间:&quot;</span>+<span class="keyword">new</span> Date());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>修改rabbitmq-consumer模块application.yml配置文件，主要是将监听策略改为自动确认，方便测试</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">rabbitmq:</span></span><br><span class="line">    <span class="attr">listener:</span></span><br><span class="line">      <span class="attr">simple:</span></span><br><span class="line">        <span class="attr">acknowledge-mode:</span> <span class="string">none</span> <span class="comment">#自动确认</span></span><br></pre></td></tr></table></figure>
+
+<p>到此实现了监听队列接收delayed消息的功能</p>
+<blockquote>
+<p>测试</p>
+</blockquote>
+<p>启动rabbitmq-consumer模块再启动rabbitmq-producer模块，然后去rabbitmq-consumer模块的启动控制台窗口结果，两次消费消息的间隔时间为10秒</p>]]></content>
+      <categories>
+        <category>RabbitMQ</category>
+      </categories>
+      <tags>
+        <tag>RabbitMQ</tag>
       </tags>
   </entry>
 </search>
