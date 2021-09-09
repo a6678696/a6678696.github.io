@@ -8585,7 +8585,7 @@
   <entry>
     <title>RabbitMQ实现订阅模式Publish/Subscribe</title>
     <url>/348.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20105048.png"></p>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20105048.png"></p>
 <p>生产者生产的消息，所有订阅过的消费者都能够接收到消息</p>
 <p>Exchange采用Fanout类型，即广播方式</p>
 <p>Fanout类型的交换机会把消息发送到所有绑定到该交换机的队列</p>
@@ -8624,7 +8624,7 @@
   <entry>
     <title>RabbitMQ实现路由模式Routing</title>
     <url>/349.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20124523.png"></p>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20124523.png"></p>
 <p>跟订阅模式类似，只不过在订阅模式的基础上加上了类型，订阅模式是分发到所有绑定到交换机的队列，路由模式只分发到绑定在交换机上面指定路由键的队列。</p>
 <p>使用场景：只将一些错误log存到文件中，把所有的log都打印到控制台里</p>
 <h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="发送指定类型消息"><a href="#发送指定类型消息" class="headerlink" title="发送指定类型消息"></a>发送指定类型消息</h4><p>为了方便测试，在rabbitmq-producer模块下添加一个发送指定类型消息功能，消息类型有info、error、warning</p>
@@ -8692,7 +8692,7 @@
   <entry>
     <title>RabbitMQ实现主题模式Topic</title>
     <url>/350.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><img src="https://image.zoutl.cn/hexo-blog/2021-09-05%20223923.png"></p>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="https://image.zoutl.cn/hexo-blog/2021-09-05%20223923.png"></p>
 <p>主题模式和路由模式很像，但是路由模式是精确匹配，主题模式是模糊匹配，更加灵活，更加强大</p>
 <p>主题模式使用的是topic类型的交换机，使用通配符方式实现模糊匹配，匹配符有：*和#</p>
 <table>
@@ -14596,7 +14596,7 @@
   <entry>
     <title>RabbitMQ消费端手动ACK确认机制</title>
     <url>/352.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>ack——acknowledge（vt. 承认；答谢；报偿；告知已收到；确认的意思），在RabbitMQ中指代的是消费者收到消息后确认的一种行为，关注点在于消费者能否实际接收到MQ发送的消息</p>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>ack——acknowledge（vt. 承认；答谢；报偿；告知已收到；确认的意思），在RabbitMQ中指代的是消费者收到消息后确认的一种行为，关注点在于消费者能否实际接收到MQ发送的消息</p>
 <p>当消息一旦被消费者接收到，会立刻自动向MQ确认接收，并将响应的message从RabbitMQ消息缓存中移除，但是在实际的业务处理中，会出现消息收到了，但是业务处理出现异常的情况，在自动确认的模式下，该条业务处理失败的message就相当于被丢弃了。如果设置了手动确认，则需要在业务处理完成之后，手动调用channel.basicAck()，手动的签收，如果业务处理失败，则手动调用channel.basicNack()方法拒收，并让MQ重新发送该消息。</p>
 <p>RabbitMQ提供了三种确认方式：</p>
 <p>①自动确认acknowledge=”none”：当消费者接收到消息的时候，就会自动给到RabbitMQ一个回执，告诉RabbitMQ我已经收到消息了，不在乎消费者接收到消息之后业务处理的成功与否，<font color="#dd0000">这是RabbitMQ默认的</font></p>
@@ -14644,7 +14644,7 @@
   <entry>
     <title>RabbitMQ消费端并发和限流设置</title>
     <url>/353.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>并发：有时候，我们需要加快消息的处理速度，这时候，我们可以通过提高消息处理程序的并发量，来提高消息的处理能力，本质就是多个消费者消费同一个队列的消息</p>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>并发：有时候，我们需要加快消息的处理速度，这时候，我们可以通过提高消息处理程序的并发量，来提高消息的处理能力，本质就是多个消费者消费同一个队列的消息</p>
 <p>限流：有些场景，消费者端处理并发太大的时候，会影响消息处理端的性能，这时候需要限流</p>
 <h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>在要并发的监听队列的方法的@RabbitListener注解中配置concurency=“min-max”，min是最小并发数，max是最大并发数</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_QUEUE&#125;,concurrency = &quot;5-8&quot;)</span></span><br></pre></td></tr></table></figure>
@@ -14699,7 +14699,7 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个ttl队列绑定ttl交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">ttlQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(TTL_QUEUE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>修改后：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个ttl队列绑定ttl交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">ttlQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;x-message-ttl&quot;</span>, <span class="string">&quot;8000&quot;</span>);</span><br><span class="line">    <span class="comment">//参数一为队列名称,参数二为是否持久化,参数三是否独享、排外的,参数四为是否自动删除,参数五为队列的其他属性参数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(TTL_QUEUE, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个ttl队列绑定ttl交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">ttlQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    map.put(<span class="string">&quot;x-message-ttl&quot;</span>, <span class="number">8000</span>);</span><br><span class="line">    <span class="comment">//参数一为队列名称,参数二为是否持久化,参数三是否独享、排外的,参数四为是否自动删除,参数五为队列的其他属性参数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(TTL_QUEUE, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <mark class="hl-label blue">队列参数说明</mark> 
 
@@ -14723,12 +14723,69 @@
 <blockquote>
 <p>测试</p>
 </blockquote>
-<p>先删除之前创建好的队列ttlQueue，浏览器地址栏输入 <a href="http://localhost/toSendInformationPage">http://localhost/toSendInformationPage</a> ，发送ttl消息，然后去RabbitMQ管理系统中查看队列的消息，刚刚发送的消息过了8秒（从发送成功开始计算时间）后会自动从队列中删除<font color="#dd0000">（消息的过期时间为10秒，消息所在队列的过期时间为8秒，所以消息的实际过期时间为8秒）</font></p>]]></content>
+<p>先删除之前创建好的队列ttlQueue，启动消费者模块再启动生产者模块，浏览器地址栏输入 <a href="http://localhost/toSendInformationPage">http://localhost/toSendInformationPage</a> ，发送ttl消息，然后去RabbitMQ管理系统中查看队列的消息，刚刚发送的消息过了8秒（从发送成功开始计算时间）后会自动从队列中删除<font color="#dd0000">（消息的过期时间为10秒，消息所在队列的过期时间为8秒，所以消息的实际过期时间为8秒）</font></p>]]></content>
       <categories>
         <category>RabbitMQ</category>
       </categories>
       <tags>
         <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Rabbit实现死信队列</title>
+    <url>/355.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>当消息成为Dead Message后，可以重新被发送到另一个交换机，这个交换机就是死信交换机DLX（死信交换机），然后这个Dead Message会发送到与之绑定的死信队列。</p>
+<p>消息成为Dead Message的三种情况： ①消息由于消息有效期(per-message TTL)过期，队列的有效期并不会导致其中的消息过期 ②消息由于队列超过其长度限制而被丢弃 ③消息被消费者使用basic.reject或basic.nack方法并且requeue参数值设置为false的方式进行消息确认(negatively acknowledged)</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="情况一"><a href="#情况一" class="headerlink" title="情况一"></a>情况一</h4><p>消息由于消息有效期(per-message TTL)过期</p>
+<blockquote>
+<p>rabbitmq-common模块的RabbitMQConfig类添加配置：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * dlx交换机名称</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DLX_DIRECT_EXCHANGE = <span class="string">&quot;dlxExchange&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * dlx队列名称</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DLX_QUEUE = <span class="string">&quot;dlxQueue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * dlx路由key</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DLX_ROUTING_KEY = <span class="string">&quot;dlxRoutingKey&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个dlx交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> DirectExchange <span class="title">dlxExchange</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> DirectExchange(DLX_DIRECT_EXCHANGE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个dlx队列</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">dlxQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> Queue(DLX_QUEUE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * dlx队列绑定dlx交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">dlxBinding</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> BindingBuilder.bind(dlxQueue()).to(dlxExchange()).with(DLX_ROUTING_KEY);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改rabbitmq-common模块的RabbitMQConfig类的ttlQueue方法，主要实现TTL队列和死信交换机的绑定</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个ttl队列</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">ttlQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    <span class="comment">//设置队列的消息过期时间为4秒</span></span><br><span class="line">    map.put(<span class="string">&quot;x-message-ttl&quot;</span>, <span class="number">4000</span>);</span><br><span class="line">    <span class="comment">//绑定死信交换机,过期的消息会进入死信交换机然后进入死信队列</span></span><br><span class="line">    map.put(<span class="string">&quot;x-dead-letter-exchange&quot;</span>, DLX_DIRECT_EXCHANGE);</span><br><span class="line">    <span class="comment">//绑定死信交换机的路由</span></span><br><span class="line">    map.put(<span class="string">&quot;x-dead-letter-routing-key&quot;</span>, DLX_ROUTING_KEY);</span><br><span class="line">    <span class="comment">//参数一为队列名称,参数二为是否持久化,参数三是否独享、排外的,参数四为是否自动删除,参数五为队列的其他属性参数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(TTL_QUEUE, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>测试</p>
+</blockquote>
+<p>首先删除ttlQueue不然该队列的新配置不会生效，向ttlQueue队列发送一个TTL消息后，如果过了消息的有效期，该消息就会变成死信Dead Message，进入死信交换机，最后进入与之绑定的死信队列</p>
+<h4 id="情况二"><a href="#情况二" class="headerlink" title="情况二"></a>情况二</h4><p>消息由于队列超过其长度限制而被丢弃，比如：队列可容纳的最大消息数为10，但是我们一下子向里面发送20条消息，后面的10条消息会变成死信Dead Message，进入死信交换机，最后进入与之绑定的死信队列</p>
+<blockquote>
+<p>rabbitmq-common模块的RabbitMQConfig类的ttlQueue添加配置x-max-length</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个ttl队列</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">ttlQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">    <span class="comment">//设置队列的消息过期时间为4秒</span></span><br><span class="line">    map.put(<span class="string">&quot;x-message-ttl&quot;</span>, <span class="number">10000</span>);</span><br><span class="line">    <span class="comment">//绑定死信交换机,过期的消息会进入死信交换机然后进入死信队列</span></span><br><span class="line">    map.put(<span class="string">&quot;x-dead-letter-exchange&quot;</span>, DLX_DIRECT_EXCHANGE);</span><br><span class="line">    <span class="comment">//绑定死信交换机的路由</span></span><br><span class="line">    map.put(<span class="string">&quot;x-dead-letter-routing-key&quot;</span>, DLX_ROUTING_KEY);</span><br><span class="line">    <span class="comment">//设置队列的最大长度</span></span><br><span class="line">    map.put(<span class="string">&quot;x-max-length&quot;</span>, <span class="number">10</span>);</span><br><span class="line">    <span class="comment">//参数一为队列名称,参数二为是否持久化,参数三是否独享、排外的,参数四为是否自动删除,参数五为队列的其他属性参数</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(TTL_QUEUE, <span class="keyword">true</span>, <span class="keyword">false</span>, <span class="keyword">false</span>, map);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>直接修改rabbitmq-producer模块的启动类，实现批量发送20条ttl消息</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.producer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.producer.service.RabbitMQProducerService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 提供者启动类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-04 12:26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProducerApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ApplicationContext ac = SpringApplication.run(ProducerApplication.class, args);</span><br><span class="line">        RabbitMQProducerService rabbitMQProducerService = (RabbitMQProducerService) ac.getBean(<span class="string">&quot;rabbitMQProducerService&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">            rabbitMQProducerService.sendMessageTll(<span class="string">&quot;消息&quot;</span> + i + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>测试</p>
+</blockquote>
+<p>首先删除ttlQueue不然该队列的新配置不会生效，批量向ttlQueue队列发送20条TTL消息后，后面进入的10条消息就会变成死信Dead Message，进入死信交换机，最后进入与之绑定的死信队列，过了消息的有效期，ttlQueue队列的10条消息最后也会变成死信</p>
+<h4 id="情况三"><a href="#情况三" class="headerlink" title="情况三"></a>情况三</h4><p>消息被消费者使用basic.reject或basic.nack方法并且requeue参数值设置为false的方式进行消息确认(negatively acknowledged)</p>
+<blockquote>
+<p>rabbitmq-consumer模块的RabbitMQConsumerService类添加一个接口方法：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 监听队列接收ttl消息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> channel</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> deliveryTag</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">receiveMessageTtl</span><span class="params">(String message, Channel channel, <span class="keyword">long</span> deliveryTag)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>rabbitmq-consumer模块的RabbitMQConsumerServiceImpl类实现上面的接口方法：</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.TTL_QUEUE&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveMessageTtl</span><span class="params">(String message, Channel channel, <span class="meta">@Header(AmqpHeaders.DELIVERY_TAG)</span> <span class="keyword">long</span> deliveryTag)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;接收到的消息:&quot;</span> + message);</span><br><span class="line">        <span class="comment">//模拟异常，进入catch方法</span></span><br><span class="line">        System.out.println(<span class="number">1</span> / <span class="number">0</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//拒绝的消息不重新入列，会进入死信队列</span></span><br><span class="line">            channel.basicNack(deliveryTag, <span class="keyword">false</span>, <span class="keyword">false</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException ioException) &#123;</span><br><span class="line">            ioException.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>测试</p>
+</blockquote>
+<p>先启动rabbitmq-producer模块发送20条ttl消息，会有10条消息直接变成死信，然后启动rabbitmq-consumer模块消费消息，10条消息都会消费失败变成死信而不会等到消息有效期过期才变成死信</p>]]></content>
+      <categories>
+        <category>Rabbit</category>
+      </categories>
+      <tags>
+        <tag>Rabbit</tag>
       </tags>
   </entry>
 </search>
