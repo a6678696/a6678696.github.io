@@ -14753,7 +14753,7 @@
 </blockquote>
 <p>首先删除ttlQueue不然该队列的新配置不会生效，向ttlQueue队列发送一个TTL消息后，如果过了消息的有效期，该消息就会变成死信Dead Message，进入死信交换机，最后进入与之绑定的死信队列</p>
 <h4 id="情况二"><a href="#情况二" class="headerlink" title="情况二"></a>情况二</h4><p>消息由于队列超过其长度限制而被丢弃，比如：队列可容纳的最大消息数为10，但是我们一下子向里面发送20条消息，后面的10条消息会变成死信Dead Message，进入死信交换机，最后进入与之绑定的死信队列</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-10%20122252.png"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-10%20125405.png"></p>
 <blockquote>
 <p>rabbitmq-common模块的RabbitMQConfig类的ttlQueue添加配置x-max-length</p>
 </blockquote>
