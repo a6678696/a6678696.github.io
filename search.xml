@@ -14868,4 +14868,37 @@
         <tag>RabbitMQ</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Docker搭建RabbitMQ集群</title>
+    <url>/357.html</url>
+    <content><![CDATA[<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><p>拉取HAProxy镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull haproxy</span><br></pre></td></tr></table></figure>
+
+<p>拉取RabbitMQ镜像</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull rabbitmq</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建Docker网卡"><a href="#创建Docker网卡" class="headerlink" title="创建Docker网卡"></a>创建Docker网卡</h3><p>创建一个RabbitMQ的Docker网卡</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker network create rabbitmqnet</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-11%20010644.png"></p>
+<h3 id="创建RabbitMQ容器"><a href="#创建RabbitMQ容器" class="headerlink" title="创建RabbitMQ容器"></a>创建RabbitMQ容器</h3><p>分别执行下面3条命令创建3个RabbitMQ容器：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#RabbitMQ容器1</span></span><br><span class="line">docker run -d --name=rabbitmq1 -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin  -e RABBITMQ_NODENAME=rabbitmq1 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq1 --net=rabbitmqnet 3e83da0dc938</span><br><span class="line"></span><br><span class="line"><span class="comment">#RabbitMQ容器2</span></span><br><span class="line">docker run -d --name=rabbitmq2 -p 5673:5672 -p 15673:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -e RABBITMQ_NODENAME=rabbitmq2 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq2 --net=rabbitmqnet 3e83da0dc938</span><br><span class="line"></span><br><span class="line"><span class="comment">#RabbitMQ容器3</span></span><br><span class="line">docker run -d --name=rabbitmq3 -p 5674:5672 -p 15674:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -e RABBITMQ_NODENAME=rabbitmq3 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq3 --net=rabbitmqnet 3e83da0dc938</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现集群"><a href="#实现集群" class="headerlink" title="实现集群"></a>实现集群</h3><p>分别进入RabbitMQ容器2、RabbitMQ容器3，进入容器命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it RabbitMQ容器id或名称 /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>在两个容器内部都执行下面的4条命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rabbitmqctl stop_app</span><br><span class="line">rabbitmqctl reset</span><br><span class="line">rabbitmqctl join_cluster --ram rabbitmq1@rabbitmq1</span><br><span class="line">rabbitmqctl start_app</span><br></pre></td></tr></table></figure>
+
+<p>退出RabbitMQ容器快捷键：CTRL+P+Q，只退出不停止容器</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入：http://虚拟机IP:15672/ ，并输入用户名admin和密码admin，进入RabbitMQ图形管理页面</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-11%20012256.jpg"></p>]]></content>
+      <categories>
+        <category>RabbitMQ</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>RabbitMQ&quot;</tag>
+      </tags>
+  </entry>
 </search>
