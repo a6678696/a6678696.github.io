@@ -14871,10 +14871,7 @@
   <entry>
     <title>Docker搭建RabbitMQ集群</title>
     <url>/357.html</url>
-    <content><![CDATA[<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><p>拉取HAProxy镜像</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull haproxy</span><br></pre></td></tr></table></figure>
-
-<p>拉取RabbitMQ镜像</p>
+    <content><![CDATA[<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><p>拉取RabbitMQ镜像</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull rabbitmq</span><br></pre></td></tr></table></figure>
 
 <h3 id="创建Docker网卡"><a href="#创建Docker网卡" class="headerlink" title="创建Docker网卡"></a>创建Docker网卡</h3><p>创建一个RabbitMQ的Docker网卡</p>
