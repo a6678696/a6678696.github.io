@@ -6369,7 +6369,7 @@
     <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在创建Docker的Tomcat容器时使用了端口映射，外部无法通过 <font color="#dd0000">http://虚拟机IP:映射的端口号</font> 来访问</p>
 <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>Docker某些Tomcat版本的webapps是空的，直接访问是访问不到的，但是这些Tomcat有一个webapps.dist目录，这个目录就是原来的webapps目录</p>
 <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="第一种办法"><a href="#第一种办法" class="headerlink" title="第一种办法"></a>第一种办法</h4><p>使用webapps目录不为空的Tomcat版本，webapps目录不为空的Tomcat版本有：8.0.52、8.5.28，直接使用这两个版本即可</p>
-<h4 id="第二种办法"><a href="#第二种办法" class="headerlink" title="第二种办法"></a>第二种办法</h4><p>使用webapps目录不为空的Tomcat版本，删除掉webapps空目录，再将webapps.dist目录命名为webapps</p>]]></content>
+<h4 id="第二种办法"><a href="#第二种办法" class="headerlink" title="第二种办法"></a>第二种办法</h4><p>使用webapps目录为空的Tomcat版本，删除掉webapps空目录，再将webapps.dist目录命名为webapps</p>]]></content>
       <categories>
         <category>Docker</category>
       </categories>
@@ -14865,6 +14865,7 @@
         <category>RabbitMQ</category>
       </categories>
       <tags>
+        <tag>Docker</tag>
         <tag>RabbitMQ</tag>
       </tags>
   </entry>
@@ -14879,7 +14880,14 @@
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-11%20010644.png"></p>
 <h3 id="创建RabbitMQ容器"><a href="#创建RabbitMQ容器" class="headerlink" title="创建RabbitMQ容器"></a>创建RabbitMQ容器</h3><p>分别执行下面3条命令创建3个RabbitMQ容器：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#RabbitMQ容器1</span></span><br><span class="line">docker run -d --name=rabbitmq1 -p 5672:5672 -p 15672:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin  -e RABBITMQ_NODENAME=rabbitmq1 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq1 --net=rabbitmqnet 3e83da0dc938</span><br><span class="line"></span><br><span class="line"><span class="comment">#RabbitMQ容器2</span></span><br><span class="line">docker run -d --name=rabbitmq2 -p 5673:5672 -p 15673:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -e RABBITMQ_NODENAME=rabbitmq2 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq2 --net=rabbitmqnet 3e83da0dc938</span><br><span class="line"></span><br><span class="line"><span class="comment">#RabbitMQ容器3</span></span><br><span class="line">docker run -d --name=rabbitmq3 -p 5674:5672 -p 15674:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -e RABBITMQ_NODENAME=rabbitmq3 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq3 --net=rabbitmqnet 3e83da0dc938</span><br></pre></td></tr></table></figure>
+<p>创建RabbitMQ容器1</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=rabbitmq1 -p 5673:5672 -p 15673:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -e RABBITMQ_NODENAME=rabbitmq1 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq1 --net=rabbitmqnet RabbitMQ镜像id</span><br></pre></td></tr></table></figure>
+
+<p>创建RabbitMQ容器2</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=rabbitmq2 -p 5674:5672 -p 15674:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -e RABBITMQ_NODENAME=rabbitmq2 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq2 --net=rabbitmqnet RabbitMQ镜像id</span><br></pre></td></tr></table></figure>
+
+<p>创建RabbitMQ容器3</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=rabbitmq3 -p 5675:5672 -p 15675:15672 -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -e RABBITMQ_NODENAME=rabbitmq3 -e RABBITMQ_ERLANG_COOKIE=<span class="string">&#x27;YZSDHWMFSMKEMBDHSGGZ&#x27;</span> -h rabbitmq3 --net=rabbitmqnet RabbitMQ镜像id</span><br></pre></td></tr></table></figure>
 
 <h3 id="实现集群"><a href="#实现集群" class="headerlink" title="实现集群"></a>实现集群</h3><p>分别进入RabbitMQ容器2、RabbitMQ容器3，进入容器命令如下：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it RabbitMQ容器id或名称 /bin/bash</span><br></pre></td></tr></table></figure>
@@ -14895,7 +14903,80 @@
       </categories>
       <tags>
         <tag>Docker</tag>
-        <tag>RabbitMQ&quot;</tag>
+        <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java内部类</title>
+    <url>/358.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>在Java中，可以将一个类的定义放在另外一个类的定义内部，这就是内部类。内部类本身就是类的一个属性，与其他属性定义方式一致</p>
+<p>内部类可以分为四种：成员内部类、局部内部类、匿名内部类和静态内部类</p>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>一个内部类对象可以访问创建它的外部类对象的内容，包括私有数据</li>
+<li>内部类不为同一包的其他类所见，具有很好的封装性</li>
+<li>内部类有效实现了“多重继承”，优化 java 单继承的缺陷</li>
+<li>匿名内部类可以很方便的定义回调</li>
+</ol>
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li><p>一些多算法场合</p>
+</li>
+<li><p>解决一些非面向对象的语句块</p>
+</li>
+<li><p>适当使用内部类，使得代码更加灵活和富有扩展性</p>
+</li>
+<li><p>当某个类除了它的外部类，不再被其他的类使用时</p>
+</li>
+</ol>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h4><blockquote>
+<p>概念</p>
+</blockquote>
+<p>定义在类内部的静态类，就是静态内部类</p>
+<p>静态内部类可以访问外部类所有的静态变量，而不可访问外部类的非静态变量，静态内部类的创建方式：new 外部类.静态内部类()</p>
+<blockquote>
+<p>代码实现</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 静态内部类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-13 9:19</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> A = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticInner</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(A);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Outer.StaticInner inner = <span class="keyword">new</span> Outer.StaticInner();</span><br><span class="line">        inner.test();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h4><blockquote>
+<p>概念</p>
+</blockquote>
+<p>定义在类内部，成员位置上的非静态类，就是成员内部类</p>
+<p>成员内部类可以访问外部类所有的变量和方法，包括静态和非静态，私有和公有。成员内部类依赖于外部类的实例，它的创建方式：外部类实例.new 内部类()</p>
+<blockquote>
+<p>代码实现</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 成员内部类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-13 9:19</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> a = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> B = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            System.out.println(a);</span><br><span class="line">            System.out.println(B);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Outer outer = <span class="keyword">new</span> Outer();</span><br><span class="line">        Outer.Inner inner = outer.<span class="function">new <span class="title">Inner</span><span class="params">()</span></span>;</span><br><span class="line">        inner.test();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h4><blockquote>
+<p>概念</p>
+</blockquote>
+<p>定义在方法中的内部类，就是局部内部类</p>
+<p>定义在实例方法中的局部类可以访问外部类的所有变量和方法，定义在静态方法中的局部类只能访<br>问外部类的静态变量和方法，局部内部类的创建方式：在对应方法内，new 内部类()</p>
+<blockquote>
+<p>代码实现</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 局部内部类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-13 9:19</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> out_a = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> STATIC_B = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> inner_c = <span class="number">3</span>;</span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;</span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">fun</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(out_a);</span><br><span class="line">                System.out.println(STATIC_B);</span><br><span class="line">                System.out.println(inner_c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        Inner inner = <span class="keyword">new</span> Inner();</span><br><span class="line">        inner.fun();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Outer outer = <span class="keyword">new</span> Outer();</span><br><span class="line">        outer.test();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h4><blockquote>
+<p>概念</p>
+</blockquote>
+<p>匿名内部类就是没有名字的内部类，日常开发中使用的比较多</p>
+<p>除了没有名字，匿名内部类还有以下特点：</p>
+<ol>
+<li>匿名内部类必须继承一个抽象类或者实现一个接口</li>
+<li>匿名内部类不能定义任何静态成员和静态方法</li>
+<li>当所在的方法的形参需要被匿名内部类使用时，必须声明为 final</li>
+<li>匿名内部类不能是抽象的，它必须要实现继承的类或者实现的接口的所有抽象方法</li>
+</ol>
+<blockquote>
+<p>代码实现</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 局部内部类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-13 9:19</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Outer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//测试方法1</span></span><br><span class="line">        <span class="keyword">new</span> Service() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;匿名内部类测试1&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;.method();</span><br><span class="line">        <span class="comment">//测试方法2</span></span><br><span class="line">        Service service = <span class="keyword">new</span> Service() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;匿名内部类测试2&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        service.method();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Service</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 测试接口1</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
 </search>
