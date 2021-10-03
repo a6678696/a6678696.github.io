@@ -15622,4 +15622,25 @@
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>MySQL使用子查询</title>
+    <url>/367.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>所谓子查询，就是嵌套在其他查询中的查询</p>
+<h4 id="版本要求"><a href="#版本要求" class="headerlink" title="版本要求"></a>版本要求</h4><p>要使用子查询，必须使用MySQL 4.1或更高级的版本</p>
+<h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><ol>
+<li>过滤数据</li>
+<li>作为计算字段使用</li>
+</ol>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="过滤数据"><a href="#过滤数据" class="headerlink" title="过滤数据"></a>过滤数据</h4><p>查询 t_class 班级表的id小于3的班级的所有学生</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t_student <span class="keyword">WHERE</span> class_Id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> t_class <span class="keyword">WHERE</span> id<span class="operator">&lt;</span><span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="作为计算字段使用"><a href="#作为计算字段使用" class="headerlink" title="作为计算字段使用"></a>作为计算字段使用</h4><p>查询各个班号下的学生人数</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,(<span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> t_student <span class="keyword">WHERE</span> t_student.`class_Id`<span class="operator">=</span>t_class.`id`) <span class="keyword">AS</span> student_num <span class="keyword">FROM</span> t_class;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
 </search>

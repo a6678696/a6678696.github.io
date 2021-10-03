@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-03T02:45:35.544Z</updated>
+  <updated>2021-10-03T09:55:10.601Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL使用子查询</title>
+    <link href="http://example.com/367.html"/>
+    <id>http://example.com/367.html</id>
+    <published>2021-10-03T09:11:24.000Z</published>
+    <updated>2021-10-03T09:55:10.601Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>所谓子查询，就是嵌套在其他查询中的查询</p><h4 id="版本要求"><a href="#版本要求" class="headerlink" title="版本要求"></a>版本要求</h4><p>要使用子查询，必须使用MySQL 4.1或更高级的版本</p><h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><ol><li>过滤数据</li><li>作为计算字段使用</li></ol><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="过滤数据"><a href="#过滤数据" class="headerlink" title="过滤数据"></a>过滤数据</h4><p>查询 t_class 班级表的id小于3的班级的所有学生</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t_student <span class="keyword">WHERE</span> class_Id <span class="keyword">IN</span> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> t_class <span class="keyword">WHERE</span> id<span class="operator">&lt;</span><span class="number">3</span>);</span><br></pre></td></tr></table></figure><h4 id="作为计算字段使用"><a href="#作为计算字段使用" class="headerlink" title="作为计算字段使用"></a>作为计算字段使用</h4><p>查询各个班号下的学生人数</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,(<span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">FROM</span> t_student <span class="keyword">WHERE</span> t_student.`class_Id`<span class="operator">=</span>t_class.`id`) <span class="keyword">AS</span> student_num <span class="keyword">FROM</span> t_class;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/29.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="MySQL" scheme="http://example.com/categories/MySQL/"/>
+    
+    
+    <category term="MySQL" scheme="http://example.com/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>MySQL分组数据</title>
@@ -411,27 +432,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/78.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="RabbitMQ" scheme="http://example.com/categories/RabbitMQ/"/>
-    
-    
-    <category term="RabbitMQ" scheme="http://example.com/tags/RabbitMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RabbitMQ报错：reply-code=404, reply-text=NOT_FOUND - no</title>
-    <link href="http://example.com/347.html"/>
-    <id>http://example.com/347.html</id>
-    <published>2021-09-05T02:07:09.000Z</published>
-    <updated>2021-09-05T04:05:05.987Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="情况一"><a href="#情况一" class="headerlink" title="情况一"></a>情况一</h3><h4 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h4><p>reply-code=404, reply-text=NOT_FOUND - no exchange</p><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>只启动Provider，然后发送消息到队列，如果没有创建交换机（RabbitMQ中原来没有对应交换机），就会报错</p><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><p>有两种解决办法：</p><p>①先启动Consumer，会自动创建RabbitMQ配置类中的交换机和队列，然后启动Provider发送消息到队列即可</p><p>②先启动了Provider，但是先不要发送消息，启动Consumer后再发送消息到队列</p><h3 id="情况二"><a href="#情况二" class="headerlink" title="情况二"></a>情况二</h3><h4 id="报错信息-1"><a href="#报错信息-1" class="headerlink" title="报错信息"></a>报错信息</h4><p>reply-code=404, reply-text=NOT_FOUND - no queue</p><h4 id="原因-1"><a href="#原因-1" class="headerlink" title="原因"></a>原因</h4><p>RabbitMQ配置类没有生效</p><h4 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h4><p>在Consumer启动类添加注解@ComponentScan，我的配置类在 com.ledao.common.config 目录下，扫描的范围如下：（下面两种方式都行）</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//扫描到上三级目录，范围更大</span></span><br><span class="line"><span class="meta">@ComponentScan(basePackages = &quot;com&quot;)</span></span><br><span class="line"><span class="comment">//扫描到上两级目录</span></span><br><span class="line"><span class="meta">@ComponentScan(basePackages = &quot;com.ledao&quot;)</span></span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20103232.jpg"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/63.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
