@@ -1507,8 +1507,9 @@
   <entry>
     <title>idea从GitHub克隆项目</title>
     <url>/146.html</url>
-    <content><![CDATA[<h3 id="获取GitHub项目的git链接"><a href="#获取GitHub项目的git链接" class="headerlink" title="获取GitHub项目的git链接"></a><strong>获取GitHub项目的git链接</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035554.jpg" alt="img"></p>
-<h3 id="开始克隆（分两种类型：①克隆别人或自己的项目②克隆自己的项目）"><a href="#开始克隆（分两种类型：①克隆别人或自己的项目②克隆自己的项目）" class="headerlink" title="开始克隆（分两种类型：①克隆别人或自己的项目②克隆自己的项目）"></a><strong>开始克隆（分两种类型：①克隆别人或自己的项目②克隆自己的项目）</strong></h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035907.jpg" alt="img"></strong></p>
+    <content><![CDATA[<h3 id="获取Git链接"><a href="#获取Git链接" class="headerlink" title="获取Git链接"></a>获取Git链接</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035554.jpg" alt="img"></p>
+<h3 id="开始克隆"><a href="#开始克隆" class="headerlink" title="开始克隆"></a>开始克隆</h3><p>分两种类型：①克隆别人或自己的项目②克隆自己的项目</p>
+<p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035907.jpg" alt="img"></strong></p>
 <p>①克隆别人或自己的项目</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615040001.jpg" alt="img"></p>
 <p>②克隆自己的项目</p>
@@ -2799,7 +2800,7 @@
     <url>/171.html</url>
     <content><![CDATA[<h3 id="引入Log4j依赖"><a href="#引入Log4j依赖" class="headerlink" title="引入Log4j依赖"></a>引入Log4j依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="新建一个log4j-properties文件"><a href="#新建一个log4j-properties文件" class="headerlink" title="新建一个log4j.properties文件"></a>新建一个log4j.properties文件</h3><p>文件存放位置：</p>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>新建一个log4j.properties文件，文件存放位置：</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621124219.jpg" alt="img"></p>
 <p>文件内容如下：</p>
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">log4j.rootLogger</span>=<span class="string">DEBUG, Console ,File  </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#Console</span></span><br><span class="line"><span class="meta">log4j.appender.Console</span>=<span class="string">org.apache.log4j.ConsoleAppender  </span></span><br><span class="line"><span class="meta">log4j.appender.Console.layout</span>=<span class="string">org.apache.log4j.PatternLayout  </span></span><br><span class="line"><span class="meta">log4j.appender.Console.layout.ConversionPattern</span>=<span class="string">%d [%t] %-5p [%c] - %m%n</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#File</span></span><br><span class="line"><span class="meta">log4j.appender.File</span> = <span class="string">org.apache.log4j.FileAppender</span></span><br><span class="line"><span class="meta">log4j.appender.File.File</span> = <span class="string">E://myLog.log</span></span><br><span class="line"><span class="meta">log4j.appender.File.layout</span> = <span class="string">org.apache.log4j.PatternLayout</span></span><br><span class="line"><span class="meta">log4j.appender.File.layout.ConversionPattern</span> =<span class="string">%d [%t] %-5p [%c] - %m%n</span></span><br></pre></td></tr></table></figure>
