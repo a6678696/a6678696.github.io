@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-31T13:54:06.660Z</updated>
+  <updated>2021-11-01T11:07:11.384Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CentOS7在线安装Node.js16</title>
+    <link href="http://example.com/380.html"/>
+    <id>http://example.com/380.html</id>
+    <published>2021-10-31T16:44:43.000Z</published>
+    <updated>2021-11-01T11:07:11.384Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="查看旧版Node-js"><a href="#查看旧版Node-js" class="headerlink" title="查看旧版Node.js"></a>查看旧版Node.js</h3><p>查看是否已经安装了旧的<code>Node.js</code>，如果安装过<code>Node.js</code>就把它卸载</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove nodejs</span><br></pre></td></tr></table></figure><h3 id="获取Node-js资源"><a href="#获取Node-js资源" class="headerlink" title="获取Node.js资源"></a>获取Node.js资源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --silent --location https://rpm.nodesource.com/setup_16.x | bash -</span><br></pre></td></tr></table></figure><h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nodejs</span><br></pre></td></tr></table></figure><h3 id="安装淘宝镜像cnpm"><a href="#安装淘宝镜像cnpm" class="headerlink" title="安装淘宝镜像cnpm"></a>安装淘宝镜像cnpm</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure><h3 id="查看安装版本"><a href="#查看安装版本" class="headerlink" title="查看安装版本"></a>查看安装版本</h3><p>输入以下3条命令都可以看到安装的版本号说明安装已经成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/30.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CentOS7" scheme="http://example.com/categories/CentOS7/"/>
+    
+    
+    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    
+    <category term="Node.js" scheme="http://example.com/tags/Node-js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在idea中使用Git命令</title>
     <link href="http://example.com/379.html"/>
     <id>http://example.com/379.html</id>
     <published>2021-10-31T13:33:25.000Z</published>
-    <updated>2021-10-31T13:54:06.660Z</updated>
+    <updated>2021-10-31T14:09:04.360Z</updated>
     
     <content type="html"><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><p>打开<code>idea</code>的设置界面，找到<code>Tools -&gt; Terminal</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-31%20213806.jpg"></p><h3 id="设置本地Git"><a href="#设置本地Git" class="headerlink" title="设置本地Git"></a>设置本地Git</h3><p>在上图的<code>Shell path</code>中选择本地<code>Git</code>的<code>bash.exe</code>安装路径</p><h3 id="使用Git命令"><a href="#使用Git命令" class="headerlink" title="使用Git命令"></a>使用Git命令</h3><p>点击<code>idea</code>最下面的<code>Terminal</code>，即可打开<code>Git</code>命令行界面，然后就可以使用<code>Git</code>命令了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-31%20214941.jpg"></p>]]></content>
     
@@ -34,6 +57,8 @@
     
     
     <category term="idea使用" scheme="http://example.com/tags/idea%E4%BD%BF%E7%94%A8/"/>
+    
+    <category term="Git" scheme="http://example.com/tags/Git/"/>
     
   </entry>
   
@@ -409,27 +434,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/72.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Shiro" scheme="http://example.com/categories/Shiro/"/>
-    
-    
-    <category term="Shiro" scheme="http://example.com/tags/Shiro/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Shiro授权</title>
-    <link href="http://example.com/360.html"/>
-    <id>http://example.com/360.html</id>
-    <published>2021-09-15T03:10:02.000Z</published>
-    <updated>2021-09-15T16:42:05.670Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="授权过程"><a href="#授权过程" class="headerlink" title="授权过程"></a>授权过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-15%20193514.png"></p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authz.AuthorizationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,该用户的角色有admin和teacher</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher&quot;</span>);</span><br><span class="line">        <span class="comment">//构建securityManager环境</span></span><br><span class="line">        DefaultSecurityManager securityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将上面的用户交给securityManager管理</span></span><br><span class="line">        securityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(securityManager);</span><br><span class="line">        <span class="comment">//获取当前securityManager环境的subject主体</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">        <span class="comment">//设置登录用户的token</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//查看是否登录成功</span></span><br><span class="line">            System.out.println(subject.isAuthenticated() ? <span class="string">&quot;登录成功&quot;</span> : <span class="string">&quot;登录失败&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">//检查成功登录的用户是否有admin和teacher1两个角色</span></span><br><span class="line">                subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (AuthorizationException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">                System.out.println(<span class="string">&quot;登录的用户与检查的角色不相符!!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误!!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>如果subject.checkRoles(“admin”, “teacher1”)，那么程序会报错，提示没有teacher1这个角色；如果subject.checkRoles(“admin”, “teacher”)，那么程序不会报错</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/61.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
