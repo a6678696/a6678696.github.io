@@ -16156,7 +16156,7 @@
       </tags>
   </entry>
   <entry>
-    <title>CentOS7在线安装Node.js16</title>
+    <title>CentOS7在线安装Node.js</title>
     <url>/380.html</url>
     <content><![CDATA[<h3 id="查看旧版Node-js"><a href="#查看旧版Node-js" class="headerlink" title="查看旧版Node.js"></a>查看旧版Node.js</h3><p>查看是否已经安装了旧的<code>Node.js</code>，如果安装过<code>Node.js</code>就把它卸载</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum remove nodejs</span><br></pre></td></tr></table></figure>
