@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/15.html</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/51.html</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/82.html</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/113.html</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/115.html</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/251.html</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/280.html</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/314.html</loc>
+    
+    <lastmod>2021-11-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/383.html</loc>
     
     <lastmod>2021-11-04</lastmod>
@@ -297,13 +353,6 @@
   
   <url>
     <loc>http://example.com/17.html</loc>
-    
-    <lastmod>2021-10-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/15.html</loc>
     
     <lastmod>2021-10-27</lastmod>
     
@@ -961,58 +1010,9 @@
   </url>
   
   <url>
-    <loc>http://example.com/314.html</loc>
-    
-    <lastmod>2021-08-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://example.com/315.html</loc>
     
     <lastmod>2021-08-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/113.html</loc>
-    
-    <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/280.html</loc>
-    
-    <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/251.html</loc>
-    
-    <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/115.html</loc>
-    
-    <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/82.html</loc>
-    
-    <lastmod>2021-08-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/51.html</loc>
-    
-    <lastmod>2021-08-23</lastmod>
     
   </url>
   
@@ -2797,13 +2797,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Windows10/</loc>
-    <lastmod>2021-11-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/EasyUI/</loc>
     <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
@@ -3133,7 +3126,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/Windows11/</loc>
+    <loc>http://example.com/tags/Windows%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3185,13 +3178,6 @@
   
   <url>
     <loc>http://example.com/categories/GitHub/</loc>
-    <lastmod>2021-11-04</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/Windows10/</loc>
     <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -3331,7 +3317,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/Windows11/</loc>
+    <loc>http://example.com/categories/Windows%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2021-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

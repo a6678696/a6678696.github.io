@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-04T04:11:37.748Z</updated>
+  <updated>2021-11-04T04:37:16.699Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/383.html"/>
     <id>http://example.com/383.html</id>
     <published>2021-11-04T03:59:24.000Z</published>
-    <updated>2021-11-04T04:11:37.748Z</updated>
+    <updated>2021-11-04T04:37:16.699Z</updated>
     
     <content type="html"><![CDATA[<h3 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h3><p>下载地址：<a href="https://www.sordum.org/14479/windows-11-classic-context-menu-v1-0/">Windows 11 Classic Context Menu v1.0 (sordum.org)</a></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-04%20120412.png"></p><h3 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h3><p>按钮1为恢复成 Windows10 右键菜单，按钮2为恢复成 Windows11 右键菜单</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-04%20120902.png"></p>]]></content>
     
@@ -30,12 +30,10 @@
     
     
     
-    <category term="Windows11" scheme="http://example.com/categories/Windows11/"/>
+    <category term="Windows系统" scheme="http://example.com/categories/Windows%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="Windows10" scheme="http://example.com/tags/Windows10/"/>
-    
-    <category term="Windows11" scheme="http://example.com/tags/Windows11/"/>
+    <category term="Windows系统" scheme="http://example.com/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
