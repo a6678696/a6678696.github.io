@@ -3613,18 +3613,21 @@
       </tags>
   </entry>
   <entry>
-    <title>vue-cli脚手架新建Vue项目</title>
+    <title>vue-cli脚手架新建和删除Vue项目</title>
     <url>/201.html</url>
     <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>在 Vue 项目存储文件夹中打开 cmd ，输入命令：vue init webpack vue_demo，vue_demo 是项目名称，然后进行一些配置</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104020.png"></p>
 <h3 id="配置Node-js和npm"><a href="#配置Node-js和npm" class="headerlink" title="配置Node.js和npm"></a><strong>配置Node.js和npm</strong></h3><p>使用 WebStorm 打开刚刚新建的Vue文件，并配置 Node.js 和 npm ，Node interpreter 选择 Node.js 安装目录中的 node.exe 文件，Package manager 选择 Node.js 安装目录中的 node_modules 的 npm 文件夹</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151726.jpg" alt="img"></p>
-<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a><strong>启动</strong></h3><p>打开左下角终端Terminal，输入启动命令：npm run dev，按ctrl+enter运行</p>
+<h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a><strong>启动</strong></h3><p>打开左下角终端 Terminal，输入启动命令：npm run dev，按回车键即可运行</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151753.jpg" alt="img"></p>
-<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a><strong>访问</strong></h3><p>打开运行信息的地址即可访问项目，出现以下页面</p>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a><strong>访问</strong></h3><p>打开运行信息的地址即可访问项目，出现以下页面说明成功运行</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151925.jpg" alt="img"></p>
+<p>要停止运行，使用组合键 CTRL+C，然后输入 y 确认，输入 n 则是否认</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104713.jpg"></p>
 <h3 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a><strong>修改端口</strong></h3><p>修改端口为 80 ，让项目启动时自动打开浏览器（修改 config 文件夹的 index.js，port: 8080 的 8080 改为 80， autoOpenBrower: false 的 false 改为 true）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151833.jpg" alt="img"></p>]]></content>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151833.jpg" alt="img"></p>
+<h3 id="删除项目"><a href="#删除项目" class="headerlink" title="删除项目"></a>删除项目</h3><p>直接删除对应文件夹即可</p>]]></content>
       <categories>
         <category>Vue.js</category>
       </categories>
@@ -16369,6 +16372,20 @@
       </categories>
       <tags>
         <tag>Windows系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实现图片居中显示</title>
+    <url>/384.html</url>
+    <content><![CDATA[<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>将 img 标签放在 p 标签内，然后 p 标签使用样式<code>text-align: center</code></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">style</span>=<span class="string">&quot;height: 66px&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://image.zoutl.cn/hexo-blog/images/logo.png&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20163102.png"></p>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>
