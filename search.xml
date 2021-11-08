@@ -1895,14 +1895,14 @@
     <title>CentOS7安装和配置Tomcat9</title>
     <url>/156.html</url>
     <content><![CDATA[<h3 id="下载tomcat"><a href="#下载tomcat" class="headerlink" title="下载tomcat"></a><strong>下载tomcat</strong></h3><p>下载地址：<a href="https://tomcat.apache.org/download-90.cgi">https://tomcat.apache.org/download-90.cgi</a></p>
-<p>下载tar.gz压缩包</p>
+<p>下载 tar.gz 压缩包</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617023834.jpg" alt="img"></p>
-<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>使用FTPRush上传Tomcat压缩包到/home/data目录</p>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>使用 FTPRush 上传 Tomcat 压缩包到 /home/data 目录</p>
 <p>详细步骤查看博客：<a href="https://blog.zoutl.cn/153.html">FTPRush向CentOS7上传文件和从CentOS7下载文件)</a></p>
-<h3 id="新建目录"><a href="#新建目录" class="headerlink" title="新建目录"></a>新建目录</h3><p>新建/home/tomcat9目录存放tomcat9</p>
+<h3 id="新建目录"><a href="#新建目录" class="headerlink" title="新建目录"></a>新建目录</h3><p>新建 /home/tomcat9 目录存放 tomcat9</p>
 <p>[root@localhost home]# mkdir tomcat9</p>
 <h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>[root@localhost data]# tar -zxvf apache-tomcat-9.0.46.tar.gz</p>
-<h3 id="移动文件夹"><a href="#移动文件夹" class="headerlink" title="移动文件夹"></a>移动文件夹</h3><p>将解压后的文件夹剪切到/home/tomcat9目录</p>
+<h3 id="移动文件夹"><a href="#移动文件夹" class="headerlink" title="移动文件夹"></a>移动文件夹</h3><p>将解压后的文件夹剪切到 /home/tomcat9 目录</p>
 <p>[root@localhost data]# mv apache-tomcat-9.0.46 /home/tomcat9/</p>
 <h3 id="修改server-xml"><a href="#修改server-xml" class="headerlink" title="修改server.xml"></a>修改server.xml</h3><p>server.xml可以配置端口，编码以及配置项目等等，我们这里就配置一个端口，把默认的8080，修改成80</p>
 <p>[root@localhost tomcat9]# vi /home/tomcat9/apache-tomcat-9.0.46/conf/server.xml</p>
@@ -3815,8 +3815,10 @@
   <entry>
     <title>在线考试系统</title>
     <url>/208.html</url>
-    <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a><strong>项目地址</strong></h3><p>GitHub前端代码地址：<a href="https://github.com/a6678696/ExamSystem2">https://github.com/a6678696/ExamSystem2</a></p>
-<p>GitHub后端代码地址：<a href="https://github.com/a6678696/ExamSystem">https://github.com/a6678696/ExamSystem</a></p>
+    <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><h4 id="GitHub地址"><a href="#GitHub地址" class="headerlink" title="GitHub地址"></a>GitHub地址</h4><p>前端代码地址：<a href="https://github.com/a6678696/ExamSystem2">https://github.com/a6678696/ExamSystem2</a></p>
+<p>后端代码地址：<a href="https://github.com/a6678696/ExamSystem">https://github.com/a6678696/ExamSystem</a></p>
+<h4 id="演示地址"><a href="#演示地址" class="headerlink" title="演示地址"></a>演示地址</h4><p><a href="http://exam.zoutl.cn/">http://exam.zoutl.cn</a></p>
+<p>学生账号–用户名:111—密码:111，学生账号–用户名:222—密码:222， 学生账号–用户名:333—密码:333</p>
 <h3 id="使用的技术"><a href="#使用的技术" class="headerlink" title="使用的技术"></a><strong>使用的技术</strong></h3><p>本项目为前后端分离项目，使用的技术有：Spring Boot、Mybatis、MySQL5.6、Vue.js、Element UI</p>
 <h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a><strong>功能介绍</strong></h3><h4 id="考生功能"><a href="#考生功能" class="headerlink" title="考生功能"></a>考生功能</h4><p>注册、登录、在线考试（交卷、强制交卷、自动交卷）、查看成绩以及试卷详情、修改密码、注销登录</p>
 <h4 id="教师功能"><a href="#教师功能" class="headerlink" title="教师功能"></a>教师功能</h4><p>登录、发布试题（单选题和填空题）、查看全部试题（包括其他教师发布的试题）、我的试题管理（增删改查）、查看全部学生成绩、修改密码、注销登录</p>
