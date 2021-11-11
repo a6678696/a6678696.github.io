@@ -6251,7 +6251,7 @@
 <h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a>安装软件包</h3><p>安装需要的软件包，yum-util 提供yum-config-manager功能，另外两个是devicemapper驱动依赖的</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br></pre></td></tr></table></figure>
 
-<h3 id="设置yum源"><a href="#设置yum源" class="headerlink" title="设置yum源"></a>设置yum源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
+<h3 id="设置yum源"><a href="#设置yum源" class="headerlink" title="设置yum源"></a>设置yum源</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br></pre></td></tr></table></figure>
 
 <h3 id="安装新版本"><a href="#安装新版本" class="headerlink" title="安装新版本"></a>安装新版本</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
 
@@ -6268,7 +6268,7 @@
 
 <p>看到<font color="#dd0000">Hello from Docker!</font>，说明容器启动成功</p>]]></content>
       <categories>
-        <category>Docker</category>
+        <category>CentOS7</category>
       </categories>
       <tags>
         <tag>CentOS7</tag>
@@ -6981,7 +6981,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 容器id:/usr/<span class="built_in">local</span>/tomcat/conf /home/tomcat/</span><br></pre></td></tr></table></figure>
 
 <p>复制 /usr/local/tomcat/webapps</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp r:/usr/<span class="built_in">local</span>/tomcat/webapps /home/tomcat/</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker cp 容器id:/usr/<span class="built_in">local</span>/tomcat/webapps /home/tomcat/</span><br></pre></td></tr></table></figure>
 
 <h3 id="创建新的Tomcat容器"><a href="#创建新的Tomcat容器" class="headerlink" title="创建新的Tomcat容器"></a>创建新的Tomcat容器</h3><p>这个容器是用来部署Java项目的，创建时挂载 <font color="#dd0000">/home/tomcat/conf、/home/tomcat/webapps、home/tomcat/logs</font></p>
 <p>创建容器并挂载目录</p>
@@ -7724,6 +7724,8 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status  firewalld</span><br></pre></td></tr></table></figure>
 
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入虚拟机IP，看到 <font color="#dd0000">Welcome to nginx! </font>就说明安装成功</p>
+<h3 id="卸载nginx"><a href="#卸载nginx" class="headerlink" title="卸载nginx"></a>卸载nginx</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum remove nginx</span><br></pre></td></tr></table></figure>
+
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>CentOS7关闭Nginx命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop nginx.service</span><br></pre></td></tr></table></figure>
 
