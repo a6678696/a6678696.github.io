@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-06T08:32:41.431Z</updated>
+  <updated>2021-11-14T09:51:47.459Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阿里云CentOS7系统手动修复漏洞</title>
+    <link href="http://example.com/385.html"/>
+    <id>http://example.com/385.html</id>
+    <published>2021-11-14T09:32:12.000Z</published>
+    <updated>2021-11-14T09:51:47.459Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>阿里云后台自动修复漏洞是需要收费的，然而手动修复漏洞只需要3个步骤：</p><ol><li>清理缓存信息</li><li>安装所有软件和系统更新</li><li>安全重启系统</li></ol><h3 id="修复过程"><a href="#修复过程" class="headerlink" title="修复过程"></a>修复过程</h3><p>依次输入以下三条命令即可</p><h4 id="清理缓存信息"><a href="#清理缓存信息" class="headerlink" title="清理缓存信息"></a>清理缓存信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br></pre></td></tr></table></figure><h4 id="安装所有软件和系统更新"><a href="#安装所有软件和系统更新" class="headerlink" title="安装所有软件和系统更新"></a>安装所有软件和系统更新</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y update</span><br></pre></td></tr></table></figure><h4 id="安全重启系统"><a href="#安全重启系统" class="headerlink" title="安全重启系统"></a>安全重启系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/70.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="CentOS7" scheme="http://example.com/categories/CentOS7/"/>
+    
+    
+    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    
+    <category term="阿里云" scheme="http://example.com/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    
+  </entry>
   
   <entry>
     <title>实现图片居中显示</title>
@@ -413,27 +436,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/19.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="MySQL" scheme="http://example.com/categories/MySQL/"/>
-    
-    
-    <category term="MySQL" scheme="http://example.com/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL汇总数据</title>
-    <link href="http://example.com/365.html"/>
-    <id>http://example.com/365.html</id>
-    <published>2021-09-17T10:10:59.000Z</published>
-    <updated>2021-09-28T08:37:36.440Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="聚集函数"><a href="#聚集函数" class="headerlink" title="聚集函数"></a>聚集函数</h3><table><thead><tr><th align="center">函数</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">AVG()</td><td align="center">返回某列的平均值</td></tr><tr><td align="center">COUNT()</td><td align="center">返回某列的行数</td></tr><tr><td align="center">MAX()</td><td align="center">返回某列的最大值</td></tr><tr><td align="center">MIN()</td><td align="center">返回某列的最小值</td></tr><tr><td align="center">SUM()</td><td align="center">返回某列值之和</td></tr></tbody></table><h4 id="AVG"><a href="#AVG" class="headerlink" title="AVG()"></a>AVG()</h4><p>获取全部学生的平均年龄</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">AVG</span>(age) <span class="keyword">AS</span> avg_age <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure><h4 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT()"></a>COUNT()</h4><p>获取学生总数量</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> student_count <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure><h4 id="MAX"><a href="#MAX" class="headerlink" title="MAX()"></a>MAX()</h4><p>获取学生年龄的最大值</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MAX</span>(age) <span class="keyword">AS</span> max_age <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure><h4 id="MIN"><a href="#MIN" class="headerlink" title="MIN()"></a>MIN()</h4><p>获取学生年龄的最小值</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MIN</span>(age) <span class="keyword">AS</span> min_age <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure><h4 id="SUM"><a href="#SUM" class="headerlink" title="SUM()"></a>SUM()</h4><p>获取学生年龄的总和</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUM</span>(age) <span class="keyword">AS</span> sum_age <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure><h3 id="聚集不同值"><a href="#聚集不同值" class="headerlink" title="聚集不同值"></a>聚集不同值</h3><p>使用DISTINCT参数，只包含不同的值；DISTINCT参数的反义是ALL参数，包含所有的值，ALL参数是默认的</p><p>查询所有不同的学生年龄的值</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> age <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure><h3 id="组合聚集函数"><a href="#组合聚集函数" class="headerlink" title="组合聚集函数"></a>组合聚集函数</h3><p>查询学生数量、平均年龄、年龄最大值、年龄最小值</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span><span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> student_count,<span class="built_in">AVG</span>(age) <span class="keyword">AS</span> avg_age,<span class="built_in">MAX</span>(age) <span class="keyword">AS</span> max_age,<span class="built_in">MIN</span>(age) <span class="keyword">AS</span> min_age <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/9.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
     
     
     
