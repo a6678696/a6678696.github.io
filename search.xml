@@ -1499,7 +1499,7 @@
 <h3 id="修改-my-default-文件"><a href="#修改-my-default-文件" class="headerlink" title="修改 my-default 文件"></a>修改 my-default 文件</h3><p>根据刚刚解压的路径修改</p>
 <p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615022815.jpg" alt="img"></strong></p>
 <p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615022826.jpg" alt="img"></strong></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>①用管理员权限运行cmd，进入bin文件夹</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>①用管理员权限运行CMD，进入bin文件夹</p>
 <p>②用 mysqld -install 命令安装</p>
 <p>③用 net start mysql 命令启动服务</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615024450.jpg" alt="img"></p>
@@ -1595,7 +1595,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows10系统定时关机cmd命令</title>
+    <title>Windows10系统定时关机CMD命令</title>
     <url>/15.html</url>
     <content><![CDATA[<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a><strong>定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 7200</span><br></pre></td></tr></table></figure>
 
@@ -1606,7 +1606,7 @@
       </categories>
       <tags>
         <tag>Windows系统</tag>
-        <tag>cmd</tag>
+        <tag>CMD</tag>
       </tags>
   </entry>
   <entry>
@@ -3638,7 +3638,7 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
 <p>安装是否安装成功，分别输入命令node –version，npm -v都可以看到版本号说明Node.js安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
-<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h3><p>打开cmd，输入命令：npm install -g <a href="mailto:&#x76;&#x75;&#101;&#x2d;&#x63;&#108;&#105;&#64;&#50;&#46;&#x39;&#46;&#x36;">&#x76;&#x75;&#101;&#x2d;&#x63;&#108;&#105;&#64;&#50;&#46;&#x39;&#46;&#x36;</a>，运行</p>
+<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h3><p>打开CMD，输入命令：npm install -g <a href="mailto:&#x76;&#117;&#x65;&#x2d;&#99;&#108;&#x69;&#64;&#x32;&#46;&#57;&#46;&#54;">&#x76;&#117;&#x65;&#x2d;&#99;&#108;&#x69;&#64;&#x32;&#46;&#57;&#46;&#54;</a>，运行</p>
 <p>等待安装完成，输入命令：vue -V，看到版本号说明脚手架安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>]]></content>
       <categories>
@@ -3940,7 +3940,7 @@
       </tags>
   </entry>
   <entry>
-    <title>cmd命令运行一个Java文件</title>
+    <title>CMD命令运行一个Java文件</title>
     <url>/210.html</url>
     <content><![CDATA[<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><p>名称为HelloWorld.java</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Hello World!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3955,7 +3955,7 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>cmd</tag>
+        <tag>CMD</tag>
       </tags>
   </entry>
   <entry>
