@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-14T09:52:04.395Z</updated>
+  <updated>2021-11-20T20:37:28.929Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/385.html"/>
     <id>http://example.com/385.html</id>
     <published>2021-11-14T09:32:12.000Z</published>
-    <updated>2021-11-14T09:52:04.395Z</updated>
+    <updated>2021-11-20T20:37:28.929Z</updated>
     
     <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>阿里云后台自动修复漏洞是需要收费的，然而手动修复漏洞只需要3个步骤：</p><ol><li>清理缓存信息</li><li>安装所有软件和系统更新</li><li>安全重启系统</li></ol><h3 id="修复过程"><a href="#修复过程" class="headerlink" title="修复过程"></a>修复过程</h3><p>依次输入以下三条命令即可</p><h4 id="清理缓存信息"><a href="#清理缓存信息" class="headerlink" title="清理缓存信息"></a>清理缓存信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br></pre></td></tr></table></figure><h4 id="安装所有软件和系统更新"><a href="#安装所有软件和系统更新" class="headerlink" title="安装所有软件和系统更新"></a>安装所有软件和系统更新</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y update</span><br></pre></td></tr></table></figure><h4 id="安全重启系统"><a href="#安全重启系统" class="headerlink" title="安全重启系统"></a>安全重启系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reboot</span><br></pre></td></tr></table></figure>]]></content>
     
