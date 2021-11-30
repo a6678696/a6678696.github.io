@@ -1770,7 +1770,10 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> &gt; 1.txt</span><br></pre></td></tr></table></figure>
 
 <h3 id="查看运行日志"><a href="#查看运行日志" class="headerlink" title="查看运行日志"></a>查看运行日志</h3><p>比如Tomcat刚刚启动时，可以动态查看日志</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tail -f 日志文件</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tail -f 日志文件</span><br></pre></td></tr></table></figure>
+
+<h3 id="sh命令"><a href="#sh命令" class="headerlink" title="sh命令"></a>sh命令</h3><p>执行一个<code>.sh</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh mkdir.sh</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
