@@ -16927,4 +16927,23 @@
         <tag>idea使用</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Nginx绑定二级域名到指定端口</title>
+    <url>/391.html</url>
+    <content><![CDATA[<p>我的Nginx版本号为：1.20.2，配置文件路径为：/etc/nginx，在conf.d文件夹的conf.d文件中添加以下代码：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">upstream</span> <span class="string">blog</span> &#123;</span><br><span class="line">  <span class="comment">#绑定8080端口</span></span><br><span class="line">  <span class="string">server</span> <span class="string">localhost:8080;</span></span><br><span class="line">  <span class="comment">#集群</span></span><br><span class="line">  <span class="comment">#server localhost:8081;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="string">server</span> &#123;</span><br><span class="line">    <span class="string">listen</span>       <span class="number">80</span><span class="string">;</span> </span><br><span class="line">    <span class="string">server_name</span>  <span class="string">www.zoutl.cn;</span> <span class="comment">#要绑定二级域名</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#charset koi8-r;</span></span><br><span class="line">    <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line">    <span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">        <span class="comment">#root   html;</span></span><br><span class="line">        <span class="comment">#index  index.html index.htm;</span></span><br><span class="line">      <span class="string">proxy_pass</span> <span class="string">http://blog;</span> <span class="comment">#要和指定的upstream相对应</span></span><br><span class="line">      <span class="string">proxy_set_header</span> <span class="string">Host</span> <span class="string">$host:$server_port;</span></span><br><span class="line">      <span class="string">proxy_set_header</span> <span class="string">X-Real-IP</span> <span class="string">$remote_addr;</span></span><br><span class="line">      <span class="string">proxy_set_header</span> <span class="string">X-Forwarded-For</span> <span class="string">$proxy_add_x_forwarded_for;</span></span><br><span class="line">      <span class="string">proxy_set_header</span> <span class="string">X-Forwarded-Scheme</span> <span class="string">$scheme;</span></span><br><span class="line">      <span class="string">proxy_connect_timeout</span> <span class="number">3</span><span class="string">;</span></span><br><span class="line">      <span class="string">proxy_read_timeout</span> <span class="number">3</span><span class="string">;</span></span><br><span class="line">      <span class="string">proxy_send_timeout</span> <span class="number">3</span><span class="string">;</span></span><br><span class="line">      <span class="string">access_log</span> <span class="string">off;</span></span><br><span class="line">      <span class="string">break;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#error_page  404              /404.html;</span></span><br><span class="line">    <span class="comment"># redirect server error pages to the static page /50x.html</span></span><br><span class="line">    <span class="string">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  <span class="string">/50x.html;</span></span><br><span class="line">    <span class="string">location</span> <span class="string">=</span> <span class="string">/50x.html</span> &#123;</span><br><span class="line">        <span class="string">root</span>   <span class="string">html;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将上面代码复制过来后，要修改的地方有三处：</p>
+<ol>
+<li>upstream的名称，以及upstream里的端口号</li>
+<li>server下的server_name，server_name的值为二级域名</li>
+<li>server下的location /的proxy_pass填<code>http://upstream的名称</code></li>
+</ol>]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
 </search>
