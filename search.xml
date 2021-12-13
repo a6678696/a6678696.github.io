@@ -16949,7 +16949,7 @@
   <entry>
     <title>Nginx配置SSL证书</title>
     <url>/392.html</url>
-    <content><![CDATA[<h3 id="添加访问规则"><a href="#添加访问规则" class="headerlink" title="添加访问规则"></a>添加访问规则</h3><p>在云服务器的安全组中的入方向添加访问规则443，Nginx配置SSL证书需要监听这个端口</p>
+    <content><![CDATA[<h3 id="添加访问规则"><a href="#添加访问规则" class="headerlink" title="添加访问规则"></a>添加访问规则</h3><p>在云服务器的安全组中的入方向添加访问规则，端口范围为：443/443，Nginx配置SSL证书需要监听这个端口</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-13%20233112.jpg"></p>
 <h3 id="下载证书"><a href="#下载证书" class="headerlink" title="下载证书"></a>下载证书</h3><p>下载Nginx类型的SSL证书</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-13%20231016.jpg"></p>
