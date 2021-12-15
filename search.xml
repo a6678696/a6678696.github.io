@@ -936,6 +936,53 @@
     <title>进销存系统</title>
     <url>/13.html</url>
     <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>GitHub地址：<a href="https://github.com/a6678696/JXC">https://github.com/a6678696/JXC</a></p>
+<p>项目演示地址：<a href="http://jxc.zoutl.cn/%EF%BC%8C%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E5%A6%82%E4%B8%8B%EF%BC%9A">http://jxc.zoutl.cn/，用户名和密码如下：</a></p>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">password</th>
+<th align="center">remarks</th>
+<th align="center">true_name</th>
+<th align="center">user_name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">admin</td>
+<td align="center">管理员</td>
+<td align="center">乐道</td>
+<td align="center">admin</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">123</td>
+<td align="center">主管</td>
+<td align="center">王大锤</td>
+<td align="center">jack</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">123</td>
+<td align="center">销售经理</td>
+<td align="center">玛丽</td>
+<td align="center">marry</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">123</td>
+<td align="center">仓库管理员</td>
+<td align="center">咪咪</td>
+<td align="center">mimi</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">333</td>
+<td align="center">主管</td>
+<td align="center">罗丹</td>
+<td align="center">luodan</td>
+</tr>
+</tbody></table>
 <h3 id="使用的技术"><a href="#使用的技术" class="headerlink" title="使用的技术"></a>使用的技术</h3><p>本系统使用 Spring Boot 架构，数据访问层采用 Spring Data Jpa，安全框架采用 Shiro，实现了完整权限系统，Controller方法采用 Shiro注解，来实现有效的权限控制；界面采用了EasyUI技术；</p>
 <h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><p>进货管理（进货入库、退货出库、进货单据查询、退货单据查询、当前库存查询）、销售管理（销售出库、客户退货、销售单据查询、客户退货查询）、库存管理（商品报损、商品报溢、库存报警、报损报溢查询）、统计报表（供应商进退货单统计、客户进退货单统计、按日统计销售利润、按月统计销售利润）、供应商管理、客户管理、商品管理、期初库存管理、权限管理模块（角色管理、用户管理）、查看系统日志、修改密码、安全退出</p>
 <h3 id="图片展示"><a href="#图片展示" class="headerlink" title="图片展示"></a>图片展示</h3><h4 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201011113454.jpg"></p>
@@ -3873,8 +3920,59 @@
     <url>/208.html</url>
     <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><h4 id="GitHub地址"><a href="#GitHub地址" class="headerlink" title="GitHub地址"></a>GitHub地址</h4><p>前端代码地址：<a href="https://github.com/a6678696/ExamSystem2">https://github.com/a6678696/ExamSystem2</a></p>
 <p>后端代码地址：<a href="https://github.com/a6678696/ExamSystem">https://github.com/a6678696/ExamSystem</a></p>
-<h4 id="演示地址"><a href="#演示地址" class="headerlink" title="演示地址"></a>演示地址</h4><p><a href="http://exam.zoutl.cn/">http://exam.zoutl.cn</a></p>
-<p>学生账号–用户名:111—密码:111，教师账号–用户名:222—密码:222， 管理员账号–用户名:333—密码:333</p>
+<p>演示地址：<a href="http://exam.zoutl.cn/">http://exam.zoutl.cn</a>，用户名和密码如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">userName</th>
+<th align="center">password</th>
+<th align="center">type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">111</td>
+<td align="center">111</td>
+<td align="center">学生</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">222</td>
+<td align="center">222</td>
+<td align="center">教师</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">333</td>
+<td align="center">333</td>
+<td align="center">管理员</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">444</td>
+<td align="center">444</td>
+<td align="center">教师</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">123</td>
+<td align="center">123</td>
+<td align="center">学生</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">321</td>
+<td align="center">321</td>
+<td align="center">学生</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">888</td>
+<td align="center">888</td>
+<td align="center">学生</td>
+</tr>
+</tbody></table>
 <h3 id="使用的技术"><a href="#使用的技术" class="headerlink" title="使用的技术"></a><strong>使用的技术</strong></h3><p>本项目为前后端分离项目，使用的技术有：Spring Boot、Mybatis、MySQL5.6、Vue.js、Element UI</p>
 <h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a><strong>功能介绍</strong></h3><h4 id="考生功能"><a href="#考生功能" class="headerlink" title="考生功能"></a>考生功能</h4><p>注册、登录、在线考试（交卷、强制交卷、自动交卷）、查看成绩以及试卷详情、修改密码、注销登录</p>
 <h4 id="教师功能"><a href="#教师功能" class="headerlink" title="教师功能"></a>教师功能</h4><p>登录、发布试题（单选题和填空题）、查看全部试题（包括其他教师发布的试题）、我的试题管理（增删改查）、查看全部学生成绩、修改密码、注销登录</p>
