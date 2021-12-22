@@ -3,11 +3,11 @@
   <title>LeDao的博客</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
-  <updated>2021-12-22T17:02:04.624Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://blog.zoutl.cn/"/>
+  <updated>2021-12-22T17:55:02.610Z</updated>
+  <id>https://blog.zoutl.cn/</id>
   
   <author>
     <name>LeDao</name>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Typora设置上传图片到又拍云</title>
-    <link href="http://example.com/403.html"/>
-    <id>http://example.com/403.html</id>
+    <link href="https://blog.zoutl.cn/400"/>
+    <id>https://blog.zoutl.cn/400</id>
     <published>2021-12-22T16:01:57.000Z</published>
-    <updated>2021-12-22T17:02:04.624Z</updated>
+    <updated>2021-12-22T17:55:02.610Z</updated>
     
     <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>我使用Typora写博客，使用的图床是又拍云云存储。博客用到的图片就需要先把图片上传至又拍云（打开又拍云上传的过程很繁琐），然后在博客中使用。如果可以在使用Typora写博客引用本地图片时，直接上传至又拍云就很方便了。</p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="安装和配置PicGo"><a href="#安装和配置PicGo" class="headerlink" title="安装和配置PicGo"></a>安装和配置PicGo</h4><blockquote><p>下载与安装</p></blockquote><p>下载地址为：<a href="https://molunerfinn.com/PicGo/">PicGo (molunerfinn.com)</a>，下载完成后，直接安装指定位置即可</p><blockquote><p>PicGo配置又拍云存储路径</p></blockquote><ol><li><p>需要配置的PicGo参数如下图所示，前4个必须设置，最后一个为存储图片的路径（如果不设置就上传根目录），<font color="#dd0000">这些参数的获取步骤继续看下面的步骤</font></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-23%20002255.png"></p></li><li><p>创建自己的云存储服务，下图的服务名称就是设定存储空间名，本步骤可以获取<code>设定存储空间名</code>和<code>设定加速域名</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-23%20001717.png"></p></li><li><p>打开云存储服务的配置后，选择存储管理标签页，在页面的最下面添加云存储的操作员，操作员的权限只选择<code>可写入</code>即可，本步骤可以获取<code>操作员</code>以及<code>操作员密码</code></p><p>步骤一：</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-23%20002907.png"></p><p>步骤二：</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-23%20003718.png"></p></li><li><p>指定存储路径不填就上传到云存储服务的根目录，如果是根目录下的文件夹就填<code>文件夹名称/</code>，如果是根目录文件夹内的文件夹就填<code>文件夹名称/文件夹名称/</code>，以此类推，此步骤可以获取<code>指定存储路径</code></p></li><li><p>这个时候就可以在PicGo的上传区上传图片到又拍云了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-23%20005327.png"></p></li></ol><h4 id="Typora配置本地PicGo程序"><a href="#Typora配置本地PicGo程序" class="headerlink" title="Typora配置本地PicGo程序"></a>Typora配置本地PicGo程序</h4><p>打开Typora的偏好设置的图像设置，然后依次配置下图划红线的五处即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-23%20005629.png" alt="2021-12-23 005629"></p><h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>Typora引用本地图片后，就会上传到又拍云，并且引用的路径也改为又拍云的</p>]]></content>
     
@@ -30,19 +30,19 @@
     
     
     
-    <category term="其它" scheme="http://example.com/categories/%E5%85%B6%E5%AE%83/"/>
+    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
     
     
-    <category term="Typora" scheme="http://example.com/tags/Typora/"/>
+    <category term="Typora" scheme="https://blog.zoutl.cn/tags/Typora/"/>
     
-    <category term="又拍云" scheme="http://example.com/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/"/>
+    <category term="又拍云" scheme="https://blog.zoutl.cn/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/"/>
     
   </entry>
   
   <entry>
     <title>Java将Markdown转化为HTML</title>
-    <link href="http://example.com/401.html"/>
-    <id>http://example.com/401.html</id>
+    <link href="https://blog.zoutl.cn/401"/>
+    <id>https://blog.zoutl.cn/401</id>
     <published>2021-12-18T14:18:07.000Z</published>
     <updated>2021-12-18T15:12:06.670Z</updated>
     
@@ -53,19 +53,19 @@
     
     
     
-    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/categories/Java/"/>
     
     
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
-    <category term="Markdown" scheme="http://example.com/tags/Markdown/"/>
+    <category term="Markdown" scheme="https://blog.zoutl.cn/tags/Markdown/"/>
     
   </entry>
   
   <entry>
     <title>Elasticsearch的head插件基本操作</title>
-    <link href="http://example.com/402.html"/>
-    <id>http://example.com/402.html</id>
+    <link href="https://blog.zoutl.cn/402"/>
+    <id>https://blog.zoutl.cn/402</id>
     <published>2021-12-17T07:19:20.000Z</published>
     <updated>2021-12-18T16:10:19.928Z</updated>
     
@@ -76,17 +76,17 @@
     
     
     
-    <category term="Elasticsearch" scheme="http://example.com/categories/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/categories/Elasticsearch/"/>
     
     
-    <category term="Elasticsearch" scheme="http://example.com/tags/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/tags/Elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7使用安装包安装Node.js</title>
-    <link href="http://example.com/399.html"/>
-    <id>http://example.com/399.html</id>
+    <link href="https://blog.zoutl.cn/399"/>
+    <id>https://blog.zoutl.cn/399</id>
     <published>2021-12-14T21:16:26.000Z</published>
     <updated>2021-12-17T14:57:19.242Z</updated>
     
@@ -97,19 +97,19 @@
     
     
     
-    <category term="CentOS7" scheme="http://example.com/categories/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/categories/CentOS7/"/>
     
     
-    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
     
-    <category term="Node.js" scheme="http://example.com/tags/Node-js/"/>
+    <category term="Node.js" scheme="https://blog.zoutl.cn/tags/Node-js/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7安装Elasticsearch的head插件</title>
-    <link href="http://example.com/398.html"/>
-    <id>http://example.com/398.html</id>
+    <link href="https://blog.zoutl.cn/398"/>
+    <id>https://blog.zoutl.cn/398</id>
     <published>2021-12-14T20:50:22.000Z</published>
     <updated>2021-12-14T22:13:36.236Z</updated>
     
@@ -120,19 +120,19 @@
     
     
     
-    <category term="Elasticsearch" scheme="http://example.com/categories/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/categories/Elasticsearch/"/>
     
     
-    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
     
-    <category term="Elasticsearch" scheme="http://example.com/tags/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/tags/Elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7安装Git的最新版本</title>
-    <link href="http://example.com/397.html"/>
-    <id>http://example.com/397.html</id>
+    <link href="https://blog.zoutl.cn/397"/>
+    <id>https://blog.zoutl.cn/397</id>
     <published>2021-12-14T20:39:11.000Z</published>
     <updated>2021-12-14T20:52:36.536Z</updated>
     
@@ -143,19 +143,19 @@
     
     
     
-    <category term="CentOS7" scheme="http://example.com/categories/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/categories/CentOS7/"/>
     
     
-    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
     
-    <category term="Git" scheme="http://example.com/tags/Git/"/>
+    <category term="Git" scheme="https://blog.zoutl.cn/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>Java操作Elasticsearch</title>
-    <link href="http://example.com/396.html"/>
-    <id>http://example.com/396.html</id>
+    <link href="https://blog.zoutl.cn/396"/>
+    <id>https://blog.zoutl.cn/396</id>
     <published>2021-12-14T19:16:18.000Z</published>
     <updated>2021-12-18T14:39:37.297Z</updated>
     
@@ -166,19 +166,19 @@
     
     
     
-    <category term="Elasticsearch" scheme="http://example.com/categories/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/categories/Elasticsearch/"/>
     
     
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
-    <category term="Elasticsearch" scheme="http://example.com/tags/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/tags/Elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>Java实现与Elasticsearch的连接</title>
-    <link href="http://example.com/395.html"/>
-    <id>http://example.com/395.html</id>
+    <link href="https://blog.zoutl.cn/395"/>
+    <id>https://blog.zoutl.cn/395</id>
     <published>2021-12-14T19:07:31.000Z</published>
     <updated>2021-12-14T20:33:34.210Z</updated>
     
@@ -189,19 +189,19 @@
     
     
     
-    <category term="Elasticsearch" scheme="http://example.com/categories/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/categories/Elasticsearch/"/>
     
     
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
-    <category term="Elasticsearch" scheme="http://example.com/tags/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/tags/Elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>CentOS7安装Elasticsearch5.5.2</title>
-    <link href="http://example.com/394.html"/>
-    <id>http://example.com/394.html</id>
+    <link href="https://blog.zoutl.cn/394"/>
+    <id>https://blog.zoutl.cn/394</id>
     <published>2021-12-14T13:54:12.000Z</published>
     <updated>2021-12-14T22:18:29.207Z</updated>
     
@@ -212,19 +212,19 @@
     
     
     
-    <category term="CentOS7" scheme="http://example.com/categories/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/categories/CentOS7/"/>
     
     
-    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
     
-    <category term="Elasticsearch" scheme="http://example.com/tags/Elasticsearch/"/>
+    <category term="Elasticsearch" scheme="https://blog.zoutl.cn/tags/Elasticsearch/"/>
     
   </entry>
   
   <entry>
     <title>Nginx获取真实用户IP</title>
-    <link href="http://example.com/393.html"/>
-    <id>http://example.com/393.html</id>
+    <link href="https://blog.zoutl.cn/393"/>
+    <id>https://blog.zoutl.cn/393</id>
     <published>2021-12-14T07:45:31.000Z</published>
     <updated>2021-12-14T08:13:32.979Z</updated>
     
@@ -235,17 +235,17 @@
     
     
     
-    <category term="Nginx" scheme="http://example.com/categories/Nginx/"/>
+    <category term="Nginx" scheme="https://blog.zoutl.cn/categories/Nginx/"/>
     
     
-    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    <category term="Nginx" scheme="https://blog.zoutl.cn/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Nginx配置SSL证书</title>
-    <link href="http://example.com/392.html"/>
-    <id>http://example.com/392.html</id>
+    <link href="https://blog.zoutl.cn/392"/>
+    <id>https://blog.zoutl.cn/392</id>
     <published>2021-12-13T15:08:18.000Z</published>
     <updated>2021-12-14T07:44:37.548Z</updated>
     
@@ -256,17 +256,17 @@
     
     
     
-    <category term="Nginx" scheme="http://example.com/categories/Nginx/"/>
+    <category term="Nginx" scheme="https://blog.zoutl.cn/categories/Nginx/"/>
     
     
-    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    <category term="Nginx" scheme="https://blog.zoutl.cn/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>Nginx绑定二级域名到指定端口</title>
-    <link href="http://example.com/391.html"/>
-    <id>http://example.com/391.html</id>
+    <link href="https://blog.zoutl.cn/391"/>
+    <id>https://blog.zoutl.cn/391</id>
     <published>2021-12-13T08:30:48.000Z</published>
     <updated>2021-12-14T07:32:29.700Z</updated>
     
@@ -277,17 +277,17 @@
     
     
     
-    <category term="Nginx" scheme="http://example.com/categories/Nginx/"/>
+    <category term="Nginx" scheme="https://blog.zoutl.cn/categories/Nginx/"/>
     
     
-    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
+    <category term="Nginx" scheme="https://blog.zoutl.cn/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>idea修改Maven默认本地仓库地址</title>
-    <link href="http://example.com/390.html"/>
-    <id>http://example.com/390.html</id>
+    <link href="https://blog.zoutl.cn/390"/>
+    <id>https://blog.zoutl.cn/390</id>
     <published>2021-12-07T13:55:22.000Z</published>
     <updated>2021-12-07T14:10:25.724Z</updated>
     
@@ -298,19 +298,19 @@
     
     
     
-    <category term="idea使用" scheme="http://example.com/categories/idea%E4%BD%BF%E7%94%A8/"/>
+    <category term="idea使用" scheme="https://blog.zoutl.cn/categories/idea%E4%BD%BF%E7%94%A8/"/>
     
     
-    <category term="Maven" scheme="http://example.com/tags/Maven/"/>
+    <category term="Maven" scheme="https://blog.zoutl.cn/tags/Maven/"/>
     
-    <category term="idea使用" scheme="http://example.com/tags/idea%E4%BD%BF%E7%94%A8/"/>
+    <category term="idea使用" scheme="https://blog.zoutl.cn/tags/idea%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
   <entry>
     <title>Java集合Stream流操作常用方法</title>
-    <link href="http://example.com/389.html"/>
-    <id>http://example.com/389.html</id>
+    <link href="https://blog.zoutl.cn/389"/>
+    <id>https://blog.zoutl.cn/389</id>
     <published>2021-11-30T11:16:51.000Z</published>
     <updated>2021-11-30T13:20:38.467Z</updated>
     
@@ -321,17 +321,17 @@
     
     
     
-    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/categories/Java/"/>
     
     
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>List对象集合排序</title>
-    <link href="http://example.com/388.html"/>
-    <id>http://example.com/388.html</id>
+    <link href="https://blog.zoutl.cn/388"/>
+    <id>https://blog.zoutl.cn/388</id>
     <published>2021-11-29T12:57:02.000Z</published>
     <updated>2021-11-29T13:48:19.459Z</updated>
     
@@ -342,17 +342,17 @@
     
     
     
-    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/categories/Java/"/>
     
     
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>List一般集合排序</title>
-    <link href="http://example.com/387.html"/>
-    <id>http://example.com/387.html</id>
+    <link href="https://blog.zoutl.cn/387"/>
+    <id>https://blog.zoutl.cn/387</id>
     <published>2021-11-27T12:53:50.000Z</published>
     <updated>2021-11-29T13:11:46.335Z</updated>
     
@@ -363,17 +363,17 @@
     
     
     
-    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/categories/Java/"/>
     
     
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>MyBatis-Plus实体类注解</title>
-    <link href="http://example.com/386.html"/>
-    <id>http://example.com/386.html</id>
+    <link href="https://blog.zoutl.cn/386"/>
+    <id>https://blog.zoutl.cn/386</id>
     <published>2021-11-21T15:02:56.000Z</published>
     <updated>2021-11-22T05:43:09.640Z</updated>
     
@@ -384,17 +384,17 @@
     
     
     
-    <category term="MyBatis-Plus" scheme="http://example.com/categories/MyBatis-Plus/"/>
+    <category term="MyBatis-Plus" scheme="https://blog.zoutl.cn/categories/MyBatis-Plus/"/>
     
     
-    <category term="MyBatis-Plus" scheme="http://example.com/tags/MyBatis-Plus/"/>
+    <category term="MyBatis-Plus" scheme="https://blog.zoutl.cn/tags/MyBatis-Plus/"/>
     
   </entry>
   
   <entry>
     <title>阿里云CentOS7系统手动修复漏洞</title>
-    <link href="http://example.com/385.html"/>
-    <id>http://example.com/385.html</id>
+    <link href="https://blog.zoutl.cn/385"/>
+    <id>https://blog.zoutl.cn/385</id>
     <published>2021-11-14T09:32:12.000Z</published>
     <updated>2021-11-21T15:03:11.320Z</updated>
     
@@ -405,19 +405,19 @@
     
     
     
-    <category term="CentOS7" scheme="http://example.com/categories/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/categories/CentOS7/"/>
     
     
-    <category term="CentOS7" scheme="http://example.com/tags/CentOS7/"/>
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
     
-    <category term="阿里云" scheme="http://example.com/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
+    <category term="阿里云" scheme="https://blog.zoutl.cn/tags/%E9%98%BF%E9%87%8C%E4%BA%91/"/>
     
   </entry>
   
   <entry>
     <title>实现图片居中显示</title>
-    <link href="http://example.com/384.html"/>
-    <id>http://example.com/384.html</id>
+    <link href="https://blog.zoutl.cn/384"/>
+    <id>https://blog.zoutl.cn/384</id>
     <published>2021-11-06T08:23:30.000Z</published>
     <updated>2021-12-16T04:48:31.079Z</updated>
     
@@ -428,17 +428,17 @@
     
     
     
-    <category term="前端" scheme="http://example.com/categories/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://blog.zoutl.cn/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>Windows11的右键菜单恢复成Windows10</title>
-    <link href="http://example.com/383.html"/>
-    <id>http://example.com/383.html</id>
+    <link href="https://blog.zoutl.cn/383"/>
+    <id>https://blog.zoutl.cn/383</id>
     <published>2021-11-04T03:59:24.000Z</published>
     <updated>2021-11-04T04:37:16.699Z</updated>
     
@@ -449,10 +449,10 @@
     
     
     
-    <category term="Windows系统" scheme="http://example.com/categories/Windows%E7%B3%BB%E7%BB%9F/"/>
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/categories/Windows%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="Windows系统" scheme="http://example.com/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
