@@ -17517,4 +17517,43 @@
         <tag>Java</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Java获取程序运行时间</title>
+    <url>/408.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>有时候我们需要获取某段代码的运行时间，以便和修改后的代码对比，看看新代码的性能是否得到提升</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>具体解决方法为，在执行该段代码<font color="#dd0000">前</font>获取当前时间，执行完该段代码<font color="#dd0000">后</font>再次获取当前时间，后面的时间减去前面的时间即可得到程序运行的时间，时间单位越小越精确</p>
+<p>获取当前时间一般有两种方式：</p>
+<ol>
+<li><p>以毫秒为单位</p>
+<p>使用System.currentTimeMillis()</p>
+</li>
+<li><p>以纳秒为单位</p>
+<p>使用System.nanoTime()</p>
+</li>
+</ol>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="以毫秒为单位"><a href="#以毫秒为单位" class="headerlink" title="以毫秒为单位"></a>以毫秒为单位</h4><blockquote>
+<p>Java代码</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-12-15 2:59</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> startTime = System.currentTimeMillis();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">            System.out.println(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> endTime = System.currentTimeMillis();</span><br><span class="line">        System.out.println(<span class="string">&quot;程序运行时间为:&quot;</span> + (endTime - startTime)+<span class="string">&quot;毫秒&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>结果</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-26%20211552.jpg"></p>
+<h4 id="以纳秒为单位"><a href="#以纳秒为单位" class="headerlink" title="以纳秒为单位"></a>以纳秒为单位</h4><blockquote>
+<p>Java代码</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-12-15 2:59</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> startTime = System.nanoTime();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10000</span>; i++) &#123;</span><br><span class="line">            System.out.println(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">long</span> endTime = System.nanoTime();</span><br><span class="line">        System.out.println(<span class="string">&quot;程序运行时间为:&quot;</span> + (endTime - startTime) + <span class="string">&quot;纳秒&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>结果</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-26%20211735.jpg"></p>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
 </search>
