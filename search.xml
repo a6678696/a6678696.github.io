@@ -1007,53 +1007,6 @@
     <title>进销存系统</title>
     <url>/13.html</url>
     <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>GitHub地址：<a href="https://github.com/a6678696/JXC">https://github.com/a6678696/JXC</a></p>
-<p>项目演示地址：<a href="http://jxc.zoutl.cn/login.html">http://jxc.zoutl.cn/login.html</a>，用户名和密码如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">id</th>
-<th align="center">password</th>
-<th align="center">remarks</th>
-<th align="center">true_name</th>
-<th align="center">user_name</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="center">admin</td>
-<td align="center">管理员</td>
-<td align="center">乐道</td>
-<td align="center">admin</td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center">123</td>
-<td align="center">主管</td>
-<td align="center">王大锤</td>
-<td align="center">jack</td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center">123</td>
-<td align="center">销售经理</td>
-<td align="center">玛丽</td>
-<td align="center">marry</td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center">123</td>
-<td align="center">仓库管理员</td>
-<td align="center">咪咪</td>
-<td align="center">mimi</td>
-</tr>
-<tr>
-<td align="center">7</td>
-<td align="center">333</td>
-<td align="center">主管</td>
-<td align="center">罗丹</td>
-<td align="center">luodan</td>
-</tr>
-</tbody></table>
 <h3 id="使用的技术"><a href="#使用的技术" class="headerlink" title="使用的技术"></a>使用的技术</h3><p>本系统使用Spring Boot架构，数据访问层采用Spring Data Jpa，安全框架采用Shiro，实现了完整权限系统，Controller方法采用Shiro注解，来实现有效的权限控制；界面采用了EasyUI技术；</p>
 <h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><p>进货管理（进货入库、退货出库、进货单据查询、退货单据查询、当前库存查询）、销售管理（销售出库、客户退货、销售单据查询、客户退货查询）、库存管理（商品报损、商品报溢、库存报警、报损报溢查询）、统计报表（供应商进退货单统计、客户进退货单统计、按日统计销售利润、按月统计销售利润）、供应商管理、客户管理、商品管理、期初库存管理、权限管理模块（角色管理、用户管理）、查看系统日志、修改密码、安全退出</p>
 <h3 id="图片展示"><a href="#图片展示" class="headerlink" title="图片展示"></a>图片展示</h3><h4 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201011113454.jpg"></p>
@@ -17554,6 +17507,45 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea配置远程调试</title>
+    <url>/409.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>所谓远程调试，是指将Java项目打包成war或者jar包并且部署后，在idea中进行调试</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="idea配置远程JVM调试"><a href="#idea配置远程JVM调试" class="headerlink" title="idea配置远程JVM调试"></a>idea配置远程JVM调试</h4><blockquote>
+<p>打开添加配置界面</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-02%20153831.jpg"></p>
+<blockquote>
+<p>选择Remote JVM Debug</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-02%20150353.jpg"></p>
+<blockquote>
+<p>填写相关配置</p>
+</blockquote>
+<p>Name随意填写，Host填运行Java项目的服务器IP，Post填项目所在端口号，Use moudule classpath选择调试的项目模块，其它的配置和下图一样即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-02%20150737.jpg"></p>
+<h4 id="配置远程调试接口"><a href="#配置远程调试接口" class="headerlink" title="配置远程调试接口"></a>配置远程调试接口</h4><p>Java项目打包有两种方式：①war包 ②jar包，所以配置方式也不同</p>
+<blockquote>
+<p>当项目打包成war包</p>
+</blockquote>
+<p>修改Tomcat的bin文件夹的catalina.sh，在下图的位置添加以下代码：（调试端口为5005，<font color="#dd0000">记得开放防火墙的5005端口，如果是云服务器还需要配置安全组规则</font>）</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">JAVA_OPTS=&quot;$JAVA_OPTS -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005&quot;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-02%20155029.png"></p>
+<blockquote>
+<p>当项目打包成jar包，使用以下命令部署项目</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -jar -agentlib:jdwp=transport=dt_socket,server=y,<span class="built_in">suspend</span>=n,address=5005 web.jar</span><br></pre></td></tr></table></figure>
+
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>运行好项目后，选择刚刚配置好的Debug服务，然后点击Debug按钮即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-02%20155502.jpg"></p>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
       </tags>
   </entry>
 </search>
