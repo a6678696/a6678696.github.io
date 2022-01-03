@@ -17585,7 +17585,7 @@
 <blockquote>
 <p>然后重新pull到GitHub即可</p>
 </blockquote>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>不要直接在GitHub仓库新建这个文件，不然后期提交会造成：远程仓库和本地仓库的内容不一致（报错：Push to origin/master was rejected），这个报错的解决办法仓库博客：<a href="https://blog.zoutl.cn/410.html">idea 提交代码到 GitHub 报错：Push to origin/master was rejected | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>不要直接在GitHub仓库新建这个文件，不然后期提交会造成：远程仓库和本地仓库的内容不一致（报错：Push to origin/master was rejected），这个报错的解决办法查看博客：<a href="https://blog.zoutl.cn/410.html">idea 提交代码到 GitHub 报错：Push to origin/master was rejected | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
       <categories>
         <category>GitHub</category>
       </categories>
