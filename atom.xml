@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-01-03T15:31:14.440Z</updated>
+  <updated>2022-01-03T15:35:04.590Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.zoutl.cn/411.html"/>
     <id>https://blog.zoutl.cn/411.html</id>
     <published>2022-01-03T15:15:03.000Z</published>
-    <updated>2022-01-03T15:31:14.440Z</updated>
+    <updated>2022-01-03T15:35:04.590Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>GitHub判断项目类型，主要是通过分析什么类型的文件占比最高，例如：如果JavaScript文件占比最高则GitHub就会认定项目为JavaScript项目</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><blockquote><p>在本地仓库新建一个名称为<code>.gitattributes</code>的文件，文件内容如下：</p></blockquote><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">*.js</span> <span class="string">linguist-language=java</span></span><br><span class="line"><span class="meta">*.css</span> <span class="string">linguist-language=java</span></span><br><span class="line"><span class="meta">*.html</span> <span class="string">linguist-language=java</span></span><br><span class="line"><span class="meta">*.jsp</span> <span class="string">linguist-language=java</span></span><br></pre></td></tr></table></figure><blockquote><p>然后pull到GitHub即可</p></blockquote><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>不要直接在GitHub仓库新建这个文件，不然后期提交会造成：远程仓库和本地仓库的内容不一致（报错：Push to origin/master was rejected），这个报错的解决办法查看博客：<a href="https://blog.zoutl.cn/410.html">idea 提交代码到 GitHub 报错：Push to origin/master was rejected | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>GitHub判断项目类型，主要是通过分析什么类型的文件占比最高，例如：如果JavaScript文件占比最高则GitHub就会认定项目为JavaScript项目</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><blockquote><p>在本地仓库新建一个名称为<code>.gitattributes</code>的文件，文件内容如下：</p></blockquote><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">*.js</span> <span class="string">linguist-language=java</span></span><br><span class="line"><span class="meta">*.css</span> <span class="string">linguist-language=java</span></span><br><span class="line"><span class="meta">*.html</span> <span class="string">linguist-language=java</span></span><br><span class="line"><span class="meta">*.jsp</span> <span class="string">linguist-language=java</span></span><br></pre></td></tr></table></figure><blockquote><p>然后push到GitHub即可</p></blockquote><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>不要直接在GitHub仓库新建这个文件，不然后期提交会造成：远程仓库和本地仓库的内容不一致（报错：Push to origin/master was rejected），这个报错的解决办法查看博客：<a href="https://blog.zoutl.cn/410.html">idea 提交代码到 GitHub 报错：Push to origin/master was rejected | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/23.jpg&quot;&gt;&lt;/p&gt;</summary>
@@ -42,9 +42,9 @@
     <link href="https://blog.zoutl.cn/410.html"/>
     <id>https://blog.zoutl.cn/410.html</id>
     <published>2022-01-03T15:03:04.000Z</published>
-    <updated>2022-01-03T15:24:35.196Z</updated>
+    <updated>2022-01-03T15:34:59.797Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>远程仓库和本地仓库的内容不一致</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><blockquote><p>打开<code>Git Bash</code>命令，进入本地仓库对应的项目文件夹（即：<code>.git</code>文件夹所在目录，右击项目文件夹选择<code>Git Bash Here</code>）</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-03%20230839.jpg"></p><blockquote><p>输入以下命令：（可能会打开一个文件，输入<code>:q</code>并按回车键退出即可）</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories</span><br></pre></td></tr></table></figure><blockquote><p>然后重新pull到GitHub即可</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>远程仓库和本地仓库的内容不一致</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><blockquote><p>打开<code>Git Bash</code>命令，进入本地仓库对应的项目文件夹（即：<code>.git</code>文件夹所在目录，右击项目文件夹选择<code>Git Bash Here</code>）</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-03%20230839.jpg"></p><blockquote><p>输入以下命令：（可能会打开一个文件，输入<code>:q</code>并按回车键退出即可）</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories</span><br></pre></td></tr></table></figure><blockquote><p>然后重新push到GitHub即可</p></blockquote>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/23.jpg&quot;&gt;&lt;/p&gt;</summary>
