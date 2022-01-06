@@ -17593,4 +17593,17 @@
         <tag>GitHub</tag>
       </tags>
   </entry>
+  <entry>
+    <title>idea执行Maven命令时报错：No valid Maven installation found. Either set the home directory in the configuration dialog or set the M2_HOME environment variable on your system.</title>
+    <url>/412.html</url>
+    <content><![CDATA[<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>idea配置的Maven安装路径和实际的不符</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>打开idea设置的Maven配置，修改<code>Maven home path</code>为本机的Maven安装路径即可（一定要是bin文件夹的上层目录）</p>
+<p><img src=""><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-06%20221445.jpg" alt="2022-01-06 221445"></p>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
+      </tags>
+  </entry>
 </search>
