@@ -17613,4 +17613,17 @@
 <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p> 如果确实需要获取ajax的结果赋值给请求方法外面的变量，那么可以ajax多加一个参数：<code>async=false</code>，就会同步执行</p>
 <h3 id="Ajax完整请求代码"><a href="#Ajax完整请求代码" class="headerlink" title="Ajax完整请求代码"></a>Ajax完整请求代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkRegisterValue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> imageCode;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&quot;/user/getRegisterCode&quot;</span>,</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&quot;get&quot;</span>,</span><br><span class="line">        <span class="attr">async</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (result.success) &#123;</span><br><span class="line">                imageCode = result.imageCode;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
+  <entry>
+    <title>MyBatis-Plus更新字段时无法设置为null值</title>
+    <url>/414.html</url>
+    <content><![CDATA[<h3 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h3><p>我们在更新某个用户信息时，如果要将该用户信息的某个字段更新为null值，直接设置用户实体的对应属性为null值是不行的，因为MyBatis-Plus默认看到null值就不更新该字段</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在实体类的对应属性上添加注解<code>@TableField(updateStrategy = FieldStrategy.IGNORED)</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 答复</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@TableField(updateStrategy = FieldStrategy.IGNORED)</span></span><br><span class="line"><span class="keyword">private</span> String reply;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>MyBatis-Plus</category>
+      </categories>
+      <tags>
+        <tag>MyBatis-Plus</tag>
+      </tags>
+  </entry>
 </search>
