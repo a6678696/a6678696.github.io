@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-01-12T10:40:40.003Z</updated>
+  <updated>2022-01-15T03:38:40.147Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>改变Windows系统文件夹的样式及颜色</title>
+    <link href="https://blog.zoutl.cn/415.html"/>
+    <id>https://blog.zoutl.cn/415.html</id>
+    <published>2022-01-15T03:18:06.000Z</published>
+    <updated>2022-01-15T03:38:40.147Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><h4 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h4><p>百度网盘链接：<a href="https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA">https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA</a></p><p>提取码：<code>n0vf</code></p><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>解压后即可运行，解压后的文件夹有两个exe可执行文件：FolderPainter.exe和FolderPainter_x64.exe，64位系统使用FolderPainter_x64.exe，其它使用FolderPainter_x64.exe</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112414.png"></p><h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="设置软件语言为中文"><a href="#设置软件语言为中文" class="headerlink" title="设置软件语言为中文"></a>设置软件语言为中文</h4><p>打开软件后，依次选择右下角的Menu、Languages、Chinese-Simplified即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112627.png" alt="2022-01-15 112627"></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112558.png" alt="2022-01-15 112558"></p><h4 id="安装颜色、样式、图标"><a href="#安装颜色、样式、图标" class="headerlink" title="安装颜色、样式、图标"></a>安装颜色、样式、图标</h4><p>要安装哪个就在左侧的选择框中给哪个打勾（下图只安装了颜色），然后点击安装即可（卸载的方法也一样）</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20113019.png"></p><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>右键点击某个文件夹，然后选择<code>文件夹颜色</code>再选中自己喜欢的颜色即可，如果要恢复原状就选中<code>默认文件夹图标</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20113447.png"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/73.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/categories/Windows%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>MyBatis-Plus更新字段时无法设置为null值</title>
@@ -430,27 +451,6 @@
     <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
     
     <category term="Elasticsearch" scheme="https://blog.zoutl.cn/tags/Elasticsearch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nginx获取真实用户IP</title>
-    <link href="https://blog.zoutl.cn/393.html"/>
-    <id>https://blog.zoutl.cn/393.html</id>
-    <published>2021-12-14T07:45:31.000Z</published>
-    <updated>2021-12-14T08:13:32.979Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h3><p>通过Nginx反向代理后，HttpServletRequest.getRemoteAddr()方法无法获取到用户的真实IP，只能获取到本机IP<code>127.0.0.1</code>，这是因为传入Java后端的是Nginx本机的IP</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>将用户的IP存储到Nginx的消息头，Java后端直接通过消息头获取用户真实的IP</p><h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><h4 id="Nginx将真实IP存储到消息头"><a href="#Nginx将真实IP存储到消息头" class="headerlink" title="Nginx将真实IP存储到消息头"></a>Nginx将真实IP存储到消息头</h4><p>在Nginx配置文件的http{}中加入以下代码：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下面三行为重点，添加后就可以获取到客户端真实IP</span></span><br><span class="line"><span class="string">set_real_ip_from</span> <span class="number">0.0</span><span class="number">.0</span><span class="number">.0</span><span class="string">/0;</span></span><br><span class="line"><span class="string">real_ip_header</span>  <span class="string">X-Forwarded-For;</span></span><br><span class="line"><span class="string">real_ip_recursive</span> <span class="string">on;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment"># 下面三行为常见反向代理传递真实客户端IP的配置，配置在http&#123;&#125;中，则全局应用在下面的所有server中</span></span><br><span class="line"><span class="string">proxy_set_header</span> <span class="string">Host</span>      <span class="string">$host;</span></span><br><span class="line"><span class="string">proxy_set_header</span> <span class="string">X-Real-IP</span> <span class="string">$remote_addr;</span></span><br><span class="line"><span class="string">proxy_set_header</span> <span class="string">X-Forwarded-For</span> <span class="string">$proxy_add_x_forwarded_for;</span></span><br></pre></td></tr></table></figure><h4 id="Java获取真实IP"><a href="#Java获取真实IP" class="headerlink" title="Java获取真实IP"></a>Java获取真实IP</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.servlet.http.HttpServletRequest;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-12-14 12:20</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IpUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getIpAddr</span><span class="params">(HttpServletRequest request)</span> </span>&#123;</span><br><span class="line">        String fromSource = <span class="string">&quot;X-Real-IP&quot;</span>;</span><br><span class="line">        String ip = request.getHeader(fromSource);</span><br><span class="line">        <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">&quot;unknown&quot;</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getHeader(<span class="string">&quot;X-Forwarded-For&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">&quot;unknown&quot;</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getHeader(<span class="string">&quot;Proxy-Client-IP&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">&quot;unknown&quot;</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getHeader(<span class="string">&quot;WL-Proxy-Client-IP&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (ip == <span class="keyword">null</span> || ip.length() == <span class="number">0</span> || <span class="string">&quot;unknown&quot;</span>.equalsIgnoreCase(ip)) &#123;</span><br><span class="line">            ip = request.getRemoteAddr();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ip;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/12.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Nginx" scheme="https://blog.zoutl.cn/categories/Nginx/"/>
-    
-    
-    <category term="Nginx" scheme="https://blog.zoutl.cn/tags/Nginx/"/>
     
   </entry>
   
