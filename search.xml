@@ -12486,21 +12486,22 @@
       </tags>
   </entry>
   <entry>
-    <title>IntelliJ IDEA 连接数据库报错及解决！</title>
+    <title>idea连接数据库报错及解决！</title>
     <url>/5.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>使用JDBC连接MySQL时出现下面错误：</p>
 <p><font color="#dd0000">The server time zone value ‘�й���׼ʱ��’ is unrecognizedor representsmore than one timezone. You must configure either the server or JDBC driver(via the serverTimezone configuration</font></p>
 <h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>发现这是因为安装MySQL的时候时区设置地不正确，MySQL默认的是美国的时区，而我们中国大陆要比他们迟8小时，采用+8:00格式。在你没有指定MySQL驱动版本的情况下它自动依赖的驱动是8.0.12很高的版本，这是由于数据库和系统时区差异所造成的，在JDBC连接的url后面加上 serverTimezone=GMT 即可解决问题，如果需要使用 gmt+8 时区，需要写成 GMT%2B8 ，否则会被解析为空。再一个解决办法就是使用低版本的 MySQL JDBC 驱动，5.1.28 不会存在时区的问题。</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在连接字符串后面加上 <code>?serverTimezone=UTC</code> ，其中 UTC 是统一标准世界时间，完整的连接字符串示例如下：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">jdbc</span>:<span class="string">mysql://localhost:3306/test?serverTimezone=UTC</span></span><br></pre></td></tr></table></figure>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在连接字符串后面加上 <code>serverTimezone=GMT%2B8</code> ，其中 UTC 是统一标准世界时间，完整的连接字符串示例如下：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">jdbc</span>:<span class="string">mysql://localhost:3306/db_secondhandtrade?serverTimezone=GMT%2B8</span></span><br></pre></td></tr></table></figure>
 
-<p>如果要解决中文乱码输入问题，则加上<code>?useUnicode=true&amp;characterEncoding=UTF-8</code>，完整字符串如下：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">jdbc</span>:<span class="string">mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8</span></span><br></pre></td></tr></table></figure>
+<p>如果要解决中文乱码输入问题，则加上<code>useUnicode=true&amp;characterEncoding=utf8</code>，完整字符串如下：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">jdbc</span>:<span class="string">mysql://localhost:3306/db_secondhandtrade?useUnicode=true&amp;characterEncoding=utf8</span></span><br></pre></td></tr></table></figure>
 
 <p>一般都是两者一起使用，完整字符串如下：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">jdbc</span>:<span class="string">mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">jdbc</span>:<span class="string">mysql://localhost:3306/db_secondhandtrade?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010133723.jpg"></p>]]></content>
+<p>idea连接MySQL界面如下：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-17%20231338.png"></p>]]></content>
       <categories>
         <category>MySQL</category>
       </categories>
@@ -17690,7 +17691,7 @@
 <blockquote>
 <p>menuPersonalHubs.html（被嵌入的页面）</p>
 </blockquote>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--suppress ALL--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;m&quot;</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--suppress ALL--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;m&quot;</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>被嵌入页面的<code>&lt;div&gt;</code>标签的id一定要和实际的对应哦，不然会出错</p>]]></content>
       <categories>
