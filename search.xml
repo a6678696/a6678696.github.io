@@ -13406,6 +13406,10 @@
     <content><![CDATA[<h3 id="th-text"><a href="#th-text" class="headerlink" title="th:text"></a>th:text</h3><p>用于显示转义后的文本（不尊重我们的HTML标记而对其进行转义）</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:text=&quot;$&#123;blog.title&#125;&quot;</span><br></pre></td></tr></table></figure>
 
+<h4 id="截取"><a href="#截取" class="headerlink" title="截取"></a>截取</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:text=&quot;$&#123;#strings.abbreviate(blog.title,18)&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="格式化时间"><a href="#格式化时间" class="headerlink" title="格式化时间"></a>格式化时间</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:text=&quot;$&#123;#dates.format(blog.releaseDate,&#x27;yyyy-MM-dd HH:mm:ss&#x27;)&#125;&quot;</span><br></pre></td></tr></table></figure>
+
 <h3 id="th-utext"><a href="#th-utext" class="headerlink" title="th:utext"></a>th:utext</h3><p>用于显示未转义的文本（尊重我们的HTML标记而不对其进行转义）</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:utext=&quot;$&#123;blog.content&#125;&quot;</span><br></pre></td></tr></table></figure>
 
@@ -13414,10 +13418,6 @@
 
 <h3 id="th-each"><a href="#th-each" class="headerlink" title="th:each"></a>th:each</h3><p>循环语句，如果要显示一个List集合的所有内容则使用循环遍历，下面代码中blogList代表要循环遍历的集合，blog则代表集合中的每个元素（或实体）</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:each</span>=<span class="string">&quot;blog:$&#123;blogList&#125;&quot;</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="截取"><a href="#截取" class="headerlink" title="截取"></a>截取</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:text=&quot;$&#123;#strings.abbreviate(blog.title,18)&#125;&quot;</span><br></pre></td></tr></table></figure>
-
-<h3 id="格式化时间"><a href="#格式化时间" class="headerlink" title="格式化时间"></a>格式化时间</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:text=&quot;$&#123;#dates.format(blog.releaseDate,&#x27;yyyy-MM-dd HH:mm:ss&#x27;)&#125;&quot;</span><br></pre></td></tr></table></figure>
 
 <h3 id="th-href"><a href="#th-href" class="headerlink" title="th:href"></a>th:href</h3><p>a标签的href链接、或者是HTML头文件的link引入地址</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:href=&quot;@&#123;&#x27;/?page=1&amp;articleTypeId=&#x27;+$&#123;articleType.id&#125;&#125;&quot;</span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/static/vendor/bootstrap/css/bootstrap.min.css&#125;&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -13430,6 +13430,8 @@
 
 <h3 id="th-style"><a href="#th-style" class="headerlink" title="th:style"></a>th:style</h3><p>行内样式，可以结合条件表达式实现动态选择（满足条件表达式则选择第一个结果，不满足则选择第二种结果）</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:style=&quot;$&#123;articleTypeId == &#x27;&#x27;+articleType.id+&#x27;&#x27;?&#x27;margin-left: 6px;color:red;float: left&#x27;:&#x27;margin-left: 6px;float: left;color:#1e9fff&#x27;&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="th-value"><a href="#th-value" class="headerlink" title="th:value"></a>th:value</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line">th:value=&quot;$&#123;goodsTypeId&#125;&quot;</span><br></pre></td></tr></table></figure>
 
 <h3 id="只需要List集合中的部分元素（或实体）"><a href="#只需要List集合中的部分元素（或实体）" class="headerlink" title="只需要List集合中的部分元素（或实体）"></a>只需要List集合中的部分元素（或实体）</h3><p>当一个集合中的元素数量超过我们需要显示的元素数量时，可使用……Stat.count和th:if（省略号处根据具体情况填写）</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">th:each</span>=<span class="string">&quot;recommendBlog:$&#123;recommendBlogList&#125;&quot;</span> <span class="attr">th:if</span>=<span class="string">&quot;$&#123;recommendBlogStat.count&lt;=10&#125;&quot;</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -17700,7 +17702,7 @@
       </tags>
   </entry>
   <entry>
-    <title>使用Thymeleaf的项目搜索时回显搜索字段</title>
+    <title>使用Thymeleaf的项目搜索时回显搜索的条件</title>
     <url>/417.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>搜索后的新页面，一般情况下搜索条件的值都会被设置为空，但是如果想修改上一次搜索的条件再搜索，就需要获取到上一次的搜索条件</p>
 <h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><blockquote>
