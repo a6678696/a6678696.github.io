@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-01-18T13:49:19.440Z</updated>
+  <updated>2022-01-18T13:50:21.630Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.zoutl.cn/419.html"/>
     <id>https://blog.zoutl.cn/419.html</id>
     <published>2022-01-18T13:40:07.000Z</published>
-    <updated>2022-01-18T13:49:19.440Z</updated>
+    <updated>2022-01-18T13:50:21.630Z</updated>
     
     <content type="html"><![CDATA[<p>要取消滚动条，只需要将<code>&lt;body&gt;</code>标签样式的overflow-x或overflow-y设置为hidden即可，其中overflow-x为左右滚动条，overflow-y为上下滚动条，代码示例如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">&quot;overflow-x: hidden&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
     
