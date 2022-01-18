@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-01-18T02:11:43.564Z</updated>
+  <updated>2022-01-18T13:49:19.440Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML取消页面的左右滚动条</title>
+    <link href="https://blog.zoutl.cn/419.html"/>
+    <id>https://blog.zoutl.cn/419.html</id>
+    <published>2022-01-18T13:40:07.000Z</published>
+    <updated>2022-01-18T13:49:19.440Z</updated>
+    
+    <content type="html"><![CDATA[<p>要取消滚动条，只需要将<code>&lt;body&gt;</code>标签样式的overflow-x或overflow-y设置为hidden即可，其中overflow-x为左右滚动条，overflow-y为上下滚动条，代码示例如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">&quot;overflow-x: hidden&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/113.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>CKEditor设置编辑器的宽度以及高度</title>
@@ -426,29 +447,6 @@
     <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
     
     <category term="Elasticsearch" scheme="https://blog.zoutl.cn/tags/Elasticsearch/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS7安装Git的最新版本</title>
-    <link href="https://blog.zoutl.cn/397.html"/>
-    <id>https://blog.zoutl.cn/397.html</id>
-    <published>2021-12-14T20:39:11.000Z</published>
-    <updated>2021-12-14T20:52:36.536Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>输入下面命令即可完成安装</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure><h3 id="查看版本号"><a href="#查看版本号" class="headerlink" title="查看版本号"></a>查看版本号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove git</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/42.jpg&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="CentOS7" scheme="https://blog.zoutl.cn/categories/CentOS7/"/>
-    
-    
-    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
-    
-    <category term="Git" scheme="https://blog.zoutl.cn/tags/Git/"/>
     
   </entry>
   
