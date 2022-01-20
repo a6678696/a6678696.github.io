@@ -841,7 +841,7 @@
   <entry>
     <title>MyBatis的关联（association）元素</title>
     <url>/125.html</url>
-    <content><![CDATA[<p>关联（association）元素处理“有一个”类型的关系。 比如，在示例中，一个博客有一个用户。</p>
+    <content><![CDATA[<p>关联（association）元素处理“有一个”类型的关系。 比如，在示例中，每个博客有一个作者</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;blogResult&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;author&quot;</span> <span class="attr">column</span>=<span class="string">&quot;author_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;Author&quot;</span> <span class="attr">select</span>=<span class="string">&quot;selectAuthor&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectAuthor&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Author&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM AUTHOR WHERE ID = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>MyBatis</category>
@@ -1159,11 +1159,11 @@
   <entry>
     <title>Java截取两个字符串之间的字符串</title>
     <url>/137.html</url>
-    <content><![CDATA[<h3 id="使用的方法"><a href="#使用的方法" class="headerlink" title="使用的方法"></a>使用的方法</h3><h4 id="String-indexOf"><a href="#String-indexOf" class="headerlink" title="String.indexOf"></a><strong>String.indexOf</strong></h4><p>传入的数据类型为String，返回传入字符串第一次出现的位置（索引从0开始，返回字符串第一个字符的位置）</p>
-<h4 id="String-substring"><a href="#String-substring" class="headerlink" title="String.substring"></a><strong>String.substring</strong></h4><p>传入数据类型为两个int，用于截取字符串（包括头，不包括尾）</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a><strong>Java代码</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-07 7:25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;12345678923&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> begin = str.indexOf(<span class="string">&quot;23&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> last = str.indexOf(<span class="string">&quot;89&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;23\&quot;第一次出现的位置为:&quot;</span> + begin);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;89\&quot;第一次出现的位置为:&quot;</span> + last);</span><br><span class="line">        String substring = str.substring(begin + <span class="number">2</span>, last);</span><br><span class="line">        System.out.println(<span class="string">&quot;截取的结果为:&quot;</span> + substring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h3 id="使用的方法"><a href="#使用的方法" class="headerlink" title="使用的方法"></a>使用的方法</h3><h4 id="String-indexOf"><a href="#String-indexOf" class="headerlink" title="String.indexOf"></a>String.indexOf</h4><p>传入的数据类型为String，返回传入字符串第一次出现的位置（索引从0开始，返回字符串第一个字符的位置）</p>
+<h4 id="String-substring"><a href="#String-substring" class="headerlink" title="String.substring"></a>String.substring</h4><p>传入数据类型为两个int，用于截取字符串（包括头，不包括尾）</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-07 7:25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;12345678923&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> begin = str.indexOf(<span class="string">&quot;23&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> last = str.indexOf(<span class="string">&quot;89&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;23\&quot;第一次出现的位置为:&quot;</span> + begin);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;89\&quot;第一次出现的位置为:&quot;</span> + last);</span><br><span class="line">        String substring = str.substring(begin + <span class="number">2</span>, last);</span><br><span class="line">        System.out.println(<span class="string">&quot;截取的结果为:&quot;</span> + substring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607092942.jpg" alt="img"></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607092942.jpg" alt="img"></p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>要截取什么样的字符串可根据String.substring包括头不包括尾的特性来灵活截取</p>]]></content>
       <categories>
         <category>Java</category>
@@ -1591,7 +1591,7 @@
 <h3 id="修改ens33网卡的配置"><a href="#修改ens33网卡的配置" class="headerlink" title="修改ens33网卡的配置"></a>修改ens33网卡的配置</h3><p>查看网卡配置命令如下：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
 
-<p>下图中划红线处需要修改为ONBOOT=yes，按下i键进入编辑模式，修改后按ESC键退出编辑模式，输入 :wq（保存并退出），最后按下回车键即可</p>
+<p>下图中划红线处需要修改为<code>ONBOOT=yes</code>，按下i键进入编辑模式，修改后按ESC键退出编辑模式，输入 :wq（保存并退出），最后按下回车键即可</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050844.jpg" alt="img"></p>
 <p>最后输入命令ip addr查看即可</p>]]></content>
       <categories>
@@ -1697,6 +1697,9 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -r dir1</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616124133.jpg" alt="img"></p>
+<p>强制删除dir1，即使不是空目录也可以直接删除</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -rf dir1或者rm -r -f dir1</span><br></pre></td></tr></table></figure>
+
 <p>删除当前目录的所有目录及文件</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rm -r *</span><br></pre></td></tr></table></figure>
 
@@ -2421,7 +2424,7 @@
 <li>“3”</li>
 <li>“4”</li>
 </ol>
-<p>127.0.0.1:6379&gt; lpop l2<br>“a”<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
+<p>128.127.0.0.1:6379&gt; lpop l2<br>“a”<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
 <ol>
 <li>“b”</li>
 <li>“c”</li>
@@ -2431,7 +2434,7 @@
 <li>“3”</li>
 <li>“4”</li>
 </ol>
-<p>127.0.0.1:6379&gt; rpop l2<br>“4”<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
+<p>128.127.0.0.1:6379&gt; rpop l2<br>“4”<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
 <ol>
 <li>“b”</li>
 <li>“c”</li>
@@ -2966,8 +2969,8 @@
     <url>/174.html</url>
     <content><![CDATA[<p>持久化是将程序数据在持久状态和瞬时状态间转换的机制。通俗的讲，就是瞬时数据（比如内存中的数据，是不能永久保存的）持久化为持久数据（比如持久化至数据库中，能够长久保存）</p>
 <p>持久化操作有两种方式：rdb方式、aof方式，可以单独使用或者结合使用</p>
-<p>rdb方式：在指定的时间间隔写入硬盘</p>
-<p>aof方式：将以日志，记录每一个操作，服务器启动后就构建数据库</p>]]></content>
+<p>rdb方式：在指定的时间间隔写入硬盘，查看博客：<a href="https://blog.zoutl.cn/175.html">Redis 的持久化之 RDB 方式 | LeDao 的博客 (zoutl.cn)</a></p>
+<p>aof方式：将以日志，记录每一个操作，服务器启动后就构建数据库，查看博客：<a href="https://blog.zoutl.cn/176.html">Redis 的持久化之 AOF 方式 | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
       <categories>
         <category>Redis</category>
       </categories>
@@ -2989,7 +2992,7 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622005950.jpg" alt="img"></p>
 <p>dbfilename配置是保存的持久化的文件名，默认是dump.rdb</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622010021.jpg" alt="img"></p>
-<p>dir ./ 表示文件存储路径是当前路径</p>
+<p><code>dir ./</code> 表示文件存储路径是当前路径</p>
 <h3 id="查看当前路径的文件"><a href="#查看当前路径的文件" class="headerlink" title="查看当前路径的文件"></a>查看当前路径的文件</h3><p>[root@localhost redis]# ll</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622010034.jpg" alt="img"></p>
 <p>当前路径里确实是有dump.rdb这个文件的</p>
@@ -4820,7 +4823,7 @@
   <entry>
     <title>cmd命令操作MySQL数据库</title>
     <url>/24.html</url>
-    <content><![CDATA[<h3 id="CMD进入数据库步骤"><a href="#CMD进入数据库步骤" class="headerlink" title="CMD进入数据库步骤"></a>CMD进入数据库步骤</h3><p>先进入数据库安装的盘符（如果要进入C盘则连续敲两下命令cd .. ）</p>
+    <content><![CDATA[<h3 id="CMD进入数据库步骤"><a href="#CMD进入数据库步骤" class="headerlink" title="CMD进入数据库步骤"></a>CMD进入数据库步骤</h3><p>先进入数据库安装的盘符（如果要进入C盘根目录则连续敲两下命令cd .. ）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">d:</span><br></pre></td></tr></table></figure>
 
 <p>然后进入数据库安装目录的bin文件</p>
@@ -10026,10 +10029,10 @@
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>视图是虚拟的表，与包含数据的表不一样，视图只包含使用时动态检索数据的查询，在视图创建之后，可以用与表基本相同的方式利用它们。可以对视图执行SELECT操作，过滤和排序数据，将视图联结到其他视图或表，甚至能添加和更新数据</p>
 <h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ol>
 <li>重用SQL语句</li>
-<li>简化复杂的SQL操作。在编写查询后，可以方便地重用它而不必知道它的基本查询细节</li>
+<li>简化复杂的SQL操作，在编写查询后，可以方便地重用它而不必知道它的基本查询细节</li>
 <li>使用表的组成部分而不是整个表</li>
-<li>保护数据。可以给用户授予表的特定部分的访问权限而不是整个表的访问权限</li>
-<li>更改数据格式和表示。视图可返回与底层表的表示和格式不同的数据</li>
+<li>保护数据，可以给用户授予表的特定部分的访问权限而不是整个表的访问权限</li>
+<li>更改数据格式和表示，视图可返回与底层表的表示和格式不同的数据</li>
 </ol>
 <h3 id="规则和限制"><a href="#规则和限制" class="headerlink" title="规则和限制"></a>规则和限制</h3><ol>
 <li>与表一样，视图必须唯一命名（不能给视图取与别的视图或表相同的名字）</li>
@@ -13043,7 +13046,7 @@
     <title>MySQL删除主表时删除从表的数据</title>
     <url>/75.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>有外键关联的两个表，要想实现删除主表的数据，然后删除从表中与之关联的数据，我们可以将两表的外键删除关系设置为CASCADE</p>
-<p>CASCADE删除时：删除主表时自动删除从表。删除从表，主表不变</p>
+<p>CASCADE删除时：删除主表数据时自动删除从表数据。删除从表，主表不变</p>
 <h3 id="表结果及关系"><a href="#表结果及关系" class="headerlink" title="表结果及关系"></a>表结果及关系</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210115053856.jpg" alt="img"></p>
 <h3 id="设置删除关系"><a href="#设置删除关系" class="headerlink" title="设置删除关系"></a>设置删除关系</h3><p>双击上图中的线，然后设置删除时的关系为CASCADE</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210115054053.jpg" alt="img"></p>
@@ -13119,7 +13122,7 @@
 <h3 id="十进制转换成任意进制"><a href="#十进制转换成任意进制" class="headerlink" title="十进制转换成任意进制"></a>十进制转换成任意进制</h3><h4 id="Java代码-2"><a href="#Java代码-2" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//10进制数转换成15进制数</span></span><br><span class="line">        System.out.println(getResult(getSting(<span class="number">26</span>,<span class="number">15</span>)));</span><br><span class="line">        <span class="comment">//10进制数转换成7进制数</span></span><br><span class="line">        System.out.println(getResult(getSting(<span class="number">26</span>,<span class="number">7</span>)));</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 根据除n取余法获得基本的进制数(余数10没有用A表示,11没有用B表示,以此类推...)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> num   要转换的十进制数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> radix 要转换成多少进制数</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getSting</span><span class="params">(<span class="keyword">int</span> num, <span class="keyword">int</span> radix)</span> </span>&#123;</span><br><span class="line">        StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        <span class="keyword">while</span> (num != <span class="number">0</span>) &#123;</span><br><span class="line">            sb.append(num % radix).append(<span class="string">&quot;,&quot;</span>);</span><br><span class="line">            num = num / radix;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**获得最终结果(余数10用A表示,11用B表示,以此类推...)</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> str</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getResult</span><span class="params">(String str)</span> </span>&#123;</span><br><span class="line">        StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">        String[] arr = str.split(<span class="string">&quot;,&quot;</span>);</span><br><span class="line">        String[] arr2 = <span class="keyword">new</span> String[arr.length];</span><br><span class="line">        <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = arr.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            arr2[j] = arr[i];</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (String s : arr2) &#123;</span><br><span class="line">            <span class="keyword">if</span> (Integer.parseInt(s) &gt; <span class="number">9</span>) &#123;</span><br><span class="line">                sb.append((<span class="keyword">char</span>)(Integer.parseInt(s) + <span class="number">55</span>));</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                sb.append(s);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h4><p><font color="#dd0000">1B</font><br><font color="#dd0000">35</font></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>除X取余法查看博客：<a href="/2020/10/13/20/">进制</a>（第一张图片便是除2取余法）</p>]]></content>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>除X取余法查看博客：<a href="https://blog.zoutl.cn/20.html">进制</a>（第一张图片便是除2取余法）</p>]]></content>
       <categories>
         <category>Java</category>
       </categories>
