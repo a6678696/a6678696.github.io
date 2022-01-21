@@ -1,0 +1,627 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax | LeDao的博客</title><meta name="keywords" content="MySQL"><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="article">
+<meta property="og:title" content="MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax">
+<meta property="og:url" content="https://blog.zoutl.cn/426.html">
+<meta property="og:site_name" content="LeDao的博客">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/images/homeBlogImage/19.jpg">
+<meta property="article:published_time" content="2022-01-21T17:25:06.000Z">
+<meta property="article:modified_time" content="2022-01-21T17:26:57.832Z">
+<meta property="article:author" content="LeDao">
+<meta property="article:tag" content="MySQL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/images/homeBlogImage/19.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zoutl.cn/426"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-22 01:26:57'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}</style></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">424</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">61</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">33</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/19.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeDao的博客</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-21T17:25:06.000Z" title="发表于 2022-01-22 01:25:06">2022-01-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-01-21T17:26:57.832Z" title="更新于 2022-01-22 01:26:57">2022-01-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/MySQL/">MySQL</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">276</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>使用表的字段使用了MySQL的关键字</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>将对应的字段修改成非MySQL关键字，MySQL关键字如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">关键字</th>
+<th align="center">关键字</th>
+<th align="center">关键字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ADD</td>
+<td align="center">ALL</td>
+<td align="center">ALTER</td>
+</tr>
+<tr>
+<td align="center">ANALYZE</td>
+<td align="center">AND</td>
+<td align="center">AS</td>
+</tr>
+<tr>
+<td align="center">ASC</td>
+<td align="center">ASENSITIVE</td>
+<td align="center">BEFORE</td>
+</tr>
+<tr>
+<td align="center">BETWEEN</td>
+<td align="center">BIGINT</td>
+<td align="center">BINARY</td>
+</tr>
+<tr>
+<td align="center">BLOB</td>
+<td align="center">BOTH</td>
+<td align="center">BY</td>
+</tr>
+<tr>
+<td align="center">CALL</td>
+<td align="center">CASCADE</td>
+<td align="center">CASE</td>
+</tr>
+<tr>
+<td align="center">CHANGE</td>
+<td align="center">CHAR</td>
+<td align="center">CHARACTER</td>
+</tr>
+<tr>
+<td align="center">CHECK</td>
+<td align="center">COLLATE</td>
+<td align="center">COLUMN</td>
+</tr>
+<tr>
+<td align="center">CONDITION</td>
+<td align="center">CONNECTION</td>
+<td align="center">CONSTRAINT</td>
+</tr>
+<tr>
+<td align="center">CONTINUE</td>
+<td align="center">CONVERT</td>
+<td align="center">CREATE</td>
+</tr>
+<tr>
+<td align="center">CROSS</td>
+<td align="center">CURRENT_DATE</td>
+<td align="center">CURRENT_TIME</td>
+</tr>
+<tr>
+<td align="center">CURRENT_TIMESTAMP</td>
+<td align="center">CURRENT_USER</td>
+<td align="center">CURSOR</td>
+</tr>
+<tr>
+<td align="center">DATABASE</td>
+<td align="center">DATABASES</td>
+<td align="center">DAY_HOUR</td>
+</tr>
+<tr>
+<td align="center">DAY_MICROSECOND</td>
+<td align="center">DAY_MINUTE</td>
+<td align="center">DAY_SECOND</td>
+</tr>
+<tr>
+<td align="center">DEC</td>
+<td align="center">DECIMAL</td>
+<td align="center">DECLARE</td>
+</tr>
+<tr>
+<td align="center">DEFAULT</td>
+<td align="center">DELAYED</td>
+<td align="center">DELETE</td>
+</tr>
+<tr>
+<td align="center">DESC</td>
+<td align="center">DESCRIBE</td>
+<td align="center">DETERMINISTIC</td>
+</tr>
+<tr>
+<td align="center">DISTINCT</td>
+<td align="center">DISTINCTROW</td>
+<td align="center">DIV</td>
+</tr>
+<tr>
+<td align="center">DOUBLE</td>
+<td align="center">DROP</td>
+<td align="center">DUAL</td>
+</tr>
+<tr>
+<td align="center">EACH</td>
+<td align="center">ELSE</td>
+<td align="center">ELSEIF</td>
+</tr>
+<tr>
+<td align="center">ENCLOSED</td>
+<td align="center">ESCAPED</td>
+<td align="center">EXISTS</td>
+</tr>
+<tr>
+<td align="center">EXIT</td>
+<td align="center">EXPLAIN</td>
+<td align="center">FALSE</td>
+</tr>
+<tr>
+<td align="center">FETCH</td>
+<td align="center">FLOAT</td>
+<td align="center">FLOAT4</td>
+</tr>
+<tr>
+<td align="center">FLOAT8</td>
+<td align="center">FOR</td>
+<td align="center">FORCE</td>
+</tr>
+<tr>
+<td align="center">FOREIGN</td>
+<td align="center">FROM</td>
+<td align="center">FULLTEXT</td>
+</tr>
+<tr>
+<td align="center">GOTO</td>
+<td align="center">GRANT</td>
+<td align="center">GROUP</td>
+</tr>
+<tr>
+<td align="center">HAVING</td>
+<td align="center">HIGH_PRIORITY</td>
+<td align="center">HOUR_MICROSECOND</td>
+</tr>
+<tr>
+<td align="center">HOUR_MINUTE</td>
+<td align="center">HOUR_SECOND</td>
+<td align="center">IF</td>
+</tr>
+<tr>
+<td align="center">IGNORE</td>
+<td align="center">IN</td>
+<td align="center">INDEX</td>
+</tr>
+<tr>
+<td align="center">INFILE</td>
+<td align="center">INNER</td>
+<td align="center">INOUT</td>
+</tr>
+<tr>
+<td align="center">INSENSITIVE</td>
+<td align="center">INSERT</td>
+<td align="center">INT</td>
+</tr>
+<tr>
+<td align="center">INT1</td>
+<td align="center">INT2</td>
+<td align="center">INT3</td>
+</tr>
+<tr>
+<td align="center">INT4</td>
+<td align="center">INT8</td>
+<td align="center">INTEGER</td>
+</tr>
+<tr>
+<td align="center">INTERVAL</td>
+<td align="center">INTO</td>
+<td align="center">IS</td>
+</tr>
+<tr>
+<td align="center">ITERATE</td>
+<td align="center">JOIN</td>
+<td align="center">KEY</td>
+</tr>
+<tr>
+<td align="center">KEYS</td>
+<td align="center">KILL</td>
+<td align="center">LABEL</td>
+</tr>
+<tr>
+<td align="center">LEADING</td>
+<td align="center">LEAVE</td>
+<td align="center">LEFT</td>
+</tr>
+<tr>
+<td align="center">LIKE</td>
+<td align="center">LIMIT</td>
+<td align="center">LINEAR</td>
+</tr>
+<tr>
+<td align="center">LINES</td>
+<td align="center">LOAD</td>
+<td align="center">LOCALTIME</td>
+</tr>
+<tr>
+<td align="center">LOCALTIMESTAMP</td>
+<td align="center">LOCK</td>
+<td align="center">LONG</td>
+</tr>
+<tr>
+<td align="center">LONGBLOB</td>
+<td align="center">LONGTEXT</td>
+<td align="center">LOOP</td>
+</tr>
+<tr>
+<td align="center">LOW_PRIORITY</td>
+<td align="center">MATCH</td>
+<td align="center">MEDIUMBLOB</td>
+</tr>
+<tr>
+<td align="center">MEDIUMINT</td>
+<td align="center">MEDIUMTEXT</td>
+<td align="center">MIDDLEINT</td>
+</tr>
+<tr>
+<td align="center">MINUTE_MICROSECOND</td>
+<td align="center">MINUTE_SECOND</td>
+<td align="center">MOD</td>
+</tr>
+<tr>
+<td align="center">MODIFIES</td>
+<td align="center">NATURAL</td>
+<td align="center">NOT</td>
+</tr>
+<tr>
+<td align="center">NO_WRITE_TO_BINLOG</td>
+<td align="center">NULL</td>
+<td align="center">NUMERIC</td>
+</tr>
+<tr>
+<td align="center">ON</td>
+<td align="center">OPTIMIZE</td>
+<td align="center">OPTION</td>
+</tr>
+<tr>
+<td align="center">OPTIONALLY</td>
+<td align="center">OR</td>
+<td align="center">ORDER</td>
+</tr>
+<tr>
+<td align="center">OUT</td>
+<td align="center">OUTER</td>
+<td align="center">OUTFILE</td>
+</tr>
+<tr>
+<td align="center">PRECISION</td>
+<td align="center">PRIMARY</td>
+<td align="center">PROCEDURE</td>
+</tr>
+<tr>
+<td align="center">PURGE</td>
+<td align="center">RAID0</td>
+<td align="center">RANGE</td>
+</tr>
+<tr>
+<td align="center">READ</td>
+<td align="center">READS</td>
+<td align="center">REAL</td>
+</tr>
+<tr>
+<td align="center">REFERENCES</td>
+<td align="center">REGEXP</td>
+<td align="center">RELEASE</td>
+</tr>
+<tr>
+<td align="center">RENAME</td>
+<td align="center">REPEAT</td>
+<td align="center">REPLACE</td>
+</tr>
+<tr>
+<td align="center">REQUIRE</td>
+<td align="center">RESTRICT</td>
+<td align="center">RETURN</td>
+</tr>
+<tr>
+<td align="center">REVOKE</td>
+<td align="center">RIGHT</td>
+<td align="center">RLIKE</td>
+</tr>
+<tr>
+<td align="center">SCHEMA</td>
+<td align="center">SCHEMAS</td>
+<td align="center">SECOND_MICROSECOND</td>
+</tr>
+<tr>
+<td align="center">SELECT</td>
+<td align="center">SENSITIVE</td>
+<td align="center">SEPARATOR</td>
+</tr>
+<tr>
+<td align="center">SET</td>
+<td align="center">SHOW</td>
+<td align="center">SMALLINT</td>
+</tr>
+<tr>
+<td align="center">SPATIAL</td>
+<td align="center">SPECIFIC</td>
+<td align="center">SQL</td>
+</tr>
+<tr>
+<td align="center">SQLEXCEPTION</td>
+<td align="center">SQLSTATE</td>
+<td align="center">SQLWARNING</td>
+</tr>
+<tr>
+<td align="center">SQL_BIG_RESULT</td>
+<td align="center">SQL_CALC_FOUND_ROWS</td>
+<td align="center">SQL_SMALL_RESULT</td>
+</tr>
+<tr>
+<td align="center">SSL</td>
+<td align="center">STARTING</td>
+<td align="center">STRAIGHT_JOIN</td>
+</tr>
+<tr>
+<td align="center">TABLE</td>
+<td align="center">TERMINATED</td>
+<td align="center">THEN</td>
+</tr>
+<tr>
+<td align="center">TINYBLOB</td>
+<td align="center">TINYINT</td>
+<td align="center">TINYTEXT</td>
+</tr>
+<tr>
+<td align="center">TO</td>
+<td align="center">TRAILING</td>
+<td align="center">TRIGGER</td>
+</tr>
+<tr>
+<td align="center">TRUE</td>
+<td align="center">UNDO</td>
+<td align="center">UNION</td>
+</tr>
+<tr>
+<td align="center">UNIQUE</td>
+<td align="center">UNLOCK</td>
+<td align="center">UNSIGNED</td>
+</tr>
+<tr>
+<td align="center">UPDATE</td>
+<td align="center">USAGE</td>
+<td align="center">USE</td>
+</tr>
+<tr>
+<td align="center">USING</td>
+<td align="center">UTC_DATE</td>
+<td align="center">UTC_TIME</td>
+</tr>
+<tr>
+<td align="center">UTC_TIMESTAMP</td>
+<td align="center">VALUES</td>
+<td align="center">VARBINARY</td>
+</tr>
+<tr>
+<td align="center">VARCHAR</td>
+<td align="center">VARCHARACTER</td>
+<td align="center">VARYING</td>
+</tr>
+<tr>
+<td align="center">WHEN</td>
+<td align="center">WHERE</td>
+<td align="center">WHILE</td>
+</tr>
+<tr>
+<td align="center">WITH</td>
+<td align="center">WRITE</td>
+<td align="center">X509</td>
+</tr>
+<tr>
+<td align="center">XOR</td>
+<td align="center">YEAR_MONTH</td>
+<td align="center">ZEROFILL</td>
+</tr>
+</tbody></table></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">LeDao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.zoutl.cn/426.html">https://blog.zoutl.cn/426.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.zoutl.cn" target="_blank">LeDao的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MySQL/">MySQL</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/425.html"><img class="next-cover" src="https://image.zoutl.cn/hexo-blog/images/homeBlogImage/36.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Spring Data JPA实体类常用注解</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LeDao</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">424</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">61</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">33</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/a6678696"><i class="fab fa-github"></i><span>My GitHub</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%A5%E9%94%99%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text">报错原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text">解决办法</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/426.html" title="MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax"><img src="https://image.zoutl.cn/hexo-blog/images/homeBlogImage/19.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax"/></a><div class="content"><a class="title" href="/426.html" title="MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax">MySQL报错：java.sql.SQLSyntaxYou have an error in your SQL syntax</a><time datetime="2022-01-21T17:25:06.000Z" title="发表于 2022-01-22 01:25:06">2022-01-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/425.html" title="Spring Data JPA实体类常用注解"><img src="https://image.zoutl.cn/hexo-blog/images/homeBlogImage/36.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring Data JPA实体类常用注解"/></a><div class="content"><a class="title" href="/425.html" title="Spring Data JPA实体类常用注解">Spring Data JPA实体类常用注解</a><time datetime="2022-01-21T09:46:40.000Z" title="发表于 2022-01-21 17:46:40">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/424.html" title="Spring Boot引入Spring Data JPA"><img src="https://image.zoutl.cn/hexo-blog/images/homeBlogImage/5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring Boot引入Spring Data JPA"/></a><div class="content"><a class="title" href="/424.html" title="Spring Boot引入Spring Data JPA">Spring Boot引入Spring Data JPA</a><time datetime="2022-01-21T09:10:02.000Z" title="发表于 2022-01-21 17:10:02">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/423.html" title="idea插件EditStarters报错:Request failure! Your spring boot version may not be supported, please confirm."><img src="https://image.zoutl.cn/hexo-blog/images/homeBlogImage/64.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="idea插件EditStarters报错:Request failure! Your spring boot version may not be supported, please confirm."/></a><div class="content"><a class="title" href="/423.html" title="idea插件EditStarters报错:Request failure! Your spring boot version may not be supported, please confirm.">idea插件EditStarters报错:Request failure! Your spring boot version may not be supported, please confirm.</a><time datetime="2022-01-21T08:10:28.000Z" title="发表于 2022-01-21 16:10:28">2022-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/422.html" title="HTML特殊字符编码对照表"><img src="https://image.zoutl.cn/hexo-blog/images/homeBlogImage/98.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML特殊字符编码对照表"/></a><div class="content"><a class="title" href="/422.html" title="HTML特殊字符编码对照表">HTML特殊字符编码对照表</a><time datetime="2022-01-21T05:48:28.000Z" title="发表于 2022-01-21 13:48:28">2022-01-21</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/19.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022&nbsp;<i style="color:red;animation: announ_animation 0.8s linear infinite;"class="fa fa-heartbeat"></i> By LeDao</div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="放大字体"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="缩小字体"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e85b530ea329d17050fe',
+      clientSecret: '47090eb530100dd0d587d4e4a23de09b8c25d44d',
+      repo: 'a6678696.github.io',
+      owner: 'a6678696',
+      admin: ['a6678696'],
+      id: '086a8f75ba18715846568bb412786080',
+      language: 'zh-CN',
+      perPage: 10,
+      distractionFreeMode: false,
+      pagerDirection: 'last',
+      createIssueManually: false,
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
