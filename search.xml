@@ -18409,4 +18409,17 @@
         <tag>前端</tag>
       </tags>
   </entry>
+  <entry>
+    <title>idea插件EditStarters报错:Request failure! Your spring boot version may not be supported, please confirm.</title>
+    <url>/423.html</url>
+    <content><![CDATA[<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>插件不支持当前使用的Spring Boot版本</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>将Spring Boot的版本改为<code>2.6.2</code>即可，其它版本我没有试过，如果要使用其它版本的Spring Boot，请自行尝试</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span> <span class="comment">&lt;!-- lookup parent from repository --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
+      </tags>
+  </entry>
 </search>
