@@ -18906,7 +18906,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Mybatis实现in查询</title>
+    <title>MyBatis实现in查询</title>
     <url>/430.html</url>
     <content><![CDATA[<h3 id="业务说明"><a href="#业务说明" class="headerlink" title="业务说明"></a>业务说明</h3><h4 id="表结构"><a href="#表结构" class="headerlink" title="表结构"></a>表结构</h4><p>t_book为图书表，t_borrow_record为借阅记录表，t_book的主键id是t_borrow_record的外键bookId</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220125000623293.png" alt="image-20220125000623293"></p>
@@ -18922,10 +18922,10 @@
 
 <h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-25%20001346.gif"></p>]]></content>
       <categories>
-        <category>Mybatis</category>
+        <category>MyBatis</category>
       </categories>
       <tags>
-        <tag>Mybatis</tag>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
 </search>
