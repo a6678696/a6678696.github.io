@@ -18867,7 +18867,8 @@
     <title>hexo博客的标题包含特殊字符</title>
     <url>/427.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>hexo博客的标题里是不能包含特殊字符的，不然会报错：<font color="#dd0000">err: YAMLException: unexpected end of the stream within a single quoted scalar</font></p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>用<code>英文的单引号&#39;&#39;</code>i将标题包起来即可</p>]]></content>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>用<code>英文的单引号&#39;&#39;</code>将标题包起来即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220124082017391.png" alt="image-20220124082017391"></p>]]></content>
       <categories>
         <category>hexo</category>
       </categories>
