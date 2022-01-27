@@ -18943,10 +18943,10 @@
 </li>
 </ol>
 <h3 id="编辑README-md"><a href="#编辑README-md" class="headerlink" title="编辑README.md"></a>编辑README.md</h3><p>在<code>--&gt;</code>下方加入以下代码：（username的值改为自己的用户名）</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">marionxue&#x27;s github stats</span>](<span class="link">https://github-readme-stats.vercel.app/api?username=a6678696&amp;theme=github</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">a6678696&#x27;s github stats</span>](<span class="link">https://github-readme-stats.vercel.app/api?username=a6678696&amp;theme=github</span>)</span><br></pre></td></tr></table></figure>
 
 <p>如果要隐藏指定统计信息，就需要在后面加上<code>&amp;hide=prs,contribs</code>，多个信息用英文的逗号隔开</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">marionxue&#x27;s github stats</span>](<span class="link">https://github-readme-stats.vercel.app/api?username=a6678696&amp;theme=github&amp;hide=prs,contribs</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">a6678696&#x27;s github stats</span>](<span class="link">https://github-readme-stats.vercel.app/api?username=a6678696&amp;theme=github&amp;hide=prs,contribs</span>)</span><br></pre></td></tr></table></figure>
 
 <h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p>进入Overview页面，看到下图的统计信息说明配置成功</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127191458282.png" alt="image-20220127191458282"></p>]]></content>
@@ -18955,6 +18955,34 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图书管理系统</title>
+    <url>/432.html</url>
+    <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>GitHub地址：<a href="https://github.com/a6678696/BookManageSystem">https://github.com/a6678696/BookManageSystem</a></p>
+<h3 id="使用的技术"><a href="#使用的技术" class="headerlink" title="使用的技术"></a>使用的技术</h3><p>本项目核心技术采用Spring Boot+Mybatis-Plus；开发工具idea；数据库MySQL5.6；界面采用了jQuery EasyUI框架；Quartz定时任务；</p>
+<h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><h4 id="普通用户"><a href="#普通用户" class="headerlink" title="普通用户"></a>普通用户</h4><p>查找图书、借书、续借图书、归还图书、修改密码、安全退出系统</p>
+<h4 id="管理员"><a href="#管理员" class="headerlink" title="管理员"></a>管理员</h4><p>用户管理（增删改查、封禁和解封用户、设置用户是否可借书）、图书类别管理（增删改查）、图书管理（增删改查）、查看用户的借阅记录、修改密码、安全退出系统</p>
+<h4 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h4><p>每分钟自动检测用户正在借阅的书是否逾期，如果逾期就修改借阅记录的状态为逾期</p>
+<h3 id="图片展示"><a href="#图片展示" class="headerlink" title="图片展示"></a>图片展示</h3><h4 id="登录界面"><a href="#登录界面" class="headerlink" title="登录界面"></a>登录界面</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127214927196.png" alt="image-20220127214927196"></p>
+<h4 id="用户"><a href="#用户" class="headerlink" title="用户"></a>用户</h4><h5 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127214639384.png" alt="image-20220127214639384"></p>
+<h5 id="借书"><a href="#借书" class="headerlink" title="借书"></a>借书</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127214711878.png" alt="image-20220127214711878"></p>
+<h5 id="查看借阅记录、续借和还书"><a href="#查看借阅记录、续借和还书" class="headerlink" title="查看借阅记录、续借和还书"></a>查看借阅记录、续借和还书</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127214801519.png" alt="image-20220127214801519"></p>
+<h5 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127214827927.png" alt="image-20220127214827927"></p>
+<h5 id="安全退出系统"><a href="#安全退出系统" class="headerlink" title="安全退出系统"></a>安全退出系统</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127214902265.png" alt="image-20220127214902265"></p>
+<h4 id="管理员-1"><a href="#管理员-1" class="headerlink" title="管理员"></a>管理员</h4><h5 id="首页-1"><a href="#首页-1" class="headerlink" title="首页"></a>首页</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127215007265.png" alt="image-20220127215007265"></p>
+<h5 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127215038200.png" alt="image-20220127215038200"></p>
+<h5 id="图书类别管理"><a href="#图书类别管理" class="headerlink" title="图书类别管理"></a>图书类别管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127215117115.png" alt="image-20220127215117115"></p>
+<h5 id="图书管理"><a href="#图书管理" class="headerlink" title="图书管理"></a>图书管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127215147218.png" alt="image-20220127215147218"></p>
+<h5 id="查看用户的借阅记录"><a href="#查看用户的借阅记录" class="headerlink" title="查看用户的借阅记录"></a>查看用户的借阅记录</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127215209795.png" alt="image-20220127215209795"></p>
+<h5 id="修改密码-1"><a href="#修改密码-1" class="headerlink" title="修改密码"></a>修改密码</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127215231226.png" alt="image-20220127215231226"></p>
+<h5 id="安全退出系统-1"><a href="#安全退出系统-1" class="headerlink" title="安全退出系统"></a>安全退出系统</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220127215256316.png" alt="image-20220127215256316"></p>]]></content>
+      <categories>
+        <category>个人项目</category>
+      </categories>
+      <tags>
+        <tag>个人项目</tag>
       </tags>
   </entry>
 </search>
