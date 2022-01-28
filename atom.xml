@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-01-27T13:55:36.909Z</updated>
+  <updated>2022-01-28T05:43:32.371Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Boot引用application.yml配置文件的变量值</title>
+    <link href="https://blog.zoutl.cn/433.html"/>
+    <id>https://blog.zoutl.cn/433.html</id>
+    <published>2022-01-28T05:36:34.000Z</published>
+    <updated>2022-01-28T05:43:32.371Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="定义一个变量"><a href="#定义一个变量" class="headerlink" title="定义一个变量"></a>定义一个变量</h3><p>首先在application.yml配置文件中定义一个变量，并给它赋值</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220128133954699.png" alt="image-20220128133954699"></p><h3 id="在代码中引用"><a href="#在代码中引用" class="headerlink" title="在代码中引用"></a>在代码中引用</h3><p>通过@Value注解即可在当前类引用上面定义的变量</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value(&quot;$&#123;maxBorrowBookSize&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> Integer maxBorrowBookSize;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/15.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Spring Boot" scheme="https://blog.zoutl.cn/categories/Spring-Boot/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+    <category term="Spring Boot" scheme="https://blog.zoutl.cn/tags/Spring-Boot/"/>
+    
+  </entry>
   
   <entry>
     <title>图书管理系统</title>
@@ -422,23 +445,6 @@
     
     
     <category term="MyBatis-Plus" scheme="https://blog.zoutl.cn/tags/MyBatis-Plus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于Ajax无法给请求方法外面的变量赋值</title>
-    <link href="https://blog.zoutl.cn/413.html"/>
-    <id>https://blog.zoutl.cn/413.html</id>
-    <published>2022-01-10T03:37:14.000Z</published>
-    <updated>2022-01-10T03:42:53.325Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>$.ajax默认是异步的， 异步回调在js主线程执行结束后才会被执行</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p> 如果确实需要获取ajax的结果赋值给请求方法外面的变量，那么可以ajax多加一个参数：<code>async=false</code>，就会同步执行</p><h3 id="Ajax完整请求代码"><a href="#Ajax完整请求代码" class="headerlink" title="Ajax完整请求代码"></a>Ajax完整请求代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkRegisterValue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> imageCode;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&quot;/user/getRegisterCode&quot;</span>,</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&quot;get&quot;</span>,</span><br><span class="line">        <span class="attr">async</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (result.success) &#123;</span><br><span class="line">                imageCode = result.imageCode;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/53.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
     
   </entry>
   
