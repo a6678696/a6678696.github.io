@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-01-28T05:43:32.371Z</updated>
+  <updated>2022-01-28T05:51:21.398Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.zoutl.cn/433.html"/>
     <id>https://blog.zoutl.cn/433.html</id>
     <published>2022-01-28T05:36:34.000Z</published>
-    <updated>2022-01-28T05:43:32.371Z</updated>
+    <updated>2022-01-28T05:51:21.398Z</updated>
     
     <content type="html"><![CDATA[<h3 id="定义一个变量"><a href="#定义一个变量" class="headerlink" title="定义一个变量"></a>定义一个变量</h3><p>首先在application.yml配置文件中定义一个变量，并给它赋值</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220128133954699.png" alt="image-20220128133954699"></p><h3 id="在代码中引用"><a href="#在代码中引用" class="headerlink" title="在代码中引用"></a>在代码中引用</h3><p>通过@Value注解即可在当前类引用上面定义的变量</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value(&quot;$&#123;maxBorrowBookSize&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> Integer maxBorrowBookSize;</span><br></pre></td></tr></table></figure>]]></content>
     
