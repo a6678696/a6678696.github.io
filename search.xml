@@ -13132,7 +13132,7 @@
       </tags>
   </entry>
   <entry>
-    <title>域宽</title>
+    <title>Java域宽</title>
     <url>/78.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>用于存放输出数据的宽度称为“域宽”</p>
 <h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//数字4代表域宽为4</span></span><br><span class="line">    System.out.printf(<span class="string">&quot;%4d&quot;</span>,<span class="number">1</span>);</span><br><span class="line">    System.out.println();</span><br><span class="line">    System.out.printf(<span class="string">&quot;%4d&quot;</span>,<span class="number">12</span>);</span><br><span class="line">    System.out.println();</span><br><span class="line">    System.out.printf(<span class="string">&quot;%4d&quot;</span>,<span class="number">123</span>);</span><br><span class="line">    System.out.println();</span><br><span class="line">    System.out.printf(<span class="string">&quot;%4d&quot;</span>,<span class="number">1234</span>);</span><br><span class="line">    System.out.println();</span><br><span class="line">    System.out.printf(<span class="string">&quot;%4d&quot;</span>,<span class="number">12345</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -18987,12 +18987,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot引用application.yml配置文件的变量值</title>
+    <title>Spring Boot引用application.yml配置文件的属性</title>
     <url>/433.html</url>
-    <content><![CDATA[<h3 id="定义一个变量"><a href="#定义一个变量" class="headerlink" title="定义一个变量"></a>定义一个变量</h3><p>首先在application.yml配置文件中定义一个变量，并给它赋值</p>
+    <content><![CDATA[<h3 id="添加一个属性"><a href="#添加一个属性" class="headerlink" title="添加一个属性"></a>添加一个属性</h3><p>首先在application.yml配置文件中添加一个属性，并给它赋值</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220128133954699.png" alt="image-20220128133954699"></p>
-<h3 id="在代码中引用"><a href="#在代码中引用" class="headerlink" title="在代码中引用"></a>在代码中引用</h3><p>通过@Value注解即可在当前类引用上面定义的变量</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Value(&quot;$&#123;maxBorrowBookSize&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> Integer maxBorrowBookSize;</span><br></pre></td></tr></table></figure>]]></content>
+<h3 id="直接在代码中引用"><a href="#直接在代码中引用" class="headerlink" title="直接在代码中引用"></a>直接在代码中引用</h3><p>通过@Value注解即可在当前类定义变量并获得属性的值</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Value(&quot;$&#123;maxBorrowBookSize&#125;&quot;)</span></span><br><span class="line"><span class="keyword">private</span> Integer maxBorrowBookSize;</span><br></pre></td></tr></table></figure>
+
+<p>使用这个属性值就直接像一般变量那样使用即可，这个变量是当前类可用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (borrowRecordList2.size() == maxBorrowBookSize) &#123;</span><br><span class="line">    resultMap.put(<span class="string">&quot;success&quot;</span>, <span class="keyword">false</span>);</span><br><span class="line">    resultMap.put(<span class="string">&quot;errorInfo&quot;</span>, <span class="string">&quot;借书失败，你同时借阅的图书过多，每次最多同时借阅&quot;</span> + maxBorrowBookSize + <span class="string">&quot;本图书！！&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用配置文件属性实体类"><a href="#使用配置文件属性实体类" class="headerlink" title="使用配置文件属性实体类"></a>使用配置文件属性实体类</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>上面是直接在要使用属性的类中使用，这样不方便管理，如果多个类都需要使用到同一个属性，那么管理起来就很麻烦了，我们可以专门创建一个实体类用于调用这些属性，要修改某个属性就只需要在这个实体类修改即可</p>
+<h4 id="实体类"><a href="#实体类" class="headerlink" title="实体类"></a>实体类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 配置文件属性实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-01 11:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConfigProperties</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;maxBorrowBookSize&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer maxBorrowBookSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>使用@Resource注解在当前类注入</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> ConfigProperties configProperties;</span><br></pre></td></tr></table></figure>
+
+<p>在对应的方法中使用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (borrowRecordList2.size() == configProperties.getMaxBorrowBookSize()) &#123;</span><br><span class="line">    resultMap.put(<span class="string">&quot;success&quot;</span>, <span class="keyword">false</span>);</span><br><span class="line">    resultMap.put(<span class="string">&quot;errorInfo&quot;</span>, <span class="string">&quot;借书失败，你同时借阅的图书过多，每次最多同时借阅&quot;</span> + configProperties.getMaxBorrowBookSize() + <span class="string">&quot;本图书！！&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Spring Boot</category>
       </categories>
