@@ -19013,4 +19013,46 @@
         <tag>Spring Boot</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Windows11设置环境变量</title>
+    <url>/435.html</url>
+    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><p>按下Windows键，点击设置的按钮</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203140531079.png" alt="image-20220203140531079"></p>
+<h3 id="打开高级系统设置"><a href="#打开高级系统设置" class="headerlink" title="打开高级系统设置"></a>打开高级系统设置</h3><p>打开设置界面后，左侧菜单选择系统，右侧选择关于</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-02-03%20140846.png"></p>
+<p>然后点击高级系统设置</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-02-03%20141124.png"></p>
+<h3 id="选择环境变量"><a href="#选择环境变量" class="headerlink" title="选择环境变量"></a>选择环境变量</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203141756966.png" alt="image-20220203141756966"></p>
+<h3 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h3><p>点击第二个新建，第一个是当前用户的用户变量（只对当前用户有效），而环境变量对所有用户有效</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203141835519.png" alt="image-20220203141835519"></p>]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>Windows系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot使用jasypt加密数据库密码</title>
+    <url>/434.html</url>
+    <content><![CDATA[<h3 id="引入jasypt依赖"><a href="#引入jasypt依赖" class="headerlink" title="引入jasypt依赖"></a>引入jasypt依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.ulisesbocchio<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jasypt-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="设置jasypt加密的盐值"><a href="#设置jasypt加密的盐值" class="headerlink" title="设置jasypt加密的盐值"></a>设置jasypt加密的盐值</h3><p>在application.yml配置文件中设置jasypt加密的盐值</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">jasypt:</span></span><br><span class="line">  <span class="attr">encryptor:</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">ledao</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="获取加密后的数据库密码"><a href="#获取加密后的数据库密码" class="headerlink" title="获取加密后的数据库密码"></a>获取加密后的数据库密码</h3><p>在测试模块中使用下面代码获取加密后的数据库密码，我的数据库密码为123456，下面代码在控制台打印加密后的数据库密码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.jasypt.encryption.StringEncryptor;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BookManageSystemApplicationTests</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> StringEncryptor encryptor;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(encryptor.encrypt(<span class="string">&quot;123456&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改application-yml的数据库密码"><a href="#修改application-yml的数据库密码" class="headerlink" title="修改application.yml的数据库密码"></a>修改application.yml的数据库密码</h3><p>将上面得到的加密后的密码用<code>ENC()</code>包起来，完整代码如下：（把url和username也加密起来也是可以的）</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_bookmanagesystem?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">ENC(69cbirQ6l+cOIL8x6nblXw==)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>虽然jasypt每次加密的结果都不同，但是解密后的原密码是同一个</p>]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Spring Boot</tag>
+        <tag>jasypt</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-02-01T07:07:48.212Z</updated>
+  <updated>2022-02-03T07:11:42.209Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows11设置环境变量</title>
+    <link href="https://blog.zoutl.cn/435.html"/>
+    <id>https://blog.zoutl.cn/435.html</id>
+    <published>2022-02-03T06:02:57.000Z</published>
+    <updated>2022-02-03T07:11:42.209Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><p>按下Windows键，点击设置的按钮</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203140531079.png" alt="image-20220203140531079"></p><h3 id="打开高级系统设置"><a href="#打开高级系统设置" class="headerlink" title="打开高级系统设置"></a>打开高级系统设置</h3><p>打开设置界面后，左侧菜单选择系统，右侧选择关于</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-02-03%20140846.png"></p><p>然后点击高级系统设置</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-02-03%20141124.png"></p><h3 id="选择环境变量"><a href="#选择环境变量" class="headerlink" title="选择环境变量"></a>选择环境变量</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203141756966.png" alt="image-20220203141756966"></p><h3 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h3><p>点击第二个新建，第一个是当前用户的用户变量（只对当前用户有效），而环境变量对所有用户有效</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203141835519.png" alt="image-20220203141835519"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/35.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/categories/Windows%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Boot使用jasypt加密数据库密码</title>
+    <link href="https://blog.zoutl.cn/434.html"/>
+    <id>https://blog.zoutl.cn/434.html</id>
+    <published>2022-02-03T05:45:23.000Z</published>
+    <updated>2022-02-03T07:11:53.560Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="引入jasypt依赖"><a href="#引入jasypt依赖" class="headerlink" title="引入jasypt依赖"></a>引入jasypt依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.github.ulisesbocchio<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jasypt-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="设置jasypt加密的盐值"><a href="#设置jasypt加密的盐值" class="headerlink" title="设置jasypt加密的盐值"></a>设置jasypt加密的盐值</h3><p>在application.yml配置文件中设置jasypt加密的盐值</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jasypt:</span></span><br><span class="line">  <span class="attr">encryptor:</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">ledao</span></span><br></pre></td></tr></table></figure><h3 id="获取加密后的数据库密码"><a href="#获取加密后的数据库密码" class="headerlink" title="获取加密后的数据库密码"></a>获取加密后的数据库密码</h3><p>在测试模块中使用下面代码获取加密后的数据库密码，我的数据库密码为123456，下面代码在控制台打印加密后的数据库密码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.jasypt.encryption.StringEncryptor;</span><br><span class="line"><span class="keyword">import</span> org.junit.jupiter.api.Test;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.test.context.SpringBootTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootTest</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BookManageSystemApplicationTests</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> StringEncryptor encryptor;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">contextLoads</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(encryptor.encrypt(<span class="string">&quot;123456&quot;</span>));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="修改application-yml的数据库密码"><a href="#修改application-yml的数据库密码" class="headerlink" title="修改application.yml的数据库密码"></a>修改application.yml的数据库密码</h3><p>将上面得到的加密后的密码用<code>ENC()</code>包起来，完整代码如下：（把url和username也加密起来也是可以的）</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_bookmanagesystem?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">ENC(69cbirQ6l+cOIL8x6nblXw==)</span></span><br></pre></td></tr></table></figure><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>虽然jasypt每次加密的结果都不同，但是解密后的原密码是同一个</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/25.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Spring Boot" scheme="https://blog.zoutl.cn/categories/Spring-Boot/"/>
+    
+    
+    <category term="Spring Boot" scheme="https://blog.zoutl.cn/tags/Spring-Boot/"/>
+    
+    <category term="jasypt" scheme="https://blog.zoutl.cn/tags/jasypt/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring Boot引用application.yml配置文件的属性</title>
@@ -403,48 +447,6 @@
     <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
     <category term="Thymeleaf" scheme="https://blog.zoutl.cn/tags/Thymeleaf/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>改变Windows系统文件夹的样式及颜色</title>
-    <link href="https://blog.zoutl.cn/415.html"/>
-    <id>https://blog.zoutl.cn/415.html</id>
-    <published>2022-01-15T03:18:06.000Z</published>
-    <updated>2022-01-15T03:39:43.870Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><h4 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h4><p>百度网盘链接：<a href="https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA">https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA</a></p><p>提取码：<code>n0vf</code></p><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>解压后即可运行，解压后的文件夹有两个exe可执行文件：FolderPainter.exe和FolderPainter_x64.exe，64位系统使用FolderPainter_x64.exe，其它使用FolderPainter_x64.exe</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112414.png"></p><h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="设置软件语言为中文"><a href="#设置软件语言为中文" class="headerlink" title="设置软件语言为中文"></a>设置软件语言为中文</h4><p>打开软件后，依次选择右下角的Menu、Languages、Chinese-Simplified即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112627.png" alt="2022-01-15 112627"></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112558.png" alt="2022-01-15 112558"></p><h4 id="安装颜色、样式、图标"><a href="#安装颜色、样式、图标" class="headerlink" title="安装颜色、样式、图标"></a>安装颜色、样式、图标</h4><p>要安装哪个就在左侧的选择框中给哪个打勾（下图只安装了颜色），然后点击安装即可（卸载的方法也一样）</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20113019.png"></p><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>右键点击某个文件夹，然后选择<code>文件夹颜色</code>再选中自己喜欢的颜色即可，如果要恢复原状就选中<code>默认文件夹图标</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20113447.png"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/73.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Windows系统" scheme="https://blog.zoutl.cn/categories/Windows%E7%B3%BB%E7%BB%9F/"/>
-    
-    
-    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MyBatis-Plus更新字段时无法设置为null值</title>
-    <link href="https://blog.zoutl.cn/414.html"/>
-    <id>https://blog.zoutl.cn/414.html</id>
-    <published>2022-01-12T10:31:10.000Z</published>
-    <updated>2022-01-12T10:40:40.003Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h3><p>我们在更新某个用户信息时，如果要将该用户信息的某个字段更新为null值，直接设置用户实体的对应属性为null值是不行的，因为MyBatis-Plus默认看到null值就不更新该字段</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在实体类的对应属性上添加注解<code>@TableField(updateStrategy = FieldStrategy.IGNORED)</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.FieldStrategy;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableField;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableId;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableName;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 留言实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-01-12 13:40</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@TableName(value = &quot;t_contact&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Contact</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableId</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 留言内容</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String content;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 答复</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(updateStrategy = FieldStrategy.IGNORED)</span></span><br><span class="line">    <span class="keyword">private</span> String reply;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 留言时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Date time;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 留言用户id（普通用户）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;userId&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer userId;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 回复用户id（管理员）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;userIdReply&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer userIdReply;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/63.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="MyBatis-Plus" scheme="https://blog.zoutl.cn/categories/MyBatis-Plus/"/>
-    
-    
-    <category term="MyBatis-Plus" scheme="https://blog.zoutl.cn/tags/MyBatis-Plus/"/>
     
   </entry>
   
