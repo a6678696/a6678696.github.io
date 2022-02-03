@@ -1846,28 +1846,33 @@
 <p>提取码：mbv3</p>
 <h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>使用FTPRush上传jre到/home/data目录</p>
 <p>详细步骤查看博客：<a href="http://www.zoutl.cn/blog/187">FTPRush向CentOS7上传文件和从CentOS7下载文件</a></p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>解压以及剪切到/home/java/目录</p>
-<p>①创建/home/java目录</p>
-<p>[root@localhost ~]# cd /<br>[root@localhost /]# cd home<br>[root@localhost home]# mkdir java</p>
-<p>②解压tar.gz压缩包 </p>
-<p>[root@localhost data]# tar -zxvf server-jre-8u131-linux-x64.tar.gz </p>
-<p>③把/home/data/下的jre剪切到/home/java/下</p>
-<p>[root@localhost data]# mv /home/data/jdk1.8.0_131 /home/java</p>
-<p>④给jre目录以及子目录授予root权限</p>
-<p>[root@localhost data]# chown root:root -R /home/java/jdk1.8.0_131/</p>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a><strong>配置环境变量</strong></h3><p>①编辑环境变量配置文件</p>
-<p>[root@localhost data]# vi /etc/profile</p>
-<p>在文件末尾加入下面代码（jdk名称根据实际情况填写），强制保存（wq!）退出</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">export</span> <span class="string">JAVA_HOME=/home/java</span></span><br><span class="line"><span class="attr">export</span> <span class="string">JRE_HOME=/home/java/jdk1.8.0_131</span></span><br><span class="line"><span class="attr">export</span> <span class="string">CLASSPATH=$JRE_HOME/lib/rt.jar:$JRE_HOME/lib/ext</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$JRE_HOME/bin</span></span><br></pre></td></tr></table></figure>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><ol>
+<li><p>创建/home/java目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="built_in">cd</span> home</span><br><span class="line">mkdir java</span><br></pre></td></tr></table></figure></li>
+<li><p>解压tar.gz压缩包 </p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">tar</span> -zxvf server-jre-<span class="number">8</span>u<span class="number">131</span>-linux-x<span class="number">64</span>.tar.gz</span><br></pre></td></tr></table></figure></li>
+<li><p>把/home/data/下的jre剪切到/home/java/下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv /home/data/jdk1.8.0_131 /home/java</span><br></pre></td></tr></table></figure></li>
+<li><p>给jre目录以及子目录授予root权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown root:root -R /home/java/jdk1.8.0_131/</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a><strong>配置环境变量</strong></h3><ol>
+<li><p>编辑环境变量配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure></li>
+<li><p>在文件末尾加入下面代码（jdk名称根据实际情况填写），强制保存（wq!）退出</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">export</span> <span class="string">JAVA_HOME=/home/java</span></span><br><span class="line"><span class="attr">export</span> <span class="string">JRE_HOME=/home/java/jdk1.8.0_131</span></span><br><span class="line"><span class="attr">export</span> <span class="string">CLASSPATH=$JRE_HOME/lib/rt.jar:$JRE_HOME/lib/ext</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$JRE_HOME/bin</span></span><br></pre></td></tr></table></figure></li>
+<li><p>使环境变量即时生效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li>
+<li><p>验证是否配置成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
 
-<p>②使环境变量即时生效</p>
-<p>[root@localhost data]# source /etc/profile</p>
-<p>③验证是否配置成功</p>
-<p>[root@localhost ~]# java -version</p>
 <p>结果：</p>
-<p>java version “1.8.0_131”<br>Java(TM) SE Runtime Environment (build 1.8.0_131-b11)<br>Java HotSpot(TM) 64-Bit Server VM (build 25.131-b11, mixed mode)</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155404274.png" alt="image-20220203155404274"></p>
 <p>java或者javac命令也可以验证</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="http://blog.java1234.com/blog/articles/307.html">Centos7.3安装和配置jre1.8_Java开源博客系统-Powered by java1234</a></p>]]></content>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155450563.png" alt="image-20220203155450563"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155516717.png" alt="image-20220203155516717"></p>
+</li>
+</ol>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
@@ -1924,8 +1929,7 @@
 <h3 id="SQLyog测试远程连接"><a href="#SQLyog测试远程连接" class="headerlink" title="SQLyog测试远程连接"></a>SQLyog测试远程连接</h3><p>输入 CentOS7 的IP，MySQL 的用户名和密码</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617023118.jpg" alt="img"></p>
 <p>结果如下图</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617023212.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://blog.java1234.com/blog/articles/308.html">Centos7.3安装和配置Mysql5.7_Java开源博客系统-Powered by java1234</a></p>]]></content>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617023212.jpg" alt="img"></p>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
@@ -2024,8 +2028,7 @@
 
 <h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
-<p>保存并退出即可</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/weixin_39883440/article/details/114214059">java web项目启动超级慢_java web项目部署在linux系统出现第一次登录高延迟的问题…_weixin_39883440的博客-CSDN博客</a></p>]]></content>
+<p>保存并退出即可</p>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
@@ -2113,8 +2116,7 @@
 <p><strong>停止Redis服务</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/redis/bin/redis-cli shutdown</span><br></pre></td></tr></table></figure>
 
-<p>再次搜索 Redis 服务，发现端口号没了，说明 Redis 服务已经停止了</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://blog.java1234.com/blog/articles/311.html">Redis安装_Java开源博客系统-Powered by java1234</a></p>]]></content>
+<p>再次搜索 Redis 服务，发现端口号没了，说明 Redis 服务已经停止了</p>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
@@ -2160,8 +2162,7 @@
 <p>jedis.auth(“123456”);</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">        String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082147.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://blog.java1234.com/blog/articles/314.html">Jedis连接 HelloWorld实现_Java开源博客系统-Powered by java1234</a></p>]]></content>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082147.jpg" alt="img"></p>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -2285,23 +2286,9 @@
 <h3 id="type"><a href="#type" class="headerlink" title="type"></a>type</h3><p>返回 key 所储存的值的类型删除指定key</p>
 <p>127.0.0.1:6379&gt; type name<br>string</p>
 <h3 id="keys"><a href="#keys" class="headerlink" title="keys"></a>keys</h3><h4 id="keys-1"><a href="#keys-1" class="headerlink" title="keys *"></a>keys *</h4><p>显示所有key</p>
-<p>127.0.0.1:6379&gt; keys *</p>
-<ol>
-<li>“set3”</li>
-<li>“age”</li>
-<li>“l1”</li>
-<li>“newSet”</li>
-<li>“l2”</li>
-<li>“set1”</li>
-<li>“1”</li>
-<li>“fruitList”</li>
-<li>“set2”</li>
-</ol>
+<p>127.0.0.1:6379&gt; keys *<br>1)”set3”<br>2)”age”<br>3)”l1”<br>4)”newSet”<br>5)”l2”<br>6)”set1”<br>7)”1”<br>8)”fruitList”<br>9)”set2”</p>
 <h4 id="keys-f"><a href="#keys-f" class="headerlink" title="keys f*"></a>keys f*</h4><p>查找所有以某字符串开头的key</p>
-<p>127.0.0.1:6379&gt; keys f*</p>
-<ol>
-<li>“fruitList”</li>
-</ol>
+<p>127.0.0.1:6379&gt; keys f*<br>1)”fruitList”</p>
 <h3 id="rename"><a href="#rename" class="headerlink" title="rename"></a>rename</h3><p>重命名key</p>
 <p>127.0.0.1:6379&gt; rename list1 list2<br>OK</p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多命令：<a href="https://www.runoob.com/redis/redis-keys.html">https://www.runoob.com/redis/redis-keys.html</a></p>]]></content>
@@ -2324,51 +2311,23 @@
 <h3 id="hmset"><a href="#hmset" class="headerlink" title="hmset"></a>hmset</h3><p>多个字段一起设置</p>
 <p>127.0.0.1:6379&gt; hmset h2 username ledao password 333<br>OK</p>
 <h3 id="hmget"><a href="#hmget" class="headerlink" title="hmget"></a>hmget</h3><p>获取多个字段</p>
-<p>127.0.0.1:6379&gt; hmget h2 username password</p>
-<ol>
-<li>“ledao”</li>
-<li>“333”</li>
-</ol>
+<p>127.0.0.1:6379&gt; hmget h2 username password<br>1)”ledao”<br>2)”333”</p>
 <h3 id="hgetall"><a href="#hgetall" class="headerlink" title="hgetall"></a>hgetall</h3><p>获取全部字段</p>
-<p>127.0.0.1:6379&gt; hgetall h2</p>
-<ol>
-<li>“username”</li>
-<li>“ledao”</li>
-<li>“password”</li>
-<li>“333”</li>
-</ol>
+<p>127.0.0.1:6379&gt; hgetall h2<br>1)”username”<br>2)”ledao”<br>3)”password”<br>4)”333”</p>
 <h3 id="hdel"><a href="#hdel" class="headerlink" title="hdel"></a>hdel</h3><p>删除属性</p>
 <p>可以一次删除一个或者多个</p>
 <p>127.0.0.1:6379&gt; hdel h2 username password<br>(integer) 2<br>127.0.0.1:6379&gt; hgetall h2<br>(empty list or set)</p>
 <h3 id="hincrby"><a href="#hincrby" class="headerlink" title="hincrby"></a>hincrby</h3><p>增加数字</p>
-<p>127.0.0.1:6379&gt; hset h1 age 20<br>(integer) 1<br>127.0.0.1:6379&gt; hgetall h1</p>
-<ol>
-<li>“username”</li>
-<li>“root”</li>
-<li>“password”</li>
-<li>“123456”</li>
-<li>“age”</li>
-<li>“20”</li>
-</ol>
+<p>127.0.0.1:6379&gt; hset h1 age 20<br>(integer) 1<br>127.0.0.1:6379&gt; hgetall h1<br>1)”username”<br>2)”root”<br>3)”password”<br>4)”123456”<br>5)”age”<br>6)”20”</p>
 <p>127.0.0.1:6379&gt; hincrby h1 age 5<br>(integer) 25</p>
 <h3 id="hexists"><a href="#hexists" class="headerlink" title="hexists"></a>hexists</h3><p>判断字段是否存在 1表示存在 0表示不存在</p>
 <p>127.0.0.1:6379&gt; hexists h1 age<br>(integer) 1<br>127.0.0.1:6379&gt; hexists h1 age2<br>(integer) 0</p>
 <h3 id="hlen"><a href="#hlen" class="headerlink" title="hlen"></a>hlen</h3><p>获取hash属性个数</p>
 <p>127.0.0.1:6379&gt; hlen h1<br>(integer) 3</p>
 <h3 id="hkeys"><a href="#hkeys" class="headerlink" title="hkeys"></a>hkeys</h3><p>获取所有属性名称</p>
-<p>127.0.0.1:6379&gt; hkeys h1</p>
-<ol>
-<li>“username”</li>
-<li>“password”</li>
-<li>“age”</li>
-</ol>
+<p>127.0.0.1:6379&gt; hkeys h1<br>1)”username”<br>2)”password”<br>3)”age”</p>
 <h3 id="hvals"><a href="#hvals" class="headerlink" title="hvals"></a>hvals</h3><p>获取所有属性值</p>
-<p>127.0.0.1:6379&gt; hvals h1</p>
-<ol>
-<li>“root”</li>
-<li>“123456”</li>
-<li>“25”</li>
-</ol>
+<p>127.0.0.1:6379&gt; hvals h1<br>1)”root”<br>2)”123456”<br>3)”25”</p>
 <h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a><strong>Java代码</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//设置字段</span></span><br><span class="line">        jedis.hset(<span class="string">&quot;h1&quot;</span>, <span class="string">&quot;username&quot;</span>, <span class="string">&quot;root&quot;</span>);</span><br><span class="line">        jedis.hset(<span class="string">&quot;h1&quot;</span>, <span class="string">&quot;password&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;用户名：&quot;</span> + jedis.hget(<span class="string">&quot;h1&quot;</span>, <span class="string">&quot;username&quot;</span>) + <span class="string">&quot;，密码：&quot;</span> + jedis.hget(<span class="string">&quot;h1&quot;</span>, <span class="string">&quot;password&quot;</span>));</span><br><span class="line">        <span class="comment">//获取全部字段</span></span><br><span class="line">        Map&lt;String, String&gt; map=jedis.hgetAll(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; stringStringEntry : map.entrySet()) &#123;</span><br><span class="line">            System.out.println(stringStringEntry.getKey()+<span class="string">&quot;:&quot;</span>+stringStringEntry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620134006.jpg" alt="img"></strong></p>]]></content>
@@ -2387,116 +2346,29 @@
 <p>127.0.0.1:6379&gt; lpush l1 a b c d<br>(integer) 4<br>127.0.0.1:6379&gt; lpush l1 1 2 3 4<br>(integer) 8</p>
 <h3 id="lrange"><a href="#lrange" class="headerlink" title="lrange"></a>lrange</h3><p>获取指定方位的集合元素（end是-1时表示最后一个位置）</p>
 <p><font color="#dd0000">lrange key start end</font></p>
-<p>127.0.0.1:6379&gt; lrange l1 0 -1</p>
-<ol>
-<li>“4”</li>
-<li>“3”</li>
-<li>“2”</li>
-<li>“1”</li>
-<li>“d”</li>
-<li>“c”</li>
-<li>“b”</li>
-<li>“a”</li>
-</ol>
+<p>127.0.0.1:6379&gt; lrange l1 0 -1<br>1)”4”<br>2)”3”<br>3)”2”<br>4)”1”<br>5)”d”<br>6)”c”<br>7)”b”<br>8)”a”</p>
 <h3 id="rpush"><a href="#rpush" class="headerlink" title="rpush"></a>rpush</h3><p>从右端开始添加（一般人比较习惯这种方式）</p>
 <p><font color="#dd0000">rpush key value1 value2…</font></p>
-<p>127.0.0.1:6379&gt; rpush l2 a b c d<br>(integer) 4<br>127.0.0.1:6379&gt; rpush l2 1 2 3 4<br>(integer) 8<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“a”</li>
-<li>“b”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-<li>“4”</li>
-</ol>
+<p>127.0.0.1:6379&gt; rpush l2 a b c d<br>(integer) 4<br>127.0.0.1:6379&gt; rpush l2 1 2 3 4<br>(integer) 8<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”a”<br>2)”b”<br>3)”c”<br>4)”d”<br>5)”1”<br>6)”2”<br>7)”3”<br>8)”4”</p>
 <h3 id="lpop"><a href="#lpop" class="headerlink" title="lpop"></a>lpop</h3><p>lpop左侧弹出集合元素，rpop 右侧弹出集合元素</p>
 <p><font color="#dd0000">lpop/rpop key</font></p>
 <p>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“a”</li>
-<li>“b”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-<li>“4”</li>
-</ol>
-<p>128.127.0.0.1:6379&gt; lpop l2<br>“a”<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-<li>“4”</li>
-</ol>
-<p>128.127.0.0.1:6379&gt; rpop l2<br>“4”<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-</ol>
+<p>1)”a”<br>2)”b”<br>3)”c”<br>4)”d”<br>5)”1”<br>6)”2”<br>7)”3”<br>8)”4”</p>
+<p>128.127.0.0.1:6379&gt; lpop l2<br>“a”<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”<br>7)”4”</p>
+<p>128.127.0.0.1:6379&gt; rpop l2<br>“4”<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
 <h3 id="llen"><a href="#llen" class="headerlink" title="llen"></a>llen</h3><p>查看元素个数</p>
 <p><font color="#dd0000">llen key</font></p>
-<p>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-</ol>
+<p>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
 <p>127.0.0.1:6379&gt; llen l2<br>(integer) 6</p>
 <h3 id="lset"><a href="#lset" class="headerlink" title="lset"></a>lset</h3><p>设置集合指定索引的值</p>
 <p><font color="#dd0000">lset key index value</font></p>
-<p>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-</ol>
-<p>127.0.0.1:6379&gt; lset l2 0 b1<br>OK<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“b1”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-</ol>
+<p>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
+<p>127.0.0.1:6379&gt; lset l2 0 b1<br>OK<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
 <h3 id="linsert"><a href="#linsert" class="headerlink" title="linsert"></a>linsert</h3><p>在集合里插入指定元素</p>
 <p>在某元素之前插入一个元素（在某元素之后插入一个元素只要将before修改为after即可）</p>
 <p><font color="#dd0000">linsert key before 某元素 插入的元素</font></p>
-<p>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“b1”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-</ol>
-<p>127.0.0.1:6379&gt; linsert l2 before 1 0<br>(integer) 7<br>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<ol>
-<li>“b1”</li>
-<li>“c”</li>
-<li>“d”</li>
-<li>“0”</li>
-<li>“1”</li>
-<li>“2”</li>
-<li>“3”</li>
-</ol>]]></content>
+<p>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
+<p>127.0.0.1:6379&gt; linsert l2 before 1 0<br>(integer) 7<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”0”<br>5)”1”<br>6)”2”<br>7)”3”</p>]]></content>
       <categories>
         <category>Redis</category>
       </categories>
@@ -2543,151 +2415,47 @@
 <p>127.0.0.1:6379&gt; sadd set1 a b c a<br>(integer) 3</p>
 <h3 id="smembers"><a href="#smembers" class="headerlink" title="smembers"></a>smembers</h3><p>查看指定key集合元素</p>
 <p>smembers key</p>
-<p>127.0.0.1:6379&gt; smembers set1</p>
-<ol>
-<li>“b”</li>
-<li>“a”</li>
-<li>“c”</li>
-</ol>
+<p>127.0.0.1:6379&gt; smembers set1<br>1)”b”<br>2)”a”<br>3)”c”</p>
 <h3 id="srem"><a href="#srem" class="headerlink" title="srem"></a>srem</h3><p>删除元素（删除一个或多个元素）</p>
 <p>srem key member1 member2…</p>
-<p>127.0.0.1:6379&gt; smembers set1</p>
-<ol>
-<li>“1”</li>
-<li>“c”</li>
-<li>“a”</li>
-<li>“b”</li>
-<li>“3”</li>
-<li>“2”</li>
-</ol>
-<p>127.0.0.1:6379&gt; srem set1 a 1<br>(integer) 2<br>127.0.0.1:6379&gt; smembers set1</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-<li>“3”</li>
-<li>“2”</li>
-</ol>
+<p>127.0.0.1:6379&gt; smembers set1<br>1)”1”<br>2)”c”<br>3)”a”<br>4)”b”<br>5)”3”<br>6)”2”</p>
+<p>127.0.0.1:6379&gt; srem set1 a 1<br>(integer) 2<br>127.0.0.1:6379&gt; smembers set1<br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”</p>
 <h3 id="sismembers"><a href="#sismembers" class="headerlink" title="sismembers"></a>sismembers</h3><p>判断某个元素是否存在（返回1表示存在，返回0表示不存在）</p>
 <p>sismembers key member</p>
-<p>127.0.0.1:6379&gt; smembers set1</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-<li>“3”</li>
-<li>“2”</li>
-</ol>
+<p>127.0.0.1:6379&gt; smembers set1<br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”</p>
 <p>127.0.0.1:6379&gt; sismember set1 a<br>(integer) 0<br>127.0.0.1:6379&gt; sismember set1 2<br>(integer) 1</p>
 <h3 id="sdiff"><a href="#sdiff" class="headerlink" title="sdiff"></a>sdiff</h3><p>计算两个集合的差集（key1去掉key1和key2的交集元素，key1和key2的位置交换会得到不同的结果）</p>
 <p>sdiff key1 key2</p>
-<p>127.0.0.1:6379&gt; sadd set2 a b c<br>(integer) 3<br>127.0.0.1:6379&gt; sadd set3 b c d e<br>(integer) 4<br>127.0.0.1:6379&gt; sdiff set2 set3</p>
-<ol>
-<li>“a”</li>
-</ol>
-<p>127.0.0.1:6379&gt; sdiff set3 set2</p>
-<ol>
-<li>“d”</li>
-<li>“e”</li>
-</ol>
+<p>127.0.0.1:6379&gt; sadd set2 a b c<br>(integer) 3<br>127.0.0.1:6379&gt; sadd set3 b c d e<br>(integer) 4<br>127.0.0.1:6379&gt; sdiff set2 set3<br>1)”a”</p>
+<p>127.0.0.1:6379&gt; sdiff set3 set2<br>1)”d”<br>2)”e”</p>
 <h3 id="sinter"><a href="#sinter" class="headerlink" title="sinter"></a>sinter</h3><p>计算两个集合的交集</p>
 <p>sinter key1 key2</p>
-<p>127.0.0.1:6379&gt; sinter set2 set3</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-</ol>
+<p>127.0.0.1:6379&gt; sinter set2 set3<br>1)”b”<br>2)”c”</p>
 <h3 id="sunion"><a href="#sunion" class="headerlink" title="sunion"></a>sunion</h3><p>计算两个集合的并集</p>
 <p>sunion key1 key2</p>
-<p>127.0.0.1:6379&gt; sunion set2 set3</p>
-<ol>
-<li>“b”</li>
-<li>“a”</li>
-<li>“c”</li>
-<li>“e”</li>
-<li>“d”</li>
-</ol>
+<p>127.0.0.1:6379&gt; sunion set2 set3<br>1)”b”<br>2)”a”<br>3)”c”<br>4)”e”<br>5)”d”</p>
 <h3 id="scard"><a href="#scard" class="headerlink" title="scard"></a>scard</h3><h4 id="计算元素总数"><a href="#计算元素总数" class="headerlink" title="计算元素总数"></a>计算元素总数</h4><p>scard key</p>
-<p>127.0.0.1:6379&gt; smembers set1</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-<li>“3”</li>
-<li>“2”</li>
-</ol>
+<p>127.0.0.1:6379&gt; smembers set1<br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”</p>
 <p>127.0.0.1:6379&gt; scard set1<br>(integer) 4</p>
 <h4 id="随机取一个元素"><a href="#随机取一个元素" class="headerlink" title="随机取一个元素"></a>随机取一个元素</h4><p>count为空或者是1时，只随机选一个元素</p>
 <p>scard key count</p>
-<p>127.0.0.1:6379&gt; srandmember set1<br>“3”<br>127.0.0.1:6379&gt; srandmember set1<br>“b”<br>127.0.0.1:6379&gt; srandmember set1 2</p>
-<ol>
-<li>“b”</li>
-<li>“3”</li>
-</ol>
-<p>127.0.0.1:6379&gt; srandmember set1 2</p>
-<ol>
-<li>“3”</li>
-<li>“2”</li>
-</ol>
+<p>127.0.0.1:6379&gt; srandmember set1<br>“3”<br>127.0.0.1:6379&gt; srandmember set1<br>“b”<br>127.0.0.1:6379&gt; srandmember set1 2<br>1)”b”<br>2)”3”</p>
+<p>127.0.0.1:6379&gt; srandmember set1 2<br>1)”3”<br>2)”2”</p>
 <h3 id="sdiffstore"><a href="#sdiffstore" class="headerlink" title="sdiffstore"></a>sdiffstore</h3><p>把差集结果存储到新集合中</p>
 <p>sdiffstore newKey key1 key2</p>
-<p>127.0.0.1:6379&gt; smembers set2</p>
-<ol>
-<li>“b”</li>
-<li>“a”</li>
-<li>“c”</li>
-</ol>
-<p>127.0.0.1:6379&gt; smembers set3</p>
-<ol>
-<li>“d”</li>
-<li>“b”</li>
-<li>“e”</li>
-<li>“c”</li>
-</ol>
-<p>127.0.0.1:6379&gt; sdiffstore newSet set2 set3<br>(integer) 1<br>127.0.0.1:6379&gt; smembers newSet</p>
-<ol>
-<li>“a”</li>
-</ol>
+<p>127.0.0.1:6379&gt; smembers set2<br>1)”b”<br>2)”a”<br>3)”c”</p>
+<p>127.0.0.1:6379&gt; smembers set3<br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”</p>
+<p>127.0.0.1:6379&gt; sdiffstore newSet set2 set3<br>(integer) 1<br>127.0.0.1:6379&gt; smembers newSet<br>1)”a”</p>
 <h3 id="sinterstore"><a href="#sinterstore" class="headerlink" title="sinterstore"></a>sinterstore</h3><p>把交集结果存储到新集合中</p>
 <p>sinterstore newKey key1 key2</p>
-<p>127.0.0.1:6379&gt; smembers set2</p>
-<ol>
-<li>“b”</li>
-<li>“a”</li>
-<li>“c”</li>
-</ol>
-<p>127.0.0.1:6379&gt; smembers set3</p>
-<ol>
-<li>“d”</li>
-<li>“b”</li>
-<li>“e”</li>
-<li>“c”</li>
-</ol>
-<p>127.0.0.1:6379&gt; sinterstore newSet set2 set3<br>(integer) 2<br>127.0.0.1:6379&gt; smembers newSet</p>
-<ol>
-<li>“b”</li>
-<li>“c”</li>
-</ol>
+<p>127.0.0.1:6379&gt; smembers set2<br>1)”b”<br>2)”a”<br>3)”c”</p>
+<p>127.0.0.1:6379&gt; smembers set3<br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”</p>
+<p>127.0.0.1:6379&gt; sinterstore newSet set2 set3<br>(integer) 2<br>127.0.0.1:6379&gt; smembers newSet<br>1)”b”<br>2)”c”</p>
 <h3 id="sunionstore"><a href="#sunionstore" class="headerlink" title="sunionstore"></a>sunionstore</h3><p>把并集结果存储到新集合中</p>
 <p>sunionstore newKey key1 key2</p>
-<p>127.0.0.1:6379&gt; smembers set2</p>
-<ol>
-<li>“b”</li>
-<li>“a”</li>
-<li>“c”</li>
-</ol>
-<p>127.0.0.1:6379&gt; smembers set3</p>
-<ol>
-<li>“d”</li>
-<li>“b”</li>
-<li>“e”</li>
-<li>“c”</li>
-</ol>
-<p>127.0.0.1:6379&gt; sunionstore newSet set2 set3<br>(integer) 5<br>127.0.0.1:6379&gt; smembers newSet</p>
-<ol>
-<li>“b”</li>
-<li>“a”</li>
-<li>“c”</li>
-<li>“e”</li>
-<li>“d”</li>
-</ol>]]></content>
+<p>127.0.0.1:6379&gt; smembers set2<br>1)”b”<br>2)”a”<br>3)”c”</p>
+<p>127.0.0.1:6379&gt; smembers set3<br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”</p>
+<p>127.0.0.1:6379&gt; sunionstore newSet set2 set3<br>(integer) 5<br>127.0.0.1:6379&gt; smembers newSet<br>1)”b”<br>2)”a”<br>3)”c”<br>4)”e”<br>5)”d”</p>]]></content>
       <categories>
         <category>Redis</category>
       </categories>
@@ -2724,153 +2492,37 @@
 <p>127.0.0.1:6379&gt; zadd age 11 tom 8 jack 22 mary<br>(integer) 3</p>
 <h3 id="zrange"><a href="#zrange" class="headerlink" title="zrange"></a>zrange</h3><h4 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h4><p>-1代表是最后一个</p>
 <p>zrange key start end</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1</p>
-<ol>
-<li>“jack”</li>
-<li>“tom”</li>
-<li>“mary”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrange age 0 -1<br>1)”jack”<br>2)”tom”<br>3)”mary”</p>
 <h4 id="显示数值"><a href="#显示数值" class="headerlink" title="显示数值"></a>显示数值</h4><p>zrange key 0 -1 withscores</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
 <h3 id="zrevrange"><a href="#zrevrange" class="headerlink" title="zrevrange"></a>zrevrange</h3><p>降序排列</p>
 <p>zrevrange key start end withscores</p>
-<p>127.0.0.1:6379&gt; zrevrange age 0 -1 withscores</p>
-<ol>
-<li>“mary”</li>
-<li>“22”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“jack”</li>
-<li>“8”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrevrange age 0 -1 withscores<br>1)”mary”<br>2)”22”<br>3)”tom”<br>4)”11”<br>5)”jack”<br>6)”8”</p>
 <h3 id="zrem"><a href="#zrem" class="headerlink" title="zrem"></a>zrem</h3><p>删除元素</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1</p>
-<ol>
-<li>“sherry”</li>
-<li>“jack”</li>
-<li>“tom”</li>
-<li>“mary”</li>
-</ol>
-<p>127.0.0.1:6379&gt; zrem age sherry<br>(integer) 1<br>127.0.0.1:6379&gt; zrange age 0 -1</p>
-<ol>
-<li>“jack”</li>
-<li>“tom”</li>
-<li>“mary”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrange age 0 -1<br>1)”sherry”<br>2)”jack”<br>3)”tom”<br>4)”mary”</p>
+<p>127.0.0.1:6379&gt; zrem age sherry<br>(integer) 1<br>127.0.0.1:6379&gt; zrange age 0 -1<br>1)”jack”<br>2)”tom”<br>3)”mary”</p>
 <h3 id="zcard"><a href="#zcard" class="headerlink" title="zcard"></a>zcard</h3><p>查看集合里的元素个数</p>
 <p>zcard key</p>
 <p>127.0.0.1:6379&gt; zcard age<br>(integer) 3</p>
 <h3 id="zremrangebyrank"><a href="#zremrangebyrank" class="headerlink" title="zremrangebyrank"></a>zremrangebyrank</h3><p>根据排名来删除元素</p>
 <p>zremrangebyrank key start end</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“aa”</li>
-<li>“1”</li>
-<li>“bb”</li>
-<li>“2”</li>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
-<p>127.0.0.1:6379&gt; zremrangebyrank age 0 1<br>(integer) 2<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br> 1)”aa”<br> 2)”1”<br> 3)”bb”<br> 4)”2”<br> 5)”jack”<br> 6)”8”<br> 7)”tom”<br> 8)”11”<br> 9)”mary”<br>10) “22”</p>
+<p>127.0.0.1:6379&gt; zremrangebyrank age 0 1<br>(integer) 2<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
 <h3 id="zremrangebyscore"><a href="#zremrangebyscore" class="headerlink" title="zremrangebyscore"></a>zremrangebyscore</h3><p>根据数值范围来删除元素</p>
 <p>zremrangebyscore key min max</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“aa”</li>
-<li>“1”</li>
-<li>“bb”</li>
-<li>“2”</li>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
-<p>127.0.0.1:6379&gt; zremrangebyscore age 0 4<br>(integer) 2<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br> 1)”aa”<br> 2)”1”<br> 3)”bb”<br> 4)”2”<br> 5)”jack”<br> 6)”8”<br> 7)”tom”<br> 8)”11”<br> 9)”mary”<br>10)”22”</p>
+<p>127.0.0.1:6379&gt; zremrangebyscore age 0 4<br>(integer) 2<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
 <h3 id="zrangebyscore"><a href="#zrangebyscore" class="headerlink" title="zrangebyscore"></a>zrangebyscore</h3><h4 id="根据评分范围来查找元素"><a href="#根据评分范围来查找元素" class="headerlink" title="根据评分范围来查找元素"></a>根据评分范围来查找元素</h4><p>zrangebyscore key min max withscores</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
-<p>127.0.0.1:6379&gt; zrangebyscore age 8 11 withscores</p>
-<ol>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-</ol>
-<h4 id="限定查找起始（类似分页）"><a href="#限定查找起始（类似分页）" class="headerlink" title="限定查找起始（类似分页）"></a>限定查找起始（类似分页）</h4><p>127.0.0.1:6379&gt; zrangebyscore age 0 100 withscores limit 0 2</p>
-<ol>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
+<p>127.0.0.1:6379&gt; zrangebyscore age 8 11 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”</p>
+<h4 id="限定查找起始（类似分页）"><a href="#限定查找起始（类似分页）" class="headerlink" title="限定查找起始（类似分页）"></a>限定查找起始（类似分页）</h4><p>127.0.0.1:6379&gt; zrangebyscore age 0 100 withscores limit 0 2<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”</p>
 <h3 id="zincrby"><a href="#zincrby" class="headerlink" title="zincrby"></a>zincrby</h3><p>给指定元素加分</p>
 <p>zincrby key 数值 值</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“jack”</li>
-<li>“8”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
-<p>127.0.0.1:6379&gt; zincrby age 2 jack<br>“10”<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“jack”</li>
-<li>“10”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
+<p>127.0.0.1:6379&gt; zincrby age 2 jack<br>“10”<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”10”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
 <h3 id="zcount"><a href="#zcount" class="headerlink" title="zcount"></a>zcount</h3><p>查找指定数值范围的元素个数</p>
 <p>zcount key min max</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores</p>
-<ol>
-<li>“jack”</li>
-<li>“10”</li>
-<li>“tom”</li>
-<li>“11”</li>
-<li>“mary”</li>
-<li>“22”</li>
-</ol>
+<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”10”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
 <p>127.0.0.1:6379&gt; zcount age 9 10<br>(integer) 1</p>]]></content>
       <categories>
         <category>Redis</category>
