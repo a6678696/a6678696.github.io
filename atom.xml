@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-02-15T14:23:03.950Z</updated>
+  <updated>2022-02-15T19:46:33.968Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>Spring一些注解的说明以及用法</title>
-    <link href="https://blog.zoutl.cn/444.html"/>
-    <id>https://blog.zoutl.cn/444.html</id>
+    <link href="https://blog.zoutl.cn/444"/>
+    <id>https://blog.zoutl.cn/444</id>
     <published>2022-02-15T12:34:56.000Z</published>
-    <updated>2022-02-15T14:23:03.950Z</updated>
+    <updated>2022-02-15T19:46:33.968Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="@Configuration"></a>@Configuration</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>相当于把该类作为Spring的XML配置文件中的beans标签，说明这是一个配置类</p><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><p>将该注解放在类的上面</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Bean"><a href="#Bean" class="headerlink" title="@Bean"></a>@Bean</h3><h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><p>等价于Spring的XML配置文件中的bean标签，用于注册bean对象</p><h4 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h4><p>标注在方法上(返回某个实例的方法)，如果没有定义name属性那么bean的id为方法名，定义了name属性那么bean的id为name的属性值（这时候就不可以用方法名了）；这个方法的名字相当于bean标签中id属性，这个方法的返回值相当于bean标签中的class属性</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Student student = <span class="keyword">new</span> Student();</span><br><span class="line">        student.setName(<span class="string">&quot;tom&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> student;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Component"><a href="#Component" class="headerlink" title="@Component"></a>@Component</h3><h4 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h4><p>用于注册bean对象，相当于XML配置文件的bean标签，一般结合@Value使用</p><h4 id="用法-2"><a href="#用法-2" class="headerlink" title="用法"></a>用法</h4><p>将该注解放在类的上面</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(value = &quot;tom&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Student&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Value"><a href="#Value" class="headerlink" title="@Value"></a>@Value</h3><h4 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h4><p>一般结合@Component使用，用于注入属性的值</p><h4 id="用法-3"><a href="#用法-3" class="headerlink" title="用法"></a>用法</h4><p>将该注解放在实体类定义的属性上面，或者放在Setter方法上面，如果两个地方都使用该注解以Setter方法的为准</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value(value = &quot;tom&quot;)</span></span><br><span class="line"><span class="keyword">private</span> String name;</span><br></pre></td></tr></table></figure><h3 id="Autowired和-Resource"><a href="#Autowired和-Resource" class="headerlink" title="@Autowired和@Resource"></a>@Autowired和@Resource</h3><p>这两个注解都是用于实现Spring的自动装配，详细说明和用法查看博客：<a href="https://blog.zoutl.cn/443.html">使用注解实现Spring自动装配 | LeDao的博客 (zoutl.cn)</a></p><h3 id="Scope"><a href="#Scope" class="headerlink" title="@Scope"></a>@Scope</h3><h4 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h4><p>定义配置类下的<code>某个使用了@bean注解的方法</code>的作用域</p><h4 id="用法-4"><a href="#用法-4" class="headerlink" title="用法"></a>用法</h4><p>Spring bean的默认作用域为singleton</p><p>在<code>某个使用了@bean注解的方法</code>的上面使用这个注解时定义该方法的作用域，只对该方法有效</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Scope;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@Scope(value = &quot;prototype&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Student();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h3><h4 id="说明-5"><a href="#说明-5" class="headerlink" title="说明"></a>说明</h4><p>用于定义扫描的路径并从中找出标识了需要装配的类自动装配到spring的bean容器中（使用@Component注解的类）</p><h4 id="用法-5"><a href="#用法-5" class="headerlink" title="用法"></a>用法</h4><p>一般在配置类上使用，扫描指定包下的类，将所有需要装配的类都装配到spring的bean容器中；如果不使用这个注解的话，只会装配该配置类下使用了@bean的方法对应的类</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.ledao.entity&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Student();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Import"><a href="#Import" class="headerlink" title="@Import"></a>@Import</h3><h4 id="说明-6"><a href="#说明-6" class="headerlink" title="说明"></a>说明</h4><p>用于导入其他配置类的配置</p><h4 id="用法-6"><a href="#用法-6" class="headerlink" title="用法"></a>用法</h4><p>在<code>要导入其他配置类</code>的配置类上使用，@Import()括号内填<code>要导入的配置类名称.class</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@Import(MyConfig2.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Student();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h3 id="Configuration"><a href="#Configuration" class="headerlink" title="@Configuration"></a>@Configuration</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>相当于把该类作为Spring的XML配置文件中的beans标签，说明这是一个配置类</p><h4 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h4><p>将该注解放在类的上面</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Bean"><a href="#Bean" class="headerlink" title="@Bean"></a>@Bean</h3><h4 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h4><p>等价于Spring的XML配置文件中的bean标签，用于注册bean对象</p><h4 id="用法-1"><a href="#用法-1" class="headerlink" title="用法"></a>用法</h4><p>标注在方法上(返回某个实例的方法)，如果没有定义name属性那么bean的id为方法名，定义了name属性那么bean的id为name的属性值（这时候就不可以用方法名了）；这个方法的名字相当于bean标签中id属性，这个方法的返回值相当于bean标签中的class属性</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Student student = <span class="keyword">new</span> Student();</span><br><span class="line">        student.setName(<span class="string">&quot;tom&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> student;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Component"><a href="#Component" class="headerlink" title="@Component"></a>@Component</h3><h4 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h4><p>用于注册bean对象，相当于XML配置文件的bean标签</p><h4 id="用法-2"><a href="#用法-2" class="headerlink" title="用法"></a>用法</h4><p>将该注解放在类的上面</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Component;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Component</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(value = &quot;tom&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Student&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Value"><a href="#Value" class="headerlink" title="@Value"></a>@Value</h3><h4 id="说明-3"><a href="#说明-3" class="headerlink" title="说明"></a>说明</h4><p>用于注入属性的值</p><h4 id="用法-3"><a href="#用法-3" class="headerlink" title="用法"></a>用法</h4><p>将该注解放在实体类定义的属性上面，或者放在Setter方法上面，如果两个地方都使用该注解以Setter方法的为准</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Value(value = &quot;tom&quot;)</span></span><br><span class="line"><span class="keyword">private</span> String name;</span><br></pre></td></tr></table></figure><h3 id="Autowired和-Resource"><a href="#Autowired和-Resource" class="headerlink" title="@Autowired和@Resource"></a>@Autowired和@Resource</h3><p>这两个注解都是用于实现Spring的自动装配，详细说明和用法查看博客：<a href="https://blog.zoutl.cn/443.html">使用注解实现Spring自动装配 | LeDao的博客 (zoutl.cn)</a></p><h3 id="Scope"><a href="#Scope" class="headerlink" title="@Scope"></a>@Scope</h3><h4 id="说明-4"><a href="#说明-4" class="headerlink" title="说明"></a>说明</h4><p>定义配置类下的<code>某个使用了@bean注解的方法</code>的作用域</p><h4 id="用法-4"><a href="#用法-4" class="headerlink" title="用法"></a>用法</h4><p>Spring bean的默认作用域为singleton</p><p>在<code>某个使用了@bean注解的方法</code>的上面使用这个注解时定义该方法的作用域，只对该方法有效</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Scope;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@Scope(value = &quot;prototype&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Student();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h3><h4 id="说明-5"><a href="#说明-5" class="headerlink" title="说明"></a>说明</h4><p>用于定义扫描的路径并从中找出标识了需要装配的类自动装配到spring的bean容器中（使用@Component注解的类）</p><h4 id="用法-5"><a href="#用法-5" class="headerlink" title="用法"></a>用法</h4><p>一般在配置类上使用，扫描指定包下的类，将所有需要装配的类都装配到spring的bean容器中；如果不使用这个注解的话，只会装配该配置类下使用了@bean的方法对应的类</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.ComponentScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.ledao.entity&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Student();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Import"><a href="#Import" class="headerlink" title="@Import"></a>@Import</h3><h4 id="说明-6"><a href="#说明-6" class="headerlink" title="说明"></a>说明</h4><p>用于导入其他配置类的配置</p><h4 id="用法-6"><a href="#用法-6" class="headerlink" title="用法"></a>用法</h4><p>在<code>要导入其他配置类</code>的配置类上使用，@Import()括号内填<code>要导入的配置类名称.class</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@Import(MyConfig2.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Student <span class="title">student</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Student();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/6.jpg&quot;&gt;&lt;/p&gt;</summary>
@@ -41,8 +41,8 @@
   
   <entry>
     <title>使用注解实现Spring自动装配</title>
-    <link href="https://blog.zoutl.cn/443.html"/>
-    <id>https://blog.zoutl.cn/443.html</id>
+    <link href="https://blog.zoutl.cn/443"/>
+    <id>https://blog.zoutl.cn/443</id>
     <published>2022-02-15T10:10:42.000Z</published>
     <updated>2022-02-15T12:01:03.602Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>Spring自动装配</title>
-    <link href="https://blog.zoutl.cn/442.html"/>
-    <id>https://blog.zoutl.cn/442.html</id>
+    <link href="https://blog.zoutl.cn/442"/>
+    <id>https://blog.zoutl.cn/442</id>
     <published>2022-02-14T13:14:03.000Z</published>
     <updated>2022-02-15T12:01:07.945Z</updated>
     
@@ -87,8 +87,8 @@
   
   <entry>
     <title>Spring bean作用域</title>
-    <link href="https://blog.zoutl.cn/441.html"/>
-    <id>https://blog.zoutl.cn/441.html</id>
+    <link href="https://blog.zoutl.cn/441"/>
+    <id>https://blog.zoutl.cn/441</id>
     <published>2022-02-14T12:44:50.000Z</published>
     <updated>2022-02-15T11:56:43.816Z</updated>
     
@@ -110,8 +110,8 @@
   
   <entry>
     <title>Spring的c和p命名空间</title>
-    <link href="https://blog.zoutl.cn/440.html"/>
-    <id>https://blog.zoutl.cn/440.html</id>
+    <link href="https://blog.zoutl.cn/440"/>
+    <id>https://blog.zoutl.cn/440</id>
     <published>2022-02-14T07:09:39.000Z</published>
     <updated>2022-02-15T11:57:35.154Z</updated>
     
@@ -133,8 +133,8 @@
   
   <entry>
     <title>Spring依赖注入多种类型数据</title>
-    <link href="https://blog.zoutl.cn/439.html"/>
-    <id>https://blog.zoutl.cn/439.html</id>
+    <link href="https://blog.zoutl.cn/439"/>
+    <id>https://blog.zoutl.cn/439</id>
     <published>2022-02-14T06:08:45.000Z</published>
     <updated>2022-02-14T07:34:42.903Z</updated>
     
@@ -156,8 +156,8 @@
   
   <entry>
     <title>Spring通过注解创建对象</title>
-    <link href="https://blog.zoutl.cn/438.html"/>
-    <id>https://blog.zoutl.cn/438.html</id>
+    <link href="https://blog.zoutl.cn/438"/>
+    <id>https://blog.zoutl.cn/438</id>
     <published>2022-02-13T17:21:22.000Z</published>
     <updated>2022-02-13T17:44:49.367Z</updated>
     
@@ -179,8 +179,8 @@
   
   <entry>
     <title>Spring配置</title>
-    <link href="https://blog.zoutl.cn/437.html"/>
-    <id>https://blog.zoutl.cn/437.html</id>
+    <link href="https://blog.zoutl.cn/437"/>
+    <id>https://blog.zoutl.cn/437</id>
     <published>2022-02-13T16:08:01.000Z</published>
     <updated>2022-02-13T16:50:50.262Z</updated>
     
@@ -202,8 +202,8 @@
   
   <entry>
     <title>Spring IOC创建对象</title>
-    <link href="https://blog.zoutl.cn/436.html"/>
-    <id>https://blog.zoutl.cn/436.html</id>
+    <link href="https://blog.zoutl.cn/436"/>
+    <id>https://blog.zoutl.cn/436</id>
     <published>2022-02-13T14:11:50.000Z</published>
     <updated>2022-02-14T12:02:08.224Z</updated>
     
@@ -225,8 +225,8 @@
   
   <entry>
     <title>Windows11设置环境变量</title>
-    <link href="https://blog.zoutl.cn/435.html"/>
-    <id>https://blog.zoutl.cn/435.html</id>
+    <link href="https://blog.zoutl.cn/435"/>
+    <id>https://blog.zoutl.cn/435</id>
     <published>2022-02-03T06:02:57.000Z</published>
     <updated>2022-02-03T07:19:15.757Z</updated>
     
@@ -246,8 +246,8 @@
   
   <entry>
     <title>Spring Boot使用jasypt加密数据库密码</title>
-    <link href="https://blog.zoutl.cn/434.html"/>
-    <id>https://blog.zoutl.cn/434.html</id>
+    <link href="https://blog.zoutl.cn/434"/>
+    <id>https://blog.zoutl.cn/434</id>
     <published>2022-02-03T05:45:23.000Z</published>
     <updated>2022-02-03T07:19:15.759Z</updated>
     
@@ -269,8 +269,8 @@
   
   <entry>
     <title>Spring Boot引用application.yml配置文件的属性</title>
-    <link href="https://blog.zoutl.cn/433.html"/>
-    <id>https://blog.zoutl.cn/433.html</id>
+    <link href="https://blog.zoutl.cn/433"/>
+    <id>https://blog.zoutl.cn/433</id>
     <published>2022-01-28T05:36:34.000Z</published>
     <updated>2022-02-01T07:07:48.212Z</updated>
     
@@ -292,8 +292,8 @@
   
   <entry>
     <title>图书管理系统</title>
-    <link href="https://blog.zoutl.cn/432.html"/>
-    <id>https://blog.zoutl.cn/432.html</id>
+    <link href="https://blog.zoutl.cn/432"/>
+    <id>https://blog.zoutl.cn/432</id>
     <published>2022-01-27T13:38:36.000Z</published>
     <updated>2022-01-27T13:55:36.909Z</updated>
     
@@ -313,8 +313,8 @@
   
   <entry>
     <title>在GitHub的Overview页面添加统计模块</title>
-    <link href="https://blog.zoutl.cn/431.html"/>
-    <id>https://blog.zoutl.cn/431.html</id>
+    <link href="https://blog.zoutl.cn/431"/>
+    <id>https://blog.zoutl.cn/431</id>
     <published>2022-01-27T11:03:09.000Z</published>
     <updated>2022-01-27T12:17:00.741Z</updated>
     
@@ -334,8 +334,8 @@
   
   <entry>
     <title>MyBatis实现in查询</title>
-    <link href="https://blog.zoutl.cn/430.html"/>
-    <id>https://blog.zoutl.cn/430.html</id>
+    <link href="https://blog.zoutl.cn/430"/>
+    <id>https://blog.zoutl.cn/430</id>
     <published>2022-01-24T15:58:07.000Z</published>
     <updated>2022-01-25T04:49:50.935Z</updated>
     
@@ -355,8 +355,8 @@
   
   <entry>
     <title>Java给日期加一天</title>
-    <link href="https://blog.zoutl.cn/429.html"/>
-    <id>https://blog.zoutl.cn/429.html</id>
+    <link href="https://blog.zoutl.cn/429"/>
+    <id>https://blog.zoutl.cn/429</id>
     <published>2022-01-24T15:47:16.000Z</published>
     <updated>2022-01-24T16:27:19.839Z</updated>
     
@@ -376,8 +376,8 @@
   
   <entry>
     <title>JavaScript格式化时间</title>
-    <link href="https://blog.zoutl.cn/428.html"/>
-    <id>https://blog.zoutl.cn/428.html</id>
+    <link href="https://blog.zoutl.cn/428"/>
+    <id>https://blog.zoutl.cn/428</id>
     <published>2022-01-24T15:20:25.000Z</published>
     <updated>2022-01-25T04:48:41.149Z</updated>
     
@@ -397,8 +397,8 @@
   
   <entry>
     <title>hexo博客的标题包含特殊字符</title>
-    <link href="https://blog.zoutl.cn/427.html"/>
-    <id>https://blog.zoutl.cn/427.html</id>
+    <link href="https://blog.zoutl.cn/427"/>
+    <id>https://blog.zoutl.cn/427</id>
     <published>2022-01-23T10:54:48.000Z</published>
     <updated>2022-01-24T00:20:36.320Z</updated>
     
@@ -418,8 +418,8 @@
   
   <entry>
     <title>MySQL报错：java.sql.SQLSyntax: You have an error in your SQL syntax</title>
-    <link href="https://blog.zoutl.cn/426.html"/>
-    <id>https://blog.zoutl.cn/426.html</id>
+    <link href="https://blog.zoutl.cn/426"/>
+    <id>https://blog.zoutl.cn/426</id>
     <published>2022-01-21T17:25:06.000Z</published>
     <updated>2022-01-27T07:38:35.502Z</updated>
     
@@ -439,8 +439,8 @@
   
   <entry>
     <title>Spring Data JPA实体类常用注解</title>
-    <link href="https://blog.zoutl.cn/425.html"/>
-    <id>https://blog.zoutl.cn/425.html</id>
+    <link href="https://blog.zoutl.cn/425"/>
+    <id>https://blog.zoutl.cn/425</id>
     <published>2022-01-21T09:46:40.000Z</published>
     <updated>2022-01-21T17:22:07.316Z</updated>
     
