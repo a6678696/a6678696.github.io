@@ -2778,8 +2778,7 @@
 <p>②不为空（下载名为vue3.js的文件）</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">download</span>=<span class="string">&quot;vue3.js&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://www.zoutl.cn/fileDownload/vue.js&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;下载&quot;</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210623171915.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://www.cnblogs.com/hcxy/p/6964958.html">a标签实现文件下载 - 亲爱的混蛋 - 博客园</a></p>]]></content>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210623171915.jpg" alt="img"></p>]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -19184,6 +19183,33 @@
       <tags>
         <tag>Java</tag>
         <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea启动Tomcat时报错:Address localhost:1099 is already in use</title>
+    <url>/449.html</url>
+    <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>1099端口已经被其它程序占用</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>干掉占用该端口的程序，释放1099端口，具体步骤查看博客：<a href="https://blog.zoutl.cn/314.html">Windows10 释放被占用端口 | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+        <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea启动Tomcat时控制台出现中文乱码的解决办法</title>
+    <url>/450.html</url>
+    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220218234420426.png" alt="image-20220218234420426"></p>
+<h3 id="找到下图设置"><a href="#找到下图设置" class="headerlink" title="找到下图设置"></a>找到下图设置</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220218234516219.png" alt="image-20220218234516219"></p>
+<h3 id="修改设置"><a href="#修改设置" class="headerlink" title="修改设置"></a>修改设置</h3><p>将上图中的Default Encoding修改为UTF-8</p>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+        <tag>idea使用</tag>
       </tags>
   </entry>
 </search>
