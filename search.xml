@@ -19216,15 +19216,15 @@
     <title>idea报错：There is not enough memory to perform the requested operation</title>
     <url>/451.html</url>
     <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>当前idea占用的运行内存大于默认的最大运行内存</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="实时查看占用的运行内存"><a href="#实时查看占用的运行内存" class="headerlink" title="实时查看占用的运行内存"></a>实时查看占用的运行内存</h4><p>连续按两下SHIFT键，搜索<code>Show Memory Indicator</code>，出现下图划红线的选项后用鼠标点击一下就打开占用内存监控了</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032528068.png" alt="image-20220219032528068"></p>
-<p>然后在idea的右下角可以看到当前占用的运行内存以及idea允许占用的最大运行内存</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032504148.png" alt="image-20220219032504148"></p>
-<h4 id="修改允许占用的最大运行内存"><a href="#修改允许占用的最大运行内存" class="headerlink" title="修改允许占用的最大运行内存"></a>修改允许占用的最大运行内存</h4><p>修改idea允许占用的最大运行内存，根据下图打开idea的内存配置文件，修改Xmx（根据自己的情况设置，一般<code>2048M</code>就可以了）</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="修改允许占用最大运行内存"><a href="#修改允许占用最大运行内存" class="headerlink" title="修改允许占用最大运行内存"></a>修改允许占用最大运行内存</h4><p>修改idea允许占用的最大运行内存，根据下图打开idea的内存配置文件，修改Xmx（根据自己的情况设置，一般<code>2048M</code>就可以了）</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219031756132.png" alt="image-20220219031756132"></p>
 <p>我的idea内存配置文件内容如下：（主要修改Xmx，数值为内存的大小，单位为兆）</p>
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">-Xms512m</span></span><br><span class="line"><span class="attr">-Xmx2048m</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">ReservedCodeCacheSize=512m</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">+UseG1GC</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">SoftRefLRUPolicyMSPerMB=50</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">CICompilerCount=2</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">+HeapDumpOnOutOfMemoryError</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">-OmitStackTraceInFastThrow</span></span><br><span class="line"><span class="attr">-ea</span></span><br><span class="line"><span class="meta">-Dsun.io.useCanonCaches</span>=<span class="string">false</span></span><br><span class="line"><span class="meta">-Djdk.http.auth.tunneling.disabledSchemes</span>=<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="meta">-Djdk.attach.allowAttachSelf</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">-Djdk.module.illegalAccess.silent</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">-Dkotlinx.coroutines.debug</span>=<span class="string">off</span></span><br></pre></td></tr></table></figure>
 
+<h4 id="实时查看占用的运行内存"><a href="#实时查看占用的运行内存" class="headerlink" title="实时查看占用的运行内存"></a>实时查看占用的运行内存</h4><p>连续按两下SHIFT键，搜索<code>Show Memory Indicator</code>，出现下图划红线的选项后用鼠标点击一下就打开占用内存监控了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032528068.png" alt="image-20220219032528068"></p>
+<p>然后在idea的右下角可以看到当前占用的运行内存以及idea允许占用的最大运行内存</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032504148.png" alt="image-20220219032504148"></p>
 <h4 id="如果继续报错"><a href="#如果继续报错" class="headerlink" title="如果继续报错"></a>如果继续报错</h4><p>如果加大了idea允许占用的最大运行内存，并且当前占用的运行内存<code>小于</code>idea允许占用的最大运行内存，idea还是继续报错的话，就在设置中将下图划红线的数值调大（调成idea允许占用的最大运行内存即可）</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219033032992.png" alt="image-20220219033032992"></p>]]></content>
       <categories>
