@@ -19199,11 +19199,13 @@
       </tags>
   </entry>
   <entry>
-    <title>idea启动Tomcat时控制台出现中文乱码的解决办法</title>
+    <title>idea使用Tomcat启动项目时控制台的Tomcat信息出现中文乱码的解决办法</title>
     <url>/450.html</url>
-    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220218234420426.png" alt="image-20220218234420426"></p>
-<h3 id="找到下图设置"><a href="#找到下图设置" class="headerlink" title="找到下图设置"></a>找到下图设置</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220218234516219.png" alt="image-20220218234516219"></p>
-<h3 id="修改设置"><a href="#修改设置" class="headerlink" title="修改设置"></a>修改设置</h3><p>将上图中的Default Encoding修改为UTF-8</p>]]></content>
+    <content><![CDATA[<h3 id="Tomcat信息出现中文乱码"><a href="#Tomcat信息出现中文乱码" class="headerlink" title="Tomcat信息出现中文乱码"></a>Tomcat信息出现中文乱码</h3><h4 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220218234420426.png" alt="image-20220218234420426"></p>
+<h4 id="找到下图设置"><a href="#找到下图设置" class="headerlink" title="找到下图设置"></a>找到下图设置</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220218234516219.png" alt="image-20220218234516219"></p>
+<h4 id="修改设置"><a href="#修改设置" class="headerlink" title="修改设置"></a>修改设置</h4><p>将上图中的Default Encoding修改为UTF-8</p>
+<h3 id="输出语句乱码"><a href="#输出语句乱码" class="headerlink" title="输出语句乱码"></a>输出语句乱码</h3><p>也就是<code>System.out.println()</code>打印的信息出现乱码，下图的第三个UTF-8后打上勾</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219050537976.png" alt="image-20220219050537976"></p>]]></content>
       <categories>
         <category>idea使用</category>
       </categories>
@@ -19225,8 +19227,10 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032528068.png" alt="image-20220219032528068"></p>
 <p>然后在idea的右下角可以看到当前占用的运行内存以及idea允许占用的最大运行内存</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032504148.png" alt="image-20220219032504148"></p>
-<h4 id="如果继续报错"><a href="#如果继续报错" class="headerlink" title="如果继续报错"></a>如果继续报错</h4><p>如果加大了idea允许占用的最大运行内存，并且当前占用的运行内存<code>小于</code>idea允许占用的最大运行内存，idea还是继续报错的话，就在设置中将下图划红线的数值调大（调成idea允许占用的最大运行内存即可）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219033032992.png" alt="image-20220219033032992"></p>]]></content>
+<h4 id="继续报错"><a href="#继续报错" class="headerlink" title="继续报错"></a>继续报错</h4><p>如果加大了idea允许占用的最大运行内存，并且当前占用的运行内存<code>小于</code>idea允许占用的最大运行内存，idea还是继续报错的话，就在设置中将下图划红线的数值调大（调成idea允许占用的最大运行内存即可）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219041802281.png" alt="image-20220219041802281"></p>
+<h4 id="又报错"><a href="#又报错" class="headerlink" title="又报错"></a>又报错</h4><p>改了之后，一段时间后还是报错，后来我在网上看到有可能是插件占用内存过高（特别是检查代码以及bug的插件），我卸载了下图两个插件中的<code>QAPlug - PMD</code>（有可能是由于两个插件重复了）以及一些不常用的插件后，idea有可以正常使用了（不清楚是否已经完全解决了问题）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219042524016.png" alt="image-20220219042524016"></p>]]></content>
       <categories>
         <category>idea使用</category>
       </categories>
