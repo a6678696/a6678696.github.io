@@ -19229,8 +19229,29 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032504148.png" alt="image-20220219032504148"></p>
 <h4 id="继续报错"><a href="#继续报错" class="headerlink" title="继续报错"></a>继续报错</h4><p>如果加大了idea允许占用的最大运行内存，并且当前占用的运行内存<code>小于</code>idea允许占用的最大运行内存，idea还是继续报错的话，就在设置中将下图划红线的数值调大（调成idea允许占用的最大运行内存即可）</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219041802281.png" alt="image-20220219041802281"></p>
-<h4 id="又报错"><a href="#又报错" class="headerlink" title="又报错"></a>又报错</h4><p>改了之后，一段时间后还是报错，后来我在网上看到有可能是插件占用内存过高（特别是检查代码以及bug的插件），我卸载了下图两个插件中的<code>QAPlug - PMD</code>（有可能是由于两个插件重复了）以及一些不常用的插件后，idea有可以正常使用了（不清楚是否已经完全解决了问题）</p>
+<h4 id="又报错"><a href="#又报错" class="headerlink" title="又报错"></a>又报错</h4><p>改了之后，一段时间后还是报错，后来我在网上看到有可能是插件占用内存过高（特别是检查代码以及bug的插件），我卸载了下图两个插件中的<code>QAPlug - PMD</code>（有可能是由于两个插件重复了）以及一些不常用的插件后，idea又可以正常使用了</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219042524016.png" alt="image-20220219042524016"></p>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea使用GsonFormatPlus插件根据JSON数据生成实体类</title>
+    <url>/452.html</url>
+    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>在设置中Plugins–&gt;Marketplace–&gt;搜索插件–&gt;安装</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221195705316.png" alt="image-20220221195705316"></p>
+<h3 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h3><h4 id="JSON数据"><a href="#JSON数据" class="headerlink" title="JSON数据"></a>JSON数据</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;苹果&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;num&quot;</span>: <span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="打开插件页面"><a href="#打开插件页面" class="headerlink" title="打开插件页面"></a>打开插件页面</h4><p>首先打开一个实体类，使用<code>ALT+INSERT</code>快捷键出现下面选项，选择GsonFormatPlus，也可以直接使用<code>ALT+S</code>快捷键（这两个快捷键只在类中生效，不在接口中生效）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200654176.png" alt="image-20220221200654176"></p>
+<p>打开的插件页面如下图，在第一的输入框中输入包名以及生成的实体类名称，格式为：com.ledao.entity.Fruit，前面三个为报名，最后一个英文为实体类的名称；JSON处填JSON类型的数据</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200958327.png" alt="image-20220221200958327"></p>
+<p>然后点击OK出现下面界面，可以对字段的数据类型、名称和注释进行修改以及添加，然后点击OK即可生成实体类</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221201536232.png" alt="image-20220221201536232"></p>
+<h4 id="生成的实体类"><a href="#生成的实体类" class="headerlink" title="生成的实体类"></a>生成的实体类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.annotation.JsonProperty;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.NoArgsConstructor;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-21 20:17</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;id&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;name&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;num&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>idea使用</category>
       </categories>
