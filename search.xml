@@ -18974,7 +18974,7 @@
 <ul>
 <li>出处：这是Spring的注解</li>
 <li>用法：可以放在属性上面（这时候可以省略setter方法），也可以放在setter方法上面，一般放在属性上面即可</li>
-<li>实现方式：通过byType的方式实现，需要保证所有bean的class唯一，即不可以存在相同类型的bean；如果存在多个相同类型的bean</li>
+<li>实现方式：通过byType的方式实现，需要保证所有bean的class唯一，即不可以存在相同类型的bean</li>
 <li>指定要装配的bean的id的方式：可以使用@Qualifier注解指定bean的id，这个注解使用value属性指定bean的id</li>
 </ul>
 </li>
@@ -19247,7 +19247,7 @@
 
 <h4 id="打开插件页面"><a href="#打开插件页面" class="headerlink" title="打开插件页面"></a>打开插件页面</h4><p>首先打开一个实体类，使用<code>ALT+INSERT</code>快捷键出现下面选项，选择GsonFormatPlus，也可以直接使用<code>ALT+S</code>快捷键（这两个快捷键只在类中生效，不在接口中生效）</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200654176.png" alt="image-20220221200654176"></p>
-<p>打开的插件页面如下图，在第一的输入框中输入包名以及生成的实体类名称，格式为：com.ledao.entity.Fruit，前面三个为报名，最后一个英文为实体类的名称；JSON处填JSON类型的数据</p>
+<p>打开的插件页面如下图，在第一的输入框中输入包名以及生成的实体类名称，格式为：com.ledao.entity.Fruit，前面三个为包名，最后一个英文为实体类的名称；JSON处填JSON类型的数据</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200958327.png" alt="image-20220221200958327"></p>
 <p>然后点击OK出现下面界面，可以对字段的数据类型、名称和注释进行修改以及添加，然后点击OK即可生成实体类</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221201536232.png" alt="image-20220221201536232"></p>
