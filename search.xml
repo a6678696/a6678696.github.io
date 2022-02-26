@@ -14,27 +14,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一个非常好用的Java工具包：HulTool</title>
-    <url>/100.html</url>
-    <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Hutool是一个Java工具包类库，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类</p>
-<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><p>日期工具：通过DateUtil类，提供高度便捷的日期访问、处理和转换方式。</p>
-<p>HTTP客户端：通过HttpUtil对HTTP客户端的封装，实现便捷的HTTP请求，并简化文件上传操作。</p>
-<p>转换工具：通过Convert类中的相应静态方法，提供一整套的类型转换解决方案，并通过ConverterRegistry工厂类自定义转换。</p>
-<p>配置文件工具：通过Setting对象，提供兼容Properties文件的更加强大的配置文件工具，用于解决中文、分组等JDK配置文件存在的诸多问题。</p>
-<p>日志工具：Hutool的日志功能，通过抽象Log接口，提供对Slf4j、LogBack、Log4j、JDK-Logging的全面兼容支持。</p>
-<p>JDBC工具类：通过db模块，提供对MySQL、Oracle等关系型数据库的JDBC封装，借助ActiveRecord思想，大大简化数据库操作。</p>
-<p>更多功能：<a href="https://www.hutool.cn/docs/#/">官方参考文档</a></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>引入依赖后就可以直接使用了</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决：关于CKEditor的代码高亮</title>
     <url>/101.html</url>
     <content><![CDATA[<blockquote>
@@ -56,6 +35,39 @@
       </tags>
   </entry>
   <entry>
+    <title>一个非常好用的Java工具包：HulTool</title>
+    <url>/100.html</url>
+    <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Hutool是一个Java工具包类库，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类</p>
+<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><p>日期工具：通过DateUtil类，提供高度便捷的日期访问、处理和转换方式。</p>
+<p>HTTP客户端：通过HttpUtil对HTTP客户端的封装，实现便捷的HTTP请求，并简化文件上传操作。</p>
+<p>转换工具：通过Convert类中的相应静态方法，提供一整套的类型转换解决方案，并通过ConverterRegistry工厂类自定义转换。</p>
+<p>配置文件工具：通过Setting对象，提供兼容Properties文件的更加强大的配置文件工具，用于解决中文、分组等JDK配置文件存在的诸多问题。</p>
+<p>日志工具：Hutool的日志功能，通过抽象Log接口，提供对Slf4j、LogBack、Log4j、JDK-Logging的全面兼容支持。</p>
+<p>JDBC工具类：通过db模块，提供对MySQL、Oracle等关系型数据库的JDBC封装，借助ActiveRecord思想，大大简化数据库操作。</p>
+<p>更多功能：<a href="https://www.hutool.cn/docs/#/">官方参考文档</a></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>引入依赖后就可以直接使用了</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL数据库中text字段长度不够</title>
+    <url>/102.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）</p>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>制作网站logo</title>
     <url>/103.html</url>
     <content><![CDATA[<h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p><a href="http://www.uugai.com/">http://www.uugai.com/</a></p>
@@ -72,18 +84,6 @@
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL数据库中text字段长度不够</title>
-    <url>/102.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）</p>]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -187,22 +187,6 @@
       </tags>
   </entry>
   <entry>
-    <title>mysqldump命令备份数据库</title>
-    <url>/112.html</url>
-    <content><![CDATA[<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p123456 db_myblog&gt; D:/db_backup/db_myblog.sql</span><br></pre></td></tr></table></figure>
-
-<p>-u后面接的是数据库用户名，-p后面接的是密码，然后是空格接上数据库名称（db_myblog是我的数据库名称），后面则是存储的位置以及存储后的文件名</p>
-<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p>1.在mysql安装目录下bin文件夹中,打开CMD窗口</p>
-<p>2.输入上述命令，然后查看对应位置是否生成该SQL文件</p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424000522.jpg" alt="img"></strong></p>]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Github私有仓库改为公开</title>
     <url>/11.html</url>
     <content><![CDATA[<blockquote>
@@ -225,6 +209,35 @@
       </tags>
   </entry>
   <entry>
+    <title>部落冲突攻略</title>
+    <url>/110.html</url>
+    <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
+<h3 id="配兵"><a href="#配兵" class="headerlink" title="配兵"></a>配兵</h3><h4 id="超级女巫"><a href="#超级女巫" class="headerlink" title="超级女巫"></a>超级女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011129.jpg" alt="img"></p>
+<h4 id="8848流"><a href="#8848流" class="headerlink" title="8848流"></a>8848流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011245.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=GNKpNH5Img4">https://www.youtube.com/watch?v=GNKpNH5Img4</a></p>
+<h4 id="超级女巫-女巫"><a href="#超级女巫-女巫" class="headerlink" title="超级女巫+女巫"></a>超级女巫+女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011354.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=wzVR0pPbbYU">https://www.youtube.com/watch?v=wzVR0pPbbYU</a></p>
+<h4 id="冰冻龙流"><a href="#冰冻龙流" class="headerlink" title="冰冻龙流"></a>冰冻龙流</h4><p>攻城机器用滚木车</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210420222435.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=2_oV7ws49t4">https://www.youtube.com/watch?v=2_oV7ws49t4</a></p>
+<h4 id="天女超法皮卡流"><a href="#天女超法皮卡流" class="headerlink" title="天女超法皮卡流"></a>天女超法皮卡流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210428141543.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.bilibili.com/video/BV1My4y1b7kK">https://www.bilibili.com/video/BV1My4y1b7kK</a></p>
+<h3 id="常用数据"><a href="#常用数据" class="headerlink" title="常用数据"></a>常用数据</h3><h4 id="城墙等级和炸弹人数量"><a href="#城墙等级和炸弹人数量" class="headerlink" title="城墙等级和炸弹人数量"></a>城墙等级和炸弹人数量</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011522.jpg" alt="img"></strong></p>
+<h4 id="传奇联赛胜利奖杯"><a href="#传奇联赛胜利奖杯" class="headerlink" title="传奇联赛胜利奖杯"></a>传奇联赛胜利奖杯</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210421224722.jpg" alt="img"></strong></p>
+<h4 id="部落冲突联赛奖励图"><a href="#部落冲突联赛奖励图" class="headerlink" title="部落冲突联赛奖励图"></a>部落冲突联赛奖励图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201333.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201443.jpg" alt="img"></p>
+<h3 id="阵型"><a href="#阵型" class="headerlink" title="阵型"></a>阵型</h3><p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-CC6CO6VLE599N9_DOM">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-CC6CO6VLE599N9_DOM</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025421.jpg" alt="img"></p>
+<p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-k9e4msVwq1sNtFRBps">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-k9e4msVwq1sNtFRBps</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025406.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>部落冲突</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQLyog备份和导入MySQL数据库</title>
     <url>/111.html</url>
     <content><![CDATA[<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><blockquote>
@@ -243,6 +256,22 @@
 <p>选择对应的SQL文件，点击执行即可</p>
 </blockquote>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423235030.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mysqldump命令备份数据库</title>
+    <url>/112.html</url>
+    <content><![CDATA[<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p123456 db_myblog&gt; D:/db_backup/db_myblog.sql</span><br></pre></td></tr></table></figure>
+
+<p>-u后面接的是数据库用户名，-p后面接的是密码，然后是空格接上数据库名称（db_myblog是我的数据库名称），后面则是存储的位置以及存储后的文件名</p>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p>1.在mysql安装目录下bin文件夹中,打开CMD窗口</p>
+<p>2.输入上述命令，然后查看对应位置是否生成该SQL文件</p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424000522.jpg" alt="img"></strong></p>]]></content>
       <categories>
         <category>MySQL</category>
       </categories>
@@ -279,35 +308,6 @@
       <tags>
         <tag>Java</tag>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>部落冲突攻略</title>
-    <url>/110.html</url>
-    <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
-<h3 id="配兵"><a href="#配兵" class="headerlink" title="配兵"></a>配兵</h3><h4 id="超级女巫"><a href="#超级女巫" class="headerlink" title="超级女巫"></a>超级女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011129.jpg" alt="img"></p>
-<h4 id="8848流"><a href="#8848流" class="headerlink" title="8848流"></a>8848流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011245.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=GNKpNH5Img4">https://www.youtube.com/watch?v=GNKpNH5Img4</a></p>
-<h4 id="超级女巫-女巫"><a href="#超级女巫-女巫" class="headerlink" title="超级女巫+女巫"></a>超级女巫+女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011354.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=wzVR0pPbbYU">https://www.youtube.com/watch?v=wzVR0pPbbYU</a></p>
-<h4 id="冰冻龙流"><a href="#冰冻龙流" class="headerlink" title="冰冻龙流"></a>冰冻龙流</h4><p>攻城机器用滚木车</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210420222435.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=2_oV7ws49t4">https://www.youtube.com/watch?v=2_oV7ws49t4</a></p>
-<h4 id="天女超法皮卡流"><a href="#天女超法皮卡流" class="headerlink" title="天女超法皮卡流"></a>天女超法皮卡流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210428141543.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.bilibili.com/video/BV1My4y1b7kK">https://www.bilibili.com/video/BV1My4y1b7kK</a></p>
-<h3 id="常用数据"><a href="#常用数据" class="headerlink" title="常用数据"></a>常用数据</h3><h4 id="城墙等级和炸弹人数量"><a href="#城墙等级和炸弹人数量" class="headerlink" title="城墙等级和炸弹人数量"></a>城墙等级和炸弹人数量</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011522.jpg" alt="img"></strong></p>
-<h4 id="传奇联赛胜利奖杯"><a href="#传奇联赛胜利奖杯" class="headerlink" title="传奇联赛胜利奖杯"></a>传奇联赛胜利奖杯</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210421224722.jpg" alt="img"></strong></p>
-<h4 id="部落冲突联赛奖励图"><a href="#部落冲突联赛奖励图" class="headerlink" title="部落冲突联赛奖励图"></a>部落冲突联赛奖励图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201333.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201443.jpg" alt="img"></p>
-<h3 id="阵型"><a href="#阵型" class="headerlink" title="阵型"></a>阵型</h3><p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-CC6CO6VLE599N9_DOM">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-CC6CO6VLE599N9_DOM</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025421.jpg" alt="img"></p>
-<p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-k9e4msVwq1sNtFRBps">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-k9e4msVwq1sNtFRBps</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025406.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>其它</category>
-      </categories>
-      <tags>
-        <tag>部落冲突</tag>
       </tags>
   </entry>
   <entry>
@@ -1086,6 +1086,19 @@
       </tags>
   </entry>
   <entry>
+    <title>title标签加图标</title>
+    <url>/133.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;short icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/static/images/favicon.ico&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210603224943.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>EasyUI格式化网格数据</title>
     <url>/134.html</url>
     <content><![CDATA[<p>Blog实体类（博客实体）和BlogType实体类（博客类别实体），每个blog都有对应的blogType，博客类别实体有名称等属性，而我们只需要显示博客类别的名称，则格式化过程如下所示：</p>
@@ -1103,19 +1116,6 @@
       </categories>
       <tags>
         <tag>EasyUI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>title标签加图标</title>
-    <url>/133.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;short icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/static/images/favicon.ico&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210603224943.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1538,20 +1538,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安装Tomcat</title>
-    <url>/147.html</url>
-    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>网站地址：<a href="https://tomcat.apache.org/download-90.cgi">https://tomcat.apache.org/download-90.cgi</a></p>
-<p>下载第三（32位）或者第四个（64位），根据自己的电脑选择（解压版，无需安装）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615051649.jpg" alt="img"></p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>然后解压到指定文件夹即可</p>]]></content>
-      <categories>
-        <category>Tomcat</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea从GitHub克隆项目</title>
     <url>/146.html</url>
     <content><![CDATA[<h3 id="获取Git链接"><a href="#获取Git链接" class="headerlink" title="获取Git链接"></a>获取Git链接</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035554.jpg" alt="img"></p>
@@ -1567,6 +1553,20 @@
       <tags>
         <tag>GitHub</tag>
         <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装Tomcat</title>
+    <url>/147.html</url>
+    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>网站地址：<a href="https://tomcat.apache.org/download-90.cgi">https://tomcat.apache.org/download-90.cgi</a></p>
+<p>下载第三（32位）或者第四个（64位），根据自己的电脑选择（解压版，无需安装）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615051649.jpg" alt="img"></p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>然后解压到指定文件夹即可</p>]]></content>
+      <categories>
+        <category>Tomcat</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -2046,6 +2046,24 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS7实时查看Tomcat运行日志</title>
+    <url>/159.html</url>
+    <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
+
+<p>该文件在Tomcat安装目录的logs目录下</p>
+<h3 id="实时查看Tomcat运行日志命令"><a href="#实时查看Tomcat运行日志命令" class="headerlink" title="实时查看Tomcat运行日志命令"></a>实时查看Tomcat运行日志命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tail -f /home/tomcat9/apache-tomcat-9.0.46/logs/catalina.out</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618035601.jpg" alt="img"></strong></p>
+<p><font color="#dd0000">按CTRL+C退出</font></p>]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>一个Tomcat部署多个项目以及配置域名</title>
     <url>/16.html</url>
     <content><![CDATA[<p>首先找到服务器Tomcat的server.xml配置，然后在原来的基础上，多复制一份Host节点，然后 name 改成我们需要设置的域名以及Context节点对应好项目路径即可</p>
@@ -2205,24 +2223,6 @@
       <tags>
         <tag>Java</tag>
         <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7实时查看Tomcat运行日志</title>
-    <url>/159.html</url>
-    <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
-
-<p>该文件在Tomcat安装目录的logs目录下</p>
-<h3 id="实时查看Tomcat运行日志命令"><a href="#实时查看Tomcat运行日志命令" class="headerlink" title="实时查看Tomcat运行日志命令"></a>实时查看Tomcat运行日志命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tail -f /home/tomcat9/apache-tomcat-9.0.46/logs/catalina.out</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618035601.jpg" alt="img"></strong></p>
-<p><font color="#dd0000">按CTRL+C退出</font></p>]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-        <tag>CentOS7</tag>
       </tags>
   </entry>
   <entry>
@@ -2977,6 +2977,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue.js 事件处理器</title>
+    <url>/188.html</url>
+    <content><![CDATA[<p>事件监听使用 v-on 指令</p>
+<p>v-on:click点击事件，可以简写成@click</p>
+<span id="more"></span>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>计数器：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;counter&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;counter++&quot;</span>&gt;</span>加1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;counter--&quot;</span>&gt;</span>减1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;number&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;add(number)&quot;</span>&gt;</span>加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;number2&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;less(number2)&quot;</span>&gt;</span>减<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">number</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">number2</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">add</span>: <span class="function"><span class="keyword">function</span> (<span class="params">number</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter += <span class="built_in">parseInt</span>(number);</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">less</span>: <span class="function"><span class="keyword">function</span> (<span class="params">number2</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter -= <span class="built_in">parseInt</span>(number2);</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625015442.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue.js 样式绑定</title>
     <url>/186.html</url>
     <content><![CDATA[<p>lass 与 style 是 HTML 元素的属性，用于设置元素的样式，我们可以用 v-bind 来设置样式属性。</p>
@@ -3002,23 +3019,6 @@
 
 <p>③绑定多个对象</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-bind:style</span>=<span class="string">&quot;[style1,style2]&quot;</span>&gt;</span>LeDao的博客<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>:&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">style1</span>:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;color&#x27;</span>:<span class="string">&#x27;green&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;font-size&#x27;</span>:<span class="string">&#x27;33px&#x27;</span></span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">style2</span>:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;font-weight&#x27;</span>:<span class="string">&#x27;bold&#x27;</span></span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue.js 事件处理器</title>
-    <url>/188.html</url>
-    <content><![CDATA[<p>事件监听使用 v-on 指令</p>
-<p>v-on:click点击事件，可以简写成@click</p>
-<span id="more"></span>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>计数器：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;counter&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;counter++&quot;</span>&gt;</span>加1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;counter--&quot;</span>&gt;</span>减1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;number&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;add(number)&quot;</span>&gt;</span>加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;number2&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;less(number2)&quot;</span>&gt;</span>减<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">number</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">number2</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">add</span>: <span class="function"><span class="keyword">function</span> (<span class="params">number</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter += <span class="built_in">parseInt</span>(number);</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">less</span>: <span class="function"><span class="keyword">function</span> (<span class="params">number2</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter -= <span class="built_in">parseInt</span>(number2);</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625015442.jpg" alt="img"></p>]]></content>
       <categories>
         <category>Vue.js</category>
       </categories>
@@ -3165,6 +3165,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue.js 路由</title>
+    <url>/195.html</url>
+    <content><![CDATA[<p>Vue.js 路由允许我们通过不同的 URL 访问不同的内容，通过 Vue.js 可以实现多视图的单页Web应用</p>
+<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 使用 router-link 组件来导航. --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 通过传入 `to` 属性指定链接. --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/blog1&quot;</span>&gt;</span>第一篇博客<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/blog2&quot;</span>&gt;</span>第二篇博客<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由出口 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 1. 定义（路由）组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> blog1 = &#123;<span class="attr">template</span>: <span class="string">&#x27;&lt;p style=&quot;color: blue&quot;&gt;现在是第一篇博客&lt;/p&gt;&#x27;</span>&#125;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> blog2 = &#123;<span class="attr">template</span>: <span class="string">&#x27;&lt;p style=&quot;color: red&quot;&gt;现在是第二篇博客&lt;/p&gt;&#x27;</span>&#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 2. 定义路由</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> routes = [</span></span><br><span class="line"><span class="javascript">        &#123;<span class="attr">path</span>: <span class="string">&#x27;/blog1&#x27;</span>, <span class="attr">component</span>: blog1&#125;,</span></span><br><span class="line"><span class="javascript">        &#123;<span class="attr">path</span>: <span class="string">&#x27;/blog2&#x27;</span>, <span class="attr">component</span>: blog2&#125;</span></span><br><span class="line"><span class="javascript">    ]</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 3. 创建 router 实例，然后传 `routes` 配置</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter(&#123;routes&#125;)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 4. 创建和挂载根实例</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        router</span></span><br><span class="line"><span class="javascript">    &#125;).$mount(<span class="string">&#x27;#app&#x27;</span>)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625213813.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring Boot解决跨域问题</title>
     <url>/196.html</url>
     <content><![CDATA[<h3 id="为什么要实现跨域"><a href="#为什么要实现跨域" class="headerlink" title="为什么要实现跨域"></a>为什么要实现跨域</h3><p>如果没有实现跨域，前后端分离项目中Ajax就无法返回数据</p>
@@ -3180,22 +3196,6 @@
       <tags>
         <tag>Java</tag>
         <tag>Spring Boot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue.js 路由</title>
-    <url>/195.html</url>
-    <content><![CDATA[<p>Vue.js 路由允许我们通过不同的 URL 访问不同的内容，通过 Vue.js 可以实现多视图的单页Web应用</p>
-<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 使用 router-link 组件来导航. --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 通过传入 `to` 属性指定链接. --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/blog1&quot;</span>&gt;</span>第一篇博客<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/blog2&quot;</span>&gt;</span>第二篇博客<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由出口 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 1. 定义（路由）组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> blog1 = &#123;<span class="attr">template</span>: <span class="string">&#x27;&lt;p style=&quot;color: blue&quot;&gt;现在是第一篇博客&lt;/p&gt;&#x27;</span>&#125;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> blog2 = &#123;<span class="attr">template</span>: <span class="string">&#x27;&lt;p style=&quot;color: red&quot;&gt;现在是第二篇博客&lt;/p&gt;&#x27;</span>&#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 2. 定义路由</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> routes = [</span></span><br><span class="line"><span class="javascript">        &#123;<span class="attr">path</span>: <span class="string">&#x27;/blog1&#x27;</span>, <span class="attr">component</span>: blog1&#125;,</span></span><br><span class="line"><span class="javascript">        &#123;<span class="attr">path</span>: <span class="string">&#x27;/blog2&#x27;</span>, <span class="attr">component</span>: blog2&#125;</span></span><br><span class="line"><span class="javascript">    ]</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 3. 创建 router 实例，然后传 `routes` 配置</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter(&#123;routes&#125;)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 4. 创建和挂载根实例</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        router</span></span><br><span class="line"><span class="javascript">    &#125;).$mount(<span class="string">&#x27;#app&#x27;</span>)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625213813.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
       </tags>
   </entry>
   <entry>
@@ -3332,7 +3332,7 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
 <p>安装是否安装成功，分别输入命令node –version，npm -v都可以看到版本号说明Node.js安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
-<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h3><p>打开CMD，输入命令：npm install -g <a href="mailto:&#x76;&#x75;&#x65;&#45;&#x63;&#108;&#x69;&#64;&#50;&#46;&#57;&#x2e;&#54;">&#x76;&#x75;&#x65;&#45;&#x63;&#108;&#x69;&#64;&#50;&#46;&#57;&#x2e;&#54;</a>，运行</p>
+<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h3><p>打开CMD，输入命令：npm install -g <a href="mailto:&#118;&#117;&#x65;&#x2d;&#x63;&#x6c;&#x69;&#64;&#x32;&#46;&#57;&#46;&#54;">&#118;&#117;&#x65;&#x2d;&#x63;&#x6c;&#x69;&#64;&#x32;&#46;&#57;&#46;&#54;</a>，运行</p>
 <p>等待安装完成，输入命令：vue -V，看到版本号说明脚手架安装完成</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>]]></content>
       <categories>
@@ -3487,6 +3487,34 @@
       </tags>
   </entry>
   <entry>
+    <title>Element UI引入第三方图标</title>
+    <url>/206.html</url>
+    <content><![CDATA[<p>Element UI自带的图标数量太少了,并不能满足我们的开发需求</p>
+<h3 id="第三方图标地址"><a href="#第三方图标地址" class="headerlink" title="第三方图标地址"></a>第三方图标地址</h3><p><a href="https://www.iconfont.cn/">iconfont-阿里巴巴矢量图标库</a></p>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p>①查找需要的图标,添加入库</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153045.jpg" alt="img"></p>
+<p>②点击右上角的购物车图标按钮，添加到项目，没有项目就新建</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153128.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153137.jpg" alt="img"></p>
+<p>③修改项目设置</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153346.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153401.jpg" alt="img"></p>
+<p>④修改图片（样式、名称等）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153521.jpg" alt="img"></p>
+<p>⑤选择Font Class，下载至本地</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153607.jpg" alt="img"></p>
+<p>⑥将下载的压缩包解压后，将里面的文件复制到项目中</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153740.jpg" alt="img"></p>
+<p>⑦在项目中引用</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@/assets/myicon/iconfont.css&#x27;</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Element UI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring Boot+Mybatis使用Element UI分页</title>
     <url>/207.html</url>
     <content><![CDATA[<p>前端向后端发送的数据有当前页、每页记录数，后端向前端发送的数据有查询到的数据集合、数据总记录数（满足查询条件的全部数据的总记录数）</p>
@@ -3515,34 +3543,6 @@
         <tag>Java</tag>
         <tag>Spring Boot</tag>
         <tag>MyBatis</tag>
-        <tag>Element UI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Element UI引入第三方图标</title>
-    <url>/206.html</url>
-    <content><![CDATA[<p>Element UI自带的图标数量太少了,并不能满足我们的开发需求</p>
-<h3 id="第三方图标地址"><a href="#第三方图标地址" class="headerlink" title="第三方图标地址"></a>第三方图标地址</h3><p><a href="https://www.iconfont.cn/">iconfont-阿里巴巴矢量图标库</a></p>
-<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><p>①查找需要的图标,添加入库</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153045.jpg" alt="img"></p>
-<p>②点击右上角的购物车图标按钮，添加到项目，没有项目就新建</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153128.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153137.jpg" alt="img"></p>
-<p>③修改项目设置</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153346.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153401.jpg" alt="img"></p>
-<p>④修改图片（样式、名称等）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153521.jpg" alt="img"></p>
-<p>⑤选择Font Class，下载至本地</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153607.jpg" alt="img"></p>
-<p>⑥将下载的压缩包解压后，将里面的文件复制到项目中</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210628153740.jpg" alt="img"></p>
-<p>⑦在项目中引用</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@/assets/myicon/iconfont.css&#x27;</span>;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
         <tag>Element UI</tag>
       </tags>
   </entry>
@@ -4221,22 +4221,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java将一个数组复制给另一个数组</title>
-    <url>/231.html</url>
-    <content><![CDATA[<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr1.length];</span><br><span class="line">        <span class="comment">//复制</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr1.length; i++) &#123;</span><br><span class="line">            arr2[i] = arr1[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="System-ararycopy"><a href="#System-ararycopy" class="headerlink" title="System.ararycopy"></a>System.ararycopy</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr1.length];</span><br><span class="line">        <span class="comment">//复制</span></span><br><span class="line">        System.arraycopy(arr1, <span class="number">0</span>, arr2, <span class="number">0</span>, arr1.length);</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="clone"><a href="#clone" class="headerlink" title="clone()"></a>clone()</h3><p>如果数组等长，而且对应copy，使用int[] B= A.clone()</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = arr1.clone();</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MyBatis-Plus Mapper CRUD 接口之Select</title>
     <url>/230.html</url>
     <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 ID 查询</span></span><br><span class="line"><span class="function">T <span class="title">selectById</span><span class="params">(Serializable id)</span></span>;</span><br><span class="line"><span class="comment">// 根据 entity 条件，查询一条记录</span></span><br><span class="line"><span class="function">T <span class="title">selectOne</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询（根据ID 批量查询）</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectBatchIds</span><span class="params">(<span class="meta">@Param(Constants.COLLECTION)</span> Collection&lt;? extends Serializable&gt; idList)</span></span>;</span><br><span class="line"><span class="comment">// 根据 entity 条件，查询全部记录</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectList</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"><span class="comment">// 查询（根据 columnMap 条件）</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectByMap</span><span class="params">(<span class="meta">@Param(Constants.COLUMN_MAP)</span> Map&lt;String, Object&gt; columnMap)</span></span>;</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录</span></span><br><span class="line">List&lt;Map&lt;String, Object&gt;&gt; selectMaps(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper);</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录。注意： 只返回第一个字段的值</span></span><br><span class="line"><span class="function">List&lt;Object&gt; <span class="title">selectObjs</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 根据 entity 条件，查询全部记录（并翻页）</span></span><br><span class="line"><span class="function">IPage&lt;T&gt; <span class="title">selectPage</span><span class="params">(IPage&lt;T&gt; page, <span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录（并翻页）</span></span><br><span class="line">IPage&lt;Map&lt;String, Object&gt;&gt; selectMapsPage(IPage&lt;T&gt; page, <span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper);</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询总记录数</span></span><br><span class="line"><span class="function">Integer <span class="title">selectCount</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br></pre></td></tr></table></figure>
@@ -4273,6 +4257,22 @@
       <tags>
         <tag>Java</tag>
         <tag>MyBatis-Plus</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java将一个数组复制给另一个数组</title>
+    <url>/231.html</url>
+    <content><![CDATA[<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr1.length];</span><br><span class="line">        <span class="comment">//复制</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr1.length; i++) &#123;</span><br><span class="line">            arr2[i] = arr1[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="System-ararycopy"><a href="#System-ararycopy" class="headerlink" title="System.ararycopy"></a>System.ararycopy</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr1.length];</span><br><span class="line">        <span class="comment">//复制</span></span><br><span class="line">        System.arraycopy(arr1, <span class="number">0</span>, arr2, <span class="number">0</span>, arr1.length);</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="clone"><a href="#clone" class="headerlink" title="clone()"></a>clone()</h3><p>如果数组等长，而且对应copy，使用int[] B= A.clone()</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = arr1.clone();</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -4624,6 +4624,22 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo next添加页脚网站运行时间</title>
+    <url>/245.html</url>
+    <content><![CDATA[<h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;sitetime&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">javascript</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">siteTime</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">window</span>.setTimeout(<span class="string">&quot;siteTime()&quot;</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> seconds = <span class="number">1000</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> minutes = seconds * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> hours = minutes * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> days = hours * <span class="number">24</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> years = days * <span class="number">365</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayYear = today.getFullYear();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMonth = today.getMonth()+<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayDate = today.getDate();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayHour = today.getHours();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMinute = today.getMinutes();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todaySecond = today.getSeconds();</span></span><br><span class="line"><span class="javascript">		<span class="comment">/* </span></span></span><br><span class="line"><span class="comment"><span class="javascript">		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		year - 作为date对象的年份，为4位年份值</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		month - 0-11之间的整数，做为date对象的月份</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		day - 1-31之间的整数，做为date对象的天数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		minutes - 0-59之间的整数，做为date对象的分钟数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		seconds - 0-59之间的整数，做为date对象的秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		microseconds - 0-999之间的整数，做为date对象的毫秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">        */</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t1 = <span class="built_in">Date</span>.UTC(<span class="number">2020</span>,<span class="number">02</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">00</span>,<span class="number">00</span>); <span class="comment">//北京时间2018-2-13 00:00:00</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t2 = <span class="built_in">Date</span>.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diff = t2-t1;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffYears = <span class="built_in">Math</span>.floor(diff/years);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffDays = <span class="built_in">Math</span>.floor((diff/days)-diffYears*<span class="number">365</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffHours = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days)/hours);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffMinutes = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours)/minutes);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffSeconds = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">&quot;sitetime&quot;</span>).innerHTML=<span class="string">&quot; 已运行&quot;</span>+<span class="comment">/*diffYears+&quot; 年 &quot;+*/</span>diffDays+<span class="string">&quot; 天 &quot;</span>+diffHours+<span class="string">&quot; 小时 &quot;</span>+diffMinutes+<span class="string">&quot; 分钟 &quot;</span>+diffSeconds+<span class="string">&quot; 秒&quot;</span>;</span></span><br><span class="line"><span class="javascript">	&#125;</span></span><br><span class="line"><span class="javascript">	siteTime();</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="在页脚文件添加"><a href="#在页脚文件添加" class="headerlink" title="在页脚文件添加"></a>在页脚文件添加</h3><p>文件名称为：<font color="#dd0000">footer.swig</font>，文件路径：<font color="#dd0000">themes/next/layout/_partials/footer.swig</font></p>
+<p>在哪里添加根据自己的需求而定</p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20214348.png"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/qq_39720594/article/details/105411030">https://blog.csdn.net/qq_39720594/article/details/105411030</a></p>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java获取随机数</title>
     <url>/246.html</url>
     <content><![CDATA[<h3 id="System-currentTimeMillis"><a href="#System-currentTimeMillis" class="headerlink" title="System.currentTimeMillis()"></a>System.currentTimeMillis()</h3><p>通过System.currentTimeMillis()来获取随机数，实际上是获取当前时间毫秒数，它是long类型</p>
@@ -4639,22 +4655,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo next添加页脚网站运行时间</title>
-    <url>/245.html</url>
-    <content><![CDATA[<h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;sitetime&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">javascript</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">siteTime</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">window</span>.setTimeout(<span class="string">&quot;siteTime()&quot;</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> seconds = <span class="number">1000</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> minutes = seconds * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> hours = minutes * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> days = hours * <span class="number">24</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> years = days * <span class="number">365</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayYear = today.getFullYear();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMonth = today.getMonth()+<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayDate = today.getDate();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayHour = today.getHours();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMinute = today.getMinutes();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todaySecond = today.getSeconds();</span></span><br><span class="line"><span class="javascript">		<span class="comment">/* </span></span></span><br><span class="line"><span class="comment"><span class="javascript">		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		year - 作为date对象的年份，为4位年份值</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		month - 0-11之间的整数，做为date对象的月份</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		day - 1-31之间的整数，做为date对象的天数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		minutes - 0-59之间的整数，做为date对象的分钟数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		seconds - 0-59之间的整数，做为date对象的秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		microseconds - 0-999之间的整数，做为date对象的毫秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">        */</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t1 = <span class="built_in">Date</span>.UTC(<span class="number">2020</span>,<span class="number">02</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">00</span>,<span class="number">00</span>); <span class="comment">//北京时间2018-2-13 00:00:00</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t2 = <span class="built_in">Date</span>.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diff = t2-t1;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffYears = <span class="built_in">Math</span>.floor(diff/years);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffDays = <span class="built_in">Math</span>.floor((diff/days)-diffYears*<span class="number">365</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffHours = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days)/hours);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffMinutes = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours)/minutes);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffSeconds = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">&quot;sitetime&quot;</span>).innerHTML=<span class="string">&quot; 已运行&quot;</span>+<span class="comment">/*diffYears+&quot; 年 &quot;+*/</span>diffDays+<span class="string">&quot; 天 &quot;</span>+diffHours+<span class="string">&quot; 小时 &quot;</span>+diffMinutes+<span class="string">&quot; 分钟 &quot;</span>+diffSeconds+<span class="string">&quot; 秒&quot;</span>;</span></span><br><span class="line"><span class="javascript">	&#125;</span></span><br><span class="line"><span class="javascript">	siteTime();</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="在页脚文件添加"><a href="#在页脚文件添加" class="headerlink" title="在页脚文件添加"></a>在页脚文件添加</h3><p>文件名称为：<font color="#dd0000">footer.swig</font>，文件路径：<font color="#dd0000">themes/next/layout/_partials/footer.swig</font></p>
-<p>在哪里添加根据自己的需求而定</p>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20214348.png"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/qq_39720594/article/details/105411030">https://blog.csdn.net/qq_39720594/article/details/105411030</a></p>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -7289,6 +7289,35 @@
       </tags>
   </entry>
   <entry>
+    <title>Nginx实现反向代理</title>
+    <url>/317.html</url>
+    <content><![CDATA[<p>本博客主要实现访问Nginx时，代理请求Tomcat服务器</p>
+<h3 id="启动Nginx"><a href="#启动Nginx" class="headerlink" title="启动Nginx"></a>启动Nginx</h3><p>创建并启动Nginx容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -v /home/data/nginx:/etc/nginx -p 80:80 nginx镜像id</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>创建并启动Tomcat容器</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -p 8080:8080 tomcat镜像id</span><br></pre></td></tr></table></figure>
+
+<p>查看Docker给Tomcat容器分配的IP</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect Tomcat容器id</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-27%20000102.png"></p>
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>在宿主机 <font color="#dd0000">/home/data/nginx/conf.d</font> 目录下修改 <mark class="hl-label blue">default.conf</mark>  文件（下面的IP为Docker给Tomcat容器分配的IP）</p>
+<p>location / { }中添加：<mark class="hl-label blue">proxy_pass  http://172.17.0.3:8080;</mark> </p>
+<p>server_name修改为：<mark class="hl-label blue">http://172.17.0.3:8080</mark> （server_name内容随意，主要是用于区分）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-26%20235921.png"></p>
+<h3 id="添加本地域名"><a href="#添加本地域名" class="headerlink" title="添加本地域名"></a>添加本地域名</h3><p>找到 C:\Windows\System32\drivers\etc 打开hosts，底部加配置：</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">虚拟机IP www.<span class="number">123</span>.com</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入：<a href="http://www.123.com/">www.123.com</a> （也可以输入虚拟机IP）访问Nginx时，通过代理请求了Tomcat服务器</p>]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Nginx实现负载均衡</title>
     <url>/318.html</url>
     <content><![CDATA[<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>Docker中运行多个Tomcat，客户端把请求发送给Nginx后，由Nginx分发给其中一个Tomcat，Tomcat响应后再由Nginx返回结果到客户端</p>
@@ -7319,35 +7348,6 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
-        <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Nginx实现反向代理</title>
-    <url>/317.html</url>
-    <content><![CDATA[<p>本博客主要实现访问Nginx时，代理请求Tomcat服务器</p>
-<h3 id="启动Nginx"><a href="#启动Nginx" class="headerlink" title="启动Nginx"></a>启动Nginx</h3><p>创建并启动Nginx容器</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -v /home/data/nginx:/etc/nginx -p 80:80 nginx镜像id</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>创建并启动Tomcat容器</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d --name=自定义名称 -p 8080:8080 tomcat镜像id</span><br></pre></td></tr></table></figure>
-
-<p>查看Docker给Tomcat容器分配的IP</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect Tomcat容器id</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-27%20000102.png"></p>
-<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>在宿主机 <font color="#dd0000">/home/data/nginx/conf.d</font> 目录下修改 <mark class="hl-label blue">default.conf</mark>  文件（下面的IP为Docker给Tomcat容器分配的IP）</p>
-<p>location / { }中添加：<mark class="hl-label blue">proxy_pass  http://172.17.0.3:8080;</mark> </p>
-<p>server_name修改为：<mark class="hl-label blue">http://172.17.0.3:8080</mark> （server_name内容随意，主要是用于区分）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-26%20235921.png"></p>
-<h3 id="添加本地域名"><a href="#添加本地域名" class="headerlink" title="添加本地域名"></a>添加本地域名</h3><p>找到 C:\Windows\System32\drivers\etc 打开hosts，底部加配置：</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">虚拟机IP www.<span class="number">123</span>.com</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入：<a href="http://www.123.com/">www.123.com</a> （也可以输入虚拟机IP）访问Nginx时，通过代理请求了Tomcat服务器</p>]]></content>
-      <categories>
-        <category>Nginx</category>
-      </categories>
-      <tags>
         <tag>Nginx</tag>
       </tags>
   </entry>
@@ -13504,6 +13504,27 @@
       </tags>
   </entry>
   <entry>
+    <title>idea使用GsonFormatPlus插件根据JSON数据生成实体类</title>
+    <url>/452.html</url>
+    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>在设置中Plugins–&gt;Marketplace–&gt;搜索插件–&gt;安装</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221195705316.png" alt="image-20220221195705316"></p>
+<h3 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h3><h4 id="JSON数据"><a href="#JSON数据" class="headerlink" title="JSON数据"></a>JSON数据</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;苹果&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;num&quot;</span>: <span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="打开插件页面"><a href="#打开插件页面" class="headerlink" title="打开插件页面"></a>打开插件页面</h4><p>首先打开一个实体类，使用<code>ALT+INSERT</code>快捷键出现下面选项，选择GsonFormatPlus，也可以直接使用<code>ALT+S</code>快捷键（这两个快捷键只在类中生效，不在接口中生效）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200654176.png" alt="image-20220221200654176"></p>
+<p>打开的插件页面如下图，在第一的输入框中输入包名以及生成的实体类名称，格式为：com.ledao.entity.Fruit，前面三个为包名，最后一个英文为实体类的名称；JSON处填JSON类型的数据</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200958327.png" alt="image-20220221200958327"></p>
+<p>然后点击OK出现下面界面，可以对字段的数据类型、名称和注释进行修改以及添加，然后点击OK即可生成实体类</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221201536232.png" alt="image-20220221201536232"></p>
+<h4 id="生成的实体类"><a href="#生成的实体类" class="headerlink" title="生成的实体类"></a>生成的实体类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.annotation.JsonProperty;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.NoArgsConstructor;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-21 20:17</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;id&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;name&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;num&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前后端分离项目部署步骤</title>
     <url>/453.html</url>
     <content><![CDATA[<h3 id="给GitHub配置SSH-Key"><a href="#给GitHub配置SSH-Key" class="headerlink" title="给GitHub配置SSH Key"></a>给GitHub配置SSH Key</h3><p>具体步骤查看博客：<a href="https://blog.zoutl.cn/236.html">https://blog.zoutl.cn/236.html</a></p>
@@ -13547,28 +13568,7 @@
       </tags>
   </entry>
   <entry>
-    <title>idea使用GsonFormatPlus插件根据JSON数据生成实体类</title>
-    <url>/452.html</url>
-    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>在设置中Plugins–&gt;Marketplace–&gt;搜索插件–&gt;安装</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221195705316.png" alt="image-20220221195705316"></p>
-<h3 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h3><h4 id="JSON数据"><a href="#JSON数据" class="headerlink" title="JSON数据"></a>JSON数据</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;苹果&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;num&quot;</span>: <span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="打开插件页面"><a href="#打开插件页面" class="headerlink" title="打开插件页面"></a>打开插件页面</h4><p>首先打开一个实体类，使用<code>ALT+INSERT</code>快捷键出现下面选项，选择GsonFormatPlus，也可以直接使用<code>ALT+S</code>快捷键（这两个快捷键只在类中生效，不在接口中生效）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200654176.png" alt="image-20220221200654176"></p>
-<p>打开的插件页面如下图，在第一的输入框中输入包名以及生成的实体类名称，格式为：com.ledao.entity.Fruit，前面三个为包名，最后一个英文为实体类的名称；JSON处填JSON类型的数据</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200958327.png" alt="image-20220221200958327"></p>
-<p>然后点击OK出现下面界面，可以对字段的数据类型、名称和注释进行修改以及添加，然后点击OK即可生成实体类</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221201536232.png" alt="image-20220221201536232"></p>
-<h4 id="生成的实体类"><a href="#生成的实体类" class="headerlink" title="生成的实体类"></a>生成的实体类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.annotation.JsonProperty;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.NoArgsConstructor;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-21 20:17</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;id&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;name&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;num&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>报错：Failed to load property source from location classpath:/application.yml的解决办法</title>
+    <title>idea报错：Failed to load property source from location classpath:/application.yml</title>
     <url>/454.html</url>
     <content><![CDATA[<p>打开设置，找到下图的设置并将画红线的3处都改为<code>UTF-8</code></p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205457181.png" alt="image-20220226205457181"></p>
@@ -14686,8 +14686,8 @@
         <category>CKEditor</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>CKEditor</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>

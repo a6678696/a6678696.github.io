@@ -38,11 +38,11 @@
   </entry>
   
   <entry>
-    <title>报错：Failed to load property source from location classpath:/application.yml的解决办法</title>
+    <title>idea报错：Failed to load property source from location classpath:/application.yml</title>
     <link href="https://blog.zoutl.cn/454.html"/>
     <id>https://blog.zoutl.cn/454.html</id>
     <published>2022-02-26T13:04:54.000Z</published>
-    <updated>2022-02-26T13:11:00.628Z</updated>
+    <updated>2022-02-26T13:12:19.125Z</updated>
     
     <content type="html"><![CDATA[<p>打开设置，找到下图的设置并将画红线的3处都改为<code>UTF-8</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205457181.png" alt="image-20220226205457181"></p><p>打开Maven工具栏clean一下</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205836239.png" alt="image-20220226205836239"></p>]]></content>
     
