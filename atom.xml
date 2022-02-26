@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-02-26T15:05:03.799Z</updated>
+  <updated>2022-02-26T15:05:49.764Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>npm报错：A complete log of this run can be fund in</title>
+    <title>npm报错：A complete log of this run can be fund in的解决办法</title>
     <link href="https://blog.zoutl.cn/455.html"/>
     <id>https://blog.zoutl.cn/455.html</id>
     <published>2022-02-26T13:06:33.000Z</published>
-    <updated>2022-02-26T15:05:03.799Z</updated>
+    <updated>2022-02-26T15:05:49.764Z</updated>
     
     <content type="html"><![CDATA[<p>WebStorm使用快捷键<code>ALT+F12</code>打开Terminal窗口，然后分别执行下面两条命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#清理缓存</span></span><br><span class="line"> npm cache clean --force</span><br><span class="line"> <span class="comment">#安装依赖</span></span><br><span class="line"> npm install</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -38,11 +38,11 @@
   </entry>
   
   <entry>
-    <title>idea报错：Failed to load property source from location classpath:/application.yml</title>
+    <title>idea报错：Failed to load property source from location classpath:/application.yml的解决办法</title>
     <link href="https://blog.zoutl.cn/454.html"/>
     <id>https://blog.zoutl.cn/454.html</id>
     <published>2022-02-26T13:04:54.000Z</published>
-    <updated>2022-02-26T13:12:19.125Z</updated>
+    <updated>2022-02-26T15:05:57.631Z</updated>
     
     <content type="html"><![CDATA[<p>打开设置，找到下图的设置并将画红线的3处都改为<code>UTF-8</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205457181.png" alt="image-20220226205457181"></p><p>打开Maven工具栏clean一下</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205836239.png" alt="image-20220226205836239"></p>]]></content>
     
@@ -105,11 +105,11 @@
   </entry>
   
   <entry>
-    <title>idea报错：There is not enough memory to perform the requested operation</title>
+    <title>idea报错：There is not enough memory to perform the requested operation的解决办法</title>
     <link href="https://blog.zoutl.cn/451.html"/>
     <id>https://blog.zoutl.cn/451.html</id>
     <published>2022-02-18T18:55:49.000Z</published>
-    <updated>2022-02-20T09:50:00.052Z</updated>
+    <updated>2022-02-26T15:06:08.801Z</updated>
     
     <content type="html"><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>当前idea占用的运行内存大于默认的最大运行内存</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="修改允许占用最大运行内存"><a href="#修改允许占用最大运行内存" class="headerlink" title="修改允许占用最大运行内存"></a>修改允许占用最大运行内存</h4><p>修改idea允许占用的最大运行内存，根据下图打开idea的内存配置文件，修改Xmx（根据自己的情况设置，一般<code>2048M</code>就可以了）</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219031756132.png" alt="image-20220219031756132"></p><p>我的idea内存配置文件内容如下：（主要修改Xmx，数值为内存的大小，单位为兆）</p><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">-Xms512m</span></span><br><span class="line"><span class="attr">-Xmx2048m</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">ReservedCodeCacheSize=512m</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">+UseG1GC</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">SoftRefLRUPolicyMSPerMB=50</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">CICompilerCount=2</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">+HeapDumpOnOutOfMemoryError</span></span><br><span class="line"><span class="meta">-XX</span>:<span class="string">-OmitStackTraceInFastThrow</span></span><br><span class="line"><span class="attr">-ea</span></span><br><span class="line"><span class="meta">-Dsun.io.useCanonCaches</span>=<span class="string">false</span></span><br><span class="line"><span class="meta">-Djdk.http.auth.tunneling.disabledSchemes</span>=<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="meta">-Djdk.attach.allowAttachSelf</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">-Djdk.module.illegalAccess.silent</span>=<span class="string">true</span></span><br><span class="line"><span class="meta">-Dkotlinx.coroutines.debug</span>=<span class="string">off</span></span><br></pre></td></tr></table></figure><h4 id="实时查看占用的运行内存"><a href="#实时查看占用的运行内存" class="headerlink" title="实时查看占用的运行内存"></a>实时查看占用的运行内存</h4><p>连续按两下SHIFT键，搜索<code>Show Memory Indicator</code>，出现下图划红线的选项后用鼠标点击一下就打开占用内存监控了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032528068.png" alt="image-20220219032528068"></p><p>然后在idea的右下角可以看到当前占用的运行内存以及idea允许占用的最大运行内存</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032504148.png" alt="image-20220219032504148"></p><h4 id="继续报错"><a href="#继续报错" class="headerlink" title="继续报错"></a>继续报错</h4><p>如果加大了idea允许占用的最大运行内存，并且当前占用的运行内存<code>小于</code>idea允许占用的最大运行内存，idea还是继续报错的话，就在设置中将下图划红线的数值调大（调成idea允许占用的最大运行内存即可）</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219041802281.png" alt="image-20220219041802281"></p><h4 id="又报错"><a href="#又报错" class="headerlink" title="又报错"></a>又报错</h4><p>改了之后，一段时间后还是报错，后来我在网上看到有可能是插件占用内存过高（特别是检查代码以及bug的插件），我卸载了下图两个插件中的<code>QAPlug - PMD</code>（有可能是由于两个插件重复了）以及一些不常用的插件后，idea又可以正常使用了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219042524016.png" alt="image-20220219042524016"></p>]]></content>
     
@@ -149,11 +149,11 @@
   </entry>
   
   <entry>
-    <title>idea启动Tomcat时报错：Address localhost:1099 is already in use</title>
+    <title>idea启动Tomcat时报错：Address localhost:1099 is already in use的解决办法</title>
     <link href="https://blog.zoutl.cn/449.html"/>
     <id>https://blog.zoutl.cn/449.html</id>
     <published>2022-02-18T15:34:44.000Z</published>
-    <updated>2022-02-18T18:57:10.991Z</updated>
+    <updated>2022-02-26T15:06:15.454Z</updated>
     
     <content type="html"><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>1099端口已经被其它程序占用</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>干掉占用该端口的程序，释放1099端口，具体步骤查看博客：<a href="https://blog.zoutl.cn/314.html">Windows10 释放被占用端口 | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
     
