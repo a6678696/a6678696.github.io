@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-02-26T13:10:30.589Z</updated>
+  <updated>2022-02-26T15:05:03.799Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://blog.zoutl.cn/455.html"/>
     <id>https://blog.zoutl.cn/455.html</id>
     <published>2022-02-26T13:06:33.000Z</published>
-    <updated>2022-02-26T13:10:30.589Z</updated>
+    <updated>2022-02-26T15:05:03.799Z</updated>
     
-    <content type="html"><![CDATA[<p>WebStorm使用快捷键<code>ALT+F12</code>打开Terminal窗口，然后分别执行下面两条命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#清理缓存</span></span><br><span class="line"> npm cache clean --force</span><br><span class="line"> <span class="comment">#c</span></span><br><span class="line"> npm install</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>WebStorm使用快捷键<code>ALT+F12</code>打开Terminal窗口，然后分别执行下面两条命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">#清理缓存</span></span><br><span class="line"> npm cache clean --force</span><br><span class="line"> <span class="comment">#安装依赖</span></span><br><span class="line"> npm install</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/116.jpg&quot;&gt;&lt;/p&gt;</summary>
