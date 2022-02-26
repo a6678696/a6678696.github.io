@@ -13527,7 +13527,10 @@
   <entry>
     <title>前后端分离项目部署步骤</title>
     <url>/453.html</url>
-    <content><![CDATA[<h3 id="给GitHub配置SSH-Key"><a href="#给GitHub配置SSH-Key" class="headerlink" title="给GitHub配置SSH Key"></a>给GitHub配置SSH Key</h3><p>具体步骤查看博客：<a href="https://blog.zoutl.cn/236.html">https://blog.zoutl.cn/236.html</a></p>
+    <content><![CDATA[<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>本次试验用到的两个项目的GitHub链接为：</p>
+<p>前端代码地址：<a href="https://github.com/a6678696/ExamSystem2">https://github.com/a6678696/ExamSystem2</a></p>
+<p>后端代码地址：<a href="https://github.com/a6678696/ExamSystem">https://github.com/a6678696/ExamSystem</a></p>
+<h3 id="给GitHub配置SSH-Key"><a href="#给GitHub配置SSH-Key" class="headerlink" title="给GitHub配置SSH Key"></a>给GitHub配置SSH Key</h3><p>具体步骤查看博客：<a href="https://blog.zoutl.cn/236.html">https://blog.zoutl.cn/236.html</a></p>
 <h3 id="clone项目到本地"><a href="#clone项目到本地" class="headerlink" title="clone项目到本地"></a>clone项目到本地</h3><p>进入指定的文件夹，使用下面命令将项目clone到本地</p>
 <h4 id="clone前端项目"><a href="#clone前端项目" class="headerlink" title="clone前端项目"></a>clone前端项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:a6678696/ExamSystem2.git</span><br></pre></td></tr></table></figure>
 
