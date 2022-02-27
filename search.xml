@@ -2752,7 +2752,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Maven出现错误：Plugin &#39;org.springframework.boot:spring-boot-maven-plugin:&#39; not found</title>
+    <title>Maven出现错误：Plugin org.springframework.boot:spring-boot-maven-plugin: not found的解决办法</title>
     <url>/177.html</url>
     <content><![CDATA[<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>给spring-boot-maven-plugin指定版本</p>
 <h3 id="修改前"><a href="#修改前" class="headerlink" title="修改前"></a>修改前</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -13535,11 +13535,12 @@
       </tags>
   </entry>
   <entry>
-    <title>前后端分离项目部署步骤</title>
+    <title>前后端分离项目在本地IDE部署步骤</title>
     <url>/453.html</url>
-    <content><![CDATA[<h3 id="使用到的项目"><a href="#使用到的项目" class="headerlink" title="使用到的项目"></a>使用到的项目</h3><p>使用到的两个项目的GitHub链接为：</p>
+    <content><![CDATA[<h3 id="使用到的项目和IDE"><a href="#使用到的项目和IDE" class="headerlink" title="使用到的项目和IDE"></a>使用到的项目和IDE</h3><h4 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h4><p>使用到的两个项目的GitHub链接为：</p>
 <p>前端代码地址：<a href="https://github.com/a6678696/ExamSystem2">https://github.com/a6678696/ExamSystem2</a></p>
 <p>后端代码地址：<a href="https://github.com/a6678696/ExamSystem">https://github.com/a6678696/ExamSystem</a></p>
+<h4 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h4><p>我使用的是IntelliJ IDEA和WebStorm，本博客也是以这两个IDE为例部署项目</p>
 <h3 id="给GitHub配置SSH-Key"><a href="#给GitHub配置SSH-Key" class="headerlink" title="给GitHub配置SSH Key"></a>给GitHub配置SSH Key</h3><p>具体步骤查看博客：<a href="https://blog.zoutl.cn/236.html">https://blog.zoutl.cn/236.html</a></p>
 <h3 id="clone项目到本地"><a href="#clone项目到本地" class="headerlink" title="clone项目到本地"></a>clone项目到本地</h3><p>进入指定的文件夹，使用下面命令将项目clone到本地</p>
 <h4 id="clone前端项目"><a href="#clone前端项目" class="headerlink" title="clone前端项目"></a>clone前端项目</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:a6678696/ExamSystem2.git</span><br></pre></td></tr></table></figure>
@@ -13598,7 +13599,9 @@
     <title>npm报错：A complete log of this run can be fund in的解决办法</title>
     <url>/455.html</url>
     <content><![CDATA[<p>WebStorm使用快捷键<code>ALT+F12</code>打开Terminal窗口，然后分别执行下面两条命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment">#清理缓存</span></span><br><span class="line"> npm cache clean --force</span><br><span class="line"> <span class="comment">#安装依赖</span></span><br><span class="line"> npm install</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> <span class="comment">#清理缓存</span></span><br><span class="line"> npm cache clean --force</span><br><span class="line"> <span class="comment">#安装依赖</span></span><br><span class="line"> npm install</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用CMD命令或Git命令进入项目根目录后执行上面命令</p>]]></content>
       <categories>
         <category>其它</category>
       </categories>
