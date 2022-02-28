@@ -13314,7 +13314,9 @@
 <h3 id="Around"><a href="#Around" class="headerlink" title="@Around"></a>@Around</h3><h4 id="说明-14"><a href="#说明-14" class="headerlink" title="说明"></a>说明</h4><p>环绕增强方法使用</p>
 <h4 id="用法-14"><a href="#用法-14" class="headerlink" title="用法"></a>用法</h4><p>查看博客：<a href="https://blog.zoutl.cn/448.html">Spring 使用注解实现 AOP | LeDao 的博客 (zoutl.cn)</a></p>
 <h3 id="EnableAspectJAutoProxy"><a href="#EnableAspectJAutoProxy" class="headerlink" title="@EnableAspectJAutoProxy"></a>@EnableAspectJAutoProxy</h3><h4 id="说明-15"><a href="#说明-15" class="headerlink" title="说明"></a>说明</h4><p>启动AspectJ自动代理</p>
-<h4 id="用法-15"><a href="#用法-15" class="headerlink" title="用法"></a>用法</h4><p>查看博客：<a href="https://blog.zoutl.cn/448.html">Spring 使用注解实现 AOP | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
+<h4 id="用法-15"><a href="#用法-15" class="headerlink" title="用法"></a>用法</h4><p>查看博客：<a href="https://blog.zoutl.cn/448.html">Spring 使用注解实现 AOP | LeDao 的博客 (zoutl.cn)</a></p>
+<h3 id="Transactional"><a href="#Transactional" class="headerlink" title="@Transactional"></a>@Transactional</h3><h4 id="说明-16"><a href="#说明-16" class="headerlink" title="说明"></a>说明</h4><p>用于实现事务</p>
+<h4 id="用法-16"><a href="#用法-16" class="headerlink" title="用法"></a>用法</h4><p>查看博客：<a href="https://blog.zoutl.cn/457.html">Spring 使用 @Transactional 注解实现事务 | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
       <categories>
         <category>Spring</category>
       </categories>
