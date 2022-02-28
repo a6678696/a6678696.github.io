@@ -19424,7 +19424,26 @@
 <p>出现事务回滚的情况：如果出现NullPointerException就会发生事务回滚，如果出现RuntimeException也会回滚</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@Transactional(rollbackFor = &#123;NullPointerException.class&#125;)</span></span><br><span class="line"><span class="meta">@RequestMapping(value = &quot;/test&quot;, produces = &#123;&quot;text/plain;charset=utf-8&quot;, &quot;text/html;charset=utf-8&quot;&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = <span class="keyword">new</span> Student();</span><br><span class="line">    student.setName(<span class="string">&quot;小明&quot;</span>);</span><br><span class="line">    student.setAge(<span class="number">10</span>);</span><br><span class="line">    <span class="comment">//添加学生信息到数据库</span></span><br><span class="line">    studentService.add(student);</span><br><span class="line">    <span class="comment">//在数据库中查找id为1000的学生,如果这个学生存在,上面的添加操作就成功</span></span><br><span class="line">    Student student1 = studentService.findById(<span class="number">1000</span>);</span><br><span class="line">    System.out.println(student1.getId());</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;测试&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-02-28%20210956%20001346.gif"></p>]]></content>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><table>
+<thead>
+<tr>
+<th align="center">序号</th>
+<th align="center">测试条件</th>
+<th align="center">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">数据库中<code>不存在</code>id为1000的学生</td>
+<td align="center">报错，且添加学生<code>不成功</code></td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">数据库中<code>存在</code>id为1000的学生</td>
+<td align="center">添加学生<code>成功</code></td>
+</tr>
+</tbody></table>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-02-28%20210956%20001346.gif"></p>]]></content>
       <categories>
         <category>Spring</category>
       </categories>
