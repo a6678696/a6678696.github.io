@@ -2248,28 +2248,39 @@
   <entry>
     <title>Redis字符串</title>
     <url>/164.html</url>
-    <content><![CDATA[<h3 id="get-key"><a href="#get-key" class="headerlink" title="get key"></a>get key</h3><p>获取指定 key 的值</p>
+    <content><![CDATA[<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>获取指定key的值</p>
+<p><font color="#dd0000">get key</font></p>
 <p>127.0.0.1:6379&gt; get name<br>“ledao”</p>
-<h3 id="set-key-value"><a href="#set-key-value" class="headerlink" title="set key value"></a>set key value</h3><p>设置指定 key 的值（如果key不存在就新建并复制，存在则值覆盖）</p>
-<p>127.0.0.1:6379&gt; set name ledao<br>OK<br>127.0.0.1:6379&gt; get name<br>“ledao”<br>127.0.0.1:6379&gt; set name ledao333<br>OK<br>127.0.0.1:6379&gt; get name<br>“ledao333”</p>
-<h3 id="del-key"><a href="#del-key" class="headerlink" title="del key"></a>del key</h3><p>删除指定key</p>
-<p>127.0.0.1:6379&gt; get num<br>“1”<br>127.0.0.1:6379&gt; del num<br>(integer) 1<br>127.0.0.1:6379&gt; get num<br>(nil)</p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>设置指定key的值（如果key不存在就新建并复制，存在则值覆盖）</p>
+<p><font color="#dd0000">set key 值</font></p>
+<p>127.0.0.1:6379&gt; <code>set name ledao</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao”<br>127.0.0.1:6379&gt; <code>set name ledao333</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao333”</p>
+<h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><p>删除指定key，删除一个或多个</p>
+<p><font color="#dd0000">del key1 key2 …</font></p>
+<p>127.0.0.1:6379&gt; <code>get num</code><br>“1”<br>127.0.0.1:6379&gt; <code>del num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>(nil)</p>
 <h3 id="getrange"><a href="#getrange" class="headerlink" title="getrange"></a>getrange</h3><p>返回 key 中字符串值的子字符（包括头包括尾，下标从0开始计算）</p>
-<p>127.0.0.1:6379&gt; set name ledao333<br>OK<br>127.0.0.1:6379&gt; get name<br>“ledao333”<br>127.0.0.1:6379&gt; getrange name 0 1<br>“le”</p>
-<h3 id="getset-key-value"><a href="#getset-key-value" class="headerlink" title="getset key value"></a>getset key value</h3><p>将给定 key 的值设为 value ，并返回 key 的旧值(old value)</p>
-<p>127.0.0.1:6379&gt; getset name LeDao<br>“ledao333”<br>127.0.0.1:6379&gt; get name<br>“LeDao”</p>
-<h3 id="setnx-key-value"><a href="#setnx-key-value" class="headerlink" title="setnx key value"></a>setnx key value</h3><p>只有在 key 不存在时设置 key 的值</p>
-<p>127.0.0.1:6379&gt; get name<br>“LeDao”<br>127.0.0.1:6379&gt; setnx name ledao<br>(integer) 0<br>127.0.0.1:6379&gt; get name<br>“LeDao”</p>
-<h3 id="strlen-key"><a href="#strlen-key" class="headerlink" title="strlen key"></a>strlen key</h3><p>返回 key 所储存的字符串值的长度</p>
-<p>127.0.0.1:6379&gt; get name<br>“LeDao”<br>127.0.0.1:6379&gt; strlen name<br>(integer) 5</p>
-<h3 id="mset-key1-value1-key2-value2-…"><a href="#mset-key1-value1-key2-value2-…" class="headerlink" title="mset key1 value1 key2 value2 …"></a>mset key1 value1 key2 value2 …</h3><p>同时设置一个或多个 key-value 对</p>
-<p>127.0.0.1:6379&gt; mset name1 ledao1 name2 ledao2<br>OK<br>127.0.0.1:6379&gt; get name1<br>“ledao1”<br>127.0.0.1:6379&gt; get name2<br>“ledao2”</p>
-<h3 id="incr-key"><a href="#incr-key" class="headerlink" title="incr key"></a>incr key</h3><p>将 key 中储存的数字值增一</p>
-<p>127.0.0.1:6379&gt; set num 0<br>OK<br>127.0.0.1:6379&gt; get num<br>“0”<br>127.0.0.1:6379&gt; incr num<br>(integer) 1<br>127.0.0.1:6379&gt; get num<br>“1”</p>
-<h3 id="decr-key"><a href="#decr-key" class="headerlink" title="decr key"></a>decr key</h3><p>将 key 中储存的数字值减一</p>
-<p>127.0.0.1:6379&gt; get num<br>“2”<br>127.0.0.1:6379&gt; decr num<br>(integer) 1<br>127.0.0.1:6379&gt; get num<br>“1”</p>
-<h3 id="append-key-value"><a href="#append-key-value" class="headerlink" title="append key value"></a>append key value</h3><p>如果 key 已经存在并且是一个字符串， APPEND 命令将指定的 value 追加到该 key 原来值（value）的末尾，如果不存在就相当于set key value</p>
-<p>127.0.0.1:6379&gt; get name<br>“LeDao”<br>127.0.0.1:6379&gt; append name 666<br>(integer) 8<br>127.0.0.1:6379&gt; get name<br>“LeDao666”<br>127.0.0.1:6379&gt; get name4<br>(nil)<br>127.0.0.1:6379&gt; append name4 666<br>(integer) 3<br>127.0.0.1:6379&gt; get name4<br>“666”</p>
+<p><font color="#dd0000">getrange key 开始位置 结束位置</font></p>
+<p>127.0.0.1:6379&gt; <code>set name ledao333</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao333”<br>127.0.0.1:6379&gt; <code>getrange name 0 1</code><br>“le”</p>
+<h3 id="getset"><a href="#getset" class="headerlink" title="getset"></a>getset</h3><p>设置给定 key 的值，并返回 key 的旧值</p>
+<p><font color="#dd0000">getset key 值</font></p>
+<p>127.0.0.1:6379&gt; <code>getset name LeDao</code><br>“ledao333”<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”</p>
+<h3 id="setnx"><a href="#setnx" class="headerlink" title="setnx"></a>setnx</h3><p>只有在 key 不存在时设置 key 的值</p>
+<p><font color="#dd0000">setnx key 值</font></p>
+<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>setnx name ledao</code><br>(integer) 0<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”</p>
+<h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h3><p>返回 key 所储存的字符串值的长度</p>
+<p><font color="#dd0000">strlen key</font></p>
+<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>strlen name</code><br>(integer) 5</p>
+<h3 id="mset"><a href="#mset" class="headerlink" title="mset"></a>mset</h3><p>同时设置一个或多个 key-value 对</p>
+<p><font color="#dd0000">mset key1 值 key2 值 …</font></p>
+<p>127.0.0.1:6379&gt; <code>mset name1 ledao1 name2 ledao2</code><br>OK<br>127.0.0.1:6379&gt; <code>get name1</code><br>“ledao1”<br>127.0.0.1:6379&gt; <code>get name2</code><br>“ledao2”</p>
+<h3 id="incr"><a href="#incr" class="headerlink" title="incr"></a>incr</h3><p>将 key 中储存的数字值增一</p>
+<p><font color="#dd0000">incr key</font></p>
+<p>127.0.0.1:6379&gt; <code>set num 0</code><br>OK<br>127.0.0.1:6379&gt; <code>get num</code><br>“0”<br>127.0.0.1:6379&gt; <code>incr num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>“1”</p>
+<h3 id="decr"><a href="#decr" class="headerlink" title="decr"></a>decr</h3><p>将 key 中储存的数字值减一</p>
+<p><font color="#dd0000">decr key</font></p>
+<p>127.0.0.1:6379&gt; <code>get num</code><br>“2”<br>127.0.0.1:6379&gt; <code>decr num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>“1”</p>
+<h3 id="append"><a href="#append" class="headerlink" title="append"></a>append</h3><p>如果 key 已经存在并且是一个字符串， APPEND 命令将指定的 value 追加到该 key 原来值（value）的末尾，如果不存在就相当于set key value</p>
+<p><font color="#dd0000">append key 值</font></p>
+<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>append name 666</code><br>(integer) 8<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao666”<br>127.0.0.1:6379&gt; <code>get name4</code><br>(nil)<br>127.0.0.1:6379&gt; <code>append name4 666</code><br>(integer) 3<br>127.0.0.1:6379&gt; <code>get name4</code><br>“666”</p>
 <h3 id="Java代码："><a href="#Java代码：" class="headerlink" title="Java代码："></a>Java代码：</h3><p>请先设置Redis的连接密码，查看博客：<a href="https://blog.zoutl.cn/161.html">实现Jedis连接 | LeDao的博客 (zoutl.cn)</a> ，在第4点的第②小点</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        jedis.set(<span class="string">&quot;LeDao的博客&quot;</span>, <span class="string">&quot;http://www.zoutl.cn&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;LeDao的博客网址：&quot;</span>+jedis.get(<span class="string">&quot;LeDao的博客&quot;</span>));</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -2286,19 +2297,24 @@
     <title>Redis keys命令</title>
     <url>/165.html</url>
     <content><![CDATA[<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>获取指定 key 的值</p>
-<p>127.0.0.1:6379&gt; get name<br>“ledao”</p>
+<p><font color="#dd0000">get key</font></p>
+<p>127.0.0.1:6379&gt; <code>get name</code><br>“ledao”</p>
 <h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><p>删除指定key</p>
-<p>127.0.0.1:6379&gt; get num<br>“1”<br>127.0.0.1:6379&gt; del num<br>(integer) 1<br>127.0.0.1:6379&gt; get num<br>(nil)</p>
+<p><font color="#dd0000">del key</font></p>
+<p>127.0.0.1:6379&gt; <code>get num</code><br>“1”<br>127.0.0.1:6379&gt; <code>del num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>(nil)</p>
 <h3 id="exists"><a href="#exists" class="headerlink" title="exists"></a>exists</h3><p>检查给定 key 是否存在</p>
-<p>127.0.0.1:6379&gt; exists name<br>(integer) 1</p>
+<p><font color="#dd0000">exists key</font></p>
+<p>127.0.0.1:6379&gt; <code>exists name</code><br>(integer) 1</p>
 <h3 id="type"><a href="#type" class="headerlink" title="type"></a>type</h3><p>返回 key 所储存的值的类型删除指定key</p>
-<p>127.0.0.1:6379&gt; type name<br>string</p>
+<p><font color="#dd0000">type key</font></p>
+<p>127.0.0.1:6379&gt; <code>type name</code><br>string</p>
 <h3 id="keys"><a href="#keys" class="headerlink" title="keys"></a>keys</h3><h4 id="keys-1"><a href="#keys-1" class="headerlink" title="keys *"></a>keys *</h4><p>显示所有key</p>
-<p>127.0.0.1:6379&gt; keys *<br>1)”set3”<br>2)”age”<br>3)”l1”<br>4)”newSet”<br>5)”l2”<br>6)”set1”<br>7)”1”<br>8)”fruitList”<br>9)”set2”</p>
+<p>127.0.0.1:6379&gt; <code>keys *</code><br>1)”set3”<br>2)”age”<br>3)”l1”<br>4)”newSet”<br>5)”l2”<br>6)”set1”<br>7)”1”<br>8)”fruitList”<br>9)”set2”</p>
 <h4 id="keys-f"><a href="#keys-f" class="headerlink" title="keys f*"></a>keys f*</h4><p>查找所有以某字符串开头的key</p>
-<p>127.0.0.1:6379&gt; keys f*<br>1)”fruitList”</p>
+<p>127.0.0.1:6379&gt; <code>keys f*</code><br>1)”fruitList”</p>
 <h3 id="rename"><a href="#rename" class="headerlink" title="rename"></a>rename</h3><p>重命名key</p>
-<p>127.0.0.1:6379&gt; rename list1 list2<br>OK</p>
+<p><font color="#dd0000">rename key name</font></p>
+<p>127.0.0.1:6379&gt; <code>rename list1 list2</code><br>OK</p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多命令：<a href="https://www.runoob.com/redis/redis-keys.html">https://www.runoob.com/redis/redis-keys.html</a></p>]]></content>
       <categories>
         <category>Redis</category>
@@ -2312,30 +2328,39 @@
     <url>/166.html</url>
     <content><![CDATA[<p>Redis hash 是一个 string 类型的 field（字段） 和 value（值） 的映射表，hash 特别适合用于存储对象。</p>
 <p>Redis 中每个 hash 可以存储 232 - 1 键值对（40多亿）。</p>
-<h3 id="hset"><a href="#hset" class="headerlink" title="hset"></a>hset</h3><p>单个字段设置</p>
-<p>127.0.0.1:6379&gt; hset h1 username root<br>(integer) 1<br>127.0.0.1:6379&gt; hset h1 password 123456<br>(integer) 1</p>
-<h3 id="hget"><a href="#hget" class="headerlink" title="hget"></a>hget</h3><p>获取值</p>
-<p>127.0.0.1:6379&gt; hget h1 username<br>“root”<br>127.0.0.1:6379&gt; hget h1 password<br>“123456”</p>
-<h3 id="hmset"><a href="#hmset" class="headerlink" title="hmset"></a>hmset</h3><p>多个字段一起设置</p>
-<p>127.0.0.1:6379&gt; hmset h2 username ledao password 333<br>OK</p>
-<h3 id="hmget"><a href="#hmget" class="headerlink" title="hmget"></a>hmget</h3><p>获取多个字段</p>
-<p>127.0.0.1:6379&gt; hmget h2 username password<br>1)”ledao”<br>2)”333”</p>
-<h3 id="hgetall"><a href="#hgetall" class="headerlink" title="hgetall"></a>hgetall</h3><p>获取全部字段</p>
-<p>127.0.0.1:6379&gt; hgetall h2<br>1)”username”<br>2)”ledao”<br>3)”password”<br>4)”333”</p>
-<h3 id="hdel"><a href="#hdel" class="headerlink" title="hdel"></a>hdel</h3><p>删除属性</p>
-<p>可以一次删除一个或者多个</p>
-<p>127.0.0.1:6379&gt; hdel h2 username password<br>(integer) 2<br>127.0.0.1:6379&gt; hgetall h2<br>(empty list or set)</p>
-<h3 id="hincrby"><a href="#hincrby" class="headerlink" title="hincrby"></a>hincrby</h3><p>增加数字</p>
-<p>127.0.0.1:6379&gt; hset h1 age 20<br>(integer) 1<br>127.0.0.1:6379&gt; hgetall h1<br>1)”username”<br>2)”root”<br>3)”password”<br>4)”123456”<br>5)”age”<br>6)”20”</p>
-<p>127.0.0.1:6379&gt; hincrby h1 age 5<br>(integer) 25</p>
-<h3 id="hexists"><a href="#hexists" class="headerlink" title="hexists"></a>hexists</h3><p>判断字段是否存在 1表示存在 0表示不存在</p>
-<p>127.0.0.1:6379&gt; hexists h1 age<br>(integer) 1<br>127.0.0.1:6379&gt; hexists h1 age2<br>(integer) 0</p>
+<h3 id="hset"><a href="#hset" class="headerlink" title="hset"></a>hset</h3><p>为单个字段设置值</p>
+<p><font color="#dd0000">hset key 字段名 值</font></p>
+<p>127.0.0.1:6379&gt; <code>hset h1 username root</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>hset h1 password 123456</code><br>(integer) 1</p>
+<h3 id="hget"><a href="#hget" class="headerlink" title="hget"></a>hget</h3><p>获取字段的值</p>
+<p><font color="#dd0000">hget key 字段名</font></p>
+<p>127.0.0.1:6379&gt; <code>hget h1 username</code><br>“root”<br>127.0.0.1:6379&gt; <code>hget h1 password</code><br>“123456”</p>
+<h3 id="hmset"><a href="#hmset" class="headerlink" title="hmset"></a>hmset</h3><p>为多个字段一起设置值</p>
+<p><font color="#dd0000">hmset key 字段名1 值 字段名2 值 …</font></p>
+<p>127.0.0.1:6379&gt; <code>hmset h2 username ledao password 333</code><br>OK</p>
+<h3 id="hmget"><a href="#hmget" class="headerlink" title="hmget"></a>hmget</h3><p>获取多个字段的值</p>
+<p><font color="#dd0000">hmget key 字段名1 字段名2 …</font></p>
+<p>127.0.0.1:6379&gt; <code>hmget h2 username password</code><br>1)”ledao”<br>2)”333”</p>
+<h3 id="hgetall"><a href="#hgetall" class="headerlink" title="hgetall"></a>hgetall</h3><p>获取全部字段的值</p>
+<p><font color="#dd0000">hgetall key</font></p>
+<p>127.0.0.1:6379&gt; <code>hgetall h2</code><br>1)”username”<br>2)”ledao”<br>3)”password”<br>4)”333”</p>
+<h3 id="hdel"><a href="#hdel" class="headerlink" title="hdel"></a>hdel</h3><p>删除属性，可以一次删除一个或者多个</p>
+<p><font color="#dd0000">hdel key 字段名1 字段名2 …</font></p>
+<p>127.0.0.1:6379&gt; <code>hdel h2 username password</code><br>(integer) 2<br>127.0.0.1:6379&gt; <code>hgetall h2</code><br>(empty list or set)</p>
+<h3 id="hincrby"><a href="#hincrby" class="headerlink" title="hincrby"></a>hincrby</h3><p>给字段的值加一个数，这个字段的值的数据类型要为integer</p>
+<p><font color="#dd0000">hincrby key 字段名 数值</font></p>
+<p>127.0.0.1:6379&gt; <code>hset h1 age 20</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>hgetall h1</code><br>1)”username”<br>2)”root”<br>3)”password”<br>4)”123456”<br>5)”age”<br>6)”20”<br>127.0.0.1:6379&gt; <code>hincrby h1 age 5</code><br>(integer) 25</p>
+<h3 id="hexists"><a href="#hexists" class="headerlink" title="hexists"></a>hexists</h3><p>判断字段是否存在，1表示存在，0表示不存在</p>
+<p><font color="#dd0000">hexists key 字段名</font></p>
+<p>127.0.0.1:6379&gt; <code>hexists h1 age</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>hexists h1 age2</code><br>(integer) 0</p>
 <h3 id="hlen"><a href="#hlen" class="headerlink" title="hlen"></a>hlen</h3><p>获取hash属性个数</p>
-<p>127.0.0.1:6379&gt; hlen h1<br>(integer) 3</p>
+<p><font color="#dd0000">hlen key</font></p>
+<p>127.0.0.1:6379&gt; <code>hlen h1</code><br>(integer) 3</p>
 <h3 id="hkeys"><a href="#hkeys" class="headerlink" title="hkeys"></a>hkeys</h3><p>获取所有属性名称</p>
-<p>127.0.0.1:6379&gt; hkeys h1<br>1)”username”<br>2)”password”<br>3)”age”</p>
+<p><font color="#dd0000">hkeys key</font></p>
+<p>127.0.0.1:6379&gt; <code>hkeys h1</code><br>1)”username”<br>2)”password”<br>3)”age”</p>
 <h3 id="hvals"><a href="#hvals" class="headerlink" title="hvals"></a>hvals</h3><p>获取所有属性值</p>
-<p>127.0.0.1:6379&gt; hvals h1<br>1)”root”<br>2)”123456”<br>3)”25”</p>
+<p><font color="#dd0000">hvals key</font></p>
+<p>127.0.0.1:6379&gt; <code>hvals h1</code><br>1)”root”<br>2)”123456”<br>3)”25”</p>
 <h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a><strong>Java代码</strong></h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//设置字段</span></span><br><span class="line">        jedis.hset(<span class="string">&quot;h1&quot;</span>, <span class="string">&quot;username&quot;</span>, <span class="string">&quot;root&quot;</span>);</span><br><span class="line">        jedis.hset(<span class="string">&quot;h1&quot;</span>, <span class="string">&quot;password&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;用户名：&quot;</span> + jedis.hget(<span class="string">&quot;h1&quot;</span>, <span class="string">&quot;username&quot;</span>) + <span class="string">&quot;，密码：&quot;</span> + jedis.hget(<span class="string">&quot;h1&quot;</span>, <span class="string">&quot;password&quot;</span>));</span><br><span class="line">        <span class="comment">//获取全部字段</span></span><br><span class="line">        Map&lt;String, String&gt; map=jedis.hgetAll(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; stringStringEntry : map.entrySet()) &#123;</span><br><span class="line">            System.out.println(stringStringEntry.getKey()+<span class="string">&quot;:&quot;</span>+stringStringEntry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620134006.jpg" alt="img"></strong></p>]]></content>
@@ -2352,12 +2377,12 @@
     <content><![CDATA[<p>先将Java对象转化成json字符串，然后Redis存储json字符串</p>
 <h3 id="引入gson依赖"><a href="#引入gson依赖" class="headerlink" title="引入gson依赖"></a><strong>引入gson依赖</strong></h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.code.gson<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>gson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="使用到的方法"><a href="#使用到的方法" class="headerlink" title="使用到的方法"></a><strong>使用到的方法</strong></h3><p>Jedis.rpop()：右侧弹出元素</p>
-<p>Jedis.llen()：获取Redis的list长度</p>
-<p>Jedis.rpush()：从右侧开始添加元素</p>
-<p>Jedis.lrange()：获取全部元素集合</p>
-<p>Gson.toJson()：Java对象转化成json</p>
-<p>Gson.fromJson()：json转化成Java对象</p>
+<h3 id="使用到的方法"><a href="#使用到的方法" class="headerlink" title="使用到的方法"></a><strong>使用到的方法</strong></h3><p>**Jedis.rpop()**：右侧弹出元素</p>
+<p>**Jedis.llen()**：获取Redis的list长度</p>
+<p>**Jedis.rpush()**：从右侧开始添加元素</p>
+<p>**Jedis.lrange()**：获取全部元素集合</p>
+<p>**Gson.toJson()**：Java对象转化成json</p>
+<p>**Gson.fromJson()**：json转化成Java对象</p>
 <h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a><strong>Java代码</strong></h3><p>Fruit实体类</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 22:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">(String name, Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">(Integer id, String name, Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getNum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNum</span><span class="params">(Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Fruit&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, num=&quot;</span> + num +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -2379,32 +2404,29 @@
     <url>/167.html</url>
     <content><![CDATA[<h3 id="lpush"><a href="#lpush" class="headerlink" title="lpush"></a>lpush</h3><p>方式添加，从左边开始添加</p>
 <p><font color="#dd0000">lpush key value1 value2…</font></p>
-<p>127.0.0.1:6379&gt; lpush l1 a b c d<br>(integer) 4<br>127.0.0.1:6379&gt; lpush l1 1 2 3 4<br>(integer) 8</p>
-<h3 id="lrange"><a href="#lrange" class="headerlink" title="lrange"></a>lrange</h3><p>获取指定方位的集合元素（end是-1时表示最后一个位置）</p>
-<p><font color="#dd0000">lrange key start end</font></p>
-<p>127.0.0.1:6379&gt; lrange l1 0 -1<br>1)”4”<br>2)”3”<br>3)”2”<br>4)”1”<br>5)”d”<br>6)”c”<br>7)”b”<br>8)”a”</p>
+<p>127.0.0.1:6379&gt; <code>lpush l1 a b c d</code><br>(integer) 4<br>127.0.0.1:6379&gt; <code>lpush l1 1 2 3 4</code><br>(integer) 8</p>
 <h3 id="rpush"><a href="#rpush" class="headerlink" title="rpush"></a>rpush</h3><p>从右端开始添加（一般人比较习惯这种方式）</p>
 <p><font color="#dd0000">rpush key value1 value2…</font></p>
-<p>127.0.0.1:6379&gt; rpush l2 a b c d<br>(integer) 4<br>127.0.0.1:6379&gt; rpush l2 1 2 3 4<br>(integer) 8<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”a”<br>2)”b”<br>3)”c”<br>4)”d”<br>5)”1”<br>6)”2”<br>7)”3”<br>8)”4”</p>
-<h3 id="lpop"><a href="#lpop" class="headerlink" title="lpop"></a>lpop</h3><p>lpop左侧弹出集合元素，rpop 右侧弹出集合元素</p>
+<p>127.0.0.1:6379&gt; <code>rpush l2 a b c d</code><br>(integer) 4<br>127.0.0.1:6379&gt; <code>rpush l2 1 2 3 4</code><br>(integer) 8<br>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”a”<br>2)”b”<br>3)”c”<br>4)”d”<br>5)”1”<br>6)”2”<br>7)”3”<br>8)”4”</p>
+<h3 id="lrange"><a href="#lrange" class="headerlink" title="lrange"></a>lrange</h3><p>获取指定方位的集合元素（end是-1时表示最后一个位置）</p>
+<p><font color="#dd0000">lrange key start end</font></p>
+<p>127.0.0.1:6379&gt; <code>lrange l1 0 -1</code><br>1)”4”<br>2)”3”<br>3)”2”<br>4)”1”<br>5)”d”<br>6)”c”<br>7)”b”<br>8)”a”</p>
+<h3 id="lpop"><a href="#lpop" class="headerlink" title="lpop"></a>lpop</h3><p>左侧弹出集合元素，返回弹出的元素</p>
 <p><font color="#dd0000">lpop/rpop key</font></p>
-<p>127.0.0.1:6379&gt; lrange l2 0 -1</p>
-<p>1)”a”<br>2)”b”<br>3)”c”<br>4)”d”<br>5)”1”<br>6)”2”<br>7)”3”<br>8)”4”</p>
-<p>128.127.0.0.1:6379&gt; lpop l2<br>“a”<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”<br>7)”4”</p>
-<p>128.127.0.0.1:6379&gt; rpop l2<br>“4”<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
+<p>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”a”<br>2)”b”<br>3)”c”<br>4)”d”<br>5)”1”<br>6)”2”<br>7)”3”<br>8)”4”<br>128.127.0.0.1:6379&gt; <code>lpop l2</code><br>“a”<br>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”<br>7)”4”</p>
+<h3 id="rpop"><a href="#rpop" class="headerlink" title="rpop"></a>rpop</h3><p>右侧弹出集合元素，返回弹出的元素</p>
+<p>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”<br>7)”4”</p>
+<p>128.127.0.0.1:6379&gt; <code>rpop l2</code><br>“4”<br>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
 <h3 id="llen"><a href="#llen" class="headerlink" title="llen"></a>llen</h3><p>查看元素个数</p>
 <p><font color="#dd0000">llen key</font></p>
-<p>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
-<p>127.0.0.1:6379&gt; llen l2<br>(integer) 6</p>
-<h3 id="lset"><a href="#lset" class="headerlink" title="lset"></a>lset</h3><p>设置集合指定索引的值</p>
+<p>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”<br>127.0.0.1:6379&gt; <code>llen l2</code><br>(integer) 6</p>
+<h3 id="lset"><a href="#lset" class="headerlink" title="lset"></a>lset</h3><p>重新设置集合指定索引的值（即修改）</p>
 <p><font color="#dd0000">lset key index value</font></p>
-<p>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
-<p>127.0.0.1:6379&gt; lset l2 0 b1<br>OK<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
+<p>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”<br>127.0.0.1:6379&gt; <code>lset l2 0 b1</code><br>OK<br>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
 <h3 id="linsert"><a href="#linsert" class="headerlink" title="linsert"></a>linsert</h3><p>在集合里插入指定元素</p>
 <p>在某元素之前插入一个元素（在某元素之后插入一个元素只要将before修改为after即可）</p>
 <p><font color="#dd0000">linsert key before 某元素 插入的元素</font></p>
-<p>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”</p>
-<p>127.0.0.1:6379&gt; linsert l2 before 1 0<br>(integer) 7<br>127.0.0.1:6379&gt; lrange l2 0 -1<br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”0”<br>5)”1”<br>6)”2”<br>7)”3”</p>]]></content>
+<p>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”<br>127.0.0.1:6379&gt; <code>linsert l2 before 1 0</code><br>(integer) 7<br>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”0”<br>5)”1”<br>6)”2”<br>7)”3”</p>]]></content>
       <categories>
         <category>Redis</category>
       </categories>
@@ -2418,52 +2440,42 @@
     <content><![CDATA[<p>Redis 的 Set 是 String 类型的无序集合。集合成员是唯一的，这就意味着集合中不能出现重复的数据。</p>
 <p>Redis 中集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是 O(1)。</p>
 <p>集合中最大的成员数为 232 - 1 (4294967295, 每个集合可存储40多亿个成员)。</p>
-<h3 id="sadd"><a href="#sadd" class="headerlink" title="sadd"></a>sadd</h3><p>添加set元素（添加一个或多个）</p>
-<p>sadd key member1 member2…</p>
-<p>127.0.0.1:6379&gt; sadd set1 a b c a<br>(integer) 3</p>
+<h3 id="sadd"><a href="#sadd" class="headerlink" title="sadd"></a>sadd</h3><p>添加set元素（添加一个或多个），set集合如果不存在就会先创建集合</p>
+<p><font color="#dd0000">sadd key member1 member2…</font></p>
+<p>127.0.0.1:6379&gt; <code>sadd set1 a b c a</code><br>(integer) 3</p>
 <h3 id="smembers"><a href="#smembers" class="headerlink" title="smembers"></a>smembers</h3><p>查看指定key集合元素</p>
-<p>smembers key</p>
-<p>127.0.0.1:6379&gt; smembers set1<br>1)”b”<br>2)”a”<br>3)”c”</p>
+<p><font color="#dd0000">smembers key</font></p>
+<p>127.0.0.1:6379&gt; <code>smembers set1</code><br>1)”b”<br>2)”a”<br>3)”c”</p>
 <h3 id="srem"><a href="#srem" class="headerlink" title="srem"></a>srem</h3><p>删除元素（删除一个或多个元素）</p>
-<p>srem key member1 member2…</p>
-<p>127.0.0.1:6379&gt; smembers set1<br>1)”1”<br>2)”c”<br>3)”a”<br>4)”b”<br>5)”3”<br>6)”2”</p>
-<p>127.0.0.1:6379&gt; srem set1 a 1<br>(integer) 2<br>127.0.0.1:6379&gt; smembers set1<br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”</p>
-<h3 id="sismembers"><a href="#sismembers" class="headerlink" title="sismembers"></a>sismembers</h3><p>判断某个元素是否存在（返回1表示存在，返回0表示不存在）</p>
-<p>sismembers key member</p>
-<p>127.0.0.1:6379&gt; smembers set1<br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”</p>
-<p>127.0.0.1:6379&gt; sismember set1 a<br>(integer) 0<br>127.0.0.1:6379&gt; sismember set1 2<br>(integer) 1</p>
+<p><font color="#dd0000">srem key member1 member2…</font></p>
+<p>127.0.0.1:6379&gt; <code>smembers set1</code><br>1)”1”<br>2)”c”<br>3)”a”<br>4)”b”<br>5)”3”<br>6)”2”<br>127.0.0.1:6379&gt; <code>srem set1 a 1</code><br>(integer) 2<br>127.0.0.1:6379&gt; <code>smembers set1</code><br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”</p>
+<h3 id="sismember"><a href="#sismember" class="headerlink" title="sismember"></a>sismember</h3><p>判断某个元素是否存在（返回1表示存在，返回0表示不存在）</p>
+<p><font color="#dd0000">sismember key member</font></p>
+<p>127.0.0.1:6379&gt; <code>smembers set1</code><br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”<br>127.0.0.1:6379&gt; <code>sismember set1 a</code><br>(integer) 0<br>127.0.0.1:6379&gt; <code>sismember set1 2</code><br>(integer) 1</p>
 <h3 id="sdiff"><a href="#sdiff" class="headerlink" title="sdiff"></a>sdiff</h3><p>计算两个集合的差集（key1去掉key1和key2的交集元素，key1和key2的位置交换会得到不同的结果）</p>
-<p>sdiff key1 key2</p>
-<p>127.0.0.1:6379&gt; sadd set2 a b c<br>(integer) 3<br>127.0.0.1:6379&gt; sadd set3 b c d e<br>(integer) 4<br>127.0.0.1:6379&gt; sdiff set2 set3<br>1)”a”</p>
-<p>127.0.0.1:6379&gt; sdiff set3 set2<br>1)”d”<br>2)”e”</p>
+<p><font color="#dd0000">sdiff key1 key2</font></p>
+<p>127.0.0.1:6379&gt; <code>sadd set2 a b c</code><br>(integer) 3<br>127.0.0.1:6379&gt; <code>sadd set3 b c d e</code><br>(integer) 4<br>127.0.0.1:6379&gt; <code>sdiff set2 set3</code><br>1)”a”<br>127.0.0.1:6379&gt; <code>sdiff set3 set2</code><br>1)”d”<br>2)”e”</p>
 <h3 id="sinter"><a href="#sinter" class="headerlink" title="sinter"></a>sinter</h3><p>计算两个集合的交集</p>
-<p>sinter key1 key2</p>
-<p>127.0.0.1:6379&gt; sinter set2 set3<br>1)”b”<br>2)”c”</p>
+<p><font color="#dd0000">sinter key1 key2</font></p>
+<p>127.0.0.1:6379&gt; <code>sinter set2 set3</code><br>1)”b”<br>2)”c”</p>
 <h3 id="sunion"><a href="#sunion" class="headerlink" title="sunion"></a>sunion</h3><p>计算两个集合的并集</p>
-<p>sunion key1 key2</p>
-<p>127.0.0.1:6379&gt; sunion set2 set3<br>1)”b”<br>2)”a”<br>3)”c”<br>4)”e”<br>5)”d”</p>
-<h3 id="scard"><a href="#scard" class="headerlink" title="scard"></a>scard</h3><h4 id="计算元素总数"><a href="#计算元素总数" class="headerlink" title="计算元素总数"></a>计算元素总数</h4><p>scard key</p>
-<p>127.0.0.1:6379&gt; smembers set1<br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”</p>
-<p>127.0.0.1:6379&gt; scard set1<br>(integer) 4</p>
-<h4 id="随机取一个元素"><a href="#随机取一个元素" class="headerlink" title="随机取一个元素"></a>随机取一个元素</h4><p>count为空或者是1时，只随机选一个元素</p>
-<p>scard key count</p>
-<p>127.0.0.1:6379&gt; srandmember set1<br>“3”<br>127.0.0.1:6379&gt; srandmember set1<br>“b”<br>127.0.0.1:6379&gt; srandmember set1 2<br>1)”b”<br>2)”3”</p>
-<p>127.0.0.1:6379&gt; srandmember set1 2<br>1)”3”<br>2)”2”</p>
+<p><font color="#dd0000">sunion key1 key2</font></p>
+<p>127.0.0.1:6379&gt; <code>sunion set2 set3</code><br>1)”b”<br>2)”a”<br>3)”c”<br>4)”e”<br>5)”d”</p>
+<h3 id="scard"><a href="#scard" class="headerlink" title="scard"></a>scard</h3><p>计算元素总数</p>
+<p><font color="#dd0000">scard key</font></p>
+<p>127.0.0.1:6379&gt; <code>smembers set1</code><br>1)”b”<br>2)”c”<br>3)”3”<br>4)”2”<br>127.0.0.1:6379&gt; <code>scard set1</code><br>(integer) 4</p>
+<h3 id="srandmember"><a href="#srandmember" class="headerlink" title="srandmember"></a>srandmember</h3><p>随机取一个或多个元素，count为空或者是1时，只随机选一个元素</p>
+<p><font color="#dd0000">srandmember key count</font></p>
+<p>127.0.0.1:6379&gt; <code>srandmember set1</code><br>“3”<br>127.0.0.1:6379&gt; <code>srandmember set1</code><br>“b”<br>127.0.0.1:6379&gt; <code>srandmember set1 2</code><br>1)”b”<br>2)”3”<br>127.0.0.1:6379&gt; <code>srandmember set1 2</code><br>1)”3”<br>2)”2”</p>
 <h3 id="sdiffstore"><a href="#sdiffstore" class="headerlink" title="sdiffstore"></a>sdiffstore</h3><p>把差集结果存储到新集合中</p>
-<p>sdiffstore newKey key1 key2</p>
-<p>127.0.0.1:6379&gt; smembers set2<br>1)”b”<br>2)”a”<br>3)”c”</p>
-<p>127.0.0.1:6379&gt; smembers set3<br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”</p>
-<p>127.0.0.1:6379&gt; sdiffstore newSet set2 set3<br>(integer) 1<br>127.0.0.1:6379&gt; smembers newSet<br>1)”a”</p>
+<p><font color="#dd0000">sdiffstore newKey key1 key2</font></p>
+<p>127.0.0.1:6379&gt; <code>smembers set2</code><br>1)”b”<br>2)”a”<br>3)”c”<br>127.0.0.1:6379&gt; <code>smembers set3</code><br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”<br>127.0.0.1:6379&gt; <code>sdiffstore newSet set2 set3</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>smembers newSet</code><br>1)”a”</p>
 <h3 id="sinterstore"><a href="#sinterstore" class="headerlink" title="sinterstore"></a>sinterstore</h3><p>把交集结果存储到新集合中</p>
-<p>sinterstore newKey key1 key2</p>
-<p>127.0.0.1:6379&gt; smembers set2<br>1)”b”<br>2)”a”<br>3)”c”</p>
-<p>127.0.0.1:6379&gt; smembers set3<br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”</p>
-<p>127.0.0.1:6379&gt; sinterstore newSet set2 set3<br>(integer) 2<br>127.0.0.1:6379&gt; smembers newSet<br>1)”b”<br>2)”c”</p>
+<p><font color="#dd0000">sinterstore newKey key1 key2</font></p>
+<p>127.0.0.1:6379&gt; <code>smembers set2</code><br>1)”b”<br>2)”a”<br>3)”c”<br>127.0.0.1:6379&gt; <code>smembers set3</code><br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”<br>127.0.0.1:6379&gt; <code>sinterstore newSet set2 set3</code><br>(integer) 2<br>127.0.0.1:6379&gt; <code>smembers newSet</code><br>1)”b”<br>2)”c”</p>
 <h3 id="sunionstore"><a href="#sunionstore" class="headerlink" title="sunionstore"></a>sunionstore</h3><p>把并集结果存储到新集合中</p>
-<p>sunionstore newKey key1 key2</p>
-<p>127.0.0.1:6379&gt; smembers set2<br>1)”b”<br>2)”a”<br>3)”c”</p>
-<p>127.0.0.1:6379&gt; smembers set3<br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”</p>
-<p>127.0.0.1:6379&gt; sunionstore newSet set2 set3<br>(integer) 5<br>127.0.0.1:6379&gt; smembers newSet<br>1)”b”<br>2)”a”<br>3)”c”<br>4)”e”<br>5)”d”</p>]]></content>
+<p><font color="#dd0000">sunionstore newKey key1 key2</font></p>
+<p>127.0.0.1:6379&gt; <code>smembers set2</code><br>1)”b”<br>2)”a”<br>3)”c”<br>127.0.0.1:6379&gt; <code>smembers set3</code><br>1)”d”<br>2)”b”<br>3)”e”<br>4)”c”<br>127.0.0.1:6379&gt; <code>sunionstore newSet set2 set3</code><br>(integer) 5<br>127.0.0.1:6379&gt; <code>smembers newSet</code><br>1)”b”<br>2)”a”<br>3)”c”<br>4)”e”<br>5)”d”</p>]]></content>
       <categories>
         <category>Redis</category>
       </categories>
@@ -2496,42 +2508,41 @@
 <p>有序集合的成员是唯一的,但分数(score)却可以重复。</p>
 <p>集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是 O(1)。 集合中最大的成员数为 232 - 1 (4294967295, 每个集合可存储40多亿个成员)。</p>
 <h3 id="zadd"><a href="#zadd" class="headerlink" title="zadd"></a>zadd</h3><p>添加元素，里面包括年龄和名称，根据数值从小到大排列，如果继续添加元素：①值已存在，则数值覆盖②值不存在，就会添加进去</p>
-<p>zadd key 数值1 值1 数值2 值2…</p>
-<p>127.0.0.1:6379&gt; zadd age 11 tom 8 jack 22 mary<br>(integer) 3</p>
-<h3 id="zrange"><a href="#zrange" class="headerlink" title="zrange"></a>zrange</h3><h4 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h4><p>-1代表是最后一个</p>
-<p>zrange key start end</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1<br>1)”jack”<br>2)”tom”<br>3)”mary”</p>
-<h4 id="显示数值"><a href="#显示数值" class="headerlink" title="显示数值"></a>显示数值</h4><p>zrange key 0 -1 withscores</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
-<h3 id="zrevrange"><a href="#zrevrange" class="headerlink" title="zrevrange"></a>zrevrange</h3><p>降序排列</p>
-<p>zrevrange key start end withscores</p>
-<p>127.0.0.1:6379&gt; zrevrange age 0 -1 withscores<br>1)”mary”<br>2)”22”<br>3)”tom”<br>4)”11”<br>5)”jack”<br>6)”8”</p>
-<h3 id="zrem"><a href="#zrem" class="headerlink" title="zrem"></a>zrem</h3><p>删除元素</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1<br>1)”sherry”<br>2)”jack”<br>3)”tom”<br>4)”mary”</p>
-<p>127.0.0.1:6379&gt; zrem age sherry<br>(integer) 1<br>127.0.0.1:6379&gt; zrange age 0 -1<br>1)”jack”<br>2)”tom”<br>3)”mary”</p>
+<p><font color="#dd0000">zadd key 数值1 字段1 数值2 字段2 …</font></p>
+<p>127.0.0.1:6379&gt; <code>zadd age 11 tom 8 jack 22 mary</code><br>(integer) 3</p>
+<h3 id="zrange"><a href="#zrange" class="headerlink" title="zrange"></a>zrange</h3><h4 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h4><p>位置下标从0开始，结束位置如果是-1代表是最后一个</p>
+<p><font color="#dd0000">zrange key start end</font></p>
+<p>127.0.0.1:6379&gt; <code>zrange age 0 -1</code><br>1)”jack”<br>2)”tom”<br>3)”mary”</p>
+<h4 id="显示数值"><a href="#显示数值" class="headerlink" title="显示数值"></a>显示数值</h4><p>上面没有显示数值，命令后面加上withscores可以显示数值</p>
+<p><font color="#dd0000">zrange key 0 -1 withscores</font></p>
+<p>127.0.0.1:6379&gt; <code>zrange age 0 -1 withscores</code><br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
+<h3 id="zrevrange"><a href="#zrevrange" class="headerlink" title="zrevrange"></a>zrevrange</h3><p>降序排列，和zrange相反</p>
+<p><font color="#dd0000">zrevrange key start end withscores</font></p>
+<p>127.0.0.1:6379&gt; <code>zrevrange age 0 -1 withscores</code><br>1)”mary”<br>2)”22”<br>3)”tom”<br>4)”11”<br>5)”jack”<br>6)”8”</p>
+<h3 id="zrem"><a href="#zrem" class="headerlink" title="zrem"></a>zrem</h3><p>删除一个或多个元素</p>
+<p><font color="#dd0000">zrem key 字段1 字段2 …</font></p>
+<p>127.0.0.1:6379&gt; <code>zrange age 0 -1</code><br>1)”sherry”<br>2)”jack”<br>3)”tom”<br>4)”mary”</p>
+<p>127.0.0.1:6379&gt; <code>zrem age sherry</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>zrange age 0 -1</code><br>1)”jack”<br>2)”tom”<br>3)”mary”</p>
 <h3 id="zcard"><a href="#zcard" class="headerlink" title="zcard"></a>zcard</h3><p>查看集合里的元素个数</p>
-<p>zcard key</p>
-<p>127.0.0.1:6379&gt; zcard age<br>(integer) 3</p>
+<p><font color="#dd0000">zcard key</font></p>
+<p>127.0.0.1:6379&gt; <code>zcard age</code><br>(integer) 3</p>
 <h3 id="zremrangebyrank"><a href="#zremrangebyrank" class="headerlink" title="zremrangebyrank"></a>zremrangebyrank</h3><p>根据排名来删除元素</p>
-<p>zremrangebyrank key start end</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br> 1)”aa”<br> 2)”1”<br> 3)”bb”<br> 4)”2”<br> 5)”jack”<br> 6)”8”<br> 7)”tom”<br> 8)”11”<br> 9)”mary”<br>10) “22”</p>
-<p>127.0.0.1:6379&gt; zremrangebyrank age 0 1<br>(integer) 2<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
-<h3 id="zremrangebyscore"><a href="#zremrangebyscore" class="headerlink" title="zremrangebyscore"></a>zremrangebyscore</h3><p>根据数值范围来删除元素</p>
-<p>zremrangebyscore key min max</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br> 1)”aa”<br> 2)”1”<br> 3)”bb”<br> 4)”2”<br> 5)”jack”<br> 6)”8”<br> 7)”tom”<br> 8)”11”<br> 9)”mary”<br>10)”22”</p>
-<p>127.0.0.1:6379&gt; zremrangebyscore age 0 4<br>(integer) 2<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
-<h3 id="zrangebyscore"><a href="#zrangebyscore" class="headerlink" title="zrangebyscore"></a>zrangebyscore</h3><h4 id="根据评分范围来查找元素"><a href="#根据评分范围来查找元素" class="headerlink" title="根据评分范围来查找元素"></a>根据评分范围来查找元素</h4><p>zrangebyscore key min max withscores</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
-<p>127.0.0.1:6379&gt; zrangebyscore age 8 11 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”</p>
-<h4 id="限定查找起始（类似分页）"><a href="#限定查找起始（类似分页）" class="headerlink" title="限定查找起始（类似分页）"></a>限定查找起始（类似分页）</h4><p>127.0.0.1:6379&gt; zrangebyscore age 0 100 withscores limit 0 2<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”</p>
+<p><font color="#dd0000">zremrangebyrank key start end</font></p>
+<p>127.0.0.1:6379&gt; <code>zrange age 0 -1 withscores</code><br> 1)”aa”<br> 2)”1”<br> 3)”bb”<br> 4)”2”<br> 5)”jack”<br> 6)”8”<br> 7)”tom”<br> 8)”11”<br> 9)”mary”<br>10)”22”<br>127.0.0.1:6379&gt; <code>zremrangebyrank age 0 1</code><br>(integer) 2<br>127.0.0.1:6379&gt; <code>zrange age 0 -1 withscores</code><br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
+<h3 id="zremrangebyscore"><a href="#zremrangebyscore" class="headerlink" title="zremrangebyscore"></a>zremrangebyscore</h3><p>根据数值范围来删除元素（包含）</p>
+<p><font color="#dd0000">zremrangebyscore key min max</font></p>
+<p>127.0.0.1:6379&gt; <code>zrange age 0 -1 withscores</code><br> 1)”aa”<br> 2)”1”<br> 3)”bb”<br> 4)”2”<br> 5)”jack”<br> 6)”8”<br> 7)”tom”<br> 8)”11”<br> 9)”mary”<br>10)”22”<br>127.0.0.1:6379&gt; <code>zremrangebyscore age 0 4</code><br>(integer) 2<br>127.0.0.1:6379&gt; <code>zrange age 0 -1 withscores</code><br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
+<h3 id="zrangebyscore"><a href="#zrangebyscore" class="headerlink" title="zrangebyscore"></a>zrangebyscore</h3><h4 id="根据评分范围来查找元素"><a href="#根据评分范围来查找元素" class="headerlink" title="根据评分范围来查找元素"></a>根据评分范围来查找元素</h4><p><font color="#dd0000">zrangebyscore key min max withscores</font></p>
+<p>127.0.0.1:6379&gt; <code>zrange age 0 -1 withscores</code><br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”<br>127.0.0.1:6379&gt; <code>zrangebyscore age 8 11 withscores</code><br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”</p>
+<h4 id="限定查找起始"><a href="#限定查找起始" class="headerlink" title="限定查找起始"></a>限定查找起始</h4><p>第一个元素的下标为0，end为-1时查全部</p>
+<p><font color="#dd0000">zrangebyscore key min max withscores limit statr end</font></p>
+<p>127.0.0.1:6379&gt; <code>zrangebyscore age 0 100 withscores limit 0 2</code><br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”</p>
 <h3 id="zincrby"><a href="#zincrby" class="headerlink" title="zincrby"></a>zincrby</h3><p>给指定元素加分</p>
-<p>zincrby key 数值 值</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
-<p>127.0.0.1:6379&gt; zincrby age 2 jack<br>“10”<br>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”10”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
+<p><font color="#dd0000">zincrby key 数值 字段名</font></p>
+<p>127.0.0.1:6379&gt; <code>zrange age 0 -1 withscores</code><br>1)”jack”<br>2)”8”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”<br>127.0.0.1:6379&gt; <code>zincrby age 2 jack</code><br>“10”<br>127.0.0.1:6379&gt; <code>zrange age 0 -1 withscores</code><br>1)”jack”<br>2)”10”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
 <h3 id="zcount"><a href="#zcount" class="headerlink" title="zcount"></a>zcount</h3><p>查找指定数值范围的元素个数</p>
-<p>zcount key min max</p>
-<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”10”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”</p>
-<p>127.0.0.1:6379&gt; zcount age 9 10<br>(integer) 1</p>]]></content>
+<p><font color="#dd0000">zcount key min max</font></p>
+<p>127.0.0.1:6379&gt; zrange age 0 -1 withscores<br>1)”jack”<br>2)”10”<br>3)”tom”<br>4)”11”<br>5)”mary”<br>6)”22”<br>127.0.0.1:6379&gt; zcount age 9 10<br>(integer) 1</p>]]></content>
       <categories>
         <category>Redis</category>
       </categories>
@@ -19558,7 +19569,7 @@
 
 <h3 id="过期key监听类"><a href="#过期key监听类" class="headerlink" title="过期key监听类"></a>过期key监听类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.listener;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.connection.Message;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.listener.KeyExpirationEventMessageListener;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.redis.listener.RedisMessageListenerContainer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 过期key监听类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-03-02 2:09</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KeyExpiredListener</span> <span class="keyword">extends</span> <span class="title">KeyExpirationEventMessageListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">KeyExpiredListener</span><span class="params">(RedisMessageListenerContainer listenerContainer)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(listenerContainer);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onMessage</span><span class="params">(Message message, <span class="keyword">byte</span>[] pattern)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="keyword">new</span> Date() + <span class="string">&quot;: 过期的key为&quot;</span> + message.toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="Jedis工具类"><a href="#Jedis工具类" class="headerlink" title="Jedis工具类"></a>Jedis工具类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Redis工具类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-01-17 1:21</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String HOST = <span class="string">&quot;121.41.222.106&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer PORT = <span class="number">6379</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String AUTH_PASSWORD = <span class="string">&quot;667866&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取Redis连接</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> JedisPool <span class="title">getRedisLink</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        jedisPoolConfig.setMaxTotal(<span class="number">100</span>);</span><br><span class="line">        jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> JedisPool(jedisPoolConfig, HOST, PORT);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 关闭Redis连接</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jedisPool</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jedis</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">closeRedis</span><span class="params">(JedisPool jedisPool, Jedis jedis)</span> </span>&#123;</span><br><span class="line">        jedis.close();</span><br><span class="line">        jedisPool.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取Jedis</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jedisPool</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Jedis <span class="title">getJedis</span><span class="params">(JedisPool jedisPool)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = jedisPool.getResource();</span><br><span class="line">        jedis.auth(AUTH_PASSWORD);</span><br><span class="line">        <span class="keyword">return</span> jedis;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置key</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">setKey</span><span class="params">(String key, String value)</span> </span>&#123;</span><br><span class="line">        JedisPool jedisPool = getRedisLink();</span><br><span class="line">        Jedis jedis = getJedis(jedisPool);</span><br><span class="line">        String result = jedis.set(key, value);</span><br><span class="line">        closeRedis(jedisPool, jedis);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;OK&quot;</span>.equals(result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 给指定key设置过期时间(秒)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> seconds</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setKeyTime</span><span class="params">(String key, <span class="keyword">int</span> seconds)</span> </span>&#123;</span><br><span class="line">        JedisPool jedisPool = getRedisLink();</span><br><span class="line">        Jedis jedis = getJedis(jedisPool);</span><br><span class="line">        jedis.expire(key, seconds);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Jedis工具类"><a href="#Jedis工具类" class="headerlink" title="Jedis工具类"></a>Jedis工具类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Redis工具类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-01-17 1:21</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedisUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String HOST = <span class="string">&quot;121.41.222.106&quot;</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer PORT = <span class="number">6379</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String AUTH_PASSWORD = <span class="string">&quot;667866&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取Redis连接</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> JedisPool <span class="title">getRedisLink</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        jedisPoolConfig.setMaxTotal(<span class="number">100</span>);</span><br><span class="line">        jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> JedisPool(jedisPoolConfig, HOST, PORT);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 关闭Redis连接</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jedisPool</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jedis</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">closeRedis</span><span class="params">(JedisPool jedisPool, Jedis jedis)</span> </span>&#123;</span><br><span class="line">        jedis.close();</span><br><span class="line">        jedisPool.close();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取Jedis</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> jedisPool</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> Jedis <span class="title">getJedis</span><span class="params">(JedisPool jedisPool)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = jedisPool.getResource();</span><br><span class="line">        jedis.auth(AUTH_PASSWORD);</span><br><span class="line">        <span class="keyword">return</span> jedis;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置key</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> value</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">setKey</span><span class="params">(String key, String value)</span> </span>&#123;</span><br><span class="line">        JedisPool jedisPool = getRedisLink();</span><br><span class="line">        Jedis jedis = getJedis(jedisPool);</span><br><span class="line">        String result = jedis.set(key, value);</span><br><span class="line">        closeRedis(jedisPool, jedis);</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;OK&quot;</span>.equals(result);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 给指定key设置过期时间(秒)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> key</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> seconds</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setKeyTime</span><span class="params">(String key, <span class="keyword">int</span> seconds)</span> </span>&#123;</span><br><span class="line">        JedisPool jedisPool = getRedisLink();</span><br><span class="line">        Jedis jedis = getJedis(jedisPool);</span><br><span class="line">        jedis.expire(key, seconds);</span><br><span class="line">        closeRedis(jedisPool,jedis);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="请求的方法"><a href="#请求的方法" class="headerlink" title="请求的方法"></a>请求的方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/setRedisKey&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">setRedisKey</span><span class="params">()</span></span>&#123;</span><br><span class="line">    RedisUtil.setKey(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;1&quot;</span>);</span><br><span class="line">    RedisUtil.setKeyTime(<span class="string">&quot;a&quot;</span>, <span class="number">10</span>);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> Date()+<span class="string">&quot;: &quot;</span>+<span class="string">&quot;设置了key,过期时间为&quot;</span>+<span class="number">10</span>+<span class="string">&quot;秒&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;设置成功&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
