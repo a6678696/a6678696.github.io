@@ -12922,7 +12922,9 @@
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> ConfigProperties configProperties;</span><br></pre></td></tr></table></figure>
 
 <p>在对应的方法中使用</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (borrowRecordList2.size() == configProperties.getMaxBorrowBookSize()) &#123;</span><br><span class="line">    resultMap.put(<span class="string">&quot;success&quot;</span>, <span class="keyword">false</span>);</span><br><span class="line">    resultMap.put(<span class="string">&quot;errorInfo&quot;</span>, <span class="string">&quot;借书失败，你同时借阅的图书过多，每次最多同时借阅&quot;</span> + configProperties.getMaxBorrowBookSize() + <span class="string">&quot;本图书！！&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (borrowRecordList2.size() == configProperties.getMaxBorrowBookSize()) &#123;</span><br><span class="line">    resultMap.put(<span class="string">&quot;success&quot;</span>, <span class="keyword">false</span>);</span><br><span class="line">    resultMap.put(<span class="string">&quot;errorInfo&quot;</span>, <span class="string">&quot;借书失败，你同时借阅的图书过多，每次最多同时借阅&quot;</span> + configProperties.getMaxBorrowBookSize() + <span class="string">&quot;本图书！！&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果要在普通类使用配置文件属性实体类，去查看博客：<a href="https://blog.zoutl.cn/460.html">Spring Boot 普通类使用 @Resource 或 @Autowired 注解 | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
       <categories>
         <category>Spring Boot</category>
       </categories>
