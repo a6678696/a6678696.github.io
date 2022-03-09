@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-03-07T16:33:46.041Z</updated>
+  <updated>2022-03-09T14:11:38.875Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Boot自定义启动Banner</title>
+    <link href="https://blog.zoutl.cn/465.html"/>
+    <id>https://blog.zoutl.cn/465.html</id>
+    <published>2022-03-09T13:39:08.000Z</published>
+    <updated>2022-03-09T14:11:38.875Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Spring Boot的启动Banner就是，Spring Boot项目启动时控制台打印的图案，这个图案是支持自定义修改的</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309214149509.png" alt="image-20220309214149509"></p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="生成Banner"><a href="#生成Banner" class="headerlink" title="生成Banner"></a>生成Banner</h4><p>生成Banner的网站链接为：<a href="https://www.bootschool.net/ascii">https://www.bootschool.net/ascii</a>，该网站支持根据输入的文本生成Banner以及生成二维码Banner，还有一些别人设计好的Banner</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309215932689.png" alt="image-20220309215932689"></p><h4 id="自定义Spring-Boot的Banner"><a href="#自定义Spring-Boot的Banner" class="headerlink" title="自定义Spring Boot的Banner"></a>自定义Spring Boot的Banner</h4><p>将banner.txt放在resources文件夹中</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309220347359.png" alt="image-20220309220347359"></p><h4 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h4><p>如果不生效就使用Maven工具栏Lifecycle的clean命令清除一下缓存</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309220524659.png" alt="image-20220309220524659"></p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>要禁用Banner，就在配置文件添加以下代码：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">main:</span></span><br><span class="line">    <span class="attr">banner-mode:</span> <span class="string">off</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/97.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Spring Boot" scheme="https://blog.zoutl.cn/categories/Spring-Boot/"/>
+    
+    
+    <category term="Spring Boot" scheme="https://blog.zoutl.cn/tags/Spring-Boot/"/>
+    
+  </entry>
   
   <entry>
     <title>Git修改commit注释</title>
@@ -425,29 +446,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/26.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Spring" scheme="https://blog.zoutl.cn/categories/Spring/"/>
-    
-    
-    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
-    
-    <category term="Spring" scheme="https://blog.zoutl.cn/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在字段上使用@Autowired注解时提示：Field injection is not recommended</title>
-    <link href="https://blog.zoutl.cn/445.html"/>
-    <id>https://blog.zoutl.cn/445.html</id>
-    <published>2022-02-16T18:16:40.000Z</published>
-    <updated>2022-02-16T18:55:23.969Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>之所以会出现这个提示，是因为Spring 4.0开始就不推荐使用属性注入，改为推荐<code>Setter注入</code>和<code>构造器注入</code></p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>想不出现这个提示，解决办法有4个：</p><ol><li>Setter注入</li><li>构造器注入</li><li>直接使用JDK的注解<code>@Resource</code></li><li>如果还是想继续在字段上使用@Autowired注解，又不想出现这个提示，那就修改idea的配置让它不提示</li></ol><h4 id="Setter注入（推荐）"><a href="#Setter注入（推荐）" class="headerlink" title="Setter注入（推荐）"></a>Setter注入（推荐）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> UserDao userDao;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUserDao</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.userDao = userDao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="构造器注入"><a href="#构造器注入" class="headerlink" title="构造器注入"></a>构造器注入</h4><p>在UserServiceImpl.java注入UserDao</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> UserDao userDao;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">UserServiceImpl</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">UserServiceImpl</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.userDao = userDao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>配置类注册UserService的bean，使用构造器方式注入</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.dao.UserDao;</span><br><span class="line"><span class="keyword">import</span> com.ledao.dao.UserDaoImpl;</span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> com.ledao.service.UserService;</span><br><span class="line"><span class="keyword">import</span> com.ledao.service.impl.UserServiceImpl;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> UserDao <span class="title">userDao</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> UserDaoImpl();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> UserService <span class="title">userService</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> UserServiceImpl(userDao);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="使用-Resource（最简单）"><a href="#使用-Resource（最简单）" class="headerlink" title="使用@Resource（最简单）"></a>使用@Resource（最简单）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> UserDao userDao;</span><br></pre></td></tr></table></figure><h4 id="修改idea配置（不推荐）"><a href="#修改idea配置（不推荐）" class="headerlink" title="修改idea配置（不推荐）"></a>修改idea配置（不推荐）</h4><p>让鼠标停留在@Autowired注解上，使用快捷键<code>ALT+回车键</code>，选择下图的第二个选项，改了之后想改回来就有点麻烦了，所以不推荐使用</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220217024409338.png" alt="image-20220217024409338"></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/16.jpg&quot;&gt;&lt;/p&gt;</summary>
     
     
     
