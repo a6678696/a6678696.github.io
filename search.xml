@@ -19810,7 +19810,7 @@
   <entry>
     <title>Spring Boot自定义启动Banner</title>
     <url>/465.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Spring Boot的启动Banner就是，Spring Boot项目启动时控制台打印的图案，这个图案是支持自定义修改的</p>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Spring Boot的启动Banner就是项目启动时控制台打印的图案，这个图案是支持自定义修改的</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309214149509.png" alt="image-20220309214149509"></p>
 <h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="生成Banner"><a href="#生成Banner" class="headerlink" title="生成Banner"></a>生成Banner</h4><p>生成Banner的网站链接为：<a href="https://www.bootschool.net/ascii">https://www.bootschool.net/ascii</a>，该网站支持根据输入的文本生成Banner以及生成二维码Banner，还有一些别人设计好的Banner</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309215932689.png" alt="image-20220309215932689"></p>
