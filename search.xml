@@ -3478,7 +3478,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;currentCom=&#x27;Student&#x27;&quot;</span>&gt;</span>查看学生<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;currentCom=&#x27;Teacher&#x27;&quot;</span>&gt;</span>查看教师<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;currentCom&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Student <span class="keyword">from</span> <span class="string">&#x27;./components/Student&#x27;</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Teacher <span class="keyword">from</span> <span class="string">&#x27;./components/Teacher&#x27;</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;App&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  data () &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">currentCom</span>: <span class="string">&#x27;&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;,</span></span><br><span class="line"><span class="javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="javascript">    Student,</span></span><br><span class="line"><span class="javascript">    Teacher</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210627003748.jpg" alt="img"></strong></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>本实例使用了Element UI，请先安装Element UI：<a href="/203.html">基于vue-cli安装Element UI</a></p>]]></content>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>本实例使用了Element UI，请先安装Element UI：<a href="https://blog.zoutl.cn/203.html">基于 vue-cli 安装与卸载 Element UI | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
       <categories>
         <category>Vue.js</category>
       </categories>
@@ -19790,7 +19790,7 @@
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307233024132.png" alt="image-20220307233024132"></p>
 </li>
-<li><p>上面的界面输入<code>q</code>即可退出，使用下面命令进入修改最近一次注释界面，按i键进入编辑模式，修改第一行的注释，再输入<code>:wq</code>保存并退出</p>
+<li><p> spring:  main:    banner-mode: offyaml</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307233645240.png" alt="image-20220307233645240"></p>
@@ -19854,7 +19854,7 @@
 <h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="键降序排序"><a href="#键降序排序" class="headerlink" title="键降序排序"></a>键降序排序</h4><blockquote>
 <p>实现原理</p>
 </blockquote>
-<p>将HashMap中的EntrySet取出放入一个ArrayList中，来对ArrayList中的EntrySet进行排序，从而实现对HashMap的值进行升序排序和降序排序的效果</p>
+<p>将HashMap中的EntrySet取出放入一个ArrayList中，来对ArrayList中的EntrySet进行排序，从而实现对HashMap的值进行排序的效果</p>
 <blockquote>
 <p>代码实现</p>
 </blockquote>
@@ -19874,6 +19874,20 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IDM无法捕获以及下载APK文件</title>
+    <url>/468.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当我们点击网页上某个APK文件下载链接时，无法通过IDM下载，而是直接通过浏览器下载了，这是因为IDM默认不捕获APK下载链接</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置捕获APK文件"><a href="#配置捕获APK文件" class="headerlink" title="配置捕获APK文件"></a>配置捕获APK文件</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220314131001181.png" alt="image-20220314131001181"></p>
+<h4 id="设置保存路径"><a href="#设置保存路径" class="headerlink" title="设置保存路径"></a>设置保存路径</h4><p>上面已经实现了通过IDM下载APK文件，接下来设置将下载好的APK文件保存到指定路径</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220314131422077.png" alt="image-20220314131422077"></p>]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>IDM</tag>
       </tags>
   </entry>
 </search>
