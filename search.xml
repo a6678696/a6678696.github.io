@@ -13537,7 +13537,7 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032528068.png" alt="image-20220219032528068"></p>
 <p>然后在idea的右下角可以看到当前占用的运行内存以及idea允许占用的最大运行内存</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219032504148.png" alt="image-20220219032504148"></p>
-<h4 id="继续报错"><a href="#继续报错" class="headerlink" title="继续报错"></a>继续报错</h4><p>如果加大了idea允许占用的最大运行内存，并且当前占用的运行内存<code>小于</code>idea允许占用的最大运行内存，idea还是继续报错的话，就在设置中将下图划红线的数值调大（调成idea允许占用的最大运行内存即可）</p>
+<h4 id="继续报错"><a href="#继续报错" class="headerlink" title="继续报错"></a>继续报错</h4><p> package com.ledao.entity;​import com.fasterxml.jackson.annotation.JsonProperty;import lombok.Data;import lombok.NoArgsConstructor;​/** * @author LeDao * @company * @create 2022-02-21 20:17 */@NoArgsConstructor@Datapublic class Fruit {    @JsonProperty(“id”)    private Integer id;    @JsonProperty(“name”)    private String name;    @JsonProperty(“num”)    private Integer num;}java</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219041802281.png" alt="image-20220219041802281"></p>
 <h4 id="又报错"><a href="#又报错" class="headerlink" title="又报错"></a>又报错</h4><p>改了之后，一段时间后还是报错，后来我在网上看到有可能是插件占用内存过高（特别是检查代码以及bug的插件），我卸载了下图两个插件中的<code>QAPlug - PMD</code>（有可能是由于两个插件重复了）以及一些不常用的插件后，idea又可以正常使用了</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220219042524016.png" alt="image-20220219042524016"></p>]]></content>
@@ -19394,7 +19394,7 @@
   <entry>
     <title>Spring使用@Transactional注解实现事务</title>
     <url>/457.html</url>
-    <content><![CDATA[<h3 id="注解概述"><a href="#注解概述" class="headerlink" title="注解概述"></a>注解概述</h3><h4 id="注解属性"><a href="#注解属性" class="headerlink" title="注解属性"></a>注解属性</h4><table>
+    <content><![CDATA[<h3 id="注解概述"><a href="#注解概述" class="headerlink" title="注解概述"></a>注解概述</h3><h4 id="ResponseBody-RequestMapping-value-“-test”-produces-“text-plain-charset-utf-8”-“text-html-charset-utf-8”-public-String-test-Student-student-new-Student-student-setName-“11”-student-setAge-10-studentService-add-student-return-“添加成功”-java"><a href="#ResponseBody-RequestMapping-value-“-test”-produces-“text-plain-charset-utf-8”-“text-html-charset-utf-8”-public-String-test-Student-student-new-Student-student-setName-“11”-student-setAge-10-studentService-add-student-return-“添加成功”-java" class="headerlink" title="@ResponseBody@RequestMapping(value = “/test”, produces = {“text/plain;charset=utf-8”, “text/html;charset=utf-8”})public String test() {    Student student = new Student();    student.setName(“11”);    student.setAge(10);    studentService.add(student);    return “添加成功”;}java"></a>@ResponseBody@RequestMapping(value = “/test”, produces = {“text/plain;charset=utf-8”, “text/html;charset=utf-8”})public String test() {    Student student = new Student();    student.setName(“11”);    student.setAge(10);    studentService.add(student);    return “添加成功”;}java</h4><table>
 <thead>
 <tr>
 <th align="center">属性</th>
@@ -19901,7 +19901,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Mybatis插入数据时获取自增的id</title>
+    <title>MyBatis插入数据时获取自增的id</title>
     <url>/470.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当表的id被设计为自增时，在插入数据前我们是不知道id的值的，插入数据后如果想使用新插入数据的id，我曾经试过直接获取最新一条数据的id，虽然可以获取到id，但是这种方式不但麻烦而且也不推荐，因为插入数据成功到获取到id的这段时间内如果又新增了一条数据，那么获取到的就不是我们希望得到的id了。Mybatis支持在插入数据后，返回这条数据的id，这种方式简单又不存在上面出现的问题，推荐使用</p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="XML代码"><a href="#XML代码" class="headerlink" title="XML代码"></a>XML代码</h4><blockquote>
@@ -19923,17 +19923,17 @@
 <p>实体类对应的字段</p>
 </li>
 <li><p>keyColumn</p>
-<p>表对应的字段</p>
+<p>数据库中表对应的字段</p>
 </li>
 </ol>
 <h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addUser</span><span class="params">()</span></span>&#123;</span><br><span class="line">    User user = <span class="keyword">new</span> User();</span><br><span class="line">    user.setUserName(<span class="string">&quot;tom&quot;</span>);</span><br><span class="line">    user.setNickName(<span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">    user.setPassword(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    userService.add(user);</span><br><span class="line">    System.out.println(<span class="string">&quot;自增的id为: &quot;</span>+user.getId());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316135314586.png"></p>]]></content>
       <categories>
-        <category>Mybatis</category>
+        <category>MyBatis</category>
       </categories>
       <tags>
-        <tag>Mybatis</tag>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
 </search>
