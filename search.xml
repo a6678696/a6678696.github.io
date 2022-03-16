@@ -19938,4 +19938,22 @@
         <tag>MyBatis</tag>
       </tags>
   </entry>
+  <entry>
+    <title>微信开发者工具创建小程序</title>
+    <url>/471.html</url>
+    <content><![CDATA[<h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><p>注册地址为：<a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1">https://mp.weixin.qq.com/wxopen/waregister?action=step1</a></p>
+<h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>登录地址为：<a href="https://mp.weixin.qq.com/">(https://mp.weixin.qq.com/</a></p>
+<h3 id="获取AppID"><a href="#获取AppID" class="headerlink" title="获取AppID"></a>获取AppID</h3><p>登录成功后会进入小程序后台，然后点击左侧菜单的开发管理，根据下图步骤即可获取到AppID</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316230102902.png" alt="image-20220316230102902"></p>
+<h3 id="下载和安装开发工具"><a href="#下载和安装开发工具" class="headerlink" title="下载和安装开发工具"></a>下载和安装开发工具</h3><p>下载地址为：<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316230630691.png" alt="image-20220316230630691"></p>
+<h3 id="创建小程序"><a href="#创建小程序" class="headerlink" title="创建小程序"></a>创建小程序</h3><p>打开微信开发者工具后，新建项目，小程序项目选择<code>小程序</code>，其他选项参照下图，最后点击确定即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316234212685.png" alt="image-20220316234212685"></p>]]></content>
+      <categories>
+        <category>小程序</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+      </tags>
+  </entry>
 </search>
