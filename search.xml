@@ -3838,7 +3838,7 @@
       </tags>
   </entry>
   <entry>
-    <title>将 JSON 字符串转为 list</title>
+    <title>将JSON字符串转为list</title>
     <url>/215.html</url>
     <content><![CDATA[<h3 id="引入hutool依赖"><a href="#引入hutool依赖" class="headerlink" title="引入hutool依赖"></a>引入hutool依赖</h3><p>使用到该依赖的HTTP请求方法</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -4015,14 +4015,10 @@
     <title>栈</title>
     <url>/222.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>栈（stack）又名堆栈，它是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素</p>
-<h3 id="栈的操作"><a href="#栈的操作" class="headerlink" title="栈的操作"></a>栈的操作</h3><p>empty()</p>
-<p>测试此堆栈是否为空</p>
-<p>peek()</p>
-<p>查看此堆栈顶部的对象，而不从堆栈中删除它</p>
-<p>pop()</p>
-<p>删除此堆栈顶部的对象，并将该对象作为此函数的值返回</p>
-<p>push()</p>
-<p>将元素添加到堆栈的顶部</p>
+<h3 id="栈的操作"><a href="#栈的操作" class="headerlink" title="栈的操作"></a>栈的操作</h3><h4 id="empty"><a href="#empty" class="headerlink" title="empty()"></a>empty()</h4><p>测试此堆栈是否为空</p>
+<h4 id="peek"><a href="#peek" class="headerlink" title="peek()"></a>peek()</h4><p>查看此堆栈顶部的对象，而不从堆栈中删除它</p>
+<h4 id="pop"><a href="#pop" class="headerlink" title="pop()"></a>pop()</h4><p>删除此堆栈顶部的对象，并将该对象作为此函数的值返回</p>
+<h4 id="push"><a href="#push" class="headerlink" title="push()"></a>push()</h4><p>将元素添加到堆栈的顶部</p>
 <h3 id="栈的代码实现"><a href="#栈的代码实现" class="headerlink" title="栈的代码实现"></a>栈的代码实现</h3><p>Java代码</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Stack;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2019-10-03 19:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Stack&lt;String&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="comment">//判断是否为空,true表示堆栈为空</span></span><br><span class="line">        System.out.println(stack.empty());</span><br><span class="line">        stack.push(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        stack.push(<span class="string">&quot;b&quot;</span>);</span><br><span class="line">        stack.push(<span class="string">&quot;c&quot;</span>);</span><br><span class="line">        <span class="comment">//查看顶部元素</span></span><br><span class="line">        System.out.println(stack.peek());</span><br><span class="line">        <span class="comment">//移除顶部元素,移除后返回这个元素</span></span><br><span class="line">        System.out.println(stack.pop());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -19888,6 +19884,20 @@
       </categories>
       <tags>
         <tag>IDM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed</title>
+    <url>/469.html</url>
+    <content><![CDATA[<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>我的报错截图如下，报错下方可以看到：<code>org.yaml.snakeyaml.error.YAMLException</code>，这说明是yml配置文件错误。出现该错误的原因是：yml配置文件使用了中文，且项目使用了GBK编码</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316093858491.png" alt="image-20220316093858491"></p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>修改项目的编码为UTF-8</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316095206141.png" alt="image-20220316095206141"></p>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
       </tags>
   </entry>
 </search>

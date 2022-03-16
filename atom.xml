@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-03-14T05:15:27.097Z</updated>
+  <updated>2022-03-16T01:52:08.088Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed</title>
+    <link href="https://blog.zoutl.cn/469.html"/>
+    <id>https://blog.zoutl.cn/469.html</id>
+    <published>2022-03-16T01:33:58.000Z</published>
+    <updated>2022-03-16T01:52:08.088Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>我的报错截图如下，报错下方可以看到：<code>org.yaml.snakeyaml.error.YAMLException</code>，这说明是yml配置文件错误。出现该错误的原因是：yml配置文件使用了中文，且项目使用了GBK编码</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316093858491.png" alt="image-20220316093858491"></p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>修改项目的编码为UTF-8</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316095206141.png" alt="image-20220316095206141"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/18.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="idea使用" scheme="https://blog.zoutl.cn/categories/idea%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="idea使用" scheme="https://blog.zoutl.cn/tags/idea%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>IDM无法捕获以及下载APK文件</title>
     <link href="https://blog.zoutl.cn/468.html"/>
     <id>https://blog.zoutl.cn/468.html</id>
     <published>2022-03-14T05:02:47.000Z</published>
-    <updated>2022-03-14T05:15:27.097Z</updated>
+    <updated>2022-03-14T05:16:05.337Z</updated>
     
     <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当我们点击网页上某个APK文件下载链接时，无法通过IDM下载，而是直接通过浏览器下载了，这是因为IDM默认不捕获APK下载链接</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置捕获APK文件"><a href="#配置捕获APK文件" class="headerlink" title="配置捕获APK文件"></a>配置捕获APK文件</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220314131001181.png" alt="image-20220314131001181"></p><h4 id="设置保存路径"><a href="#设置保存路径" class="headerlink" title="设置保存路径"></a>设置保存路径</h4><p>上面已经实现了通过IDM下载APK文件，接下来设置将下载好的APK文件保存到指定路径</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220314131422077.png" alt="image-20220314131422077"></p>]]></content>
     
@@ -417,29 +438,6 @@
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/66.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="idea使用" scheme="https://blog.zoutl.cn/categories/idea%E4%BD%BF%E7%94%A8/"/>
-    
-    
-    <category term="Tomcat" scheme="https://blog.zoutl.cn/tags/Tomcat/"/>
-    
-    <category term="idea使用" scheme="https://blog.zoutl.cn/tags/idea%E4%BD%BF%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>idea启动Tomcat时报错：Address localhost:1099 is already in use的解决办法</title>
-    <link href="https://blog.zoutl.cn/449.html"/>
-    <id>https://blog.zoutl.cn/449.html</id>
-    <published>2022-02-18T15:34:44.000Z</published>
-    <updated>2022-02-26T15:06:15.454Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>1099端口已经被其它程序占用</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>干掉占用该端口的程序，释放1099端口，具体步骤查看博客：<a href="https://blog.zoutl.cn/314.html">Windows10 释放被占用端口 | LeDao 的博客 (zoutl.cn)</a></p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/56.jpg&quot;&gt;&lt;/p&gt;</summary>
     
     
     
