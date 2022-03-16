@@ -19903,7 +19903,7 @@
   <entry>
     <title>MyBatis插入数据时获取自增的id</title>
     <url>/470.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当表的id被设计为自增时，在插入数据前我们是不知道id的值的，插入数据后如果想使用新插入数据的id，我曾经试过直接获取最新一条数据的id，虽然可以获取到id，但是这种方式不但麻烦而且也不推荐，因为插入数据成功到获取到id的这段时间内如果又新增了一条数据，那么获取到的就不是我们希望得到的id了。Mybatis支持在插入数据后，返回这条数据的id，这种方式简单又不存在上面出现的问题，推荐使用</p>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当表的id被设计为自增时，插入数据后如果想获得新插入数据的id，我曾经试过直接获取最新一条数据的id，虽然可以获取到id，但是这种方式不但麻烦而且也不推荐，因为插入数据成功到获取到id的这段时间内如果又新增了一条数据，那么获取到的就不是我们希望得到的id了。Mybatis支持在插入数据后，返回这条数据的id，这种方式简单又不存在上面出现的问题，推荐使用</p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="XML代码"><a href="#XML代码" class="headerlink" title="XML代码"></a>XML代码</h4><blockquote>
 <p>添加数据的XML代码</p>
 </blockquote>
