@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-03-17T01:35:02.334Z</updated>
+  <updated>2022-03-17T16:04:49.690Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows系统和CentOS7安装Nacos</title>
+    <link href="https://blog.zoutl.cn/472.html"/>
+    <id>https://blog.zoutl.cn/472.html</id>
+    <published>2022-03-17T13:00:17.000Z</published>
+    <updated>2022-03-17T16:04:49.690Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址：<a href="https://github.com/alibaba/nacos/releases/tag/1.4.3">Release 1.4.3 (Jan 27, 2022) · alibaba/nacos (github.com)</a>，下载后解压即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317231221977.png" alt="image-20220317231221977"></p><h2 id="Windows系统安装"><a href="#Windows系统安装" class="headerlink" title="Windows系统安装"></a>Windows系统安装</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>cmd命令进入解压后的文件夹内的bin文件夹，输入以下命令运行Nacos，standalone代表单机模式运行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.cmd -m standalone</span><br></pre></td></tr></table></figure><p>在浏览器输入<a href="http://localhost:8848/nacos%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%9B%E8%A1%8C%E7%99%BB%E5%BD%95%EF%BC%8C%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E9%83%BD%E6%98%AF%60nacos%60%EF%BC%8C%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E8%BF%9B%E5%85%A5%E4%B8%8B%E9%9D%A2%E7%95%8C%E9%9D%A2">http://localhost:8848/nacos，然后进行登录，用户名和密码都是`nacos`，登录成功进入下面界面</a></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317212844381.png" alt="image-20220317212844381"></p><h3 id="连接MySQL数据库"><a href="#连接MySQL数据库" class="headerlink" title="连接MySQL数据库"></a>连接MySQL数据库</h3><p>先关闭正在运行的Nacos程序，直接关闭cmd窗口即可</p><p>Nacos默认使用的数据是本地的，也可以配置成使用MySQL的数据</p><h4 id="导入数据库文件"><a href="#导入数据库文件" class="headerlink" title="导入数据库文件"></a>导入数据库文件</h4><p>Nacos的数据库文件在conf文件夹中，新建一个数据库然后导入Nacos的数据库文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317213310581.png" alt="image-20220317213310581"></p><h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>配置文件是上图的<code>application.properties</code>，把下图的黑色的代码的注释删除，然后把一些参数改为自己的</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317214017802.png" alt="image-20220317214017802"></p><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>修改密码以测试是否成功连接数据库，如果直接在Nacos程序的界面修改密码会报错：<code>caused: user nacos,nacos not exist!;</code>，错误详情查看：<a href="https://github.com/alibaba/nacos/issues/7750">caused: user nacos,nacos not exist!; · Issue #7750 · alibaba/nacos (github.com)</a></p><p> import java.util.<em>;​/</em>* * @author LeDao * @company * @create 2021-06-21 12:38 */public class Test {​    public static void main(String[] args) {        Map&lt;Character, Integer&gt; hashMap = new HashMap&lt;&gt;(16);        hashMap.put(‘e’, 2);        hashMap.put(‘d’, 1);        hashMap.put(‘v’, 6);        hashMap.put(‘b’, 3);        hashMap.put(‘a’, 9);        List&lt;Map.Entry&lt;Character, Integer&gt;&gt; list = new ArrayList&lt;&gt;(hashMap.entrySet());        Collections.sort(list, new Comparator&lt;Map.Entry&lt;Character, Integer&gt;&gt;() {            @Override            public int compare(Map.Entry&lt;Character, Integer&gt; o1, Map.Entry&lt;Character, Integer&gt; o2) {                //o1在后面降序,反之升序                return o2.getValue() - o1.getValue();            }        });        for (Map.Entry&lt;Character, Integer&gt; entry : list) {            System.out.println(entry.getKey() + “: “ + entry.getValue());        }    }}java</p><p>最后登录时使用新密码验证，登录成功说明连接数据库成功</p><h2 id="在CentOS7中安装"><a href="#在CentOS7中安装" class="headerlink" title="在CentOS7中安装"></a>在CentOS7中安装</h2><p>将上面解压的文件夹上传到CentOS7系统中，步骤和上面基本相同，只是运行的命令不同，运行的命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh startup.sh -m standalone</span><br></pre></td></tr></table></figure><p>停止运行的命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh shutdown.sh</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/48.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Nacos" scheme="https://blog.zoutl.cn/categories/Nacos/"/>
+    
+    
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
+    
+    <category term="Nacos" scheme="https://blog.zoutl.cn/tags/Nacos/"/>
+    
+  </entry>
   
   <entry>
     <title>微信开发者工具创建小程序</title>
@@ -424,27 +449,6 @@
     <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
     
     <category term="Node.js" scheme="https://blog.zoutl.cn/tags/Node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>idea使用GsonFormatPlus插件根据JSON数据生成实体类</title>
-    <link href="https://blog.zoutl.cn/452.html"/>
-    <id>https://blog.zoutl.cn/452.html</id>
-    <published>2022-02-21T11:53:03.000Z</published>
-    <updated>2022-02-25T13:36:37.560Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>在设置中Plugins–&gt;Marketplace–&gt;搜索插件–&gt;安装</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221195705316.png" alt="image-20220221195705316"></p><h3 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h3><h4 id="JSON数据"><a href="#JSON数据" class="headerlink" title="JSON数据"></a>JSON数据</h4><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;id&quot;</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;苹果&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;num&quot;</span>: <span class="number">3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="打开插件页面"><a href="#打开插件页面" class="headerlink" title="打开插件页面"></a>打开插件页面</h4><p>首先打开一个实体类，使用<code>ALT+INSERT</code>快捷键出现下面选项，选择GsonFormatPlus，也可以直接使用<code>ALT+S</code>快捷键（这两个快捷键只在类中生效，不在接口中生效）</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200654176.png" alt="image-20220221200654176"></p><p>打开的插件页面如下图，在第一的输入框中输入包名以及生成的实体类名称，格式为：com.ledao.entity.Fruit，前面三个为包名，最后一个英文为实体类的名称；JSON处填JSON类型的数据</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221200958327.png" alt="image-20220221200958327"></p><p>然后点击OK出现下面界面，可以对字段的数据类型、名称和注释进行修改以及添加，然后点击OK即可生成实体类</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220221201536232.png" alt="image-20220221201536232"></p><h4 id="生成的实体类"><a href="#生成的实体类" class="headerlink" title="生成的实体类"></a>生成的实体类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.fasterxml.jackson.annotation.JsonProperty;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.NoArgsConstructor;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-21 20:17</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;id&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;name&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@JsonProperty(&quot;num&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/86.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="idea使用" scheme="https://blog.zoutl.cn/categories/idea%E4%BD%BF%E7%94%A8/"/>
-    
-    
-    <category term="idea使用" scheme="https://blog.zoutl.cn/tags/idea%E4%BD%BF%E7%94%A8/"/>
     
   </entry>
   
