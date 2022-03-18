@@ -4254,19 +4254,10 @@
       </tags>
   </entry>
   <entry>
-    <title>Java跳出多重循环</title>
+    <title></title>
     <url>/232.html</url>
-    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>给for循环添加一个标记</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        here:</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;外层第&quot;</span> + (i + <span class="number">1</span>) + <span class="string">&quot;次循环&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i1 = <span class="number">0</span>; i1 &lt; <span class="number">3</span>; i1++) &#123;</span><br><span class="line">                System.out.print(i1 + <span class="string">&quot; &quot;</span>);</span><br><span class="line">                <span class="keyword">if</span> (i1 == <span class="number">1</span> &amp;&amp; i == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">break</span> here;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>可以看到外层的第3次循环不执行了</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210724110315.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
+    <content><![CDATA[<p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </p>
+]]></content>
   </entry>
   <entry>
     <title>Gson获取JSON字符串的值</title>
