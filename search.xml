@@ -4309,10 +4309,10 @@
 <p>填写信息后，点击下方绿色的Register applaction按钮创建应用</p>
 </blockquote>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210728075131.jpg" alt="img"></p>
-<p>Application name 一般填写自己的网站名称即可</p>
-<p>Application description 一般填写自己的应用描述即可</p>
-<p>Homepage URL 填写自己的网站首页地址</p>
-<p>Authorization callback URL 重点，该地址为用户授权后需要跳转到的自己网站的地址，默认携带一个code参数以上信息输入完成后</p>]]></content>
+<p>Application name一般填写自己的网站名称即可</p>
+<p>Application description一般填写自己的应用描述即可</p>
+<p>Homepage URL填写自己的网站首页地址</p>
+<p>Authorization callback URL，该地址为用户授权后需要跳转到的自己网站的地址，默认携带一个code参数以上信息输入完成后</p>]]></content>
       <categories>
         <category>GitHub</category>
       </categories>
@@ -4437,12 +4437,12 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub连接报 &quot;ssh :connect to host github.com port :22 Connection timed out&quot; 错误</title>
+    <title>GitHub连接报错：&quot;ssh :connect to host github.com port :22 Connection timed out&quot;</title>
     <url>/238.html</url>
     <content><![CDATA[<h3 id="新建config文本"><a href="#新建config文本" class="headerlink" title="新建config文本"></a>新建config文本</h3><p>在存放公钥私钥（id_rsa 和 id_rsa.pub）的文件夹里，新建config文本，内容如下：</p>
 <figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">User 注册GitHub的邮箱</span><br><span class="line">Hostname ssh.github.com</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~/.ssh/id_rsa</span><br><span class="line">Port <span class="number">443</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="测试连接是否成功"><a href="#测试连接是否成功" class="headerlink" title="测试连接是否成功"></a>测试连接是否成功</h3><p>再次执行 <code>ssh -T git@github.com</code> 时，会出现提示如下，回车”yes”即可。</p>]]></content>
+<h3 id="测试连接是否成功"><a href="#测试连接是否成功" class="headerlink" title="测试连接是否成功"></a>测试连接是否成功</h3><p>再次执行 <code>ssh -T git@github.com</code> 时，会出现提示如下，回车”yes”即可</p>]]></content>
       <categories>
         <category>GitHub</category>
       </categories>
@@ -19970,6 +19970,20 @@
         <tag>Windows系统</tag>
         <tag>CentOS7</tag>
         <tag>Nacos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谷歌搜索屏蔽某个网站</title>
+    <url>/473.html</url>
+    <content><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>无法使用谷歌搜索的就不要查看本博客了</p>
+<h3 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h3><p>谷歌插件商店地址：<a href="https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe/related">uBlacklist - Chrome 网上应用店 (google.com)</a></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在谷歌搜索某个关键词后，对应的搜索结果上面会有<code>加入黑名单</code>这个选项，点击该选项即可屏蔽对应网站</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220318163936595.png" alt="image-20220318163936595"></p>]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>其它</tag>
       </tags>
   </entry>
 </search>
