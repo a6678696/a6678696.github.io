@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-03-22T07:32:16.022Z</updated>
+  <updated>2022-03-22T07:32:30.488Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.zoutl.cn/478.html"/>
     <id>https://blog.zoutl.cn/478.html</id>
     <published>2022-03-22T07:18:52.000Z</published>
-    <updated>2022-03-22T07:32:16.022Z</updated>
+    <updated>2022-03-22T07:32:30.488Z</updated>
     
     <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>IDM下载B站的视频时，下载的视频是没有声音的，必须要下载对应的音频文件，例如：下图中，2是音频，3是视频。同时播放视频和音频才是我们所希望的，下面我将演示PotPlayer同时播放视频和音频</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152156978.png" alt="image-20220322152156978"></p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><blockquote><p>将音频文件的后缀名改为m4a</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152546093.png" alt="image-20220322152546093"></p><blockquote><p>使用PotPlayer播放视频，并选择刚刚修改后缀名的音频，然后就可以愉快地玩耍了</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152929300.png" alt="image-20220322152929300"></p>]]></content>
     
