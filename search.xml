@@ -7196,7 +7196,7 @@
   <entry>
     <title>idea创建Spring项目</title>
     <url>/313.html</url>
-    <content><![CDATA[<h3 id="创建Maven项目"><a href="#创建Maven项目" class="headerlink" title="创建Maven项目"></a>创建Maven项目</h3><p>查看博客：<a href="/253.html">idea创建Maven项目</a></p>
+    <content><![CDATA[<h3 id="创建Maven项目"><a href="#创建Maven项目" class="headerlink" title="创建Maven项目"></a>创建Maven项目</h3><p>查看博客：<a href="https://blog.zoutl.cn/253.html">idea创建Maven项目</a></p>
 <h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-context --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-context<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.9.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.20<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h4 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h4><p>命名为：applicationContext.xml，完整代码如下：</p>
@@ -7252,7 +7252,7 @@
 
 <h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>disabled=”disabled”修改为readonly=”readonly”即可</p>
 <h3 id="readonly和disabled的区别"><a href="#readonly和disabled的区别" class="headerlink" title="readonly和disabled的区别"></a>readonly和disabled的区别</h3><p>readonly：针对input(text / password)和textarea有效，在设置为true的情况下，用户可以获得焦点，但是不能编辑，在提交表单时，输入项会作为form的内容提交</p>
-<p>disabled：针对所有表单元素（select，button，input，textarea等），在设置为disabled为true的情况下，表单输入项不能获得焦点，用户的所有操作无意义，在提交表单时，表单输入项不会被提交。</p>]]></content>
+<p>disabled：针对所有表单元素（select，button，input，textarea等），在设置为disabled为true的情况下，表单输入项不能获得焦点，用户的所有操作无意义，在提交表单时，表单输入项不会被提交</p>]]></content>
       <categories>
         <category>前端</category>
       </categories>
