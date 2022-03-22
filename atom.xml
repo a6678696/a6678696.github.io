@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-03-21T16:41:41.655Z</updated>
+  <updated>2022-03-22T07:32:16.022Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PotPlayer播放视频选择音频</title>
+    <link href="https://blog.zoutl.cn/478.html"/>
+    <id>https://blog.zoutl.cn/478.html</id>
+    <published>2022-03-22T07:18:52.000Z</published>
+    <updated>2022-03-22T07:32:16.022Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>IDM下载B站的视频时，下载的视频是没有声音的，必须要下载对应的音频文件，例如：下图中，2是音频，3是视频。同时播放视频和音频才是我们所希望的，下面我将演示PotPlayer同时播放视频和音频</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152156978.png" alt="image-20220322152156978"></p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><blockquote><p>将音频文件的后缀名改为m4a</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152546093.png" alt="image-20220322152546093"></p><blockquote><p>使用PotPlayer播放视频，并选择刚刚修改后缀名的音频，然后就可以愉快地玩耍了</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152929300.png" alt="image-20220322152929300"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/108.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="其它" scheme="https://blog.zoutl.cn/tags/%E5%85%B6%E5%AE%83/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo的butterfly主题使用iconfont图标</title>
@@ -422,27 +443,6 @@
     
     
     <category term="Spring Boot" scheme="https://blog.zoutl.cn/tags/Spring-Boot/"/>
-    
-    <category term="Redis" scheme="https://blog.zoutl.cn/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redis给key设置过期时间</title>
-    <link href="https://blog.zoutl.cn/458.html"/>
-    <id>https://blog.zoutl.cn/458.html</id>
-    <published>2022-03-01T18:22:08.000Z</published>
-    <updated>2022-03-01T18:58:19.211Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="expire"><a href="#expire" class="headerlink" title="expire"></a>expire</h3><blockquote><p>说明</p></blockquote><p>给key设置过期时间，时间单位：<code>秒</code></p><blockquote><p>语法</p></blockquote><p>expire key time</p><blockquote><p>示例</p></blockquote><p><code>expire a 10</code>，给名为a的key设置10秒的过期时间</p><h3 id="pexpire"><a href="#pexpire" class="headerlink" title="pexpire"></a>pexpire</h3><blockquote><p>说明</p></blockquote><p>给key设置过期时间，时间单位：<code>毫秒</code></p><blockquote><p>语法</p></blockquote><p>pexpire key time</p><blockquote><p>示例</p></blockquote><p><code>pexpire a 2000</code>，给名为a的key设置2000毫秒的过期时间（2秒钟）</p><h3 id="ttl"><a href="#ttl" class="headerlink" title="ttl"></a>ttl</h3><blockquote><p>说明</p></blockquote><p>获取key的剩余过期时间：<code>（单位为秒）</code></p><ol><li>如果key存在过期时间，返回剩余生存时间</li><li>如果key是永久的，返回-1</li><li>如果key不存在或者已过期，返回-2</li></ol><blockquote><p>语法</p></blockquote><p>ttl key</p><blockquote><p>示例</p></blockquote><p><code>ttl a</code>，获取名为a的key的剩余过期时间</p><h3 id="pttl"><a href="#pttl" class="headerlink" title="pttl"></a>pttl</h3><blockquote><p>说明</p></blockquote><p>获取key的剩余过期时间：<code>（单位为毫秒）</code></p><ol><li>如果key存在过期时间，返回剩余生存时间</li><li>如果key是永久的，返回-1</li><li>如果key不存在或者已过期，返回-2</li></ol><blockquote><p>语法</p></blockquote><p>pttl key</p><blockquote><p>示例</p></blockquote><p><code>pttl a</code>，获取名为a的key的剩余过期时间</p><h3 id="persist"><a href="#persist" class="headerlink" title="persist"></a>persist</h3><blockquote><p>说明</p></blockquote><p>移除key的过期时间，将其转换为永久状态。如果返回1，代表转换成功。如果返回0，代表key不存在或者之前就已经是永久状态。</p><blockquote><p>语法</p></blockquote><p>persist key</p><blockquote><p>示例</p></blockquote><p><code>persist a</code>，移除名为a的key的剩余过期时间，将其转换为永久状态</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/images/homeBlogImage/27.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Redis" scheme="https://blog.zoutl.cn/categories/Redis/"/>
-    
     
     <category term="Redis" scheme="https://blog.zoutl.cn/tags/Redis/"/>
     
