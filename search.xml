@@ -13599,7 +13599,8 @@
   <entry>
     <title>Spring使用@Transactional注解实现事务</title>
     <url>/457.html</url>
-    <content><![CDATA[<h3 id="注解概述"><a href="#注解概述" class="headerlink" title="注解概述"></a>注解概述</h3><h4 id="ResponseBody-RequestMapping-value-“-test”-produces-“text-plain-charset-utf-8”-“text-html-charset-utf-8”-public-String-test-Student-student-new-Student-student-setName-“11”-student-setAge-10-studentService-add-student-return-“添加成功”-java"><a href="#ResponseBody-RequestMapping-value-“-test”-produces-“text-plain-charset-utf-8”-“text-html-charset-utf-8”-public-String-test-Student-student-new-Student-student-setName-“11”-student-setAge-10-studentService-add-student-return-“添加成功”-java" class="headerlink" title="@ResponseBody@RequestMapping(value = “/test”, produces = {“text/plain;charset=utf-8”, “text/html;charset=utf-8”})public String test() {    Student student = new Student();    student.setName(“11”);    student.setAge(10);    studentService.add(student);    return “添加成功”;}java"></a>@ResponseBody@RequestMapping(value = “/test”, produces = {“text/plain;charset=utf-8”, “text/html;charset=utf-8”})public String test() {    Student student = new Student();    student.setName(“11”);    student.setAge(10);    studentService.add(student);    return “添加成功”;}java</h4><table>
+    <content><![CDATA[<h3 id="注解概述"><a href="#注解概述" class="headerlink" title="注解概述"></a>注解概述</h3><p>是声明式事务管理编程中使用的注解</p>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><table>
 <thead>
 <tr>
 <th align="center">属性</th>
