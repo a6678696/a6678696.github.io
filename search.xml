@@ -1834,22 +1834,26 @@
 
 <h3 id="在线安装MySQL"><a href="#在线安装MySQL" class="headerlink" title="在线安装MySQL"></a>在线安装MySQL</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install mysql-community-server</span><br></pre></td></tr></table></figure>
 
+<p>可能会报错：<font color="#dd0000">Public key for mysql-community-libs-compat-5.7.37-1.el7.x86_64.rpm is not installed</font>，报错原因为：原因是Mysql的GPG升级了，需要重新获取</p>
+<p>输入下面命令解决上面的报错，然后再次执行<code>yum -y install mysql-community-server</code>命令在线安装MySQL</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rpm --import https://repo.mysql.com/RPM-GPG-KEY-mysql-2022</span><br></pre></td></tr></table></figure>
+
 <h3 id="启动MySQL服务"><a href="#启动MySQL服务" class="headerlink" title="启动MySQL服务"></a>启动MySQL服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
 
-<h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> mysqld</span><br><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+<h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#设置mysql开机启动</span></span><br><span class="line">systemctl <span class="built_in">enable</span> mysqld</span><br><span class="line"></span><br><span class="line"><span class="comment">#使设置生效</span></span><br><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
 
-<h3 id="修改root本地登录密码"><a href="#修改root本地登录密码" class="headerlink" title="修改root本地登录密码"></a>修改root本地登录密码</h3><p>MySQL 安装完成之后，在 /var/log/mysqld.log 文件中给 root 生成了一个临时的默认密码（下图中划红线的就是临时密码）</p>
+<h3 id="修改root本地登录密码"><a href="#修改root本地登录密码" class="headerlink" title="修改root本地登录密码"></a>修改root本地登录密码</h3><p>MySQL 安装完成之后，在 /var/log/mysqld.log 文件中给 root 生成了一个临时的默认密码（下图中划红线的就是临时密码），复制它</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /var/<span class="built_in">log</span>/mysqld.log</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617022055.jpg" alt="img"></p>
-<p>进入 MySQL 命令行，输入密码</p>
+<p>进入 MySQL 命令行，输入上面获取的临时密码</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure>
 
-<p>然后输入下面命令修改密码</p>
+<p>然后输入下面命令修改密码，<code>LeDao@2021</code>是修改后的密码</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ALTER USER <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> IDENTIFIED BY <span class="string">&#x27;LeDao@2021&#x27;</span>;</span><br></pre></td></tr></table></figure>
 
 <p>修改密码为 LeDao@2021   (备注 MySQL5.7 默认密码策略要求密码必须是大小写字母数字特殊字母的组合，至少8位) </p>
-<h3 id="设置允许远程登录"><a href="#设置允许远程登录" class="headerlink" title="设置允许远程登录"></a>设置允许远程登录</h3><p>MySQL 默认不允许远程登录，我们需要设置下，并且防火墙开放 3306 端口，在 MySQL 命令行输入下面命令，输入 <code>quit</code> 退出 MySQL 命令行</p>
+<h3 id="设置允许远程登录"><a href="#设置允许远程登录" class="headerlink" title="设置允许远程登录"></a>设置允许远程登录</h3><p>MySQL 默认不允许远程登录的，我们需要设置一下，不然会报1045的错误，然后防火墙开放 3306 端口，在 MySQL 命令行输入下面命令，<code>LeDao@2021</code>是数据库密码，输入 <code>quit</code> 退出 MySQL 命令行</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">GRANT ALL PRIVILEGES ON *.* TO <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;%&#x27;</span> IDENTIFIED BY <span class="string">&#x27;LeDao@2021&#x27;</span> WITH GRANT OPTION;</span><br></pre></td></tr></table></figure>
 
 <p>然后设置防火墙，连续输入下面两条命令：</p>
@@ -1886,16 +1890,13 @@
   <entry>
     <title>CentOS7安装和配置jre1.8</title>
     <url>/154.html</url>
-    <content><![CDATA[<h3 id="下载jre"><a href="#下载jre" class="headerlink" title="下载jre"></a>下载jre</h3><p>①官网下载地址：<a href="https://www.oracle.com/java/technologies/javase-server-jre8-downloads.html">Server JRE (Java SE Runtime Environment) 8 Downloads</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616234401.jpg" alt="img"></p>
-<p>②百度网盘链接</p>
+    <content><![CDATA[<h3 id="下载jre"><a href="#下载jre" class="headerlink" title="下载jre"></a>下载jre</h3><p>百度网盘链接</p>
 <p>链接：<a href="https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ">https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ</a></p>
 <p>提取码：mbv3</p>
-<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>使用FTPRush上传jre到/home/data目录</p>
-<p>详细步骤查看博客：<a href="http://www.zoutl.cn/blog/187">FTPRush向CentOS7上传文件和从CentOS7下载文件</a></p>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>上传jre到/home/data目录</p>
 <h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><ol>
 <li><p>创建/home/java目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /</span><br><span class="line"><span class="built_in">cd</span> home</span><br><span class="line">mkdir java</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line">mkdir java</span><br></pre></td></tr></table></figure></li>
 <li><p>解压tar.gz压缩包 </p>
 <figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">tar</span> -zxvf server-jre-<span class="number">8</span>u<span class="number">131</span>-linux-x<span class="number">64</span>.tar.gz</span><br></pre></td></tr></table></figure></li>
 <li><p>把/home/data/下的jre剪切到/home/java/下</p>
@@ -2003,12 +2004,16 @@
 <h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>使用 FTPRush 上传 Tomcat 压缩包到 /home/data 目录</p>
 <p>详细步骤查看博客：<a href="https://blog.zoutl.cn/153.html">FTPRush向CentOS7上传文件和从CentOS7下载文件)</a></p>
 <h3 id="新建目录"><a href="#新建目录" class="headerlink" title="新建目录"></a>新建目录</h3><p>新建 /home/tomcat9 目录存放 tomcat9</p>
-<p>[root@localhost home]# mkdir tomcat9</p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>[root@localhost data]# tar -zxvf apache-tomcat-9.0.46.tar.gz</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir tomcat9</span><br></pre></td></tr></table></figure>
+
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf apache-tomcat-9.0.46.tar.gz</span><br></pre></td></tr></table></figure>
+
 <h3 id="移动文件夹"><a href="#移动文件夹" class="headerlink" title="移动文件夹"></a>移动文件夹</h3><p>将解压后的文件夹剪切到 /home/tomcat9 目录</p>
-<p>[root@localhost data]# mv apache-tomcat-9.0.46 /home/tomcat9/</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv apache-tomcat-9.0.46 /home/tomcat9/</span><br></pre></td></tr></table></figure>
+
 <h3 id="修改server-xml"><a href="#修改server-xml" class="headerlink" title="修改server.xml"></a>修改server.xml</h3><p>server.xml可以配置端口，编码以及配置项目等等，我们这里就配置一个端口，把默认的8080，修改成80</p>
-<p>[root@localhost tomcat9]# vi /home/tomcat9/apache-tomcat-9.0.46/conf/server.xml</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/tomcat9/apache-tomcat-9.0.46/conf/server.xml</span><br></pre></td></tr></table></figure>
+
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617031259.jpg" alt="img"></p>
 <h3 id="配置防火墙"><a href="#配置防火墙" class="headerlink" title="配置防火墙"></a>配置防火墙</h3><p>开放80端口</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd \--zone=public \--add-port=80/tcp \--permanent</span><br></pre></td></tr></table></figure>
