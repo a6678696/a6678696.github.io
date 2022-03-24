@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>用Tomcat运行web项目</title>
-    <url>/10.html</url>
-    <content><![CDATA[<h3 id="复制项目到webapps文件夹"><a href="#复制项目到webapps文件夹" class="headerlink" title="复制项目到webapps文件夹"></a>复制项目到webapps文件夹</h3><p>将项目（war包）复制到Tomcat安装目录的webapps文件夹中</p>
-<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>然后去bin文件夹中,点击startup.bat即可启动Tomcat运行项目</p>
-<h3 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h3><p>点击bin文件夹中的shutdown.bat关闭Tomcat</p>]]></content>
-      <categories>
-        <category>Tomcat</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个非常好用的Java工具包：HulTool</title>
     <url>/100.html</url>
     <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
@@ -35,24 +22,16 @@
       </tags>
   </entry>
   <entry>
-    <title>解决：关于CKEditor的代码高亮</title>
-    <url>/101.html</url>
-    <content><![CDATA[<blockquote>
-<p>去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）</p>
-</blockquote>
-<p>地址：<a href="https://c.runoob.com/front-end/5536">https://c.runoob.com/front-end/5536</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194044.jpg" alt="img"></p>
-<p>说明：①处填入要高亮的原始代码，②处是高亮后的HTML代码（是我们需要的），③处是高亮后的代码的效果预览</p>
-<blockquote>
-<p>点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194504.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>利用highlight.js实现代码高亮：<a href="/126.html">highlight.js实现代码高亮</a></p>]]></content>
+    <title>用Tomcat运行web项目</title>
+    <url>/10.html</url>
+    <content><![CDATA[<h3 id="复制项目到webapps文件夹"><a href="#复制项目到webapps文件夹" class="headerlink" title="复制项目到webapps文件夹"></a>复制项目到webapps文件夹</h3><p>将项目（war包）复制到Tomcat安装目录的webapps文件夹中</p>
+<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>然后去bin文件夹中,点击startup.bat即可启动Tomcat运行项目</p>
+<h3 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h3><p>点击bin文件夹中的shutdown.bat关闭Tomcat</p>]]></content>
       <categories>
-        <category>CKEditor</category>
+        <category>Tomcat</category>
       </categories>
       <tags>
-        <tag>CKEditor</tag>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -87,6 +66,27 @@
       </tags>
   </entry>
   <entry>
+    <title>解决：关于CKEditor的代码高亮</title>
+    <url>/101.html</url>
+    <content><![CDATA[<blockquote>
+<p>去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）</p>
+</blockquote>
+<p>地址：<a href="https://c.runoob.com/front-end/5536">https://c.runoob.com/front-end/5536</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194044.jpg" alt="img"></p>
+<p>说明：①处填入要高亮的原始代码，②处是高亮后的HTML代码（是我们需要的），③处是高亮后的代码的效果预览</p>
+<blockquote>
+<p>点击CKEditor编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194504.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>利用highlight.js实现代码高亮：<a href="/126.html">highlight.js实现代码高亮</a></p>]]></content>
+      <categories>
+        <category>CKEditor</category>
+      </categories>
+      <tags>
+        <tag>CKEditor</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>根据ip地址获取真实地址</title>
     <url>/104.html</url>
     <content><![CDATA[<h3 id="pom-xml引入"><a href="#pom-xml引入" class="headerlink" title="pom.xml引入"></a>pom.xml引入</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -103,6 +103,21 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实现鼠标移入文字向右移动效果</title>
+    <url>/105.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;div1&#x27;</span>&gt;</span>&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">	-webkit-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-moz-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-o-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div1</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.cnblogs.com/smile1/p/12007164.html">鼠标移入文字上向右移动效果 - Crazy丶迷恋 - 博客园</a></p>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -123,21 +138,6 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实现鼠标移入文字向右移动效果</title>
-    <url>/105.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;div1&#x27;</span>&gt;</span>&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">	-webkit-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-moz-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-o-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div1</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.cnblogs.com/smile1/p/12007164.html">鼠标移入文字上向右移动效果 - Crazy丶迷恋 - 博客园</a></p>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -367,6 +367,22 @@
       </tags>
   </entry>
   <entry>
+    <title>EasyUI自定义图标</title>
+    <url>/118.html</url>
+    <content><![CDATA[<h3 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ">https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ</a></p>
+<p>提取码：cv65</p>
+<h3 id="复制到项目中"><a href="#复制到项目中" class="headerlink" title="复制到项目中"></a>复制到项目中</h3><p>在EasyUI文件夹的themes文件夹中放入下载好的图片（文件名后缀改为<code>.gif</code>）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210427000607.jpg" alt="img"></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在EasyUI文件夹的themes文件夹的icon.css中添加图标代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.icon-setMenuBlog</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">&#x27;usericons/setMenuBlog.gif&#x27;</span>) no-repeat center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>EasyUI</category>
+      </categories>
+      <tags>
+        <tag>EasyUI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>commons-io常用方法</title>
     <url>/117.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -396,22 +412,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EasyUI自定义图标</title>
-    <url>/118.html</url>
-    <content><![CDATA[<h3 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ">https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ</a></p>
-<p>提取码：cv65</p>
-<h3 id="复制到项目中"><a href="#复制到项目中" class="headerlink" title="复制到项目中"></a>复制到项目中</h3><p>在EasyUI文件夹的themes文件夹中放入下载好的图片（文件名后缀改为<code>.gif</code>）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210427000607.jpg" alt="img"></p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在EasyUI文件夹的themes文件夹的icon.css中添加图标代码</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.icon-setMenuBlog</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">&#x27;usericons/setMenuBlog.gif&#x27;</span>) no-repeat center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>EasyUI</category>
-      </categories>
-      <tags>
-        <tag>EasyUI</tag>
       </tags>
   </entry>
   <entry>
@@ -976,6 +976,31 @@
       </tags>
   </entry>
   <entry>
+    <title>给highlight.js代码高亮加行号</title>
+    <url>/131.html</url>
+    <content><![CDATA[<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hljsln</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">3em</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-bg</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">2.2em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#555</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.18</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-num</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">    -webkit-touch-callout: none;</span><br><span class="line">    -webkit-user-select: none;</span><br><span class="line">    -khtml-user-select: none;</span><br><span class="line">    -moz-user-select: none;</span><br><span class="line">    -ms-user-select: none;</span><br><span class="line">    user-select: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-num</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#777</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    <span class="attribute">font-weight</span>: normal;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">attr</span>(data-num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><p>将JavaScript代码保存为文件 highlight.line-numbers.js</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">w, d</span>) </span>&#123;</span><br><span class="line">    w.hljsln = &#123;</span><br><span class="line">        <span class="attr">initLineNumbersOnLoad</span>: initLineNumbersOnLoad,</span><br><span class="line">        <span class="attr">addLineNumbersForCode</span>: addLineNumbersForCode</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">initLineNumbersOnLoad</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (d.readyState === <span class="string">&#x27;interactive&#x27;</span> || d.readyState === <span class="string">&#x27;complete&#x27;</span>) &#123;</span><br><span class="line">            documentReady();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            w.addEventListener(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                documentReady();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addLineNumbersForCode</span>(<span class="params">html</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> num = <span class="number">1</span>;</span><br><span class="line">        html = <span class="string">&#x27;&lt;span class=&quot;ln-num&quot; data-num=&quot;&#x27;</span> + num + <span class="string">&#x27;&quot;&gt;&lt;/span&gt;&#x27;</span> + html;</span><br><span class="line">        html = html.replace(<span class="regexp">/\r\n|\r|\n/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">a</span>) </span>&#123;</span><br><span class="line">            num++;</span><br><span class="line">            <span class="keyword">return</span> a + <span class="string">&#x27;&lt;span class=&quot;ln-num&quot; data-num=&quot;&#x27;</span> + num + <span class="string">&#x27;&quot;&gt;&lt;/span&gt;&#x27;</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">        html = <span class="string">&#x27;&lt;span class=&quot;ln-bg&quot;&gt;&lt;/span&gt;&#x27;</span> + html;</span><br><span class="line">        <span class="keyword">return</span> html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">documentReady</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> elements = d.querySelectorAll(<span class="string">&#x27;pre code&#x27;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elements.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (elements[i].className.indexOf(<span class="string">&#x27;hljsln&#x27;</span>) == -<span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> html = elements[i].innerHTML;</span><br><span class="line">                html = addLineNumbersForCode(html);</span><br><span class="line">                elements[i].innerHTML = html;</span><br><span class="line">                elements[i].className += <span class="string">&#x27; hljsln&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="加载并执行初始化如下"><a href="#加载并执行初始化如下" class="headerlink" title="加载并执行初始化如下"></a>加载并执行初始化如下</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/androidstudio.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/highlight.line-numbers.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span>hljs.initHighlightingOnLoad();hljsln.initLineNumbersOnLoad();<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210603041214.jpg" alt="img"></strong></p>
+<p>可以看到第1和8行是空行，但是也显示了行号，为了让它不显示，将上面JavaScript代码中的addLineNumbersForCode方法修改成下面的代码即可：（修改后结果如下图所示）</p>
+<p>JavaScript代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addLineNumbersForCode</span>(<span class="params">html</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">var</span> max = <span class="number">0</span>;</span><br><span class="line">	html = html.replace(<span class="regexp">/\r\n|\r|\n/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">b</span>) </span>&#123;</span><br><span class="line">		max++;</span><br><span class="line">		<span class="keyword">if</span> (max != <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> b;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	html = html.replace(<span class="regexp">/\r\n|\r|\n/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">a</span>) </span>&#123;</span><br><span class="line">		num++;</span><br><span class="line">		<span class="keyword">if</span> (num != <span class="number">0</span> &amp;&amp; num != max) &#123;</span><br><span class="line">			<span class="keyword">return</span> a + <span class="string">&#x27;&lt;span class=&quot;ln-num&quot; data-num=&quot;&#x27;</span> + num + <span class="string">&#x27;&quot;&gt;&lt;/span&gt;&#x27;</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span> (num != <span class="number">0</span> &amp;&amp; num == max) &#123;</span><br><span class="line">			<span class="keyword">return</span> a + <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	html = <span class="string">&#x27;&lt;span class=&quot;ln-bg&quot; style=&quot;margin-left: 1px&quot;&gt;&lt;/span&gt;&#x27;</span> + html;</span><br><span class="line">	<span class="keyword">return</span> html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>图片：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210603041531.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.yangdx.com/2020/04/144.html">自己写 highlight.js 行号插件 | 天角星</a></p>]]></content>
+      <categories>
+        <category>highlight.js</category>
+      </categories>
+      <tags>
+        <tag>highlight.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>highlight.js代码样式名称</title>
     <url>/130.html</url>
     <content><![CDATA[<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>本博客系统专用或者和本站引用同一个网站的cdn加速</p>
@@ -1038,31 +1063,6 @@
 <h4 id="github-gist"><a href="#github-gist" class="headerlink" title="github-gist"></a>github-gist</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720012201.jpg" alt="img"></p>
 <h4 id="gml-1"><a href="#gml-1" class="headerlink" title="gml"></a>gml</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720012210.jpg" alt="img"></p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多样式去官网查看：<a href="https://highlightjs.org/static/demo/">highlight.js demo</a></p>]]></content>
-      <categories>
-        <category>highlight.js</category>
-      </categories>
-      <tags>
-        <tag>highlight.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给highlight.js代码高亮加行号</title>
-    <url>/131.html</url>
-    <content><![CDATA[<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hljsln</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">3em</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-bg</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">2.2em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#555</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.18</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-num</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">    -webkit-touch-callout: none;</span><br><span class="line">    -webkit-user-select: none;</span><br><span class="line">    -khtml-user-select: none;</span><br><span class="line">    -moz-user-select: none;</span><br><span class="line">    -ms-user-select: none;</span><br><span class="line">    user-select: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-num</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#777</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    <span class="attribute">font-weight</span>: normal;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">attr</span>(data-num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><p>将JavaScript代码保存为文件 highlight.line-numbers.js</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">w, d</span>) </span>&#123;</span><br><span class="line">    w.hljsln = &#123;</span><br><span class="line">        <span class="attr">initLineNumbersOnLoad</span>: initLineNumbersOnLoad,</span><br><span class="line">        <span class="attr">addLineNumbersForCode</span>: addLineNumbersForCode</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">initLineNumbersOnLoad</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (d.readyState === <span class="string">&#x27;interactive&#x27;</span> || d.readyState === <span class="string">&#x27;complete&#x27;</span>) &#123;</span><br><span class="line">            documentReady();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            w.addEventListener(<span class="string">&#x27;DOMContentLoaded&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                documentReady();</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">addLineNumbersForCode</span>(<span class="params">html</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> num = <span class="number">1</span>;</span><br><span class="line">        html = <span class="string">&#x27;&lt;span class=&quot;ln-num&quot; data-num=&quot;&#x27;</span> + num + <span class="string">&#x27;&quot;&gt;&lt;/span&gt;&#x27;</span> + html;</span><br><span class="line">        html = html.replace(<span class="regexp">/\r\n|\r|\n/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">a</span>) </span>&#123;</span><br><span class="line">            num++;</span><br><span class="line">            <span class="keyword">return</span> a + <span class="string">&#x27;&lt;span class=&quot;ln-num&quot; data-num=&quot;&#x27;</span> + num + <span class="string">&#x27;&quot;&gt;&lt;/span&gt;&#x27;</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">        html = <span class="string">&#x27;&lt;span class=&quot;ln-bg&quot;&gt;&lt;/span&gt;&#x27;</span> + html;</span><br><span class="line">        <span class="keyword">return</span> html;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">documentReady</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> elements = d.querySelectorAll(<span class="string">&#x27;pre code&#x27;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elements.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (elements[i].className.indexOf(<span class="string">&#x27;hljsln&#x27;</span>) == -<span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> html = elements[i].innerHTML;</span><br><span class="line">                html = addLineNumbersForCode(html);</span><br><span class="line">                elements[i].innerHTML = html;</span><br><span class="line">                elements[i].className += <span class="string">&#x27; hljsln&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>));</span><br></pre></td></tr></table></figure>
-
-<h3 id="加载并执行初始化如下"><a href="#加载并执行初始化如下" class="headerlink" title="加载并执行初始化如下"></a>加载并执行初始化如下</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/androidstudio.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/highlight.line-numbers.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span>hljs.initHighlightingOnLoad();hljsln.initLineNumbersOnLoad();<span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210603041214.jpg" alt="img"></strong></p>
-<p>可以看到第1和8行是空行，但是也显示了行号，为了让它不显示，将上面JavaScript代码中的addLineNumbersForCode方法修改成下面的代码即可：（修改后结果如下图所示）</p>
-<p>JavaScript代码：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addLineNumbersForCode</span>(<span class="params">html</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">var</span> max = <span class="number">0</span>;</span><br><span class="line">	html = html.replace(<span class="regexp">/\r\n|\r|\n/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">b</span>) </span>&#123;</span><br><span class="line">		max++;</span><br><span class="line">		<span class="keyword">if</span> (max != <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> b;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	html = html.replace(<span class="regexp">/\r\n|\r|\n/g</span>, <span class="function"><span class="keyword">function</span> (<span class="params">a</span>) </span>&#123;</span><br><span class="line">		num++;</span><br><span class="line">		<span class="keyword">if</span> (num != <span class="number">0</span> &amp;&amp; num != max) &#123;</span><br><span class="line">			<span class="keyword">return</span> a + <span class="string">&#x27;&lt;span class=&quot;ln-num&quot; data-num=&quot;&#x27;</span> + num + <span class="string">&#x27;&quot;&gt;&lt;/span&gt;&#x27;</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span> <span class="keyword">if</span> (num != <span class="number">0</span> &amp;&amp; num == max) &#123;</span><br><span class="line">			<span class="keyword">return</span> a + <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;);</span><br><span class="line">	html = <span class="string">&#x27;&lt;span class=&quot;ln-bg&quot; style=&quot;margin-left: 1px&quot;&gt;&lt;/span&gt;&#x27;</span> + html;</span><br><span class="line">	<span class="keyword">return</span> html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>图片：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210603041531.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.yangdx.com/2020/04/144.html">自己写 highlight.js 行号插件 | 天角星</a></p>]]></content>
       <categories>
         <category>highlight.js</category>
       </categories>
@@ -1845,47 +1845,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CentOS7安装和配置jre1.8</title>
-    <url>/154.html</url>
-    <content><![CDATA[<h3 id="下载jre"><a href="#下载jre" class="headerlink" title="下载jre"></a>下载jre</h3><p>百度网盘链接</p>
-<p>链接：<a href="https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ">https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ</a></p>
-<p>提取码：mbv3</p>
-<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>上传jre到/home/data目录</p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><ol>
-<li><p>创建/home/java目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line">mkdir java</span><br></pre></td></tr></table></figure></li>
-<li><p>解压tar.gz压缩包 </p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">tar</span> -zxvf server-jre-<span class="number">8</span>u<span class="number">131</span>-linux-x<span class="number">64</span>.tar.gz</span><br></pre></td></tr></table></figure></li>
-<li><p>把/home/data/下的jre剪切到/home/java/下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv /home/data/jdk1.8.0_131 /home/java</span><br></pre></td></tr></table></figure></li>
-<li><p>给jre目录以及子目录授予root权限</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown root:root -R /home/java/jdk1.8.0_131/</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a><strong>配置环境变量</strong></h3><ol>
-<li><p>编辑环境变量配置文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure></li>
-<li><p>在文件末尾加入下面代码（jdk名称根据实际情况填写），强制保存（wq!）退出</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">export</span> <span class="string">JAVA_HOME=/home/java</span></span><br><span class="line"><span class="attr">export</span> <span class="string">JRE_HOME=/home/java/jdk1.8.0_131</span></span><br><span class="line"><span class="attr">export</span> <span class="string">CLASSPATH=$JRE_HOME/lib/rt.jar:$JRE_HOME/lib/ext</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$JRE_HOME/bin</span></span><br></pre></td></tr></table></figure></li>
-<li><p>使环境变量即时生效</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li>
-<li><p>验证是否配置成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155404274.png" alt="image-20220203155404274"></p>
-<p>java或者javac命令也可以验证</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155450563.png" alt="image-20220203155450563"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155516717.png" alt="image-20220203155516717"></p>
-</li>
-</ol>]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CentOS7安装和配置MySQL5.7</title>
     <url>/155.html</url>
     <content><![CDATA[<h3 id="安装wget"><a href="#安装wget" class="headerlink" title="安装wget"></a>安装wget</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y install wget</span><br></pre></td></tr></table></figure>
@@ -1948,6 +1907,47 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS7安装和配置jre1.8</title>
+    <url>/154.html</url>
+    <content><![CDATA[<h3 id="下载jre"><a href="#下载jre" class="headerlink" title="下载jre"></a>下载jre</h3><p>百度网盘链接</p>
+<p>链接：<a href="https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ">https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ</a></p>
+<p>提取码：mbv3</p>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>上传jre到/home/data目录</p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><ol>
+<li><p>创建/home/java目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line">mkdir java</span><br></pre></td></tr></table></figure></li>
+<li><p>解压tar.gz压缩包 </p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">tar</span> -zxvf server-jre-<span class="number">8</span>u<span class="number">131</span>-linux-x<span class="number">64</span>.tar.gz</span><br></pre></td></tr></table></figure></li>
+<li><p>把/home/data/下的jre剪切到/home/java/下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv /home/data/jdk1.8.0_131 /home/java</span><br></pre></td></tr></table></figure></li>
+<li><p>给jre目录以及子目录授予root权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown root:root -R /home/java/jdk1.8.0_131/</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a><strong>配置环境变量</strong></h3><ol>
+<li><p>编辑环境变量配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure></li>
+<li><p>在文件末尾加入下面代码（jdk名称根据实际情况填写），强制保存（wq!）退出</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">export</span> <span class="string">JAVA_HOME=/home/java</span></span><br><span class="line"><span class="attr">export</span> <span class="string">JRE_HOME=/home/java/jdk1.8.0_131</span></span><br><span class="line"><span class="attr">export</span> <span class="string">CLASSPATH=$JRE_HOME/lib/rt.jar:$JRE_HOME/lib/ext</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$JRE_HOME/bin</span></span><br></pre></td></tr></table></figure></li>
+<li><p>使环境变量即时生效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li>
+<li><p>验证是否配置成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155404274.png" alt="image-20220203155404274"></p>
+<p>java或者javac命令也可以验证</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155450563.png" alt="image-20220203155450563"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155516717.png" alt="image-20220203155516717"></p>
+</li>
+</ol>]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7安装和配置Tomcat9</title>
     <url>/156.html</url>
     <content><![CDATA[<h3 id="下载Tomcat"><a href="#下载Tomcat" class="headerlink" title="下载Tomcat"></a>下载Tomcat</h3><p>下载地址：<a href="https://tomcat.apache.org/download-90.cgi">https://tomcat.apache.org/download-90.cgi</a></p>
@@ -1976,6 +1976,42 @@
 <h3 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h3><p>[root@localhost tomcat9]# /home/tomcat9/apache-tomcat-9.0.46/bin/startup.sh</p>
 <p>看到下面界面说明安装成功</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617031209.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS7部署Java项目速度很慢</title>
+    <url>/158.html</url>
+    <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开-java-security-文件"><a href="#打开-java-security-文件" class="headerlink" title="打开 java.security 文件"></a>打开 java.security 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/java/jdk1.8.0_131/jre/lib/security/java.security</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
+<p>保存并退出即可</p>]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS7实时查看Tomcat运行日志</title>
+    <url>/159.html</url>
+    <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
+
+<p>该文件在Tomcat安装目录的logs目录下</p>
+<h3 id="实时查看Tomcat运行日志命令"><a href="#实时查看Tomcat运行日志命令" class="headerlink" title="实时查看Tomcat运行日志命令"></a>实时查看Tomcat运行日志命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tail -f /home/tomcat9/apache-tomcat-9.0.46/logs/catalina.out</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618035601.jpg" alt="img"></strong></p>
+<p><font color="#dd0000">按CTRL+C退出</font></p>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
@@ -2029,42 +2065,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7部署Java项目速度很慢</title>
-    <url>/158.html</url>
-    <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
-
-<h3 id="打开-java-security-文件"><a href="#打开-java-security-文件" class="headerlink" title="打开 java.security 文件"></a>打开 java.security 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/java/jdk1.8.0_131/jre/lib/security/java.security</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
-<p>保存并退出即可</p>]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7实时查看Tomcat运行日志</title>
-    <url>/159.html</url>
-    <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
-
-<p>该文件在Tomcat安装目录的logs目录下</p>
-<h3 id="实时查看Tomcat运行日志命令"><a href="#实时查看Tomcat运行日志命令" class="headerlink" title="实时查看Tomcat运行日志命令"></a>实时查看Tomcat运行日志命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tail -f /home/tomcat9/apache-tomcat-9.0.46/logs/catalina.out</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618035601.jpg" alt="img"></strong></p>
-<p><font color="#dd0000">按CTRL+C退出</font></p>]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
         <tag>CentOS7</tag>
       </tags>
   </entry>
@@ -2178,52 +2178,6 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082147.jpg" alt="img"></p>]]></content>
       <categories>
         <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis使用连接池</title>
-    <url>/162.html</url>
-    <content><![CDATA[<h3 id="池化的基本思想"><a href="#池化的基本思想" class="headerlink" title="池化的基本思想"></a>池化的基本思想</h3><ol>
-<li><p>可以在初始化的时候创建一些对象，当有需要使用的时候直接从池中获取，提高响应速度；</p>
-</li>
-<li><p>使用过的对象不进行销毁，保存起来，等下一次需要对象的时候，拿出来重复使用，减少频繁创建对象所造成的销；</p>
-</li>
-<li><p>创建的对象统一保存，方面管理和维护。</p>
-</li>
-</ol>
-<h3 id="池化好处总结"><a href="#池化好处总结" class="headerlink" title="池化好处总结"></a>池化好处总结</h3><ol>
-<li><p>提高响应的速度</p>
-</li>
-<li><p>降低资源的消耗</p>
-</li>
-<li><p>方便管理和维护</p>
-</li>
-</ol>
-<p>Jedis连接的就是连接池中JedisPool管理的资源，JedisPool保证资源在一个可控范围内，并且保障线程安全。使用合理的GenericObjectPoolConfig配置能够提升Redis的服务性能，降低资源开销。</p>
-<h3 id="重要参数"><a href="#重要参数" class="headerlink" title="重要参数"></a>重要参数</h3><p>下列两表将对一些重要参数进行说明</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620090617.jpg" alt="img"></p>
-<p>空闲Jedis对象检测由下列四个参数组合完成，testWhileIdle是该功能的开关。</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620090627.jpg" alt="img"></p>
-<p>可以在org.apache.commons.pool2.impl.BaseObjectPoolConfig中查看全部默认值。</p>
-<h3 id="关键参数设置建议"><a href="#关键参数设置建议" class="headerlink" title="关键参数设置建议"></a>关键参数设置建议</h3><h4 id="maxTotal（最大连接数）"><a href="#maxTotal（最大连接数）" class="headerlink" title="maxTotal（最大连接数）"></a>maxTotal（最大连接数）</h4><p>想合理设置maxTotal（最大连接数）需要考虑的因素较多，如：</p>
-<ol>
-<li>业务希望的Redis并发量</li>
-<li>客户端执行命令时间</li>
-<li>Redis资源，例如nodes（如应用个数等），maxTotal不能超过Redis的最大连接数</li>
-<li>资源开销，例如虽然希望控制空闲连接，但又不希望因为连接池中频繁地释放和创建连接造成不必要的开销</li>
-</ol>
-<p>假设一次命令时间，即borrow|return resource加上Jedis执行命令 （ 含网络耗时）的平均耗时约为1ms，一个连接的QPS大约是1000，业务期望的QPS是50000，那么理论上需要的资源池大小是50000 / 1000 = 50。但事实上这只是个理论值，除此之外还要预留一些资源，所以maxTotal可以比理论值大一些。这个值不是越大越好，一方面连接太多会占用客户端和服务端资源，另一方面对于Redis这种高QPS的服务器，如果出现大命令的阻塞，即使设置再大的资源池也无济于事。</p>
-<h4 id="maxIdle与minIdle"><a href="#maxIdle与minIdle" class="headerlink" title="maxIdle与minIdle"></a>maxIdle与minIdle</h4><p>maxIdle实际上才是业务需要的最大连接数，maxTotal 是为了给出余量，所以 maxIdle 不要设置得过小，否则会有new Jedis（新连接）开销，而minIdle是为了控制空闲资源检测。连接池的最佳性能是maxTotal=maxIdle，这样就避免了连接池伸缩带来的性能干扰。但如果并发量不大或者maxTotal设置过高，则会导致不必要的连接资源浪费，您可以根据实际总QPS和调用Redis的客户端规模整体评估每个节点所使用的连接池大小。</p>
-<h4 id="使用监控获取合理值"><a href="#使用监控获取合理值" class="headerlink" title="使用监控获取合理值"></a>使用监控获取合理值</h4><p>在实际环境中，比较可靠的方法是通过监控来尝试获取参数的最佳值。可以考虑通过JMX等方式实现监控，从而找到合理值。</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        jedisPoolConfig.setMaxTotal(<span class="number">100</span>);</span><br><span class="line">        jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line">        JedisPool jedisPool = <span class="keyword">new</span> JedisPool(jedisPoolConfig, <span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        Jedis jedis = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            jedis = jedisPool.getResource();</span><br><span class="line">            jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">            jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">            String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">            System.out.println(value);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) &#123;</span><br><span class="line">                jedis.close();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (jedisPool != <span class="keyword">null</span>) &#123;</span><br><span class="line">                jedisPool.close();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/u010648555/article/details/103858684">掌握JedisPoolConfig参数配置，学会调优技能_阿飞云-CSDN博客</a></p>]]></content>
-      <categories>
-        <category>Redis</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -2598,6 +2552,52 @@
       </tags>
   </entry>
   <entry>
+    <title>Redis使用连接池</title>
+    <url>/162.html</url>
+    <content><![CDATA[<h3 id="池化的基本思想"><a href="#池化的基本思想" class="headerlink" title="池化的基本思想"></a>池化的基本思想</h3><ol>
+<li><p>可以在初始化的时候创建一些对象，当有需要使用的时候直接从池中获取，提高响应速度；</p>
+</li>
+<li><p>使用过的对象不进行销毁，保存起来，等下一次需要对象的时候，拿出来重复使用，减少频繁创建对象所造成的销；</p>
+</li>
+<li><p>创建的对象统一保存，方面管理和维护。</p>
+</li>
+</ol>
+<h3 id="池化好处总结"><a href="#池化好处总结" class="headerlink" title="池化好处总结"></a>池化好处总结</h3><ol>
+<li><p>提高响应的速度</p>
+</li>
+<li><p>降低资源的消耗</p>
+</li>
+<li><p>方便管理和维护</p>
+</li>
+</ol>
+<p>Jedis连接的就是连接池中JedisPool管理的资源，JedisPool保证资源在一个可控范围内，并且保障线程安全。使用合理的GenericObjectPoolConfig配置能够提升Redis的服务性能，降低资源开销。</p>
+<h3 id="重要参数"><a href="#重要参数" class="headerlink" title="重要参数"></a>重要参数</h3><p>下列两表将对一些重要参数进行说明</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620090617.jpg" alt="img"></p>
+<p>空闲Jedis对象检测由下列四个参数组合完成，testWhileIdle是该功能的开关。</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620090627.jpg" alt="img"></p>
+<p>可以在org.apache.commons.pool2.impl.BaseObjectPoolConfig中查看全部默认值。</p>
+<h3 id="关键参数设置建议"><a href="#关键参数设置建议" class="headerlink" title="关键参数设置建议"></a>关键参数设置建议</h3><h4 id="maxTotal（最大连接数）"><a href="#maxTotal（最大连接数）" class="headerlink" title="maxTotal（最大连接数）"></a>maxTotal（最大连接数）</h4><p>想合理设置maxTotal（最大连接数）需要考虑的因素较多，如：</p>
+<ol>
+<li>业务希望的Redis并发量</li>
+<li>客户端执行命令时间</li>
+<li>Redis资源，例如nodes（如应用个数等），maxTotal不能超过Redis的最大连接数</li>
+<li>资源开销，例如虽然希望控制空闲连接，但又不希望因为连接池中频繁地释放和创建连接造成不必要的开销</li>
+</ol>
+<p>假设一次命令时间，即borrow|return resource加上Jedis执行命令 （ 含网络耗时）的平均耗时约为1ms，一个连接的QPS大约是1000，业务期望的QPS是50000，那么理论上需要的资源池大小是50000 / 1000 = 50。但事实上这只是个理论值，除此之外还要预留一些资源，所以maxTotal可以比理论值大一些。这个值不是越大越好，一方面连接太多会占用客户端和服务端资源，另一方面对于Redis这种高QPS的服务器，如果出现大命令的阻塞，即使设置再大的资源池也无济于事。</p>
+<h4 id="maxIdle与minIdle"><a href="#maxIdle与minIdle" class="headerlink" title="maxIdle与minIdle"></a>maxIdle与minIdle</h4><p>maxIdle实际上才是业务需要的最大连接数，maxTotal 是为了给出余量，所以 maxIdle 不要设置得过小，否则会有new Jedis（新连接）开销，而minIdle是为了控制空闲资源检测。连接池的最佳性能是maxTotal=maxIdle，这样就避免了连接池伸缩带来的性能干扰。但如果并发量不大或者maxTotal设置过高，则会导致不必要的连接资源浪费，您可以根据实际总QPS和调用Redis的客户端规模整体评估每个节点所使用的连接池大小。</p>
+<h4 id="使用监控获取合理值"><a href="#使用监控获取合理值" class="headerlink" title="使用监控获取合理值"></a>使用监控获取合理值</h4><p>在实际环境中，比较可靠的方法是通过监控来尝试获取参数的最佳值。可以考虑通过JMX等方式实现监控，从而找到合理值。</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        jedisPoolConfig.setMaxTotal(<span class="number">100</span>);</span><br><span class="line">        jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line">        JedisPool jedisPool = <span class="keyword">new</span> JedisPool(jedisPoolConfig, <span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        Jedis jedis = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            jedis = jedisPool.getResource();</span><br><span class="line">            jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">            jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">            String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">            System.out.println(value);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) &#123;</span><br><span class="line">                jedis.close();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (jedisPool != <span class="keyword">null</span>) &#123;</span><br><span class="line">                jedisPool.close();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/u010648555/article/details/103858684">掌握JedisPoolConfig参数配置，学会调优技能_阿飞云-CSDN博客</a></p>]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Tomcat安装SSL证书</title>
     <url>/173.html</url>
     <content><![CDATA[<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>阿里云服务器、CentOS7系统、Tomcat9</p>
@@ -2958,6 +2958,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue.js 监听属性</title>
+    <url>/185.html</url>
+    <content><![CDATA[<p>通过 watch 来响应数据的变化</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span></span><br><span class="line">        计数器:&#123;&#123;counter&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">&quot;seen&quot;</span>&gt;</span>（</span><br><span class="line">            修改前值为：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: blue&quot;</span>&gt;</span>&#123;&#123;oldVal&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>，</span><br><span class="line">            修改后值为：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;newVal&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>）</span><br><span class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;addCounter&quot;</span>&gt;</span>自加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;lessCounter&quot;</span>&gt;</span>自减<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">seen</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">oldVal</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">newVal</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">addCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter++;</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">lessCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span> (<span class="built_in">this</span>.counter &gt; <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">this</span>.counter--;</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">watch</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//第一个参数是新的值（改变后），第二个是旧的值（改变前）</span></span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.oldVal = oldValue;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.newVal = newValue;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.seen = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624221541.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue.js 样式绑定</title>
     <url>/186.html</url>
     <content><![CDATA[<p>lass 与 style 是 HTML 元素的属性，用于设置元素的样式，我们可以用 v-bind 来设置样式属性。</p>
@@ -2983,20 +2997,6 @@
 
 <p>③绑定多个对象</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-bind:style</span>=<span class="string">&quot;[style1,style2]&quot;</span>&gt;</span>LeDao的博客<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>:&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">style1</span>:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;color&#x27;</span>:<span class="string">&#x27;green&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;font-size&#x27;</span>:<span class="string">&#x27;33px&#x27;</span></span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">style2</span>:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;font-weight&#x27;</span>:<span class="string">&#x27;bold&#x27;</span></span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue.js 监听属性</title>
-    <url>/185.html</url>
-    <content><![CDATA[<p>通过 watch 来响应数据的变化</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span></span><br><span class="line">        计数器:&#123;&#123;counter&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">&quot;seen&quot;</span>&gt;</span>（</span><br><span class="line">            修改前值为：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: blue&quot;</span>&gt;</span>&#123;&#123;oldVal&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>，</span><br><span class="line">            修改后值为：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;newVal&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>）</span><br><span class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;addCounter&quot;</span>&gt;</span>自加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;lessCounter&quot;</span>&gt;</span>自减<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">seen</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">oldVal</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">newVal</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">addCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter++;</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">lessCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span> (<span class="built_in">this</span>.counter &gt; <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">this</span>.counter--;</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">watch</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//第一个参数是新的值（改变后），第二个是旧的值（改变前）</span></span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.oldVal = oldValue;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.newVal = newValue;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.seen = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624221541.jpg" alt="img"></p>]]></content>
       <categories>
         <category>Vue.js</category>
       </categories>
@@ -3716,29 +3716,6 @@
       </tags>
   </entry>
   <entry>
-    <title>创建线程的四种方式</title>
-    <url>/212.html</url>
-    <content><![CDATA[<h3 id="继承Thread类"><a href="#继承Thread类" class="headerlink" title="继承Thread类"></a>继承Thread类</h3><p>通过继承Thread类，并重写它的run方法，我们就可以创建一个线程</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-09 22:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;线程运行&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Thread thread = <span class="keyword">new</span> MyThread();</span><br><span class="line">        thread.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="实现-Runnable接口"><a href="#实现-Runnable接口" class="headerlink" title="实现 Runnable接口"></a>实现 Runnable接口</h3><p>通过实现Runnable，并实现run方法，也可以创建一个线程</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-09 22:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;运行线程&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> MyThread());</span><br><span class="line">        thread.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="实现-Callable-接口"><a href="#实现-Callable-接口" class="headerlink" title="实现 Callable 接口"></a>实现 Callable 接口</h3><p>实现Callable接口，并结合Future实现</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.Callable;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.ExecutionException;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.FutureTask;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-09 22:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">implements</span> <span class="title">Callable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;1&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ExecutionException, InterruptedException </span>&#123;</span><br><span class="line">        FutureTask task = <span class="keyword">new</span> FutureTask(<span class="keyword">new</span> MyThread());</span><br><span class="line">        <span class="keyword">new</span> Thread(task).start();</span><br><span class="line">        String result = (String) task.get();</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="通过线程池创建线程"><a href="#通过线程池创建线程" class="headerlink" title="通过线程池创建线程"></a>通过线程池创建线程</h3><p>用JDK自带的Executors来创建线程池对象</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.ExecutorService;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.Executors;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-09 22:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">&quot;thread run...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ExecutorService executorService = Executors.newCachedThreadPool();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            executorService.execute(<span class="keyword">new</span> MyThread());</span><br><span class="line">        &#125;</span><br><span class="line">        executorService.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://segmentfault.com/a/1190000037589073">https://segmentfault.com/a/1190000037589073</a></p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MyBatis使用分页插件PageHelper</title>
     <url>/213.html</url>
     <content><![CDATA[<p>GitHub完整代码地址：<a href="https://github.com/a6678696/MyBatisPageHelperTest">https://github.com/a6678696/MyBatisPageHelperTest</a></p>
@@ -3766,6 +3743,29 @@
       <tags>
         <tag>Java</tag>
         <tag>MyBatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>创建线程的四种方式</title>
+    <url>/212.html</url>
+    <content><![CDATA[<h3 id="继承Thread类"><a href="#继承Thread类" class="headerlink" title="继承Thread类"></a>继承Thread类</h3><p>通过继承Thread类，并重写它的run方法，我们就可以创建一个线程</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-09 22:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;线程运行&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Thread thread = <span class="keyword">new</span> MyThread();</span><br><span class="line">        thread.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现-Runnable接口"><a href="#实现-Runnable接口" class="headerlink" title="实现 Runnable接口"></a>实现 Runnable接口</h3><p>通过实现Runnable，并实现run方法，也可以创建一个线程</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-09 22:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;运行线程&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> MyThread());</span><br><span class="line">        thread.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="实现-Callable-接口"><a href="#实现-Callable-接口" class="headerlink" title="实现 Callable 接口"></a>实现 Callable 接口</h3><p>实现Callable接口，并结合Future实现</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.Callable;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.ExecutionException;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.FutureTask;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-09 22:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">implements</span> <span class="title">Callable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;1&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ExecutionException, InterruptedException </span>&#123;</span><br><span class="line">        FutureTask task = <span class="keyword">new</span> FutureTask(<span class="keyword">new</span> MyThread());</span><br><span class="line">        <span class="keyword">new</span> Thread(task).start();</span><br><span class="line">        String result = (String) task.get();</span><br><span class="line">        System.out.println(result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="通过线程池创建线程"><a href="#通过线程池创建线程" class="headerlink" title="通过线程池创建线程"></a>通过线程池创建线程</h3><p>用JDK自带的Executors来创建线程池对象</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.ExecutorService;</span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.Executors;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-09 22:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">&quot;thread run...&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ExecutorService executorService = Executors.newCachedThreadPool();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            executorService.execute(<span class="keyword">new</span> MyThread());</span><br><span class="line">        &#125;</span><br><span class="line">        executorService.shutdown();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://segmentfault.com/a/1190000037589073">https://segmentfault.com/a/1190000037589073</a></p>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -3985,26 +3985,6 @@
       </tags>
   </entry>
   <entry>
-    <title>队列</title>
-    <url>/223.html</url>
-    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>队列是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作，和栈一样，队列是一种操作受制的线性表。进行插入操作的端称为队尾，进行删除操作的端称为队头。队列中没有元素时，称为空队列</p>
-<p>队列的数据元素又称为队列元素。在队列中插入一个队列元素称为入队，从队列中删除一个队列元素称为出队。因为队列只允许在一端插入，在另一端删除，所以只有最早进入队列的元素才能最先从队列中删除，故队列又称为先进先出（FIFO—first in first out）线性表</p>
-<p>LinkedList类实现了Queue接口，因此我们可以把LinkedList当成Queue来用</p>
-<h3 id="队列的操作"><a href="#队列的操作" class="headerlink" title="队列的操作"></a>队列的操作</h3><p>使用了LinkedList类的方法进行封装，更多LinkedList类的方法去查看JDK</p>
-<h4 id="enqueue"><a href="#enqueue" class="headerlink" title="enqueue"></a>enqueue</h4><p>加入队列（在表的后端进行插入操作）</p>
-<h4 id="dequeue"><a href="#dequeue" class="headerlink" title="dequeue"></a>dequeue</h4><p>离开队列（在表的前端进行删除操作）</p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LinkedList&lt;Integer&gt; linkedList = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">//加入队列</span></span><br><span class="line">        enqueue(<span class="number">1</span>, linkedList);</span><br><span class="line">        enqueue(<span class="number">3</span>, linkedList);</span><br><span class="line">        enqueue(<span class="number">4</span>, linkedList);</span><br><span class="line">        enqueue(<span class="number">6</span>, linkedList);</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        System.out.print(<span class="string">&quot;当前所有元素: &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (Integer integer : linkedList) &#123;</span><br><span class="line">            System.out.print(integer + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="comment">//离开队列</span></span><br><span class="line">        dequeue(linkedList);</span><br><span class="line">        System.out.print(<span class="string">&quot;当前所有元素: &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (Integer integer : linkedList) &#123;</span><br><span class="line">            System.out.print(integer + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 离开队列(删除)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> linkedList</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dequeue</span><span class="params">(LinkedList&lt;Integer&gt; linkedList)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (linkedList.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            linkedList.removeFirst();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;队列为空&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加入队列(插入)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> a</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> linkedList</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">enqueue</span><span class="params">(<span class="keyword">int</span> a, LinkedList&lt;Integer&gt; linkedList)</span> </span>&#123;</span><br><span class="line">        linkedList.addLast(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721104559.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring Boot引入MyBatis-Plus</title>
     <url>/224.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>druid<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.10<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -4134,6 +4114,26 @@
       <tags>
         <tag>Java</tag>
         <tag>MyBatis-Plus</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>队列</title>
+    <url>/223.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>队列是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作，和栈一样，队列是一种操作受制的线性表。进行插入操作的端称为队尾，进行删除操作的端称为队头。队列中没有元素时，称为空队列</p>
+<p>队列的数据元素又称为队列元素。在队列中插入一个队列元素称为入队，从队列中删除一个队列元素称为出队。因为队列只允许在一端插入，在另一端删除，所以只有最早进入队列的元素才能最先从队列中删除，故队列又称为先进先出（FIFO—first in first out）线性表</p>
+<p>LinkedList类实现了Queue接口，因此我们可以把LinkedList当成Queue来用</p>
+<h3 id="队列的操作"><a href="#队列的操作" class="headerlink" title="队列的操作"></a>队列的操作</h3><p>使用了LinkedList类的方法进行封装，更多LinkedList类的方法去查看JDK</p>
+<h4 id="enqueue"><a href="#enqueue" class="headerlink" title="enqueue"></a>enqueue</h4><p>加入队列（在表的后端进行插入操作）</p>
+<h4 id="dequeue"><a href="#dequeue" class="headerlink" title="dequeue"></a>dequeue</h4><p>离开队列（在表的前端进行删除操作）</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        LinkedList&lt;Integer&gt; linkedList = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">//加入队列</span></span><br><span class="line">        enqueue(<span class="number">1</span>, linkedList);</span><br><span class="line">        enqueue(<span class="number">3</span>, linkedList);</span><br><span class="line">        enqueue(<span class="number">4</span>, linkedList);</span><br><span class="line">        enqueue(<span class="number">6</span>, linkedList);</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        System.out.print(<span class="string">&quot;当前所有元素: &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (Integer integer : linkedList) &#123;</span><br><span class="line">            System.out.print(integer + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="comment">//离开队列</span></span><br><span class="line">        dequeue(linkedList);</span><br><span class="line">        System.out.print(<span class="string">&quot;当前所有元素: &quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (Integer integer : linkedList) &#123;</span><br><span class="line">            System.out.print(integer + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 离开队列(删除)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> linkedList</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dequeue</span><span class="params">(LinkedList&lt;Integer&gt; linkedList)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (linkedList.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            linkedList.removeFirst();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;队列为空&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加入队列(插入)</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> a</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> linkedList</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">enqueue</span><span class="params">(<span class="keyword">int</span> a, LinkedList&lt;Integer&gt; linkedList)</span> </span>&#123;</span><br><span class="line">        linkedList.addLast(a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721104559.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -4603,22 +4603,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Gitalk显示：未找到相关的 Issues 进行评论</title>
-    <url>/244.html</url>
-    <content><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>已经正确安装Gitalk</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="GitHub网站登录"><a href="#GitHub网站登录" class="headerlink" title="GitHub网站登录"></a>GitHub网站登录</h4><p>进入GitHub网站，登录Gitalk评论仓库的所有者账号</p>
-<h4 id="Gitalk评论登录GitHub账号"><a href="#Gitalk评论登录GitHub账号" class="headerlink" title="Gitalk评论登录GitHub账号"></a>Gitalk评论登录GitHub账号</h4><p>进入显示<font color="#dd0000">未找到相关的 Issues 进行评论</font>的网页，点击<font color="#dd0000">使用GitHub登录</font>按钮，Gitalk评论仓库将自动创建一个当前网页的 Issues ，然后每进入一个显示<font color="#dd0000">未找到相关的 Issues 进行评论</font>的网页，将会自动创建 Issues</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20134819.png"></p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20140545.png"></p>]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo next添加页脚网站运行时间</title>
     <url>/245.html</url>
     <content><![CDATA[<h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;sitetime&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">javascript</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">siteTime</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">window</span>.setTimeout(<span class="string">&quot;siteTime()&quot;</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> seconds = <span class="number">1000</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> minutes = seconds * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> hours = minutes * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> days = hours * <span class="number">24</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> years = days * <span class="number">365</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayYear = today.getFullYear();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMonth = today.getMonth()+<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayDate = today.getDate();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayHour = today.getHours();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMinute = today.getMinutes();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todaySecond = today.getSeconds();</span></span><br><span class="line"><span class="javascript">		<span class="comment">/* </span></span></span><br><span class="line"><span class="comment"><span class="javascript">		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		year - 作为date对象的年份，为4位年份值</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		month - 0-11之间的整数，做为date对象的月份</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		day - 1-31之间的整数，做为date对象的天数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		minutes - 0-59之间的整数，做为date对象的分钟数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		seconds - 0-59之间的整数，做为date对象的秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		microseconds - 0-999之间的整数，做为date对象的毫秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">        */</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t1 = <span class="built_in">Date</span>.UTC(<span class="number">2020</span>,<span class="number">02</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">00</span>,<span class="number">00</span>); <span class="comment">//北京时间2018-2-13 00:00:00</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t2 = <span class="built_in">Date</span>.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diff = t2-t1;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffYears = <span class="built_in">Math</span>.floor(diff/years);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffDays = <span class="built_in">Math</span>.floor((diff/days)-diffYears*<span class="number">365</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffHours = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days)/hours);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffMinutes = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours)/minutes);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffSeconds = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">&quot;sitetime&quot;</span>).innerHTML=<span class="string">&quot; 已运行&quot;</span>+<span class="comment">/*diffYears+&quot; 年 &quot;+*/</span>diffDays+<span class="string">&quot; 天 &quot;</span>+diffHours+<span class="string">&quot; 小时 &quot;</span>+diffMinutes+<span class="string">&quot; 分钟 &quot;</span>+diffSeconds+<span class="string">&quot; 秒&quot;</span>;</span></span><br><span class="line"><span class="javascript">	&#125;</span></span><br><span class="line"><span class="javascript">	siteTime();</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -4631,6 +4615,22 @@
         <category>hexo</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Gitalk显示：未找到相关的 Issues 进行评论</title>
+    <url>/244.html</url>
+    <content><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>已经正确安装Gitalk</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="GitHub网站登录"><a href="#GitHub网站登录" class="headerlink" title="GitHub网站登录"></a>GitHub网站登录</h4><p>进入GitHub网站，登录Gitalk评论仓库的所有者账号</p>
+<h4 id="Gitalk评论登录GitHub账号"><a href="#Gitalk评论登录GitHub账号" class="headerlink" title="Gitalk评论登录GitHub账号"></a>Gitalk评论登录GitHub账号</h4><p>进入显示<font color="#dd0000">未找到相关的 Issues 进行评论</font>的网页，点击<font color="#dd0000">使用GitHub登录</font>按钮，Gitalk评论仓库将自动创建一个当前网页的 Issues ，然后每进入一个显示<font color="#dd0000">未找到相关的 Issues 进行评论</font>的网页，将会自动创建 Issues</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20134819.png"></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20140545.png"></p>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
         <tag>hexo</tag>
       </tags>
   </entry>
@@ -5867,6 +5867,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Boot启动报错：Cannot determine embedded database driver class for database type NONE的解决办法</title>
+    <url>/287.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Spring Boot项目启动时报错：Cannot determine embedded database driver class for database type NONE</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-18%20201505.png"></p>
+<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>这是因为spring boot默认会加载org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration类，DataSourceAutoConfiguration类使用了@Configuration注解向spring注入了dataSource bean。因为工程中没有关于dataSource相关的配置信息，所以当spring创建dataSource bean因缺少相关的信息就会报错</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>解决办法有两种：一种是修改启动类注解，另一种是配置数据源</p>
+<h4 id="修改注解"><a href="#修改注解" class="headerlink" title="修改注解"></a>修改注解</h4><p>在启动类中修改注解@SpringBootApplication为：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication(exclude = &#123;DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class&#125;)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="配置数据源"><a href="#配置数据源" class="headerlink" title="配置数据源"></a>配置数据源</h4><p>在application.yml中配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://wuwenliang.net/2018/07/15/springboot%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B9%8B%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99Cannot-determine-embedded-database/">springboot常见问题之启动报错Cannot determine embedded database</a></p>]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Config Server</title>
     <url>/286.html</url>
     <content><![CDATA[<h3 id="GitHub新建仓库"><a href="#GitHub新建仓库" class="headerlink" title="GitHub新建仓库"></a>GitHub新建仓库</h3><p>GitHub新建一个仓库，命名为：microservice-config</p>
@@ -5904,27 +5925,6 @@
       </categories>
       <tags>
         <tag>Spring Cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring Boot启动报错：Cannot determine embedded database driver class for database type NONE的解决办法</title>
-    <url>/287.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Spring Boot项目启动时报错：Cannot determine embedded database driver class for database type NONE</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-18%20201505.png"></p>
-<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>这是因为spring boot默认会加载org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration类，DataSourceAutoConfiguration类使用了@Configuration注解向spring注入了dataSource bean。因为工程中没有关于dataSource相关的配置信息，所以当spring创建dataSource bean因缺少相关的信息就会报错</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>解决办法有两种：一种是修改启动类注解，另一种是配置数据源</p>
-<h4 id="修改注解"><a href="#修改注解" class="headerlink" title="修改注解"></a>修改注解</h4><p>在启动类中修改注解@SpringBootApplication为：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication(exclude = &#123;DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class&#125;)</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="配置数据源"><a href="#配置数据源" class="headerlink" title="配置数据源"></a>配置数据源</h4><p>在application.yml中配置：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://wuwenliang.net/2018/07/15/springboot%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B9%8B%E5%90%AF%E5%8A%A8%E6%8A%A5%E9%94%99Cannot-determine-embedded-database/">springboot常见问题之启动报错Cannot determine embedded database</a></p>]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -6784,8 +6784,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Tomcat</tag>
         <tag>Java</tag>
+        <tag>Tomcat</tag>
         <tag>Docker</tag>
       </tags>
   </entry>
@@ -7373,21 +7373,6 @@
       </tags>
   </entry>
   <entry>
-    <title>EasyUI标签页右键单击事件添加</title>
-    <url>/32.html</url>
-    <content><![CDATA[<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;menu&quot;</span> <span class="attr">class</span>=<span class="string">&quot;easyui-menu&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabrefresh&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;1&#x27;,iconCls:&#x27;icon-refresh&#x27;&quot;</span>&gt;</span> 刷新当前标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;menu-sep&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabclose&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;2&#x27;,iconCls:&#x27;icon-closetab&#x27;&quot;</span>&gt;</span>关闭当前标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseall&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;3&#x27;,iconCls:&#x27;icon-closealltab&#x27;&quot;</span>&gt;</span>关闭全部标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseother&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;4&#x27;,iconCls:&#x27;icon-closeothertab&#x27;&quot;</span>&gt;</span>关闭其他标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseright&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;5&#x27;,iconCls:&#x27;icon-closerighttab&#x27;&quot;</span>&gt;</span>关闭右侧标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseleft&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;6&#x27;,iconCls:&#x27;icon-closelefttab&#x27;&quot;</span>&gt;</span>关闭左侧标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 监听右键事件，创建右键菜单</span></span><br><span class="line">    $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(&#123;</span><br><span class="line">        <span class="attr">onContextMenu</span>: <span class="function"><span class="keyword">function</span> (<span class="params">e, title, index</span>) </span>&#123;</span><br><span class="line">            e.preventDefault();</span><br><span class="line">            <span class="keyword">if</span> (index &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                $(<span class="string">&#x27;#menu&#x27;</span>).menu(<span class="string">&#x27;show&#x27;</span>, &#123;</span><br><span class="line">                    <span class="attr">left</span>: e.pageX,</span><br><span class="line">                    <span class="attr">top</span>: e.pageY</span><br><span class="line">                &#125;).data(<span class="string">&quot;tabTitle&quot;</span>, title);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 右键菜单click</span></span><br><span class="line">    $(<span class="string">&quot;#menu&quot;</span>).menu(&#123;</span><br><span class="line">        <span class="attr">onClick</span>: <span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">            closeTab(<span class="built_in">this</span>, item.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">closeTab</span>(<span class="params">menu, type</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> allTabs = $(<span class="string">&quot;#tabs&quot;</span>).tabs(<span class="string">&#x27;tabs&#x27;</span>);</span><br><span class="line">        <span class="keyword">var</span> allTabtitle = [];</span><br><span class="line">        $.each(allTabs, <span class="function"><span class="keyword">function</span> (<span class="params">i, n</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> opt = $(n).panel(<span class="string">&#x27;options&#x27;</span>);</span><br><span class="line">            <span class="keyword">if</span> (opt.closable)</span><br><span class="line">                allTabtitle.push(opt.title);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">var</span> curTabTitle = $(menu).data(<span class="string">&quot;tabTitle&quot;</span>);</span><br><span class="line">        <span class="keyword">var</span> curTabIndex = $(<span class="string">&quot;#tabs&quot;</span>).tabs(<span class="string">&quot;getTabIndex&quot;</span>, $(<span class="string">&quot;#tabs&quot;</span>).tabs(<span class="string">&quot;getTab&quot;</span>, curTabTitle));</span><br><span class="line">        <span class="keyword">switch</span> (type) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;1&quot;</span>: <span class="comment">// 刷新当前标签页</span></span><br><span class="line">                <span class="keyword">var</span> currentTab = $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;getSelected&#x27;</span>);</span><br><span class="line">                <span class="keyword">var</span> url = $(currentTab.panel(<span class="string">&#x27;options&#x27;</span>)).attr(<span class="string">&#x27;href&#x27;</span>);</span><br><span class="line">                $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;update&#x27;</span>, &#123;</span><br><span class="line">                    <span class="attr">tab</span>: currentTab,</span><br><span class="line">                    <span class="attr">options</span>: &#123;</span><br><span class="line">                        <span class="attr">href</span>: url</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">                currentTab.panel(<span class="string">&#x27;refresh&#x27;</span>);</span><br><span class="line">                <span class="comment">// var panel = $(&quot;#tabs&quot;).tabs(&quot;getTab&quot;, curTabTitle).panel(&quot;refresh&quot;);</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;2&quot;</span>: <span class="comment">// 关闭当前标签页</span></span><br><span class="line">                $(<span class="string">&quot;#tabs&quot;</span>).tabs(<span class="string">&quot;close&quot;</span>, curTabIndex);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;3&quot;</span>: <span class="comment">// 关闭全部标签页</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; allTabtitle.length; i++) &#123;</span><br><span class="line">                    $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;close&#x27;</span>, allTabtitle[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;4&quot;</span>: <span class="comment">// 关闭其他标签页</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; allTabtitle.length; i++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (curTabTitle != allTabtitle[i])</span><br><span class="line">                        $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;close&#x27;</span>, allTabtitle[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;select&#x27;</span>, curTabTitle);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;5&quot;</span>: <span class="comment">// 关闭右侧标签页</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = curTabIndex; i &lt; allTabtitle.length; i++) &#123;</span><br><span class="line">                    $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;close&#x27;</span>, allTabtitle[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;select&#x27;</span>, curTabTitle);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;6&quot;</span>: <span class="comment">// 关闭左侧标签页</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; curTabIndex - <span class="number">1</span>; i++) &#123;</span><br><span class="line">                    $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;close&#x27;</span>, allTabtitle[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;select&#x27;</span>, curTabTitle);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201019131852.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>EasyUI</category>
-      </categories>
-      <tags>
-        <tag>EasyUI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nginx负载均衡backup和down配置</title>
     <url>/320.html</url>
     <content><![CDATA[<p>这两个配置很多时候用于运维，维护某个机器的时候用</p>
@@ -7402,6 +7387,21 @@
       </categories>
       <tags>
         <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EasyUI标签页右键单击事件添加</title>
+    <url>/32.html</url>
+    <content><![CDATA[<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;menu&quot;</span> <span class="attr">class</span>=<span class="string">&quot;easyui-menu&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabrefresh&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;1&#x27;,iconCls:&#x27;icon-refresh&#x27;&quot;</span>&gt;</span> 刷新当前标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;menu-sep&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabclose&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;2&#x27;,iconCls:&#x27;icon-closetab&#x27;&quot;</span>&gt;</span>关闭当前标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseall&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;3&#x27;,iconCls:&#x27;icon-closealltab&#x27;&quot;</span>&gt;</span>关闭全部标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseother&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;4&#x27;,iconCls:&#x27;icon-closeothertab&#x27;&quot;</span>&gt;</span>关闭其他标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseright&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;5&#x27;,iconCls:&#x27;icon-closerighttab&#x27;&quot;</span>&gt;</span>关闭右侧标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;mm-tabcloseleft&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;name:&#x27;6&#x27;,iconCls:&#x27;icon-closelefttab&#x27;&quot;</span>&gt;</span>关闭左侧标签页<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 监听右键事件，创建右键菜单</span></span><br><span class="line">    $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(&#123;</span><br><span class="line">        <span class="attr">onContextMenu</span>: <span class="function"><span class="keyword">function</span> (<span class="params">e, title, index</span>) </span>&#123;</span><br><span class="line">            e.preventDefault();</span><br><span class="line">            <span class="keyword">if</span> (index &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                $(<span class="string">&#x27;#menu&#x27;</span>).menu(<span class="string">&#x27;show&#x27;</span>, &#123;</span><br><span class="line">                    <span class="attr">left</span>: e.pageX,</span><br><span class="line">                    <span class="attr">top</span>: e.pageY</span><br><span class="line">                &#125;).data(<span class="string">&quot;tabTitle&quot;</span>, title);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 右键菜单click</span></span><br><span class="line">    $(<span class="string">&quot;#menu&quot;</span>).menu(&#123;</span><br><span class="line">        <span class="attr">onClick</span>: <span class="function"><span class="keyword">function</span> (<span class="params">item</span>) </span>&#123;</span><br><span class="line">            closeTab(<span class="built_in">this</span>, item.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">closeTab</span>(<span class="params">menu, type</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> allTabs = $(<span class="string">&quot;#tabs&quot;</span>).tabs(<span class="string">&#x27;tabs&#x27;</span>);</span><br><span class="line">        <span class="keyword">var</span> allTabtitle = [];</span><br><span class="line">        $.each(allTabs, <span class="function"><span class="keyword">function</span> (<span class="params">i, n</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> opt = $(n).panel(<span class="string">&#x27;options&#x27;</span>);</span><br><span class="line">            <span class="keyword">if</span> (opt.closable)</span><br><span class="line">                allTabtitle.push(opt.title);</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">var</span> curTabTitle = $(menu).data(<span class="string">&quot;tabTitle&quot;</span>);</span><br><span class="line">        <span class="keyword">var</span> curTabIndex = $(<span class="string">&quot;#tabs&quot;</span>).tabs(<span class="string">&quot;getTabIndex&quot;</span>, $(<span class="string">&quot;#tabs&quot;</span>).tabs(<span class="string">&quot;getTab&quot;</span>, curTabTitle));</span><br><span class="line">        <span class="keyword">switch</span> (type) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;1&quot;</span>: <span class="comment">// 刷新当前标签页</span></span><br><span class="line">                <span class="keyword">var</span> currentTab = $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;getSelected&#x27;</span>);</span><br><span class="line">                <span class="keyword">var</span> url = $(currentTab.panel(<span class="string">&#x27;options&#x27;</span>)).attr(<span class="string">&#x27;href&#x27;</span>);</span><br><span class="line">                $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;update&#x27;</span>, &#123;</span><br><span class="line">                    <span class="attr">tab</span>: currentTab,</span><br><span class="line">                    <span class="attr">options</span>: &#123;</span><br><span class="line">                        <span class="attr">href</span>: url</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">                currentTab.panel(<span class="string">&#x27;refresh&#x27;</span>);</span><br><span class="line">                <span class="comment">// var panel = $(&quot;#tabs&quot;).tabs(&quot;getTab&quot;, curTabTitle).panel(&quot;refresh&quot;);</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;2&quot;</span>: <span class="comment">// 关闭当前标签页</span></span><br><span class="line">                $(<span class="string">&quot;#tabs&quot;</span>).tabs(<span class="string">&quot;close&quot;</span>, curTabIndex);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;3&quot;</span>: <span class="comment">// 关闭全部标签页</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; allTabtitle.length; i++) &#123;</span><br><span class="line">                    $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;close&#x27;</span>, allTabtitle[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;4&quot;</span>: <span class="comment">// 关闭其他标签页</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; allTabtitle.length; i++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (curTabTitle != allTabtitle[i])</span><br><span class="line">                        $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;close&#x27;</span>, allTabtitle[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;select&#x27;</span>, curTabTitle);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;5&quot;</span>: <span class="comment">// 关闭右侧标签页</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = curTabIndex; i &lt; allTabtitle.length; i++) &#123;</span><br><span class="line">                    $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;close&#x27;</span>, allTabtitle[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;select&#x27;</span>, curTabTitle);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&quot;6&quot;</span>: <span class="comment">// 关闭左侧标签页</span></span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; curTabIndex - <span class="number">1</span>; i++) &#123;</span><br><span class="line">                    $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;close&#x27;</span>, allTabtitle[i]);</span><br><span class="line">                &#125;</span><br><span class="line">                $(<span class="string">&#x27;#tabs&#x27;</span>).tabs(<span class="string">&#x27;select&#x27;</span>, curTabTitle);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line"> </span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201019131852.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>EasyUI</category>
+      </categories>
+      <tags>
+        <tag>EasyUI</tag>
       </tags>
   </entry>
   <entry>
@@ -14016,6 +14016,26 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Boot自定义启动Banner</title>
+    <url>/465.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Spring Boot的启动Banner就是项目启动时控制台打印的图案，这个图案是支持自定义修改的</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309214149509.png" alt="image-20220309214149509"></p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="生成Banner"><a href="#生成Banner" class="headerlink" title="生成Banner"></a>生成Banner</h4><p>生成Banner的网站链接为：<a href="https://www.bootschool.net/ascii">https://www.bootschool.net/ascii</a>，该网站支持根据输入的文本生成Banner以及生成二维码Banner，还有一些别人设计好的Banner</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309215932689.png" alt="image-20220309215932689"></p>
+<h4 id="自定义Spring-Boot的Banner"><a href="#自定义Spring-Boot的Banner" class="headerlink" title="自定义Spring Boot的Banner"></a>自定义Spring Boot的Banner</h4><p>将banner.txt放在resources文件夹中</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309220347359.png" alt="image-20220309220347359"></p>
+<h4 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h4><p>如果不生效就使用Maven工具栏Lifecycle的clean命令清除一下缓存</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309220524659.png" alt="image-20220309220524659"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>要禁用Banner，就在配置文件添加以下代码：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">main:</span></span><br><span class="line">    <span class="attr">banner-mode:</span> <span class="string">off</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git修改commit注释</title>
     <url>/464.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>有时候git commit的注释填写错误，需要进行修改，修改的情况有两种：</p>
@@ -14044,26 +14064,6 @@
       <tags>
         <tag>GitHub</tag>
         <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring Boot自定义启动Banner</title>
-    <url>/465.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Spring Boot的启动Banner就是项目启动时控制台打印的图案，这个图案是支持自定义修改的</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309214149509.png" alt="image-20220309214149509"></p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="生成Banner"><a href="#生成Banner" class="headerlink" title="生成Banner"></a>生成Banner</h4><p>生成Banner的网站链接为：<a href="https://www.bootschool.net/ascii">https://www.bootschool.net/ascii</a>，该网站支持根据输入的文本生成Banner以及生成二维码Banner，还有一些别人设计好的Banner</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309215932689.png" alt="image-20220309215932689"></p>
-<h4 id="自定义Spring-Boot的Banner"><a href="#自定义Spring-Boot的Banner" class="headerlink" title="自定义Spring Boot的Banner"></a>自定义Spring Boot的Banner</h4><p>将banner.txt放在resources文件夹中</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309220347359.png" alt="image-20220309220347359"></p>
-<h4 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h4><p>如果不生效就使用Maven工具栏Lifecycle的clean命令清除一下缓存</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220309220524659.png" alt="image-20220309220524659"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>要禁用Banner，就在配置文件添加以下代码：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">main:</span></span><br><span class="line">    <span class="attr">banner-mode:</span> <span class="string">off</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -16157,21 +16157,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二元运算符连接两个值</title>
-    <url>/84.html</url>
-    <content><![CDATA[<p>当用一个二元运算符连接两个值时（例如a+b，a是整数，b是浮点数），先要将两个操作数转换成同一种类型，然后再进行计算</p>
-<p>如果两个数中有一个是double类型，则另一个会转换成double类型（不满足当前条件则向下判断）</p>
-<p>否则，如果两个数中有一个是float类型，则另一个会转换成float类型</p>
-<p>否则，如果两个数中有一个是long类型，则另一个会转换成long类型</p>
-<p>否则，两个数都被转换成int类型</p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用天气插件</title>
     <url>/85.html</url>
     <content><![CDATA[<h3 id="进入网址"><a href="#进入网址" class="headerlink" title="进入网址"></a>进入网址</h3><p><a href="https://www.tianqi.com/plugin/">天气预报代码_天气预报插件_免费天气预报代码(插件)调用——天气网</a></p>
@@ -16287,6 +16272,21 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二元运算符连接两个值</title>
+    <url>/84.html</url>
+    <content><![CDATA[<p>当用一个二元运算符连接两个值时（例如a+b，a是整数，b是浮点数），先要将两个操作数转换成同一种类型，然后再进行计算</p>
+<p>如果两个数中有一个是double类型，则另一个会转换成double类型（不满足当前条件则向下判断）</p>
+<p>否则，如果两个数中有一个是float类型，则另一个会转换成float类型</p>
+<p>否则，如果两个数中有一个是long类型，则另一个会转换成long类型</p>
+<p>否则，两个数都被转换成int类型</p>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
