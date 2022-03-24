@@ -61,6 +61,7 @@ window.addEventListener('load', () => {
       container: '#algolia-search-input',
       reset: false,
       magnifier: false,
+	  searchOnEnterKeyPressOnly: true,
       placeholder: GLOBAL_CONFIG.algolia.languages.input_placeholder
     })
   )
