@@ -4559,13 +4559,13 @@
 <p>是hexo generate的简写</p>
 <h3 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h3><p>部署网站，同时将网站的改动提交到GitHub仓库</p>
 <p>是hexo deploy的简写</p>
-<h3 id="hexo-g-d"><a href="#hexo-g-d" class="headerlink" title="hexo g -d"></a>hexo g -d</h3><p> #应用名称spring.application.name=nacos_config_test#Nacos的IP地址和端口号spring.cloud.nacos.config.server-addr=121.41.211.106:8848#Nacos配置文件所在命名空间idspring.cloud.nacos.config.namespace=cd6541df-8530-404f-8832-413a3c118efa6#Nacos配置文件所在组名spring.cloud.nacos.config.group=DEFAULT_GROUP#要读取的配置文件名称spring.cloud.nacos.config.name=nacos_config.propertiesproperties</p>
+<h3 id="hexo-g-d"><a href="#hexo-g-d" class="headerlink" title="hexo g -d"></a>hexo g -d</h3><p><code>hexo g</code>和<code>hexo d</code>先后执行</p>
 <h3 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h3><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
 <p>是hexo server的简写</p>
 <h3 id="hexo-v"><a href="#hexo-v" class="headerlink" title="hexo v"></a>hexo v</h3><p>显示hexo的版本</p>
 <p>是hexo version的简写</p>
 <h3 id="hexo-new-“文章名称”"><a href="#hexo-new-“文章名称”" class="headerlink" title="hexo new “文章名称”"></a>hexo new “文章名称”</h3><p>新建一个<font color="#dd0000">文章名称.md</font>，该文件在站点根目录的<font color="#dd0000">source/_post/</font>中</p>
-<h3 id="hexo-new-page-“名称”"><a href="#hexo-new-page-“名称”" class="headerlink" title="hexo new page “名称”"></a>hexo new page “名称”</h3><p>新建一个页面，这个页面在站点根目录的<font color="#dd0000">source/名称/</font>中（名为index.md），可以通过<font color="#dd0000">/名称/</font>访问这个页面</p>
+<h3 id="hexo-new-page-“名称”"><a href="#hexo-new-page-“名称”" class="headerlink" title="hexo new page “名称”"></a>hexo new page “名称”</h3><p>新建一个页面，这个页面在站点根目录的<code>source/名称/</code>中（名为index.md），可以通过<code>/名称/</code>访问这个页面</p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>以上都是我常用的命令，更多命令及详情查看：<a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>]]></content>
       <categories>
         <category>hexo</category>
