@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>用Tomcat运行web项目</title>
-    <url>/10.html</url>
-    <content><![CDATA[<h3 id="复制项目到webapps文件夹"><a href="#复制项目到webapps文件夹" class="headerlink" title="复制项目到webapps文件夹"></a>复制项目到webapps文件夹</h3><p>将项目（war包）复制到Tomcat安装目录的webapps文件夹中</p>
-<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>然后去bin文件夹中,点击startup.bat即可启动Tomcat运行项目</p>
-<h3 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h3><p>点击bin文件夹中的shutdown.bat关闭Tomcat</p>]]></content>
-      <categories>
-        <category>Tomcat</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个非常好用的Java工具包：HulTool</title>
     <url>/100.html</url>
     <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
@@ -32,6 +19,19 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用Tomcat运行web项目</title>
+    <url>/10.html</url>
+    <content><![CDATA[<h3 id="复制项目到webapps文件夹"><a href="#复制项目到webapps文件夹" class="headerlink" title="复制项目到webapps文件夹"></a>复制项目到webapps文件夹</h3><p>将项目（war包）复制到Tomcat安装目录的webapps文件夹中</p>
+<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>然后去bin文件夹中,点击startup.bat即可启动Tomcat运行项目</p>
+<h3 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h3><p>点击bin文件夹中的shutdown.bat关闭Tomcat</p>]]></content>
+      <categories>
+        <category>Tomcat</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -1625,6 +1625,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Xshell连接CentOS7</title>
+    <url>/150.html</url>
+    <content><![CDATA[<h3 id="新建连接"><a href="#新建连接" class="headerlink" title="新建连接"></a>新建连接</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616102910.jpg" alt="img"></p>
+<h3 id="填写会话属性"><a href="#填写会话属性" class="headerlink" title="填写会话属性"></a>填写会话属性</h3><p>如果不知道CentOS7的ip，查看博客：<a href="https://blog.zoutl.cn/149.html">查看虚拟机里的CentOS7的IP | LeDao的博客 (zoutl.cn)</a></p>
+<p>为了方便辨认，名称和主机填CentOS7的ip，端口号填22</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103147.jpg" alt="img"></p>
+<h3 id="用户身份验证"><a href="#用户身份验证" class="headerlink" title="用户身份验证"></a>用户身份验证</h3><p>点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103530.jpg" alt="img"></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103916.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7常用命令总结</title>
     <url>/151.html</url>
     <content><![CDATA[<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616122714.jpg" alt="img"></p>
@@ -1762,23 +1779,6 @@
 
 <h3 id="sh命令"><a href="#sh命令" class="headerlink" title="sh命令"></a>sh命令</h3><p>执行一个<code>.sh</code>文件</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh mkdir.sh</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Xshell连接CentOS7</title>
-    <url>/150.html</url>
-    <content><![CDATA[<h3 id="新建连接"><a href="#新建连接" class="headerlink" title="新建连接"></a>新建连接</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616102910.jpg" alt="img"></p>
-<h3 id="填写会话属性"><a href="#填写会话属性" class="headerlink" title="填写会话属性"></a>填写会话属性</h3><p>如果不知道CentOS7的ip，查看博客：<a href="https://blog.zoutl.cn/149.html">查看虚拟机里的CentOS7的IP | LeDao的博客 (zoutl.cn)</a></p>
-<p>为了方便辨认，名称和主机填CentOS7的ip，端口号填22</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103147.jpg" alt="img"></p>
-<h3 id="用户身份验证"><a href="#用户身份验证" class="headerlink" title="用户身份验证"></a>用户身份验证</h3><p>点击左侧菜单的用户身份验证，用户名和密码输入CentOS7的登陆用户名和密码，然后点击连接即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103530.jpg" alt="img"></p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616103916.jpg" alt="img"></p>]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
@@ -3514,38 +3514,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot+Mybatis使用Element UI分页</title>
-    <url>/207.html</url>
-    <content><![CDATA[<p>前端向后端发送的数据有当前页、每页记录数，后端向前端发送的数据有查询到的数据集合、数据总记录数（满足查询条件的全部数据的总记录数）</p>
-<h3 id="前端分页代码"><a href="#前端分页代码" class="headerlink" title="前端分页代码"></a>前端分页代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-pagination</span></span></span><br><span class="line"><span class="tag">      <span class="attr">align</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">style</span>=<span class="string">&quot;margin-top: 8px&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">background</span></span></span><br><span class="line"><span class="tag">      <span class="attr">layout</span>=<span class="string">&quot;prev, pager, next&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:current-page.sync</span>=<span class="string">&quot;pagination.page&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:page-size.sync</span>=<span class="string">&quot;pagination.size&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:total</span>=<span class="string">&quot;pagination.count&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="分页属性"><a href="#分页属性" class="headerlink" title="分页属性"></a>分页属性</h3><p>包括当前页，每页记录数，数据总记录数</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pagination: &#123;</span><br><span class="line">  <span class="attr">page</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">size</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>更新当前页的值</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//刷新当前页的值</span></span><br><span class="line"><span class="function"><span class="title">handleCurrentChange</span>(<span class="params">page</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.pagination.page = page;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="请求后台"><a href="#请求后台" class="headerlink" title="请求后台"></a>请求后台</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(<span class="string">&#x27;http://localhost/paper/getListFindByUserId?userId=&#x27;</span> + sessionStorage.getItem(<span class="string">&quot;userId&quot;</span>) + <span class="string">&#x27;&amp;page=&#x27;</span> + <span class="built_in">this</span>.pagination.page + <span class="string">&#x27;&amp;size=&#x27;</span> + <span class="built_in">this</span>.pagination.size)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> (<span class="built_in">this</span>.myPaper = response.data.rows, <span class="built_in">this</span>.pagination.count = response.data.total))</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="mapper-xml代码"><a href="#mapper-xml代码" class="headerlink" title="mapper.xml代码"></a>mapper.xml代码</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;paperResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	order by id desc</span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getCount&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.Long&quot;</span>&gt;</span></span><br><span class="line">	select count(*)</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="请求的后端方法"><a href="#请求的后端方法" class="headerlink" title="请求的后端方法"></a>请求的后端方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据用户id获取试卷(分页)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> userId</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getListFindByUserId&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">getListFindByUserId</span><span class="params">(Integer userId, <span class="meta">@RequestParam(value = &quot;page&quot;,required = false)</span>Integer page, <span class="meta">@RequestParam(value = &quot;size&quot;,required = false)</span>Integer size)</span> </span>&#123;</span><br><span class="line">	PageBean pageBean = <span class="keyword">new</span> PageBean(page, size);</span><br><span class="line">	Map resultMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	Map map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;userId&quot;</span>, userId);</span><br><span class="line">	map.put(<span class="string">&quot;start&quot;</span>, pageBean.getStart());</span><br><span class="line">	map.put(<span class="string">&quot;size&quot;</span>, pageBean.getPageSize());</span><br><span class="line">	List&lt;Paper&gt; paperList = paperService.list(map);</span><br><span class="line">	resultMap.put(<span class="string">&quot;total&quot;</span>, paperService.getCount(map));</span><br><span class="line">	resultMap.put(<span class="string">&quot;rows&quot;</span>, paperList);</span><br><span class="line">	<span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>分页Model类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 分页Model类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-10 21:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PageBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第几页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> page;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 每页记录数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> pageSize;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 起始页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> start;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PageBean</span><span class="params">(<span class="keyword">int</span> page, <span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPage</span><span class="params">(<span class="keyword">int</span> page)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPageSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPageSize</span><span class="params">(<span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (page - <span class="number">1</span>) * pageSize;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210701223215.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Spring Boot</tag>
-        <tag>MyBatis</tag>
-        <tag>Element UI</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Element UI引入第三方图标</title>
     <url>/206.html</url>
     <content><![CDATA[<p>Element UI自带的图标数量太少了,并不能满足我们的开发需求</p>
@@ -3584,6 +3552,38 @@
         <category>前端</category>
       </categories>
       <tags>
+        <tag>Element UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot+Mybatis使用Element UI分页</title>
+    <url>/207.html</url>
+    <content><![CDATA[<p>前端向后端发送的数据有当前页、每页记录数，后端向前端发送的数据有查询到的数据集合、数据总记录数（满足查询条件的全部数据的总记录数）</p>
+<h3 id="前端分页代码"><a href="#前端分页代码" class="headerlink" title="前端分页代码"></a>前端分页代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-pagination</span></span></span><br><span class="line"><span class="tag">      <span class="attr">align</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">style</span>=<span class="string">&quot;margin-top: 8px&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">background</span></span></span><br><span class="line"><span class="tag">      <span class="attr">layout</span>=<span class="string">&quot;prev, pager, next&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:current-page.sync</span>=<span class="string">&quot;pagination.page&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:page-size.sync</span>=<span class="string">&quot;pagination.size&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:total</span>=<span class="string">&quot;pagination.count&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分页属性"><a href="#分页属性" class="headerlink" title="分页属性"></a>分页属性</h3><p>包括当前页，每页记录数，数据总记录数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pagination: &#123;</span><br><span class="line">  <span class="attr">page</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">size</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>更新当前页的值</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//刷新当前页的值</span></span><br><span class="line"><span class="function"><span class="title">handleCurrentChange</span>(<span class="params">page</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.pagination.page = page;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="请求后台"><a href="#请求后台" class="headerlink" title="请求后台"></a>请求后台</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(<span class="string">&#x27;http://localhost/paper/getListFindByUserId?userId=&#x27;</span> + sessionStorage.getItem(<span class="string">&quot;userId&quot;</span>) + <span class="string">&#x27;&amp;page=&#x27;</span> + <span class="built_in">this</span>.pagination.page + <span class="string">&#x27;&amp;size=&#x27;</span> + <span class="built_in">this</span>.pagination.size)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> (<span class="built_in">this</span>.myPaper = response.data.rows, <span class="built_in">this</span>.pagination.count = response.data.total))</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="mapper-xml代码"><a href="#mapper-xml代码" class="headerlink" title="mapper.xml代码"></a>mapper.xml代码</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;paperResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	order by id desc</span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getCount&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.Long&quot;</span>&gt;</span></span><br><span class="line">	select count(*)</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="请求的后端方法"><a href="#请求的后端方法" class="headerlink" title="请求的后端方法"></a>请求的后端方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据用户id获取试卷(分页)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> userId</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getListFindByUserId&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">getListFindByUserId</span><span class="params">(Integer userId, <span class="meta">@RequestParam(value = &quot;page&quot;,required = false)</span>Integer page, <span class="meta">@RequestParam(value = &quot;size&quot;,required = false)</span>Integer size)</span> </span>&#123;</span><br><span class="line">	PageBean pageBean = <span class="keyword">new</span> PageBean(page, size);</span><br><span class="line">	Map resultMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	Map map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;userId&quot;</span>, userId);</span><br><span class="line">	map.put(<span class="string">&quot;start&quot;</span>, pageBean.getStart());</span><br><span class="line">	map.put(<span class="string">&quot;size&quot;</span>, pageBean.getPageSize());</span><br><span class="line">	List&lt;Paper&gt; paperList = paperService.list(map);</span><br><span class="line">	resultMap.put(<span class="string">&quot;total&quot;</span>, paperService.getCount(map));</span><br><span class="line">	resultMap.put(<span class="string">&quot;rows&quot;</span>, paperList);</span><br><span class="line">	<span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分页Model类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 分页Model类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-10 21:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PageBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第几页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> page;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 每页记录数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> pageSize;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 起始页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> start;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PageBean</span><span class="params">(<span class="keyword">int</span> page, <span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPage</span><span class="params">(<span class="keyword">int</span> page)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPageSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPageSize</span><span class="params">(<span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (page - <span class="number">1</span>) * pageSize;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210701223215.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+        <tag>MyBatis</tag>
         <tag>Element UI</tag>
       </tags>
   </entry>
@@ -4153,45 +4153,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MyBatis-Plus Mapper CRUD 接口之Select</title>
-    <url>/230.html</url>
-    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 ID 查询</span></span><br><span class="line"><span class="function">T <span class="title">selectById</span><span class="params">(Serializable id)</span></span>;</span><br><span class="line"><span class="comment">// 根据 entity 条件，查询一条记录</span></span><br><span class="line"><span class="function">T <span class="title">selectOne</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询（根据ID 批量查询）</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectBatchIds</span><span class="params">(<span class="meta">@Param(Constants.COLLECTION)</span> Collection&lt;? extends Serializable&gt; idList)</span></span>;</span><br><span class="line"><span class="comment">// 根据 entity 条件，查询全部记录</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectList</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"><span class="comment">// 查询（根据 columnMap 条件）</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectByMap</span><span class="params">(<span class="meta">@Param(Constants.COLUMN_MAP)</span> Map&lt;String, Object&gt; columnMap)</span></span>;</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录</span></span><br><span class="line">List&lt;Map&lt;String, Object&gt;&gt; selectMaps(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper);</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录。注意： 只返回第一个字段的值</span></span><br><span class="line"><span class="function">List&lt;Object&gt; <span class="title">selectObjs</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 根据 entity 条件，查询全部记录（并翻页）</span></span><br><span class="line"><span class="function">IPage&lt;T&gt; <span class="title">selectPage</span><span class="params">(IPage&lt;T&gt; page, <span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录（并翻页）</span></span><br><span class="line">IPage&lt;Map&lt;String, Object&gt;&gt; selectMapsPage(IPage&lt;T&gt; page, <span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper);</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询总记录数</span></span><br><span class="line"><span class="function">Integer <span class="title">selectCount</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><h4 id="selectById"><a href="#selectById" class="headerlink" title="selectById"></a>selectById</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	BlogType blogType = blogTypeMapper.selectById(<span class="number">1</span>);</span><br><span class="line">	System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectOne"><a href="#selectOne" class="headerlink" title="selectOne"></a>selectOne</h4><p>如果查到的数据不是1条时会报错</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectOne</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.eq(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;MyBatis&quot;</span>);</span><br><span class="line">	BlogType blogType = blogTypeMapper.selectOne(blogTypeQueryWrapper);</span><br><span class="line">	System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectBatchIds"><a href="#selectBatchIds" class="headerlink" title="selectBatchIds"></a>selectBatchIds</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectBatchIds</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	List&lt;Integer&gt; idList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	idList.add(<span class="number">1</span>);</span><br><span class="line">	idList.add(<span class="number">5</span>);</span><br><span class="line">	idList.add(<span class="number">6</span>);</span><br><span class="line">	idList.add(<span class="number">7</span>);</span><br><span class="line">	List&lt;BlogType&gt; blogTypeList = blogTypeMapper.selectBatchIds(idList);</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList) &#123;</span><br><span class="line">		System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectList"><a href="#selectList" class="headerlink" title="selectList"></a>selectList</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">//参数为空时查询所有</span></span><br><span class="line">	List&lt;BlogType&gt; blogTypeList = blogTypeMapper.selectList(<span class="keyword">null</span>);</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList) &#123;</span><br><span class="line">		System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">&quot;------------------------&quot;</span>);</span><br><span class="line">	<span class="comment">//根据条件查询</span></span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.like(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;a&quot;</span>);</span><br><span class="line">	List&lt;BlogType&gt; blogTypeList1 = blogTypeMapper.selectList(blogTypeQueryWrapper);</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList1) &#123;</span><br><span class="line">		System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectByMap"><a href="#selectByMap" class="headerlink" title="selectByMap"></a>selectByMap</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectByMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;sortNum&quot;</span>, <span class="number">81</span>);</span><br><span class="line">	List&lt;BlogType&gt; blogTypeList = blogTypeMapper.selectByMap(map);</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList) &#123;</span><br><span class="line">		System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectMaps"><a href="#selectMaps" class="headerlink" title="selectMaps"></a>selectMaps</h4><p>查询到的数据以键值对的方式存储在map中</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectMaps</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">5</span>).like(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;a&quot;</span>);</span><br><span class="line">	List&lt;Map&lt;String, Object&gt;&gt; mapList = blogTypeMapper.selectMaps(blogTypeQueryWrapper);</span><br><span class="line">	<span class="keyword">for</span> (Map&lt;String, Object&gt; map : mapList) &#123;</span><br><span class="line">		System.out.println(map.get(<span class="string">&quot;id&quot;</span>)+<span class="string">&quot;,&quot;</span>+map.get(<span class="string">&quot;name&quot;</span>)+<span class="string">&quot;,&quot;</span>+map.get(<span class="string">&quot;sortNum&quot;</span>));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectObjs"><a href="#selectObjs" class="headerlink" title="selectObjs"></a>selectObjs</h4><p>只返回一个字段</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectObjs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	<span class="comment">//选择要查询的字段,不选择就返回第一个字段(一般是id)</span></span><br><span class="line">	blogTypeQueryWrapper.select(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">	<span class="comment">//查询条件</span></span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">5</span>);</span><br><span class="line">	List&lt;Object&gt; objectList = blogTypeMapper.selectObjs(blogTypeQueryWrapper);</span><br><span class="line">	System.out.println(objectList);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectPage"><a href="#selectPage" class="headerlink" title="selectPage"></a>selectPage</h4><p>先配置分页插件</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.transaction.annotation.EnableTransactionManagement;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-23 14:15</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableTransactionManagement</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MybatisPlusConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> PaginationInterceptor <span class="title">paginationInterceptor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        PaginationInterceptor paginationInterceptor = <span class="keyword">new</span> PaginationInterceptor();</span><br><span class="line">        <span class="comment">// 设置请求的页面大于最大页后操作， true调回到首页，false 继续请求  默认false</span></span><br><span class="line">        <span class="comment">// paginationInterceptor.setOverflow(false);</span></span><br><span class="line">        <span class="comment">// 设置最大单页限制数量，默认 500 条，-1 不受限制</span></span><br><span class="line">        <span class="comment">// paginationInterceptor.setLimit(500);</span></span><br><span class="line">        <span class="comment">// 开启 count 的 join 优化,只针对部分 left join</span></span><br><span class="line">        paginationInterceptor.setCountSqlParser(<span class="keyword">new</span> JsqlParserCountOptimize(<span class="keyword">true</span>));</span><br><span class="line">        <span class="keyword">return</span> paginationInterceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>测试</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">//设置查询条件</span></span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">7</span>);</span><br><span class="line">	<span class="comment">//设置当前页以及每页记录数</span></span><br><span class="line">	Page&lt;BlogType&gt; page = <span class="keyword">new</span> Page&lt;&gt;(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="comment">//获取记录</span></span><br><span class="line">	Page&lt;BlogType&gt; blogTypePage = blogTypeMapper.selectPage(page, blogTypeQueryWrapper);</span><br><span class="line">	List&lt;BlogType&gt; blogTypeList = blogTypePage.getRecords();</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList) &#123;</span><br><span class="line">		System.out.println(blogType);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectMapsPage"><a href="#selectMapsPage" class="headerlink" title="selectMapsPage"></a>selectMapsPage</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectMapsPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">//设置查询条件</span></span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">7</span>);</span><br><span class="line">	<span class="comment">//设置当前页以及每页记录数</span></span><br><span class="line">	Page page = <span class="keyword">new</span> Page&lt;&gt;(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">	IPage&lt;Map&lt;String, Object&gt;&gt; mapIPage = blogTypeMapper.selectMapsPage(page, blogTypeQueryWrapper);</span><br><span class="line">	<span class="keyword">for</span> (Map&lt;String, Object&gt; record : mapIPage.getRecords()) &#123;</span><br><span class="line">		System.out.println(record);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="selectCount"><a href="#selectCount" class="headerlink" title="selectCount"></a>selectCount</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">7</span>);</span><br><span class="line">	<span class="keyword">int</span> count = blogTypeMapper.selectCount(blogTypeQueryWrapper);</span><br><span class="line">	System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>MyBatis-Plus</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>MyBatis-Plus</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>宠物医院管理系统</title>
     <url>/23.html</url>
     <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>GitHub地址：<a href="https://github.com/a6678696/PetHospital">https://github.com/a6678696/PetHospital</a></p>
@@ -4240,6 +4201,45 @@
       </categories>
       <tags>
         <tag>个人项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis-Plus Mapper CRUD 接口之Select</title>
+    <url>/230.html</url>
+    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 ID 查询</span></span><br><span class="line"><span class="function">T <span class="title">selectById</span><span class="params">(Serializable id)</span></span>;</span><br><span class="line"><span class="comment">// 根据 entity 条件，查询一条记录</span></span><br><span class="line"><span class="function">T <span class="title">selectOne</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 查询（根据ID 批量查询）</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectBatchIds</span><span class="params">(<span class="meta">@Param(Constants.COLLECTION)</span> Collection&lt;? extends Serializable&gt; idList)</span></span>;</span><br><span class="line"><span class="comment">// 根据 entity 条件，查询全部记录</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectList</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"><span class="comment">// 查询（根据 columnMap 条件）</span></span><br><span class="line"><span class="function">List&lt;T&gt; <span class="title">selectByMap</span><span class="params">(<span class="meta">@Param(Constants.COLUMN_MAP)</span> Map&lt;String, Object&gt; columnMap)</span></span>;</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录</span></span><br><span class="line">List&lt;Map&lt;String, Object&gt;&gt; selectMaps(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper);</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录。注意： 只返回第一个字段的值</span></span><br><span class="line"><span class="function">List&lt;Object&gt; <span class="title">selectObjs</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 根据 entity 条件，查询全部记录（并翻页）</span></span><br><span class="line"><span class="function">IPage&lt;T&gt; <span class="title">selectPage</span><span class="params">(IPage&lt;T&gt; page, <span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询全部记录（并翻页）</span></span><br><span class="line">IPage&lt;Map&lt;String, Object&gt;&gt; selectMapsPage(IPage&lt;T&gt; page, <span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper);</span><br><span class="line"><span class="comment">// 根据 Wrapper 条件，查询总记录数</span></span><br><span class="line"><span class="function">Integer <span class="title">selectCount</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; queryWrapper)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><h4 id="selectById"><a href="#selectById" class="headerlink" title="selectById"></a>selectById</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	BlogType blogType = blogTypeMapper.selectById(<span class="number">1</span>);</span><br><span class="line">	System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectOne"><a href="#selectOne" class="headerlink" title="selectOne"></a>selectOne</h4><p>如果查到的数据不是1条时会报错</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectOne</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.eq(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;MyBatis&quot;</span>);</span><br><span class="line">	BlogType blogType = blogTypeMapper.selectOne(blogTypeQueryWrapper);</span><br><span class="line">	System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectBatchIds"><a href="#selectBatchIds" class="headerlink" title="selectBatchIds"></a>selectBatchIds</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectBatchIds</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	List&lt;Integer&gt; idList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	idList.add(<span class="number">1</span>);</span><br><span class="line">	idList.add(<span class="number">5</span>);</span><br><span class="line">	idList.add(<span class="number">6</span>);</span><br><span class="line">	idList.add(<span class="number">7</span>);</span><br><span class="line">	List&lt;BlogType&gt; blogTypeList = blogTypeMapper.selectBatchIds(idList);</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList) &#123;</span><br><span class="line">		System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectList"><a href="#selectList" class="headerlink" title="selectList"></a>selectList</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectList</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">//参数为空时查询所有</span></span><br><span class="line">	List&lt;BlogType&gt; blogTypeList = blogTypeMapper.selectList(<span class="keyword">null</span>);</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList) &#123;</span><br><span class="line">		System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">	&#125;</span><br><span class="line">	System.out.println(<span class="string">&quot;------------------------&quot;</span>);</span><br><span class="line">	<span class="comment">//根据条件查询</span></span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.like(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;a&quot;</span>);</span><br><span class="line">	List&lt;BlogType&gt; blogTypeList1 = blogTypeMapper.selectList(blogTypeQueryWrapper);</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList1) &#123;</span><br><span class="line">		System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectByMap"><a href="#selectByMap" class="headerlink" title="selectByMap"></a>selectByMap</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectByMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;sortNum&quot;</span>, <span class="number">81</span>);</span><br><span class="line">	List&lt;BlogType&gt; blogTypeList = blogTypeMapper.selectByMap(map);</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList) &#123;</span><br><span class="line">		System.out.println(blogType.getId() + <span class="string">&quot;,&quot;</span> + blogType.getName() + <span class="string">&quot;,&quot;</span> + blogType.getSortNum());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectMaps"><a href="#selectMaps" class="headerlink" title="selectMaps"></a>selectMaps</h4><p>查询到的数据以键值对的方式存储在map中</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectMaps</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">5</span>).like(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;a&quot;</span>);</span><br><span class="line">	List&lt;Map&lt;String, Object&gt;&gt; mapList = blogTypeMapper.selectMaps(blogTypeQueryWrapper);</span><br><span class="line">	<span class="keyword">for</span> (Map&lt;String, Object&gt; map : mapList) &#123;</span><br><span class="line">		System.out.println(map.get(<span class="string">&quot;id&quot;</span>)+<span class="string">&quot;,&quot;</span>+map.get(<span class="string">&quot;name&quot;</span>)+<span class="string">&quot;,&quot;</span>+map.get(<span class="string">&quot;sortNum&quot;</span>));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectObjs"><a href="#selectObjs" class="headerlink" title="selectObjs"></a>selectObjs</h4><p>只返回一个字段</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectObjs</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	<span class="comment">//选择要查询的字段,不选择就返回第一个字段(一般是id)</span></span><br><span class="line">	blogTypeQueryWrapper.select(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">	<span class="comment">//查询条件</span></span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">5</span>);</span><br><span class="line">	List&lt;Object&gt; objectList = blogTypeMapper.selectObjs(blogTypeQueryWrapper);</span><br><span class="line">	System.out.println(objectList);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectPage"><a href="#selectPage" class="headerlink" title="selectPage"></a>selectPage</h4><p>先配置分页插件</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.transaction.annotation.EnableTransactionManagement;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-23 14:15</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableTransactionManagement</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MybatisPlusConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> PaginationInterceptor <span class="title">paginationInterceptor</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        PaginationInterceptor paginationInterceptor = <span class="keyword">new</span> PaginationInterceptor();</span><br><span class="line">        <span class="comment">// 设置请求的页面大于最大页后操作， true调回到首页，false 继续请求  默认false</span></span><br><span class="line">        <span class="comment">// paginationInterceptor.setOverflow(false);</span></span><br><span class="line">        <span class="comment">// 设置最大单页限制数量，默认 500 条，-1 不受限制</span></span><br><span class="line">        <span class="comment">// paginationInterceptor.setLimit(500);</span></span><br><span class="line">        <span class="comment">// 开启 count 的 join 优化,只针对部分 left join</span></span><br><span class="line">        paginationInterceptor.setCountSqlParser(<span class="keyword">new</span> JsqlParserCountOptimize(<span class="keyword">true</span>));</span><br><span class="line">        <span class="keyword">return</span> paginationInterceptor;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>测试</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">//设置查询条件</span></span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">7</span>);</span><br><span class="line">	<span class="comment">//设置当前页以及每页记录数</span></span><br><span class="line">	Page&lt;BlogType&gt; page = <span class="keyword">new</span> Page&lt;&gt;(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="comment">//获取记录</span></span><br><span class="line">	Page&lt;BlogType&gt; blogTypePage = blogTypeMapper.selectPage(page, blogTypeQueryWrapper);</span><br><span class="line">	List&lt;BlogType&gt; blogTypeList = blogTypePage.getRecords();</span><br><span class="line">	<span class="keyword">for</span> (BlogType blogType : blogTypeList) &#123;</span><br><span class="line">		System.out.println(blogType);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectMapsPage"><a href="#selectMapsPage" class="headerlink" title="selectMapsPage"></a>selectMapsPage</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectMapsPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="comment">//设置查询条件</span></span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">7</span>);</span><br><span class="line">	<span class="comment">//设置当前页以及每页记录数</span></span><br><span class="line">	Page page = <span class="keyword">new</span> Page&lt;&gt;(<span class="number">2</span>, <span class="number">2</span>);</span><br><span class="line">	IPage&lt;Map&lt;String, Object&gt;&gt; mapIPage = blogTypeMapper.selectMapsPage(page, blogTypeQueryWrapper);</span><br><span class="line">	<span class="keyword">for</span> (Map&lt;String, Object&gt; record : mapIPage.getRecords()) &#123;</span><br><span class="line">		System.out.println(record);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="selectCount"><a href="#selectCount" class="headerlink" title="selectCount"></a>selectCount</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">selectCount</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.gt(<span class="string">&quot;id&quot;</span>, <span class="number">7</span>);</span><br><span class="line">	<span class="keyword">int</span> count = blogTypeMapper.selectCount(blogTypeQueryWrapper);</span><br><span class="line">	System.out.println(count);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>MyBatis-Plus</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MyBatis-Plus</tag>
       </tags>
   </entry>
   <entry>
@@ -6591,6 +6591,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker推送镜像到hub服务器</title>
+    <url>/297.html</url>
+    <content><![CDATA[<h3 id="注册Docker账号"><a href="#注册Docker账号" class="headerlink" title="注册Docker账号"></a>注册Docker账号</h3><p>在Docker的hub官网注册，官网地址为：<a href="https://hub.docker.com/">https://hub.docker.com/</a> ，注册后记住用户名和密码</p>
+<h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>输入登录命令，在输入自己的用户名和密码即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login</span><br></pre></td></tr></table></figure>
+
+<h3 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h3><p>推送命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker push Docker用户名/新镜像名称:版本号</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20211111.jpg"></p>
+<h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>在Docker的hub官网登录后即可看到刚刚推送的镜像</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20212908.jpg"></p>
+<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><p>查看镜像时有个拉取命令,如下图所示</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20002354.jpg"></p>]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker推送镜像到阿里云</title>
     <url>/298.html</url>
     <content><![CDATA[<h3 id="进入阿里云镜像控制台"><a href="#进入阿里云镜像控制台" class="headerlink" title="进入阿里云镜像控制台"></a>进入阿里云镜像控制台</h3><p>控制台地址：<a href="https://cr.console.aliyun.com/">https://cr.console.aliyun.com</a> ，登录</p>
@@ -6615,28 +6637,6 @@
 <h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[阿里云的镜像版本号]</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20001943.jpg"></p>]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker推送镜像到hub服务器</title>
-    <url>/297.html</url>
-    <content><![CDATA[<h3 id="注册Docker账号"><a href="#注册Docker账号" class="headerlink" title="注册Docker账号"></a>注册Docker账号</h3><p>在Docker的hub官网注册，官网地址为：<a href="https://hub.docker.com/">https://hub.docker.com/</a> ，注册后记住用户名和密码</p>
-<h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>输入登录命令，在输入自己的用户名和密码即可</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker login</span><br></pre></td></tr></table></figure>
-
-<h3 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h3><p>推送命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker push Docker用户名/新镜像名称:版本号</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20211111.jpg"></p>
-<h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>在Docker的hub官网登录后即可看到刚刚推送的镜像</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20212908.jpg"></p>
-<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><p>查看镜像时有个拉取命令,如下图所示</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20002354.jpg"></p>]]></content>
       <categories>
         <category>Docker</category>
       </categories>
@@ -6784,8 +6784,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Tomcat</tag>
         <tag>Java</tag>
+        <tag>Tomcat</tag>
         <tag>Docker</tag>
       </tags>
   </entry>
@@ -10582,25 +10582,6 @@
       </tags>
   </entry>
   <entry>
-    <title>idea修改Maven默认本地仓库地址</title>
-    <url>/390.html</url>
-    <content><![CDATA[<blockquote>
-<p>打开idea的新建项目默认配置设置</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-07%20215724.jpg"></p>
-<blockquote>
-<p>修改默认的本地仓库地址，记得勾上Override</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-07%20220331.jpg"></p>]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nginx绑定二级域名到指定端口</title>
     <url>/391.html</url>
     <content><![CDATA[<p>我的Nginx版本号为：1.20.2，配置文件路径为：/etc/nginx，在conf.d文件夹的conf.d文件中添加以下代码：</p>
@@ -10642,6 +10623,25 @@
       <tags>
         <tag>SSL证书</tag>
         <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea修改Maven默认本地仓库地址</title>
+    <url>/390.html</url>
+    <content><![CDATA[<blockquote>
+<p>打开idea的新建项目默认配置设置</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-07%20215724.jpg"></p>
+<blockquote>
+<p>修改默认的本地仓库地址，记得勾上Override</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-07%20220331.jpg"></p>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+        <tag>idea使用</tag>
       </tags>
   </entry>
   <entry>
@@ -12694,27 +12694,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MyBatis实现in查询</title>
-    <url>/430.html</url>
-    <content><![CDATA[<h3 id="业务说明"><a href="#业务说明" class="headerlink" title="业务说明"></a>业务说明</h3><h4 id="表结构"><a href="#表结构" class="headerlink" title="表结构"></a>表结构</h4><p>t_book为图书表，t_borrow_record为借阅记录表，t_book的主键id是t_borrow_record的外键bookId</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220125000623293.png" alt="image-20220125000623293"></p>
-<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>通过图书名称查询借阅记录，因为t_borrow_record是没有图书名称字段的，所以先通过<code>模糊查询</code>查询t_book的图书名称获取id集合，然后通过t_borrow_record的bookId字段使用<code>in查询</code>即可查询到数据</p>
-<h3 id="XML代码"><a href="#XML代码" class="headerlink" title="XML代码"></a>XML代码</h3><h4 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h4><p>当idList不为空时，才使用in查询</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;idList != null&quot;</span>&gt;</span></span><br><span class="line">    and bookId in</span><br><span class="line">    <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;idList&quot;</span> <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">        #&#123;item&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h4><p>idList通过map传入</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BorrowRecordResult&quot;</span>&gt;</span></span><br><span class="line">    select *</span><br><span class="line">    from t_borrow_record</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userName != null and userName != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">            and userName like #&#123;userName&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">            and userId = #&#123;userId&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;idList != null&quot;</span>&gt;</span></span><br><span class="line">            and bookId in</span><br><span class="line">            <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;idList&quot;</span> <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">                #&#123;item&#125;</span><br><span class="line">            <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">        limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><p>下面代码主要是获取idList以及将idList传入map</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">List&lt;Integer&gt; idList;</span><br><span class="line"><span class="keyword">if</span> (StringUtil.isNotEmpty(borrowRecord.getBookName())) &#123;</span><br><span class="line">    idList = bookService.selectIdByNameLike(StringUtil.formatLike(borrowRecord.getBookName()));</span><br><span class="line">    map.put(<span class="string">&quot;idList&quot;</span>, idList);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>MyBatis</category>
-      </categories>
-      <tags>
-        <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>十大经典排序算法之堆排序</title>
     <url>/43.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。堆积是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点</p>
@@ -12739,6 +12718,27 @@
       <tags>
         <tag>Java</tag>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis实现in查询</title>
+    <url>/430.html</url>
+    <content><![CDATA[<h3 id="业务说明"><a href="#业务说明" class="headerlink" title="业务说明"></a>业务说明</h3><h4 id="表结构"><a href="#表结构" class="headerlink" title="表结构"></a>表结构</h4><p>t_book为图书表，t_borrow_record为借阅记录表，t_book的主键id是t_borrow_record的外键bookId</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220125000623293.png" alt="image-20220125000623293"></p>
+<h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>通过图书名称查询借阅记录，因为t_borrow_record是没有图书名称字段的，所以先通过<code>模糊查询</code>查询t_book的图书名称获取id集合，然后通过t_borrow_record的bookId字段使用<code>in查询</code>即可查询到数据</p>
+<h3 id="XML代码"><a href="#XML代码" class="headerlink" title="XML代码"></a>XML代码</h3><h4 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h4><p>当idList不为空时，才使用in查询</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;idList != null&quot;</span>&gt;</span></span><br><span class="line">    and bookId in</span><br><span class="line">    <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;idList&quot;</span> <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">        #&#123;item&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h4><p>idList通过map传入</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BorrowRecordResult&quot;</span>&gt;</span></span><br><span class="line">    select *</span><br><span class="line">    from t_borrow_record</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userName != null and userName != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">            and userName like #&#123;userName&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">            and userId = #&#123;userId&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;idList != null&quot;</span>&gt;</span></span><br><span class="line">            and bookId in</span><br><span class="line">            <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;idList&quot;</span> <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">                #&#123;item&#125;</span><br><span class="line">            <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">        limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><p>下面代码主要是获取idList以及将idList传入map</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">List&lt;Integer&gt; idList;</span><br><span class="line"><span class="keyword">if</span> (StringUtil.isNotEmpty(borrowRecord.getBookName())) &#123;</span><br><span class="line">    idList = bookService.selectIdByNameLike(StringUtil.formatLike(borrowRecord.getBookName()));</span><br><span class="line">    map.put(<span class="string">&quot;idList&quot;</span>, idList);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>MyBatis</category>
+      </categories>
+      <tags>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
   <entry>
@@ -13806,37 +13806,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git修改commit注释</title>
-    <url>/464.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>有时候git commit的注释填写错误，需要进行修改，修改的情况有两种：</p>
-<ol>
-<li>最近一次</li>
-<li>最近某次</li>
-</ol>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="最近一次"><a href="#最近一次" class="headerlink" title="最近一次"></a>最近一次</h4><ol>
-<li><p>查看最近一次的注释</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307233024132.png" alt="image-20220307233024132"></p>
-</li>
-<li><p> spring:  main:    banner-mode: offyaml</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307233645240.png" alt="image-20220307233645240"></p>
-</li>
-<li><p>pull和push到GitHub，pull代码时输入<code>:wq</code>退出即可</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pull</span></span><br><span class="line">git pull origin master</span><br><span class="line"><span class="comment">#push</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="最近某次"><a href="#最近某次" class="headerlink" title="最近某次"></a>最近某次</h4><p>查看博客：<a href="https://segmentfault.com/a/1190000022926064">Git修改已提交的commit注释 - SegmentFault 思否</a> 和 <a href="https://www.jianshu.com/p/098d85a58bf1">Git 修改已提交的commit注释 - 简书 (jianshu.com)</a></p>]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Element UI实现表单验证</title>
     <url>/463.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>所谓表单验证，就是检验用户的输入是否正确：</p>
@@ -13977,6 +13946,37 @@
       <tags>
         <tag>Vue.js</tag>
         <tag>Element UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git修改commit注释</title>
+    <url>/464.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>有时候git commit的注释填写错误，需要进行修改，修改的情况有两种：</p>
+<ol>
+<li>最近一次</li>
+<li>最近某次</li>
+</ol>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="最近一次"><a href="#最近一次" class="headerlink" title="最近一次"></a>最近一次</h4><ol>
+<li><p>查看最近一次的注释</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307233024132.png" alt="image-20220307233024132"></p>
+</li>
+<li><p> spring:  main:    banner-mode: offyaml</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit --amend</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307233645240.png" alt="image-20220307233645240"></p>
+</li>
+<li><p>pull和push到GitHub，pull代码时输入<code>:wq</code>退出即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#pull</span></span><br><span class="line">git pull origin master</span><br><span class="line"><span class="comment">#push</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="最近某次"><a href="#最近某次" class="headerlink" title="最近某次"></a>最近某次</h4><p>查看博客：<a href="https://segmentfault.com/a/1190000022926064">Git修改已提交的commit注释 - SegmentFault 思否</a> 和 <a href="https://www.jianshu.com/p/098d85a58bf1">Git 修改已提交的commit注释 - 简书 (jianshu.com)</a></p>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -14444,29 +14444,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java跳转语句</title>
-    <url>/48.html</url>
-    <content><![CDATA[<p>Java语言中，有三种跳转语句：break、continue和return</p>
-<h3 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h3><p>用于终止循环的操作，break语句在for、while、do…while循环语句中用于强制退出当前循环</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="comment">//直接结束，后面的不执行</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201103124742.jpg" alt="img"></p>
-<h3 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h3><p>continue也可以放在循环语句中，它与break语句具有相反的效果，它的作用是用于执行下依次循环（跳过满足条件的当次循环），而不是退出当前循环</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="comment">//跳出本次循环，后面的继续循环</span></span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201103125230.jpg" alt="img"></p>
-<h3 id="return语句"><a href="#return语句" class="headerlink" title="return语句"></a>return语句</h3><p>return语句可以从一个方法返回，并把控制权交给调用它的语句</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="comment">//结束方法（main方法）</span></span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//该语句不执行</span></span><br><span class="line">    System.out.println(<span class="string">&quot;111111111111&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201103125457.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo的butterfly主题使用Algolia搜索</title>
     <url>/479.html</url>
     <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>在hexo博客的根目录打开<code>Git Bash</code>安装<code>hexo-algoliasearch</code>插件</p>
@@ -14503,6 +14480,47 @@
         <category>hexo</category>
       </categories>
       <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java跳转语句</title>
+    <url>/48.html</url>
+    <content><![CDATA[<p>Java语言中，有三种跳转语句：break、continue和return</p>
+<h3 id="break语句"><a href="#break语句" class="headerlink" title="break语句"></a>break语句</h3><p>用于终止循环的操作，break语句在for、while、do…while循环语句中用于强制退出当前循环</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="comment">//直接结束，后面的不执行</span></span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201103124742.jpg" alt="img"></p>
+<h3 id="continue语句"><a href="#continue语句" class="headerlink" title="continue语句"></a>continue语句</h3><p>continue也可以放在循环语句中，它与break语句具有相反的效果，它的作用是用于执行下依次循环（跳过满足条件的当次循环），而不是退出当前循环</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="comment">//跳出本次循环，后面的继续循环</span></span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201103125230.jpg" alt="img"></p>
+<h3 id="return语句"><a href="#return语句" class="headerlink" title="return语句"></a>return语句</h3><p>return语句可以从一个方法返回，并把控制权交给调用它的语句</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">10</span>;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span> (i==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="comment">//结束方法（main方法）</span></span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//该语句不执行</span></span><br><span class="line">    System.out.println(<span class="string">&quot;111111111111&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201103125457.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub</title>
+    <url>/480.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果需要执行多条命令才可以达到目的，都可以使用批处理脚本来提高工作效率，本博客主要实现：一键部署hexo博客以及一键上传代码到GitHub</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="一键部署hexo博客"><a href="#一键部署hexo博客" class="headerlink" title="一键部署hexo博客"></a>一键部署hexo博客</h4><p>新建一个<code>.bat</code>文件，命名为：<code>一键部署.bat</code>，内容如下：（我的博客使用了algolia搜索，如果没有使用就删除下面的<code>hexo algolia</code>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo algolia&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+
+<h4 id="一键上传代码到GitHub"><a href="#一键上传代码到GitHub" class="headerlink" title="一键上传代码到GitHub"></a>一键上传代码到GitHub</h4><p>新建一个<code>.bat</code>文件，命名为<code>一键上传到GitHub.bat</code>：，内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1.进入要上传的文件hexo-blog&quot;</span></span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;2.添加到本地仓库&quot;</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;3.设置提交信息&quot;</span></span><br><span class="line"><span class="built_in">set</span> now=%date% %time%</span><br><span class="line">git commit -m <span class="string">&quot;%now%&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.开始pull&quot;</span></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.开始push&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Windows系统</tag>
         <tag>hexo</tag>
       </tags>
   </entry>
@@ -15955,19 +15973,6 @@
       </tags>
   </entry>
   <entry>
-    <title>最终结果不用科学计数</title>
-    <url>/79.html</url>
-    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;科学计数:&quot;</span>);</span><br><span class="line">    System.out.println(<span class="number">20</span>*<span class="number">3.156</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;不是科学计数:&quot;</span>);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">20</span>*<span class="number">3.156</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210121202425.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java域宽</title>
     <url>/78.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>用于存放输出数据的宽度称为“域宽”</p>
@@ -15980,6 +15985,19 @@
 <p>输出123时，前面有1个空格；</p>
 <p>输出1234时，前面有0个空格；</p>
 <p>输出12345时，此时长度超过域宽则直接输出；</p>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最终结果不用科学计数</title>
+    <url>/79.html</url>
+    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;科学计数:&quot;</span>);</span><br><span class="line">    System.out.println(<span class="number">20</span>*<span class="number">3.156</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;不是科学计数:&quot;</span>);</span><br><span class="line">    System.out.println(<span class="keyword">new</span> BigDecimal(<span class="number">20</span>*<span class="number">3.156</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>*<span class="number">10</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210121202425.jpg" alt="img"></p>]]></content>
       <categories>
         <category>Java</category>
       </categories>
@@ -16317,22 +16335,6 @@
       </tags>
   </entry>
   <entry>
-    <title>实现鼠标移动到div块时自动加阴影效果</title>
-    <url>/95.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;shadow&quot;</span>&gt;</span></span><br><span class="line">    //已省略无关代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.shadow</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">transition-duration</span>: <span class="number">0.5s</span>; <span class="comment">/*停留时间显示*/</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.shadow</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">    -moz-<span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">5px</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311223347.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/tenggeer0789/article/details/89478859">css怎么实现鼠标移动到div块时自动加阴影效果？_tenggeer0789的博客-CSDN博客</a></p>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>遍历HashMap的四种方法</title>
     <url>/94.html</url>
     <content><![CDATA[<h3 id="创建HashMap集合"><a href="#创建HashMap集合" class="headerlink" title="创建HashMap集合"></a>创建HashMap集合</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">HashMap&lt;Integer, String&gt; hashMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">hashMap.put(<span class="number">1</span>, <span class="string">&quot;a&quot;</span>);</span><br><span class="line">hashMap.put(<span class="number">2</span>, <span class="string">&quot;b&quot;</span>);</span><br><span class="line">hashMap.put(<span class="number">3</span>, <span class="string">&quot;c&quot;</span>);</span><br></pre></td></tr></table></figure>
@@ -16353,6 +16355,22 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实现鼠标移动到div块时自动加阴影效果</title>
+    <url>/95.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;shadow&quot;</span>&gt;</span></span><br><span class="line">    //已省略无关代码</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.shadow</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span><br><span class="line">    <span class="attribute">transition-duration</span>: <span class="number">0.5s</span>; <span class="comment">/*停留时间显示*/</span></span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.shadow</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    -webkit-<span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">    -moz-<span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">#337ab7</span> <span class="number">0px</span> <span class="number">5px</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311223347.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/tenggeer0789/article/details/89478859">css怎么实现鼠标移动到div块时自动加阴影效果？_tenggeer0789的博客-CSDN博客</a></p>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
