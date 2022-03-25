@@ -156,21 +156,6 @@
       </tags>
   </entry>
   <entry>
-    <title>鼠标移入div显示查看更多</title>
-    <url>/108.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring Boot引入Quartz定时任务</title>
     <url>/109.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.quartz-scheduler<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>quartz<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -187,32 +172,18 @@
       </tags>
   </entry>
   <entry>
-    <title>部落冲突攻略</title>
-    <url>/110.html</url>
-    <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
-<h3 id="配兵"><a href="#配兵" class="headerlink" title="配兵"></a>配兵</h3><h4 id="超级女巫"><a href="#超级女巫" class="headerlink" title="超级女巫"></a>超级女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011129.jpg" alt="img"></p>
-<h4 id="8848流"><a href="#8848流" class="headerlink" title="8848流"></a>8848流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011245.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=GNKpNH5Img4">https://www.youtube.com/watch?v=GNKpNH5Img4</a></p>
-<h4 id="超级女巫-女巫"><a href="#超级女巫-女巫" class="headerlink" title="超级女巫+女巫"></a>超级女巫+女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011354.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=wzVR0pPbbYU">https://www.youtube.com/watch?v=wzVR0pPbbYU</a></p>
-<h4 id="冰冻龙流"><a href="#冰冻龙流" class="headerlink" title="冰冻龙流"></a>冰冻龙流</h4><p>攻城机器用滚木车</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210420222435.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=2_oV7ws49t4">https://www.youtube.com/watch?v=2_oV7ws49t4</a></p>
-<h4 id="天女超法皮卡流"><a href="#天女超法皮卡流" class="headerlink" title="天女超法皮卡流"></a>天女超法皮卡流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210428141543.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.bilibili.com/video/BV1My4y1b7kK">https://www.bilibili.com/video/BV1My4y1b7kK</a></p>
-<h3 id="常用数据"><a href="#常用数据" class="headerlink" title="常用数据"></a>常用数据</h3><h4 id="城墙等级和炸弹人数量"><a href="#城墙等级和炸弹人数量" class="headerlink" title="城墙等级和炸弹人数量"></a>城墙等级和炸弹人数量</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011522.jpg" alt="img"></strong></p>
-<h4 id="传奇联赛胜利奖杯"><a href="#传奇联赛胜利奖杯" class="headerlink" title="传奇联赛胜利奖杯"></a>传奇联赛胜利奖杯</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210421224722.jpg" alt="img"></strong></p>
-<h4 id="部落冲突联赛奖励图"><a href="#部落冲突联赛奖励图" class="headerlink" title="部落冲突联赛奖励图"></a>部落冲突联赛奖励图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201333.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201443.jpg" alt="img"></p>
-<h3 id="阵型"><a href="#阵型" class="headerlink" title="阵型"></a>阵型</h3><p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-CC6CO6VLE599N9_DOM">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-CC6CO6VLE599N9_DOM</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025421.jpg" alt="img"></p>
-<p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-k9e4msVwq1sNtFRBps">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-k9e4msVwq1sNtFRBps</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025406.jpg" alt="img"></p>]]></content>
+    <title>鼠标移入div显示查看更多</title>
+    <url>/108.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>]]></content>
       <categories>
-        <category>其它</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>部落冲突</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -261,6 +232,35 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>部落冲突攻略</title>
+    <url>/110.html</url>
+    <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
+<h3 id="配兵"><a href="#配兵" class="headerlink" title="配兵"></a>配兵</h3><h4 id="超级女巫"><a href="#超级女巫" class="headerlink" title="超级女巫"></a>超级女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011129.jpg" alt="img"></p>
+<h4 id="8848流"><a href="#8848流" class="headerlink" title="8848流"></a>8848流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011245.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=GNKpNH5Img4">https://www.youtube.com/watch?v=GNKpNH5Img4</a></p>
+<h4 id="超级女巫-女巫"><a href="#超级女巫-女巫" class="headerlink" title="超级女巫+女巫"></a>超级女巫+女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011354.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=wzVR0pPbbYU">https://www.youtube.com/watch?v=wzVR0pPbbYU</a></p>
+<h4 id="冰冻龙流"><a href="#冰冻龙流" class="headerlink" title="冰冻龙流"></a>冰冻龙流</h4><p>攻城机器用滚木车</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210420222435.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=2_oV7ws49t4">https://www.youtube.com/watch?v=2_oV7ws49t4</a></p>
+<h4 id="天女超法皮卡流"><a href="#天女超法皮卡流" class="headerlink" title="天女超法皮卡流"></a>天女超法皮卡流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210428141543.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.bilibili.com/video/BV1My4y1b7kK">https://www.bilibili.com/video/BV1My4y1b7kK</a></p>
+<h3 id="常用数据"><a href="#常用数据" class="headerlink" title="常用数据"></a>常用数据</h3><h4 id="城墙等级和炸弹人数量"><a href="#城墙等级和炸弹人数量" class="headerlink" title="城墙等级和炸弹人数量"></a>城墙等级和炸弹人数量</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011522.jpg" alt="img"></strong></p>
+<h4 id="传奇联赛胜利奖杯"><a href="#传奇联赛胜利奖杯" class="headerlink" title="传奇联赛胜利奖杯"></a>传奇联赛胜利奖杯</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210421224722.jpg" alt="img"></strong></p>
+<h4 id="部落冲突联赛奖励图"><a href="#部落冲突联赛奖励图" class="headerlink" title="部落冲突联赛奖励图"></a>部落冲突联赛奖励图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201333.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201443.jpg" alt="img"></p>
+<h3 id="阵型"><a href="#阵型" class="headerlink" title="阵型"></a>阵型</h3><p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-CC6CO6VLE599N9_DOM">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-CC6CO6VLE599N9_DOM</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025421.jpg" alt="img"></p>
+<p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-k9e4msVwq1sNtFRBps">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-k9e4msVwq1sNtFRBps</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025406.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>部落冲突</tag>
       </tags>
   </entry>
   <entry>
@@ -1494,21 +1494,6 @@
       </tags>
   </entry>
   <entry>
-    <title>idea配置Maven</title>
-    <url>/144.html</url>
-    <content><![CDATA[<p>1处选择maven安装路径（即bin文件夹所在路径）</p>
-<p>2处选择settings文件的路径（打勾Override）</p>
-<p>3处选择本地仓库路径（打勾Override）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615021527.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL5.6的安装与配置（解压版）</title>
     <url>/145.html</url>
     <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1Cqx8KPLHYgnKPSL21jBZZA">https://pan.baidu.com/s/1Cqx8KPLHYgnKPSL21jBZZA</a></p>
@@ -1535,6 +1520,21 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea配置Maven</title>
+    <url>/144.html</url>
+    <content><![CDATA[<p>1处选择maven安装路径（即bin文件夹所在路径）</p>
+<p>2处选择settings文件的路径（打勾Override）</p>
+<p>3处选择本地仓库路径（打勾Override）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615021527.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+        <tag>idea使用</tag>
       </tags>
   </entry>
   <entry>
@@ -3161,26 +3161,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue.js 自定义指令</title>
-    <url>/194.html</url>
-    <content><![CDATA[<p>除了默认设置的核心指令( v-model 和 v-show )，Vue 也允许注册自定义指令</p>
-<p>自定义指令分为全局指令和局部指令</p>
-<p>下面分别注册全局指令和局部指令，指令功能：在页面加载时，元素获得焦点</p>
-<h3 id="全局指令"><a href="#全局指令" class="headerlink" title="全局指令"></a>全局指令</h3><p>每个实例都可以使用</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    Vue.directive(<span class="string">&#x27;focus&#x27;</span>, &#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">elements</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            elements.focus();</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="局部指令"><a href="#局部指令" class="headerlink" title="局部指令"></a>局部指令</h3><p>只能在注册局部指令的实例中使用</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">directives</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">focus</span>: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    el.focus();</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625211215.jpg" alt="img"></p>]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue.js 路由</title>
     <url>/195.html</url>
     <content><![CDATA[<p>Vue.js 路由允许我们通过不同的 URL 访问不同的内容，通过 Vue.js 可以实现多视图的单页Web应用</p>
@@ -3231,6 +3211,26 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/axios/0.18.0/axios.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 20%;margin-top: 10%&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>输入水果的信息:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    编号:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;fruitId&quot;</span>/&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span></span><br><span class="line">    名称:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;fruitName&quot;</span>/&gt;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span></span><br><span class="line">    数量:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;fruitNum&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;submitData&quot;</span>&gt;</span>提交<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">fruitId</span>: <span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">fruitName</span>: <span class="string">&#x27;苹果&#x27;</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">fruitNum</span>: <span class="number">3</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">myInfo</span>: <span class="string">&#x27;&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">submitData</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">let</span> param = <span class="keyword">new</span> URLSearchParams();</span></span><br><span class="line"><span class="javascript">                param.append(<span class="string">&quot;id&quot;</span>, <span class="built_in">this</span>.fruitId);</span></span><br><span class="line"><span class="javascript">                param.append(<span class="string">&quot;name&quot;</span>, <span class="built_in">this</span>.fruitName);</span></span><br><span class="line"><span class="javascript">                param.append(<span class="string">&quot;num&quot;</span>, <span class="built_in">this</span>.fruitNum);</span></span><br><span class="line"><span class="javascript">                axios</span></span><br><span class="line"><span class="javascript">                    .post(<span class="string">&#x27;https://www.zoutl.cn/getFruitJson2&#x27;</span>, param)</span></span><br><span class="line"><span class="javascript">                    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">let</span> id = response.data.id;</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">let</span> name = response.data.name;</span></span><br><span class="line"><span class="javascript">                        <span class="keyword">let</span> num = response.data.num;</span></span><br><span class="line"><span class="javascript">                        alert(<span class="string">&quot;编号:&quot;</span> + id + <span class="string">&quot;，名称:&quot;</span> + name + <span class="string">&quot;，数量:&quot;</span> + num);</span></span><br><span class="line"><span class="javascript">                    &#125;)</span></span><br><span class="line"><span class="javascript">                    .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                        <span class="built_in">console</span>.log(error);</span></span><br><span class="line"><span class="javascript">                    &#125;);</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626032621.jpg" alt="img"></p>]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue.js 自定义指令</title>
+    <url>/194.html</url>
+    <content><![CDATA[<p>除了默认设置的核心指令( v-model 和 v-show )，Vue 也允许注册自定义指令</p>
+<p>自定义指令分为全局指令和局部指令</p>
+<p>下面分别注册全局指令和局部指令，指令功能：在页面加载时，元素获得焦点</p>
+<h3 id="全局指令"><a href="#全局指令" class="headerlink" title="全局指令"></a>全局指令</h3><p>每个实例都可以使用</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    Vue.directive(<span class="string">&#x27;focus&#x27;</span>, &#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">elements</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            elements.focus();</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="局部指令"><a href="#局部指令" class="headerlink" title="局部指令"></a>局部指令</h3><p>只能在注册局部指令的实例中使用</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">directives</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">focus</span>: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    el.focus();</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625211215.jpg" alt="img"></p>]]></content>
       <categories>
         <category>Vue.js</category>
       </categories>
@@ -9432,27 +9432,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL分组数据</title>
-    <url>/366.html</url>
-    <content><![CDATA[<h3 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>数据分组使用GROUP BY子句，并且会根据分组的字段进行ASC排序</p>
-<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>将学生按照年龄进行分组，并且统计每个年龄的学生人数，结果的排序为：年龄的升序</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> age,<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> age_count <span class="keyword">FROM</span> t_student <span class="keyword">GROUP</span> <span class="keyword">BY</span> age;</span><br></pre></td></tr></table></figure>
-
-<h3 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h3><h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h4><p>分组的数据可以使用HAVING子句进行过滤，在GROUP BY后使用，HAVING后接一个条件，然后就可以筛选出满足条件的数据</p>
-<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>将学生按照年龄进行分组且学生年龄大于11岁，并且统计每个年龄的学生人数，结果的排序为：年龄的升序</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> age,<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> age_count <span class="keyword">FROM</span> t_student <span class="keyword">GROUP</span> <span class="keyword">BY</span> age <span class="keyword">HAVING</span> age<span class="operator">&gt;</span><span class="number">11</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h4><p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法，千万不要仅依赖GROUP BY排序数据</p>
-<h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><p>将学生按照年龄进行分组且学生年龄大于11岁，并且统计每个年龄的学生人数，结果的排序为：该年龄人数的升序</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> age,<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> age_count <span class="keyword">FROM</span> t_student <span class="keyword">GROUP</span> <span class="keyword">BY</span> age <span class="keyword">HAVING</span> age<span class="operator">&gt;</span><span class="number">11</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> age_count;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL汇总数据</title>
     <url>/365.html</url>
     <content><![CDATA[<h3 id="聚集函数"><a href="#聚集函数" class="headerlink" title="聚集函数"></a>聚集函数</h3><table>
@@ -9504,6 +9483,27 @@
 
 <h3 id="组合聚集函数"><a href="#组合聚集函数" class="headerlink" title="组合聚集函数"></a>组合聚集函数</h3><p>查询学生数量、平均年龄、年龄最大值、年龄最小值</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>	<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> student_count,<span class="built_in">AVG</span>(age) <span class="keyword">AS</span> avg_age,<span class="built_in">MAX</span>(age) <span class="keyword">AS</span> max_age,<span class="built_in">MIN</span>(age) <span class="keyword">AS</span> min_age <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL分组数据</title>
+    <url>/366.html</url>
+    <content><![CDATA[<h3 id="GROUP-BY"><a href="#GROUP-BY" class="headerlink" title="GROUP BY"></a>GROUP BY</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>数据分组使用GROUP BY子句，并且会根据分组的字段进行ASC排序</p>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>将学生按照年龄进行分组，并且统计每个年龄的学生人数，结果的排序为：年龄的升序</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> age,<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> age_count <span class="keyword">FROM</span> t_student <span class="keyword">GROUP</span> <span class="keyword">BY</span> age;</span><br></pre></td></tr></table></figure>
+
+<h3 id="HAVING"><a href="#HAVING" class="headerlink" title="HAVING"></a>HAVING</h3><h4 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h4><p>分组的数据可以使用HAVING子句进行过滤，在GROUP BY后使用，HAVING后接一个条件，然后就可以筛选出满足条件的数据</p>
+<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>将学生按照年龄进行分组且学生年龄大于11岁，并且统计每个年龄的学生人数，结果的排序为：年龄的升序</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> age,<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> age_count <span class="keyword">FROM</span> t_student <span class="keyword">GROUP</span> <span class="keyword">BY</span> age <span class="keyword">HAVING</span> age<span class="operator">&gt;</span><span class="number">11</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><h4 id="简介-2"><a href="#简介-2" class="headerlink" title="简介"></a>简介</h4><p>一般在使用GROUP BY子句时，应该也给出ORDER BY子句。这是保证数据正确排序的唯一方法，千万不要仅依赖GROUP BY排序数据</p>
+<h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><p>将学生按照年龄进行分组且学生年龄大于11岁，并且统计每个年龄的学生人数，结果的排序为：该年龄人数的升序</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> age,<span class="built_in">COUNT</span>(<span class="operator">*</span>) <span class="keyword">AS</span> age_count <span class="keyword">FROM</span> t_student <span class="keyword">GROUP</span> <span class="keyword">BY</span> age <span class="keyword">HAVING</span> age<span class="operator">&gt;</span><span class="number">11</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> age_count;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>MySQL</category>
       </categories>
@@ -10760,24 +10760,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java实现与Elasticsearch的连接</title>
-    <url>/395.html</url>
-    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>引入的依赖版本必须和正在运行的Elasticsearch版本一致</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.elasticsearch.client<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>transport<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.client.transport.TransportClient;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.common.settings.Settings;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.common.transport.InetSocketTransportAddress;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.transport.client.PreBuiltTransportClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.net.InetAddress;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-12-15 2:59</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String host = <span class="string">&quot;192.168.0.116&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> port = <span class="number">9300</span>;</span><br><span class="line">        TransportClient client = <span class="keyword">new</span> PreBuiltTransportClient(Settings.EMPTY).addTransportAddress(<span class="keyword">new</span> InetSocketTransportAddress(InetAddress.getByName(host), port));</span><br><span class="line">        System.out.println(client);</span><br><span class="line">        client.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>出现划红线的信息说明与Elasticsearch连接成功</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20031243.jpg"></p>]]></content>
-      <categories>
-        <category>Elasticsearch</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Elasticsearch</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java操作Elasticsearch</title>
     <url>/396.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>引入的依赖版本必须和正在运行的Elasticsearch版本一致</p>
@@ -10852,6 +10834,24 @@
       </categories>
       <tags>
         <tag>CentOS7</tag>
+        <tag>Elasticsearch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java实现与Elasticsearch的连接</title>
+    <url>/395.html</url>
+    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>引入的依赖版本必须和正在运行的Elasticsearch版本一致</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.elasticsearch.client<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>transport<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.client.transport.TransportClient;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.common.settings.Settings;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.common.transport.InetSocketTransportAddress;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.transport.client.PreBuiltTransportClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.net.InetAddress;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-12-15 2:59</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String host = <span class="string">&quot;192.168.0.116&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> port = <span class="number">9300</span>;</span><br><span class="line">        TransportClient client = <span class="keyword">new</span> PreBuiltTransportClient(Settings.EMPTY).addTransportAddress(<span class="keyword">new</span> InetSocketTransportAddress(InetAddress.getByName(host), port));</span><br><span class="line">        System.out.println(client);</span><br><span class="line">        client.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>出现划红线的信息说明与Elasticsearch连接成功</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20031243.jpg"></p>]]></content>
+      <categories>
+        <category>Elasticsearch</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
         <tag>Elasticsearch</tag>
       </tags>
   </entry>
@@ -13516,6 +13516,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring MVC使用@ResponseBody注解时返回中文出现乱码的解决办法</title>
+    <url>/456.html</url>
+    <content><![CDATA[<p>指定响应的字符集为utf-8，将@RequestMapping注解的produces属性的值设置为<code>&#123;&quot;text/plain;charset=utf-8&quot;, &quot;text/html;charset=utf-8&quot;&#125;</code></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(value = &quot;/test&quot;, produces = &#123;&quot;text/plain;charset=utf-8&quot;, &quot;text/html;charset=utf-8&quot;&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = <span class="keyword">new</span> Student();</span><br><span class="line">    student.setName(<span class="string">&quot;11&quot;</span>);</span><br><span class="line">    student.setAge(<span class="number">10</span>);</span><br><span class="line">    studentService.add(student);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;添加成功&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>npm报错：A complete log of this run can be fund in的解决办法</title>
     <url>/455.html</url>
     <content><![CDATA[<p>WebStorm使用快捷键<code>ALT+F12</code>打开Terminal窗口，然后分别执行下面两条命令：</p>
@@ -13527,18 +13539,6 @@
       </categories>
       <tags>
         <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring MVC使用@ResponseBody注解时返回中文出现乱码的解决办法</title>
-    <url>/456.html</url>
-    <content><![CDATA[<p>指定响应的字符集为utf-8，将@RequestMapping注解的produces属性的值设置为<code>&#123;&quot;text/plain;charset=utf-8&quot;, &quot;text/html;charset=utf-8&quot;&#125;</code></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(value = &quot;/test&quot;, produces = &#123;&quot;text/plain;charset=utf-8&quot;, &quot;text/html;charset=utf-8&quot;&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">test</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student student = <span class="keyword">new</span> Student();</span><br><span class="line">    student.setName(<span class="string">&quot;11&quot;</span>);</span><br><span class="line">    student.setAge(<span class="number">10</span>);</span><br><span class="line">    studentService.add(student);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;添加成功&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -13781,18 +13781,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Maven资源过滤设置</title>
-    <url>/461.html</url>
-    <content><![CDATA[<p>在pom.xml文件的project标签中加入下面代码：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/java<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.properties<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.properties<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Maven</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决：Spring MVC接收前端数据出现中文乱码</title>
     <url>/462.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>由前端传过来的数据（中文），Java接收后变成乱码</p>
@@ -13803,6 +13791,18 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maven资源过滤设置</title>
+    <url>/461.html</url>
+    <content><![CDATA[<p>在pom.xml文件的project标签中加入下面代码：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/java<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.properties<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.properties<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Maven</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -14513,7 +14513,8 @@
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="一键部署hexo博客"><a href="#一键部署hexo博客" class="headerlink" title="一键部署hexo博客"></a>一键部署hexo博客</h4><p>新建一个<code>.bat</code>文件，命名为：<code>一键部署.bat</code>，内容如下：（我的博客使用了algolia搜索，如果没有使用就删除下面的<code>hexo algolia</code>）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo algolia&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
 
-<h4 id="一键上传代码到GitHub"><a href="#一键上传代码到GitHub" class="headerlink" title="一键上传代码到GitHub"></a>一键上传代码到GitHub</h4><p>新建一个<code>.bat</code>文件，命名为<code>一键上传到GitHub.bat</code>：，内容如下：（<code>chcp 65001</code>是为了解决输出中文乱码）</p>
+<h4 id="一键上传代码到GitHub"><a href="#一键上传代码到GitHub" class="headerlink" title="一键上传代码到GitHub"></a>一键上传代码到GitHub</h4><p>先配置GitHub的SSH Key，配置步骤查看博客：<a href="https://blog.zoutl.cn/236.html">GitHub 配置 SSH Key | LeDao 的博客 (zoutl.cn)</a></p>
+<p>新建一个<code>.bat</code>文件，命名为<code>一键上传到GitHub.bat</code>：，内容如下：（<code>chcp 65001</code>是为了解决输出中文乱码）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chcp 65001</span><br><span class="line"></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1.进入要上传的文件hexo-blog&quot;</span></span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;2.添加到本地仓库&quot;</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;3.设置提交信息&quot;</span></span><br><span class="line"><span class="built_in">set</span> now=%date% %time%</span><br><span class="line">git commit -m <span class="string">&quot;%now%&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.开始pull&quot;</span></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;5.开始push&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>Windows系统</category>
@@ -15885,23 +15886,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL删除主表时删除从表的数据</title>
-    <url>/75.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>有外键关联的两个表，要想实现删除主表的数据，然后删除从表中与之关联的数据，我们可以将两表的外键删除关系设置为CASCADE</p>
-<p>CASCADE删除时：删除主表数据时自动删除从表数据。删除从表，主表不变</p>
-<h3 id="表结果及关系"><a href="#表结果及关系" class="headerlink" title="表结果及关系"></a>表结果及关系</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210115053856.jpg" alt="img"></p>
-<h3 id="设置删除关系"><a href="#设置删除关系" class="headerlink" title="设置删除关系"></a>设置删除关系</h3><p>双击上图中的线，然后设置删除时的关系为CASCADE</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210115054053.jpg" alt="img"></p>
-<p>然后我们的需求就可以实现了！！</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>我用的是SQLyog</p>]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>资源分享平台</title>
     <url>/76.html</url>
     <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>GitHub地址：<a href="https://github.com/a6678696/InformationSharing">https://github.com/a6678696/InformationSharing</a></p>
@@ -15940,6 +15924,23 @@
       </categories>
       <tags>
         <tag>个人项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL删除主表时删除从表的数据</title>
+    <url>/75.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>有外键关联的两个表，要想实现删除主表的数据，然后删除从表中与之关联的数据，我们可以将两表的外键删除关系设置为CASCADE</p>
+<p>CASCADE删除时：删除主表数据时自动删除从表数据。删除从表，主表不变</p>
+<h3 id="表结果及关系"><a href="#表结果及关系" class="headerlink" title="表结果及关系"></a>表结果及关系</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210115053856.jpg" alt="img"></p>
+<h3 id="设置删除关系"><a href="#设置删除关系" class="headerlink" title="设置删除关系"></a>设置删除关系</h3><p>双击上图中的线，然后设置删除时的关系为CASCADE</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210115054053.jpg" alt="img"></p>
+<p>然后我们的需求就可以实现了！！</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>我用的是SQLyog</p>]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
