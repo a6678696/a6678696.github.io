@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>用Tomcat运行web项目</title>
-    <url>/10.html</url>
-    <content><![CDATA[<h3 id="复制项目到webapps文件夹"><a href="#复制项目到webapps文件夹" class="headerlink" title="复制项目到webapps文件夹"></a>复制项目到webapps文件夹</h3><p>将项目（war包）复制到Tomcat安装目录的webapps文件夹中</p>
-<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>然后去bin文件夹中,点击startup.bat即可启动Tomcat运行项目</p>
-<h3 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h3><p>点击bin文件夹中的shutdown.bat关闭Tomcat</p>
-]]></content>
-      <categories>
-        <category>Tomcat</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个非常好用的Java工具包：HulTool</title>
     <url>/100.html</url>
     <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
@@ -34,6 +20,20 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用Tomcat运行web项目</title>
+    <url>/10.html</url>
+    <content><![CDATA[<h3 id="复制项目到webapps文件夹"><a href="#复制项目到webapps文件夹" class="headerlink" title="复制项目到webapps文件夹"></a>复制项目到webapps文件夹</h3><p>将项目（war包）复制到Tomcat安装目录的webapps文件夹中</p>
+<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>然后去bin文件夹中,点击startup.bat即可启动Tomcat运行项目</p>
+<h3 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h3><p>点击bin文件夹中的shutdown.bat关闭Tomcat</p>
+]]></content>
+      <categories>
+        <category>Tomcat</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -74,26 +74,6 @@
       </tags>
   </entry>
   <entry>
-    <title>制作网站logo</title>
-    <url>/103.html</url>
-    <content><![CDATA[<h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p><a href="http://www.uugai.com/">http://www.uugai.com/</a></p>
-<h3 id="输入logo的名称"><a href="#输入logo的名称" class="headerlink" title="输入logo的名称"></a>输入logo的名称</h3><p>进入网站后，输入logo的名称，然后点击开始设计</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223126.jpg" alt="img"></p>
-<h3 id="设计文案"><a href="#设计文案" class="headerlink" title="设计文案"></a>设计文案</h3><p>下方的拼音（我称之为副标题）不删除的话最近的logo图片会有两行字（副标题可以根据自己的需要输入，如果不需要两行字就把下面的副标题删除即可），然后提交文案</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223528.jpg" alt="img"></p>
-<h3 id="选择字体"><a href="#选择字体" class="headerlink" title="选择字体"></a>选择字体</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223625.jpg" alt="img"></p>
-<h3 id="选择logo图案"><a href="#选择logo图案" class="headerlink" title="选择logo图案"></a>选择logo图案</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223719.jpg" alt="img"></p>
-<h3 id="生成logo下载"><a href="#生成logo下载" class="headerlink" title="生成logo下载"></a>生成logo下载</h3><p>也可在下方选择字体的颜色（小字体即前面说的副标题）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223854.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>根据ip地址获取真实地址</title>
     <url>/104.html</url>
     <content><![CDATA[<h3 id="pom-xml引入"><a href="#pom-xml引入" class="headerlink" title="pom.xml引入"></a>pom.xml引入</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -111,6 +91,26 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>制作网站logo</title>
+    <url>/103.html</url>
+    <content><![CDATA[<h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p><a href="http://www.uugai.com/">http://www.uugai.com/</a></p>
+<h3 id="输入logo的名称"><a href="#输入logo的名称" class="headerlink" title="输入logo的名称"></a>输入logo的名称</h3><p>进入网站后，输入logo的名称，然后点击开始设计</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223126.jpg" alt="img"></p>
+<h3 id="设计文案"><a href="#设计文案" class="headerlink" title="设计文案"></a>设计文案</h3><p>下方的拼音（我称之为副标题）不删除的话最近的logo图片会有两行字（副标题可以根据自己的需要输入，如果不需要两行字就把下面的副标题删除即可），然后提交文案</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223528.jpg" alt="img"></p>
+<h3 id="选择字体"><a href="#选择字体" class="headerlink" title="选择字体"></a>选择字体</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223625.jpg" alt="img"></p>
+<h3 id="选择logo图案"><a href="#选择logo图案" class="headerlink" title="选择logo图案"></a>选择logo图案</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223719.jpg" alt="img"></p>
+<h3 id="生成logo下载"><a href="#生成logo下载" class="headerlink" title="生成logo下载"></a>生成logo下载</h3><p>也可在下方选择字体的颜色（小字体即前面说的副标题）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223854.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1635,26 +1635,6 @@
       </tags>
   </entry>
   <entry>
-    <title>查看CentOS7的IP</title>
-    <url>/149.html</url>
-    <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050531.jpg" alt="img"></p>
-<h3 id="修改ens33网卡的配置"><a href="#修改ens33网卡的配置" class="headerlink" title="修改ens33网卡的配置"></a>修改ens33网卡的配置</h3><p>查看网卡配置命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
-
-<p>下图中划红线处需要修改为<code>ONBOOT=yes</code>，按下i键进入编辑模式，修改后按ESC键退出编辑模式，输入 :wq（保存并退出），最后按下回车键即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050844.jpg" alt="img"></p>
-<p>最后输入命令ip addr查看即可</p>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea配置Tomcat</title>
     <url>/148.html</url>
     <content><![CDATA[<h3 id="打开配置界面"><a href="#打开配置界面" class="headerlink" title="打开配置界面"></a>打开配置界面</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615051928.jpg" alt="img"></p>
@@ -1674,6 +1654,26 @@
       <tags>
         <tag>Tomcat</tag>
         <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>查看CentOS7的IP</title>
+    <url>/149.html</url>
+    <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050531.jpg" alt="img"></p>
+<h3 id="修改ens33网卡的配置"><a href="#修改ens33网卡的配置" class="headerlink" title="修改ens33网卡的配置"></a>修改ens33网卡的配置</h3><p>查看网卡配置命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
+
+<p>下图中划红线处需要修改为<code>ONBOOT=yes</code>，按下i键进入编辑模式，修改后按ESC键退出编辑模式，输入 :wq（保存并退出），最后按下回车键即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050844.jpg" alt="img"></p>
+<p>最后输入命令ip addr查看即可</p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
       </tags>
   </entry>
   <entry>
@@ -2221,53 +2221,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Redis使用连接池</title>
-    <url>/162.html</url>
-    <content><![CDATA[<h3 id="池化的基本思想"><a href="#池化的基本思想" class="headerlink" title="池化的基本思想"></a>池化的基本思想</h3><ol>
-<li><p>可以在初始化的时候创建一些对象，当有需要使用的时候直接从池中获取，提高响应速度；</p>
-</li>
-<li><p>使用过的对象不进行销毁，保存起来，等下一次需要对象的时候，拿出来重复使用，减少频繁创建对象所造成的销；</p>
-</li>
-<li><p>创建的对象统一保存，方面管理和维护。</p>
-</li>
-</ol>
-<h3 id="池化好处总结"><a href="#池化好处总结" class="headerlink" title="池化好处总结"></a>池化好处总结</h3><ol>
-<li><p>提高响应的速度</p>
-</li>
-<li><p>降低资源的消耗</p>
-</li>
-<li><p>方便管理和维护</p>
-</li>
-</ol>
-<p>Jedis连接的就是连接池中JedisPool管理的资源，JedisPool保证资源在一个可控范围内，并且保障线程安全。使用合理的GenericObjectPoolConfig配置能够提升Redis的服务性能，降低资源开销。</p>
-<h3 id="重要参数"><a href="#重要参数" class="headerlink" title="重要参数"></a>重要参数</h3><p>下列两表将对一些重要参数进行说明</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620090617.jpg" alt="img"></p>
-<p>空闲Jedis对象检测由下列四个参数组合完成，testWhileIdle是该功能的开关。</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620090627.jpg" alt="img"></p>
-<p>可以在org.apache.commons.pool2.impl.BaseObjectPoolConfig中查看全部默认值。</p>
-<h3 id="关键参数设置建议"><a href="#关键参数设置建议" class="headerlink" title="关键参数设置建议"></a>关键参数设置建议</h3><h4 id="maxTotal（最大连接数）"><a href="#maxTotal（最大连接数）" class="headerlink" title="maxTotal（最大连接数）"></a>maxTotal（最大连接数）</h4><p>想合理设置maxTotal（最大连接数）需要考虑的因素较多，如：</p>
-<ol>
-<li>业务希望的Redis并发量</li>
-<li>客户端执行命令时间</li>
-<li>Redis资源，例如nodes（如应用个数等），maxTotal不能超过Redis的最大连接数</li>
-<li>资源开销，例如虽然希望控制空闲连接，但又不希望因为连接池中频繁地释放和创建连接造成不必要的开销</li>
-</ol>
-<p>假设一次命令时间，即borrow|return resource加上Jedis执行命令 （ 含网络耗时）的平均耗时约为1ms，一个连接的QPS大约是1000，业务期望的QPS是50000，那么理论上需要的资源池大小是50000 / 1000 = 50。但事实上这只是个理论值，除此之外还要预留一些资源，所以maxTotal可以比理论值大一些。这个值不是越大越好，一方面连接太多会占用客户端和服务端资源，另一方面对于Redis这种高QPS的服务器，如果出现大命令的阻塞，即使设置再大的资源池也无济于事。</p>
-<h4 id="maxIdle与minIdle"><a href="#maxIdle与minIdle" class="headerlink" title="maxIdle与minIdle"></a>maxIdle与minIdle</h4><p>maxIdle实际上才是业务需要的最大连接数，maxTotal 是为了给出余量，所以 maxIdle 不要设置得过小，否则会有new Jedis（新连接）开销，而minIdle是为了控制空闲资源检测。连接池的最佳性能是maxTotal=maxIdle，这样就避免了连接池伸缩带来的性能干扰。但如果并发量不大或者maxTotal设置过高，则会导致不必要的连接资源浪费，您可以根据实际总QPS和调用Redis的客户端规模整体评估每个节点所使用的连接池大小。</p>
-<h4 id="使用监控获取合理值"><a href="#使用监控获取合理值" class="headerlink" title="使用监控获取合理值"></a>使用监控获取合理值</h4><p>在实际环境中，比较可靠的方法是通过监控来尝试获取参数的最佳值。可以考虑通过JMX等方式实现监控，从而找到合理值。</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        jedisPoolConfig.setMaxTotal(<span class="number">100</span>);</span><br><span class="line">        jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line">        JedisPool jedisPool = <span class="keyword">new</span> JedisPool(jedisPoolConfig, <span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        Jedis jedis = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            jedis = jedisPool.getResource();</span><br><span class="line">            jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">            jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">            String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">            System.out.println(value);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) &#123;</span><br><span class="line">                jedis.close();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (jedisPool != <span class="keyword">null</span>) &#123;</span><br><span class="line">                jedisPool.close();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/u010648555/article/details/103858684">掌握JedisPoolConfig参数配置，学会调优技能_阿飞云-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>实现Jedis连接</title>
     <url>/161.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2308,6 +2261,53 @@
 ]]></content>
       <categories>
         <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis使用连接池</title>
+    <url>/162.html</url>
+    <content><![CDATA[<h3 id="池化的基本思想"><a href="#池化的基本思想" class="headerlink" title="池化的基本思想"></a>池化的基本思想</h3><ol>
+<li><p>可以在初始化的时候创建一些对象，当有需要使用的时候直接从池中获取，提高响应速度；</p>
+</li>
+<li><p>使用过的对象不进行销毁，保存起来，等下一次需要对象的时候，拿出来重复使用，减少频繁创建对象所造成的销；</p>
+</li>
+<li><p>创建的对象统一保存，方面管理和维护。</p>
+</li>
+</ol>
+<h3 id="池化好处总结"><a href="#池化好处总结" class="headerlink" title="池化好处总结"></a>池化好处总结</h3><ol>
+<li><p>提高响应的速度</p>
+</li>
+<li><p>降低资源的消耗</p>
+</li>
+<li><p>方便管理和维护</p>
+</li>
+</ol>
+<p>Jedis连接的就是连接池中JedisPool管理的资源，JedisPool保证资源在一个可控范围内，并且保障线程安全。使用合理的GenericObjectPoolConfig配置能够提升Redis的服务性能，降低资源开销。</p>
+<h3 id="重要参数"><a href="#重要参数" class="headerlink" title="重要参数"></a>重要参数</h3><p>下列两表将对一些重要参数进行说明</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620090617.jpg" alt="img"></p>
+<p>空闲Jedis对象检测由下列四个参数组合完成，testWhileIdle是该功能的开关。</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620090627.jpg" alt="img"></p>
+<p>可以在org.apache.commons.pool2.impl.BaseObjectPoolConfig中查看全部默认值。</p>
+<h3 id="关键参数设置建议"><a href="#关键参数设置建议" class="headerlink" title="关键参数设置建议"></a>关键参数设置建议</h3><h4 id="maxTotal（最大连接数）"><a href="#maxTotal（最大连接数）" class="headerlink" title="maxTotal（最大连接数）"></a>maxTotal（最大连接数）</h4><p>想合理设置maxTotal（最大连接数）需要考虑的因素较多，如：</p>
+<ol>
+<li>业务希望的Redis并发量</li>
+<li>客户端执行命令时间</li>
+<li>Redis资源，例如nodes（如应用个数等），maxTotal不能超过Redis的最大连接数</li>
+<li>资源开销，例如虽然希望控制空闲连接，但又不希望因为连接池中频繁地释放和创建连接造成不必要的开销</li>
+</ol>
+<p>假设一次命令时间，即borrow|return resource加上Jedis执行命令 （ 含网络耗时）的平均耗时约为1ms，一个连接的QPS大约是1000，业务期望的QPS是50000，那么理论上需要的资源池大小是50000 / 1000 = 50。但事实上这只是个理论值，除此之外还要预留一些资源，所以maxTotal可以比理论值大一些。这个值不是越大越好，一方面连接太多会占用客户端和服务端资源，另一方面对于Redis这种高QPS的服务器，如果出现大命令的阻塞，即使设置再大的资源池也无济于事。</p>
+<h4 id="maxIdle与minIdle"><a href="#maxIdle与minIdle" class="headerlink" title="maxIdle与minIdle"></a>maxIdle与minIdle</h4><p>maxIdle实际上才是业务需要的最大连接数，maxTotal 是为了给出余量，所以 maxIdle 不要设置得过小，否则会有new Jedis（新连接）开销，而minIdle是为了控制空闲资源检测。连接池的最佳性能是maxTotal=maxIdle，这样就避免了连接池伸缩带来的性能干扰。但如果并发量不大或者maxTotal设置过高，则会导致不必要的连接资源浪费，您可以根据实际总QPS和调用Redis的客户端规模整体评估每个节点所使用的连接池大小。</p>
+<h4 id="使用监控获取合理值"><a href="#使用监控获取合理值" class="headerlink" title="使用监控获取合理值"></a>使用监控获取合理值</h4><p>在实际环境中，比较可靠的方法是通过监控来尝试获取参数的最佳值。可以考虑通过JMX等方式实现监控，从而找到合理值。</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPool;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.JedisPoolConfig;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        jedisPoolConfig.setMaxTotal(<span class="number">100</span>);</span><br><span class="line">        jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line">        JedisPool jedisPool = <span class="keyword">new</span> JedisPool(jedisPoolConfig, <span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        Jedis jedis = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            jedis = jedisPool.getResource();</span><br><span class="line">            jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">            jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">            String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">            System.out.println(value);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (jedis != <span class="keyword">null</span>) &#123;</span><br><span class="line">                jedis.close();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (jedisPool != <span class="keyword">null</span>) &#123;</span><br><span class="line">                jedisPool.close();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/u010648555/article/details/103858684">掌握JedisPoolConfig参数配置，学会调优技能_阿飞云-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>Redis</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -3158,6 +3158,24 @@
       </tags>
   </entry>
   <entry>
+    <title>常量</title>
+    <url>/19.html</url>
+    <content><![CDATA[<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>常量表示不能改变的数值</p>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p>整数常量：所有整数</p>
+<p>小数常量：所有小数</p>
+<p>布尔（boolean）型常量：只有两个数值，true、false</p>
+<p>字符常量：将一个数字字母或者符号用单引号（ ‘ ‘ ）标识，如：’a’</p>
+<p>字符串常量：将一个或者多个字符用双引号（””）标识，如：”hello world”、”a”、””（空字符串）。</p>
+<p>null常量：只有一个数值就是：null</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue.js表单</title>
     <url>/189.html</url>
     <content><![CDATA[<p>用 v-model 指令在表单控件元素上创建双向数据绑定</p>
@@ -3180,24 +3198,6 @@
       </categories>
       <tags>
         <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常量</title>
-    <url>/19.html</url>
-    <content><![CDATA[<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>常量表示不能改变的数值</p>
-<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p>整数常量：所有整数</p>
-<p>小数常量：所有小数</p>
-<p>布尔（boolean）型常量：只有两个数值，true、false</p>
-<p>字符常量：将一个数字字母或者符号用单引号（ ‘ ‘ ）标识，如：’a’</p>
-<p>字符串常量：将一个或者多个字符用双引号（””）标识，如：”hello world”、”a”、””（空字符串）。</p>
-<p>null常量：只有一个数值就是：null</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -4250,28 +4250,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MyBatis-Plus Mapper CRUD 接口之Delete</title>
-    <url>/228.html</url>
-    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 entity 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">delete</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; wrapper)</span></span>;</span><br><span class="line"><span class="comment">// 删除（根据ID 批量删除）</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteBatchIds</span><span class="params">(<span class="meta">@Param(Constants.COLLECTION)</span> Collection&lt;? extends Serializable&gt; idList)</span></span>;</span><br><span class="line"><span class="comment">// 根据 ID 删除</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteById</span><span class="params">(Serializable id)</span></span>;</span><br><span class="line"><span class="comment">// 根据 columnMap 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteByMap</span><span class="params">(<span class="meta">@Param(Constants.COLUMN_MAP)</span> Map&lt;String, Object&gt; columnMap)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><h4 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.eq(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;spring&quot;</span>);</span><br><span class="line">	blogTypeMapper.delete(blogTypeQueryWrapper);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="deleteBatchIds"><a href="#deleteBatchIds" class="headerlink" title="deleteBatchIds"></a>deleteBatchIds</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteBatchIds</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	List&lt;Integer&gt; idList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	idList.add(<span class="number">29</span>);</span><br><span class="line">	idList.add(<span class="number">30</span>);</span><br><span class="line">	idList.add(<span class="number">31</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteBatchIds(idList);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="deleteById"><a href="#deleteById" class="headerlink" title="deleteById"></a>deleteById</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteById(<span class="number">32</span>);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="deleteByMap"><a href="#deleteByMap" class="headerlink" title="deleteByMap"></a>deleteByMap</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteByMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;name&quot;</span>, <span class="number">1</span>);</span><br><span class="line">	map.put(<span class="string">&quot;sortNum&quot;</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteByMap(map);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>MyBatis-Plus</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>MyBatis-Plus</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MyBatis-Plus 自定义SQL</title>
     <url>/227.html</url>
     <content><![CDATA[<h3 id="自定义SQL的方式"><a href="#自定义SQL的方式" class="headerlink" title="自定义SQL的方式"></a>自定义SQL的方式</h3><p>①Annotation注解方式</p>
@@ -4294,6 +4272,28 @@
 <p>5、结果</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210723101956.jpg" alt="img"></p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.jianshu.com/p/c0dd01a82fcc">https://www.jianshu.com/p/c0dd01a82fcc</a></p>
+]]></content>
+      <categories>
+        <category>MyBatis-Plus</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MyBatis-Plus</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis-Plus Mapper CRUD 接口之Delete</title>
+    <url>/228.html</url>
+    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 entity 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">delete</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; wrapper)</span></span>;</span><br><span class="line"><span class="comment">// 删除（根据ID 批量删除）</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteBatchIds</span><span class="params">(<span class="meta">@Param(Constants.COLLECTION)</span> Collection&lt;? extends Serializable&gt; idList)</span></span>;</span><br><span class="line"><span class="comment">// 根据 ID 删除</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteById</span><span class="params">(Serializable id)</span></span>;</span><br><span class="line"><span class="comment">// 根据 columnMap 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteByMap</span><span class="params">(<span class="meta">@Param(Constants.COLUMN_MAP)</span> Map&lt;String, Object&gt; columnMap)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><h4 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.eq(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;spring&quot;</span>);</span><br><span class="line">	blogTypeMapper.delete(blogTypeQueryWrapper);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="deleteBatchIds"><a href="#deleteBatchIds" class="headerlink" title="deleteBatchIds"></a>deleteBatchIds</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteBatchIds</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	List&lt;Integer&gt; idList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	idList.add(<span class="number">29</span>);</span><br><span class="line">	idList.add(<span class="number">30</span>);</span><br><span class="line">	idList.add(<span class="number">31</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteBatchIds(idList);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="deleteById"><a href="#deleteById" class="headerlink" title="deleteById"></a>deleteById</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteById(<span class="number">32</span>);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="deleteByMap"><a href="#deleteByMap" class="headerlink" title="deleteByMap"></a>deleteByMap</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteByMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;name&quot;</span>, <span class="number">1</span>);</span><br><span class="line">	map.put(<span class="string">&quot;sortNum&quot;</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteByMap(map);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>MyBatis-Plus</category>
@@ -4732,31 +4732,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo常用命令</title>
-    <url>/242.html</url>
-    <content><![CDATA[<h3 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h3><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p>
-<p>在某些情况（尤其是更换主题后），如果对站点的更改无论如何也不生效，就运行该命令。</p>
-<h3 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h3><p>生成静态文件</p>
-<p>是hexo generate的简写</p>
-<h3 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h3><p>部署网站，同时将网站的改动提交到GitHub仓库</p>
-<p>是hexo deploy的简写</p>
-<h3 id="hexo-g-d"><a href="#hexo-g-d" class="headerlink" title="hexo g -d"></a>hexo g -d</h3><p><code>hexo g</code>和<code>hexo d</code>先后执行</p>
-<h3 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h3><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
-<p>是hexo server的简写</p>
-<h3 id="hexo-v"><a href="#hexo-v" class="headerlink" title="hexo v"></a>hexo v</h3><p>显示hexo的版本</p>
-<p>是hexo version的简写</p>
-<h3 id="hexo-new-“文章名称”"><a href="#hexo-new-“文章名称”" class="headerlink" title="hexo new “文章名称”"></a>hexo new “文章名称”</h3><p>新建一个<font color="#dd0000">文章名称.md</font>，该文件在站点根目录的<font color="#dd0000">source/_post/</font>中</p>
-<h3 id="hexo-new-page-“名称”"><a href="#hexo-new-page-“名称”" class="headerlink" title="hexo new page “名称”"></a>hexo new page “名称”</h3><p>新建一个页面，这个页面在站点根目录的<code>source/名称/</code>中（名为index.md），可以通过<code>/名称/</code>访问这个页面</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>以上都是我常用的命令，更多命令及详情查看：<a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo next创建标签页</title>
     <url>/243.html</url>
     <content><![CDATA[<h3 id="创建命令"><a href="#创建命令" class="headerlink" title="创建命令"></a>创建命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;tags&quot;</span></span><br></pre></td></tr></table></figure>
@@ -4777,6 +4752,31 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">主页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="comment">#日期: /time/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20132524.png"></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo常用命令</title>
+    <url>/242.html</url>
+    <content><![CDATA[<h3 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h3><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p>
+<p>在某些情况（尤其是更换主题后），如果对站点的更改无论如何也不生效，就运行该命令。</p>
+<h3 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h3><p>生成静态文件</p>
+<p>是hexo generate的简写</p>
+<h3 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h3><p>部署网站，同时将网站的改动提交到GitHub仓库</p>
+<p>是hexo deploy的简写</p>
+<h3 id="hexo-g-d"><a href="#hexo-g-d" class="headerlink" title="hexo g -d"></a>hexo g -d</h3><p><code>hexo g</code>和<code>hexo d</code>先后执行</p>
+<h3 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h3><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p>是hexo server的简写</p>
+<h3 id="hexo-v"><a href="#hexo-v" class="headerlink" title="hexo v"></a>hexo v</h3><p>显示hexo的版本</p>
+<p>是hexo version的简写</p>
+<h3 id="hexo-new-“文章名称”"><a href="#hexo-new-“文章名称”" class="headerlink" title="hexo new “文章名称”"></a>hexo new “文章名称”</h3><p>新建一个<font color="#dd0000">文章名称.md</font>，该文件在站点根目录的<font color="#dd0000">source/_post/</font>中</p>
+<h3 id="hexo-new-page-“名称”"><a href="#hexo-new-page-“名称”" class="headerlink" title="hexo new page “名称”"></a>hexo new page “名称”</h3><p>新建一个页面，这个页面在站点根目录的<code>source/名称/</code>中（名为index.md），可以通过<code>/名称/</code>访问这个页面</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>以上都是我常用的命令，更多命令及详情查看：<a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -6171,39 +6171,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Config配置搜索路径</title>
-    <url>/289.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当配置文件一多，如果配置文件只放在根目录下，后期会不好管理，所以根据项目分类配置文件是很有必要的</p>
-<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在microservice-config-server-4001项目的application.yml文件中配置search-paths</p>
-<p>完整application.yml如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">4001</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-config</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">config:</span></span><br><span class="line">      <span class="attr">server:</span></span><br><span class="line">        <span class="attr">git:</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">https://github.com/a6678696/microservice-config</span></span><br><span class="line">          <span class="attr">search-paths:</span> <span class="comment">#后面接文件夹名称,没有配置的文件夹里的配置文件是访问不到的</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">aa</span> <span class="comment">#文件夹名称</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">bb</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>新建三个文件夹：aa、bb、cc，文件夹中分别放3个配置文件 nns.yml，nns2.yml，nns3.yml，上传这三个配置文件到GitHub的microservice-config库中，文件内容如下：</p>
-<mark class="hl-label blue">nns.yml</mark> 
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaadev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaatest</span></span><br></pre></td></tr></table></figure>
-
-<mark class="hl-label blue">nns2.yml</mark> 
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbtest</span></span><br></pre></td></tr></table></figure>
-
-<mark class="hl-label blue">nns3.yml</mark> 
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">cccdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">ccctest</span></span><br></pre></td></tr></table></figure>
-
-<p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns-dev.yml">http://configserver.ledao.com:4001/nns-dev.yml</a> ，访问到了，有name属性</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011929.png"></p>
-<p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns3-dev.yml">http://configserver.ledao.com:4001/nns3-dev.yml</a> ，没有访问到了，没有name属性</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011947.png"></p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Config Client</title>
     <url>/288.html</url>
     <content><![CDATA[<h3 id="上传文件到GitHub"><a href="#上传文件到GitHub" class="headerlink" title="上传文件到GitHub"></a>上传文件到GitHub</h3><p>把之前上传到GitHub的microservice-config库中的文件都删除掉，再新建三个文件：application.yml、crm-dev.yml、crm-test.yml，然后上传到GitHub的microservice-config库中</p>
@@ -6250,6 +6217,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Config配置搜索路径</title>
+    <url>/289.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当配置文件一多，如果配置文件只放在根目录下，后期会不好管理，所以根据项目分类配置文件是很有必要的</p>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在microservice-config-server-4001项目的application.yml文件中配置search-paths</p>
+<p>完整application.yml如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">4001</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-config</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">config:</span></span><br><span class="line">      <span class="attr">server:</span></span><br><span class="line">        <span class="attr">git:</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">https://github.com/a6678696/microservice-config</span></span><br><span class="line">          <span class="attr">search-paths:</span> <span class="comment">#后面接文件夹名称,没有配置的文件夹里的配置文件是访问不到的</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">aa</span> <span class="comment">#文件夹名称</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">bb</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>新建三个文件夹：aa、bb、cc，文件夹中分别放3个配置文件 nns.yml，nns2.yml，nns3.yml，上传这三个配置文件到GitHub的microservice-config库中，文件内容如下：</p>
+<mark class="hl-label blue">nns.yml</mark> 
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaadev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaatest</span></span><br></pre></td></tr></table></figure>
+
+<mark class="hl-label blue">nns2.yml</mark> 
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbtest</span></span><br></pre></td></tr></table></figure>
+
+<mark class="hl-label blue">nns3.yml</mark> 
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">cccdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">ccctest</span></span><br></pre></td></tr></table></figure>
+
+<p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns-dev.yml">http://configserver.ledao.com:4001/nns-dev.yml</a> ，访问到了，有name属性</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011929.png"></p>
+<p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns3-dev.yml">http://configserver.ledao.com:4001/nns3-dev.yml</a> ，没有访问到了，没有name属性</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011947.png"></p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>idea连接MySQL数据库</title>
     <url>/29.html</url>
     <content><![CDATA[<h3 id="选择数据库类型"><a href="#选择数据库类型" class="headerlink" title="选择数据库类型"></a>选择数据库类型</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018003753.jpg" alt="img"></p>
@@ -6263,6 +6263,31 @@
       <tags>
         <tag>MySQL</tag>
         <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker配置阿里云镜像仓库</title>
+    <url>/291.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Docker默认远程仓库是 <a href="https://hub.docker.com/">https://hub.docker.com/</a> ，下载速度会很慢，所以要配置一下国内镜像</p>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><h4 id="获取镜像地址"><a href="#获取镜像地址" class="headerlink" title="获取镜像地址"></a>获取镜像地址</h4><p>进入阿里云容器镜像服务地址：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">点这里快速进入</a>，登录后复制镜像仓库地址</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20200741.png"></p>
+<h4 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h4><p>在/etc/docker文件夹下新建一个名为 <mark class="hl-label blue">daemon.json</mark>  的配置文件，内容如下：（链接填自己的）</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://*********.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启daemon"><a href="#重启daemon" class="headerlink" title="重启daemon"></a>重启daemon</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>下载一个tomcat，命令为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
+
+<p>发现速度快了很多</p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -6302,31 +6327,6 @@
       </categories>
       <tags>
         <tag>CentOS7</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker配置阿里云镜像仓库</title>
-    <url>/291.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Docker默认远程仓库是 <a href="https://hub.docker.com/">https://hub.docker.com/</a> ，下载速度会很慢，所以要配置一下国内镜像</p>
-<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><h4 id="获取镜像地址"><a href="#获取镜像地址" class="headerlink" title="获取镜像地址"></a>获取镜像地址</h4><p>进入阿里云容器镜像服务地址：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">点这里快速进入</a>，登录后复制镜像仓库地址</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20200741.png"></p>
-<h4 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h4><p>在/etc/docker文件夹下新建一个名为 <mark class="hl-label blue">daemon.json</mark>  的配置文件，内容如下：（链接填自己的）</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://*********.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启daemon"><a href="#重启daemon" class="headerlink" title="重启daemon"></a>重启daemon</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>下载一个tomcat，命令为：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
-
-<p>发现速度快了很多</p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
         <tag>Docker</tag>
       </tags>
   </entry>
@@ -7047,8 +7047,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Tomcat</tag>
         <tag>Java</tag>
+        <tag>Tomcat</tag>
         <tag>Docker</tag>
       </tags>
   </entry>
@@ -7248,6 +7248,22 @@
       </tags>
   </entry>
   <entry>
+    <title>DockerFile创建镜像时报错：file not found in build context or excluded by</title>
+    <url>/307.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
+<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>DockerFile</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载</title>
     <url>/308.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>DockerFile创建镜像时通过VOLUME指令创建几个容器卷，然后创建这个镜像的容器时，这个容器就有了这几个容器卷目录，并与宿主机自动创建的对应目录实现了挂载</p>
@@ -7270,22 +7286,6 @@
 <p>找到Mounts节点，Source为宿主机的目录，Destination为容器的目录，两个目录是挂载的</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040846.jpg"></p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>docker run -v 命令创建挂载目录更好，可以自定义宿主机目录</p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>DockerFile</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DockerFile创建镜像时报错：file not found in build context or excluded by</title>
-    <url>/307.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
-<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -10153,6 +10153,63 @@
       </tags>
   </entry>
   <entry>
+    <title>Java实现写数据到Excel</title>
+    <url>/376.html</url>
+    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>easyexcel<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi-ooxml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="一般数据插入"><a href="#一般数据插入" class="headerlink" title="一般数据插入"></a>一般数据插入</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.write.style.column.LongestMatchColumnWidthStyleStrategy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//生成的excel表名</span></span><br><span class="line">        String fileName = <span class="string">&quot;E:\\测试.xlsx&quot;</span>;</span><br><span class="line">        <span class="comment">//插入列名</span></span><br><span class="line">        List&lt;List&lt;String&gt;&gt; head = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        List&lt;String&gt; head0 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        head0.add(<span class="string">&quot;姓名&quot;</span>);</span><br><span class="line">        List&lt;String&gt; head1 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        head1.add(<span class="string">&quot;年龄&quot;</span>);</span><br><span class="line">        List&lt;String&gt; head2 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        head2.add(<span class="string">&quot;生日&quot;</span>);</span><br><span class="line">        head.add(head0);</span><br><span class="line">        head.add(head1);</span><br><span class="line">        head.add(head2);</span><br><span class="line">        <span class="comment">//插入数据</span></span><br><span class="line">        List&lt;List&lt;Object&gt;&gt; datalist = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            List&lt;Object&gt; data = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            data.add(<span class="string">&quot;张三&quot;</span> + i);</span><br><span class="line">            data.add(<span class="number">11</span>);</span><br><span class="line">            data.add(<span class="keyword">new</span> Date());</span><br><span class="line">            datalist.add(data);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//开始生成excel表</span></span><br><span class="line">        EasyExcel.write(fileName).head(head).registerWriteHandler(<span class="keyword">new</span> LongestMatchColumnWidthStyleStrategy()).sheet().doWrite(datalist);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用对象"><a href="#使用对象" class="headerlink" title="使用对象"></a>使用对象</h4><h5 id="自定义列名"><a href="#自定义列名" class="headerlink" title="自定义列名"></a>自定义列名</h5><p>实体类的字段上使用 @ExcelProperty 注解，例如：<font color="#dd0000">@ExcelProperty(value = “编号”)</font></p>
+<blockquote>
+<p>Link实体类代码如下</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelIgnore;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-20 8:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Link</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;编号&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接名称&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String linkName;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接地址&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String linkUrl;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkName</span><span class="params">(String linkName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkName = linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkUrl</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkUrl</span><span class="params">(String linkUrl)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkUrl = linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>测试类代码如下</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.write.style.column.LongestMatchColumnWidthStyleStrategy;</span><br><span class="line"><span class="keyword">import</span> entity.Link;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String fileName = <span class="string">&quot;E:\\测试.xlsx&quot;</span>;</span><br><span class="line">        List&lt;Link&gt; linkList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            Link link = <span class="keyword">new</span> Link();</span><br><span class="line">            link.setId(i);</span><br><span class="line">            link.setLinkName(<span class="string">&quot;LeDao的博客&quot;</span>+i);</span><br><span class="line">            link.setLinkUrl(<span class="string">&quot;https://blog.zoutl.cn&quot;</span>);</span><br><span class="line">            linkList.add(link);</span><br><span class="line">        &#125;</span><br><span class="line">        EasyExcel.write(fileName, Link.class).registerWriteHandler(<span class="keyword">new</span> LongestMatchColumnWidthStyleStrategy()).sheet().doWrite(linkList);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="忽略字段"><a href="#忽略字段" class="headerlink" title="忽略字段"></a>忽略字段</h5><p>实体类的字段上使用 @ExcelIgnore 注解即可，下面代码中的 id 已被忽略，不会写到 Excel 表中</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelIgnore;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-20 8:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Link</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExcelIgnore</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接名称&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String linkName;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接地址&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String linkUrl;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkName</span><span class="params">(String linkName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkName = linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkUrl</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkUrl</span><span class="params">(String linkUrl)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkUrl = linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="写入指定的列"><a href="#写入指定的列" class="headerlink" title="写入指定的列"></a>写入指定的列</h5><p>在实体类的字段上使用 @ExcelProperty 注解，并使用 index 参数，第一列为 0</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelIgnore;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-20 8:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Link</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;编号&quot;, index = 0)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接名称&quot;, index = 1)</span></span><br><span class="line">    <span class="keyword">private</span> String linkName;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接地址&quot;, index = 2)</span></span><br><span class="line">    <span class="keyword">private</span> String linkUrl;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkName</span><span class="params">(String linkName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkName = linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkUrl</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkUrl</span><span class="params">(String linkUrl)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkUrl = linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="在模板后追加数据"><a href="#在模板后追加数据" class="headerlink" title="在模板后追加数据"></a>在模板后追加数据</h5><p>下面的代码是直接在 <font color="#dd0000">测试.xlsx</font> 的基础上追加数据，然后生成了<font color="#00dd00"> 测试2.xlsx </font>，不要在 EasyExcel.write() 方法中传入对象，不然又会生成新的表头</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> entity.Link;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String templateName = <span class="string">&quot;E:\\测试.xlsx&quot;</span>;</span><br><span class="line">        String fileName = <span class="string">&quot;E:\\测试2.xlsx&quot;</span>;</span><br><span class="line">        List&lt;Link&gt; linkList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            Link link = <span class="keyword">new</span> Link();</span><br><span class="line">            link.setId(i);</span><br><span class="line">            link.setLinkName(<span class="string">&quot;LeDao的博客&quot;</span> + i);</span><br><span class="line">            link.setLinkUrl(<span class="string">&quot;https://blog.zoutl.cn&quot;</span>);</span><br><span class="line">            linkList.add(link);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//只传文件路径，不传对象，如果传了对象又会生成新的表头</span></span><br><span class="line">        EasyExcel.write(fileName).withTemplate(templateName).sheet().doWrite(linkList);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java实现从Excel读取数据</title>
+    <url>/377.html</url>
+    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>easyexcel<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi-ooxml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/fastjson --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.78<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="定义监听器"><a href="#定义监听器" class="headerlink" title="定义监听器"></a>定义监听器</h4><p>定义一个监听器继承 AnalysisEventListener 类</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.context.AnalysisContext;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.event.AnalysisEventListener;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.EqualsAndHashCode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@EqualsAndHashCode(callSuper = true)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExcelListener</span> <span class="keyword">extends</span> <span class="title">AnalysisEventListener</span>&lt;<span class="title">Object</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 自定义用于暂时存储data</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;JSONObject&gt; dataList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 导入表头</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, Integer&gt; importHeads = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这个每一条数据解析都会来调用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invoke</span><span class="params">(Object data, AnalysisContext context)</span> </span>&#123;</span><br><span class="line">        String headStr = JSON.toJSONString(data);</span><br><span class="line">        dataList.add(JSONObject.parseObject(headStr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这里会一行行的返回头</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invokeHeadMap</span><span class="params">(Map&lt;Integer, String&gt; headMap, AnalysisContext context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (Integer key : headMap.keySet()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (importHeads.containsKey(headMap.get(key))) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            importHeads.put(headMap.get(key), key);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 所有数据解析完成了 都会来调用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doAfterAllAnalysed</span><span class="params">(AnalysisContext context)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//读取Excel的文件位置</span></span><br><span class="line">        String fileName = <span class="string">&quot;E:\\测试.xlsx&quot;</span>;</span><br><span class="line">        ExcelListener excelListener = <span class="keyword">new</span> ExcelListener();</span><br><span class="line">        EasyExcel.read(fileName, excelListener).sheet().doRead();</span><br><span class="line">        <span class="comment">//表格头数据</span></span><br><span class="line">        Map&lt;String, Integer&gt; heads = excelListener.getImportHeads();</span><br><span class="line">        System.out.println(heads);</span><br><span class="line">        <span class="comment">//每一行数据</span></span><br><span class="line">        List&lt;JSONObject&gt; dataList = excelListener.getDataList();</span><br><span class="line">        <span class="keyword">for</span> (JSONObject jsonObject : dataList) &#123;</span><br><span class="line">            System.out.println(jsonObject);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><h5 id="表格数据"><a href="#表格数据" class="headerlink" title="表格数据"></a>表格数据</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-26%20193249.png"></p>
+<h5 id="读取的结果"><a href="#读取的结果" class="headerlink" title="读取的结果"></a>读取的结果</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-26%20193318.jpg"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>上面是直接读取电脑磁盘上的 Excel 表，也可以读取前端上传的 Excel 表</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;upload&quot;)</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">upload</span><span class="params">(MultipartFile file)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">   ExcelListener excelListener = <span class="keyword">new</span> ExcelListener();</span><br><span class="line">   EasyExcel.read(file.getInputStream(), excelListener).sheet().doRead();</span><br><span class="line">   <span class="comment">//表格头数据</span></span><br><span class="line">   Map&lt;String, Integer&gt; heads = excelListener.getImportHeads();</span><br><span class="line">   <span class="comment">//每一行数据</span></span><br><span class="line">   List&lt;JSONObject&gt; dataList = excelListener.getDataList();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL使用存储过程</title>
     <url>/375.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>存储过程简单来说，就是为以后的使用而保存的一条或多条MySQL语句的集合。可将其视为批文件，虽然它们的作用不仅限于批处理。</p>
@@ -10216,63 +10273,6 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java实现写数据到Excel</title>
-    <url>/376.html</url>
-    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>easyexcel<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi-ooxml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="一般数据插入"><a href="#一般数据插入" class="headerlink" title="一般数据插入"></a>一般数据插入</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.write.style.column.LongestMatchColumnWidthStyleStrategy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//生成的excel表名</span></span><br><span class="line">        String fileName = <span class="string">&quot;E:\\测试.xlsx&quot;</span>;</span><br><span class="line">        <span class="comment">//插入列名</span></span><br><span class="line">        List&lt;List&lt;String&gt;&gt; head = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        List&lt;String&gt; head0 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        head0.add(<span class="string">&quot;姓名&quot;</span>);</span><br><span class="line">        List&lt;String&gt; head1 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        head1.add(<span class="string">&quot;年龄&quot;</span>);</span><br><span class="line">        List&lt;String&gt; head2 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        head2.add(<span class="string">&quot;生日&quot;</span>);</span><br><span class="line">        head.add(head0);</span><br><span class="line">        head.add(head1);</span><br><span class="line">        head.add(head2);</span><br><span class="line">        <span class="comment">//插入数据</span></span><br><span class="line">        List&lt;List&lt;Object&gt;&gt; datalist = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            List&lt;Object&gt; data = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">            data.add(<span class="string">&quot;张三&quot;</span> + i);</span><br><span class="line">            data.add(<span class="number">11</span>);</span><br><span class="line">            data.add(<span class="keyword">new</span> Date());</span><br><span class="line">            datalist.add(data);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//开始生成excel表</span></span><br><span class="line">        EasyExcel.write(fileName).head(head).registerWriteHandler(<span class="keyword">new</span> LongestMatchColumnWidthStyleStrategy()).sheet().doWrite(datalist);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用对象"><a href="#使用对象" class="headerlink" title="使用对象"></a>使用对象</h4><h5 id="自定义列名"><a href="#自定义列名" class="headerlink" title="自定义列名"></a>自定义列名</h5><p>实体类的字段上使用 @ExcelProperty 注解，例如：<font color="#dd0000">@ExcelProperty(value = “编号”)</font></p>
-<blockquote>
-<p>Link实体类代码如下</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelIgnore;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-20 8:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Link</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;编号&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接名称&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String linkName;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接地址&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String linkUrl;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkName</span><span class="params">(String linkName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkName = linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkUrl</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkUrl</span><span class="params">(String linkUrl)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkUrl = linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>测试类代码如下</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.write.style.column.LongestMatchColumnWidthStyleStrategy;</span><br><span class="line"><span class="keyword">import</span> entity.Link;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String fileName = <span class="string">&quot;E:\\测试.xlsx&quot;</span>;</span><br><span class="line">        List&lt;Link&gt; linkList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            Link link = <span class="keyword">new</span> Link();</span><br><span class="line">            link.setId(i);</span><br><span class="line">            link.setLinkName(<span class="string">&quot;LeDao的博客&quot;</span>+i);</span><br><span class="line">            link.setLinkUrl(<span class="string">&quot;https://blog.zoutl.cn&quot;</span>);</span><br><span class="line">            linkList.add(link);</span><br><span class="line">        &#125;</span><br><span class="line">        EasyExcel.write(fileName, Link.class).registerWriteHandler(<span class="keyword">new</span> LongestMatchColumnWidthStyleStrategy()).sheet().doWrite(linkList);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="忽略字段"><a href="#忽略字段" class="headerlink" title="忽略字段"></a>忽略字段</h5><p>实体类的字段上使用 @ExcelIgnore 注解即可，下面代码中的 id 已被忽略，不会写到 Excel 表中</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelIgnore;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-20 8:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Link</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExcelIgnore</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接名称&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String linkName;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接地址&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String linkUrl;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkName</span><span class="params">(String linkName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkName = linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkUrl</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkUrl</span><span class="params">(String linkUrl)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkUrl = linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="写入指定的列"><a href="#写入指定的列" class="headerlink" title="写入指定的列"></a>写入指定的列</h5><p>在实体类的字段上使用 @ExcelProperty 注解，并使用 index 参数，第一列为 0</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelIgnore;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.annotation.ExcelProperty;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-07-20 8:22</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Link</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;编号&quot;, index = 0)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接名称&quot;, index = 1)</span></span><br><span class="line">    <span class="keyword">private</span> String linkName;</span><br><span class="line">    <span class="meta">@ExcelProperty(value = &quot;链接地址&quot;, index = 2)</span></span><br><span class="line">    <span class="keyword">private</span> String linkUrl;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkName</span><span class="params">(String linkName)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkName = linkName;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getLinkUrl</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLinkUrl</span><span class="params">(String linkUrl)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.linkUrl = linkUrl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h5 id="在模板后追加数据"><a href="#在模板后追加数据" class="headerlink" title="在模板后追加数据"></a>在模板后追加数据</h5><p>下面的代码是直接在 <font color="#dd0000">测试.xlsx</font> 的基础上追加数据，然后生成了<font color="#00dd00"> 测试2.xlsx </font>，不要在 EasyExcel.write() 方法中传入对象，不然又会生成新的表头</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> entity.Link;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String templateName = <span class="string">&quot;E:\\测试.xlsx&quot;</span>;</span><br><span class="line">        String fileName = <span class="string">&quot;E:\\测试2.xlsx&quot;</span>;</span><br><span class="line">        List&lt;Link&gt; linkList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            Link link = <span class="keyword">new</span> Link();</span><br><span class="line">            link.setId(i);</span><br><span class="line">            link.setLinkName(<span class="string">&quot;LeDao的博客&quot;</span> + i);</span><br><span class="line">            link.setLinkUrl(<span class="string">&quot;https://blog.zoutl.cn&quot;</span>);</span><br><span class="line">            linkList.add(link);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//只传文件路径，不传对象，如果传了对象又会生成新的表头</span></span><br><span class="line">        EasyExcel.write(fileName).withTemplate(templateName).sheet().doWrite(linkList);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java实现从Excel读取数据</title>
-    <url>/377.html</url>
-    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>easyexcel<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi-ooxml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/fastjson --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.78<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="定义监听器"><a href="#定义监听器" class="headerlink" title="定义监听器"></a>定义监听器</h4><p>定义一个监听器继承 AnalysisEventListener 类</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.context.AnalysisContext;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.excel.event.AnalysisEventListener;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"><span class="keyword">import</span> lombok.EqualsAndHashCode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@EqualsAndHashCode(callSuper = true)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExcelListener</span> <span class="keyword">extends</span> <span class="title">AnalysisEventListener</span>&lt;<span class="title">Object</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 自定义用于暂时存储data</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;JSONObject&gt; dataList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 导入表头</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, Integer&gt; importHeads = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这个每一条数据解析都会来调用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invoke</span><span class="params">(Object data, AnalysisContext context)</span> </span>&#123;</span><br><span class="line">        String headStr = JSON.toJSONString(data);</span><br><span class="line">        dataList.add(JSONObject.parseObject(headStr));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 这里会一行行的返回头</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">invokeHeadMap</span><span class="params">(Map&lt;Integer, String&gt; headMap, AnalysisContext context)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (Integer key : headMap.keySet()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (importHeads.containsKey(headMap.get(key))) &#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            importHeads.put(headMap.get(key), key);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 所有数据解析完成了 都会来调用</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doAfterAllAnalysed</span><span class="params">(AnalysisContext context)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="测试类"><a href="#测试类" class="headerlink" title="测试类"></a>测试类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.alibaba.excel.EasyExcel;</span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSONObject;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//读取Excel的文件位置</span></span><br><span class="line">        String fileName = <span class="string">&quot;E:\\测试.xlsx&quot;</span>;</span><br><span class="line">        ExcelListener excelListener = <span class="keyword">new</span> ExcelListener();</span><br><span class="line">        EasyExcel.read(fileName, excelListener).sheet().doRead();</span><br><span class="line">        <span class="comment">//表格头数据</span></span><br><span class="line">        Map&lt;String, Integer&gt; heads = excelListener.getImportHeads();</span><br><span class="line">        System.out.println(heads);</span><br><span class="line">        <span class="comment">//每一行数据</span></span><br><span class="line">        List&lt;JSONObject&gt; dataList = excelListener.getDataList();</span><br><span class="line">        <span class="keyword">for</span> (JSONObject jsonObject : dataList) &#123;</span><br><span class="line">            System.out.println(jsonObject);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><h5 id="表格数据"><a href="#表格数据" class="headerlink" title="表格数据"></a>表格数据</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-26%20193249.png"></p>
-<h5 id="读取的结果"><a href="#读取的结果" class="headerlink" title="读取的结果"></a>读取的结果</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-26%20193318.jpg"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>上面是直接读取电脑磁盘上的 Excel 表，也可以读取前端上传的 Excel 表</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;upload&quot;)</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">upload</span><span class="params">(MultipartFile file)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">   ExcelListener excelListener = <span class="keyword">new</span> ExcelListener();</span><br><span class="line">   EasyExcel.read(file.getInputStream(), excelListener).sheet().doRead();</span><br><span class="line">   <span class="comment">//表格头数据</span></span><br><span class="line">   Map&lt;String, Integer&gt; heads = excelListener.getImportHeads();</span><br><span class="line">   <span class="comment">//每一行数据</span></span><br><span class="line">   List&lt;JSONObject&gt; dataList = excelListener.getDataList();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -14566,6 +14566,24 @@
       </tags>
   </entry>
   <entry>
+    <title>==和equals的区别</title>
+    <url>/47.html</url>
+    <content><![CDATA[<h3 id=""><a href="#" class="headerlink" title="=="></a>==</h3><p>基本类型：比较的就是值是否相同</p>
+<p>引用类型：比较的就是地址值是否相同</p>
+<h3 id="equals"><a href="#equals" class="headerlink" title="equals"></a>equals</h3><p>引用类型：默认情况下，比较的是地址值，重写该方法后比较对象的成员变量值是否相同</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>基本类型：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201025174931.jpg" alt="img"></p>
+<p>引用类型：</p>
+<p>除掉这四类八种基本类型，其它的都是对象，也就是引用类型，包括数组。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MyBatis插入数据时获取自增的id</title>
     <url>/470.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当表的id被设计为自增时，插入数据后想获得新插入数据的id</p>
@@ -14602,24 +14620,6 @@
       </categories>
       <tags>
         <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>==和equals的区别</title>
-    <url>/47.html</url>
-    <content><![CDATA[<h3 id=""><a href="#" class="headerlink" title="=="></a>==</h3><p>基本类型：比较的就是值是否相同</p>
-<p>引用类型：比较的就是地址值是否相同</p>
-<h3 id="equals"><a href="#equals" class="headerlink" title="equals"></a>equals</h3><p>引用类型：默认情况下，比较的是地址值，重写该方法后比较对象的成员变量值是否相同</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>基本类型：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201025174931.jpg" alt="img"></p>
-<p>引用类型：</p>
-<p>除掉这四类八种基本类型，其它的都是对象，也就是引用类型，包括数组。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -15013,6 +15013,27 @@
       </tags>
   </entry>
   <entry>
+    <title>使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub</title>
+    <url>/480.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果需要执行多条命令才可以达到目的，都可以使用批处理脚本来提高工作效率，本博客主要实现：一键部署hexo博客以及一键上传代码到GitHub</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="一键部署hexo博客"><a href="#一键部署hexo博客" class="headerlink" title="一键部署hexo博客"></a>一键部署hexo博客</h4><p>新建一个<code>.bat</code>文件，命名为：<code>一键部署.bat</code>，内容如下：（我的博客使用了algolia搜索，如果没有使用就删除下面的<code>hexo algolia</code>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo algolia&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+
+<h4 id="一键上传代码到GitHub"><a href="#一键上传代码到GitHub" class="headerlink" title="一键上传代码到GitHub"></a>一键上传代码到GitHub</h4><p>先配置GitHub的SSH Key，配置步骤查看博客：<a href="https://blog.zoutl.cn/236.html">GitHub 配置 SSH Key | LeDao 的博客 (zoutl.cn)</a></p>
+<p>新建一个<code>.bat</code>文件，命名为<code>一键上传到GitHub.bat</code>：，内容如下：（<code>chcp 65001</code>是为了解决输出中文乱码）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chcp 65001</span><br><span class="line"></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1.进入要上传的文件hexo-blog&quot;</span></span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;2.添加到本地仓库&quot;</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;3.设置提交信息&quot;</span></span><br><span class="line"><span class="built_in">set</span> now=%date% %time%</span><br><span class="line">git commit -m <span class="string">&quot;%now%&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.开始pull&quot;</span></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;5.开始push&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Windows系统</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用AdBlock屏蔽掉GitHub上一些让人恶心的仓库</title>
     <url>/481.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>GitHub虽然好用，但是上面有不少境外黑恶势力恶意造谣抹黑中国的仓库，看到了就让人恶心</p>
@@ -15040,37 +15061,9 @@
       </tags>
   </entry>
   <entry>
-    <title>使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub</title>
-    <url>/480.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果需要执行多条命令才可以达到目的，都可以使用批处理脚本来提高工作效率，本博客主要实现：一键部署hexo博客以及一键上传代码到GitHub</p>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="一键部署hexo博客"><a href="#一键部署hexo博客" class="headerlink" title="一键部署hexo博客"></a>一键部署hexo博客</h4><p>新建一个<code>.bat</code>文件，命名为：<code>一键部署.bat</code>，内容如下：（我的博客使用了algolia搜索，如果没有使用就删除下面的<code>hexo algolia</code>）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo algolia&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
-
-<h4 id="一键上传代码到GitHub"><a href="#一键上传代码到GitHub" class="headerlink" title="一键上传代码到GitHub"></a>一键上传代码到GitHub</h4><p>先配置GitHub的SSH Key，配置步骤查看博客：<a href="https://blog.zoutl.cn/236.html">GitHub 配置 SSH Key | LeDao 的博客 (zoutl.cn)</a></p>
-<p>新建一个<code>.bat</code>文件，命名为<code>一键上传到GitHub.bat</code>：，内容如下：（<code>chcp 65001</code>是为了解决输出中文乱码）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chcp 65001</span><br><span class="line"></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1.进入要上传的文件hexo-blog&quot;</span></span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;2.添加到本地仓库&quot;</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;3.设置提交信息&quot;</span></span><br><span class="line"><span class="built_in">set</span> now=%date% %time%</span><br><span class="line">git commit -m <span class="string">&quot;%now%&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.开始pull&quot;</span></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;5.开始push&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Windows系统</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CentOS7忘记MySQL密码后重置</title>
     <url>/482.html</url>
-    <content><![CDATA[<h3 id="CentOS7操作MySQL命令"><a href="#CentOS7操作MySQL命令" class="headerlink" title="CentOS7操作MySQL命令"></a>CentOS7操作MySQL命令</h3><h4 id="查看MySQL运行状态"><a href="#查看MySQL运行状态" class="headerlink" title="查看MySQL运行状态"></a>查看MySQL运行状态</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
-
-<h4 id="停止MySQL"><a href="#停止MySQL" class="headerlink" title="停止MySQL"></a>停止MySQL</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure>
-
-<h4 id="启动MySQL"><a href="#启动MySQL" class="headerlink" title="启动MySQL"></a>启动MySQL</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启MySQL"><a href="#重启MySQL" class="headerlink" title="重启MySQL"></a>重启MySQL</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
-
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>MySQL是不能查看密码的，如果忘记了就只能重置了</p>
 <h3 id="重置过程"><a href="#重置过程" class="headerlink" title="重置过程"></a>重置过程</h3><ol>
 <li><p>先停止MySQL</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure></li>
@@ -15094,6 +15087,26 @@
 <li><p>重启MySQL，新密码就生效了</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure></li>
 </ol>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>CentOS7操作MySQL命令的一些命令如下：</p>
+<blockquote>
+<p>查看MySQL运行状态</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>停止MySQL</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>启动MySQL</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>重启MySQL</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>CentOS7</category>
