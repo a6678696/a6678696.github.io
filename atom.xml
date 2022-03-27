@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-03-26T10:13:58.867Z</updated>
+  <updated>2022-03-27T20:31:11.918Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CentOS7忘记MySQL密码后重置</title>
+    <link href="https://blog.zoutl.cn/482.html"/>
+    <id>https://blog.zoutl.cn/482.html</id>
+    <published>2022-03-27T19:47:52.000Z</published>
+    <updated>2022-03-27T20:31:11.918Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>忘记了MySQL的密码，就只能重置了</p><h3 id="CentOS7操作MySQL命令"><a href="#CentOS7操作MySQL命令" class="headerlink" title="CentOS7操作MySQL命令"></a>CentOS7操作MySQL命令</h3><h4 id="查看MySQL运行状态"><a href="#查看MySQL运行状态" class="headerlink" title="查看MySQL运行状态"></a>查看MySQL运行状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure><h4 id="停止MySQL"><a href="#停止MySQL" class="headerlink" title="停止MySQL"></a>停止MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure><h4 id="启动MySQL"><a href="#启动MySQL" class="headerlink" title="启动MySQL"></a>启动MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure><h4 id="重启MySQL"><a href="#重启MySQL" class="headerlink" title="重启MySQL"></a>重启MySQL</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure><h3 id="重置过程"><a href="#重置过程" class="headerlink" title="重置过程"></a>重置过程</h3><ol><li><p>先停止MySQL</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure></li><li><p>修改<code>my.cnf</code>，路径为<code>/ect/my.cnf</code>，在[mysqld]下面添加<code>skip-grant-tables</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220328040522194.png" alt="image-20220328040522194"></p></li><li><p>启动MySQL</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></li><li><p>使用下面命令进入MySQL命令行，提示要输入验证码直接按回车键即可</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure></li><li><p>切换到mysql数据库</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure></li><li><p>修改密码</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update user <span class="built_in">set</span> authentication_string=PASSWORD(<span class="string">&quot;这里填密码&quot;</span>) <span class="built_in">where</span> user=<span class="string">&#x27;root&#x27;</span>;</span><br></pre></td></tr></table></figure></li><li><p>刷新授权列表</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></li><li><p>退出</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure></li><li><p>修改<code>my.cnf</code>，路径为<code>/ect/my.cnf</code>，删除[mysqld]下面之前添加的<code>skip-grant-tables</code>，或者在它前面加<code>#</code>符号注释掉</p></li><li><p>重启MySQL，新密码就生效了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure></li></ol><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;忘记了MySQL的密码，就只能重置了&lt;/p&gt;
+&lt;h3 id=&quot;CentOS7操作MySQL命令&quot;&gt;&lt;a href=&quot;#CentOS7操作My</summary>
+      
+    
+    
+    
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/categories/CentOS7/"/>
+    
+    
+    <category term="MySQL" scheme="https://blog.zoutl.cn/tags/MySQL/"/>
+    
+    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
+    
+  </entry>
   
   <entry>
     <title>使用AdBlock屏蔽掉GitHub上一些让人恶心的仓库</title>
@@ -503,31 +530,6 @@
     <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
     
     <category term="Element UI" scheme="https://blog.zoutl.cn/tags/Element-UI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决：Spring MVC接收前端数据出现中文乱码</title>
-    <link href="https://blog.zoutl.cn/462.html"/>
-    <id>https://blog.zoutl.cn/462.html</id>
-    <published>2022-03-04T03:53:01.000Z</published>
-    <updated>2022-03-26T11:29:38.572Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>由前端传过来的数据（中文），Java接收后变成乱码</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在web.xml中添加以下代码：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--配置Spring MVC的乱码过滤--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.springframework.web.filter.CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>encoding<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;由前端传过来的数据（中文），Java接收后变成乱码&lt;/p&gt;
-&lt;h3 id=&quot;解决办法&quot;&gt;&lt;a href=&quot;#解决办法&quot; class=&quot;hea</summary>
-      
-    
-    
-    
-    <category term="Java" scheme="https://blog.zoutl.cn/categories/Java/"/>
-    
-    
-    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
   </entry>
   
