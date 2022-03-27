@@ -61,6 +61,19 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL数据库中text字段长度不够</title>
+    <url>/102.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>制作网站logo</title>
     <url>/103.html</url>
     <content><![CDATA[<h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p><a href="http://www.uugai.com/">http://www.uugai.com/</a></p>
@@ -78,19 +91,6 @@
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL数据库中text字段长度不够</title>
-    <url>/102.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）</p>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -167,22 +167,6 @@
       </tags>
   </entry>
   <entry>
-    <title>鼠标移入div显示查看更多</title>
-    <url>/108.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring Boot引入Quartz定时任务</title>
     <url>/109.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.quartz-scheduler<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>quartz<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -220,36 +204,6 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>部落冲突攻略</title>
-    <url>/110.html</url>
-    <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
-<h3 id="配兵"><a href="#配兵" class="headerlink" title="配兵"></a>配兵</h3><h4 id="超级女巫"><a href="#超级女巫" class="headerlink" title="超级女巫"></a>超级女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011129.jpg" alt="img"></p>
-<h4 id="8848流"><a href="#8848流" class="headerlink" title="8848流"></a>8848流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011245.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=GNKpNH5Img4">https://www.youtube.com/watch?v=GNKpNH5Img4</a></p>
-<h4 id="超级女巫-女巫"><a href="#超级女巫-女巫" class="headerlink" title="超级女巫+女巫"></a>超级女巫+女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011354.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=wzVR0pPbbYU">https://www.youtube.com/watch?v=wzVR0pPbbYU</a></p>
-<h4 id="冰冻龙流"><a href="#冰冻龙流" class="headerlink" title="冰冻龙流"></a>冰冻龙流</h4><p>攻城机器用滚木车</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210420222435.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.youtube.com/watch?v=2_oV7ws49t4">https://www.youtube.com/watch?v=2_oV7ws49t4</a></p>
-<h4 id="天女超法皮卡流"><a href="#天女超法皮卡流" class="headerlink" title="天女超法皮卡流"></a>天女超法皮卡流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210428141543.jpg" alt="img"></p>
-<p>视频教程链接：<a href="https://www.bilibili.com/video/BV1My4y1b7kK">https://www.bilibili.com/video/BV1My4y1b7kK</a></p>
-<h3 id="常用数据"><a href="#常用数据" class="headerlink" title="常用数据"></a>常用数据</h3><h4 id="城墙等级和炸弹人数量"><a href="#城墙等级和炸弹人数量" class="headerlink" title="城墙等级和炸弹人数量"></a>城墙等级和炸弹人数量</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011522.jpg" alt="img"></strong></p>
-<h4 id="传奇联赛胜利奖杯"><a href="#传奇联赛胜利奖杯" class="headerlink" title="传奇联赛胜利奖杯"></a>传奇联赛胜利奖杯</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210421224722.jpg" alt="img"></strong></p>
-<h4 id="部落冲突联赛奖励图"><a href="#部落冲突联赛奖励图" class="headerlink" title="部落冲突联赛奖励图"></a>部落冲突联赛奖励图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201333.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201443.jpg" alt="img"></p>
-<h3 id="阵型"><a href="#阵型" class="headerlink" title="阵型"></a>阵型</h3><p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-CC6CO6VLE599N9_DOM">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-CC6CO6VLE599N9_DOM</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025421.jpg" alt="img"></p>
-<p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-k9e4msVwq1sNtFRBps">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-k9e4msVwq1sNtFRBps</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025406.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>其它</category>
-      </categories>
-      <tags>
-        <tag>部落冲突</tag>
       </tags>
   </entry>
   <entry>
@@ -301,6 +255,52 @@
       </tags>
   </entry>
   <entry>
+    <title>部落冲突攻略</title>
+    <url>/110.html</url>
+    <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
+<h3 id="配兵"><a href="#配兵" class="headerlink" title="配兵"></a>配兵</h3><h4 id="超级女巫"><a href="#超级女巫" class="headerlink" title="超级女巫"></a>超级女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011129.jpg" alt="img"></p>
+<h4 id="8848流"><a href="#8848流" class="headerlink" title="8848流"></a>8848流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011245.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=GNKpNH5Img4">https://www.youtube.com/watch?v=GNKpNH5Img4</a></p>
+<h4 id="超级女巫-女巫"><a href="#超级女巫-女巫" class="headerlink" title="超级女巫+女巫"></a>超级女巫+女巫</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011354.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=wzVR0pPbbYU">https://www.youtube.com/watch?v=wzVR0pPbbYU</a></p>
+<h4 id="冰冻龙流"><a href="#冰冻龙流" class="headerlink" title="冰冻龙流"></a>冰冻龙流</h4><p>攻城机器用滚木车</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210420222435.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.youtube.com/watch?v=2_oV7ws49t4">https://www.youtube.com/watch?v=2_oV7ws49t4</a></p>
+<h4 id="天女超法皮卡流"><a href="#天女超法皮卡流" class="headerlink" title="天女超法皮卡流"></a>天女超法皮卡流</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210428141543.jpg" alt="img"></p>
+<p>视频教程链接：<a href="https://www.bilibili.com/video/BV1My4y1b7kK">https://www.bilibili.com/video/BV1My4y1b7kK</a></p>
+<h3 id="常用数据"><a href="#常用数据" class="headerlink" title="常用数据"></a>常用数据</h3><h4 id="城墙等级和炸弹人数量"><a href="#城墙等级和炸弹人数量" class="headerlink" title="城墙等级和炸弹人数量"></a>城墙等级和炸弹人数量</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210327011522.jpg" alt="img"></strong></p>
+<h4 id="传奇联赛胜利奖杯"><a href="#传奇联赛胜利奖杯" class="headerlink" title="传奇联赛胜利奖杯"></a>传奇联赛胜利奖杯</h4><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210421224722.jpg" alt="img"></strong></p>
+<h4 id="部落冲突联赛奖励图"><a href="#部落冲突联赛奖励图" class="headerlink" title="部落冲突联赛奖励图"></a>部落冲突联赛奖励图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201333.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210501201443.jpg" alt="img"></p>
+<h3 id="阵型"><a href="#阵型" class="headerlink" title="阵型"></a>阵型</h3><p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-CC6CO6VLE599N9_DOM">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-CC6CO6VLE599N9_DOM</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025421.jpg" alt="img"></p>
+<p><a href="https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14:WB:AAAATAAAAAE7a-k9e4msVwq1sNtFRBps">https://link.clashofclans.com/cn?action=OpenLayout&amp;id=TH14%3AWB%3AAAAATAAAAAE7a-k9e4msVwq1sNtFRBps</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210704025406.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>部落冲突</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>鼠标移入div显示查看更多</title>
+    <url>/108.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows10脚本代码备份MySQL数据库</title>
     <url>/113.html</url>
     <content><![CDATA[<h3 id="创建backdb-bat文件"><a href="#创建backdb-bat文件" class="headerlink" title="创建backdb.bat文件"></a>创建backdb.bat文件</h3><p>打开该文件，输入以下内容并保存</p>
@@ -330,6 +330,26 @@
       </categories>
       <tags>
         <tag>Java</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>定时自动备份MySQL数据库</title>
+    <url>/116.html</url>
+    <content><![CDATA[<h3 id="方法一、使用任务计划程序"><a href="#方法一、使用任务计划程序" class="headerlink" title="方法一、使用任务计划程序"></a>方法一、使用任务计划程序</h3><ol>
+<li><a href="/113.html">Windows脚本代码备份MySQL数据库</a></li>
+<li><a href="/115.html">Windows10使用任务计划程序</a></li>
+</ol>
+<h3 id="方法二、使用Quartz定时任务"><a href="#方法二、使用Quartz定时任务" class="headerlink" title="方法二、使用Quartz定时任务"></a>方法二、使用Quartz定时任务</h3><ol>
+<li><a href="/109.html">Spring Boot引入Quartz定时任务</a></li>
+<li><a href="/4.html">常用cron表达式</a></li>
+<li><a href="/114.html">Java备份MySQL数据库</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
         <tag>MySQL</tag>
       </tags>
   </entry>
@@ -372,26 +392,6 @@
       </tags>
   </entry>
   <entry>
-    <title>定时自动备份MySQL数据库</title>
-    <url>/116.html</url>
-    <content><![CDATA[<h3 id="方法一、使用任务计划程序"><a href="#方法一、使用任务计划程序" class="headerlink" title="方法一、使用任务计划程序"></a>方法一、使用任务计划程序</h3><ol>
-<li><a href="/113.html">Windows脚本代码备份MySQL数据库</a></li>
-<li><a href="/115.html">Windows10使用任务计划程序</a></li>
-</ol>
-<h3 id="方法二、使用Quartz定时任务"><a href="#方法二、使用Quartz定时任务" class="headerlink" title="方法二、使用Quartz定时任务"></a>方法二、使用Quartz定时任务</h3><ol>
-<li><a href="/109.html">Spring Boot引入Quartz定时任务</a></li>
-<li><a href="/4.html">常用cron表达式</a></li>
-<li><a href="/114.html">Java备份MySQL数据库</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>commons-io常用方法</title>
     <url>/117.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -416,41 +416,6 @@
 
 <h4 id="deleteDirectory"><a href="#deleteDirectory" class="headerlink" title="deleteDirectory"></a>deleteDirectory</h4><p>删除文件夹，文件夹不为空也可以删除</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.commons.io.FileUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        File file=<span class="keyword">new</span> File(<span class="string">&quot;E://backup//1&quot;</span>);</span><br><span class="line">        FileUtils.deleteDirectory(file);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EasyUI自定义图标</title>
-    <url>/118.html</url>
-    <content><![CDATA[<h3 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ">https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ</a></p>
-<p>提取码：cv65</p>
-<h3 id="复制到项目中"><a href="#复制到项目中" class="headerlink" title="复制到项目中"></a>复制到项目中</h3><p>在EasyUI文件夹的themes文件夹中放入下载好的图片（文件名后缀改为<code>.gif</code>）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210427000607.jpg" alt="img"></p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在EasyUI文件夹的themes文件夹的icon.css中添加图标代码</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.icon-setMenuBlog</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">&#x27;usericons/setMenuBlog.gif&#x27;</span>) no-repeat center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>EasyUI</category>
-      </categories>
-      <tags>
-        <tag>EasyUI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java格式化时间</title>
-    <url>/119.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Java格式化时间使用的类是SimpleDateFormat</p>
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>格式有<code>yyyy-MM-dd HH:mm:ss</code>，<code>yyyy年MM月dd日 HH时mm分ss秒</code>等</p>
-<p>SimpleDateFormat simpleDateFormat = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss”);</p>
-<p>simpleDateFormat.format(要格式化的时间)</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Date date = <span class="keyword">new</span> Date();</span><br><span class="line">        System.out.println(<span class="string">&quot;格式化前：&quot;</span>+date);</span><br><span class="line">        System.out.println(<span class="string">&quot;格式化后：&quot;</span>);</span><br><span class="line">        SimpleDateFormat simpleDateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line">        System.out.println(simpleDateFormat.format(date));</span><br><span class="line">        SimpleDateFormat simpleDateFormat2 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;</span>);</span><br><span class="line">        System.out.println(simpleDateFormat2.format(date));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210517050045.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -500,6 +465,23 @@
       </tags>
   </entry>
   <entry>
+    <title>EasyUI自定义图标</title>
+    <url>/118.html</url>
+    <content><![CDATA[<h3 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ">https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ</a></p>
+<p>提取码：cv65</p>
+<h3 id="复制到项目中"><a href="#复制到项目中" class="headerlink" title="复制到项目中"></a>复制到项目中</h3><p>在EasyUI文件夹的themes文件夹中放入下载好的图片（文件名后缀改为<code>.gif</code>）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210427000607.jpg" alt="img"></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在EasyUI文件夹的themes文件夹的icon.css中添加图标代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.icon-setMenuBlog</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">&#x27;usericons/setMenuBlog.gif&#x27;</span>) no-repeat center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>EasyUI</category>
+      </categories>
+      <tags>
+        <tag>EasyUI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Spring Boot引入MyBatis</title>
     <url>/120.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis.spring.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-spring-boot-starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -526,6 +508,85 @@
       <tags>
         <tag>Java</tag>
         <tag>Spring Boot</tag>
+        <tag>MyBatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java格式化时间</title>
+    <url>/119.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Java格式化时间使用的类是SimpleDateFormat</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>格式有<code>yyyy-MM-dd HH:mm:ss</code>，<code>yyyy年MM月dd日 HH时mm分ss秒</code>等</p>
+<p>SimpleDateFormat simpleDateFormat = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss”);</p>
+<p>simpleDateFormat.format(要格式化的时间)</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Date date = <span class="keyword">new</span> Date();</span><br><span class="line">        System.out.println(<span class="string">&quot;格式化前：&quot;</span>+date);</span><br><span class="line">        System.out.println(<span class="string">&quot;格式化后：&quot;</span>);</span><br><span class="line">        SimpleDateFormat simpleDateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line">        System.out.println(simpleDateFormat.format(date));</span><br><span class="line">        SimpleDateFormat simpleDateFormat2 = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;</span>);</span><br><span class="line">        System.out.println(simpleDateFormat2.format(date));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210517050045.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis的结果映射</title>
+    <url>/122.html</url>
+    <content><![CDATA[<h3 id="结果映射的作用"><a href="#结果映射的作用" class="headerlink" title="结果映射的作用"></a>结果映射的作用</h3><p>resultMap 元素是 MyBatis 中最重要最强大的元素。它可以让你从 90% 的 JDBC ResultSets 数据提取代码中解放出来，并在一些情形下允许你进行一些 JDBC 不支持的操作。实际上，在为一些比如连接的复杂语句编写映射代码的时候，一份 resultMap 能够代替实现同等功能的数千行代码。ResultMap 的设计思想是，对简单的语句做到零配置，对于复杂一点的语句，只需要描述语句之间的关系就行了。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>实体类（已经省略getter和setter方法）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 博客实体</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-11 00:08</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Blog</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 标题</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String title;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 摘要</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String summary;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 内容</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String content;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发布时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Date releaseDate;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 点击次数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer click;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 博客类别id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer blogTypeId;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 博客类别</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> BlogType blogType;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 博客里存在的第一张图片，主要用于列表展示的缩略图</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String imageName;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 博客数量 非博客实际属性 主要是 根据发布日期归档查询数量用到</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer blogCount;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发布日期的字符串 只取年和月</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String releaseDateStr;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 该类型的博客数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer blogNum;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 用于判断当前IP是否点赞过这篇博客</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer isLike;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 点赞数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer likeNum;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 是否是导航条文章（0或空代表不是，1代表是）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer isMenuBlog;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置成为导航条文章的时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Date setMenuBlogDate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>XML文件中的结果映射代码(相关属性查看博客：<a href="/121.html">mybatis的元素属性</a>)</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;BlogResult&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;id&quot;</span> <span class="attr">column</span>=<span class="string">&quot;id&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;title&quot;</span> <span class="attr">column</span>=<span class="string">&quot;title&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;summary&quot;</span> <span class="attr">column</span>=<span class="string">&quot;summary&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;releaseDate&quot;</span> <span class="attr">column</span>=<span class="string">&quot;releaseDate&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;click&quot;</span> <span class="attr">column</span>=<span class="string">&quot;click&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;content&quot;</span> <span class="attr">column</span>=<span class="string">&quot;content&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;blogTypeId&quot;</span> <span class="attr">column</span>=<span class="string">&quot;blogTypeId&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;isMenuBlog&quot;</span> <span class="attr">column</span>=<span class="string">&quot;isMenuBlog&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;setMenuBlogDate&quot;</span> <span class="attr">column</span>=<span class="string">&quot;setMenuBlogDate&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>MyBatis</category>
+      </categories>
+      <tags>
+        <tag>MyBatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis的增删改查示例（XML映射器）</title>
+    <url>/123.html</url>
+    <content><![CDATA[<h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;add&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;BlogType&quot;</span>&gt;</span></span><br><span class="line">	insert into t_blogtype (name, sortNum) values (#&#123;name&#125;,#&#123;sortNum&#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">&quot;delete&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;integer&quot;</span>&gt;</span></span><br><span class="line">	delete from t_blogtype where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;update&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;BlogType&quot;</span>&gt;</span></span><br><span class="line">	update t_blogtype</span><br><span class="line">	<span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;name != null and name != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			name=#&#123;name&#125;,</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;sortNum != null&quot;</span>&gt;</span></span><br><span class="line">			sortNum=#&#123;sortNum&#125;,</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">	where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findById&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;integer&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BlogTypeResult&quot;</span>&gt;</span></span><br><span class="line">	select * from t_blogtype where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>相关元素查看博客：<a href="/121.html">mybatis的元素属性</a></p>
+]]></content>
+      <categories>
+        <category>MyBatis</category>
+      </categories>
+      <tags>
+        <tag>MyBatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis动态SQL示例</title>
+    <url>/124.html</url>
+    <content><![CDATA[<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BlogResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_blog</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null and title != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and title like #&#123;title&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;blogTypeId != null&quot;</span>&gt;</span></span><br><span class="line">			and blogTypeId = #&#123;blogTypeId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlog != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog = #&#123;isMenuBlog&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlogKey != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog != 1</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;releaseDateStr != null and releaseDateStr != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and date_format(releaseDate, &#x27;%Y年%m月&#x27;) = #&#123;releaseDateStr&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;sortByReleaseDate == null&quot;</span>&gt;</span></span><br><span class="line">		order by releaseDate desc</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="choose、when、otherwise"><a href="#choose、when、otherwise" class="headerlink" title="choose、when、otherwise"></a>choose、when、otherwise</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findActiveBlogLike&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM BLOG WHERE state = ‘ACTIVE’</span><br><span class="line">  <span class="tag">&lt;<span class="name">choose</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">      AND title like #&#123;title&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">      AND author_name like #&#123;author.name&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">otherwise</span>&gt;</span></span><br><span class="line">      AND featured = 1</span><br><span class="line">    <span class="tag">&lt;/<span class="name">otherwise</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">choose</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="trim、where、set"><a href="#trim、where、set" class="headerlink" title="trim、where、set"></a>trim、where、set</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;WHERE&quot;</span> <span class="attr">prefixOverrides</span>=<span class="string">&quot;AND |OR &quot;</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findActiveBlogLike&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;state != null&quot;</span>&gt;</span></span><br><span class="line">         state = #&#123;state&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">        AND title like #&#123;title&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">        AND author_name like #&#123;author.name&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;updateAuthorIfNecessary&quot;</span>&gt;</span></span><br><span class="line">  update Author</span><br><span class="line">    <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;username != null&quot;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;password != null&quot;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;email != null&quot;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;bio != null&quot;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">  where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a>foreach</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectPostIn&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;domain.blog.Post&quot;</span>&gt;</span></span><br><span class="line">  SELECT *</span><br><span class="line">  FROM POST P</span><br><span class="line">  WHERE ID in</span><br><span class="line">  <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;list&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">        #&#123;item&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">@Update(&#123;&quot;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;update Author&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;username != null&#x27;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;password != null&#x27;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;email != null&#x27;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;bio != null&#x27;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;/<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;where id=#&#123;id&#125;&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>&quot;&#125;)</span><br><span class="line">void updateAuthorValues(Author author);</span><br></pre></td></tr></table></figure>
+
+<h3 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectBlogsLike&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bind</span> <span class="attr">name</span>=<span class="string">&quot;pattern&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#x27;%&#x27; + _parameter.getTitle() + &#x27;%&#x27;&quot;</span> /&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  WHERE title LIKE #&#123;pattern&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>MyBatis</category>
+      </categories>
+      <tags>
         <tag>MyBatis</tag>
       </tags>
   </entry>
@@ -814,67 +875,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MyBatis的结果映射</title>
-    <url>/122.html</url>
-    <content><![CDATA[<h3 id="结果映射的作用"><a href="#结果映射的作用" class="headerlink" title="结果映射的作用"></a>结果映射的作用</h3><p>resultMap 元素是 MyBatis 中最重要最强大的元素。它可以让你从 90% 的 JDBC ResultSets 数据提取代码中解放出来，并在一些情形下允许你进行一些 JDBC 不支持的操作。实际上，在为一些比如连接的复杂语句编写映射代码的时候，一份 resultMap 能够代替实现同等功能的数千行代码。ResultMap 的设计思想是，对简单的语句做到零配置，对于复杂一点的语句，只需要描述语句之间的关系就行了。</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>实体类（已经省略getter和setter方法）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 博客实体</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-11 00:08</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Blog</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 标题</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String title;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 摘要</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String summary;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 内容</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String content;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发布时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Date releaseDate;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 点击次数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer click;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 博客类别id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer blogTypeId;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 博客类别</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> BlogType blogType;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 博客里存在的第一张图片，主要用于列表展示的缩略图</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String imageName;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 博客数量 非博客实际属性 主要是 根据发布日期归档查询数量用到</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer blogCount;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 发布日期的字符串 只取年和月</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String releaseDateStr;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 该类型的博客数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer blogNum;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 用于判断当前IP是否点赞过这篇博客</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer isLike;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 点赞数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer likeNum;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 是否是导航条文章（0或空代表不是，1代表是）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer isMenuBlog;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 设置成为导航条文章的时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Date setMenuBlogDate;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>XML文件中的结果映射代码(相关属性查看博客：<a href="/121.html">mybatis的元素属性</a>)</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;BlogResult&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;id&quot;</span> <span class="attr">column</span>=<span class="string">&quot;id&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;title&quot;</span> <span class="attr">column</span>=<span class="string">&quot;title&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;summary&quot;</span> <span class="attr">column</span>=<span class="string">&quot;summary&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;releaseDate&quot;</span> <span class="attr">column</span>=<span class="string">&quot;releaseDate&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;click&quot;</span> <span class="attr">column</span>=<span class="string">&quot;click&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;content&quot;</span> <span class="attr">column</span>=<span class="string">&quot;content&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;blogTypeId&quot;</span> <span class="attr">column</span>=<span class="string">&quot;blogTypeId&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;isMenuBlog&quot;</span> <span class="attr">column</span>=<span class="string">&quot;isMenuBlog&quot;</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">&quot;setMenuBlogDate&quot;</span> <span class="attr">column</span>=<span class="string">&quot;setMenuBlogDate&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>MyBatis</category>
-      </categories>
-      <tags>
-        <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MyBatis的增删改查示例（XML映射器）</title>
-    <url>/123.html</url>
-    <content><![CDATA[<h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;add&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;BlogType&quot;</span>&gt;</span></span><br><span class="line">	insert into t_blogtype (name, sortNum) values (#&#123;name&#125;,#&#123;sortNum&#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">delete</span> <span class="attr">id</span>=<span class="string">&quot;delete&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;integer&quot;</span>&gt;</span></span><br><span class="line">	delete from t_blogtype where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">delete</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;update&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;BlogType&quot;</span>&gt;</span></span><br><span class="line">	update t_blogtype</span><br><span class="line">	<span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;name != null and name != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			name=#&#123;name&#125;,</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;sortNum != null&quot;</span>&gt;</span></span><br><span class="line">			sortNum=#&#123;sortNum&#125;,</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">	where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findById&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;integer&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BlogTypeResult&quot;</span>&gt;</span></span><br><span class="line">	select * from t_blogtype where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>相关元素查看博客：<a href="/121.html">mybatis的元素属性</a></p>
-]]></content>
-      <categories>
-        <category>MyBatis</category>
-      </categories>
-      <tags>
-        <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MyBatis动态SQL示例</title>
-    <url>/124.html</url>
-    <content><![CDATA[<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BlogResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_blog</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null and title != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and title like #&#123;title&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;blogTypeId != null&quot;</span>&gt;</span></span><br><span class="line">			and blogTypeId = #&#123;blogTypeId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlog != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog = #&#123;isMenuBlog&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlogKey != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog != 1</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;releaseDateStr != null and releaseDateStr != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and date_format(releaseDate, &#x27;%Y年%m月&#x27;) = #&#123;releaseDateStr&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;sortByReleaseDate == null&quot;</span>&gt;</span></span><br><span class="line">		order by releaseDate desc</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="choose、when、otherwise"><a href="#choose、when、otherwise" class="headerlink" title="choose、when、otherwise"></a>choose、when、otherwise</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findActiveBlogLike&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM BLOG WHERE state = ‘ACTIVE’</span><br><span class="line">  <span class="tag">&lt;<span class="name">choose</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">      AND title like #&#123;title&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">      AND author_name like #&#123;author.name&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">otherwise</span>&gt;</span></span><br><span class="line">      AND featured = 1</span><br><span class="line">    <span class="tag">&lt;/<span class="name">otherwise</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">choose</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="trim、where、set"><a href="#trim、where、set" class="headerlink" title="trim、where、set"></a>trim、where、set</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;WHERE&quot;</span> <span class="attr">prefixOverrides</span>=<span class="string">&quot;AND |OR &quot;</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;findActiveBlogLike&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;state != null&quot;</span>&gt;</span></span><br><span class="line">         state = #&#123;state&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">        AND title like #&#123;title&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">        AND author_name like #&#123;author.name&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;updateAuthorIfNecessary&quot;</span>&gt;</span></span><br><span class="line">  update Author</span><br><span class="line">    <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;username != null&quot;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;password != null&quot;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;email != null&quot;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;bio != null&quot;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">  where id=#&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a>foreach</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectPostIn&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;domain.blog.Post&quot;</span>&gt;</span></span><br><span class="line">  SELECT *</span><br><span class="line">  FROM POST P</span><br><span class="line">  WHERE ID in</span><br><span class="line">  <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;list&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">        #&#123;item&#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">@Update(&#123;&quot;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;update Author&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;username != null&#x27;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;password != null&#x27;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;email != null&#x27;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;bio != null&#x27;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;/<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;where id=#&#123;id&#125;&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>&quot;&#125;)</span><br><span class="line">void updateAuthorValues(Author author);</span><br></pre></td></tr></table></figure>
-
-<h3 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectBlogsLike&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bind</span> <span class="attr">name</span>=<span class="string">&quot;pattern&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#x27;%&#x27; + _parameter.getTitle() + &#x27;%&#x27;&quot;</span> /&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  WHERE title LIKE #&#123;pattern&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>MyBatis</category>
-      </categories>
-      <tags>
-        <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MyBatis的关联（association）元素</title>
     <url>/125.html</url>
     <content><![CDATA[<p>关联（association）元素处理“有一个”类型的关系。 比如，在示例中，每个博客有一个作者</p>
@@ -925,23 +925,6 @@
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-car&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-car&quot;</span> <span class="attr">style</span>=<span class="string">&quot;font-size:48px;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-car&quot;</span> <span class="attr">style</span>=<span class="string">&quot;font-size:60px;color:red;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>查看更多图标以及来源：<a href="https://www.runoob.com/font-awesome/fontawesome-tutorial.html">Font Awesome 图标 | 菜鸟教程</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTML+JavaScript动态获取当前时间</title>
-    <url>/128.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;tipForTime&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: #00B0E8;text-align: center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>当前时间:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;time&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: grey&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取当前时间</span></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">window</span>.requestAnimationFrame(getDate)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">window</span>.requestAnimationFrame(getDate)</span><br><span class="line">	&#125;, <span class="number">1000</span> / <span class="number">2</span>)</span><br><span class="line">	<span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">	<span class="keyword">var</span> year = d.getFullYear()  <span class="comment">//获取年</span></span><br><span class="line">	<span class="keyword">var</span> month = d.getMonth() + <span class="number">1</span>;  <span class="comment">//获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1</span></span><br><span class="line">	<span class="keyword">var</span> day = d.getDay()    <span class="comment">//获取日</span></span><br><span class="line">	<span class="keyword">var</span> days = d.getDate() <span class="comment">//获取日期</span></span><br><span class="line">	<span class="keyword">var</span> hour = d.getHours()   <span class="comment">//获取小时</span></span><br><span class="line">	<span class="keyword">var</span> minute = d.getMinutes()  <span class="comment">//获取分钟</span></span><br><span class="line">	<span class="keyword">var</span> second = d.getSeconds()   <span class="comment">//获取秒</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (month &lt; <span class="number">10</span>) month = <span class="string">&quot;0&quot;</span> + month</span><br><span class="line">	<span class="keyword">if</span> (days &lt; <span class="number">10</span>) days = <span class="string">&quot;0&quot;</span> + days</span><br><span class="line">	<span class="keyword">if</span> (hour &lt; <span class="number">10</span>) hour = <span class="string">&quot;0&quot;</span> + hour</span><br><span class="line">	<span class="keyword">if</span> (minute &lt; <span class="number">10</span>) minute = <span class="string">&quot;0&quot;</span> + minute</span><br><span class="line">	<span class="keyword">if</span> (second &lt; <span class="number">10</span>) second = <span class="string">&quot;0&quot;</span> + second</span><br><span class="line">	<span class="keyword">if</span> (hour &gt;= <span class="number">6</span> &amp;&amp; hour &lt; <span class="number">12</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;早上好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &gt;= <span class="number">12</span> &amp;&amp; hour &lt; <span class="number">19</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;下午好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &gt;= <span class="number">19</span> &amp;&amp; hour &lt; <span class="number">23</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;晚上好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;夜深了!请注意休息!!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> week = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;星期日&quot;</span>, <span class="string">&quot;星期一&quot;</span>, <span class="string">&quot;星期二&quot;</span>, <span class="string">&quot;星期三&quot;</span>, <span class="string">&quot;星期四&quot;</span>, <span class="string">&quot;星期五&quot;</span>, <span class="string">&quot;星期六&quot;</span>)</span><br><span class="line">	<span class="keyword">var</span> Tools = <span class="built_in">document</span>.getElementById(<span class="string">&quot;time&quot;</span>)</span><br><span class="line">	<span class="keyword">var</span> time = year + <span class="string">&quot;-&quot;</span> + month + <span class="string">&quot;-&quot;</span> + days + <span class="string">&quot; &quot;</span> + hour + <span class="string">&quot;:&quot;</span> + minute + <span class="string">&quot;:&quot;</span> + second+<span class="string">&quot;  &quot;</span>+week[day]</span><br><span class="line">	$(<span class="string">&quot;#time&quot;</span>).html(time);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601074858.jpg" alt="img"></strong></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/qq_40625778/article/details/88880786">HTML+JS动态获取当前时间_公众号：【C you again】-CSDN博客_js显示当前时间</a></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -1018,6 +1001,23 @@
       </categories>
       <tags>
         <tag>个人项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML+JavaScript动态获取当前时间</title>
+    <url>/128.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;tipForTime&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: #00B0E8;text-align: center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>当前时间:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;time&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: grey&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取当前时间</span></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">window</span>.requestAnimationFrame(getDate)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">window</span>.requestAnimationFrame(getDate)</span><br><span class="line">	&#125;, <span class="number">1000</span> / <span class="number">2</span>)</span><br><span class="line">	<span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">	<span class="keyword">var</span> year = d.getFullYear()  <span class="comment">//获取年</span></span><br><span class="line">	<span class="keyword">var</span> month = d.getMonth() + <span class="number">1</span>;  <span class="comment">//获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1</span></span><br><span class="line">	<span class="keyword">var</span> day = d.getDay()    <span class="comment">//获取日</span></span><br><span class="line">	<span class="keyword">var</span> days = d.getDate() <span class="comment">//获取日期</span></span><br><span class="line">	<span class="keyword">var</span> hour = d.getHours()   <span class="comment">//获取小时</span></span><br><span class="line">	<span class="keyword">var</span> minute = d.getMinutes()  <span class="comment">//获取分钟</span></span><br><span class="line">	<span class="keyword">var</span> second = d.getSeconds()   <span class="comment">//获取秒</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (month &lt; <span class="number">10</span>) month = <span class="string">&quot;0&quot;</span> + month</span><br><span class="line">	<span class="keyword">if</span> (days &lt; <span class="number">10</span>) days = <span class="string">&quot;0&quot;</span> + days</span><br><span class="line">	<span class="keyword">if</span> (hour &lt; <span class="number">10</span>) hour = <span class="string">&quot;0&quot;</span> + hour</span><br><span class="line">	<span class="keyword">if</span> (minute &lt; <span class="number">10</span>) minute = <span class="string">&quot;0&quot;</span> + minute</span><br><span class="line">	<span class="keyword">if</span> (second &lt; <span class="number">10</span>) second = <span class="string">&quot;0&quot;</span> + second</span><br><span class="line">	<span class="keyword">if</span> (hour &gt;= <span class="number">6</span> &amp;&amp; hour &lt; <span class="number">12</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;早上好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &gt;= <span class="number">12</span> &amp;&amp; hour &lt; <span class="number">19</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;下午好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &gt;= <span class="number">19</span> &amp;&amp; hour &lt; <span class="number">23</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;晚上好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;夜深了!请注意休息!!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> week = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;星期日&quot;</span>, <span class="string">&quot;星期一&quot;</span>, <span class="string">&quot;星期二&quot;</span>, <span class="string">&quot;星期三&quot;</span>, <span class="string">&quot;星期四&quot;</span>, <span class="string">&quot;星期五&quot;</span>, <span class="string">&quot;星期六&quot;</span>)</span><br><span class="line">	<span class="keyword">var</span> Tools = <span class="built_in">document</span>.getElementById(<span class="string">&quot;time&quot;</span>)</span><br><span class="line">	<span class="keyword">var</span> time = year + <span class="string">&quot;-&quot;</span> + month + <span class="string">&quot;-&quot;</span> + days + <span class="string">&quot; &quot;</span> + hour + <span class="string">&quot;:&quot;</span> + minute + <span class="string">&quot;:&quot;</span> + second+<span class="string">&quot;  &quot;</span>+week[day]</span><br><span class="line">	$(<span class="string">&quot;#time&quot;</span>).html(time);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601074858.jpg" alt="img"></strong></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/qq_40625778/article/details/88880786">HTML+JS动态获取当前时间_公众号：【C you again】-CSDN博客_js显示当前时间</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1327,35 +1327,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Highcharts的使用</title>
-    <url>/141.html</url>
-    <content><![CDATA[<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://code.highcharts.com/highcharts.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> chart = <span class="keyword">new</span> Highcharts.Chart(&#123;</span><br><span class="line">		<span class="attr">chart</span>: &#123;</span><br><span class="line">			<span class="attr">renderTo</span>: <span class="string">&quot;container&quot;</span>,</span><br><span class="line">			<span class="attr">type</span>: <span class="string">&#x27;column&#x27;</span>,</span><br><span class="line">			<span class="attr">events</span>: &#123;</span><br><span class="line">				<span class="attr">load</span>: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">					$.post(<span class="string">&quot;/blog/highlight&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">						<span class="keyword">var</span> rows = result.rows;</span><br><span class="line">						<span class="keyword">var</span> xArr = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">						<span class="keyword">var</span> yArr = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">						<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; rows.length; i++) &#123;</span><br><span class="line">							xArr.push(rows[i].name);</span><br><span class="line">							yArr.push(rows[i].num);</span><br><span class="line">						&#125;</span><br><span class="line">						chart.xAxis[<span class="number">0</span>].categories = xArr;</span><br><span class="line">						chart.series[<span class="number">0</span>].setData(yArr);</span><br><span class="line"></span><br><span class="line">					&#125;, <span class="string">&quot;json&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="comment">//标题</span></span><br><span class="line">		<span class="attr">title</span>: &#123;</span><br><span class="line">			<span class="attr">text</span>: <span class="string">&#x27;剩余水果数量&#x27;</span></span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="comment">//X轴的意义</span></span><br><span class="line">		<span class="attr">xAxis</span>: &#123;</span><br><span class="line">			<span class="attr">title</span>: <span class="string">&#x27;水果类型&#x27;</span>,</span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="comment">//Y轴的意义</span></span><br><span class="line">		<span class="attr">yAxis</span>: &#123;</span><br><span class="line">			<span class="attr">title</span>: &#123;</span><br><span class="line">				<span class="attr">text</span>: <span class="string">&#x27;数量&#x27;</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="comment">//数据列的意义</span></span><br><span class="line">		<span class="attr">series</span>: [&#123;</span><br><span class="line">			<span class="attr">name</span>: <span class="string">&#x27;数量&#x27;</span>,</span><br><span class="line">		&#125;]</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><p>Fruit实体类：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-08 21:28</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">(String name, Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getNum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNum</span><span class="params">(Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>从后台获取数据：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/highlight&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">highlight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map resultMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	List&lt;Fruit&gt; fruitList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;苹果&quot;</span>,<span class="number">8</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;香蕉&quot;</span>,<span class="number">2</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;梨&quot;</span>,<span class="number">16</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;油桃&quot;</span>,<span class="number">7</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;西瓜&quot;</span>,<span class="number">13</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;橘子&quot;</span>,<span class="number">5</span>));</span><br><span class="line">	resultMap.put(<span class="string">&quot;rows&quot;</span>, fruitList);</span><br><span class="line">	<span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210608225716.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果将上面的柱状图换成折线图，将JavaScript代码中的 <strong>type: ‘column’</strong> 改为 <strong>type: ‘line’</strong> 即可</p>
-<p>使用了jQuery，请先引入jQuery</p>
-<p>Highcharts中文官网：<a href="https://www.highcharts.com.cn/">兼容 IE6+、完美支持移动端、图表类型丰富的 HTML5 交互图表 | Highcharts</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>前端</tag>
-        <tag>Highcharts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>jQuery发送Ajax请求</title>
     <url>/140.html</url>
     <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;url2&quot;</span>&gt;</span>看我看我<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">url:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">required</span>=<span class="string">&quot;required&quot;</span> <span class="attr">id</span>=<span class="string">&quot;url1&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript:click()&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span>点击<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1510,51 +1481,6 @@
       </tags>
   </entry>
   <entry>
-    <title>安装Maven</title>
-    <url>/143.html</url>
-    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>网站链接：<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a></p>
-<p>点击下图中的划红线的链接即可开始下载</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615013830.jpg" alt="img"></p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>在指定的位置解压刚刚下载的压缩包（不需要安装）</p>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><blockquote>
-<p>配置MAVEN_HOME（bin文件夹所在路径）</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">D:\Java\apache-maven-3.8.1-bin\apache-maven-3.8.1</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615015207.jpg" alt="img"></p>
-<blockquote>
-<p>配置Path</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">%MAVEN_HOME%\bin</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615015301.jpg" alt="img"></p>
-<blockquote>
-<p>查看是否配置成功，运行CMD，输入mvn -version</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615015050.jpg" alt="img"></p>
-<h3 id="修改settings文件"><a href="#修改settings文件" class="headerlink" title="修改settings文件"></a>修改settings文件</h3><blockquote>
-<p>修改本地仓库路径（根据自己需要设置，在第53行）</p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Java/apache-maven-3.8.1-bin/apache-maven-3.8.1/repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>修改jar包下载地址（放在mirrors节点内）</p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 阿里云仓库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span>        </span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>查看是否配置成功，运行CMD，输入mvn help:system</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615020715.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Maven</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea配置Maven</title>
     <url>/144.html</url>
     <content><![CDATA[<p>1处选择maven安装路径（即bin文件夹所在路径）</p>
@@ -1601,6 +1527,51 @@
       </tags>
   </entry>
   <entry>
+    <title>安装Maven</title>
+    <url>/143.html</url>
+    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>网站链接：<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a></p>
+<p>点击下图中的划红线的链接即可开始下载</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615013830.jpg" alt="img"></p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><p>在指定的位置解压刚刚下载的压缩包（不需要安装）</p>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><blockquote>
+<p>配置MAVEN_HOME（bin文件夹所在路径）</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">D:\Java\apache-maven-3.8.1-bin\apache-maven-3.8.1</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615015207.jpg" alt="img"></p>
+<blockquote>
+<p>配置Path</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">%MAVEN_HOME%\bin</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615015301.jpg" alt="img"></p>
+<blockquote>
+<p>查看是否配置成功，运行CMD，输入mvn -version</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615015050.jpg" alt="img"></p>
+<h3 id="修改settings文件"><a href="#修改settings文件" class="headerlink" title="修改settings文件"></a>修改settings文件</h3><blockquote>
+<p>修改本地仓库路径（根据自己需要设置，在第53行）</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">localRepository</span>&gt;</span>D:/Java/apache-maven-3.8.1-bin/apache-maven-3.8.1/repository<span class="tag">&lt;/<span class="name">localRepository</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>修改jar包下载地址（放在mirrors节点内）</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 阿里云仓库 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span>        </span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>查看是否配置成功，运行CMD，输入mvn help:system</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615020715.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Maven</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>idea从GitHub克隆项目</title>
     <url>/146.html</url>
     <content><![CDATA[<h3 id="获取Git链接"><a href="#获取Git链接" class="headerlink" title="获取Git链接"></a>获取Git链接</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035554.jpg" alt="img"></p>
@@ -1635,6 +1606,26 @@
       </tags>
   </entry>
   <entry>
+    <title>查看CentOS7的IP</title>
+    <url>/149.html</url>
+    <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050531.jpg" alt="img"></p>
+<h3 id="修改ens33网卡的配置"><a href="#修改ens33网卡的配置" class="headerlink" title="修改ens33网卡的配置"></a>修改ens33网卡的配置</h3><p>查看网卡配置命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
+
+<p>下图中划红线处需要修改为<code>ONBOOT=yes</code>，按下i键进入编辑模式，修改后按ESC键退出编辑模式，输入 :wq（保存并退出），最后按下回车键即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050844.jpg" alt="img"></p>
+<p>最后输入命令ip addr查看即可</p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>idea配置Tomcat</title>
     <url>/148.html</url>
     <content><![CDATA[<h3 id="打开配置界面"><a href="#打开配置界面" class="headerlink" title="打开配置界面"></a>打开配置界面</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615051928.jpg" alt="img"></p>
@@ -1654,26 +1645,6 @@
       <tags>
         <tag>Tomcat</tag>
         <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>查看CentOS7的IP</title>
-    <url>/149.html</url>
-    <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050531.jpg" alt="img"></p>
-<h3 id="修改ens33网卡的配置"><a href="#修改ens33网卡的配置" class="headerlink" title="修改ens33网卡的配置"></a>修改ens33网卡的配置</h3><p>查看网卡配置命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
-
-<p>下图中划红线处需要修改为<code>ONBOOT=yes</code>，按下i键进入编辑模式，修改后按ESC键退出编辑模式，输入 :wq（保存并退出），最后按下回车键即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050844.jpg" alt="img"></p>
-<p>最后输入命令ip addr查看即可</p>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
       </tags>
   </entry>
   <entry>
@@ -2111,25 +2082,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CentOS7部署Java项目速度很慢</title>
-    <url>/158.html</url>
-    <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
-
-<h3 id="打开-java-security-文件"><a href="#打开-java-security-文件" class="headerlink" title="打开 java.security 文件"></a>打开 java.security 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/java/jdk1.8.0_131/jre/lib/security/java.security</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
-<p>保存并退出即可</p>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CentOS7实时查看Tomcat运行日志</title>
     <url>/159.html</url>
     <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
@@ -2145,6 +2097,25 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS7部署Java项目速度很慢</title>
+    <url>/158.html</url>
+    <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开-java-security-文件"><a href="#打开-java-security-文件" class="headerlink" title="打开 java.security 文件"></a>打开 java.security 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/java/jdk1.8.0_131/jre/lib/security/java.security</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
+<p>保存并退出即可</p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
         <tag>CentOS7</tag>
       </tags>
   </entry>
@@ -2463,6 +2434,35 @@
       </categories>
       <tags>
         <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Highcharts的使用</title>
+    <url>/141.html</url>
+    <content><![CDATA[<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://code.highcharts.com/highcharts.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> chart = <span class="keyword">new</span> Highcharts.Chart(&#123;</span><br><span class="line">		<span class="attr">chart</span>: &#123;</span><br><span class="line">			<span class="attr">renderTo</span>: <span class="string">&quot;container&quot;</span>,</span><br><span class="line">			<span class="attr">type</span>: <span class="string">&#x27;column&#x27;</span>,</span><br><span class="line">			<span class="attr">events</span>: &#123;</span><br><span class="line">				<span class="attr">load</span>: <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line">					$.post(<span class="string">&quot;/blog/highlight&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">						<span class="keyword">var</span> rows = result.rows;</span><br><span class="line">						<span class="keyword">var</span> xArr = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">						<span class="keyword">var</span> yArr = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line">						<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; rows.length; i++) &#123;</span><br><span class="line">							xArr.push(rows[i].name);</span><br><span class="line">							yArr.push(rows[i].num);</span><br><span class="line">						&#125;</span><br><span class="line">						chart.xAxis[<span class="number">0</span>].categories = xArr;</span><br><span class="line">						chart.series[<span class="number">0</span>].setData(yArr);</span><br><span class="line"></span><br><span class="line">					&#125;, <span class="string">&quot;json&quot;</span>);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="comment">//标题</span></span><br><span class="line">		<span class="attr">title</span>: &#123;</span><br><span class="line">			<span class="attr">text</span>: <span class="string">&#x27;剩余水果数量&#x27;</span></span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="comment">//X轴的意义</span></span><br><span class="line">		<span class="attr">xAxis</span>: &#123;</span><br><span class="line">			<span class="attr">title</span>: <span class="string">&#x27;水果类型&#x27;</span>,</span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="comment">//Y轴的意义</span></span><br><span class="line">		<span class="attr">yAxis</span>: &#123;</span><br><span class="line">			<span class="attr">title</span>: &#123;</span><br><span class="line">				<span class="attr">text</span>: <span class="string">&#x27;数量&#x27;</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="comment">//数据列的意义</span></span><br><span class="line">		<span class="attr">series</span>: [&#123;</span><br><span class="line">			<span class="attr">name</span>: <span class="string">&#x27;数量&#x27;</span>,</span><br><span class="line">		&#125;]</span><br><span class="line">	&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><p>Fruit实体类：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-08 21:28</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">(String name, Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getNum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNum</span><span class="params">(Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>从后台获取数据：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/highlight&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">highlight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map resultMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	List&lt;Fruit&gt; fruitList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;苹果&quot;</span>,<span class="number">8</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;香蕉&quot;</span>,<span class="number">2</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;梨&quot;</span>,<span class="number">16</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;油桃&quot;</span>,<span class="number">7</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;西瓜&quot;</span>,<span class="number">13</span>));</span><br><span class="line">	fruitList.add(<span class="keyword">new</span> Fruit(<span class="string">&quot;橘子&quot;</span>,<span class="number">5</span>));</span><br><span class="line">	resultMap.put(<span class="string">&quot;rows&quot;</span>, fruitList);</span><br><span class="line">	<span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210608225716.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果将上面的柱状图换成折线图，将JavaScript代码中的 <strong>type: ‘column’</strong> 改为 <strong>type: ‘line’</strong> 即可</p>
+<p>使用了jQuery，请先引入jQuery</p>
+<p>Highcharts中文官网：<a href="https://www.highcharts.com.cn/">兼容 IE6+、完美支持移动端、图表类型丰富的 HTML5 交互图表 | Highcharts</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>前端</tag>
+        <tag>Highcharts</tag>
       </tags>
   </entry>
   <entry>
@@ -2813,56 +2813,6 @@
 </ol>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Redis服务在启动时自动加载备份文件，平时我们可以定期把rdb文件备份到指定地方，需要恢复的时候，直接把rdb搞到redis备份文件指定目录/usr/local/redis下即可</p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://blog.java1234.com/blog/articles/323.html">Redis的持久化之RDB方式_Java开源博客系统-Powered by java1234</a></p>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis的持久化之AOF方式</title>
-    <url>/176.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>AOF方式：将以日志，记录每一个操作</p>
-<p>优势：安全性相对RDB方式高很多</p>
-<p>劣势：效率相对RDB方式低很多</p>
-<h3 id="查看和修改配置"><a href="#查看和修改配置" class="headerlink" title="查看和修改配置"></a>查看和修改配置</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622023030.jpg" alt="img"></p>
-<p>appendonly no默认关闭aof方式，我们修改成 yes 就开启</p>
-<p>下面那个是默认的aof文件名</p>
-<p>接下来找到</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622023041.jpg" alt="img"></p>
-<p>这里是三种同步策略：</p>
-<p>always是只要发生修改，立即同步（推荐使用，安全性最高）</p>
-<p>everysec是每秒同步一次</p>
-<p>no是不同步 </p>
-<p>我们修改成always</p>
-<p>保存并退出</p>
-<h3 id="备份数据"><a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h3><p>启动Redis服务，增加几个key，退出客户端，查看当前目录，发现多了一个备份文件appendonly.aof</p>
-<p>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ps -ef | grep -i redis<br>root    1754    1  0 02:04 ?     00:00:00 ./bin/redis-server *:6379<br>root    1758  1498  0 02:04 pts/0   00:00:00 grep –color=auto -i redis<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *<br>(empty list or set)<br>127.0.0.1:6379&gt; set a 1<br>OK<br>127.0.0.1:6379&gt; set b 2<br>OK<br>127.0.0.1:6379&gt; keys *</p>
-<ol>
-<li>“a”</li>
-<li>“b”</li>
-</ol>
-<p>127.0.0.1:6379&gt; exit<br>[root@localhost redis]# ps -ef | grep -i redis<br>root    1754    1  0 02:04 ?     00:00:00 ./bin/redis-server *:6379<br>root    1761  1498  0 02:05 pts/0   00:00:00 grep –color=auto -i redis<br>[root@localhost redis]# ll<br>总用量 52<br>-rw-r–r–. 1 root root   77 6月  22 02:04 appendonly.aof<br>drwxr-xr-x. 2 root root  134 6月  20 00:37 bin<br>-rw-r–r–. 1 root root 46698 6月  22 02:02 redis.conf</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622023055.jpg" alt="img"></p>
-<p>退出Redis服务，用shutdown nosave命令关闭Redis就不会创建dump.rdb备份文件</p>
-<p>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *</p>
-<ol>
-<li>“a”</li>
-<li>“b”</li>
-</ol>
-<p>127.0.0.1:6379&gt; shutdown nosave<br>not connected&gt; exit<br>[root@localhost redis]# ll<br>总用量 52<br>-rw-r–r–. 1 root root   77 6月  22 02:04 appendonly.aof<br>drwxr-xr-x. 2 root root  134 6月  20 00:37 bin<br>-rw-r–r–. 1 root root 46698 6月  22 02:02 redis.conf</p>
-<h3 id="恢复数据"><a href="#恢复数据" class="headerlink" title="恢复数据"></a>恢复数据</h3><p>将appendonly.aof剪切到其它目录，重启Redis服务，查看所有key，发现没有数据</p>
-<p>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *<br>(empty list or set)</p>
-<p>退出Redis服务（shutdown nosave命令），将剪切到其它目录的appendonly.aof重新复制到备份文件指定目录/usr/local/redis，重启Redis服务，查看所有key，发现有数据</p>
-<p>127.0.0.1:6379&gt; shutdown nosave<br>not connected&gt; exit<br>[root@localhost redis]# cp /home/data/appendonly.aof /usr/local/redis/<br>cp：是否覆盖”/usr/local/redis/appendonly.aof”？ y<br>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *</p>
-<ol>
-<li>“b”</li>
-<li>“a”</li>
-</ol>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我们平时可以把aof文件定期备份，然后需要的时候拷贝到redis下，重启即可</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://blog.java1234.com/blog/articles/324.html">Redis的持久化之AOF方式_Java开源博客系统-Powered by java1234</a></p>
 ]]></content>
       <categories>
         <category>Redis</category>
@@ -4107,22 +4057,6 @@
       </tags>
   </entry>
   <entry>
-    <title>idea Alt+Enter快捷键添加javadoc文档注释被disabled的解决方法</title>
-    <url>/221.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Alt+Enter快捷键本来是有添加javadoc文档注释选项的，但是不小心点击disabled后，该选项就没有了</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721030304.jpg" alt="img"></p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>1、打开配置（快捷键为Ctrl+Shift+S）</p>
-<p>2、根据下图提示找到Add Javadoc，勾选后保存即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721030315.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>栈</title>
     <url>/222.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>栈（stack）又名堆栈，它是一种运算受限的线性表。限定仅在表尾进行插入和删除操作的线性表。这一端被称为栈顶，相对地，把另一端称为栈底。向一个栈插入新元素又称作进栈、入栈或压栈，它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素又称作出栈或退栈，它是把栈顶元素删除掉，使其相邻的元素成为新的栈顶元素</p>
@@ -4142,6 +4076,22 @@
       <tags>
         <tag>Java</tag>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea Alt+Enter快捷键添加javadoc文档注释被disabled的解决方法</title>
+    <url>/221.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Alt+Enter快捷键本来是有添加javadoc文档注释选项的，但是不小心点击disabled后，该选项就没有了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721030304.jpg" alt="img"></p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>1、打开配置（快捷键为Ctrl+Shift+S）</p>
+<p>2、根据下图提示找到Add Javadoc，勾选后保存即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721030315.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
       </tags>
   </entry>
   <entry>
@@ -4632,28 +4582,6 @@
       </tags>
   </entry>
   <entry>
-    <title>GitHub Pages绑定自定义域名</title>
-    <url>/239.html</url>
-    <content><![CDATA[<h3 id="修改对应域名的主机记录"><a href="#修改对应域名的主机记录" class="headerlink" title="修改对应域名的主机记录"></a>修改对应域名的主机记录</h3><p>下图是阿里云的修改界面，主机记录为绑定的完整域名</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-02%20013054.png"></p>
-<h4 id="修改记录类型"><a href="#修改记录类型" class="headerlink" title="修改记录类型"></a>修改记录类型</h4><p>记录类型选CNAME</p>
-<h4 id="修改记录值"><a href="#修改记录值" class="headerlink" title="修改记录值"></a>修改记录值</h4><p>记录值填GitHub Pages的访问地址（你的GitHub用户名.github.io）</p>
-<h3 id="新建CNAME文件"><a href="#新建CNAME文件" class="headerlink" title="新建CNAME文件"></a>新建CNAME文件</h3><h4 id="GitHub仓库中新建"><a href="#GitHub仓库中新建" class="headerlink" title="GitHub仓库中新建"></a>GitHub仓库中新建</h4><p>文件内容为你要绑定的域名</p>
-<h4 id="取消强制HTTPS"><a href="#取消强制HTTPS" class="headerlink" title="取消强制HTTPS"></a>取消强制HTTPS</h4><p>取消下图的Enforce HTTPS的勾选即可，（进入该仓库的Settings，点击左侧菜单的Pages进入下面界面）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-02%20014616.png"></p>
-<h4 id="再次新建CNAME文件"><a href="#再次新建CNAME文件" class="headerlink" title="再次新建CNAME文件"></a>再次新建CNAME文件</h4><p>最好也在hexo的根目录的source文件夹中也新建相同的文件，内容也是你要绑定的域名</p>
-<p>这样做的原因：如果根目录没有这个文件，通过hexo d命令更新仓库时会删除掉仓库中的CNAME文件，那就又需要在仓库中新建CNAME文件</p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>稍后即可通过绑定的域名访问GitHub  Pages了</p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>cmd命令操作MySQL数据库</title>
     <url>/24.html</url>
     <content><![CDATA[<h3 id="CMD进入数据库步骤"><a href="#CMD进入数据库步骤" class="headerlink" title="CMD进入数据库步骤"></a>CMD进入数据库步骤</h3><p>先进入数据库安装的盘符（如果要进入C盘根目录则连续敲两下命令cd .. ）</p>
@@ -4683,6 +4611,28 @@
       <tags>
         <tag>MySQL</tag>
         <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GitHub Pages绑定自定义域名</title>
+    <url>/239.html</url>
+    <content><![CDATA[<h3 id="修改对应域名的主机记录"><a href="#修改对应域名的主机记录" class="headerlink" title="修改对应域名的主机记录"></a>修改对应域名的主机记录</h3><p>下图是阿里云的修改界面，主机记录为绑定的完整域名</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-02%20013054.png"></p>
+<h4 id="修改记录类型"><a href="#修改记录类型" class="headerlink" title="修改记录类型"></a>修改记录类型</h4><p>记录类型选CNAME</p>
+<h4 id="修改记录值"><a href="#修改记录值" class="headerlink" title="修改记录值"></a>修改记录值</h4><p>记录值填GitHub Pages的访问地址（你的GitHub用户名.github.io）</p>
+<h3 id="新建CNAME文件"><a href="#新建CNAME文件" class="headerlink" title="新建CNAME文件"></a>新建CNAME文件</h3><h4 id="GitHub仓库中新建"><a href="#GitHub仓库中新建" class="headerlink" title="GitHub仓库中新建"></a>GitHub仓库中新建</h4><p>文件内容为你要绑定的域名</p>
+<h4 id="取消强制HTTPS"><a href="#取消强制HTTPS" class="headerlink" title="取消强制HTTPS"></a>取消强制HTTPS</h4><p>取消下图的Enforce HTTPS的勾选即可，（进入该仓库的Settings，点击左侧菜单的Pages进入下面界面）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-02%20014616.png"></p>
+<h4 id="再次新建CNAME文件"><a href="#再次新建CNAME文件" class="headerlink" title="再次新建CNAME文件"></a>再次新建CNAME文件</h4><p>最好也在hexo的根目录的source文件夹中也新建相同的文件，内容也是你要绑定的域名</p>
+<p>这样做的原因：如果根目录没有这个文件，通过hexo d命令更新仓库时会删除掉仓库中的CNAME文件，那就又需要在仓库中新建CNAME文件</p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>稍后即可通过绑定的域名访问GitHub  Pages了</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -4732,31 +4682,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo常用命令</title>
-    <url>/242.html</url>
-    <content><![CDATA[<h3 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h3><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p>
-<p>在某些情况（尤其是更换主题后），如果对站点的更改无论如何也不生效，就运行该命令。</p>
-<h3 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h3><p>生成静态文件</p>
-<p>是hexo generate的简写</p>
-<h3 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h3><p>部署网站，同时将网站的改动提交到GitHub仓库</p>
-<p>是hexo deploy的简写</p>
-<h3 id="hexo-g-d"><a href="#hexo-g-d" class="headerlink" title="hexo g -d"></a>hexo g -d</h3><p><code>hexo g</code>和<code>hexo d</code>先后执行</p>
-<h3 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h3><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
-<p>是hexo server的简写</p>
-<h3 id="hexo-v"><a href="#hexo-v" class="headerlink" title="hexo v"></a>hexo v</h3><p>显示hexo的版本</p>
-<p>是hexo version的简写</p>
-<h3 id="hexo-new-“文章名称”"><a href="#hexo-new-“文章名称”" class="headerlink" title="hexo new “文章名称”"></a>hexo new “文章名称”</h3><p>新建一个<font color="#dd0000">文章名称.md</font>，该文件在站点根目录的<font color="#dd0000">source/_post/</font>中</p>
-<h3 id="hexo-new-page-“名称”"><a href="#hexo-new-page-“名称”" class="headerlink" title="hexo new page “名称”"></a>hexo new page “名称”</h3><p>新建一个页面，这个页面在站点根目录的<code>source/名称/</code>中（名为index.md），可以通过<code>/名称/</code>访问这个页面</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>以上都是我常用的命令，更多命令及详情查看：<a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo next创建标签页</title>
     <url>/243.html</url>
     <content><![CDATA[<h3 id="创建命令"><a href="#创建命令" class="headerlink" title="创建命令"></a>创建命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;tags&quot;</span></span><br></pre></td></tr></table></figure>
@@ -4777,6 +4702,31 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">主页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="comment">#日期: /time/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20132524.png"></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo常用命令</title>
+    <url>/242.html</url>
+    <content><![CDATA[<h3 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h3><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p>
+<p>在某些情况（尤其是更换主题后），如果对站点的更改无论如何也不生效，就运行该命令。</p>
+<h3 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h3><p>生成静态文件</p>
+<p>是hexo generate的简写</p>
+<h3 id="hexo-d"><a href="#hexo-d" class="headerlink" title="hexo d"></a>hexo d</h3><p>部署网站，同时将网站的改动提交到GitHub仓库</p>
+<p>是hexo deploy的简写</p>
+<h3 id="hexo-g-d"><a href="#hexo-g-d" class="headerlink" title="hexo g -d"></a>hexo g -d</h3><p><code>hexo g</code>和<code>hexo d</code>先后执行</p>
+<h3 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h3><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/">http://localhost:4000/</a></p>
+<p>是hexo server的简写</p>
+<h3 id="hexo-v"><a href="#hexo-v" class="headerlink" title="hexo v"></a>hexo v</h3><p>显示hexo的版本</p>
+<p>是hexo version的简写</p>
+<h3 id="hexo-new-“文章名称”"><a href="#hexo-new-“文章名称”" class="headerlink" title="hexo new “文章名称”"></a>hexo new “文章名称”</h3><p>新建一个<font color="#dd0000">文章名称.md</font>，该文件在站点根目录的<font color="#dd0000">source/_post/</font>中</p>
+<h3 id="hexo-new-page-“名称”"><a href="#hexo-new-page-“名称”" class="headerlink" title="hexo new page “名称”"></a>hexo new page “名称”</h3><p>新建一个页面，这个页面在站点根目录的<code>source/名称/</code>中（名为index.md），可以通过<code>/名称/</code>访问这个页面</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>以上都是我常用的命令，更多命令及详情查看：<a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -4918,30 +4868,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo加密文章</title>
-    <url>/250.html</url>
-    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>安装命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
-
-<h3 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h3><p>将 “password” 字段添加到文章信息头</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2016-03-30 21:18:02</span><br><span class="line"><span class="section">password: hello</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-
-<p>执行命令：hexo clean，hexo g，hexo s</p>
-<p>然后可以在本地预览加密的文章</p>
-<h3 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h3><p>可以中文化提示信息以及更多配置（也可以不配置）</p>
-<p>在站点根目录的_config.yml文件中添加下面内容：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 加密文章</span></span><br><span class="line"><span class="attr">encrypt:</span> <span class="comment"># hexo-blog-encrypt</span></span><br><span class="line">  <span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码.</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">xray</span></span><br><span class="line">  <span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span></span><br><span class="line">  <span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL创建表语句</title>
     <url>/25.html</url>
     <content><![CDATA[<h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><p>主键：primary key，自增：auto_increment</p>
@@ -4972,6 +4898,30 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo加密文章</title>
+    <url>/250.html</url>
+    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-blog-encrypt</span><br></pre></td></tr></table></figure>
+
+<h3 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h3><p>将 “password” 字段添加到文章信息头</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hello World</span><br><span class="line">date: 2016-03-30 21:18:02</span><br><span class="line"><span class="section">password: hello</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<p>执行命令：hexo clean，hexo g，hexo s</p>
+<p>然后可以在本地预览加密的文章</p>
+<h3 id="高级配置"><a href="#高级配置" class="headerlink" title="高级配置"></a>高级配置</h3><p>可以中文化提示信息以及更多配置（也可以不配置）</p>
+<p>在站点根目录的_config.yml文件中添加下面内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 加密文章</span></span><br><span class="line"><span class="attr">encrypt:</span> <span class="comment"># hexo-blog-encrypt</span></span><br><span class="line">  <span class="attr">abstract:</span> <span class="string">有东西被加密了,</span> <span class="string">请输入密码查看.</span></span><br><span class="line">  <span class="attr">message:</span> <span class="string">您好,</span> <span class="string">这里需要密码.</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">xray</span></span><br><span class="line">  <span class="attr">wrong_pass_message:</span> <span class="string">抱歉,</span> <span class="string">这个密码看着不太对,</span> <span class="string">请再试试.</span></span><br><span class="line">  <span class="attr">wrong_hash_message:</span> <span class="string">抱歉,</span> <span class="string">这个文章不能被校验,</span> <span class="string">不过您还是能看看解密后的内容.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md">https://github.com/D0n9X1n/hexo-blog-encrypt/blob/master/ReadMe.zh.md</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -5041,30 +4991,6 @@
       </tags>
   </entry>
   <entry>
-    <title>idea创建Maven项目</title>
-    <url>/253.html</url>
-    <content><![CDATA[<blockquote>
-<p>选择Maven项目、JDK版本、Maven Archetype（选maven-archetype-webapp）</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20220412.png"></p>
-<blockquote>
-<p>取名以及选择项目路径</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20220536.png"></p>
-<blockquote>
-<p>选择本机的Maven安装路径、配置文件、仓库路径</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20220708.png"></p>
-]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Dubbo Admin控制台</title>
     <url>/254.html</url>
     <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>阿里云盘链接：<a href="https://www.aliyundrive.com/s/nZaiPAfGKnq">https://www.aliyundrive.com/s/nZaiPAfGKnq</a></p>
@@ -5091,6 +5017,30 @@
       <tags>
         <tag>ZooKeeper</tag>
         <tag>Dubbo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea创建Maven项目</title>
+    <url>/253.html</url>
+    <content><![CDATA[<blockquote>
+<p>选择Maven项目、JDK版本、Maven Archetype（选maven-archetype-webapp）</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20220412.png"></p>
+<blockquote>
+<p>取名以及选择项目路径</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20220536.png"></p>
+<blockquote>
+<p>选择本机的Maven安装路径、配置文件、仓库路径</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-09%20220708.png"></p>
+]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+        <tag>idea使用</tag>
       </tags>
   </entry>
   <entry>
@@ -5208,25 +5158,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL对表数据进行增删改查</title>
-    <url>/26.html</url>
-    <content><![CDATA[<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `db_student`.`t_student` (`id`, `stuName`, `age`, `sex`, `gradeName`)<span class="keyword">VALUES</span>(<span class="string">&#x27;15&#x27;</span>,<span class="string">&#x27;tom&#x27;</span>, <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;大四&#x27;</span>); </span><br></pre></td></tr></table></figure>
-
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> `db_student`.`t_student` <span class="keyword">WHERE</span> `id`<span class="operator">=</span><span class="string">&#x27;16&#x27;</span>; </span><br></pre></td></tr></table></figure>
-
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">UPDATE `db_student`.`t_student` <span class="keyword">SET</span> `sex`<span class="operator">=</span><span class="string">&#x27;男&#x27;</span>,`gradeName`<span class="operator">=</span><span class="string">&#x27;大四&#x27;</span> <span class="keyword">WHERE</span> `id`<span class="operator">=</span><span class="string">&#x27;16&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> `db_student`.`t_student` <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Dubbo抽取服务提供者和消费者的共同接口</title>
     <url>/260.html</url>
     <content><![CDATA[<h3 id="抽取原因"><a href="#抽取原因" class="headerlink" title="抽取原因"></a>抽取原因</h3><p>抽取前需要在服务提供者以及消费者模块中分别定义一次接口，抽取后只需要定义一次即可，可以提高开发的效率</p>
@@ -5245,6 +5176,25 @@
       </categories>
       <tags>
         <tag>Dubbo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL对表数据进行增删改查</title>
+    <url>/26.html</url>
+    <content><![CDATA[<h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `db_student`.`t_student` (`id`, `stuName`, `age`, `sex`, `gradeName`)<span class="keyword">VALUES</span>(<span class="string">&#x27;15&#x27;</span>,<span class="string">&#x27;tom&#x27;</span>, <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;男&#x27;</span>, <span class="string">&#x27;大四&#x27;</span>); </span><br></pre></td></tr></table></figure>
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> `db_student`.`t_student` <span class="keyword">WHERE</span> `id`<span class="operator">=</span><span class="string">&#x27;16&#x27;</span>; </span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">UPDATE `db_student`.`t_student` <span class="keyword">SET</span> `sex`<span class="operator">=</span><span class="string">&#x27;男&#x27;</span>,`gradeName`<span class="operator">=</span><span class="string">&#x27;大四&#x27;</span> <span class="keyword">WHERE</span> `id`<span class="operator">=</span><span class="string">&#x27;16&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> `db_student`.`t_student` <span class="keyword">WHERE</span> id<span class="operator">=</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -5708,6 +5658,56 @@
       <tags>
         <tag>Spring Cloud</tag>
         <tag>Feign</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis的持久化之AOF方式</title>
+    <url>/176.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>AOF方式：将以日志，记录每一个操作</p>
+<p>优势：安全性相对RDB方式高很多</p>
+<p>劣势：效率相对RDB方式低很多</p>
+<h3 id="查看和修改配置"><a href="#查看和修改配置" class="headerlink" title="查看和修改配置"></a>查看和修改配置</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622023030.jpg" alt="img"></p>
+<p>appendonly no默认关闭aof方式，我们修改成 yes 就开启</p>
+<p>下面那个是默认的aof文件名</p>
+<p>接下来找到</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622023041.jpg" alt="img"></p>
+<p>这里是三种同步策略：</p>
+<p>always是只要发生修改，立即同步（推荐使用，安全性最高）</p>
+<p>everysec是每秒同步一次</p>
+<p>no是不同步 </p>
+<p>我们修改成always</p>
+<p>保存并退出</p>
+<h3 id="备份数据"><a href="#备份数据" class="headerlink" title="备份数据"></a>备份数据</h3><p>启动Redis服务，增加几个key，退出客户端，查看当前目录，发现多了一个备份文件appendonly.aof</p>
+<p>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ps -ef | grep -i redis<br>root    1754    1  0 02:04 ?     00:00:00 ./bin/redis-server *:6379<br>root    1758  1498  0 02:04 pts/0   00:00:00 grep –color=auto -i redis<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *<br>(empty list or set)<br>127.0.0.1:6379&gt; set a 1<br>OK<br>127.0.0.1:6379&gt; set b 2<br>OK<br>127.0.0.1:6379&gt; keys *</p>
+<ol>
+<li>“a”</li>
+<li>“b”</li>
+</ol>
+<p>127.0.0.1:6379&gt; exit<br>[root@localhost redis]# ps -ef | grep -i redis<br>root    1754    1  0 02:04 ?     00:00:00 ./bin/redis-server *:6379<br>root    1761  1498  0 02:05 pts/0   00:00:00 grep –color=auto -i redis<br>[root@localhost redis]# ll<br>总用量 52<br>-rw-r–r–. 1 root root   77 6月  22 02:04 appendonly.aof<br>drwxr-xr-x. 2 root root  134 6月  20 00:37 bin<br>-rw-r–r–. 1 root root 46698 6月  22 02:02 redis.conf</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622023055.jpg" alt="img"></p>
+<p>退出Redis服务，用shutdown nosave命令关闭Redis就不会创建dump.rdb备份文件</p>
+<p>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *</p>
+<ol>
+<li>“a”</li>
+<li>“b”</li>
+</ol>
+<p>127.0.0.1:6379&gt; shutdown nosave<br>not connected&gt; exit<br>[root@localhost redis]# ll<br>总用量 52<br>-rw-r–r–. 1 root root   77 6月  22 02:04 appendonly.aof<br>drwxr-xr-x. 2 root root  134 6月  20 00:37 bin<br>-rw-r–r–. 1 root root 46698 6月  22 02:02 redis.conf</p>
+<h3 id="恢复数据"><a href="#恢复数据" class="headerlink" title="恢复数据"></a>恢复数据</h3><p>将appendonly.aof剪切到其它目录，重启Redis服务，查看所有key，发现没有数据</p>
+<p>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *<br>(empty list or set)</p>
+<p>退出Redis服务（shutdown nosave命令），将剪切到其它目录的appendonly.aof重新复制到备份文件指定目录/usr/local/redis，重启Redis服务，查看所有key，发现有数据</p>
+<p>127.0.0.1:6379&gt; shutdown nosave<br>not connected&gt; exit<br>[root@localhost redis]# cp /home/data/appendonly.aof /usr/local/redis/<br>cp：是否覆盖”/usr/local/redis/appendonly.aof”？ y<br>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *</p>
+<ol>
+<li>“b”</li>
+<li>“a”</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我们平时可以把aof文件定期备份，然后需要的时候拷贝到redis下，重启即可</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://blog.java1234.com/blog/articles/324.html">Redis的持久化之AOF方式_Java开源博客系统-Powered by java1234</a></p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
       </tags>
   </entry>
   <entry>
@@ -6250,6 +6250,22 @@
       </tags>
   </entry>
   <entry>
+    <title>idea连接MySQL数据库</title>
+    <url>/29.html</url>
+    <content><![CDATA[<h3 id="选择数据库类型"><a href="#选择数据库类型" class="headerlink" title="选择数据库类型"></a>选择数据库类型</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018003753.jpg" alt="img"></p>
+<h3 id="填写配置信息"><a href="#填写配置信息" class="headerlink" title="填写配置信息"></a>填写配置信息</h3><p>URL填：<code>jdbc:mysql://localhost:3306/db_myblog?serverTimezone=UTC</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018004005.jpg" alt="img"></p>
+<h3 id="测试是否连接成功"><a href="#测试是否连接成功" class="headerlink" title="测试是否连接成功"></a>测试是否连接成功</h3><p>点击上图的Test Connection按钮测试是否可以成功连接,成功后点击OK即可</p>
+]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7安装Docker</title>
     <url>/290.html</url>
     <content><![CDATA[<h3 id="登录身份"><a href="#登录身份" class="headerlink" title="登录身份"></a>登录身份</h3><p>使用root身份登录，一般默认都是用root身份</p>
@@ -6290,41 +6306,6 @@
       </tags>
   </entry>
   <entry>
-    <title>idea连接MySQL数据库</title>
-    <url>/29.html</url>
-    <content><![CDATA[<h3 id="选择数据库类型"><a href="#选择数据库类型" class="headerlink" title="选择数据库类型"></a>选择数据库类型</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018003753.jpg" alt="img"></p>
-<h3 id="填写配置信息"><a href="#填写配置信息" class="headerlink" title="填写配置信息"></a>填写配置信息</h3><p>URL填：<code>jdbc:mysql://localhost:3306/db_myblog?serverTimezone=UTC</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018004005.jpg" alt="img"></p>
-<h3 id="测试是否连接成功"><a href="#测试是否连接成功" class="headerlink" title="测试是否连接成功"></a>测试是否连接成功</h3><p>点击上图的Test Connection按钮测试是否可以成功连接,成功后点击OK即可</p>
-]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker使用pull命令时报错</title>
-    <url>/292.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用pull命令安装容器时报错：Error response from daemon: Get “<a href="https://registry-1.docker.io/v2/&quot;">https://registry-1.docker.io/v2/&quot;</a>: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置国内镜像"><a href="#配置国内镜像" class="headerlink" title="配置国内镜像"></a>配置国内镜像</h4><p>查看博客：<a href="/291.html">Docker配置阿里云镜像仓库</a></p>
-<h4 id="添加DNS地址"><a href="#添加DNS地址" class="headerlink" title="添加DNS地址"></a>添加DNS地址</h4><p>如果配置了国内镜像地址还是报错，就添加DNS地址，在/etc/resolv.conf中添加两行代码：</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">nameserver <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nameserver <span class="number">8.8</span>.<span class="number">4.4</span></span><br></pre></td></tr></table></figure>
-
-<p>重启一下Docker</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker配置阿里云镜像仓库</title>
     <url>/291.html</url>
     <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Docker默认远程仓库是 <a href="https://hub.docker.com/">https://hub.docker.com/</a> ，下载速度会很慢，所以要配置一下国内镜像</p>
@@ -6341,6 +6322,25 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
 
 <p>发现速度快了很多</p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker使用pull命令时报错</title>
+    <url>/292.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用pull命令安装容器时报错：Error response from daemon: Get “<a href="https://registry-1.docker.io/v2/&quot;">https://registry-1.docker.io/v2/&quot;</a>: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置国内镜像"><a href="#配置国内镜像" class="headerlink" title="配置国内镜像"></a>配置国内镜像</h4><p>查看博客：<a href="/291.html">Docker配置阿里云镜像仓库</a></p>
+<h4 id="添加DNS地址"><a href="#添加DNS地址" class="headerlink" title="添加DNS地址"></a>添加DNS地址</h4><p>如果配置了国内镜像地址还是报错，就添加DNS地址，在/etc/resolv.conf中添加两行代码：</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">nameserver <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nameserver <span class="number">8.8</span>.<span class="number">4.4</span></span><br></pre></td></tr></table></figure>
+
+<p>重启一下Docker</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -10493,21 +10493,6 @@
       </tags>
   </entry>
   <entry>
-    <title>实现图片居中显示</title>
-    <url>/384.html</url>
-    <content><![CDATA[<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>将 img 标签放在 p 标签内，然后 p 标签使用样式<code>text-align: center</code></p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">style</span>=<span class="string">&quot;height: 66px&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://image.zoutl.cn/hexo/images/logo.png&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20163102.png"></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>阿里云CentOS7系统手动修复漏洞</title>
     <url>/385.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>阿里云后台自动修复漏洞是需要收费的，然而手动修复漏洞只需要3个步骤：</p>
@@ -10530,6 +10515,21 @@
       <tags>
         <tag>CentOS7</tag>
         <tag>阿里云</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实现图片居中显示</title>
+    <url>/384.html</url>
+    <content><![CDATA[<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>将 img 标签放在 p 标签内，然后 p 标签使用样式<code>text-align: center</code></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">style</span>=<span class="string">&quot;height: 66px&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://image.zoutl.cn/hexo/images/logo.png&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20163102.png"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
