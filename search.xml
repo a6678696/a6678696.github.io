@@ -1635,6 +1635,26 @@
       </tags>
   </entry>
   <entry>
+    <title>查看CentOS7的IP</title>
+    <url>/149.html</url>
+    <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050531.jpg" alt="img"></p>
+<h3 id="修改ens33网卡的配置"><a href="#修改ens33网卡的配置" class="headerlink" title="修改ens33网卡的配置"></a>修改ens33网卡的配置</h3><p>查看网卡配置命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
+
+<p>下图中划红线处需要修改为<code>ONBOOT=yes</code>，按下i键进入编辑模式，修改后按ESC键退出编辑模式，输入 :wq（保存并退出），最后按下回车键即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050844.jpg" alt="img"></p>
+<p>最后输入命令ip addr查看即可</p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>idea配置Tomcat</title>
     <url>/148.html</url>
     <content><![CDATA[<h3 id="打开配置界面"><a href="#打开配置界面" class="headerlink" title="打开配置界面"></a>打开配置界面</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615051928.jpg" alt="img"></p>
@@ -1654,26 +1674,6 @@
       <tags>
         <tag>Tomcat</tag>
         <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>查看CentOS7的IP</title>
-    <url>/149.html</url>
-    <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050531.jpg" alt="img"></p>
-<h3 id="修改ens33网卡的配置"><a href="#修改ens33网卡的配置" class="headerlink" title="修改ens33网卡的配置"></a>修改ens33网卡的配置</h3><p>查看网卡配置命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens33</span><br></pre></td></tr></table></figure>
-
-<p>下图中划红线处需要修改为<code>ONBOOT=yes</code>，按下i键进入编辑模式，修改后按ESC键退出编辑模式，输入 :wq（保存并退出），最后按下回车键即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616050844.jpg" alt="img"></p>
-<p>最后输入命令ip addr查看即可</p>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
       </tags>
   </entry>
   <entry>
@@ -2221,53 +2221,6 @@
       </tags>
   </entry>
   <entry>
-    <title>实现Jedis连接</title>
-    <url>/161.html</url>
-    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">        String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行代码时出现错误"><a href="#运行代码时出现错误" class="headerlink" title="运行代码时出现错误"></a>运行代码时出现错误</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082302.jpg" alt="img"></p>
-<p>代表连接超时了，我们配置下防火墙，开一个6379端口权限</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd \--zone=public \--add-port=6379/tcp \--permanent</span><br><span class="line">firewall-cmd \--reload</span><br></pre></td></tr></table></figure>
-
-<p>修改 /usr/local/redis/redis.conf 配置文件：将bind 127.0.0.1注释掉，在前面加#号即可（因为这里绑定了本机）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082316.jpg" alt="img"></p>
-<h3 id="重启Redis服务"><a href="#重启Redis服务" class="headerlink" title="重启Redis服务"></a>重启Redis服务</h3><p>重启Redis服务，再次运行Java代码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 停止Redis服务</span></span><br><span class="line">./bin/redis-cli shutdown</span><br><span class="line"><span class="comment"># 启动Redis服务</span></span><br><span class="line">./bin/redis-server ./redis.conf </span><br></pre></td></tr></table></figure>
-
-<p>再次出现错误（下面是错误信息）</p>
-<p><font color="#dd0000">Exception in thread “main” redis.clients.jedis.exceptions.JedisDataException: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command ‘CONFIG SET protected-mode no’ from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to ‘no’, and then restarting the server. 3) If you started the server manually just for testing, restart it with the ‘--protected-mode no’ option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.<br>   at redis.clients.jedis.Protocol.processError(Protocol.java:127)<br>   at redis.clients.jedis.Protocol.process(Protocol.java:161)<br>   at redis.clients.jedis.Protocol.read(Protocol.java:215)<br>   at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)<br>   at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)<br>   at redis.clients.jedis.Jedis.set(Jedis.java:121)<br>   at com.ledao.jedis.JedisTest.main(JedisTest.java:14)</font></p>
-<p>出现错误的原因是因为远程连接 redis，因为 redis 的自我保护，会拒绝被访问，解决办法有两种：（<font color="#dd0000">推荐使用第二种方法：设置Redis连接密码</font>）</p>
-<ol>
-<li><p>关闭Redis的自我保护（<font color="#dd0000">不推荐使用</font>）</p>
-<p>protected-mode yes 的yes修改为no即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082329.jpg" alt="img"></p>
-</li>
-<li><p>设置Redis连接密码，关闭Redis服务后就会失效，需要重新设置（<font color="#00dd00">推荐使用</font>）</p>
-<p>进入客户端</p>
-<p>[root@localhost redis]# ./bin/redis-cli</p>
-<p>设置密码</p>
-<p>127.0.0.1:6379&gt; config set requirepass 123456<br>OK<br>127.0.0.1:6379&gt; quit</p>
-<p>验证是否设置成功（出现OK就说明设置成功了）</p>
-<p>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; auth 123456<br>OK<br>127.0.0.1:6379&gt; quit</p>
-</li>
-</ol>
-<h3 id="设置Redis密码"><a href="#设置Redis密码" class="headerlink" title="设置Redis密码"></a>设置Redis密码</h3><p>Java代码中设置Redis密码，然后再次运行</p>
-<p>jedis.auth(“123456”);</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">        String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082147.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Redis使用连接池</title>
     <url>/162.html</url>
     <content><![CDATA[<h3 id="池化的基本思想"><a href="#池化的基本思想" class="headerlink" title="池化的基本思想"></a>池化的基本思想</h3><ol>
@@ -2308,6 +2261,53 @@
 ]]></content>
       <categories>
         <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实现Jedis连接</title>
+    <url>/161.html</url>
+    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>redis.clients<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jedis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.9.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">        String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行代码时出现错误"><a href="#运行代码时出现错误" class="headerlink" title="运行代码时出现错误"></a>运行代码时出现错误</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082302.jpg" alt="img"></p>
+<p>代表连接超时了，我们配置下防火墙，开一个6379端口权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd \--zone=public \--add-port=6379/tcp \--permanent</span><br><span class="line">firewall-cmd \--reload</span><br></pre></td></tr></table></figure>
+
+<p>修改 /usr/local/redis/redis.conf 配置文件：将bind 127.0.0.1注释掉，在前面加#号即可（因为这里绑定了本机）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082316.jpg" alt="img"></p>
+<h3 id="重启Redis服务"><a href="#重启Redis服务" class="headerlink" title="重启Redis服务"></a>重启Redis服务</h3><p>重启Redis服务，再次运行Java代码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 停止Redis服务</span></span><br><span class="line">./bin/redis-cli shutdown</span><br><span class="line"><span class="comment"># 启动Redis服务</span></span><br><span class="line">./bin/redis-server ./redis.conf </span><br></pre></td></tr></table></figure>
+
+<p>再次出现错误（下面是错误信息）</p>
+<p><font color="#dd0000">Exception in thread “main” redis.clients.jedis.exceptions.JedisDataException: DENIED Redis is running in protected mode because protected mode is enabled, no bind address was specified, no authentication password is requested to clients. In this mode connections are only accepted from the loopback interface. If you want to connect from external computers to Redis you may adopt one of the following solutions: 1) Just disable protected mode sending the command ‘CONFIG SET protected-mode no’ from the loopback interface by connecting to Redis from the same host the server is running, however MAKE SURE Redis is not publicly accessible from internet if you do so. Use CONFIG REWRITE to make this change permanent. 2) Alternatively you can just disable the protected mode by editing the Redis configuration file, and setting the protected mode option to ‘no’, and then restarting the server. 3) If you started the server manually just for testing, restart it with the ‘--protected-mode no’ option. 4) Setup a bind address or an authentication password. NOTE: You only need to do one of the above things in order for the server to start accepting connections from the outside.<br>   at redis.clients.jedis.Protocol.processError(Protocol.java:127)<br>   at redis.clients.jedis.Protocol.process(Protocol.java:161)<br>   at redis.clients.jedis.Protocol.read(Protocol.java:215)<br>   at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)<br>   at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)<br>   at redis.clients.jedis.Jedis.set(Jedis.java:121)<br>   at com.ledao.jedis.JedisTest.main(JedisTest.java:14)</font></p>
+<p>出现错误的原因是因为远程连接 redis，因为 redis 的自我保护，会拒绝被访问，解决办法有两种：（<font color="#dd0000">推荐使用第二种方法：设置Redis连接密码</font>）</p>
+<ol>
+<li><p>关闭Redis的自我保护（<font color="#dd0000">不推荐使用</font>）</p>
+<p>protected-mode yes 的yes修改为no即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082329.jpg" alt="img"></p>
+</li>
+<li><p>设置Redis连接密码，关闭Redis服务后就会失效，需要重新设置（<font color="#00dd00">推荐使用</font>）</p>
+<p>进入客户端</p>
+<p>[root@localhost redis]# ./bin/redis-cli</p>
+<p>设置密码</p>
+<p>127.0.0.1:6379&gt; config set requirepass 123456<br>OK<br>127.0.0.1:6379&gt; quit</p>
+<p>验证是否设置成功（出现OK就说明设置成功了）</p>
+<p>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; auth 123456<br>OK<br>127.0.0.1:6379&gt; quit</p>
+</li>
+</ol>
+<h3 id="设置Redis密码"><a href="#设置Redis密码" class="headerlink" title="设置Redis密码"></a>设置Redis密码</h3><p>Java代码中设置Redis密码，然后再次运行</p>
+<p>jedis.auth(“123456”);</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        jedis.set(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">        String value = jedis.get(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">        System.out.println(value);</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082147.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
       </categories>
       <tags>
         <tag>Java</tag>
@@ -3261,27 +3261,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue.js自定义指令</title>
-    <url>/194.html</url>
-    <content><![CDATA[<p>除了默认设置的核心指令( v-model 和 v-show )，Vue 也允许注册自定义指令</p>
-<p>自定义指令分为全局指令和局部指令</p>
-<p>下面分别注册全局指令和局部指令，指令功能：在页面加载时，元素获得焦点</p>
-<h3 id="全局指令"><a href="#全局指令" class="headerlink" title="全局指令"></a>全局指令</h3><p>每个实例都可以使用</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    Vue.directive(<span class="string">&#x27;focus&#x27;</span>, &#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">elements</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            elements.focus();</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="局部指令"><a href="#局部指令" class="headerlink" title="局部指令"></a>局部指令</h3><p>只能在注册局部指令的实例中使用</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">directives</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">focus</span>: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    el.focus();</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625211215.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue.js 组件 - 自定义事件</title>
     <url>/193.html</url>
     <content><![CDATA[<p>父组件是使用 props 传递数据给子组件，但如果子组件要把数据传递回去，就需要使用自定义事件</p>
@@ -3294,6 +3273,27 @@
 <h3 id="代码解读"><a href="#代码解读" class="headerlink" title="代码解读"></a><strong>代码解读</strong></h3><p>点击按钮时，触发子组件内部的incrementHandler点击事件（当前按钮的标签值counter加1，触发父组件的子组件my-button外部的increment事件），increment事件即执行Vue实例的incrementTotal方法（total加1）</p>
 <p>子组件内部：子组件的代码，例如上面的代码中子组件的内部就是&lt;button @click=”incrementHandler”&gt;&lt;/button&gt;</p>
 <p>子组件的外部：&lt;子组件名称&gt;&lt;/子组件名称&gt;多出来的内容，例如上面的代码中子组件的外部就是v-on:increment=”incrementTotal”</p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue.js自定义指令</title>
+    <url>/194.html</url>
+    <content><![CDATA[<p>除了默认设置的核心指令( v-model 和 v-show )，Vue 也允许注册自定义指令</p>
+<p>自定义指令分为全局指令和局部指令</p>
+<p>下面分别注册全局指令和局部指令，指令功能：在页面加载时，元素获得焦点</p>
+<h3 id="全局指令"><a href="#全局指令" class="headerlink" title="全局指令"></a>全局指令</h3><p>每个实例都可以使用</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    Vue.directive(<span class="string">&#x27;focus&#x27;</span>, &#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">elements</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">            elements.focus();</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="局部指令"><a href="#局部指令" class="headerlink" title="局部指令"></a>局部指令</h3><p>只能在注册局部指令的实例中使用</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">directives</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">focus</span>: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    el.focus();</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625211215.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Vue.js</category>
@@ -3320,6 +3320,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Boot解决跨域问题</title>
+    <url>/196.html</url>
+    <content><![CDATA[<h3 id="为什么要实现跨域"><a href="#为什么要实现跨域" class="headerlink" title="为什么要实现跨域"></a>为什么要实现跨域</h3><p>如果没有实现跨域，前后端分离项目中Ajax就无法返回数据</p>
+<h3 id="跨域方法"><a href="#跨域方法" class="headerlink" title="跨域方法"></a>跨域方法</h3><p>Spring Boot解决跨域使用@CrossOrigin注解，该注解有两个参数</p>
+<p>origins： 允许可访问的域列表<br>maxAge:准备响应前的缓存持续的最大时间（以秒为单位）。</p>
+<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="整个Controller"><a href="#整个Controller" class="headerlink" title="整个Controller"></a><strong>整个Controller</strong></h4><p>在指定类上方添加注解</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625235520.jpg" alt="img"></p>
+<h4 id="单个方法"><a href="#单个方法" class="headerlink" title="单个方法"></a><strong>单个方法</strong></h4><p>在指定方法上方添加注解</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625235531.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue.js Ajax(axios)</title>
     <url>/197.html</url>
     <content><![CDATA[<p>Vue.js 2.0 版本推荐使用 axios 来完成 ajax 请求</p>
@@ -3342,25 +3361,6 @@
       </categories>
       <tags>
         <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring Boot解决跨域问题</title>
-    <url>/196.html</url>
-    <content><![CDATA[<h3 id="为什么要实现跨域"><a href="#为什么要实现跨域" class="headerlink" title="为什么要实现跨域"></a>为什么要实现跨域</h3><p>如果没有实现跨域，前后端分离项目中Ajax就无法返回数据</p>
-<h3 id="跨域方法"><a href="#跨域方法" class="headerlink" title="跨域方法"></a>跨域方法</h3><p>Spring Boot解决跨域使用@CrossOrigin注解，该注解有两个参数</p>
-<p>origins： 允许可访问的域列表<br>maxAge:准备响应前的缓存持续的最大时间（以秒为单位）。</p>
-<h3 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h3><h4 id="整个Controller"><a href="#整个Controller" class="headerlink" title="整个Controller"></a><strong>整个Controller</strong></h4><p>在指定类上方添加注解</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625235520.jpg" alt="img"></p>
-<h4 id="单个方法"><a href="#单个方法" class="headerlink" title="单个方法"></a><strong>单个方法</strong></h4><p>在指定方法上方添加注解</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625235531.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -3546,28 +3546,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用动态组件实现组件切换</title>
-    <url>/204.html</url>
-    <content><![CDATA[<h3 id="定义两个组件"><a href="#定义两个组件" class="headerlink" title="定义两个组件"></a>定义两个组件</h3><p>Student.vue</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-tag</span> <span class="attr">type</span>=<span class="string">&quot;danger&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-top: 10px&quot;</span>&gt;</span>当前是学生表<span class="tag">&lt;/<span class="name">el-tag</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">&quot;students&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 60%;margin-left: 20%;margin-top: 20px&quot;</span> <span class="attr">border</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;id&quot;</span> <span class="attr">label</span>=<span class="string">&quot;编号&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;name&quot;</span> <span class="attr">label</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">label</span>=<span class="string">&quot;性别&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;Student&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">students</span>:[</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;小米&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">2</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;小花&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;女&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">3</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;小明&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">4</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;雪莉&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;女&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      ]</span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Teacher.vue</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-tag</span> <span class="attr">type</span>=<span class="string">&quot;warning&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-top: 10px&quot;</span>&gt;</span>当前是教师表<span class="tag">&lt;/<span class="name">el-tag</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">&quot;teachers&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 60%;margin-left: 20%;margin-top: 20px&quot;</span> <span class="attr">border</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;id&quot;</span> <span class="attr">label</span>=<span class="string">&quot;编号&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;name&quot;</span> <span class="attr">label</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">label</span>=<span class="string">&quot;性别&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;Teacher&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">teachers</span>:[</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;Tom&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">2</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;Sherry&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;女&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">3</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;Jack&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">4</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;Mary&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;女&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      ]</span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="在App-vue中引入上面两个组件"><a href="#在App-vue中引入上面两个组件" class="headerlink" title="在App.vue中引入上面两个组件"></a>在App.vue中引入上面两个组件</h3><p>App.vue</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;currentCom=&#x27;Student&#x27;&quot;</span>&gt;</span>查看学生<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;currentCom=&#x27;Teacher&#x27;&quot;</span>&gt;</span>查看教师<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;currentCom&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Student <span class="keyword">from</span> <span class="string">&#x27;./components/Student&#x27;</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Teacher <span class="keyword">from</span> <span class="string">&#x27;./components/Teacher&#x27;</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;App&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  data () &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">currentCom</span>: <span class="string">&#x27;&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;,</span></span><br><span class="line"><span class="javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="javascript">    Student,</span></span><br><span class="line"><span class="javascript">    Teacher</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210627003748.jpg" alt="img"></strong></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>本实例使用了Element UI，请先安装Element UI：<a href="https://blog.zoutl.cn/203.html">基于 vue-cli 安装与卸载 Element UI | LeDao 的博客 (zoutl.cn)</a></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于vue-cli安装与卸载Element UI</title>
     <url>/203.html</url>
     <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h4><p>一共有三个方法：</p>
@@ -3623,6 +3601,28 @@
       <tags>
         <tag>Vue.js</tag>
         <tag>Element UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用动态组件实现组件切换</title>
+    <url>/204.html</url>
+    <content><![CDATA[<h3 id="定义两个组件"><a href="#定义两个组件" class="headerlink" title="定义两个组件"></a>定义两个组件</h3><p>Student.vue</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-tag</span> <span class="attr">type</span>=<span class="string">&quot;danger&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-top: 10px&quot;</span>&gt;</span>当前是学生表<span class="tag">&lt;/<span class="name">el-tag</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">&quot;students&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 60%;margin-left: 20%;margin-top: 20px&quot;</span> <span class="attr">border</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;id&quot;</span> <span class="attr">label</span>=<span class="string">&quot;编号&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;name&quot;</span> <span class="attr">label</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">label</span>=<span class="string">&quot;性别&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;Student&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">students</span>:[</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;小米&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">2</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;小花&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;女&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">3</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;小明&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">4</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;雪莉&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;女&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      ]</span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Teacher.vue</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-tag</span> <span class="attr">type</span>=<span class="string">&quot;warning&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-top: 10px&quot;</span>&gt;</span>当前是教师表<span class="tag">&lt;/<span class="name">el-tag</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">&quot;teachers&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 60%;margin-left: 20%;margin-top: 20px&quot;</span> <span class="attr">border</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;id&quot;</span> <span class="attr">label</span>=<span class="string">&quot;编号&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;name&quot;</span> <span class="attr">label</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;sex&quot;</span> <span class="attr">label</span>=<span class="string">&quot;性别&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;Teacher&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span>&#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">teachers</span>:[</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">1</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;Tom&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">2</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;Sherry&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;女&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">3</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;Jack&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;男&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        &#123;</span></span><br><span class="line"><span class="javascript">          <span class="attr">id</span>:<span class="number">4</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">name</span>:<span class="string">&#x27;Mary&#x27;</span>,</span></span><br><span class="line"><span class="javascript">          <span class="attr">sex</span>:<span class="string">&#x27;女&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">      ]</span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="在App-vue中引入上面两个组件"><a href="#在App-vue中引入上面两个组件" class="headerlink" title="在App.vue中引入上面两个组件"></a>在App.vue中引入上面两个组件</h3><p>App.vue</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;currentCom=&#x27;Student&#x27;&quot;</span>&gt;</span>查看学生<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;currentCom=&#x27;Teacher&#x27;&quot;</span>&gt;</span>查看教师<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">component</span> <span class="attr">:is</span>=<span class="string">&quot;currentCom&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">component</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Student <span class="keyword">from</span> <span class="string">&#x27;./components/Student&#x27;</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Teacher <span class="keyword">from</span> <span class="string">&#x27;./components/Teacher&#x27;</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;App&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  data () &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">currentCom</span>: <span class="string">&#x27;&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;,</span></span><br><span class="line"><span class="javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="javascript">    Student,</span></span><br><span class="line"><span class="javascript">    Teacher</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210627003748.jpg" alt="img"></strong></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>本实例使用了Element UI，请先安装Element UI：<a href="https://blog.zoutl.cn/203.html">基于 vue-cli 安装与卸载 Element UI | LeDao 的博客 (zoutl.cn)</a></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
       </tags>
   </entry>
   <entry>
@@ -4250,6 +4250,28 @@
       </tags>
   </entry>
   <entry>
+    <title>MyBatis-Plus Mapper CRUD 接口之Delete</title>
+    <url>/228.html</url>
+    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 entity 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">delete</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; wrapper)</span></span>;</span><br><span class="line"><span class="comment">// 删除（根据ID 批量删除）</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteBatchIds</span><span class="params">(<span class="meta">@Param(Constants.COLLECTION)</span> Collection&lt;? extends Serializable&gt; idList)</span></span>;</span><br><span class="line"><span class="comment">// 根据 ID 删除</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteById</span><span class="params">(Serializable id)</span></span>;</span><br><span class="line"><span class="comment">// 根据 columnMap 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteByMap</span><span class="params">(<span class="meta">@Param(Constants.COLUMN_MAP)</span> Map&lt;String, Object&gt; columnMap)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><h4 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.eq(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;spring&quot;</span>);</span><br><span class="line">	blogTypeMapper.delete(blogTypeQueryWrapper);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="deleteBatchIds"><a href="#deleteBatchIds" class="headerlink" title="deleteBatchIds"></a>deleteBatchIds</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteBatchIds</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	List&lt;Integer&gt; idList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	idList.add(<span class="number">29</span>);</span><br><span class="line">	idList.add(<span class="number">30</span>);</span><br><span class="line">	idList.add(<span class="number">31</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteBatchIds(idList);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="deleteById"><a href="#deleteById" class="headerlink" title="deleteById"></a>deleteById</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteById(<span class="number">32</span>);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="deleteByMap"><a href="#deleteByMap" class="headerlink" title="deleteByMap"></a>deleteByMap</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteByMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;name&quot;</span>, <span class="number">1</span>);</span><br><span class="line">	map.put(<span class="string">&quot;sortNum&quot;</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteByMap(map);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>MyBatis-Plus</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MyBatis-Plus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MyBatis-Plus 自定义SQL</title>
     <url>/227.html</url>
     <content><![CDATA[<h3 id="自定义SQL的方式"><a href="#自定义SQL的方式" class="headerlink" title="自定义SQL的方式"></a>自定义SQL的方式</h3><p>①Annotation注解方式</p>
@@ -4272,28 +4294,6 @@
 <p>5、结果</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210723101956.jpg" alt="img"></p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.jianshu.com/p/c0dd01a82fcc">https://www.jianshu.com/p/c0dd01a82fcc</a></p>
-]]></content>
-      <categories>
-        <category>MyBatis-Plus</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>MyBatis-Plus</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MyBatis-Plus Mapper CRUD 接口之Delete</title>
-    <url>/228.html</url>
-    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 entity 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">delete</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; wrapper)</span></span>;</span><br><span class="line"><span class="comment">// 删除（根据ID 批量删除）</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteBatchIds</span><span class="params">(<span class="meta">@Param(Constants.COLLECTION)</span> Collection&lt;? extends Serializable&gt; idList)</span></span>;</span><br><span class="line"><span class="comment">// 根据 ID 删除</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteById</span><span class="params">(Serializable id)</span></span>;</span><br><span class="line"><span class="comment">// 根据 columnMap 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteByMap</span><span class="params">(<span class="meta">@Param(Constants.COLUMN_MAP)</span> Map&lt;String, Object&gt; columnMap)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><h4 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">delete</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	QueryWrapper&lt;BlogType&gt; blogTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">	blogTypeQueryWrapper.eq(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;spring&quot;</span>);</span><br><span class="line">	blogTypeMapper.delete(blogTypeQueryWrapper);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="deleteBatchIds"><a href="#deleteBatchIds" class="headerlink" title="deleteBatchIds"></a>deleteBatchIds</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteBatchIds</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	List&lt;Integer&gt; idList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">	idList.add(<span class="number">29</span>);</span><br><span class="line">	idList.add(<span class="number">30</span>);</span><br><span class="line">	idList.add(<span class="number">31</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteBatchIds(idList);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="deleteById"><a href="#deleteById" class="headerlink" title="deleteById"></a>deleteById</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteById(<span class="number">32</span>);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="deleteByMap"><a href="#deleteByMap" class="headerlink" title="deleteByMap"></a>deleteByMap</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteByMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;name&quot;</span>, <span class="number">1</span>);</span><br><span class="line">	map.put(<span class="string">&quot;sortNum&quot;</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteByMap(map);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>MyBatis-Plus</category>
@@ -5407,6 +5407,43 @@
       </tags>
   </entry>
   <entry>
+    <title>服务提供者注册到Eureka</title>
+    <url>/267.html</url>
+    <content><![CDATA[<p>在microservice-student-provider-1001子模块项目的基础上修改</p>
+<h3 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h3><p>加上eureka客户端依赖</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--eureka客户端依赖--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h3><p>直接添加下面代码</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">instance:</span></span><br><span class="line">    <span class="attr">hostname:</span> <span class="string">localhost</span>  <span class="comment">#eureka客户端主机实例名称</span></span><br><span class="line">    <span class="attr">appname:</span> <span class="string">microservice-student</span>  <span class="comment">#客户端服务名</span></span><br><span class="line">    <span class="attr">instance-id:</span> <span class="string">microservice-student:1001</span> <span class="comment">#客户端实例名称</span></span><br><span class="line">    <span class="attr">prefer-ip-address:</span> <span class="literal">true</span> <span class="comment">#显示IP</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://localhost:2001/eureka</span>   <span class="comment">#把服务注册到eureka注册中心</span></span><br></pre></td></tr></table></figure>
+
+<p>在启动类加上@EnableEurekaClient注解</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.domain.EntityScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.EnableEurekaClient;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 服务提供者启动类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 14:01</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableEurekaClient</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EntityScan(&quot;com/ledao/entity&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentProviderApplication_1001</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(StudentProviderApplication_1001.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>分别启动microservice-student-provider-1001和microservice-eureka-server-2001子模块项目</p>
+<p>浏览器地址栏输入 <a href="http://localhost:2001/">http://localhost:2001/</a> ，Eureka服务注册中心出现了划红线处的服务</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20200124.png"></p>
+<h3 id="配置info信息"><a href="#配置info信息" class="headerlink" title="配置info信息"></a>配置info信息</h3><h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><p>点击上图的划红线处的链接可以查看一些信息，比如：该服务的groupId、artifactId、version，继承的artifactId、该服务的负责人和电话</p>
+<h4 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h4><p>在服务提供者项目pom.xml里加入actuator监控依赖：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- actuator监控引入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在父项目pom.xml里的build节点加入：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>true<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在服务提供者项目application.yml加上info配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">info:</span></span><br><span class="line">  <span class="attr">current.groupId:</span> <span class="string">@project.groupId@</span></span><br><span class="line">  <span class="attr">current.artifactId:</span> <span class="string">@project.artifactId@</span></span><br><span class="line">  <span class="attr">current.version:</span> <span class="string">@project.version@</span></span><br><span class="line">  <span class="attr">parent.artifactId:</span> <span class="string">@project.parent.artifactId@</span></span><br><span class="line">  <span class="string">负责人:</span> <span class="string">张三</span></span><br><span class="line">  <span class="string">联系电话:</span> <span class="number">110</span></span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20210834.png"></p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Eureka</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Eureka注册中心高可用集群配置</title>
     <url>/268.html</url>
     <content><![CDATA[<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>当注册中心扛不住高并发时，就需要集群了</p>
@@ -5444,43 +5481,6 @@
 <p><a href="http://eureka2003.ledao.com:2003/">http://eureka2003.ledao.com:2003/</a></p>
 <p>结果</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20222023.png"></p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-        <tag>Eureka</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>服务提供者注册到Eureka</title>
-    <url>/267.html</url>
-    <content><![CDATA[<p>在microservice-student-provider-1001子模块项目的基础上修改</p>
-<h3 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h3><p>加上eureka客户端依赖</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--eureka客户端依赖--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h3><p>直接添加下面代码</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">instance:</span></span><br><span class="line">    <span class="attr">hostname:</span> <span class="string">localhost</span>  <span class="comment">#eureka客户端主机实例名称</span></span><br><span class="line">    <span class="attr">appname:</span> <span class="string">microservice-student</span>  <span class="comment">#客户端服务名</span></span><br><span class="line">    <span class="attr">instance-id:</span> <span class="string">microservice-student:1001</span> <span class="comment">#客户端实例名称</span></span><br><span class="line">    <span class="attr">prefer-ip-address:</span> <span class="literal">true</span> <span class="comment">#显示IP</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://localhost:2001/eureka</span>   <span class="comment">#把服务注册到eureka注册中心</span></span><br></pre></td></tr></table></figure>
-
-<p>在启动类加上@EnableEurekaClient注解</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.domain.EntityScan;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.EnableEurekaClient;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 服务提供者启动类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 14:01</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@EnableEurekaClient</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EntityScan(&quot;com/ledao/entity&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentProviderApplication_1001</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(StudentProviderApplication_1001.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>分别启动microservice-student-provider-1001和microservice-eureka-server-2001子模块项目</p>
-<p>浏览器地址栏输入 <a href="http://localhost:2001/">http://localhost:2001/</a> ，Eureka服务注册中心出现了划红线处的服务</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20200124.png"></p>
-<h3 id="配置info信息"><a href="#配置info信息" class="headerlink" title="配置info信息"></a>配置info信息</h3><h4 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h4><p>点击上图的划红线处的链接可以查看一些信息，比如：该服务的groupId、artifactId、version，继承的artifactId、该服务的负责人和电话</p>
-<h4 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h4><p>在服务提供者项目pom.xml里加入actuator监控依赖：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- actuator监控引入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-actuator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在父项目pom.xml里的build节点加入：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>true<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在服务提供者项目application.yml加上info配置：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">info:</span></span><br><span class="line">  <span class="attr">current.groupId:</span> <span class="string">@project.groupId@</span></span><br><span class="line">  <span class="attr">current.artifactId:</span> <span class="string">@project.artifactId@</span></span><br><span class="line">  <span class="attr">current.version:</span> <span class="string">@project.version@</span></span><br><span class="line">  <span class="attr">parent.artifactId:</span> <span class="string">@project.parent.artifactId@</span></span><br><span class="line">  <span class="string">负责人:</span> <span class="string">张三</span></span><br><span class="line">  <span class="string">联系电话:</span> <span class="number">110</span></span><br></pre></td></tr></table></figure>
-
-<p>结果</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20210834.png"></p>
 ]]></content>
       <categories>
         <category>Spring Cloud</category>
@@ -6171,6 +6171,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Config配置搜索路径</title>
+    <url>/289.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当配置文件一多，如果配置文件只放在根目录下，后期会不好管理，所以根据项目分类配置文件是很有必要的</p>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在microservice-config-server-4001项目的application.yml文件中配置search-paths</p>
+<p>完整application.yml如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">4001</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-config</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">config:</span></span><br><span class="line">      <span class="attr">server:</span></span><br><span class="line">        <span class="attr">git:</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">https://github.com/a6678696/microservice-config</span></span><br><span class="line">          <span class="attr">search-paths:</span> <span class="comment">#后面接文件夹名称,没有配置的文件夹里的配置文件是访问不到的</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">aa</span> <span class="comment">#文件夹名称</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">bb</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>新建三个文件夹：aa、bb、cc，文件夹中分别放3个配置文件 nns.yml，nns2.yml，nns3.yml，上传这三个配置文件到GitHub的microservice-config库中，文件内容如下：</p>
+<mark class="hl-label blue">nns.yml</mark> 
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaadev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaatest</span></span><br></pre></td></tr></table></figure>
+
+<mark class="hl-label blue">nns2.yml</mark> 
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbtest</span></span><br></pre></td></tr></table></figure>
+
+<mark class="hl-label blue">nns3.yml</mark> 
+
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">cccdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">ccctest</span></span><br></pre></td></tr></table></figure>
+
+<p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns-dev.yml">http://configserver.ledao.com:4001/nns-dev.yml</a> ，访问到了，有name属性</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011929.png"></p>
+<p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns3-dev.yml">http://configserver.ledao.com:4001/nns3-dev.yml</a> ，没有访问到了，没有name属性</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011947.png"></p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Config Client</title>
     <url>/288.html</url>
     <content><![CDATA[<h3 id="上传文件到GitHub"><a href="#上传文件到GitHub" class="headerlink" title="上传文件到GitHub"></a>上传文件到GitHub</h3><p>把之前上传到GitHub的microservice-config库中的文件都删除掉，再新建三个文件：application.yml、crm-dev.yml、crm-test.yml，然后上传到GitHub的microservice-config库中</p>
@@ -6208,39 +6241,6 @@
 <p>返回<mark class="hl-label blue">7777</mark> ，此时返回的是crm-dev.yml的端口</p>
 <p>④当spring.cloud.config.name=crm，spring.cloud.config.profile=test时</p>
 <p>返回<mark class="hl-label blue">88888</mark> ，此时返回的是crm-test.yml的端口</p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Config配置搜索路径</title>
-    <url>/289.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>当配置文件一多，如果配置文件只放在根目录下，后期会不好管理，所以根据项目分类配置文件是很有必要的</p>
-<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在microservice-config-server-4001项目的application.yml文件中配置search-paths</p>
-<p>完整application.yml如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">4001</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-config</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">config:</span></span><br><span class="line">      <span class="attr">server:</span></span><br><span class="line">        <span class="attr">git:</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">https://github.com/a6678696/microservice-config</span></span><br><span class="line">          <span class="attr">search-paths:</span> <span class="comment">#后面接文件夹名称,没有配置的文件夹里的配置文件是访问不到的</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">aa</span> <span class="comment">#文件夹名称</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">bb</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>新建三个文件夹：aa、bb、cc，文件夹中分别放3个配置文件 nns.yml，nns2.yml，nns3.yml，上传这三个配置文件到GitHub的microservice-config库中，文件内容如下：</p>
-<mark class="hl-label blue">nns.yml</mark> 
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaadev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">aaatest</span></span><br></pre></td></tr></table></figure>
-
-<mark class="hl-label blue">nns2.yml</mark> 
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">bbbtest</span></span><br></pre></td></tr></table></figure>
-
-<mark class="hl-label blue">nns3.yml</mark> 
-
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span> </span><br><span class="line">  <span class="attr">profiles:</span></span><br><span class="line">    <span class="attr">active:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">dev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">dev</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">cccdev</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">profiles:</span> <span class="string">test</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">ccctest</span></span><br></pre></td></tr></table></figure>
-
-<p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns-dev.yml">http://configserver.ledao.com:4001/nns-dev.yml</a> ，访问到了，有name属性</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011929.png"></p>
-<p>地址栏输入：<a href="http://configserver.ledao.com:4001/nns3-dev.yml">http://configserver.ledao.com:4001/nns3-dev.yml</a> ，没有访问到了，没有name属性</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20011947.png"></p>
 ]]></content>
       <categories>
         <category>Spring Cloud</category>
@@ -7248,22 +7248,6 @@
       </tags>
   </entry>
   <entry>
-    <title>DockerFile创建镜像时报错：file not found in build context or excluded by</title>
-    <url>/307.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
-<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>DockerFile</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载</title>
     <url>/308.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>DockerFile创建镜像时通过VOLUME指令创建几个容器卷，然后创建这个镜像的容器时，这个容器就有了这几个容器卷目录，并与宿主机自动创建的对应目录实现了挂载</p>
@@ -7286,6 +7270,22 @@
 <p>找到Mounts节点，Source为宿主机的目录，Destination为容器的目录，两个目录是挂载的</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040846.jpg"></p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>docker run -v 命令创建挂载目录更好，可以自定义宿主机目录</p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>DockerFile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DockerFile创建镜像时报错：file not found in build context or excluded by</title>
+    <url>/307.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
+<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -8771,44 +8771,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RabbitMQ实现路由模式Routing</title>
-    <url>/349.html</url>
-    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20124523.png"></p>
-<p>跟订阅模式类似，只不过在订阅模式的基础上加上了类型，订阅模式是分发到所有绑定到交换机的队列，路由模式只分发到绑定在交换机上面指定路由键的队列。</p>
-<p>使用场景：只将一些错误log存到文件中，把所有的log都打印到控制台里</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="发送指定类型消息"><a href="#发送指定类型消息" class="headerlink" title="发送指定类型消息"></a>发送指定类型消息</h4><p>为了方便测试，在rabbitmq-producer模块下添加一个发送指定类型消息功能，消息类型有info、error、warning</p>
-<p>首先在sendInformationPage.html中添加一个form标签：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/sendRoutingMessage&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>发送指定类型的消息<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    消息:</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;message&quot;</span> <span class="attr">required</span>=<span class="string">&quot;required&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    类型:</span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;routingKey&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;info&quot;</span>&gt;</span>info<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;error&quot;</span>&gt;</span>error<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;warning&quot;</span>&gt;</span>warning<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;发送&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在rabbitmq-common模块的RabbitMQConfig类添加以下代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * direct路由模式交换机名称</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DIRECT_ROUTING_EXCHANGE = <span class="string">&quot;directRoutingExchange&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * direct路由模式队列1</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DIRECT_ROUTING_QUEUE1 = <span class="string">&quot;directRoutingQueue1&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * direct路由模式队列2</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DIRECT_ROUTING_QUEUE2 = <span class="string">&quot;directRoutingQueue2&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个direct路由模式交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> DirectExchange <span class="title">directRoutingExchange</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> DirectExchange(DIRECT_ROUTING_EXCHANGE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个路由模式队列1</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">routingQueue1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(DIRECT_ROUTING_QUEUE1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个路由模式队列2</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">routingQueue2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(DIRECT_ROUTING_QUEUE2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由模式队列1绑定路由模式交换机,routingKey为error</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">bindingRouting1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> BindingBuilder.bind(routingQueue1()).to(directRoutingExchange()).with(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由模式队列2绑定路由模式交换机,routingKey为error</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">bindingRouting2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> BindingBuilder.bind(routingQueue2()).to(directRoutingExchange()).with(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由模式队列2绑定路由模式交换机,routingKey为info</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">bindingRouting3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> BindingBuilder.bind(routingQueue2()).to(directRoutingExchange()).with(<span class="string">&quot;info&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由模式队列2绑定路由模式交换机,routingKey为warning</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">bindingRouting4</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> BindingBuilder.bind(routingQueue2()).to(directRoutingExchange()).with(<span class="string">&quot;warning&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在RabbitMQProducerService类添加一个接口方法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 发送路由模式消息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> routingKey</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sendRoutingMessage</span><span class="params">(String message, String routingKey)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>在RabbitMQProducerServiceImpl类中实现上面的接口方法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendRoutingMessage</span><span class="params">(String message, String routingKey)</span> </span>&#123;</span><br><span class="line">    amqpTemplate.convertAndSend(RabbitMQConfig.DIRECT_ROUTING_EXCHANGE,routingKey,message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在IndexController类添加一个方法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 发送路由模式消息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> routingKey</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/sendRoutingMessage&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">sendRoutingMessage</span><span class="params">(String message, String routingKey)</span> </span>&#123;</span><br><span class="line">    rabbitMQProducerService.sendRoutingMessage(message+<span class="string">&quot;(&quot;</span>+routingKey+<span class="string">&quot;)&quot;</span>, routingKey);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;发送路由模式消息成功&lt;a href=&#x27;/toSendInformationPage&#x27;&gt;&lt;button&gt;继续发送&lt;/button&gt;&lt;/a&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="消费消息"><a href="#消费消息" class="headerlink" title="消费消息"></a>消费消息</h4><p>在rabbitmq-consumer模块的RabbitMQConsumerService中添加以下接口方法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 监听队列接收路由模式消息1</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">receiveRoutingMessage1</span><span class="params">(String message)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 监听队列接收路由模式消息2</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">receiveRoutingMessage2</span><span class="params">(String message)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>在rabbitmq-consumer模块的RabbitMQConsumerServiceImpl中实现上面的接口方法：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_ROUTING_QUEUE1&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveRoutingMessage1</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;消费者1---接收到的消息:&quot;</span> + message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_ROUTING_QUEUE2&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveRoutingMessage2</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;消费者2---接收到的消息:&quot;</span> + message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>启动rabbitmq-consumer模块再启动rabbitmq-producer模块，，然后在浏览器地址栏输入：<a href="http://localhost/toSendInformationPage">http://localhost/toSendInformationPage</a> 进入发送消息页面，分别发送info、error、warning类型的路由模式消息，然后去rabbitmq-consumer模块启动控制台查看结果，可以看到：①消费者1只消费了error类型的消息②消费者2消费了info、error、warning类型的消息</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20134908.jpg"></p>
-]]></content>
-      <categories>
-        <category>RabbitMQ</category>
-      </categories>
-      <tags>
-        <tag>RabbitMQ</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RabbitMQ实现订阅模式Publish/Subscribe</title>
     <url>/348.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20105048.png"></p>
@@ -8840,6 +8802,44 @@
 
 <h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>启动rabbitmq-consumer模块再启动rabbitmq-producer模块，，然后在浏览器地址栏输入：<a href="http://localhost/toSendInformationPage">http://localhost/toSendInformationPage</a> 进入发送消息页面，根据自己的需要填入批量发送的消息数量，然后点击发送订阅信息，最后去rabbitmq-consumer模块启动控制台查看结果，可以看到两个订阅者都收到了同一条消息</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20120229.jpg"></p>
+]]></content>
+      <categories>
+        <category>RabbitMQ</category>
+      </categories>
+      <tags>
+        <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RabbitMQ实现路由模式Routing</title>
+    <url>/349.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20124523.png"></p>
+<p>跟订阅模式类似，只不过在订阅模式的基础上加上了类型，订阅模式是分发到所有绑定到交换机的队列，路由模式只分发到绑定在交换机上面指定路由键的队列。</p>
+<p>使用场景：只将一些错误log存到文件中，把所有的log都打印到控制台里</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="发送指定类型消息"><a href="#发送指定类型消息" class="headerlink" title="发送指定类型消息"></a>发送指定类型消息</h4><p>为了方便测试，在rabbitmq-producer模块下添加一个发送指定类型消息功能，消息类型有info、error、warning</p>
+<p>首先在sendInformationPage.html中添加一个form标签：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/sendRoutingMessage&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h2</span>&gt;</span>发送指定类型的消息<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">    消息:</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">name</span>=<span class="string">&quot;message&quot;</span> <span class="attr">required</span>=<span class="string">&quot;required&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    类型:</span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">name</span>=<span class="string">&quot;routingKey&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;info&quot;</span>&gt;</span>info<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;error&quot;</span>&gt;</span>error<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;warning&quot;</span>&gt;</span>warning<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;发送&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在rabbitmq-common模块的RabbitMQConfig类添加以下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * direct路由模式交换机名称</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DIRECT_ROUTING_EXCHANGE = <span class="string">&quot;directRoutingExchange&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * direct路由模式队列1</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DIRECT_ROUTING_QUEUE1 = <span class="string">&quot;directRoutingQueue1&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * direct路由模式队列2</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DIRECT_ROUTING_QUEUE2 = <span class="string">&quot;directRoutingQueue2&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个direct路由模式交换机</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> DirectExchange <span class="title">directRoutingExchange</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> DirectExchange(DIRECT_ROUTING_EXCHANGE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个路由模式队列1</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">routingQueue1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(DIRECT_ROUTING_QUEUE1);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义一个路由模式队列2</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Queue <span class="title">routingQueue2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Queue(DIRECT_ROUTING_QUEUE2);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由模式队列1绑定路由模式交换机,routingKey为error</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">bindingRouting1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> BindingBuilder.bind(routingQueue1()).to(directRoutingExchange()).with(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由模式队列2绑定路由模式交换机,routingKey为error</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">bindingRouting2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> BindingBuilder.bind(routingQueue2()).to(directRoutingExchange()).with(<span class="string">&quot;error&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由模式队列2绑定路由模式交换机,routingKey为info</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">bindingRouting3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> BindingBuilder.bind(routingQueue2()).to(directRoutingExchange()).with(<span class="string">&quot;info&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由模式队列2绑定路由模式交换机,routingKey为warning</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Binding <span class="title">bindingRouting4</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> BindingBuilder.bind(routingQueue2()).to(directRoutingExchange()).with(<span class="string">&quot;warning&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在RabbitMQProducerService类添加一个接口方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 发送路由模式消息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> routingKey</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sendRoutingMessage</span><span class="params">(String message, String routingKey)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>在RabbitMQProducerServiceImpl类中实现上面的接口方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sendRoutingMessage</span><span class="params">(String message, String routingKey)</span> </span>&#123;</span><br><span class="line">    amqpTemplate.convertAndSend(RabbitMQConfig.DIRECT_ROUTING_EXCHANGE,routingKey,message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在IndexController类添加一个方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 发送路由模式消息</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> routingKey</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/sendRoutingMessage&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">sendRoutingMessage</span><span class="params">(String message, String routingKey)</span> </span>&#123;</span><br><span class="line">    rabbitMQProducerService.sendRoutingMessage(message+<span class="string">&quot;(&quot;</span>+routingKey+<span class="string">&quot;)&quot;</span>, routingKey);</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;发送路由模式消息成功&lt;a href=&#x27;/toSendInformationPage&#x27;&gt;&lt;button&gt;继续发送&lt;/button&gt;&lt;/a&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="消费消息"><a href="#消费消息" class="headerlink" title="消费消息"></a>消费消息</h4><p>在rabbitmq-consumer模块的RabbitMQConsumerService中添加以下接口方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 监听队列接收路由模式消息1</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">receiveRoutingMessage1</span><span class="params">(String message)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 监听队列接收路由模式消息2</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> message</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">receiveRoutingMessage2</span><span class="params">(String message)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>在rabbitmq-consumer模块的RabbitMQConsumerServiceImpl中实现上面的接口方法：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_ROUTING_QUEUE1&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveRoutingMessage1</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;消费者1---接收到的消息:&quot;</span> + message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_ROUTING_QUEUE2&#125;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">receiveRoutingMessage2</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;消费者2---接收到的消息:&quot;</span> + message);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>启动rabbitmq-consumer模块再启动rabbitmq-producer模块，，然后在浏览器地址栏输入：<a href="http://localhost/toSendInformationPage">http://localhost/toSendInformationPage</a> 进入发送消息页面，分别发送info、error、warning类型的路由模式消息，然后去rabbitmq-consumer模块启动控制台查看结果，可以看到：①消费者1只消费了error类型的消息②消费者2消费了info、error、warning类型的消息</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20134908.jpg"></p>
 ]]></content>
       <categories>
         <category>RabbitMQ</category>
@@ -11157,6 +11157,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Java实现与Elasticsearch的连接</title>
+    <url>/395.html</url>
+    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>引入的依赖版本必须和正在运行的Elasticsearch版本一致</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.elasticsearch.client<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>transport<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.client.transport.TransportClient;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.common.settings.Settings;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.common.transport.InetSocketTransportAddress;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.transport.client.PreBuiltTransportClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.net.InetAddress;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-12-15 2:59</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String host = <span class="string">&quot;192.168.0.116&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> port = <span class="number">9300</span>;</span><br><span class="line">        TransportClient client = <span class="keyword">new</span> PreBuiltTransportClient(Settings.EMPTY).addTransportAddress(<span class="keyword">new</span> InetSocketTransportAddress(InetAddress.getByName(host), port));</span><br><span class="line">        System.out.println(client);</span><br><span class="line">        client.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>出现划红线的信息说明与Elasticsearch连接成功</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20031243.jpg"></p>
+]]></content>
+      <categories>
+        <category>Elasticsearch</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Elasticsearch</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java操作Elasticsearch</title>
     <url>/396.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>引入的依赖版本必须和正在运行的Elasticsearch版本一致</p>
@@ -11276,25 +11295,6 @@
       <tags>
         <tag>CentOS7</tag>
         <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java实现与Elasticsearch的连接</title>
-    <url>/395.html</url>
-    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>引入的依赖版本必须和正在运行的Elasticsearch版本一致</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.elasticsearch.client<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>transport<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.client.transport.TransportClient;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.common.settings.Settings;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.common.transport.InetSocketTransportAddress;</span><br><span class="line"><span class="keyword">import</span> org.elasticsearch.transport.client.PreBuiltTransportClient;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.net.InetAddress;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-12-15 2:59</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        String host = <span class="string">&quot;192.168.0.116&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> port = <span class="number">9300</span>;</span><br><span class="line">        TransportClient client = <span class="keyword">new</span> PreBuiltTransportClient(Settings.EMPTY).addTransportAddress(<span class="keyword">new</span> InetSocketTransportAddress(InetAddress.getByName(host), port));</span><br><span class="line">        System.out.println(client);</span><br><span class="line">        client.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p>出现划红线的信息说明与Elasticsearch连接成功</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20031243.jpg"></p>
-]]></content>
-      <categories>
-        <category>Elasticsearch</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Elasticsearch</tag>
       </tags>
   </entry>
   <entry>
@@ -14566,24 +14566,6 @@
       </tags>
   </entry>
   <entry>
-    <title>==和equals的区别</title>
-    <url>/47.html</url>
-    <content><![CDATA[<h3 id=""><a href="#" class="headerlink" title="=="></a>==</h3><p>基本类型：比较的就是值是否相同</p>
-<p>引用类型：比较的就是地址值是否相同</p>
-<h3 id="equals"><a href="#equals" class="headerlink" title="equals"></a>equals</h3><p>引用类型：默认情况下，比较的是地址值，重写该方法后比较对象的成员变量值是否相同</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>基本类型：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201025174931.jpg" alt="img"></p>
-<p>引用类型：</p>
-<p>除掉这四类八种基本类型，其它的都是对象，也就是引用类型，包括数组。</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MyBatis插入数据时获取自增的id</title>
     <url>/470.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当表的id被设计为自增时，插入数据后想获得新插入数据的id</p>
@@ -14620,6 +14602,24 @@
       </categories>
       <tags>
         <tag>MyBatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>==和equals的区别</title>
+    <url>/47.html</url>
+    <content><![CDATA[<h3 id=""><a href="#" class="headerlink" title="=="></a>==</h3><p>基本类型：比较的就是值是否相同</p>
+<p>引用类型：比较的就是地址值是否相同</p>
+<h3 id="equals"><a href="#equals" class="headerlink" title="equals"></a>equals</h3><p>引用类型：默认情况下，比较的是地址值，重写该方法后比较对象的成员变量值是否相同</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>基本类型：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201025174931.jpg" alt="img"></p>
+<p>引用类型：</p>
+<p>除掉这四类八种基本类型，其它的都是对象，也就是引用类型，包括数组。</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -15013,27 +15013,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub</title>
-    <url>/480.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果需要执行多条命令才可以达到目的，都可以使用批处理脚本来提高工作效率，本博客主要实现：一键部署hexo博客以及一键上传代码到GitHub</p>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="一键部署hexo博客"><a href="#一键部署hexo博客" class="headerlink" title="一键部署hexo博客"></a>一键部署hexo博客</h4><p>新建一个<code>.bat</code>文件，命名为：<code>一键部署.bat</code>，内容如下：（我的博客使用了algolia搜索，如果没有使用就删除下面的<code>hexo algolia</code>）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo algolia&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
-
-<h4 id="一键上传代码到GitHub"><a href="#一键上传代码到GitHub" class="headerlink" title="一键上传代码到GitHub"></a>一键上传代码到GitHub</h4><p>先配置GitHub的SSH Key，配置步骤查看博客：<a href="https://blog.zoutl.cn/236.html">GitHub 配置 SSH Key | LeDao 的博客 (zoutl.cn)</a></p>
-<p>新建一个<code>.bat</code>文件，命名为<code>一键上传到GitHub.bat</code>：，内容如下：（<code>chcp 65001</code>是为了解决输出中文乱码）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chcp 65001</span><br><span class="line"></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1.进入要上传的文件hexo-blog&quot;</span></span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;2.添加到本地仓库&quot;</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;3.设置提交信息&quot;</span></span><br><span class="line"><span class="built_in">set</span> now=%date% %time%</span><br><span class="line">git commit -m <span class="string">&quot;%now%&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.开始pull&quot;</span></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;5.开始push&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Windows系统</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用AdBlock屏蔽掉GitHub上一些让人恶心的仓库</title>
     <url>/481.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>GitHub虽然好用，但是上面有不少境外黑恶势力恶意造谣抹黑中国的仓库，看到了就让人恶心</p>
@@ -15061,10 +15040,30 @@
       </tags>
   </entry>
   <entry>
+    <title>使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub</title>
+    <url>/480.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果需要执行多条命令才可以达到目的，都可以使用批处理脚本来提高工作效率，本博客主要实现：一键部署hexo博客以及一键上传代码到GitHub</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="一键部署hexo博客"><a href="#一键部署hexo博客" class="headerlink" title="一键部署hexo博客"></a>一键部署hexo博客</h4><p>新建一个<code>.bat</code>文件，命名为：<code>一键部署.bat</code>，内容如下：（我的博客使用了algolia搜索，如果没有使用就删除下面的<code>hexo algolia</code>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line">hexo clean&amp;&amp;hexo g&amp;&amp;hexo algolia&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
+
+<h4 id="一键上传代码到GitHub"><a href="#一键上传代码到GitHub" class="headerlink" title="一键上传代码到GitHub"></a>一键上传代码到GitHub</h4><p>先配置GitHub的SSH Key，配置步骤查看博客：<a href="https://blog.zoutl.cn/236.html">GitHub 配置 SSH Key | LeDao 的博客 (zoutl.cn)</a></p>
+<p>新建一个<code>.bat</code>文件，命名为<code>一键上传到GitHub.bat</code>：，内容如下：（<code>chcp 65001</code>是为了解决输出中文乱码）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chcp 65001</span><br><span class="line"></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1.进入要上传的文件hexo-blog&quot;</span></span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;2.添加到本地仓库&quot;</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;3.设置提交信息&quot;</span></span><br><span class="line"><span class="built_in">set</span> now=%date% %time%</span><br><span class="line">git commit -m <span class="string">&quot;%now%&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.开始pull&quot;</span></span><br><span class="line">git pull origin master</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;5.开始push&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Windows系统</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7忘记MySQL密码后重置</title>
     <url>/482.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>忘记了MySQL的密码，就只能重置了</p>
-<h3 id="CentOS7操作MySQL命令"><a href="#CentOS7操作MySQL命令" class="headerlink" title="CentOS7操作MySQL命令"></a>CentOS7操作MySQL命令</h3><h4 id="查看MySQL运行状态"><a href="#查看MySQL运行状态" class="headerlink" title="查看MySQL运行状态"></a>查看MySQL运行状态</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h3 id="CentOS7操作MySQL命令"><a href="#CentOS7操作MySQL命令" class="headerlink" title="CentOS7操作MySQL命令"></a>CentOS7操作MySQL命令</h3><h4 id="查看MySQL运行状态"><a href="#查看MySQL运行状态" class="headerlink" title="查看MySQL运行状态"></a>查看MySQL运行状态</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
 
 <h4 id="停止MySQL"><a href="#停止MySQL" class="headerlink" title="停止MySQL"></a>停止MySQL</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure>
 
@@ -15095,7 +15094,7 @@
 <li><p>重启MySQL，新密码就生效了</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3>]]></content>
+]]></content>
       <categories>
         <category>CentOS7</category>
       </categories>
