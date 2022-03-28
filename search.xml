@@ -15,28 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一个非常好用的Java工具包：HulTool</title>
-    <url>/100.html</url>
-    <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Hutool是一个Java工具包类库，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类</p>
-<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><p>日期工具：通过DateUtil类，提供高度便捷的日期访问、处理和转换方式。</p>
-<p>HTTP客户端：通过HttpUtil对HTTP客户端的封装，实现便捷的HTTP请求，并简化文件上传操作。</p>
-<p>转换工具：通过Convert类中的相应静态方法，提供一整套的类型转换解决方案，并通过ConverterRegistry工厂类自定义转换。</p>
-<p>配置文件工具：通过Setting对象，提供兼容Properties文件的更加强大的配置文件工具，用于解决中文、分组等JDK配置文件存在的诸多问题。</p>
-<p>日志工具：Hutool的日志功能，通过抽象Log接口，提供对Slf4j、LogBack、Log4j、JDK-Logging的全面兼容支持。</p>
-<p>JDBC工具类：通过db模块，提供对MySQL、Oracle等关系型数据库的JDBC封装，借助ActiveRecord思想，大大简化数据库操作。</p>
-<p>更多功能：<a href="https://www.hutool.cn/docs/#/">官方参考文档</a></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>引入依赖后就可以直接使用了</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决：关于CKEditor的代码高亮</title>
     <url>/101.html</url>
     <content><![CDATA[<blockquote>
@@ -58,6 +36,28 @@
       </categories>
       <tags>
         <tag>CKEditor</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一个非常好用的Java工具包：HulTool</title>
+    <url>/100.html</url>
+    <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Hutool是一个Java工具包类库，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类</p>
+<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><p>日期工具：通过DateUtil类，提供高度便捷的日期访问、处理和转换方式。</p>
+<p>HTTP客户端：通过HttpUtil对HTTP客户端的封装，实现便捷的HTTP请求，并简化文件上传操作。</p>
+<p>转换工具：通过Convert类中的相应静态方法，提供一整套的类型转换解决方案，并通过ConverterRegistry工厂类自定义转换。</p>
+<p>配置文件工具：通过Setting对象，提供兼容Properties文件的更加强大的配置文件工具，用于解决中文、分组等JDK配置文件存在的诸多问题。</p>
+<p>日志工具：Hutool的日志功能，通过抽象Log接口，提供对Slf4j、LogBack、Log4j、JDK-Logging的全面兼容支持。</p>
+<p>JDBC工具类：通过db模块，提供对MySQL、Oracle等关系型数据库的JDBC封装，借助ActiveRecord思想，大大简化数据库操作。</p>
+<p>更多功能：<a href="https://www.hutool.cn/docs/#/">官方参考文档</a></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>引入依赖后就可以直接使用了</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -318,22 +318,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java备份MySQL数据库</title>
-    <url>/114.html</url>
-    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-23 21:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Backup</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_psw;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要备份的数据库名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String db_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主机IP</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String host_ip;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_charset;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存放备份文件的路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String backup_path;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 命令</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String stmt;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Backup</span><span class="params">(String user_name, String user_psw, String db_name,</span></span></span><br><span class="line"><span class="params"><span class="function">                  String host_ip, String user_charset, String backup_path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">        <span class="keyword">this</span>.user_psw = user_psw;</span><br><span class="line">        <span class="keyword">this</span>.db_name = db_name;</span><br><span class="line">        <span class="comment">// 主机IP;</span></span><br><span class="line">        <span class="keyword">if</span> (host_ip == <span class="keyword">null</span> || host_ip.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为本机</span></span><br><span class="line">            <span class="keyword">this</span>.host_ip = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.host_ip = host_ip;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符集</span></span><br><span class="line">        <span class="keyword">if</span> (user_charset == <span class="keyword">null</span> || user_charset.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为安装时设置的字符集</span></span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; --default-character-set=&quot;</span> + user_charset;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.backup_path = backup_path;</span><br><span class="line">        <span class="keyword">this</span>.stmt = <span class="string">&quot;C:\\Program Files\\MySQL\\MySQL Server 5.6\\bin\\mysqldump &quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.db_name + <span class="string">&quot; -h &quot;</span> + <span class="keyword">this</span>.host_ip + <span class="string">&quot; -u&quot;</span> + <span class="keyword">this</span>.user_name</span><br><span class="line">                + <span class="string">&quot; -p&quot;</span> + <span class="keyword">this</span>.user_psw + <span class="keyword">this</span>.user_charset + <span class="string">&quot; --result-file=&quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.backup_path;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">backup_run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> run_result = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Runtime.getRuntime().exec(<span class="keyword">this</span>.stmt);</span><br><span class="line">            run_result = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> run_result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Backup backup = <span class="keyword">new</span> Backup(<span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;db_myblog&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;utf8&quot;</span>,</span><br><span class="line">                <span class="string">&quot;D:\\db_backup\\db_myblog.sql&quot;</span>);</span><br><span class="line">        <span class="keyword">boolean</span> result = backup.backup_run();</span><br><span class="line">        <span class="keyword">if</span> (result) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;备份成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424002930.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424003003.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Windows10使用任务计划程序</title>
     <url>/115.html</url>
     <content><![CDATA[<h3 id="打开任务计划程序"><a href="#打开任务计划程序" class="headerlink" title="打开任务计划程序"></a>打开任务计划程序</h3><p>打开控制面板，搜索管理工具–&gt;任务计划程序</p>
@@ -369,6 +353,22 @@
       </categories>
       <tags>
         <tag>Windows系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java备份MySQL数据库</title>
+    <url>/114.html</url>
+    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-23 21:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Backup</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_psw;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要备份的数据库名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String db_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主机IP</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String host_ip;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_charset;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存放备份文件的路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String backup_path;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 命令</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String stmt;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Backup</span><span class="params">(String user_name, String user_psw, String db_name,</span></span></span><br><span class="line"><span class="params"><span class="function">                  String host_ip, String user_charset, String backup_path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">        <span class="keyword">this</span>.user_psw = user_psw;</span><br><span class="line">        <span class="keyword">this</span>.db_name = db_name;</span><br><span class="line">        <span class="comment">// 主机IP;</span></span><br><span class="line">        <span class="keyword">if</span> (host_ip == <span class="keyword">null</span> || host_ip.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为本机</span></span><br><span class="line">            <span class="keyword">this</span>.host_ip = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.host_ip = host_ip;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符集</span></span><br><span class="line">        <span class="keyword">if</span> (user_charset == <span class="keyword">null</span> || user_charset.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为安装时设置的字符集</span></span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; --default-character-set=&quot;</span> + user_charset;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.backup_path = backup_path;</span><br><span class="line">        <span class="keyword">this</span>.stmt = <span class="string">&quot;C:\\Program Files\\MySQL\\MySQL Server 5.6\\bin\\mysqldump &quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.db_name + <span class="string">&quot; -h &quot;</span> + <span class="keyword">this</span>.host_ip + <span class="string">&quot; -u&quot;</span> + <span class="keyword">this</span>.user_name</span><br><span class="line">                + <span class="string">&quot; -p&quot;</span> + <span class="keyword">this</span>.user_psw + <span class="keyword">this</span>.user_charset + <span class="string">&quot; --result-file=&quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.backup_path;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">backup_run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> run_result = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Runtime.getRuntime().exec(<span class="keyword">this</span>.stmt);</span><br><span class="line">            run_result = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> run_result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Backup backup = <span class="keyword">new</span> Backup(<span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;db_myblog&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;utf8&quot;</span>,</span><br><span class="line">                <span class="string">&quot;D:\\db_backup\\db_myblog.sql&quot;</span>);</span><br><span class="line">        <span class="keyword">boolean</span> result = backup.backup_run();</span><br><span class="line">        <span class="keyword">if</span> (result) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;备份成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424002930.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424003003.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -852,22 +852,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MyBatis的关联（association）元素</title>
-    <url>/125.html</url>
-    <content><![CDATA[<p>关联（association）元素处理“有一个”类型的关系。 比如，在示例中，每个博客有一个作者</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;blogResult&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;author&quot;</span> <span class="attr">column</span>=<span class="string">&quot;author_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;Author&quot;</span> <span class="attr">select</span>=<span class="string">&quot;selectAuthor&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectAuthor&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Author&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM AUTHOR WHERE ID = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>MyBatis</category>
-      </categories>
-      <tags>
-        <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MyBatis动态SQL示例</title>
     <url>/124.html</url>
     <content><![CDATA[<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BlogResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_blog</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null and title != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and title like #&#123;title&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;blogTypeId != null&quot;</span>&gt;</span></span><br><span class="line">			and blogTypeId = #&#123;blogTypeId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlog != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog = #&#123;isMenuBlog&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlogKey != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog != 1</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;releaseDateStr != null and releaseDateStr != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and date_format(releaseDate, &#x27;%Y年%m月&#x27;) = #&#123;releaseDateStr&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;sortByReleaseDate == null&quot;</span>&gt;</span></span><br><span class="line">		order by releaseDate desc</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -881,6 +865,22 @@
 <h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">@Update(&#123;&quot;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;update Author&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;username != null&#x27;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;password != null&#x27;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;email != null&#x27;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;bio != null&#x27;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;/<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;where id=#&#123;id&#125;&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>&quot;&#125;)</span><br><span class="line">void updateAuthorValues(Author author);</span><br></pre></td></tr></table></figure>
 
 <h3 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectBlogsLike&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bind</span> <span class="attr">name</span>=<span class="string">&quot;pattern&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#x27;%&#x27; + _parameter.getTitle() + &#x27;%&#x27;&quot;</span> /&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  WHERE title LIKE #&#123;pattern&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>MyBatis</category>
+      </categories>
+      <tags>
+        <tag>MyBatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis的关联（association）元素</title>
+    <url>/125.html</url>
+    <content><![CDATA[<p>关联（association）元素处理“有一个”类型的关系。 比如，在示例中，每个博客有一个作者</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;blogResult&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;author&quot;</span> <span class="attr">column</span>=<span class="string">&quot;author_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;Author&quot;</span> <span class="attr">select</span>=<span class="string">&quot;selectAuthor&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectAuthor&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Author&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM AUTHOR WHERE ID = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
 
 ]]></content>
       <categories>
@@ -2062,6 +2062,25 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS7部署Java项目速度很慢</title>
+    <url>/158.html</url>
+    <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开-java-security-文件"><a href="#打开-java-security-文件" class="headerlink" title="打开 java.security 文件"></a>打开 java.security 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/java/jdk1.8.0_131/jre/lib/security/java.security</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
+<p>保存并退出即可</p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7部署Java项目</title>
     <url>/157.html</url>
     <content><![CDATA[<h3 id="打包项目"><a href="#打包项目" class="headerlink" title="打包项目"></a>打包项目</h3><p>具体步骤查看博客：<a href="https://blog.zoutl.cn/21.html">idea将Spring Boot项目打包成war包 | LeDao的博客 (zoutl.cn)</a></p>
@@ -2101,25 +2120,6 @@
 <h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>[root@localhost conf]# /home/tomcat9/apache-tomcat-9.0.46/bin/startup.sh</p>
 <h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>在浏览器地址栏直接输入CentOS7的ip即可</p>
 <p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210617044137.jpg" alt="img"></strong></p>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7部署Java项目速度很慢</title>
-    <url>/158.html</url>
-    <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
-
-<h3 id="打开-java-security-文件"><a href="#打开-java-security-文件" class="headerlink" title="打开 java.security 文件"></a>打开 java.security 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/java/jdk1.8.0_131/jre/lib/security/java.security</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
-<p>保存并退出即可</p>
 ]]></content>
       <categories>
         <category>CentOS7</category>
@@ -2603,29 +2603,6 @@
       </tags>
   </entry>
   <entry>
-    <title>使用Log4j</title>
-    <url>/171.html</url>
-    <content><![CDATA[<h3 id="引入Log4j依赖"><a href="#引入Log4j依赖" class="headerlink" title="引入Log4j依赖"></a>引入Log4j依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>新建一个log4j.properties文件，文件存放位置：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621124219.jpg" alt="img"></p>
-<p>文件内容如下：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">log4j.rootLogger</span>=<span class="string">DEBUG, Console ,File  </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#Console</span></span><br><span class="line"><span class="meta">log4j.appender.Console</span>=<span class="string">org.apache.log4j.ConsoleAppender  </span></span><br><span class="line"><span class="meta">log4j.appender.Console.layout</span>=<span class="string">org.apache.log4j.PatternLayout  </span></span><br><span class="line"><span class="meta">log4j.appender.Console.layout.ConversionPattern</span>=<span class="string">%d [%t] %-5p [%c] - %m%n</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#File</span></span><br><span class="line"><span class="meta">log4j.appender.File</span> = <span class="string">org.apache.log4j.FileAppender</span></span><br><span class="line"><span class="meta">log4j.appender.File.File</span> = <span class="string">E://myLog.log</span></span><br><span class="line"><span class="meta">log4j.appender.File.layout</span> = <span class="string">org.apache.log4j.PatternLayout</span></span><br><span class="line"><span class="meta">log4j.appender.File.layout.ConversionPattern</span> =<span class="string">%d [%t] %-5p [%c] - %m%n</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.log4j.Logger;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger logger = Logger.getLogger(Test.class);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        logger.info(<span class="string">&quot;调试信息&quot;</span>);</span><br><span class="line">        logger.error(<span class="string">&quot;错误信息&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621124230.jpg" alt="img"></p>
-<p>E盘下也有一个myLog.log文件</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621124239.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Redis有序集合(sorted set)</title>
     <url>/170.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Redis 有序集合和集合一样也是 string 类型元素的集合,且不允许重复的成员。</p>
@@ -2674,6 +2651,29 @@
       </categories>
       <tags>
         <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Log4j</title>
+    <url>/171.html</url>
+    <content><![CDATA[<h3 id="引入Log4j依赖"><a href="#引入Log4j依赖" class="headerlink" title="引入Log4j依赖"></a>引入Log4j依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><p>新建一个log4j.properties文件，文件存放位置：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621124219.jpg" alt="img"></p>
+<p>文件内容如下：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">log4j.rootLogger</span>=<span class="string">DEBUG, Console ,File  </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#Console</span></span><br><span class="line"><span class="meta">log4j.appender.Console</span>=<span class="string">org.apache.log4j.ConsoleAppender  </span></span><br><span class="line"><span class="meta">log4j.appender.Console.layout</span>=<span class="string">org.apache.log4j.PatternLayout  </span></span><br><span class="line"><span class="meta">log4j.appender.Console.layout.ConversionPattern</span>=<span class="string">%d [%t] %-5p [%c] - %m%n</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#File</span></span><br><span class="line"><span class="meta">log4j.appender.File</span> = <span class="string">org.apache.log4j.FileAppender</span></span><br><span class="line"><span class="meta">log4j.appender.File.File</span> = <span class="string">E://myLog.log</span></span><br><span class="line"><span class="meta">log4j.appender.File.layout</span> = <span class="string">org.apache.log4j.PatternLayout</span></span><br><span class="line"><span class="meta">log4j.appender.File.layout.ConversionPattern</span> =<span class="string">%d [%t] %-5p [%c] - %m%n</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> org.apache.log4j.Logger;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Logger logger = Logger.getLogger(Test.class);</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        logger.info(<span class="string">&quot;调试信息&quot;</span>);</span><br><span class="line">        logger.error(<span class="string">&quot;错误信息&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621124230.jpg" alt="img"></p>
+<p>E盘下也有一个myLog.log文件</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621124239.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -2750,6 +2750,69 @@
 <p>持久化操作有两种方式：rdb方式、aof方式，可以单独使用或者结合使用</p>
 <p>rdb方式：在指定的时间间隔写入硬盘，查看博客：<a href="https://blog.zoutl.cn/175.html">Redis 的持久化之 RDB 方式 | LeDao 的博客 (zoutl.cn)</a></p>
 <p>aof方式：将以日志，记录每一个操作，服务器启动后就构建数据库，查看博客：<a href="https://blog.zoutl.cn/176.html">Redis 的持久化之 AOF 方式 | LeDao 的博客 (zoutl.cn)</a></p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis的持久化之RDB方式</title>
+    <url>/175.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>RDB方式，Redis是默认支持的</p>
+<p>优势：只有一个文件，时间间隔的数据，可以归档为一个文件，方便压缩转移（就一个文件）</p>
+<p>劣势：如果宕机，数据损失比较大，因为它是没一个时间段进行持久化操作的。也就是积攒的数据比较多，一旦懵逼，就彻底懵逼了</p>
+<h3 id="查看Redis配置"><a href="#查看Redis配置" class="headerlink" title="查看Redis配置"></a>查看Redis配置</h3><p>[root@localhost ~]# cd /usr/local/redis/<br>[root@localhost redis]# vi redis.conf</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622005939.jpg" alt="img"></p>
+<p>save 900 1 表示 每900秒内至少有1个key发生变化，就持久化</p>
+<p>save 300 10表示 每300秒内至少有10个key发生变化，就持久化</p>
+<p>save 60 10000表示 每60秒内至少有10000个key发生变化，就持久化</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622005950.jpg" alt="img"></p>
+<p>dbfilename配置是保存的持久化的文件名，默认是dump.rdb</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622010021.jpg" alt="img"></p>
+<p><code>dir ./</code> 表示文件存储路径是当前路径</p>
+<h3 id="查看当前路径的文件"><a href="#查看当前路径的文件" class="headerlink" title="查看当前路径的文件"></a>查看当前路径的文件</h3><p>[root@localhost redis]# ll</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622010034.jpg" alt="img"></p>
+<p>当前路径里确实是有dump.rdb这个文件的</p>
+<h3 id="备份和恢复数据"><a href="#备份和恢复数据" class="headerlink" title="备份和恢复数据"></a>备份和恢复数据</h3><p>①备份数据</p>
+<p>删除已存在的备份文件</p>
+<p>[root@localhost redis]# ls<br>bin  dump.rdb  redis.conf<br>[root@localhost redis]# rm dump.rdb<br>rm：是否删除普通文件 “dump.rdb”？y<br>[root@localhost redis]# ls<br>bin  redis.conf</p>
+<p>打开Redis服务</p>
+<p>[root@localhost redis]# ./bin/redis-server ./redis.conf</p>
+<p>进入Redis客户端</p>
+<p>[root@localhost redis]# ./bin/redis-cli </p>
+<p>查看所有key（此时是没有数据的）</p>
+<p>127.0.0.1:6379&gt; keys *<br>(empty list or set)</p>
+<p>创建几个key</p>
+<p>127.0.0.1:6379&gt; set a1 1<br>OK<br>127.0.0.1:6379&gt; set a2 2<br>OK<br>127.0.0.1:6379&gt; set a3 3<br>OK<br>127.0.0.1:6379&gt; keys *</p>
+<ol>
+<li>“a3”</li>
+<li>“a2”</li>
+<li>“a1”</li>
+</ol>
+<p>保存并关闭Redis（当前路径下多了一个备份文件dump.rdb）</p>
+<p>127.0.0.1:6379&gt; shutdown save<br>not connected&gt; exit<br>[root@localhost redis]# ls<br>bin  dump.rdb  redis.conf</p>
+<p>②恢复数据</p>
+<p>再次打开Redis服务，查看所有key，发现有数据（说明是数据加载进来了，Redis服务启动时会自动加载备份文件）</p>
+<p>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *</p>
+<ol>
+<li>“a2”</li>
+<li>“a3”</li>
+<li>“a1”</li>
+</ol>
+<p>再次关闭Redis服务，将备份文件dump.rdb剪切到其它目录，然后启动Redis服务，查看所有key，发现是没有数据的（由于备份文件已经剪切到其它目录了，所以启动Redis服务时无法自动加载备份数据，查看所有key没有数据）</p>
+<p>[root@localhost redis]# /usr/local/redis/bin/redis-cli shutdown<br>[root@localhost redis]# ls<br>bin  dump.rdb  redis.conf<br>[root@localhost redis]# mv dump.rdb /home/data/<br>[root@localhost redis]# ls<br>bin  redis.conf<br>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *<br>(empty list or set)</p>
+<p>然后我们将之前剪切到其它目录的备份文件复制到Redis备份文件指定目录中，将新创建的备份文件（关闭Redis服务时自动创建）覆盖掉，启动Redis服务后又有数据了（Redis会在启动时加载备份文件）</p>
+<p>[root@localhost redis]# cp /home/data/dump.rdb /usr/local/redis/<br>cp：是否覆盖”/usr/local/redis/dump.rdb”？ y<br>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *</p>
+<ol>
+<li>“a1”</li>
+<li>“a3”</li>
+<li>“a2”</li>
+</ol>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Redis服务在启动时自动加载备份文件，平时我们可以定期把rdb文件备份到指定地方，需要恢复的时候，直接把rdb搞到redis备份文件指定目录/usr/local/redis下即可</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://blog.java1234.com/blog/articles/323.html">Redis的持久化之RDB方式_Java开源博客系统-Powered by java1234</a></p>
 ]]></content>
       <categories>
         <category>Redis</category>
@@ -2897,69 +2960,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Redis的持久化之RDB方式</title>
-    <url>/175.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>RDB方式，Redis是默认支持的</p>
-<p>优势：只有一个文件，时间间隔的数据，可以归档为一个文件，方便压缩转移（就一个文件）</p>
-<p>劣势：如果宕机，数据损失比较大，因为它是没一个时间段进行持久化操作的。也就是积攒的数据比较多，一旦懵逼，就彻底懵逼了</p>
-<h3 id="查看Redis配置"><a href="#查看Redis配置" class="headerlink" title="查看Redis配置"></a>查看Redis配置</h3><p>[root@localhost ~]# cd /usr/local/redis/<br>[root@localhost redis]# vi redis.conf</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622005939.jpg" alt="img"></p>
-<p>save 900 1 表示 每900秒内至少有1个key发生变化，就持久化</p>
-<p>save 300 10表示 每300秒内至少有10个key发生变化，就持久化</p>
-<p>save 60 10000表示 每60秒内至少有10000个key发生变化，就持久化</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622005950.jpg" alt="img"></p>
-<p>dbfilename配置是保存的持久化的文件名，默认是dump.rdb</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622010021.jpg" alt="img"></p>
-<p><code>dir ./</code> 表示文件存储路径是当前路径</p>
-<h3 id="查看当前路径的文件"><a href="#查看当前路径的文件" class="headerlink" title="查看当前路径的文件"></a>查看当前路径的文件</h3><p>[root@localhost redis]# ll</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210622010034.jpg" alt="img"></p>
-<p>当前路径里确实是有dump.rdb这个文件的</p>
-<h3 id="备份和恢复数据"><a href="#备份和恢复数据" class="headerlink" title="备份和恢复数据"></a>备份和恢复数据</h3><p>①备份数据</p>
-<p>删除已存在的备份文件</p>
-<p>[root@localhost redis]# ls<br>bin  dump.rdb  redis.conf<br>[root@localhost redis]# rm dump.rdb<br>rm：是否删除普通文件 “dump.rdb”？y<br>[root@localhost redis]# ls<br>bin  redis.conf</p>
-<p>打开Redis服务</p>
-<p>[root@localhost redis]# ./bin/redis-server ./redis.conf</p>
-<p>进入Redis客户端</p>
-<p>[root@localhost redis]# ./bin/redis-cli </p>
-<p>查看所有key（此时是没有数据的）</p>
-<p>127.0.0.1:6379&gt; keys *<br>(empty list or set)</p>
-<p>创建几个key</p>
-<p>127.0.0.1:6379&gt; set a1 1<br>OK<br>127.0.0.1:6379&gt; set a2 2<br>OK<br>127.0.0.1:6379&gt; set a3 3<br>OK<br>127.0.0.1:6379&gt; keys *</p>
-<ol>
-<li>“a3”</li>
-<li>“a2”</li>
-<li>“a1”</li>
-</ol>
-<p>保存并关闭Redis（当前路径下多了一个备份文件dump.rdb）</p>
-<p>127.0.0.1:6379&gt; shutdown save<br>not connected&gt; exit<br>[root@localhost redis]# ls<br>bin  dump.rdb  redis.conf</p>
-<p>②恢复数据</p>
-<p>再次打开Redis服务，查看所有key，发现有数据（说明是数据加载进来了，Redis服务启动时会自动加载备份文件）</p>
-<p>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *</p>
-<ol>
-<li>“a2”</li>
-<li>“a3”</li>
-<li>“a1”</li>
-</ol>
-<p>再次关闭Redis服务，将备份文件dump.rdb剪切到其它目录，然后启动Redis服务，查看所有key，发现是没有数据的（由于备份文件已经剪切到其它目录了，所以启动Redis服务时无法自动加载备份数据，查看所有key没有数据）</p>
-<p>[root@localhost redis]# /usr/local/redis/bin/redis-cli shutdown<br>[root@localhost redis]# ls<br>bin  dump.rdb  redis.conf<br>[root@localhost redis]# mv dump.rdb /home/data/<br>[root@localhost redis]# ls<br>bin  redis.conf<br>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *<br>(empty list or set)</p>
-<p>然后我们将之前剪切到其它目录的备份文件复制到Redis备份文件指定目录中，将新创建的备份文件（关闭Redis服务时自动创建）覆盖掉，启动Redis服务后又有数据了（Redis会在启动时加载备份文件）</p>
-<p>[root@localhost redis]# cp /home/data/dump.rdb /usr/local/redis/<br>cp：是否覆盖”/usr/local/redis/dump.rdb”？ y<br>[root@localhost redis]# ./bin/redis-server ./redis.conf<br>[root@localhost redis]# ./bin/redis-cli<br>127.0.0.1:6379&gt; keys *</p>
-<ol>
-<li>“a1”</li>
-<li>“a3”</li>
-<li>“a2”</li>
-</ol>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>Redis服务在启动时自动加载备份文件，平时我们可以定期把rdb文件备份到指定地方，需要恢复的时候，直接把rdb搞到redis备份文件指定目录/usr/local/redis下即可</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="http://blog.java1234.com/blog/articles/323.html">Redis的持久化之RDB方式_Java开源博客系统-Powered by java1234</a></p>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>创建第一个Vue应用</title>
     <url>/180.html</url>
     <content><![CDATA[<h3 id="引入Vue-js"><a href="#引入Vue-js" class="headerlink" title="引入Vue.js"></a>引入Vue.js</h3><p>①下载js文件后引入</p>
@@ -3069,6 +3069,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue.js监听属性</title>
+    <url>/185.html</url>
+    <content><![CDATA[<p>通过 watch 来响应数据的变化</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span></span><br><span class="line">        计数器:&#123;&#123;counter&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">&quot;seen&quot;</span>&gt;</span>（</span><br><span class="line">            修改前值为：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: blue&quot;</span>&gt;</span>&#123;&#123;oldVal&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>，</span><br><span class="line">            修改后值为：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;newVal&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>）</span><br><span class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;addCounter&quot;</span>&gt;</span>自加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;lessCounter&quot;</span>&gt;</span>自减<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">seen</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">oldVal</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">newVal</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">addCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter++;</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">lessCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span> (<span class="built_in">this</span>.counter &gt; <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">this</span>.counter--;</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">watch</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//第一个参数是新的值（改变后），第二个是旧的值（改变前）</span></span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.oldVal = oldValue;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.newVal = newValue;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.seen = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624221541.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue.js样式绑定</title>
     <url>/186.html</url>
     <content><![CDATA[<p>lass 与 style 是 HTML 元素的属性，用于设置元素的样式，我们可以用 v-bind 来设置样式属性。</p>
@@ -3094,21 +3109,6 @@
 
 <p>③绑定多个对象</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-bind:style</span>=<span class="string">&quot;[style1,style2]&quot;</span>&gt;</span>LeDao的博客<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>:&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">style1</span>:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;color&#x27;</span>:<span class="string">&#x27;green&#x27;</span>,</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;font-size&#x27;</span>:<span class="string">&#x27;33px&#x27;</span></span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">style2</span>:&#123;</span></span><br><span class="line"><span class="javascript">                <span class="string">&#x27;font-weight&#x27;</span>:<span class="string">&#x27;bold&#x27;</span></span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue.js监听属性</title>
-    <url>/185.html</url>
-    <content><![CDATA[<p>通过 watch 来响应数据的变化</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span></span><br><span class="line">        计数器:&#123;&#123;counter&#125;&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">&quot;seen&quot;</span>&gt;</span>（</span><br><span class="line">            修改前值为：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: blue&quot;</span>&gt;</span>&#123;&#123;oldVal&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>，</span><br><span class="line">            修改后值为：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;newVal&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>）</span><br><span class="line">        <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;addCounter&quot;</span>&gt;</span>自加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;lessCounter&quot;</span>&gt;</span>自减<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">seen</span>: <span class="literal">false</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">oldVal</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">newVal</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">addCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter++;</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">lessCounter</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span> (<span class="built_in">this</span>.counter &gt; <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">this</span>.counter--;</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">watch</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="comment">//第一个参数是新的值（改变后），第二个是旧的值（改变前）</span></span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="function"><span class="keyword">function</span> (<span class="params">newValue, oldValue</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.oldVal = oldValue;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.newVal = newValue;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.seen = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624221541.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Vue.js</category>
@@ -3470,6 +3470,26 @@
       </tags>
   </entry>
   <entry>
+    <title>安装vue-cli脚手架</title>
+    <url>/200.html</url>
+    <content><![CDATA[<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>官网：<a href="https://nodejs.org/">https://nodejs.org</a></p>
+<p>下载第一个稳定版本，点击安装文件一直下一步即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
+<p>检验是否安装成功，分别输入命令<code>node --version</code>，<code>npm -v</code>都可以看到版本号说明Node.js安装完成</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
+<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h3><p>打开CMD，输入命令：<code>npm install -g vue-cli@2.9.6</code>，运行</p>
+<p>等待安装完成，输入命令：<code>vue -V</code>，看到版本号说明脚手架安装完成</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vue-cli脚手架新建和删除Vue项目</title>
     <url>/201.html</url>
     <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>在 Vue 项目存储文件夹中打开 cmd ，输入命令：vue init webpack vue_demo，vue_demo 是项目名称，然后进行一些配置</p>
@@ -3495,26 +3515,6 @@
 <p>让项目启动时自动打开浏览器，修改 config 文件夹的 index.js，<code>autoOpenBrower:false</code>改为<code>autoOpenBrower:true</code></p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151833.jpg" alt="img"></p>
 <h3 id="删除项目"><a href="#删除项目" class="headerlink" title="删除项目"></a>删除项目</h3><p>直接删除对应文件夹即可</p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-        <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>安装vue-cli脚手架</title>
-    <url>/200.html</url>
-    <content><![CDATA[<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>官网：<a href="https://nodejs.org/">https://nodejs.org</a></p>
-<p>下载第一个稳定版本，点击安装文件一直下一步即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
-<p>检验是否安装成功，分别输入命令<code>node --version</code>，<code>npm -v</code>都可以看到版本号说明Node.js安装完成</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
-<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h3><p>打开CMD，输入命令：<code>npm install -g vue-cli@2.9.6</code>，运行</p>
-<p>等待安装完成，输入命令：<code>vue -V</code>，看到版本号说明脚手架安装完成</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Vue.js</category>
@@ -3941,6 +3941,25 @@
       </tags>
   </entry>
   <entry>
+    <title>highlight.js实现代码复制</title>
+    <url>/216.html</url>
+    <content><![CDATA[<h3 id="下载js文件"><a href="#下载js文件" class="headerlink" title="下载js文件"></a>下载js文件</h3><p>阿里云盘链接：<a href="https://www.aliyundrive.com/s/LGzQZBYXYGZ">https://www.aliyundrive.com/s/LGzQZBYXYGZ</a></p>
+<h3 id="前端引入样式和js文件"><a href="#前端引入样式和js文件" class="headerlink" title="前端引入样式和js文件"></a>前端引入样式和js文件</h3><p>引入顺序按下面代码所示，顺序不同可能会得不到我们想要的结果</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--代码高亮样式--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/androidstudio.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--行号js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/highlight.line-numbers.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--代码高亮js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--代码复制--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/highlightjs-copy-button.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/highlightjs-copy-button.min.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--初始化--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">	hljs.initHighlightingOnLoad();<span class="comment">//代码高亮</span></span></span><br><span class="line"><span class="javascript">	hljsln.initLineNumbersOnLoad();<span class="comment">//行号</span></span></span><br><span class="line"><span class="javascript">	hljs.initCopyButtonOnLoad();<span class="comment">//代码复制</span></span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改复制代码按钮大小及其样式"><a href="#修改复制代码按钮大小及其样式" class="headerlink" title="修改复制代码按钮大小及其样式"></a>修改复制代码按钮大小及其样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hljs-button</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">11px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#0b0b0b</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljs-button</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#6eb9f1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210718200718.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://github.com/DevCreel/highlightjs-copy-button.js">https://github.com/DevCreel/highlightjs-copy-button.js</a></p>
+]]></content>
+      <categories>
+        <category>highlight.js</category>
+      </categories>
+      <tags>
+        <tag>highlight.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>将JSON字符串转为list</title>
     <url>/215.html</url>
     <content><![CDATA[<h3 id="引入hutool依赖"><a href="#引入hutool依赖" class="headerlink" title="引入hutool依赖"></a>引入hutool依赖</h3><p>使用到该依赖的HTTP请求方法</p>
@@ -3982,25 +4001,6 @@
       <tags>
         <tag>Java</tag>
         <tag>JSON</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>highlight.js实现代码复制</title>
-    <url>/216.html</url>
-    <content><![CDATA[<h3 id="下载js文件"><a href="#下载js文件" class="headerlink" title="下载js文件"></a>下载js文件</h3><p>阿里云盘链接：<a href="https://www.aliyundrive.com/s/LGzQZBYXYGZ">https://www.aliyundrive.com/s/LGzQZBYXYGZ</a></p>
-<h3 id="前端引入样式和js文件"><a href="#前端引入样式和js文件" class="headerlink" title="前端引入样式和js文件"></a>前端引入样式和js文件</h3><p>引入顺序按下面代码所示，顺序不同可能会得不到我们想要的结果</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!--代码高亮样式--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/androidstudio.min.css&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--行号js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/highlight.line-numbers.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--代码高亮js文件--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--代码复制--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/highlightjs-copy-button.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/highlightjs-copy-button.min.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--初始化--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">	hljs.initHighlightingOnLoad();<span class="comment">//代码高亮</span></span></span><br><span class="line"><span class="javascript">	hljsln.initLineNumbersOnLoad();<span class="comment">//行号</span></span></span><br><span class="line"><span class="javascript">	hljs.initCopyButtonOnLoad();<span class="comment">//代码复制</span></span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改复制代码按钮大小及其样式"><a href="#修改复制代码按钮大小及其样式" class="headerlink" title="修改复制代码按钮大小及其样式"></a>修改复制代码按钮大小及其样式</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hljs-button</span>&#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">11px</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#0b0b0b</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljs-button</span><span class="selector-pseudo">:hover</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: white;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#6eb9f1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210718200718.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="https://github.com/DevCreel/highlightjs-copy-button.js">https://github.com/DevCreel/highlightjs-copy-button.js</a></p>
-]]></content>
-      <categories>
-        <category>highlight.js</category>
-      </categories>
-      <tags>
-        <tag>highlight.js</tag>
       </tags>
   </entry>
   <entry>
@@ -4842,31 +4842,6 @@
       </tags>
   </entry>
   <entry>
-    <title>修改hexo新建博客的模板</title>
-    <url>/247.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>通过<font color="#dd0000">hexo new “博客名称”</font>命令新建博客时，默认使用的模板是<font color="#dd0000">post.md</font>，该文件在站点根目录的<font color="#dd0000">scaffolds</font>文件夹中，修改hexo新建博客的模板一共有两种方法：①直接修改post.md ②新建自己的模板。以添加categories（分类）为例：</p>
-<h3 id="直接修改post-md"><a href="#直接修改post-md" class="headerlink" title="直接修改post.md"></a>直接修改post.md</h3><p>在文章属性Front-matter中添加categories</p>
-<p><strong>添加前（markdown源码）</strong></p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line"><span class="section">tags:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>添加后（markdown源码）</strong></p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="新建自己的模板"><a href="#新建自己的模板" class="headerlink" title="新建自己的模板"></a>新建自己的模板</h3><p>新建一个名为<font color="#dd0000">blog.md</font>的模板（名称可以根据自己的需求随便取，但是不可以与当前的文件夹中的文件重名，也不可以命名为page.md，因为<font color="#dd0000">hexo new page “名称”</font>命令是新建一个页面）,添加以下内容（markdown源码）：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
-
-<p>如果要新建博客，通过<font color="#dd0000">hexo new blog “博客名称”</font>命令新建，该命令中的<font color="#dd0000">blog</font>字段说明使用的是名为<font color="#dd0000">blog.md</font>的模板</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>推荐直接修改post.md</p>
-<p>详情查看hexo官网：<a href="https://hexo.io/zh-cn/docs/writing">https://hexo.io/zh-cn/docs/writing</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring Cloud Config整合Eureka</title>
     <url>/248.html</url>
     <content><![CDATA[<h3 id="上传配置文件到GitHub"><a href="#上传配置文件到GitHub" class="headerlink" title="上传配置文件到GitHub"></a>上传配置文件到GitHub</h3><p>配置文件名为：eureka_config.yml，上传到GitHub的microservice-config库中，内容如下：</p>
@@ -5091,6 +5066,31 @@
       <tags>
         <tag>ZooKeeper</tag>
         <tag>Dubbo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>修改hexo新建博客的模板</title>
+    <url>/247.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>通过<font color="#dd0000">hexo new “博客名称”</font>命令新建博客时，默认使用的模板是<font color="#dd0000">post.md</font>，该文件在站点根目录的<font color="#dd0000">scaffolds</font>文件夹中，修改hexo新建博客的模板一共有两种方法：①直接修改post.md ②新建自己的模板。以添加categories（分类）为例：</p>
+<h3 id="直接修改post-md"><a href="#直接修改post-md" class="headerlink" title="直接修改post.md"></a>直接修改post.md</h3><p>在文章属性Front-matter中添加categories</p>
+<p><strong>添加前（markdown源码）</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line"><span class="section">tags:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>添加后（markdown源码）</strong></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="新建自己的模板"><a href="#新建自己的模板" class="headerlink" title="新建自己的模板"></a>新建自己的模板</h3><p>新建一个名为<font color="#dd0000">blog.md</font>的模板（名称可以根据自己的需求随便取，但是不可以与当前的文件夹中的文件重名，也不可以命名为page.md，因为<font color="#dd0000">hexo new page “名称”</font>命令是新建一个页面）,添加以下内容（markdown源码）：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<p>如果要新建博客，通过<font color="#dd0000">hexo new blog “博客名称”</font>命令新建，该命令中的<font color="#dd0000">blog</font>字段说明使用的是名为<font color="#dd0000">blog.md</font>的模板</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>推荐直接修改post.md</p>
+<p>详情查看hexo官网：<a href="https://hexo.io/zh-cn/docs/writing">https://hexo.io/zh-cn/docs/writing</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -5385,6 +5385,28 @@
       </tags>
   </entry>
   <entry>
+    <title>搭建Eureka服务注册中心</title>
+    <url>/266.html</url>
+    <content><![CDATA[<h3 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h3><p>该Module为Maven项目，命名为microservice-eureka-server-2001</p>
+<h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--继承microservice依赖版本--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>microservice<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>microservice-eureka-server-2001<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>microservice-eureka-server-2001<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--Eureka服务--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 修改后立即生效，热部署 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springloaded<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="application-yml配置"><a href="#application-yml配置" class="headerlink" title="application.yml配置"></a>application.yml配置</h4><p>在resources中新建application.yml</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">2001</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">instance:</span></span><br><span class="line">    <span class="attr">hostname:</span> <span class="string">localhost</span> <span class="comment">#eureka注册中心实例名称</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">register-with-eureka:</span> <span class="literal">false</span>     <span class="comment">#false 由于该应用为注册中心，所以设置为false,代表不向注册中心注册自己。</span></span><br><span class="line">    <span class="attr">fetch-registry:</span> <span class="literal">false</span>     <span class="comment">#false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://$&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;/eureka/</span>       <span class="comment">#设置与Eureka注册中心交互的地址，查询服务和注册服务用到</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Eureka服务启动类"><a href="#Eureka服务启动类" class="headerlink" title="Eureka服务启动类"></a>Eureka服务启动类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Eureka服务启动类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 16:29</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaServer</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EurekaApplication_2001</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(EurekaApplication_2001.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>运行Eureka服务启动类后，在浏览器地址栏输入：<a href="http://localhost:2001/">http://localhost:2001/</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20180544.png"></p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Eureka</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>服务提供者注册到Eureka</title>
     <url>/267.html</url>
     <content><![CDATA[<p>在microservice-student-provider-1001子模块项目的基础上修改</p>
@@ -5459,28 +5481,6 @@
 <p><a href="http://eureka2003.ledao.com:2003/">http://eureka2003.ledao.com:2003/</a></p>
 <p>结果</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20222023.png"></p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-        <tag>Eureka</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建Eureka服务注册中心</title>
-    <url>/266.html</url>
-    <content><![CDATA[<h3 id="新建Module"><a href="#新建Module" class="headerlink" title="新建Module"></a>新建Module</h3><p>该Module为Maven项目，命名为microservice-eureka-server-2001</p>
-<h4 id="修改pom-xml"><a href="#修改pom-xml" class="headerlink" title="修改pom.xml"></a>修改pom.xml</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--继承microservice依赖版本--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>microservice<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>microservice-eureka-server-2001<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>microservice-eureka-server-2001<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--Eureka服务--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka-server<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 修改后立即生效，热部署 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>springloaded<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="application-yml配置"><a href="#application-yml配置" class="headerlink" title="application.yml配置"></a>application.yml配置</h4><p>在resources中新建application.yml</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">2001</span></span><br><span class="line">  <span class="attr">context-path:</span> <span class="string">/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">instance:</span></span><br><span class="line">    <span class="attr">hostname:</span> <span class="string">localhost</span> <span class="comment">#eureka注册中心实例名称</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">register-with-eureka:</span> <span class="literal">false</span>     <span class="comment">#false 由于该应用为注册中心，所以设置为false,代表不向注册中心注册自己。</span></span><br><span class="line">    <span class="attr">fetch-registry:</span> <span class="literal">false</span>     <span class="comment">#false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://$&#123;eureka.instance.hostname&#125;:$&#123;server.port&#125;/eureka/</span>       <span class="comment">#设置与Eureka注册中心交互的地址，查询服务和注册服务用到</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="Eureka服务启动类"><a href="#Eureka服务启动类" class="headerlink" title="Eureka服务启动类"></a>Eureka服务启动类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Eureka服务启动类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 16:29</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@EnableEurekaServer</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EurekaApplication_2001</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(EurekaApplication_2001.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>运行Eureka服务启动类后，在浏览器地址栏输入：<a href="http://localhost:2001/">http://localhost:2001/</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20180544.png"></p>
 ]]></content>
       <categories>
         <category>Spring Cloud</category>
@@ -16299,8 +16299,8 @@
         <category>CKEditor</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>CKEditor</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
