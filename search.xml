@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>用Tomcat运行web项目</title>
-    <url>/10.html</url>
-    <content><![CDATA[<h3 id="复制项目到webapps文件夹"><a href="#复制项目到webapps文件夹" class="headerlink" title="复制项目到webapps文件夹"></a>复制项目到webapps文件夹</h3><p>将项目（war包）复制到Tomcat安装目录的webapps文件夹中</p>
-<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>然后去bin文件夹中,点击startup.bat即可启动Tomcat运行项目</p>
-<h3 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h3><p>点击bin文件夹中的shutdown.bat关闭Tomcat</p>
-]]></content>
-      <categories>
-        <category>Tomcat</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一个非常好用的Java工具包：HulTool</title>
     <url>/100.html</url>
     <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
@@ -34,6 +20,20 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用Tomcat运行web项目</title>
+    <url>/10.html</url>
+    <content><![CDATA[<h3 id="复制项目到webapps文件夹"><a href="#复制项目到webapps文件夹" class="headerlink" title="复制项目到webapps文件夹"></a>复制项目到webapps文件夹</h3><p>将项目（war包）复制到Tomcat安装目录的webapps文件夹中</p>
+<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>然后去bin文件夹中,点击startup.bat即可启动Tomcat运行项目</p>
+<h3 id="关闭Tomcat"><a href="#关闭Tomcat" class="headerlink" title="关闭Tomcat"></a>关闭Tomcat</h3><p>点击bin文件夹中的shutdown.bat关闭Tomcat</p>
+]]></content>
+      <categories>
+        <category>Tomcat</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -114,6 +114,22 @@
       </tags>
   </entry>
   <entry>
+    <title>实现鼠标移入文字向右移动效果</title>
+    <url>/105.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;div1&#x27;</span>&gt;</span>&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">	-webkit-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-moz-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-o-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div1</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.cnblogs.com/smile1/p/12007164.html">鼠标移入文字上向右移动效果 - Crazy丶迷恋 - 博客园</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>解决：Tomcat运行项目时Quartz定时任务执行两次</title>
     <url>/106.html</url>
     <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>在Tomcat的配置文件conf/server.xml中：</p>
@@ -132,22 +148,6 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实现鼠标移入文字向右移动效果</title>
-    <url>/105.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;div1&#x27;</span>&gt;</span>&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">	-webkit-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-moz-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-o-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div1</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.cnblogs.com/smile1/p/12007164.html">鼠标移入文字上向右移动效果 - Crazy丶迷恋 - 博客园</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -183,6 +183,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Boot引入Quartz定时任务</title>
+    <url>/109.html</url>
+    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.quartz-scheduler<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>quartz<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.quartz;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.EnableScheduling;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.Scheduled;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 每天23点自动删除已被删除文章中的图片</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-23 11:27</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeleteInvalidImage</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> BlogService blogService;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Scheduled(cron = &quot;0 0 23 * * ?&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//这里填入定时执行的代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>常用cron表达式：<a href="http://www.zoutl.cn/blog/13">常用cron表达式</a></p>
+]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Github私有仓库改为公开</title>
     <url>/11.html</url>
     <content><![CDATA[<blockquote>
@@ -203,23 +220,6 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Spring Boot引入Quartz定时任务</title>
-    <url>/109.html</url>
-    <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.quartz-scheduler<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>quartz<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.quartz;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.EnableScheduling;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.Scheduled;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 每天23点自动删除已被删除文章中的图片</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-23 11:27</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeleteInvalidImage</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> BlogService blogService;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Scheduled(cron = &quot;0 0 23 * * ?&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//这里填入定时执行的代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>常用cron表达式：<a href="http://www.zoutl.cn/blog/13">常用cron表达式</a></p>
-]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -297,6 +297,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Java备份MySQL数据库</title>
+    <url>/114.html</url>
+    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-23 21:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Backup</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_psw;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要备份的数据库名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String db_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主机IP</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String host_ip;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_charset;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存放备份文件的路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String backup_path;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 命令</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String stmt;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Backup</span><span class="params">(String user_name, String user_psw, String db_name,</span></span></span><br><span class="line"><span class="params"><span class="function">                  String host_ip, String user_charset, String backup_path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">        <span class="keyword">this</span>.user_psw = user_psw;</span><br><span class="line">        <span class="keyword">this</span>.db_name = db_name;</span><br><span class="line">        <span class="comment">// 主机IP;</span></span><br><span class="line">        <span class="keyword">if</span> (host_ip == <span class="keyword">null</span> || host_ip.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为本机</span></span><br><span class="line">            <span class="keyword">this</span>.host_ip = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.host_ip = host_ip;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符集</span></span><br><span class="line">        <span class="keyword">if</span> (user_charset == <span class="keyword">null</span> || user_charset.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为安装时设置的字符集</span></span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; --default-character-set=&quot;</span> + user_charset;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.backup_path = backup_path;</span><br><span class="line">        <span class="keyword">this</span>.stmt = <span class="string">&quot;C:\\Program Files\\MySQL\\MySQL Server 5.6\\bin\\mysqldump &quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.db_name + <span class="string">&quot; -h &quot;</span> + <span class="keyword">this</span>.host_ip + <span class="string">&quot; -u&quot;</span> + <span class="keyword">this</span>.user_name</span><br><span class="line">                + <span class="string">&quot; -p&quot;</span> + <span class="keyword">this</span>.user_psw + <span class="keyword">this</span>.user_charset + <span class="string">&quot; --result-file=&quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.backup_path;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">backup_run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> run_result = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Runtime.getRuntime().exec(<span class="keyword">this</span>.stmt);</span><br><span class="line">            run_result = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> run_result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Backup backup = <span class="keyword">new</span> Backup(<span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;db_myblog&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;utf8&quot;</span>,</span><br><span class="line">                <span class="string">&quot;D:\\db_backup\\db_myblog.sql&quot;</span>);</span><br><span class="line">        <span class="keyword">boolean</span> result = backup.backup_run();</span><br><span class="line">        <span class="keyword">if</span> (result) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;备份成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424002930.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424003003.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>mysqldump命令备份数据库</title>
     <url>/112.html</url>
     <content><![CDATA[<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p123456 db_myblog&gt; D:/db_backup/db_myblog.sql</span><br></pre></td></tr></table></figure>
@@ -314,22 +330,6 @@
         <category>MySQL</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java备份MySQL数据库</title>
-    <url>/114.html</url>
-    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-23 21:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Backup</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_psw;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要备份的数据库名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String db_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主机IP</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String host_ip;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_charset;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存放备份文件的路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String backup_path;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 命令</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String stmt;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Backup</span><span class="params">(String user_name, String user_psw, String db_name,</span></span></span><br><span class="line"><span class="params"><span class="function">                  String host_ip, String user_charset, String backup_path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">        <span class="keyword">this</span>.user_psw = user_psw;</span><br><span class="line">        <span class="keyword">this</span>.db_name = db_name;</span><br><span class="line">        <span class="comment">// 主机IP;</span></span><br><span class="line">        <span class="keyword">if</span> (host_ip == <span class="keyword">null</span> || host_ip.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为本机</span></span><br><span class="line">            <span class="keyword">this</span>.host_ip = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.host_ip = host_ip;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符集</span></span><br><span class="line">        <span class="keyword">if</span> (user_charset == <span class="keyword">null</span> || user_charset.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为安装时设置的字符集</span></span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; --default-character-set=&quot;</span> + user_charset;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.backup_path = backup_path;</span><br><span class="line">        <span class="keyword">this</span>.stmt = <span class="string">&quot;C:\\Program Files\\MySQL\\MySQL Server 5.6\\bin\\mysqldump &quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.db_name + <span class="string">&quot; -h &quot;</span> + <span class="keyword">this</span>.host_ip + <span class="string">&quot; -u&quot;</span> + <span class="keyword">this</span>.user_name</span><br><span class="line">                + <span class="string">&quot; -p&quot;</span> + <span class="keyword">this</span>.user_psw + <span class="keyword">this</span>.user_charset + <span class="string">&quot; --result-file=&quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.backup_path;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">backup_run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> run_result = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Runtime.getRuntime().exec(<span class="keyword">this</span>.stmt);</span><br><span class="line">            run_result = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> run_result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Backup backup = <span class="keyword">new</span> Backup(<span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;db_myblog&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;utf8&quot;</span>,</span><br><span class="line">                <span class="string">&quot;D:\\db_backup\\db_myblog.sql&quot;</span>);</span><br><span class="line">        <span class="keyword">boolean</span> result = backup.backup_run();</span><br><span class="line">        <span class="keyword">if</span> (result) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;备份成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424002930.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424003003.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
         <tag>MySQL</tag>
       </tags>
   </entry>
@@ -372,6 +372,26 @@
       </tags>
   </entry>
   <entry>
+    <title>定时自动备份MySQL数据库</title>
+    <url>/116.html</url>
+    <content><![CDATA[<h3 id="方法一、使用任务计划程序"><a href="#方法一、使用任务计划程序" class="headerlink" title="方法一、使用任务计划程序"></a>方法一、使用任务计划程序</h3><ol>
+<li><a href="/113.html">Windows脚本代码备份MySQL数据库</a></li>
+<li><a href="/115.html">Windows10使用任务计划程序</a></li>
+</ol>
+<h3 id="方法二、使用Quartz定时任务"><a href="#方法二、使用Quartz定时任务" class="headerlink" title="方法二、使用Quartz定时任务"></a>方法二、使用Quartz定时任务</h3><ol>
+<li><a href="/109.html">Spring Boot引入Quartz定时任务</a></li>
+<li><a href="/4.html">常用cron表达式</a></li>
+<li><a href="/114.html">Java备份MySQL数据库</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>commons-io常用方法</title>
     <url>/117.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -402,26 +422,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>定时自动备份MySQL数据库</title>
-    <url>/116.html</url>
-    <content><![CDATA[<h3 id="方法一、使用任务计划程序"><a href="#方法一、使用任务计划程序" class="headerlink" title="方法一、使用任务计划程序"></a>方法一、使用任务计划程序</h3><ol>
-<li><a href="/113.html">Windows脚本代码备份MySQL数据库</a></li>
-<li><a href="/115.html">Windows10使用任务计划程序</a></li>
-</ol>
-<h3 id="方法二、使用Quartz定时任务"><a href="#方法二、使用Quartz定时任务" class="headerlink" title="方法二、使用Quartz定时任务"></a>方法二、使用Quartz定时任务</h3><ol>
-<li><a href="/109.html">Spring Boot引入Quartz定时任务</a></li>
-<li><a href="/4.html">常用cron表达式</a></li>
-<li><a href="/114.html">Java备份MySQL数据库</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -1186,23 +1186,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java截取两个字符串之间的字符串</title>
-    <url>/137.html</url>
-    <content><![CDATA[<h3 id="使用的方法"><a href="#使用的方法" class="headerlink" title="使用的方法"></a>使用的方法</h3><h4 id="String-indexOf"><a href="#String-indexOf" class="headerlink" title="String.indexOf"></a>String.indexOf</h4><p>传入的数据类型为String，返回传入字符串第一次出现的位置（索引从0开始，返回字符串第一个字符的位置）</p>
-<h4 id="String-substring"><a href="#String-substring" class="headerlink" title="String.substring"></a>String.substring</h4><p>传入数据类型为两个int，用于截取字符串（包括头，不包括尾）</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-07 7:25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;12345678923&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> begin = str.indexOf(<span class="string">&quot;23&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> last = str.indexOf(<span class="string">&quot;89&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;23\&quot;第一次出现的位置为:&quot;</span> + begin);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;89\&quot;第一次出现的位置为:&quot;</span> + last);</span><br><span class="line">        String substring = str.substring(begin + <span class="number">2</span>, last);</span><br><span class="line">        System.out.println(<span class="string">&quot;截取的结果为:&quot;</span> + substring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607092942.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>要截取什么样的字符串可根据String.substring包括头不包括尾的特性来灵活截取</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java实现HTTP请求</title>
     <url>/136.html</url>
     <content><![CDATA[<h3 id="commons-httpclient"><a href="#commons-httpclient" class="headerlink" title="commons-httpclient"></a>commons-httpclient</h3><p>pom.xml代码：</p>
@@ -1217,6 +1200,23 @@
 
 <p>Java代码：</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	String ip = <span class="string">&quot;116.179.32.87&quot;</span>;</span><br><span class="line">	String url = <span class="string">&quot;http://ip.ws.126.net/ipquery?ip=&quot;</span> + ip;</span><br><span class="line">	String str = HttpUtil.get(url);</span><br><span class="line">	System.out.println(str);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java截取两个字符串之间的字符串</title>
+    <url>/137.html</url>
+    <content><![CDATA[<h3 id="使用的方法"><a href="#使用的方法" class="headerlink" title="使用的方法"></a>使用的方法</h3><h4 id="String-indexOf"><a href="#String-indexOf" class="headerlink" title="String.indexOf"></a>String.indexOf</h4><p>传入的数据类型为String，返回传入字符串第一次出现的位置（索引从0开始，返回字符串第一个字符的位置）</p>
+<h4 id="String-substring"><a href="#String-substring" class="headerlink" title="String.substring"></a>String.substring</h4><p>传入数据类型为两个int，用于截取字符串（包括头，不包括尾）</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-07 7:25</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;12345678923&quot;</span>;</span><br><span class="line">        <span class="keyword">int</span> begin = str.indexOf(<span class="string">&quot;23&quot;</span>);</span><br><span class="line">        <span class="keyword">int</span> last = str.indexOf(<span class="string">&quot;89&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;23\&quot;第一次出现的位置为:&quot;</span> + begin);</span><br><span class="line">        System.out.println(<span class="string">&quot;\&quot;89\&quot;第一次出现的位置为:&quot;</span> + last);</span><br><span class="line">        String substring = str.substring(begin + <span class="number">2</span>, last);</span><br><span class="line">        System.out.println(<span class="string">&quot;截取的结果为:&quot;</span> + substring);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607092942.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>要截取什么样的字符串可根据String.substring包括头不包括尾的特性来灵活截取</p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -1291,24 +1291,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot2.0实现自定义404页面渲染</title>
-    <url>/14.html</url>
-    <content><![CDATA[<h3 id="第一种写法"><a href="#第一种写法" class="headerlink" title="第一种写法"></a>第一种写法</h3><p>实现ErrorPageRegistrar，404.html放在项目的webapp文件夹中</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorPageConfig</span> <span class="keyword">implements</span> <span class="title">ErrorPageRegistrar</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerErrorPages</span><span class="params">(ErrorPageRegistry registry)</span> </span>&#123;</span><br><span class="line">        ErrorPage[] errorPages = <span class="keyword">new</span> ErrorPage[<span class="number">2</span>];</span><br><span class="line">        errorPages[<span class="number">0</span>] = <span class="keyword">new</span> ErrorPage(HttpStatus.NOT_FOUND, <span class="string">&quot;/404.html&quot;</span>);</span><br><span class="line">        errorPages[<span class="number">1</span>] = <span class="keyword">new</span> ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, <span class="string">&quot;/500.html&quot;</span>);</span><br><span class="line"> </span><br><span class="line">        registry.addErrorPages(errorPages);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="第二种写法"><a href="#第二种写法" class="headerlink" title="第二种写法"></a>第二种写法</h3><p>Spring Boot2.0 之后的写法，404.html文件放在resources的static文件夹中</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorPageConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> WebServerFactoryCustomizer <span class="title">webServerFactoryCustomizer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//第二种写法：java8 lambda写法</span></span><br><span class="line">        <span class="keyword">return</span> (factory -&gt; &#123;</span><br><span class="line">            ErrorPage errorPage404 = <span class="keyword">new</span> ErrorPage(HttpStatus.NOT_FOUND, <span class="string">&quot;/404.html&quot;</span>);</span><br><span class="line">            factory.addErrorPages(errorPage404);</span><br><span class="line">        &#125;);</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Spring Boot</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Spring Boot</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Maven找依赖包或下载jar包</title>
     <url>/139.html</url>
     <content><![CDATA[<h3 id="进入网站"><a href="#进入网站" class="headerlink" title="进入网站"></a>进入网站</h3><p><a href="https://mvnrepository.com/">https://mvnrepository.com/</a></p>
@@ -1324,6 +1306,24 @@
       </categories>
       <tags>
         <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring Boot2.0实现自定义404页面渲染</title>
+    <url>/14.html</url>
+    <content><![CDATA[<h3 id="第一种写法"><a href="#第一种写法" class="headerlink" title="第一种写法"></a>第一种写法</h3><p>实现ErrorPageRegistrar，404.html放在项目的webapp文件夹中</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorPageConfig</span> <span class="keyword">implements</span> <span class="title">ErrorPageRegistrar</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">registerErrorPages</span><span class="params">(ErrorPageRegistry registry)</span> </span>&#123;</span><br><span class="line">        ErrorPage[] errorPages = <span class="keyword">new</span> ErrorPage[<span class="number">2</span>];</span><br><span class="line">        errorPages[<span class="number">0</span>] = <span class="keyword">new</span> ErrorPage(HttpStatus.NOT_FOUND, <span class="string">&quot;/404.html&quot;</span>);</span><br><span class="line">        errorPages[<span class="number">1</span>] = <span class="keyword">new</span> ErrorPage(HttpStatus.INTERNAL_SERVER_ERROR, <span class="string">&quot;/500.html&quot;</span>);</span><br><span class="line"> </span><br><span class="line">        registry.addErrorPages(errorPages);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第二种写法"><a href="#第二种写法" class="headerlink" title="第二种写法"></a>第二种写法</h3><p>Spring Boot2.0 之后的写法，404.html文件放在resources的static文件夹中</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ErrorPageConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> WebServerFactoryCustomizer <span class="title">webServerFactoryCustomizer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//第二种写法：java8 lambda写法</span></span><br><span class="line">        <span class="keyword">return</span> (factory -&gt; &#123;</span><br><span class="line">            ErrorPage errorPage404 = <span class="keyword">new</span> ErrorPage(HttpStatus.NOT_FOUND, <span class="string">&quot;/404.html&quot;</span>);</span><br><span class="line">            factory.addErrorPages(errorPage404);</span><br><span class="line">        &#125;);</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
       </tags>
   </entry>
   <entry>
@@ -1657,6 +1657,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Windows10系统定时关机cmd命令</title>
+    <url>/15.html</url>
+    <content><![CDATA[<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a><strong>定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 7200</span><br></pre></td></tr></table></figure>
+
+<p>最后面的数字为秒,一小时等于 3600 秒</p>
+<h3 id="取消定时关机"><a href="#取消定时关机" class="headerlink" title="取消定时关机"></a><strong>取消定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown /a</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>Windows系统</tag>
+        <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>查看CentOS7的IP</title>
     <url>/149.html</url>
     <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
@@ -1674,23 +1691,6 @@
       </categories>
       <tags>
         <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows10系统定时关机cmd命令</title>
-    <url>/15.html</url>
-    <content><![CDATA[<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a><strong>定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 7200</span><br></pre></td></tr></table></figure>
-
-<p>最后面的数字为秒,一小时等于 3600 秒</p>
-<h3 id="取消定时关机"><a href="#取消定时关机" class="headerlink" title="取消定时关机"></a><strong>取消定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown /a</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>Windows系统</tag>
-        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
@@ -2149,21 +2149,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一个Tomcat部署多个项目以及配置域名</title>
-    <url>/16.html</url>
-    <content><![CDATA[<p>首先找到服务器Tomcat的server.xml配置，然后在原来的基础上，多复制一份Host节点，然后 name 改成我们需要设置的域名以及Context节点对应好项目路径即可</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Host</span> <span class="attr">name</span>=<span class="string">&quot;jxc.zoutl.cn&quot;</span>  <span class="attr">appBase</span>=<span class="string">&quot;webapps&quot;</span> <span class="attr">unpackWARs</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;/home/tomcat9/apache-tomcat-9.0.46/webapps/JXC&quot;</span> <span class="attr">debug</span>=<span class="string">&quot;0&quot;</span> <span class="attr">reloadable</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- SingleSignOn valve, share authentication between web applications Documentation at: /docs/config/valve.html --&gt;</span></span><br><span class="line">     <span class="comment">&lt;!--&lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;--&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- Access log processes all example. Documentation at: /docs/config/valve.html <span class="doctag">Note:</span> The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">&quot;org.apache.catalina.valves.AccessLogValve&quot;</span> <span class="attr">directory</span>=<span class="string">&quot;logs&quot;</span> <span class="attr">prefix</span>=<span class="string">&quot;localhost_access_log&quot;</span> <span class="attr">suffix</span>=<span class="string">&quot;.txt&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;%h %l %u %t <span class="symbol">&amp;quot;</span>%r<span class="symbol">&amp;quot;</span> %s %b&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201011181925.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Tomcat</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CentOS7安装Redis</title>
     <url>/160.html</url>
     <content><![CDATA[<h3 id="安装gcc"><a href="#安装gcc" class="headerlink" title="安装gcc"></a>安装gcc</h3><p>gcc编译c的，因为redis是c编写的，所以我们先安装下gcc</p>
@@ -2218,6 +2203,21 @@
       <tags>
         <tag>CentOS7</tag>
         <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一个Tomcat部署多个项目以及配置域名</title>
+    <url>/16.html</url>
+    <content><![CDATA[<p>首先找到服务器Tomcat的server.xml配置，然后在原来的基础上，多复制一份Host节点，然后 name 改成我们需要设置的域名以及Context节点对应好项目路径即可</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Host</span> <span class="attr">name</span>=<span class="string">&quot;jxc.zoutl.cn&quot;</span>  <span class="attr">appBase</span>=<span class="string">&quot;webapps&quot;</span> <span class="attr">unpackWARs</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;/home/tomcat9/apache-tomcat-9.0.46/webapps/JXC&quot;</span> <span class="attr">debug</span>=<span class="string">&quot;0&quot;</span> <span class="attr">reloadable</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- SingleSignOn valve, share authentication between web applications Documentation at: /docs/config/valve.html --&gt;</span></span><br><span class="line">     <span class="comment">&lt;!--&lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;--&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- Access log processes all example. Documentation at: /docs/config/valve.html <span class="doctag">Note:</span> The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">&quot;org.apache.catalina.valves.AccessLogValve&quot;</span> <span class="attr">directory</span>=<span class="string">&quot;logs&quot;</span> <span class="attr">prefix</span>=<span class="string">&quot;localhost_access_log&quot;</span> <span class="attr">suffix</span>=<span class="string">&quot;.txt&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;%h %l %u %t <span class="symbol">&amp;quot;</span>%r<span class="symbol">&amp;quot;</span> %s %b&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201011181925.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Tomcat</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -2337,55 +2337,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Redis字符串</title>
-    <url>/164.html</url>
-    <content><![CDATA[<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>获取指定key的值</p>
-<p><font color="#dd0000">get key</font></p>
-<p>127.0.0.1:6379&gt; get name<br>“ledao”</p>
-<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>设置指定key的值（如果key不存在就新建并复制，存在则值覆盖）</p>
-<p><font color="#dd0000">set key 值</font></p>
-<p>127.0.0.1:6379&gt; <code>set name ledao</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao”<br>127.0.0.1:6379&gt; <code>set name ledao333</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao333”</p>
-<h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><p>删除指定key，删除一个或多个</p>
-<p><font color="#dd0000">del key1 key2 …</font></p>
-<p>127.0.0.1:6379&gt; <code>get num</code><br>“1”<br>127.0.0.1:6379&gt; <code>del num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>(nil)</p>
-<h3 id="getrange"><a href="#getrange" class="headerlink" title="getrange"></a>getrange</h3><p>返回 key 中字符串值的子字符（包括头包括尾，下标从0开始计算）</p>
-<p><font color="#dd0000">getrange key 开始位置 结束位置</font></p>
-<p>127.0.0.1:6379&gt; <code>set name ledao333</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao333”<br>127.0.0.1:6379&gt; <code>getrange name 0 1</code><br>“le”</p>
-<h3 id="getset"><a href="#getset" class="headerlink" title="getset"></a>getset</h3><p>设置给定 key 的值，并返回 key 的旧值</p>
-<p><font color="#dd0000">getset key 值</font></p>
-<p>127.0.0.1:6379&gt; <code>getset name LeDao</code><br>“ledao333”<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”</p>
-<h3 id="setnx"><a href="#setnx" class="headerlink" title="setnx"></a>setnx</h3><p>只有在 key 不存在时设置 key 的值</p>
-<p><font color="#dd0000">setnx key 值</font></p>
-<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>setnx name ledao</code><br>(integer) 0<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”</p>
-<h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h3><p>返回 key 所储存的字符串值的长度</p>
-<p><font color="#dd0000">strlen key</font></p>
-<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>strlen name</code><br>(integer) 5</p>
-<h3 id="mset"><a href="#mset" class="headerlink" title="mset"></a>mset</h3><p>同时设置一个或多个 key-value 对</p>
-<p><font color="#dd0000">mset key1 值 key2 值 …</font></p>
-<p>127.0.0.1:6379&gt; <code>mset name1 ledao1 name2 ledao2</code><br>OK<br>127.0.0.1:6379&gt; <code>get name1</code><br>“ledao1”<br>127.0.0.1:6379&gt; <code>get name2</code><br>“ledao2”</p>
-<h3 id="incr"><a href="#incr" class="headerlink" title="incr"></a>incr</h3><p>将 key 中储存的数字值增一</p>
-<p><font color="#dd0000">incr key</font></p>
-<p>127.0.0.1:6379&gt; <code>set num 0</code><br>OK<br>127.0.0.1:6379&gt; <code>get num</code><br>“0”<br>127.0.0.1:6379&gt; <code>incr num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>“1”</p>
-<h3 id="decr"><a href="#decr" class="headerlink" title="decr"></a>decr</h3><p>将 key 中储存的数字值减一</p>
-<p><font color="#dd0000">decr key</font></p>
-<p>127.0.0.1:6379&gt; <code>get num</code><br>“2”<br>127.0.0.1:6379&gt; <code>decr num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>“1”</p>
-<h3 id="append"><a href="#append" class="headerlink" title="append"></a>append</h3><p>如果 key 已经存在并且是一个字符串， APPEND 命令将指定的 value 追加到该 key 原来值（value）的末尾，如果不存在就相当于set key value</p>
-<p><font color="#dd0000">append key 值</font></p>
-<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>append name 666</code><br>(integer) 8<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao666”<br>127.0.0.1:6379&gt; <code>get name4</code><br>(nil)<br>127.0.0.1:6379&gt; <code>append name4 666</code><br>(integer) 3<br>127.0.0.1:6379&gt; <code>get name4</code><br>“666”</p>
-<h3 id="Java代码："><a href="#Java代码：" class="headerlink" title="Java代码："></a>Java代码：</h3><p>请先设置Redis的连接密码，查看博客：<a href="https://blog.zoutl.cn/161.html">实现Jedis连接 | LeDao的博客 (zoutl.cn)</a> ，在第4点的第②小点</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        jedis.set(<span class="string">&quot;LeDao的博客&quot;</span>, <span class="string">&quot;http://www.zoutl.cn&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;LeDao的博客网址：&quot;</span>+jedis.get(<span class="string">&quot;LeDao的博客&quot;</span>));</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620110136.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多命令：<a href="https://www.runoob.com/redis/redis-strings.html">https://www.runoob.com/redis/redis-strings.html</a></p>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Redis keys命令</title>
     <url>/165.html</url>
     <content><![CDATA[<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>获取指定 key 的值</p>
@@ -2493,6 +2444,55 @@
 <p>在某元素之前插入一个元素（在某元素之后插入一个元素只要将before修改为after即可）</p>
 <p><font color="#dd0000">linsert key before 某元素 插入的元素</font></p>
 <p>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”1”<br>5)”2”<br>6)”3”<br>127.0.0.1:6379&gt; <code>linsert l2 before 1 0</code><br>(integer) 7<br>127.0.0.1:6379&gt; <code>lrange l2 0 -1</code><br>1)”b1”<br>2)”c”<br>3)”d”<br>4)”0”<br>5)”1”<br>6)”2”<br>7)”3”</p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis字符串</title>
+    <url>/164.html</url>
+    <content><![CDATA[<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>获取指定key的值</p>
+<p><font color="#dd0000">get key</font></p>
+<p>127.0.0.1:6379&gt; get name<br>“ledao”</p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>设置指定key的值（如果key不存在就新建并复制，存在则值覆盖）</p>
+<p><font color="#dd0000">set key 值</font></p>
+<p>127.0.0.1:6379&gt; <code>set name ledao</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao”<br>127.0.0.1:6379&gt; <code>set name ledao333</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao333”</p>
+<h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><p>删除指定key，删除一个或多个</p>
+<p><font color="#dd0000">del key1 key2 …</font></p>
+<p>127.0.0.1:6379&gt; <code>get num</code><br>“1”<br>127.0.0.1:6379&gt; <code>del num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>(nil)</p>
+<h3 id="getrange"><a href="#getrange" class="headerlink" title="getrange"></a>getrange</h3><p>返回 key 中字符串值的子字符（包括头包括尾，下标从0开始计算）</p>
+<p><font color="#dd0000">getrange key 开始位置 结束位置</font></p>
+<p>127.0.0.1:6379&gt; <code>set name ledao333</code><br>OK<br>127.0.0.1:6379&gt; <code>get name</code><br>“ledao333”<br>127.0.0.1:6379&gt; <code>getrange name 0 1</code><br>“le”</p>
+<h3 id="getset"><a href="#getset" class="headerlink" title="getset"></a>getset</h3><p>设置给定 key 的值，并返回 key 的旧值</p>
+<p><font color="#dd0000">getset key 值</font></p>
+<p>127.0.0.1:6379&gt; <code>getset name LeDao</code><br>“ledao333”<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”</p>
+<h3 id="setnx"><a href="#setnx" class="headerlink" title="setnx"></a>setnx</h3><p>只有在 key 不存在时设置 key 的值</p>
+<p><font color="#dd0000">setnx key 值</font></p>
+<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>setnx name ledao</code><br>(integer) 0<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”</p>
+<h3 id="strlen"><a href="#strlen" class="headerlink" title="strlen"></a>strlen</h3><p>返回 key 所储存的字符串值的长度</p>
+<p><font color="#dd0000">strlen key</font></p>
+<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>strlen name</code><br>(integer) 5</p>
+<h3 id="mset"><a href="#mset" class="headerlink" title="mset"></a>mset</h3><p>同时设置一个或多个 key-value 对</p>
+<p><font color="#dd0000">mset key1 值 key2 值 …</font></p>
+<p>127.0.0.1:6379&gt; <code>mset name1 ledao1 name2 ledao2</code><br>OK<br>127.0.0.1:6379&gt; <code>get name1</code><br>“ledao1”<br>127.0.0.1:6379&gt; <code>get name2</code><br>“ledao2”</p>
+<h3 id="incr"><a href="#incr" class="headerlink" title="incr"></a>incr</h3><p>将 key 中储存的数字值增一</p>
+<p><font color="#dd0000">incr key</font></p>
+<p>127.0.0.1:6379&gt; <code>set num 0</code><br>OK<br>127.0.0.1:6379&gt; <code>get num</code><br>“0”<br>127.0.0.1:6379&gt; <code>incr num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>“1”</p>
+<h3 id="decr"><a href="#decr" class="headerlink" title="decr"></a>decr</h3><p>将 key 中储存的数字值减一</p>
+<p><font color="#dd0000">decr key</font></p>
+<p>127.0.0.1:6379&gt; <code>get num</code><br>“2”<br>127.0.0.1:6379&gt; <code>decr num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>“1”</p>
+<h3 id="append"><a href="#append" class="headerlink" title="append"></a>append</h3><p>如果 key 已经存在并且是一个字符串， APPEND 命令将指定的 value 追加到该 key 原来值（value）的末尾，如果不存在就相当于set key value</p>
+<p><font color="#dd0000">append key 值</font></p>
+<p>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao”<br>127.0.0.1:6379&gt; <code>append name 666</code><br>(integer) 8<br>127.0.0.1:6379&gt; <code>get name</code><br>“LeDao666”<br>127.0.0.1:6379&gt; <code>get name4</code><br>(nil)<br>127.0.0.1:6379&gt; <code>append name4 666</code><br>(integer) 3<br>127.0.0.1:6379&gt; <code>get name4</code><br>“666”</p>
+<h3 id="Java代码："><a href="#Java代码：" class="headerlink" title="Java代码："></a>Java代码：</h3><p>请先设置Redis的连接密码，查看博客：<a href="https://blog.zoutl.cn/161.html">实现Jedis连接 | LeDao的博客 (zoutl.cn)</a> ，在第4点的第②小点</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        jedis.set(<span class="string">&quot;LeDao的博客&quot;</span>, <span class="string">&quot;http://www.zoutl.cn&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;LeDao的博客网址：&quot;</span>+jedis.get(<span class="string">&quot;LeDao的博客&quot;</span>));</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620110136.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多命令：<a href="https://www.runoob.com/redis/redis-strings.html">https://www.runoob.com/redis/redis-strings.html</a></p>
 ]]></content>
       <categories>
         <category>Redis</category>
@@ -2654,6 +2654,27 @@
       </tags>
   </entry>
   <entry>
+    <title>图片压缩</title>
+    <url>/172.html</url>
+    <content><![CDATA[<h3 id="为什么要图片压缩？"><a href="#为什么要图片压缩？" class="headerlink" title="为什么要图片压缩？"></a>为什么要图片压缩？</h3><p>使用更少的带宽，可以加快网站加载速度</p>
+<h3 id="tinypng"><a href="#tinypng" class="headerlink" title="tinypng"></a>tinypng</h3><h4 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h4><p><a href="https://tinypng.com/">https://tinypng.com/</a></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>点击虚线框可以选择要压缩的图片，或将图片（最多20张）拖到虚线框</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621130101.jpg" alt="img"></p>
+<p>压缩成功，点击下载按钮即可下载到本地</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621130113.jpg" alt="img"></p>
+<h3 id="squoosh"><a href="#squoosh" class="headerlink" title="squoosh"></a>squoosh</h3><h4 id="网站地址-1"><a href="#网站地址-1" class="headerlink" title="网站地址"></a>网站地址</h4><p><a href="https://squoosh.app/">https://squoosh.app/</a> </p>
+<p>可以安装到电脑上，下载地址：<a href="https://squoosh-desktop.vercel.app/#download">https://squoosh-desktop.vercel.app/#download</a></p>
+<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><p>上传图片后会自动压缩，点击下载按钮即可下载到本地</p>
+<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>squoosh更加方便，squoosh压缩后下载的是图片，tinypng下载的是图片的压缩包还要解压一下；squoosh还可以安装到电脑上，不需要打开浏览器</p>
+]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>其它</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Log4j</title>
     <url>/171.html</url>
     <content><![CDATA[<h3 id="引入Log4j依赖"><a href="#引入Log4j依赖" class="headerlink" title="引入Log4j依赖"></a>引入Log4j依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -2674,27 +2695,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>图片压缩</title>
-    <url>/172.html</url>
-    <content><![CDATA[<h3 id="为什么要图片压缩？"><a href="#为什么要图片压缩？" class="headerlink" title="为什么要图片压缩？"></a>为什么要图片压缩？</h3><p>使用更少的带宽，可以加快网站加载速度</p>
-<h3 id="tinypng"><a href="#tinypng" class="headerlink" title="tinypng"></a>tinypng</h3><h4 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h4><p><a href="https://tinypng.com/">https://tinypng.com/</a></p>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>点击虚线框可以选择要压缩的图片，或将图片（最多20张）拖到虚线框</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621130101.jpg" alt="img"></p>
-<p>压缩成功，点击下载按钮即可下载到本地</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621130113.jpg" alt="img"></p>
-<h3 id="squoosh"><a href="#squoosh" class="headerlink" title="squoosh"></a>squoosh</h3><h4 id="网站地址-1"><a href="#网站地址-1" class="headerlink" title="网站地址"></a>网站地址</h4><p><a href="https://squoosh.app/">https://squoosh.app/</a> </p>
-<p>可以安装到电脑上，下载地址：<a href="https://squoosh-desktop.vercel.app/#download">https://squoosh-desktop.vercel.app/#download</a></p>
-<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><p>上传图片后会自动压缩，点击下载按钮即可下载到本地</p>
-<h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><p>squoosh更加方便，squoosh压缩后下载的是图片，tinypng下载的是图片的压缩包还要解压一下；squoosh还可以安装到电脑上，不需要打开浏览器</p>
-]]></content>
-      <categories>
-        <category>其它</category>
-      </categories>
-      <tags>
-        <tag>其它</tag>
       </tags>
   </entry>
   <entry>
@@ -3029,6 +3029,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue.js计算属性</title>
+    <url>/184.html</url>
+    <content><![CDATA[<p>计算属性关键词: computed</p>
+<p>计算属性在处理一些复杂逻辑时是很有用的，在一个计算属性里可以完成各种复杂的逻辑，包括运算、函数调用等，只要最终返回一个结果就可以</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>计算X1²+X2²-2X1+3X2,其中X1=&#123;&#123;X1&#125;&#125;,X2=&#123;&#123;X2&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;X1&#125;&#125; * &#123;&#123;X1&#125;&#125; + &#123;&#123;X2&#125;&#125; * &#123;&#123;X2&#125;&#125; - 2 * &#123;&#123;X1&#125;&#125; + 3 * &#123;&#123;X2&#125;&#125;=<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;calculate&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    输入X1:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;X1&quot;</span>&gt;</span>，</span><br><span class="line">    输入X2:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;X2&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">X1</span>: <span class="number">5</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">X2</span>: <span class="number">3</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">computed</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">calculate</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="built_in">this</span>.X1 * <span class="built_in">this</span>.X1 + <span class="built_in">this</span>.X2 * <span class="built_in">this</span>.X2 - <span class="number">2</span> * <span class="built_in">this</span>.X1 + <span class="number">3</span> * <span class="built_in">this</span>.X2;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在输入框改变值，结果也会随之改变</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624231847.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue.js循环语句</title>
     <url>/183.html</url>
     <content><![CDATA[<p>循环使用 v-for 指令</p>
@@ -3043,23 +3060,6 @@
 <h3 id="迭代整数"><a href="#迭代整数" class="headerlink" title="迭代整数"></a>迭代整数</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>遍历1到<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-for</span>=<span class="string">&quot;n in num&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;n&lt;num&quot;</span>&gt;</span>&#123;&#123;n&#125;&#125;，<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-else</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>:&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">num</span>:<span class="number">33</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624144827.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue.js计算属性</title>
-    <url>/184.html</url>
-    <content><![CDATA[<p>计算属性关键词: computed</p>
-<p>计算属性在处理一些复杂逻辑时是很有用的，在一个计算属性里可以完成各种复杂的逻辑，包括运算、函数调用等，只要最终返回一个结果就可以</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>计算X1²+X2²-2X1+3X2,其中X1=&#123;&#123;X1&#125;&#125;,X2=&#123;&#123;X2&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;X1&#125;&#125; * &#123;&#123;X1&#125;&#125; + &#123;&#123;X2&#125;&#125; * &#123;&#123;X2&#125;&#125; - 2 * &#123;&#123;X1&#125;&#125; + 3 * &#123;&#123;X2&#125;&#125;=<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;calculate&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    输入X1:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;X1&quot;</span>&gt;</span>，</span><br><span class="line">    输入X2:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;X2&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">X1</span>: <span class="number">5</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">X2</span>: <span class="number">3</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">computed</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">calculate</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> <span class="built_in">this</span>.X1 * <span class="built_in">this</span>.X1 + <span class="built_in">this</span>.X2 * <span class="built_in">this</span>.X2 - <span class="number">2</span> * <span class="built_in">this</span>.X1 + <span class="number">3</span> * <span class="built_in">this</span>.X2;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>在输入框改变值，结果也会随之改变</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624231847.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Vue.js</category>
@@ -3435,6 +3435,26 @@
       </tags>
   </entry>
   <entry>
+    <title>安装vue-cli脚手架</title>
+    <url>/200.html</url>
+    <content><![CDATA[<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>官网：<a href="https://nodejs.org/">https://nodejs.org</a></p>
+<p>下载第一个稳定版本，点击安装文件一直下一步即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
+<p>检验是否安装成功，分别输入命令<code>node --version</code>，<code>npm -v</code>都可以看到版本号说明Node.js安装完成</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
+<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h3><p>打开CMD，输入命令：<code>npm install -g vue-cli@2.9.6</code>，运行</p>
+<p>等待安装完成，输入命令：<code>vue -V</code>，看到版本号说明脚手架安装完成</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>进制</title>
     <url>/20.html</url>
     <content><![CDATA[<h3 id="十进制"><a href="#十进制" class="headerlink" title="十进制"></a>十进制</h3><p>我们平时所有的数字就是十进制</p>
@@ -3467,26 +3487,6 @@
       </categories>
       <tags>
         <tag>其它</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>安装vue-cli脚手架</title>
-    <url>/200.html</url>
-    <content><![CDATA[<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>官网：<a href="https://nodejs.org/">https://nodejs.org</a></p>
-<p>下载第一个稳定版本，点击安装文件一直下一步即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143355.jpg" alt="img"></p>
-<p>检验是否安装成功，分别输入命令<code>node --version</code>，<code>npm -v</code>都可以看到版本号说明Node.js安装完成</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143404.jpg" alt="img"></p>
-<h3 id="安装vue-cli脚手架"><a href="#安装vue-cli脚手架" class="headerlink" title="安装vue-cli脚手架"></a>安装vue-cli脚手架</h3><p>打开CMD，输入命令：<code>npm install -g vue-cli@2.9.6</code>，运行</p>
-<p>等待安装完成，输入命令：<code>vue -V</code>，看到版本号说明脚手架安装完成</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626143413.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-        <tag>Node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -3791,6 +3791,26 @@
       </tags>
   </entry>
   <entry>
+    <title>cmd命令运行一个Java文件</title>
+    <url>/210.html</url>
+    <content><![CDATA[<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><p>名称为HelloWorld.java</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Hello World!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用javac命令"><a href="#使用javac命令" class="headerlink" title="使用javac命令"></a>使用javac命令</h3><p>将.java文件编译成.class字节码文件</p>
+<p>javac HelloWorld.java</p>
+<h3 id="使用java命令"><a href="#使用java命令" class="headerlink" title="使用java命令"></a>使用java命令</h3><p>运行一个已编译的Java程序，参数是类名</p>
+<p>java HelloWorld</p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210707092300.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>idea将Spring Boot项目打包成war包</title>
     <url>/21.html</url>
     <content><![CDATA[<h3 id="修改pom-xml文件"><a href="#修改pom-xml文件" class="headerlink" title="修改pom.xml文件"></a>修改pom.xml文件</h3><h4 id="修改打包方式"><a href="#修改打包方式" class="headerlink" title="修改打包方式"></a>修改打包方式</h4><p>修改pom.xml的packaging节点改 war</p>
@@ -3815,26 +3835,6 @@
       <tags>
         <tag>Spring Boot</tag>
         <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>cmd命令运行一个Java文件</title>
-    <url>/210.html</url>
-    <content><![CDATA[<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><p>名称为HelloWorld.java</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Hello World!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用javac命令"><a href="#使用javac命令" class="headerlink" title="使用javac命令"></a>使用javac命令</h3><p>将.java文件编译成.class字节码文件</p>
-<p>javac HelloWorld.java</p>
-<h3 id="使用java命令"><a href="#使用java命令" class="headerlink" title="使用java命令"></a>使用java命令</h3><p>运行一个已编译的Java程序，参数是类名</p>
-<p>java HelloWorld</p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210707092300.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
@@ -4065,6 +4065,25 @@
       </tags>
   </entry>
   <entry>
+    <title>二分查找</title>
+    <url>/220.html</url>
+    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须采用<a href="https://baike.baidu.com/item/%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/1347176">顺序存储结构</a>，而且表中元素按关键字有序排列。</p>
+<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><p>1、必须采用顺序存储结构</p>
+<p>2、必须按关键字大小有序排列</p>
+<h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>二分查找的基本思想是将n个元素分成大致相等的两部分，取a[n/2]与x做比较，如果x=a[n/2],则找到x,算法中止；如果x&lt;a[n/2],则只要在数组a的左半部分继续搜索x,如果x&gt;a[n/2],则只要在数组a的右半部搜索x</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> result = -<span class="number">1</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入你要查找的数：&quot;</span>);</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> num = sc.nextInt();</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = arr.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (start &lt;= end) &#123;</span><br><span class="line">            index++;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            System.out.println(<span class="string">&quot;第&quot;</span> + index + <span class="string">&quot;次: start=&quot;</span> + start + <span class="string">&quot;,end=&quot;</span> + end + <span class="string">&quot;,mid=&quot;</span> + mid);</span><br><span class="line">            <span class="keyword">if</span> (num &lt; arr[mid]) &#123;</span><br><span class="line">                end = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; num) &#123;</span><br><span class="line">                start = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                result = mid;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (result == -<span class="number">1</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;你要查找的数不存在！！&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;循环执行了&quot;</span> + index + <span class="string">&quot;次&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;你要查找的数的数组下标为：&quot;</span> + result);</span><br><span class="line">            System.out.println(<span class="string">&quot;循环执行了&quot;</span> + index + <span class="string">&quot;次&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721001613.jpg" alt="img"> <img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721001623.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>idea Maven工具栏按钮的作用</title>
     <url>/22.html</url>
     <content><![CDATA[<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201016002833.jpg" alt="img"></p>
@@ -4085,25 +4104,6 @@
       <tags>
         <tag>Maven</tag>
         <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二分查找</title>
-    <url>/220.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须采用<a href="https://baike.baidu.com/item/%E9%A1%BA%E5%BA%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/1347176">顺序存储结构</a>，而且表中元素按关键字有序排列。</p>
-<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><p>1、必须采用顺序存储结构</p>
-<p>2、必须按关键字大小有序排列</p>
-<h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>二分查找的基本思想是将n个元素分成大致相等的两部分，取a[n/2]与x做比较，如果x=a[n/2],则找到x,算法中止；如果x&lt;a[n/2],则只要在数组a的左半部分继续搜索x,如果x&gt;a[n/2],则只要在数组a的右半部搜索x</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> result = -<span class="number">1</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;输入你要查找的数：&quot;</span>);</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> num = sc.nextInt();</span><br><span class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = arr.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (start &lt;= end) &#123;</span><br><span class="line">            index++;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            System.out.println(<span class="string">&quot;第&quot;</span> + index + <span class="string">&quot;次: start=&quot;</span> + start + <span class="string">&quot;,end=&quot;</span> + end + <span class="string">&quot;,mid=&quot;</span> + mid);</span><br><span class="line">            <span class="keyword">if</span> (num &lt; arr[mid]) &#123;</span><br><span class="line">                end = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (arr[mid] &lt; num) &#123;</span><br><span class="line">                start = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                result = mid;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (result == -<span class="number">1</span>) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;你要查找的数不存在！！&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;循环执行了&quot;</span> + index + <span class="string">&quot;次&quot;</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;你要查找的数的数组下标为：&quot;</span> + result);</span><br><span class="line">            System.out.println(<span class="string">&quot;循环执行了&quot;</span> + index + <span class="string">&quot;次&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721001613.jpg" alt="img"> <img src="https://image.zoutl.cn/hexo-blog/blogImage/20210721001623.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -4711,6 +4711,27 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo next开启本地搜索</title>
+    <url>/241.html</url>
+    <content><![CDATA[<h3 id="安装本地搜索插件"><a href="#安装本地搜索插件" class="headerlink" title="安装本地搜索插件"></a>安装本地搜索插件</h3><p>插件名称为：hexo-generator-search</p>
+<p>安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改next主题配置-config-yml"><a href="#修改next主题配置-config-yml" class="headerlink" title="修改next主题配置_config.yml"></a>修改next主题配置_config.yml</h3><p>修改local_search的enable为true，代表启用本地搜索</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">6</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="在根目录的-config-yml中添加以下内容"><a href="#在根目录的-config-yml中添加以下内容" class="headerlink" title="在根目录的_config.yml中添加以下内容"></a>在根目录的_config.yml中添加以下内容</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#本地搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+
+<p>重新部署网站后就可以使用本地搜索功能了</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo常用命令</title>
     <url>/242.html</url>
     <content><![CDATA[<h3 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h3><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p>
@@ -4756,27 +4777,6 @@
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="string">主页:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="string">标签:</span> <span class="string">/tags</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="comment">#日期: /time/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20132524.png"></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo next开启本地搜索</title>
-    <url>/241.html</url>
-    <content><![CDATA[<h3 id="安装本地搜索插件"><a href="#安装本地搜索插件" class="headerlink" title="安装本地搜索插件"></a>安装本地搜索插件</h3><p>插件名称为：hexo-generator-search</p>
-<p>安装命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改next主题配置-config-yml"><a href="#修改next主题配置-config-yml" class="headerlink" title="修改next主题配置_config.yml"></a>修改next主题配置_config.yml</h3><p>修改local_search的enable为true，代表启用本地搜索</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">6</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="在根目录的-config-yml中添加以下内容"><a href="#在根目录的-config-yml中添加以下内容" class="headerlink" title="在根目录的_config.yml中添加以下内容"></a>在根目录的_config.yml中添加以下内容</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#本地搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-
-<p>重新部署网站后就可以使用本地搜索功能了</p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -5711,6 +5711,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Hystrix修改默认超时时间</title>
+    <url>/275.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Hystrix的默认超时时间是1秒，有时候正常请求响应的时间就超过了1秒，所以1秒钟并不能满足日常的开发需求，需要根据实际情况设置超时时间</p>
+<h3 id="源码位置"><a href="#源码位置" class="headerlink" title="源码位置"></a>源码位置</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer default_executionTimeoutInMilliseconds = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20005052.png" alt="img"></p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>在application.yml中添加下面配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hystrix:</span> </span><br><span class="line">  <span class="attr">command:</span> </span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">      <span class="attr">execution:</span> </span><br><span class="line">        <span class="attr">isolation:</span> </span><br><span class="line">          <span class="attr">thread:</span> </span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure>
+
+<p>数值的单位为毫秒，1000毫秒==1秒</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
+<p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
+<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Hystrix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Hystrix断路器</title>
     <url>/274.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>hystrix对应的中文名字是“豪猪”，豪猪周身长满了刺，能保护自己不受天敌的伤害，代表了一种防御机制，这与hystrix本身的功能不谋而合，因此Netflix团队将该框架命名为Hystrix，并使用了对应的卡通形象做作为logo。</p>
@@ -5746,29 +5769,6 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043656.png" alt="img"></p>
 <p>注释掉Thread.sleep(2000)时不会超时，返回200 业务数据，如下图：</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-14%20043727.png" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-        <tag>Hystrix</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hystrix修改默认超时时间</title>
-    <url>/275.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Hystrix的默认超时时间是1秒，有时候正常请求响应的时间就超过了1秒，所以1秒钟并不能满足日常的开发需求，需要根据实际情况设置超时时间</p>
-<h3 id="源码位置"><a href="#源码位置" class="headerlink" title="源码位置"></a>源码位置</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer default_executionTimeoutInMilliseconds = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20005052.png" alt="img"></p>
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>在application.yml中添加下面配置：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hystrix:</span> </span><br><span class="line">  <span class="attr">command:</span> </span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">      <span class="attr">execution:</span> </span><br><span class="line">        <span class="attr">isolation:</span> </span><br><span class="line">          <span class="attr">thread:</span> </span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure>
-
-<p>数值的单位为毫秒，1000毫秒==1秒</p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
-<p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
-<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>
 ]]></content>
       <categories>
         <category>Spring Cloud</category>
@@ -6045,30 +6045,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Zuul路由映射规则配置</title>
-    <url>/283.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>默认路由请求地址，很容易暴露接口细节，可以通过配置映射规则来提高服务的安全性</p>
-<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在application.yml中添加以下配置</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br></pre></td></tr></table></figure>
-
-<p>现在可以通过 <a href="http://zuul.ledao.com:3001/studentServer/student/list">http://zuul.ledao.com:3001/studentServer/student/list</a> 访问了</p>
-<p>但是也可以通过 <a href="http://zuul.ledao.com:3001/microservice-student/student/list">http://zuul.ledao.com:3001/microservice-student/student/list</a> 访问，这样是不安全的，如果要忽略microservice-student服务就添加配置：ignored-services: “microservice-student”，如果要忽略所有的服务名称则修改为：ignored-services: “*”，完整配置如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br><span class="line">  <span class="attr">ignored-services:</span> <span class="string">&quot;*&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>如果添加请求前缀，就添加配置：prefix: /ledao，<font color="#dd0000"><strong>最终配置</strong></font>如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Zuul路由配置</span></span><br><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br><span class="line">  <span class="attr">ignored-services:</span> <span class="string">&quot;*&quot;</span> <span class="comment">#忽略的服务</span></span><br><span class="line">  <span class="attr">prefix:</span> <span class="string">/ledao</span> <span class="comment">#前缀</span></span><br></pre></td></tr></table></figure>
-
-<p>现在只能通过 <a href="http://zuul.ledao.com:3001/ledao/studentServer/student/list">http://zuul.ledao.com:3001/ledao/studentServer/student/list</a> 访问，其它请求方式的结果都是404</p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-        <tag>Zuul</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Zuul请求过滤配置</title>
     <url>/284.html</url>
     <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>有时候系统的功能并不对外开放，所以在请求服务时可以过滤掉非法请求。Zuul通过ZuulFilter过滤器实现，每次经过Zuul服务网关，我们都对带来的token进行有效性验证，验证不通过就无法请求成功</p>
@@ -6146,6 +6122,30 @@
       </categories>
       <tags>
         <tag>Spring Cloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Zuul路由映射规则配置</title>
+    <url>/283.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>默认路由请求地址，很容易暴露接口细节，可以通过配置映射规则来提高服务的安全性</p>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><p>在application.yml中添加以下配置</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br></pre></td></tr></table></figure>
+
+<p>现在可以通过 <a href="http://zuul.ledao.com:3001/studentServer/student/list">http://zuul.ledao.com:3001/studentServer/student/list</a> 访问了</p>
+<p>但是也可以通过 <a href="http://zuul.ledao.com:3001/microservice-student/student/list">http://zuul.ledao.com:3001/microservice-student/student/list</a> 访问，这样是不安全的，如果要忽略microservice-student服务就添加配置：ignored-services: “microservice-student”，如果要忽略所有的服务名称则修改为：ignored-services: “*”，完整配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br><span class="line">  <span class="attr">ignored-services:</span> <span class="string">&quot;*&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果添加请求前缀，就添加配置：prefix: /ledao，<font color="#dd0000"><strong>最终配置</strong></font>如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Zuul路由配置</span></span><br><span class="line"><span class="attr">zuul:</span></span><br><span class="line">  <span class="attr">routes:</span></span><br><span class="line">    <span class="attr">studentServer.serviceId:</span> <span class="string">microservice-student</span> <span class="comment">#服务名称</span></span><br><span class="line">    <span class="attr">studentServer.path:</span> <span class="string">/studentServer/**</span> <span class="comment">#替代服务的路径</span></span><br><span class="line">  <span class="attr">ignored-services:</span> <span class="string">&quot;*&quot;</span> <span class="comment">#忽略的服务</span></span><br><span class="line">  <span class="attr">prefix:</span> <span class="string">/ledao</span> <span class="comment">#前缀</span></span><br></pre></td></tr></table></figure>
+
+<p>现在只能通过 <a href="http://zuul.ledao.com:3001/ledao/studentServer/student/list">http://zuul.ledao.com:3001/ledao/studentServer/student/list</a> 访问，其它请求方式的结果都是404</p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Zuul</tag>
       </tags>
   </entry>
   <entry>
@@ -7047,8 +7047,8 @@
         <category>Docker</category>
       </categories>
       <tags>
-        <tag>Tomcat</tag>
         <tag>Java</tag>
+        <tag>Tomcat</tag>
         <tag>Docker</tag>
       </tags>
   </entry>
@@ -11946,32 +11946,6 @@
       </tags>
   </entry>
   <entry>
-    <title>十大经典排序算法之快速排序</title>
-    <url>/42.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序</p>
-<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><p>快速排序使用分治法来把一个串（list）分为两个子串（sub-lists）。具体算法描述如下：</p>
-<ol>
-<li>从数列中挑出一个元素，称为 “基准”（pivot）</li>
-<li>重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作</li>
-<li>递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序</li>
-</ol>
-<h3 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a>动图演示</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022220112.jpg" alt="img"></p>
-<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><p>Java代码:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 快速排序</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">10</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">62</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">19</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        quickSort(arr, <span class="number">0</span>, arr.length-<span class="number">1</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;排序后:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j,temp,t;</span><br><span class="line">        <span class="keyword">if</span>(low&gt;high)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i=low;</span><br><span class="line">        j=high;</span><br><span class="line">        <span class="comment">//temp就是基准位</span></span><br><span class="line">        temp = arr[low];</span><br><span class="line">        <span class="keyword">while</span> (i&lt;j) &#123;</span><br><span class="line">            <span class="comment">//先看右边，依次往左递减</span></span><br><span class="line">            <span class="keyword">while</span> (temp&lt;=arr[j]&amp;&amp;i&lt;j) &#123;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//再看左边，依次往右递增</span></span><br><span class="line">            <span class="keyword">while</span> (temp&gt;=arr[i]&amp;&amp;i&lt;j) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//如果满足条件则交换</span></span><br><span class="line">            <span class="keyword">if</span> (i&lt;j) &#123;</span><br><span class="line">                t = arr[j];</span><br><span class="line">                arr[j] = arr[i];</span><br><span class="line">                arr[i] = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//最后将基准为与i和j相等位置的数字交换</span></span><br><span class="line">        arr[low] = arr[i];</span><br><span class="line">        arr[i] = temp;</span><br><span class="line">        <span class="comment">//递归调用左半数组</span></span><br><span class="line">        quickSort(arr, low, j-<span class="number">1</span>);</span><br><span class="line">        <span class="comment">//递归调用右半数组</span></span><br><span class="line">        quickSort(arr, j+<span class="number">1</span>, high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行结果:</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022220552.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>搬运地址: <a href="https://www.cnblogs.com/onepixel/p/7674659.html">十大经典排序算法（动图演示） - 一像素 - 博客园 (cnblogs.com)</a></p>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>校园二手交易平台</title>
     <url>/420.html</url>
     <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>x <!DOCTYPE html><html lang="zh-cn"><head>    <meta charset="UTF-8">    <title>title</title></head><body style="overflow-x: hidden">​</body></html>html</p>
@@ -12062,6 +12036,32 @@
       <tags>
         <tag>Java</tag>
         <tag>EasyUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十大经典排序算法之快速排序</title>
+    <url>/42.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序</p>
+<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><p>快速排序使用分治法来把一个串（list）分为两个子串（sub-lists）。具体算法描述如下：</p>
+<ol>
+<li>从数列中挑出一个元素，称为 “基准”（pivot）</li>
+<li>重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作</li>
+<li>递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序</li>
+</ol>
+<h3 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a>动图演示</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022220112.jpg" alt="img"></p>
+<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><p>Java代码:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 快速排序</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">10</span>,<span class="number">7</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">62</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">19</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        quickSort(arr, <span class="number">0</span>, arr.length-<span class="number">1</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;排序后:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i,j,temp,t;</span><br><span class="line">        <span class="keyword">if</span>(low&gt;high)&#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        i=low;</span><br><span class="line">        j=high;</span><br><span class="line">        <span class="comment">//temp就是基准位</span></span><br><span class="line">        temp = arr[low];</span><br><span class="line">        <span class="keyword">while</span> (i&lt;j) &#123;</span><br><span class="line">            <span class="comment">//先看右边，依次往左递减</span></span><br><span class="line">            <span class="keyword">while</span> (temp&lt;=arr[j]&amp;&amp;i&lt;j) &#123;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//再看左边，依次往右递增</span></span><br><span class="line">            <span class="keyword">while</span> (temp&gt;=arr[i]&amp;&amp;i&lt;j) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//如果满足条件则交换</span></span><br><span class="line">            <span class="keyword">if</span> (i&lt;j) &#123;</span><br><span class="line">                t = arr[j];</span><br><span class="line">                arr[j] = arr[i];</span><br><span class="line">                arr[i] = t;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//最后将基准为与i和j相等位置的数字交换</span></span><br><span class="line">        arr[low] = arr[i];</span><br><span class="line">        arr[i] = temp;</span><br><span class="line">        <span class="comment">//递归调用左半数组</span></span><br><span class="line">        quickSort(arr, low, j-<span class="number">1</span>);</span><br><span class="line">        <span class="comment">//递归调用右半数组</span></span><br><span class="line">        quickSort(arr, j+<span class="number">1</span>, high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果:</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022220552.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>搬运地址: <a href="https://www.cnblogs.com/onepixel/p/7674659.html">十大经典排序算法（动图演示） - 一像素 - 博客园 (cnblogs.com)</a></p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -14864,7 +14864,7 @@
 <h4 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h4><p>我在命名为dev的命名空间内创建了三个配置文件：<code>mysql_dev.properties</code>、 <code>server_dev.properties</code>和 <code>nacos_config.properties</code>，内容如下：</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220320205354950.png" alt="image-20220320205354950"></p>
 <blockquote>
-<p> #应用名称spring.application.name=nacos_config_test#Nacos的IP地址和端口号spring.cloud.nacos.config.server-addr=121.41.211.106:8848#Nacos配置文件所在命名空间idspring.cloud.nacos.config.namespace=cd6541df-8530-404f-8832-413a3c118efa6#Nacos配置文件所在组名spring.cloud.nacos.config.group=DEFAULT_GROUP#要读取的配置文件名称spring.cloud.nacos.config.name=nacos_config.propertiesproperties</p>
+<p> mysql_dev.properties</p>
 </blockquote>
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">spring.datasource.type</span>=<span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line"><span class="meta">spring.datasource.driver-class-name</span>=<span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line"><span class="meta">spring.datasource.url</span>=<span class="string">jdbc:mysql://localhost:3306/db_secondhandtrade?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</span></span><br><span class="line"><span class="meta">spring.datasource.username</span>=<span class="string">root</span></span><br><span class="line"><span class="meta">spring.datasource.password</span>=<span class="string">123456</span></span><br></pre></td></tr></table></figure>
 
@@ -15061,6 +15061,62 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS7忘记MySQL密码后重置</title>
+    <url>/482.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>MySQL是不能查看密码的，如果忘记了就只能重置了</p>
+<h3 id="重置过程"><a href="#重置过程" class="headerlink" title="重置过程"></a>重置过程</h3><ol>
+<li><p>先停止MySQL</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure></li>
+<li><p>修改<code>my.cnf</code>，路径为<code>/ect/my.cnf</code>，在[mysqld]下面添加<code>skip-grant-tables</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220328040522194.png" alt="image-20220328040522194"></p>
+</li>
+<li><p>启动MySQL</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></li>
+<li><p>使用下面命令进入MySQL命令行，提示要输入验证码直接按回车键即可</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure></li>
+<li><p>切换到mysql数据库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure></li>
+<li><p>修改密码</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update user <span class="built_in">set</span> authentication_string=PASSWORD(<span class="string">&quot;这里填密码&quot;</span>) <span class="built_in">where</span> user=<span class="string">&#x27;root&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+<li><p>刷新授权列表</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></li>
+<li><p>退出</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure></li>
+<li><p>修改<code>my.cnf</code>，路径为<code>/ect/my.cnf</code>，删除[mysqld]下面之前添加的<code>skip-grant-tables</code>，或者在它前面加<code>#</code>符号注释掉</p>
+</li>
+<li><p>重启MySQL，新密码就生效了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>CentOS7操作MySQL命令的一些命令如下：</p>
+<blockquote>
+<p>查看MySQL运行状态</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>停止MySQL</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>启动MySQL</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>重启MySQL</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>注册服务到Nacos</title>
     <url>/483.html</url>
     <content><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>已经配置好Nacos注册中心，配置步骤查看博客：<a href="https://blog.zoutl.cn/472.html">https://blog.zoutl.cn/472.html</a></p>
@@ -15164,62 +15220,6 @@
       </categories>
       <tags>
         <tag>Nacos</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7忘记MySQL密码后重置</title>
-    <url>/482.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>MySQL是不能查看密码的，如果忘记了就只能重置了</p>
-<h3 id="重置过程"><a href="#重置过程" class="headerlink" title="重置过程"></a>重置过程</h3><ol>
-<li><p>先停止MySQL</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure></li>
-<li><p>修改<code>my.cnf</code>，路径为<code>/ect/my.cnf</code>，在[mysqld]下面添加<code>skip-grant-tables</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220328040522194.png" alt="image-20220328040522194"></p>
-</li>
-<li><p>启动MySQL</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></li>
-<li><p>使用下面命令进入MySQL命令行，提示要输入验证码直接按回车键即可</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure></li>
-<li><p>切换到mysql数据库</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure></li>
-<li><p>修改密码</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">update user <span class="built_in">set</span> authentication_string=PASSWORD(<span class="string">&quot;这里填密码&quot;</span>) <span class="built_in">where</span> user=<span class="string">&#x27;root&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>刷新授权列表</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></li>
-<li><p>退出</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure></li>
-<li><p>修改<code>my.cnf</code>，路径为<code>/ect/my.cnf</code>，删除[mysqld]下面之前添加的<code>skip-grant-tables</code>，或者在它前面加<code>#</code>符号注释掉</p>
-</li>
-<li><p>重启MySQL，新密码就生效了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>CentOS7操作MySQL命令的一些命令如下：</p>
-<blockquote>
-<p>查看MySQL运行状态</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>停止MySQL</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>启动MySQL</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>重启MySQL</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>CentOS7</tag>
       </tags>
   </entry>
   <entry>
