@@ -94,26 +94,6 @@
       </tags>
   </entry>
   <entry>
-    <title>根据ip地址获取真实地址</title>
-    <url>/104.html</url>
-    <content><![CDATA[<h3 id="pom-xml引入"><a href="#pom-xml引入" class="headerlink" title="pom.xml引入"></a>pom.xml引入</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.util;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> cn.hutool.http.HttpUtil;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据IP获取真实地址</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-03-13 11:18</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddressUtil</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getAddress</span><span class="params">(String ip)</span> </span>&#123;</span><br><span class="line">        String result1 = HttpUtil.get(<span class="string">&quot;https://www.ip138.com/iplookup.asp?ip=&quot;</span> + ip + <span class="string">&quot;&amp;action=2&quot;</span>);</span><br><span class="line">        String result = result1.split(<span class="string">&quot;\&quot;ASN归属地\&quot;:\&quot;&quot;</span>)[<span class="number">1</span>].split(<span class="string">&quot;\&quot;, \&quot;iP段\&quot;:&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String ip = <span class="string">&quot;180.136.86.160&quot;</span>;</span><br><span class="line">        System.out.println(getAddress(ip));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210313120545.jpg" alt="img"></p>
-<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>找到一个查ip的网站，随便查一个ip，然后将地址栏中的链接复制下来，链接中的ip之后在Java代码中可以动态拼接</p>
-<p>通过<a href="https://www.hutool.cn/">Hutool工具包</a>的HttpUtil.get方法获取查某个ip得到结果后的网站源码</p>
-<p>通过Java的String.split方法截取网站源码中的真实地址</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>另一种方法：<a href="https://www.cnblogs.com/GoslingWu/p/13689958.html">java-通过ip获取地址 - 公众号/架构师与哈苏 - 博客园</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>实现鼠标移入文字向右移动效果</title>
     <url>/105.html</url>
     <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;div1&#x27;</span>&gt;</span>&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -151,13 +131,13 @@
       </tags>
   </entry>
   <entry>
-    <title>给网页添加背景图片（网页缩小放大都不受影响）</title>
-    <url>/107.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>鼠标移入div显示查看更多</title>
+    <url>/108.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -184,13 +164,13 @@
       </tags>
   </entry>
   <entry>
-    <title>鼠标移入div显示查看更多</title>
-    <url>/108.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>给网页添加背景图片（网页缩小放大都不受影响）</title>
+    <url>/107.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -280,6 +260,39 @@
       </tags>
   </entry>
   <entry>
+    <title>Windows10脚本代码备份MySQL数据库</title>
+    <url>/113.html</url>
+    <content><![CDATA[<h3 id="创建backdb-bat文件"><a href="#创建backdb-bat文件" class="headerlink" title="创建backdb.bat文件"></a>创建backdb.bat文件</h3><p>打开该文件，输入以下内容并保存</p>
+<p>D盘创建名为db_backup文件夹，-u后的root是数据库连接时用户名，-p后的123456是密码，db_myblog是我的数据库名称</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 取日期、时间变量值<span class="built_in">set</span> yy=%date:~0,4%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mm=%date:~5,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> dd=%date:~8,2%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% lss 10 <span class="built_in">set</span> hh=0%time:~1,1%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% geq 10 <span class="built_in">set</span> hh=%time:~0,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mn=%time:~3,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> ss=%time:~6,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> date=%yy%%mm%%dd%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> time=%hh%%mn%%ss%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> filename=%date%_%time%</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="string">&quot;C:/Program Files/MySQL/MySQL Server 5.6/bin/mysqldump.exe&quot;</span> -uroot -p123456 --opt --default-character-set=utf8 -e --triggers -R --hex-blob --flush-logs -x --databases db_myblog &gt; D:/db_backup/db_myblog%filename%.sql</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> 导出已经完成</span><br><span class="line"> </span><br><span class="line"><span class="comment">#pause</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424001904.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>Windows系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java备份MySQL数据库</title>
+    <url>/114.html</url>
+    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-23 21:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Backup</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_psw;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要备份的数据库名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String db_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主机IP</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String host_ip;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_charset;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存放备份文件的路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String backup_path;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 命令</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String stmt;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Backup</span><span class="params">(String user_name, String user_psw, String db_name,</span></span></span><br><span class="line"><span class="params"><span class="function">                  String host_ip, String user_charset, String backup_path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">        <span class="keyword">this</span>.user_psw = user_psw;</span><br><span class="line">        <span class="keyword">this</span>.db_name = db_name;</span><br><span class="line">        <span class="comment">// 主机IP;</span></span><br><span class="line">        <span class="keyword">if</span> (host_ip == <span class="keyword">null</span> || host_ip.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为本机</span></span><br><span class="line">            <span class="keyword">this</span>.host_ip = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.host_ip = host_ip;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符集</span></span><br><span class="line">        <span class="keyword">if</span> (user_charset == <span class="keyword">null</span> || user_charset.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为安装时设置的字符集</span></span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; --default-character-set=&quot;</span> + user_charset;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.backup_path = backup_path;</span><br><span class="line">        <span class="keyword">this</span>.stmt = <span class="string">&quot;C:\\Program Files\\MySQL\\MySQL Server 5.6\\bin\\mysqldump &quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.db_name + <span class="string">&quot; -h &quot;</span> + <span class="keyword">this</span>.host_ip + <span class="string">&quot; -u&quot;</span> + <span class="keyword">this</span>.user_name</span><br><span class="line">                + <span class="string">&quot; -p&quot;</span> + <span class="keyword">this</span>.user_psw + <span class="keyword">this</span>.user_charset + <span class="string">&quot; --result-file=&quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.backup_path;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">backup_run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> run_result = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Runtime.getRuntime().exec(<span class="keyword">this</span>.stmt);</span><br><span class="line">            run_result = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> run_result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Backup backup = <span class="keyword">new</span> Backup(<span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;db_myblog&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;utf8&quot;</span>,</span><br><span class="line">                <span class="string">&quot;D:\\db_backup\\db_myblog.sql&quot;</span>);</span><br><span class="line">        <span class="keyword">boolean</span> result = backup.backup_run();</span><br><span class="line">        <span class="keyword">if</span> (result) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;备份成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424002930.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424003003.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>mysqldump命令备份数据库</title>
     <url>/112.html</url>
     <content><![CDATA[<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p123456 db_myblog&gt; D:/db_backup/db_myblog.sql</span><br></pre></td></tr></table></figure>
@@ -301,74 +314,23 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows10脚本代码备份MySQL数据库</title>
-    <url>/113.html</url>
-    <content><![CDATA[<h3 id="创建backdb-bat文件"><a href="#创建backdb-bat文件" class="headerlink" title="创建backdb.bat文件"></a>创建backdb.bat文件</h3><p>打开该文件，输入以下内容并保存</p>
-<p>D盘创建名为db_backup文件夹，-u后的root是数据库连接时用户名，-p后的123456是密码，db_myblog是我的数据库名称</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 取日期、时间变量值<span class="built_in">set</span> yy=%date:~0,4%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mm=%date:~5,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> dd=%date:~8,2%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% lss 10 <span class="built_in">set</span> hh=0%time:~1,1%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% geq 10 <span class="built_in">set</span> hh=%time:~0,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mn=%time:~3,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> ss=%time:~6,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> date=%yy%%mm%%dd%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> time=%hh%%mn%%ss%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> filename=%date%_%time%</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="string">&quot;C:/Program Files/MySQL/MySQL Server 5.6/bin/mysqldump.exe&quot;</span> -uroot -p123456 --opt --default-character-set=utf8 -e --triggers -R --hex-blob --flush-logs -x --databases db_myblog &gt; D:/db_backup/db_myblog%filename%.sql</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> 导出已经完成</span><br><span class="line"> </span><br><span class="line"><span class="comment">#pause</span></span><br></pre></td></tr></table></figure>
+    <title>根据ip地址获取真实地址</title>
+    <url>/104.html</url>
+    <content><![CDATA[<h3 id="pom-xml引入"><a href="#pom-xml引入" class="headerlink" title="pom.xml引入"></a>pom.xml引入</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424001904.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>Windows系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows10使用任务计划程序</title>
-    <url>/115.html</url>
-    <content><![CDATA[<h3 id="打开任务计划程序"><a href="#打开任务计划程序" class="headerlink" title="打开任务计划程序"></a>打开任务计划程序</h3><p>打开控制面板，搜索管理工具–&gt;任务计划程序</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012241.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012344.jpg" alt="img"></p>
-<h3 id="创建基本任务"><a href="#创建基本任务" class="headerlink" title="创建基本任务"></a>创建基本任务</h3><blockquote>
-<p>点击右侧的创建基本任务</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012529.jpg" alt="img"></p>
-<blockquote>
-<p>输入名称和描述</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012918.jpg" alt="img"></p>
-<blockquote>
-<p>选择触发时间</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012943.jpg" alt="img"></p>
-<blockquote>
-<p>选择操作（选择启动程序）</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424013002.jpg" alt="img"></p>
-<blockquote>
-<p>选择自己的程序或脚本</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424013028.jpg" alt="img"></p>
-<blockquote>
-<p>查看</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424013256.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>Windows系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java备份MySQL数据库</title>
-    <url>/114.html</url>
-    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-23 21:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Backup</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_psw;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要备份的数据库名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String db_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主机IP</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String host_ip;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_charset;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存放备份文件的路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String backup_path;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 命令</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String stmt;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Backup</span><span class="params">(String user_name, String user_psw, String db_name,</span></span></span><br><span class="line"><span class="params"><span class="function">                  String host_ip, String user_charset, String backup_path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">        <span class="keyword">this</span>.user_psw = user_psw;</span><br><span class="line">        <span class="keyword">this</span>.db_name = db_name;</span><br><span class="line">        <span class="comment">// 主机IP;</span></span><br><span class="line">        <span class="keyword">if</span> (host_ip == <span class="keyword">null</span> || host_ip.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为本机</span></span><br><span class="line">            <span class="keyword">this</span>.host_ip = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.host_ip = host_ip;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符集</span></span><br><span class="line">        <span class="keyword">if</span> (user_charset == <span class="keyword">null</span> || user_charset.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为安装时设置的字符集</span></span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; --default-character-set=&quot;</span> + user_charset;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.backup_path = backup_path;</span><br><span class="line">        <span class="keyword">this</span>.stmt = <span class="string">&quot;C:\\Program Files\\MySQL\\MySQL Server 5.6\\bin\\mysqldump &quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.db_name + <span class="string">&quot; -h &quot;</span> + <span class="keyword">this</span>.host_ip + <span class="string">&quot; -u&quot;</span> + <span class="keyword">this</span>.user_name</span><br><span class="line">                + <span class="string">&quot; -p&quot;</span> + <span class="keyword">this</span>.user_psw + <span class="keyword">this</span>.user_charset + <span class="string">&quot; --result-file=&quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.backup_path;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">backup_run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> run_result = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Runtime.getRuntime().exec(<span class="keyword">this</span>.stmt);</span><br><span class="line">            run_result = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> run_result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Backup backup = <span class="keyword">new</span> Backup(<span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;db_myblog&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;utf8&quot;</span>,</span><br><span class="line">                <span class="string">&quot;D:\\db_backup\\db_myblog.sql&quot;</span>);</span><br><span class="line">        <span class="keyword">boolean</span> result = backup.backup_run();</span><br><span class="line">        <span class="keyword">if</span> (result) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;备份成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.util;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> cn.hutool.http.HttpUtil;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据IP获取真实地址</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-03-13 11:18</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddressUtil</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getAddress</span><span class="params">(String ip)</span> </span>&#123;</span><br><span class="line">        String result1 = HttpUtil.get(<span class="string">&quot;https://www.ip138.com/iplookup.asp?ip=&quot;</span> + ip + <span class="string">&quot;&amp;action=2&quot;</span>);</span><br><span class="line">        String result = result1.split(<span class="string">&quot;\&quot;ASN归属地\&quot;:\&quot;&quot;</span>)[<span class="number">1</span>].split(<span class="string">&quot;\&quot;, \&quot;iP段\&quot;:&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String ip = <span class="string">&quot;180.136.86.160&quot;</span>;</span><br><span class="line">        System.out.println(getAddress(ip));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424002930.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424003003.jpg" alt="img"></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210313120545.jpg" alt="img"></p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>找到一个查ip的网站，随便查一个ip，然后将地址栏中的链接复制下来，链接中的ip之后在Java代码中可以动态拼接</p>
+<p>通过<a href="https://www.hutool.cn/">Hutool工具包</a>的HttpUtil.get方法获取查某个ip得到结果后的网站源码</p>
+<p>通过Java的String.split方法截取网站源码中的真实地址</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>另一种方法：<a href="https://www.cnblogs.com/GoslingWu/p/13689958.html">java-通过ip获取地址 - 公众号/架构师与哈苏 - 博客园</a></p>
 ]]></content>
       <categories>
         <category>Java</category>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -457,6 +419,44 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows10使用任务计划程序</title>
+    <url>/115.html</url>
+    <content><![CDATA[<h3 id="打开任务计划程序"><a href="#打开任务计划程序" class="headerlink" title="打开任务计划程序"></a>打开任务计划程序</h3><p>打开控制面板，搜索管理工具–&gt;任务计划程序</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012241.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012344.jpg" alt="img"></p>
+<h3 id="创建基本任务"><a href="#创建基本任务" class="headerlink" title="创建基本任务"></a>创建基本任务</h3><blockquote>
+<p>点击右侧的创建基本任务</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012529.jpg" alt="img"></p>
+<blockquote>
+<p>输入名称和描述</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012918.jpg" alt="img"></p>
+<blockquote>
+<p>选择触发时间</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424012943.jpg" alt="img"></p>
+<blockquote>
+<p>选择操作（选择启动程序）</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424013002.jpg" alt="img"></p>
+<blockquote>
+<p>选择自己的程序或脚本</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424013028.jpg" alt="img"></p>
+<blockquote>
+<p>查看</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424013256.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>Windows系统</tag>
       </tags>
   </entry>
   <entry>
@@ -1021,77 +1021,6 @@
       </tags>
   </entry>
   <entry>
-    <title>highlight.js代码样式名称</title>
-    <url>/130.html</url>
-    <content><![CDATA[<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>本博客系统专用或者和本站引用同一个网站的cdn加速</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/androidstudio.min.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="常用语言类型"><a href="#常用语言类型" class="headerlink" title="常用语言类型"></a><strong>常用语言类型</strong></h3><p>HTML, XML，Bash，CSS，Java，JavaScript，JSON，SQL</p>
-<h3 id="代码样式名称"><a href="#代码样式名称" class="headerlink" title="代码样式名称"></a><strong>代码样式名称</strong></h3><p><font color="#dd0000">更换代码样式直接修改link标签的css文件名，例如：将androidstudio改为github就行了</font></p>
-<h4 id="androidstudio"><a href="#androidstudio" class="headerlink" title="androidstudio"></a>androidstudio</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093713.jpg" alt="img"></p>
-<h4 id="agate"><a href="#agate" class="headerlink" title="agate"></a>agate</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093747.jpg" alt="img"></p>
-<h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093819.jpg" alt="img"></p>
-<h4 id="idea"><a href="#idea" class="headerlink" title="idea"></a>idea</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093905.jpg" alt="img"></p>
-<h4 id="ascetic"><a href="#ascetic" class="headerlink" title="ascetic"></a>ascetic</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093933.jpg" alt="img"></p>
-<h4 id="brown-paper"><a href="#brown-paper" class="headerlink" title="brown-paper"></a>brown-paper</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094002.jpg" alt="img"></p>
-<h4 id="codepen-embed"><a href="#codepen-embed" class="headerlink" title="codepen-embed"></a>codepen-embed</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094032.jpg" alt="img"></p>
-<h4 id="color-brewer"><a href="#color-brewer" class="headerlink" title="color-brewer"></a>color-brewer</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094106.jpg" alt="img"></p>
-<h4 id="dark"><a href="#dark" class="headerlink" title="dark"></a>dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094135.jpg" alt="img"></p>
-<h4 id="docco"><a href="#docco" class="headerlink" title="docco"></a>docco</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094230.jpg" alt="img"></p>
-<h4 id="far"><a href="#far" class="headerlink" title="far"></a>far</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094257.jpg" alt="img"></p>
-<h4 id="foundation"><a href="#foundation" class="headerlink" title="foundation"></a>foundation</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094326.jpg" alt="img"></p>
-<h4 id="gml"><a href="#gml" class="headerlink" title="gml"></a>gml</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094401.jpg" alt="img"></p>
-<h4 id="googlecode"><a href="#googlecode" class="headerlink" title="googlecode"></a>googlecode</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094445.jpg" alt="img"></p>
-<h4 id="gradient-dark"><a href="#gradient-dark" class="headerlink" title="gradient-dark"></a>gradient-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094521.jpg" alt="img"></p>
-<h4 id="gradient-light"><a href="#gradient-light" class="headerlink" title="gradient-light"></a>gradient-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094558.jpg" alt="img"></p>
-<h4 id="grayscale"><a href="#grayscale" class="headerlink" title="grayscale"></a>grayscale</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094639.jpg" alt="img"></p>
-<h4 id="hybrid"><a href="#hybrid" class="headerlink" title="hybrid"></a>hybrid</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094714.jpg" alt="img"></p>
-<h4 id="ir-black"><a href="#ir-black" class="headerlink" title="ir-black"></a>ir-black</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094751.jpg" alt="img"></p>
-<h4 id="isbl-editor-dark"><a href="#isbl-editor-dark" class="headerlink" title="isbl-editor-dark"></a>isbl-editor-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094841.jpg" alt="img"></p>
-<h4 id="isbl-editor-light"><a href="#isbl-editor-light" class="headerlink" title="isbl-editor-light"></a>isbl-editor-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094910.jpg" alt="img"></p>
-<h4 id="lioshi"><a href="#lioshi" class="headerlink" title="lioshi"></a>lioshi</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094945.jpg" alt="img"></p>
-<h4 id="magula"><a href="#magula" class="headerlink" title="magula"></a>magula</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095024.jpg" alt="img"></p>
-<h4 id="mono-blue"><a href="#mono-blue" class="headerlink" title="mono-blue"></a>mono-blue</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095100.jpg" alt="img"></p>
-<h4 id="monokai"><a href="#monokai" class="headerlink" title="monokai"></a>monokai</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095127.jpg" alt="img"></p>
-<h4 id="monokai-sublime"><a href="#monokai-sublime" class="headerlink" title="monokai-sublime"></a>monokai-sublime</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095220.jpg" alt="img"></p>
-<h4 id="night-owl"><a href="#night-owl" class="headerlink" title="night-owl"></a>night-owl</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095253.jpg" alt="img"></p>
-<h4 id="nnfx-dark"><a href="#nnfx-dark" class="headerlink" title="nnfx-dark"></a>nnfx-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095340.jpg" alt="img"></p>
-<h4 id="nnfx-light"><a href="#nnfx-light" class="headerlink" title="nnfx-light"></a>nnfx-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095409.jpg" alt="img"></p>
-<h4 id="pojoaque"><a href="#pojoaque" class="headerlink" title="pojoaque"></a>pojoaque</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095443.jpg" alt="img"></p>
-<h4 id="purebasic"><a href="#purebasic" class="headerlink" title="purebasic"></a>purebasic</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095507.jpg" alt="img"></p>
-<h4 id="rainbow"><a href="#rainbow" class="headerlink" title="rainbow"></a>rainbow</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095538.jpg" alt="img"></p>
-<h4 id="routeros"><a href="#routeros" class="headerlink" title="routeros"></a>routeros</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095627.jpg" alt="img"></p>
-<h4 id="school-book"><a href="#school-book" class="headerlink" title="school-book"></a>school-book</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095702.jpg" alt="img"></p>
-<h4 id="shades-of-purple"><a href="#shades-of-purple" class="headerlink" title="shades-of-purple"></a>shades-of-purple</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095750.jpg" alt="img"></p>
-<h4 id="srcery"><a href="#srcery" class="headerlink" title="srcery"></a>srcery</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095817.jpg" alt="img"></p>
-<h4 id="stackoverflow-dark"><a href="#stackoverflow-dark" class="headerlink" title="stackoverflow-dark"></a>stackoverflow-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095843.jpg" alt="img"></p>
-<h4 id="stackoverflow-light"><a href="#stackoverflow-light" class="headerlink" title="stackoverflow-light"></a>stackoverflow-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095914.jpg" alt="img"></p>
-<h4 id="sunburst"><a href="#sunburst" class="headerlink" title="sunburst"></a>sunburst</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095946.jpg" alt="img"></p>
-<h4 id="tomorrow-night-blue"><a href="#tomorrow-night-blue" class="headerlink" title="tomorrow-night-blue"></a>tomorrow-night-blue</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601100017.jpg" alt="img"></p>
-<h4 id="tomorrow-night-bright"><a href="#tomorrow-night-bright" class="headerlink" title="tomorrow-night-bright"></a>tomorrow-night-bright</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601100043.jpg" alt="img"></p>
-<h4 id="vs"><a href="#vs" class="headerlink" title="vs"></a>vs</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601100117.jpg" alt="img"></p>
-<h4 id="xcode"><a href="#xcode" class="headerlink" title="xcode"></a>xcode</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601100144.jpg" alt="img"></p>
-<h4 id="an-old-hope"><a href="#an-old-hope" class="headerlink" title="an-old-hope"></a>an-old-hope</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719231000.jpg" alt="img"></p>
-<h4 id="atelier-forest-light"><a href="#atelier-forest-light" class="headerlink" title="atelier-forest-light"></a>atelier-forest-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719231819.jpg" alt="img"></p>
-<h4 id="atom-one-dark-reasonable"><a href="#atom-one-dark-reasonable" class="headerlink" title="atom-one-dark-reasonable"></a>atom-one-dark-reasonable</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719232807.jpg" alt="img"></p>
-<h4 id="atom-one-dark"><a href="#atom-one-dark" class="headerlink" title="atom-one-dark"></a>atom-one-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719233111.jpg" alt="img"></p>
-<h4 id="atom-one-light"><a href="#atom-one-light" class="headerlink" title="atom-one-light"></a>atom-one-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719233343.jpg" alt="img"></p>
-<h4 id="color-brewer-1"><a href="#color-brewer-1" class="headerlink" title="color-brewer"></a>color-brewer</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719233701.jpg" alt="img"></p>
-<h4 id="darcula"><a href="#darcula" class="headerlink" title="darcula"></a>darcula</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719234112.jpg" alt="img"></p>
-<h4 id="docco-1"><a href="#docco-1" class="headerlink" title="docco"></a>docco</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720011049.jpg" alt="img"></p>
-<h4 id="dracula"><a href="#dracula" class="headerlink" title="dracula"></a>dracula</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720011101.jpg" alt="img"></p>
-<h4 id="github-gist"><a href="#github-gist" class="headerlink" title="github-gist"></a>github-gist</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720012201.jpg" alt="img"></p>
-<h4 id="gml-1"><a href="#gml-1" class="headerlink" title="gml"></a>gml</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720012210.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多样式去官网查看：<a href="https://highlightjs.org/static/demo/">highlight.js demo</a></p>
-]]></content>
-      <categories>
-        <category>highlight.js</category>
-      </categories>
-      <tags>
-        <tag>highlight.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>给highlight.js代码高亮加行号</title>
     <url>/131.html</url>
     <content><![CDATA[<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.hljsln</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">3em</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-bg</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">2.2em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#555</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.18</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-num</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">    -webkit-touch-callout: none;</span><br><span class="line">    -webkit-user-select: none;</span><br><span class="line">    -khtml-user-select: none;</span><br><span class="line">    -moz-user-select: none;</span><br><span class="line">    -ms-user-select: none;</span><br><span class="line">    user-select: none;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.hljsln</span> <span class="selector-class">.ln-num</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">1em</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#777</span>;</span><br><span class="line">    <span class="attribute">font-style</span>: normal;</span><br><span class="line">    <span class="attribute">font-weight</span>: normal;</span><br><span class="line">    <span class="attribute">content</span>: <span class="built_in">attr</span>(data-num);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1166,6 +1095,77 @@
       </categories>
       <tags>
         <tag>EasyUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>highlight.js代码样式名称</title>
+    <url>/130.html</url>
+    <content><![CDATA[<h3 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h3><p>本博客系统专用或者和本站引用同一个网站的cdn加速</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span>  <span class="attr">href</span>=<span class="string">&quot;https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/androidstudio.min.css&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="常用语言类型"><a href="#常用语言类型" class="headerlink" title="常用语言类型"></a><strong>常用语言类型</strong></h3><p>HTML, XML，Bash，CSS，Java，JavaScript，JSON，SQL</p>
+<h3 id="代码样式名称"><a href="#代码样式名称" class="headerlink" title="代码样式名称"></a><strong>代码样式名称</strong></h3><p><font color="#dd0000">更换代码样式直接修改link标签的css文件名，例如：将androidstudio改为github就行了</font></p>
+<h4 id="androidstudio"><a href="#androidstudio" class="headerlink" title="androidstudio"></a>androidstudio</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093713.jpg" alt="img"></p>
+<h4 id="agate"><a href="#agate" class="headerlink" title="agate"></a>agate</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093747.jpg" alt="img"></p>
+<h4 id="github"><a href="#github" class="headerlink" title="github"></a>github</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093819.jpg" alt="img"></p>
+<h4 id="idea"><a href="#idea" class="headerlink" title="idea"></a>idea</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093905.jpg" alt="img"></p>
+<h4 id="ascetic"><a href="#ascetic" class="headerlink" title="ascetic"></a>ascetic</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601093933.jpg" alt="img"></p>
+<h4 id="brown-paper"><a href="#brown-paper" class="headerlink" title="brown-paper"></a>brown-paper</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094002.jpg" alt="img"></p>
+<h4 id="codepen-embed"><a href="#codepen-embed" class="headerlink" title="codepen-embed"></a>codepen-embed</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094032.jpg" alt="img"></p>
+<h4 id="color-brewer"><a href="#color-brewer" class="headerlink" title="color-brewer"></a>color-brewer</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094106.jpg" alt="img"></p>
+<h4 id="dark"><a href="#dark" class="headerlink" title="dark"></a>dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094135.jpg" alt="img"></p>
+<h4 id="docco"><a href="#docco" class="headerlink" title="docco"></a>docco</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094230.jpg" alt="img"></p>
+<h4 id="far"><a href="#far" class="headerlink" title="far"></a>far</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094257.jpg" alt="img"></p>
+<h4 id="foundation"><a href="#foundation" class="headerlink" title="foundation"></a>foundation</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094326.jpg" alt="img"></p>
+<h4 id="gml"><a href="#gml" class="headerlink" title="gml"></a>gml</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094401.jpg" alt="img"></p>
+<h4 id="googlecode"><a href="#googlecode" class="headerlink" title="googlecode"></a>googlecode</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094445.jpg" alt="img"></p>
+<h4 id="gradient-dark"><a href="#gradient-dark" class="headerlink" title="gradient-dark"></a>gradient-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094521.jpg" alt="img"></p>
+<h4 id="gradient-light"><a href="#gradient-light" class="headerlink" title="gradient-light"></a>gradient-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094558.jpg" alt="img"></p>
+<h4 id="grayscale"><a href="#grayscale" class="headerlink" title="grayscale"></a>grayscale</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094639.jpg" alt="img"></p>
+<h4 id="hybrid"><a href="#hybrid" class="headerlink" title="hybrid"></a>hybrid</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094714.jpg" alt="img"></p>
+<h4 id="ir-black"><a href="#ir-black" class="headerlink" title="ir-black"></a>ir-black</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094751.jpg" alt="img"></p>
+<h4 id="isbl-editor-dark"><a href="#isbl-editor-dark" class="headerlink" title="isbl-editor-dark"></a>isbl-editor-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094841.jpg" alt="img"></p>
+<h4 id="isbl-editor-light"><a href="#isbl-editor-light" class="headerlink" title="isbl-editor-light"></a>isbl-editor-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094910.jpg" alt="img"></p>
+<h4 id="lioshi"><a href="#lioshi" class="headerlink" title="lioshi"></a>lioshi</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601094945.jpg" alt="img"></p>
+<h4 id="magula"><a href="#magula" class="headerlink" title="magula"></a>magula</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095024.jpg" alt="img"></p>
+<h4 id="mono-blue"><a href="#mono-blue" class="headerlink" title="mono-blue"></a>mono-blue</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095100.jpg" alt="img"></p>
+<h4 id="monokai"><a href="#monokai" class="headerlink" title="monokai"></a>monokai</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095127.jpg" alt="img"></p>
+<h4 id="monokai-sublime"><a href="#monokai-sublime" class="headerlink" title="monokai-sublime"></a>monokai-sublime</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095220.jpg" alt="img"></p>
+<h4 id="night-owl"><a href="#night-owl" class="headerlink" title="night-owl"></a>night-owl</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095253.jpg" alt="img"></p>
+<h4 id="nnfx-dark"><a href="#nnfx-dark" class="headerlink" title="nnfx-dark"></a>nnfx-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095340.jpg" alt="img"></p>
+<h4 id="nnfx-light"><a href="#nnfx-light" class="headerlink" title="nnfx-light"></a>nnfx-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095409.jpg" alt="img"></p>
+<h4 id="pojoaque"><a href="#pojoaque" class="headerlink" title="pojoaque"></a>pojoaque</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095443.jpg" alt="img"></p>
+<h4 id="purebasic"><a href="#purebasic" class="headerlink" title="purebasic"></a>purebasic</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095507.jpg" alt="img"></p>
+<h4 id="rainbow"><a href="#rainbow" class="headerlink" title="rainbow"></a>rainbow</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095538.jpg" alt="img"></p>
+<h4 id="routeros"><a href="#routeros" class="headerlink" title="routeros"></a>routeros</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095627.jpg" alt="img"></p>
+<h4 id="school-book"><a href="#school-book" class="headerlink" title="school-book"></a>school-book</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095702.jpg" alt="img"></p>
+<h4 id="shades-of-purple"><a href="#shades-of-purple" class="headerlink" title="shades-of-purple"></a>shades-of-purple</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095750.jpg" alt="img"></p>
+<h4 id="srcery"><a href="#srcery" class="headerlink" title="srcery"></a>srcery</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095817.jpg" alt="img"></p>
+<h4 id="stackoverflow-dark"><a href="#stackoverflow-dark" class="headerlink" title="stackoverflow-dark"></a>stackoverflow-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095843.jpg" alt="img"></p>
+<h4 id="stackoverflow-light"><a href="#stackoverflow-light" class="headerlink" title="stackoverflow-light"></a>stackoverflow-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095914.jpg" alt="img"></p>
+<h4 id="sunburst"><a href="#sunburst" class="headerlink" title="sunburst"></a>sunburst</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601095946.jpg" alt="img"></p>
+<h4 id="tomorrow-night-blue"><a href="#tomorrow-night-blue" class="headerlink" title="tomorrow-night-blue"></a>tomorrow-night-blue</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601100017.jpg" alt="img"></p>
+<h4 id="tomorrow-night-bright"><a href="#tomorrow-night-bright" class="headerlink" title="tomorrow-night-bright"></a>tomorrow-night-bright</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601100043.jpg" alt="img"></p>
+<h4 id="vs"><a href="#vs" class="headerlink" title="vs"></a>vs</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601100117.jpg" alt="img"></p>
+<h4 id="xcode"><a href="#xcode" class="headerlink" title="xcode"></a>xcode</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601100144.jpg" alt="img"></p>
+<h4 id="an-old-hope"><a href="#an-old-hope" class="headerlink" title="an-old-hope"></a>an-old-hope</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719231000.jpg" alt="img"></p>
+<h4 id="atelier-forest-light"><a href="#atelier-forest-light" class="headerlink" title="atelier-forest-light"></a>atelier-forest-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719231819.jpg" alt="img"></p>
+<h4 id="atom-one-dark-reasonable"><a href="#atom-one-dark-reasonable" class="headerlink" title="atom-one-dark-reasonable"></a>atom-one-dark-reasonable</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719232807.jpg" alt="img"></p>
+<h4 id="atom-one-dark"><a href="#atom-one-dark" class="headerlink" title="atom-one-dark"></a>atom-one-dark</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719233111.jpg" alt="img"></p>
+<h4 id="atom-one-light"><a href="#atom-one-light" class="headerlink" title="atom-one-light"></a>atom-one-light</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719233343.jpg" alt="img"></p>
+<h4 id="color-brewer-1"><a href="#color-brewer-1" class="headerlink" title="color-brewer"></a>color-brewer</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719233701.jpg" alt="img"></p>
+<h4 id="darcula"><a href="#darcula" class="headerlink" title="darcula"></a>darcula</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210719234112.jpg" alt="img"></p>
+<h4 id="docco-1"><a href="#docco-1" class="headerlink" title="docco"></a>docco</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720011049.jpg" alt="img"></p>
+<h4 id="dracula"><a href="#dracula" class="headerlink" title="dracula"></a>dracula</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720011101.jpg" alt="img"></p>
+<h4 id="github-gist"><a href="#github-gist" class="headerlink" title="github-gist"></a>github-gist</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720012201.jpg" alt="img"></p>
+<h4 id="gml-1"><a href="#gml-1" class="headerlink" title="gml"></a>gml</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210720012210.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多样式去官网查看：<a href="https://highlightjs.org/static/demo/">highlight.js demo</a></p>
+]]></content>
+      <categories>
+        <category>highlight.js</category>
+      </categories>
+      <tags>
+        <tag>highlight.js</tag>
       </tags>
   </entry>
   <entry>
@@ -1487,29 +1487,6 @@
       </tags>
   </entry>
   <entry>
-    <title>switch语句</title>
-    <url>/142.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>switch语句将从与选项值相匹配的case标签处开始执行直到遇到break语句，或者执行到switch语句的结束处为止。如果没有相匹配的case标签，而有default子句，就执行这个子句。（必须严格执行每个case必须以break语句结束，不然程序会继续执行下去，直到遇到break语句或者执行到default语句）</p>
-<h3 id="正确的例子"><a href="#正确的例子" class="headerlink" title="正确的例子"></a>正确的例子</h3><p>Java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163509.jpg" alt="img"></p>
-<h3 id="错误的例子"><a href="#错误的例子" class="headerlink" title="错误的例子"></a><strong>错误的例子</strong></h3><p>Java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163627.jpg" alt="img"></p>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><p>在错误的例子中，即使只有条件1符合条件，但是由于没有break语句终止程序，程序会继续执行下去，直到遇到break语句或执行完程序。（如果条件2有break语句，那么控制台只输出1和2）</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装Maven</title>
     <url>/143.html</url>
     <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>网站链接：<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a></p>
@@ -1552,6 +1529,29 @@
       </categories>
       <tags>
         <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>switch语句</title>
+    <url>/142.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>switch语句将从与选项值相匹配的case标签处开始执行直到遇到break语句，或者执行到switch语句的结束处为止。如果没有相匹配的case标签，而有default子句，就执行这个子句。（必须严格执行每个case必须以break语句结束，不然程序会继续执行下去，直到遇到break语句或者执行到default语句）</p>
+<h3 id="正确的例子"><a href="#正确的例子" class="headerlink" title="正确的例子"></a>正确的例子</h3><p>Java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163509.jpg" alt="img"></p>
+<h3 id="错误的例子"><a href="#错误的例子" class="headerlink" title="错误的例子"></a><strong>错误的例子</strong></h3><p>Java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163627.jpg" alt="img"></p>
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><p>在错误的例子中，即使只有条件1符合条件，但是由于没有break语句终止程序，程序会继续执行下去，直到遇到break语句或执行完程序。（如果条件2有break语句，那么控制台只输出1和2）</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -1910,6 +1910,48 @@
 <p>然后在远程窗口即可看到刚刚上传的文件（上传的文件在/home/data/）</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210616162824.jpg" alt="img"></p>
 <h3 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h3><p>在本地窗口选择下载保存的路径，在远程窗口右键点击要下载的文件，选择传输即可</p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS7安装和配置jre1.8</title>
+    <url>/154.html</url>
+    <content><![CDATA[<h3 id="下载jre"><a href="#下载jre" class="headerlink" title="下载jre"></a>下载jre</h3><p>百度网盘链接</p>
+<p>链接：<a href="https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ">https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ</a></p>
+<p>提取码：mbv3</p>
+<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>上传jre到/home/data目录</p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><ol>
+<li><p>创建/home/java目录</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line">mkdir java</span><br></pre></td></tr></table></figure></li>
+<li><p>解压tar.gz压缩包 </p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">tar</span> -zxvf server-jre-<span class="number">8</span>u<span class="number">131</span>-linux-x<span class="number">64</span>.tar.gz</span><br></pre></td></tr></table></figure></li>
+<li><p>把/home/data/下的jre剪切到/home/java/下</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv /home/data/jdk1.8.0_131 /home/java</span><br></pre></td></tr></table></figure></li>
+<li><p>给jre目录以及子目录授予root权限</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown root:root -R /home/java/jdk1.8.0_131/</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a><strong>配置环境变量</strong></h3><ol>
+<li><p>编辑环境变量配置文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure></li>
+<li><p>在文件末尾加入下面代码（jdk名称根据实际情况填写），强制保存（wq!）退出</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">export</span> <span class="string">JAVA_HOME=/home/java</span></span><br><span class="line"><span class="attr">export</span> <span class="string">JRE_HOME=/home/java/jdk1.8.0_131</span></span><br><span class="line"><span class="attr">export</span> <span class="string">CLASSPATH=$JRE_HOME/lib/rt.jar:$JRE_HOME/lib/ext</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$JRE_HOME/bin</span></span><br></pre></td></tr></table></figure></li>
+<li><p>使环境变量即时生效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li>
+<li><p>验证是否配置成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155404274.png" alt="image-20220203155404274"></p>
+<p>java或者javac命令也可以验证</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155450563.png" alt="image-20220203155450563"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155516717.png" alt="image-20220203155516717"></p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>CentOS7</category>
@@ -2421,48 +2463,6 @@
       </categories>
       <tags>
         <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7安装和配置jre1.8</title>
-    <url>/154.html</url>
-    <content><![CDATA[<h3 id="下载jre"><a href="#下载jre" class="headerlink" title="下载jre"></a>下载jre</h3><p>百度网盘链接</p>
-<p>链接：<a href="https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ">https://pan.baidu.com/s/1aRzE9hdak3N_KtkYMYyRKQ</a></p>
-<p>提取码：mbv3</p>
-<h3 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h3><p>上传jre到/home/data目录</p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><ol>
-<li><p>创建/home/java目录</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /home</span><br><span class="line">mkdir java</span><br></pre></td></tr></table></figure></li>
-<li><p>解压tar.gz压缩包 </p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">tar</span> -zxvf server-jre-<span class="number">8</span>u<span class="number">131</span>-linux-x<span class="number">64</span>.tar.gz</span><br></pre></td></tr></table></figure></li>
-<li><p>把/home/data/下的jre剪切到/home/java/下</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mv /home/data/jdk1.8.0_131 /home/java</span><br></pre></td></tr></table></figure></li>
-<li><p>给jre目录以及子目录授予root权限</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown root:root -R /home/java/jdk1.8.0_131/</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a><strong>配置环境变量</strong></h3><ol>
-<li><p>编辑环境变量配置文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure></li>
-<li><p>在文件末尾加入下面代码（jdk名称根据实际情况填写），强制保存（wq!）退出</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">export</span> <span class="string">JAVA_HOME=/home/java</span></span><br><span class="line"><span class="attr">export</span> <span class="string">JRE_HOME=/home/java/jdk1.8.0_131</span></span><br><span class="line"><span class="attr">export</span> <span class="string">CLASSPATH=$JRE_HOME/lib/rt.jar:$JRE_HOME/lib/ext</span></span><br><span class="line"><span class="attr">export</span> <span class="string">PATH=$PATH:$JRE_HOME/bin</span></span><br></pre></td></tr></table></figure></li>
-<li><p>使环境变量即时生效</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile</span><br></pre></td></tr></table></figure></li>
-<li><p>验证是否配置成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155404274.png" alt="image-20220203155404274"></p>
-<p>java或者javac命令也可以验证</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155450563.png" alt="image-20220203155450563"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155516717.png" alt="image-20220203155516717"></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
       </tags>
   </entry>
   <entry>
@@ -3777,27 +3777,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java中四种循环语句</title>
-    <url>/209.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Java中循环有while、do…while…，for，增强for</p>
-<h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	System.out.println(<span class="string">&quot;请输入一个数字:&quot;</span>);</span><br><span class="line">	<span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= n) &#123;</span><br><span class="line">		System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="do…while…"><a href="#do…while…" class="headerlink" title="do…while…"></a>do…while…</h3><p>即使循环条件不满足，也至少执行一次</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">		i++;</span><br><span class="line">	&#125; <span class="keyword">while</span> (i &lt; <span class="number">6</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="增强for"><a href="#增强for" class="headerlink" title="增强for"></a>增强for</h3><p>一般用于遍历数组和集合，数据类型为数组或集合的数据类型</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>[] intArr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i : intArr) &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea将Spring Boot项目打包成war包</title>
     <url>/21.html</url>
     <content><![CDATA[<h3 id="修改pom-xml文件"><a href="#修改pom-xml文件" class="headerlink" title="修改pom.xml文件"></a>修改pom.xml文件</h3><h4 id="修改打包方式"><a href="#修改打包方式" class="headerlink" title="修改打包方式"></a>修改打包方式</h4><p>修改pom.xml的packaging节点改 war</p>
@@ -3923,6 +3902,27 @@
       <tags>
         <tag>Java</tag>
         <tag>MyBatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java中四种循环语句</title>
+    <url>/209.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Java中循环有while、do…while…，for，增强for</p>
+<h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	System.out.println(<span class="string">&quot;请输入一个数字:&quot;</span>);</span><br><span class="line">	<span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= n) &#123;</span><br><span class="line">		System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="do…while…"><a href="#do…while…" class="headerlink" title="do…while…"></a>do…while…</h3><p>即使循环条件不满足，也至少执行一次</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">		i++;</span><br><span class="line">	&#125; <span class="keyword">while</span> (i &lt; <span class="number">6</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="增强for"><a href="#增强for" class="headerlink" title="增强for"></a>增强for</h3><p>一般用于遍历数组和集合，数据类型为数组或集合的数据类型</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>[] intArr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i : intArr) &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -4289,23 +4289,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MyBatis-Plus Mapper CRUD 接口之Update</title>
-    <url>/229.html</url>
-    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 whereWrapper 条件，更新记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">update</span><span class="params">(<span class="meta">@Param(Constants.ENTITY)</span> T updateEntity, <span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; whereWrapper)</span></span>;</span><br><span class="line"><span class="comment">// 根据 ID 修改</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">updateById</span><span class="params">(<span class="meta">@Param(Constants.ENTITY)</span> T entity)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><h4 id="update"><a href="#update" class="headerlink" title="update"></a>update</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	UpdateWrapper&lt;BlogType&gt; blogTypeUpdateWrapper = <span class="keyword">new</span> UpdateWrapper&lt;&gt;();</span><br><span class="line">	blogTypeUpdateWrapper.eq(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;spring&quot;</span>);</span><br><span class="line">	BlogType blogType = <span class="keyword">new</span> BlogType();</span><br><span class="line">	blogType.setSortNum(<span class="number">111</span>);</span><br><span class="line">	blogTypeMapper.update(blogType, blogTypeUpdateWrapper);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="updateById"><a href="#updateById" class="headerlink" title="updateById"></a>updateById</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updateById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	BlogType blogType = <span class="keyword">new</span> BlogType();</span><br><span class="line">	blogType.setId(<span class="number">34</span>);</span><br><span class="line">	blogType.setName(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">	blogType.setSortNum(<span class="number">222</span>);</span><br><span class="line">	blogTypeMapper.updateById(blogType);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>MyBatis-Plus</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>MyBatis-Plus</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MyBatis-Plus Mapper CRUD 接口之Delete</title>
     <url>/228.html</url>
     <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 entity 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">delete</span><span class="params">(<span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; wrapper)</span></span>;</span><br><span class="line"><span class="comment">// 删除（根据ID 批量删除）</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteBatchIds</span><span class="params">(<span class="meta">@Param(Constants.COLLECTION)</span> Collection&lt;? extends Serializable&gt; idList)</span></span>;</span><br><span class="line"><span class="comment">// 根据 ID 删除</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteById</span><span class="params">(Serializable id)</span></span>;</span><br><span class="line"><span class="comment">// 根据 columnMap 条件，删除记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">deleteByMap</span><span class="params">(<span class="meta">@Param(Constants.COLUMN_MAP)</span> Map&lt;String, Object&gt; columnMap)</span></span>;</span><br></pre></td></tr></table></figure>
@@ -4318,6 +4301,23 @@
 
 <h4 id="deleteByMap"><a href="#deleteByMap" class="headerlink" title="deleteByMap"></a>deleteByMap</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteByMap</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	Map&lt;String, Object&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;name&quot;</span>, <span class="number">1</span>);</span><br><span class="line">	map.put(<span class="string">&quot;sortNum&quot;</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.deleteByMap(map);</span><br><span class="line">	System.out.println(result);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>MyBatis-Plus</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MyBatis-Plus</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MyBatis-Plus Mapper CRUD 接口之Update</title>
+    <url>/229.html</url>
+    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 根据 whereWrapper 条件，更新记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">update</span><span class="params">(<span class="meta">@Param(Constants.ENTITY)</span> T updateEntity, <span class="meta">@Param(Constants.WRAPPER)</span> Wrapper&lt;T&gt; whereWrapper)</span></span>;</span><br><span class="line"><span class="comment">// 根据 ID 修改</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">updateById</span><span class="params">(<span class="meta">@Param(Constants.ENTITY)</span> T entity)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><h4 id="update"><a href="#update" class="headerlink" title="update"></a>update</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	UpdateWrapper&lt;BlogType&gt; blogTypeUpdateWrapper = <span class="keyword">new</span> UpdateWrapper&lt;&gt;();</span><br><span class="line">	blogTypeUpdateWrapper.eq(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;spring&quot;</span>);</span><br><span class="line">	BlogType blogType = <span class="keyword">new</span> BlogType();</span><br><span class="line">	blogType.setSortNum(<span class="number">111</span>);</span><br><span class="line">	blogTypeMapper.update(blogType, blogTypeUpdateWrapper);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="updateById"><a href="#updateById" class="headerlink" title="updateById"></a>updateById</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updateById</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	BlogType blogType = <span class="keyword">new</span> BlogType();</span><br><span class="line">	blogType.setId(<span class="number">34</span>);</span><br><span class="line">	blogType.setName(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">	blogType.setSortNum(<span class="number">222</span>);</span><br><span class="line">	blogTypeMapper.updateById(blogType);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>MyBatis-Plus</category>
@@ -8511,6 +8511,26 @@
       </tags>
   </entry>
   <entry>
+    <title>基本数据类型之间的转换（显式转换和隐式转换）</title>
+    <url>/34.html</url>
+    <content><![CDATA[<h3 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h3><p>从表示范围小的类型转换为表示范围大的类型，可以直接转换，称为隐式转换。隐式类型转换又可以称为自动类型转换，就是由系统自动完成的类型转换。</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//数据类型转换之隐式转换（小的赋值给大的）</span></span><br><span class="line">        <span class="comment">//4个字节，占4个8位，int类型转换成byte时，去掉前3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">3</span>;</span><br><span class="line">        <span class="comment">//1个字节，占1个8位，byte类型转换成int时，在前面添加3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">byte</span> b=<span class="number">4</span>;</span><br><span class="line">        <span class="comment">/*小的数据类型和大的数据类型转换时，会将小的数据类型转换成大的数据类型，</span></span><br><span class="line"><span class="comment">        然后再进行运算，本程序中将byte类型转换成int类型,最终结果是int类型*/</span></span><br><span class="line">        x=x+b;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//控制台输出7</span></span><br><span class="line">        System.out.println(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="显式转换"><a href="#显式转换" class="headerlink" title="显式转换"></a>显式转换</h3><p>从表示范围大的类型转换为表示范围小的类型，需要强制转换，称为显式转换。强制类型转换的语法格式就是加一个括号，然后给出想要转换的目标类型。</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//int类型300转换成2进制为00000000 00000000 00000001 00101100</span></span><br><span class="line">        <span class="comment">//转换成byte去掉前3个8位：00101100</span></span><br><span class="line">        <span class="comment">//32+8+4=44</span></span><br><span class="line">        <span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)<span class="number">300</span>;</span><br><span class="line">        <span class="comment">//控制台输出44</span></span><br><span class="line">        System.out.println(b1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>自动类型转换规则：<a href="https://blog.zoutl.cn/84.html">二元运算符连接两个值 | LeDao的博客 (zoutl.cn)</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker安装RabbitMQ</title>
     <url>/340.html</url>
     <content><![CDATA[<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull rabbitmq:3-management</span><br></pre></td></tr></table></figure>
@@ -8682,26 +8702,6 @@
       </categories>
       <tags>
         <tag>RabbitMQ</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基本数据类型之间的转换（显式转换和隐式转换）</title>
-    <url>/34.html</url>
-    <content><![CDATA[<h3 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h3><p>从表示范围小的类型转换为表示范围大的类型，可以直接转换，称为隐式转换。隐式类型转换又可以称为自动类型转换，就是由系统自动完成的类型转换。</p>
-<p>例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//数据类型转换之隐式转换（小的赋值给大的）</span></span><br><span class="line">        <span class="comment">//4个字节，占4个8位，int类型转换成byte时，去掉前3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">3</span>;</span><br><span class="line">        <span class="comment">//1个字节，占1个8位，byte类型转换成int时，在前面添加3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">byte</span> b=<span class="number">4</span>;</span><br><span class="line">        <span class="comment">/*小的数据类型和大的数据类型转换时，会将小的数据类型转换成大的数据类型，</span></span><br><span class="line"><span class="comment">        然后再进行运算，本程序中将byte类型转换成int类型,最终结果是int类型*/</span></span><br><span class="line">        x=x+b;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//控制台输出7</span></span><br><span class="line">        System.out.println(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="显式转换"><a href="#显式转换" class="headerlink" title="显式转换"></a>显式转换</h3><p>从表示范围大的类型转换为表示范围小的类型，需要强制转换，称为显式转换。强制类型转换的语法格式就是加一个括号，然后给出想要转换的目标类型。</p>
-<p>例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//int类型300转换成2进制为00000000 00000000 00000001 00101100</span></span><br><span class="line">        <span class="comment">//转换成byte去掉前3个8位：00101100</span></span><br><span class="line">        <span class="comment">//32+8+4=44</span></span><br><span class="line">        <span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)<span class="number">300</span>;</span><br><span class="line">        <span class="comment">//控制台输出44</span></span><br><span class="line">        System.out.println(b1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>自动类型转换规则：<a href="https://blog.zoutl.cn/84.html">二元运算符连接两个值 | LeDao的博客 (zoutl.cn)</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -9400,6 +9400,26 @@
       </tags>
   </entry>
   <entry>
+    <title>Shiro认证</title>
+    <url>/359.html</url>
+    <content><![CDATA[<h3 id="认证过程"><a href="#认证过程" class="headerlink" title="认证过程"></a>认证过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20184019.png"></p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="引入Shiro依赖"><a href="#引入Shiro依赖" class="headerlink" title="引入Shiro依赖"></a>引入Shiro依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.shiro<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>shiro-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,参数为正确的用户名和密码</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//构建SecurityManager环境</span></span><br><span class="line">        DefaultSecurityManager defaultSecurityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将用户信息放入SecurityManager环境</span></span><br><span class="line">        defaultSecurityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//主体提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(defaultSecurityManager);</span><br><span class="line">        <span class="comment">//获取构建SecurityManager环境的当前用户</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        <span class="comment">//设置一个token用于登录,参数分别为用户登录的用户名和密码</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//当前状态为未登录,所以输出false</span></span><br><span class="line">        System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//当前状态为登录成功,所以输出true</span></span><br><span class="line">            System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">            <span class="comment">//注销登录</span></span><br><span class="line">            subject.logout();</span><br><span class="line">            System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>①当token的两个参数和正确的用户名密码一致时，登录成功</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20185038.jpg"></p>
+<p>②不一致时，登录失败</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20185108.jpg"></p>
+]]></content>
+      <categories>
+        <category>Shiro</category>
+      </categories>
+      <tags>
+        <tag>Shiro</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十大经典排序算法</title>
     <url>/36.html</url>
     <content><![CDATA[<h3 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h3><p>十种常见排序算法可以分为两大类：</p>
@@ -9418,26 +9438,6 @@
       <tags>
         <tag>Java</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shiro认证</title>
-    <url>/359.html</url>
-    <content><![CDATA[<h3 id="认证过程"><a href="#认证过程" class="headerlink" title="认证过程"></a>认证过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20184019.png"></p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="引入Shiro依赖"><a href="#引入Shiro依赖" class="headerlink" title="引入Shiro依赖"></a>引入Shiro依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.shiro<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>shiro-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,参数为正确的用户名和密码</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//构建SecurityManager环境</span></span><br><span class="line">        DefaultSecurityManager defaultSecurityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将用户信息放入SecurityManager环境</span></span><br><span class="line">        defaultSecurityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//主体提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(defaultSecurityManager);</span><br><span class="line">        <span class="comment">//获取构建SecurityManager环境的当前用户</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        <span class="comment">//设置一个token用于登录,参数分别为用户登录的用户名和密码</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//当前状态为未登录,所以输出false</span></span><br><span class="line">        System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//当前状态为登录成功,所以输出true</span></span><br><span class="line">            System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">            <span class="comment">//注销登录</span></span><br><span class="line">            subject.logout();</span><br><span class="line">            System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>①当token的两个参数和正确的用户名密码一致时，登录成功</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20185038.jpg"></p>
-<p>②不一致时，登录失败</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20185108.jpg"></p>
-]]></content>
-      <categories>
-        <category>Shiro</category>
-      </categories>
-      <tags>
-        <tag>Shiro</tag>
       </tags>
   </entry>
   <entry>
@@ -10260,21 +10260,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java继承的super和this关键字</title>
-    <url>/378.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>在<code>Java</code>继承中，<code>super</code>关键字用于调用父类的属性和方法，而<code>this</code>则用于调用子类自身的属性和方法，<code>this</code>也可以省略不写</p>
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Dog dog = <span class="keyword">new</span> Dog();</span><br><span class="line">        dog.eatTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    String name = <span class="string">&quot;Animal&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;动物吃饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    String name = <span class="string">&quot;Dog&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;小狗吃饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eatTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//调用父类的eat()方法</span></span><br><span class="line">        <span class="keyword">super</span>.eat();</span><br><span class="line">        <span class="comment">//调用自己的eat()方法,this也可以省略</span></span><br><span class="line">        <span class="keyword">this</span>.eat();</span><br><span class="line">        <span class="comment">//调用父类的name</span></span><br><span class="line">        System.out.println(<span class="keyword">super</span>.name);</span><br><span class="line">        <span class="comment">//调用自己的name</span></span><br><span class="line">        System.out.println(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-29%20110527.jpg"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java实现从Excel读取数据</title>
     <url>/377.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>easyexcel<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.4<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.poi<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>poi-ooxml<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.17<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.projectlombok/lombok --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.projectlombok<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>lombok<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.18.22<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.alibaba/fastjson --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.78<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -10289,6 +10274,21 @@
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>上面是直接读取电脑磁盘上的 Excel 表，也可以读取前端上传的 Excel 表</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;upload&quot;)</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">upload</span><span class="params">(MultipartFile file)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">   ExcelListener excelListener = <span class="keyword">new</span> ExcelListener();</span><br><span class="line">   EasyExcel.read(file.getInputStream(), excelListener).sheet().doRead();</span><br><span class="line">   <span class="comment">//表格头数据</span></span><br><span class="line">   Map&lt;String, Integer&gt; heads = excelListener.getImportHeads();</span><br><span class="line">   <span class="comment">//每一行数据</span></span><br><span class="line">   List&lt;JSONObject&gt; dataList = excelListener.getDataList();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java继承的super和this关键字</title>
+    <url>/378.html</url>
+    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>在<code>Java</code>继承中，<code>super</code>关键字用于调用父类的属性和方法，而<code>this</code>则用于调用子类自身的属性和方法，<code>this</code>也可以省略不写</p>
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Dog dog = <span class="keyword">new</span> Dog();</span><br><span class="line">        dog.eatTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    String name = <span class="string">&quot;Animal&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;动物吃饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    String name = <span class="string">&quot;Dog&quot;</span>;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;小狗吃饭&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">eatTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//调用父类的eat()方法</span></span><br><span class="line">        <span class="keyword">super</span>.eat();</span><br><span class="line">        <span class="comment">//调用自己的eat()方法,this也可以省略</span></span><br><span class="line">        <span class="keyword">this</span>.eat();</span><br><span class="line">        <span class="comment">//调用父类的name</span></span><br><span class="line">        System.out.println(<span class="keyword">super</span>.name);</span><br><span class="line">        <span class="comment">//调用自己的name</span></span><br><span class="line">        System.out.println(<span class="keyword">this</span>.name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-29%20110527.jpg"></p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -11064,6 +11064,106 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS7安装Elasticsearch5.5.2</title>
+    <url>/394.html</url>
+    <content><![CDATA[<h3 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h3><p>下载地址为：<a href="https://www.elastic.co/cn/downloads/past-releases/elasticsearch-5-5-2">Elasticsearch 5.5.2 | Elastic</a>，下载tar版本的安装包</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20215949.png"></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="安装jre1-8"><a href="#安装jre1-8" class="headerlink" title="安装jre1.8"></a>安装jre1.8</h4><p>运行Elasticsearch5.5.2需要jre1.8及以上，安装jre过程查看博客：<a href="https://blog.zoutl.cn/154.html">CentOS7 安装和配置 jre1.8 | LeDao 的博客 (zoutl.cn)</a></p>
+<h4 id="上传到Linux服务器"><a href="#上传到Linux服务器" class="headerlink" title="上传到Linux服务器"></a>上传到Linux服务器</h4><p>在/home目录下创建一个名称为es的目录，然后将下载好的文件上传到这个目录</p>
+<h4 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h4><p>xxxxxxxxxx package com.ledao.util;​import javax.servlet.http.HttpServletRequest;​/** * @author LeDao * @company * @create 2021-12-14 12:20 */public class IpUtil {​    public static String getIpAddr(HttpServletRequest request) {        String fromSource = “X-Real-IP”;        String ip = request.getHeader(fromSource);        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“X-Forwarded-For”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“Proxy-Client-IP”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“WL-Proxy-Client-IP”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getRemoteAddr();        }        return ip;    }}java</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf elasticsearch-5.5.2.tar.gz</span><br></pre></td></tr></table></figure>
+
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><h4 id="新建用户并赋予权限"><a href="#新建用户并赋予权限" class="headerlink" title="新建用户并赋予权限"></a>新建用户并赋予权限</h4><p>新建一个用户<code>elastic</code>专门运行Elasticsearch，因为root用户一般不用来运行Elasticsearch的，输入以下三条命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#新建一个名为elastic的用户</span></span><br><span class="line">useradd elastic</span><br><span class="line"></span><br><span class="line"><span class="comment">#把目录权限赋予给elastic</span></span><br><span class="line">chown -R elastic:elastic /home/es/elasticsearch-5.5.2/</span><br><span class="line"></span><br><span class="line"><span class="comment">#切换当前身份为elastic</span></span><br><span class="line">su elastic</span><br></pre></td></tr></table></figure>
+
+<h4 id="第一次运行"><a href="#第一次运行" class="headerlink" title="第一次运行"></a>第一次运行</h4><p>输入以下命令运行Elasticsearch：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /home/es/elasticsearch-5.5.2/bin/elasticsearch</span><br></pre></td></tr></table></figure>
+
+<h4 id="可能出现的报错"><a href="#可能出现的报错" class="headerlink" title="可能出现的报错"></a>可能出现的报错</h4><blockquote>
+<p>报错1</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20222917.png"></p>
+<p>之所以会报错，是因为Elasticsearch需要的运行内存过大（Elasticsearch默认需要的运行内存为2G，而我的虚拟机的运行内存也是2G，所以这个虚拟机是运行不了Elasticsearch的），解决办法：修改Elasticsearch默认需要的运行内存，该配置文件在<code>/home/es/elasticsearch-5.5.2/config</code>目录下，文件名称为<code>jvm.options</code>,我修改为128M（内存过小Elasticsearch会自动挂掉，所以还是将虚拟机内存修改为4G比较好）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20221944.png"></p>
+<blockquote>
+<p>报错2</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20235306.png"></p>
+<p>关于<code>[1]: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]</code>的解决办法如下：（每个进程最大同时打开文件数太小）</p>
+<p>切换到root用户</p>
+<p>修改/etc/security/limits.conf文件，添加或修改如下行：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">*</span>               <span class="string">hard    nofile            65536</span></span><br><span class="line"><span class="meta">*</span>               <span class="string">soft    nofile            65536</span></span><br></pre></td></tr></table></figure>
+
+<p>然后再切换到elastic用户，一定要切换，不然上面的配置不会立即生效，查看当前每个进程最大同时打开文件数的两个命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ulimit</span> -Hn</span><br><span class="line"><span class="built_in">ulimit</span> -Sn</span><br></pre></td></tr></table></figure>
+
+<p>关于<code>[2]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]</code>的解决办法如下：</p>
+<p>切换root用户</p>
+<ol>
+<li><p>方法一：输入命令，<font color="#dd0000">不推荐使用此方法</font>，此方法只是临时有效，系统重启后就会失效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sysctl -w vm.max_map_count=2621441</span><br></pre></td></tr></table></figure></li>
+<li><p>方法二：修改/etc/sysctl.conf文件，增加配置<code>vm.max_map_count=262144</code>，保存后要执行下面一条命令让配置生效，<font color="#dd0000">推荐使用此方法</font>，系统重启后也有效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sysctl -p /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20024158.png"></p>
+</li>
+</ol>
+<h4 id="再次运行"><a href="#再次运行" class="headerlink" title="再次运行"></a>再次运行</h4><p>切换到elastic用户，再次输入以下命令运行Elasticsearch</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /home/es/elasticsearch-5.5.2/bin/elasticsearch</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20222158.png"></p>
+<p>上面的命令是在前台运行Elasticsearch，一般都是在后台运行以方便进行其它操作，停止Elasticsearch使用快捷键<code>CTRL+C</code>，后台运行的命令如下：（也就是在之前的命令后面加上<code>-d</code>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /home/es/elasticsearch-5.5.2/bin/elasticsearch -d</span><br></pre></td></tr></table></figure>
+
+<p>使用以下命令查看Elasticsearch是否启动成功，出现下图的信息说明启动成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef | grep elasticsearch</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20223100.png"></p>
+<h4 id="验证服务是否正常"><a href="#验证服务是否正常" class="headerlink" title="验证服务是否正常"></a>验证服务是否正常</h4><p>验证服务是否正常运行，执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl http://localhost:9200</span><br></pre></td></tr></table></figure>
+
+<p>如果正常就会出现下图的信息</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20001252.png"></p>
+<h4 id="允许外网连接"><a href="#允许外网连接" class="headerlink" title="允许外网连接"></a>允许外网连接</h4><blockquote>
+<p>修改配置</p>
+</blockquote>
+<p>在/home/es/elasticsearch-5.5.2/config/elasticsearch.yml中找到并修改下图的配置</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20001818.png"></p>
+<blockquote>
+<p>重启Elasticsearch服务</p>
+</blockquote>
+<ol>
+<li><p>查看Elasticsearch服务的进程号</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef | grep elasticsearch</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20002636.png"></p>
+</li>
+<li><p>关闭进程</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 2328</span><br></pre></td></tr></table></figure></li>
+<li><p>再次启动Elasticsearch</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /home/es/elasticsearch-5.5.2/bin/elasticsearch -d</span><br></pre></td></tr></table></figure></li>
+</ol>
+<blockquote>
+<p>关闭防火墙</p>
+</blockquote>
+<p>通过以下两条命令关闭防火墙并且设置开机不要启动</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#关闭</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"></span><br><span class="line"><span class="comment">#禁止开机启动</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在电脑上的浏览器输入<code>虚拟机IP:9200</code>，出现下图的结果说明外网连接成功</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20002258.png"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果修改了配置不生效，那就切换一下当前身份：在root身份修改了配置后，再将当前身份切换到elastic身份</p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+        <tag>Elasticsearch</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java实现与Elasticsearch的连接</title>
     <url>/395.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><p>引入的依赖版本必须和正在运行的Elasticsearch版本一致</p>
@@ -11565,6 +11665,35 @@
       </tags>
   </entry>
   <entry>
+    <title>十大经典排序算法之归并排序</title>
+    <url>/41.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并</p>
+<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><ol>
+<li><p>把长度为n的输入序列分成两个长度为n/2的子序列</p>
+</li>
+<li><p>对这两个子序列分别采用归并排序</p>
+</li>
+<li><p>将两个排序好的子序列合并成一个最终的排序序列</p>
+</li>
+</ol>
+<h3 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a>动图演示</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022214845.jpg" alt="img"></p>
+<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><p>Java代码:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 归并排序</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">11</span>,<span class="number">44</span>,<span class="number">23</span>,<span class="number">67</span>,<span class="number">88</span>,<span class="number">65</span>,<span class="number">34</span>,<span class="number">48</span>,<span class="number">9</span>,<span class="number">12</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="comment">//新建一个临时数组存放</span></span><br><span class="line">        <span class="keyword">int</span>[] tmp = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">        mergeSort(arr,<span class="number">0</span>,arr.length-<span class="number">1</span>,tmp);</span><br><span class="line">        System.out.println(<span class="string">&quot;排序后:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> mid,<span class="keyword">int</span> high,<span class="keyword">int</span>[] tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//左边序列和右边序列起始索引</span></span><br><span class="line">        <span class="keyword">int</span> j = low,k = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(j &lt;= mid &amp;&amp; k &lt;= high)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[k])&#123;</span><br><span class="line">                tmp[i++] = arr[j++];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                tmp[i++] = arr[k++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//若左边序列还有剩余，则将其全部拷贝进tmp[]中</span></span><br><span class="line">        <span class="keyword">while</span>(j &lt;= mid)&#123;</span><br><span class="line">            tmp[i++] = arr[j++];</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">while</span>(k &lt;= high)&#123;</span><br><span class="line">            tmp[i++] = arr[k++];</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;i;t++)&#123;</span><br><span class="line">            arr[low+t] = tmp[t];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> high,<span class="keyword">int</span>[] tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(low&lt;high)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (low+high)/<span class="number">2</span>;</span><br><span class="line">            <span class="comment">//对左边序列进行归并排序</span></span><br><span class="line">            mergeSort(arr,low,mid,tmp);</span><br><span class="line">            <span class="comment">//对右边序列进行归并排序</span></span><br><span class="line">            mergeSort(arr,mid+<span class="number">1</span>,high,tmp);</span><br><span class="line">            <span class="comment">//合并两个有序序列</span></span><br><span class="line">            merge(arr,low,mid,high,tmp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果:</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022215330.jpg" alt="img"></p>
+<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>归并排序是一种稳定的排序方法。和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(nlogn）的时间复杂度。代价是需要额外的内存空间</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>搬运地址: <a href="https://www.cnblogs.com/onepixel/p/7674659.html">十大经典排序算法（动图演示） - 一像素 - 博客园 (cnblogs.com)</a></p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>idea配置远程调试</title>
     <url>/409.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>所谓远程调试，是指将Java项目打包成war或者jar包并且部署后，在idea中进行调试</p>
@@ -11602,135 +11731,6 @@
       </categories>
       <tags>
         <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>十大经典排序算法之归并排序</title>
-    <url>/41.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并</p>
-<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><ol>
-<li><p>把长度为n的输入序列分成两个长度为n/2的子序列</p>
-</li>
-<li><p>对这两个子序列分别采用归并排序</p>
-</li>
-<li><p>将两个排序好的子序列合并成一个最终的排序序列</p>
-</li>
-</ol>
-<h3 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a>动图演示</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022214845.jpg" alt="img"></p>
-<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><p>Java代码:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 归并排序</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">11</span>,<span class="number">44</span>,<span class="number">23</span>,<span class="number">67</span>,<span class="number">88</span>,<span class="number">65</span>,<span class="number">34</span>,<span class="number">48</span>,<span class="number">9</span>,<span class="number">12</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="comment">//新建一个临时数组存放</span></span><br><span class="line">        <span class="keyword">int</span>[] tmp = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">        mergeSort(arr,<span class="number">0</span>,arr.length-<span class="number">1</span>,tmp);</span><br><span class="line">        System.out.println(<span class="string">&quot;排序后:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> mid,<span class="keyword">int</span> high,<span class="keyword">int</span>[] tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//左边序列和右边序列起始索引</span></span><br><span class="line">        <span class="keyword">int</span> j = low,k = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(j &lt;= mid &amp;&amp; k &lt;= high)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[k])&#123;</span><br><span class="line">                tmp[i++] = arr[j++];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                tmp[i++] = arr[k++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//若左边序列还有剩余，则将其全部拷贝进tmp[]中</span></span><br><span class="line">        <span class="keyword">while</span>(j &lt;= mid)&#123;</span><br><span class="line">            tmp[i++] = arr[j++];</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">while</span>(k &lt;= high)&#123;</span><br><span class="line">            tmp[i++] = arr[k++];</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;i;t++)&#123;</span><br><span class="line">            arr[low+t] = tmp[t];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> high,<span class="keyword">int</span>[] tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(low&lt;high)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (low+high)/<span class="number">2</span>;</span><br><span class="line">            <span class="comment">//对左边序列进行归并排序</span></span><br><span class="line">            mergeSort(arr,low,mid,tmp);</span><br><span class="line">            <span class="comment">//对右边序列进行归并排序</span></span><br><span class="line">            mergeSort(arr,mid+<span class="number">1</span>,high,tmp);</span><br><span class="line">            <span class="comment">//合并两个有序序列</span></span><br><span class="line">            merge(arr,low,mid,high,tmp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行结果:</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022215330.jpg" alt="img"></p>
-<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>归并排序是一种稳定的排序方法。和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(nlogn）的时间复杂度。代价是需要额外的内存空间</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>搬运地址: <a href="https://www.cnblogs.com/onepixel/p/7674659.html">十大经典排序算法（动图演示） - 一像素 - 博客园 (cnblogs.com)</a></p>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7安装Elasticsearch5.5.2</title>
-    <url>/394.html</url>
-    <content><![CDATA[<h3 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h3><p>下载地址为：<a href="https://www.elastic.co/cn/downloads/past-releases/elasticsearch-5-5-2">Elasticsearch 5.5.2 | Elastic</a>，下载tar版本的安装包</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20215949.png"></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="安装jre1-8"><a href="#安装jre1-8" class="headerlink" title="安装jre1.8"></a>安装jre1.8</h4><p>运行Elasticsearch5.5.2需要jre1.8及以上，安装jre过程查看博客：<a href="https://blog.zoutl.cn/154.html">CentOS7 安装和配置 jre1.8 | LeDao 的博客 (zoutl.cn)</a></p>
-<h4 id="上传到Linux服务器"><a href="#上传到Linux服务器" class="headerlink" title="上传到Linux服务器"></a>上传到Linux服务器</h4><p>在/home目录下创建一个名称为es的目录，然后将下载好的文件上传到这个目录</p>
-<h4 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h4><p>xxxxxxxxxx package com.ledao.util;​import javax.servlet.http.HttpServletRequest;​/** * @author LeDao * @company * @create 2021-12-14 12:20 */public class IpUtil {​    public static String getIpAddr(HttpServletRequest request) {        String fromSource = “X-Real-IP”;        String ip = request.getHeader(fromSource);        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“X-Forwarded-For”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“Proxy-Client-IP”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“WL-Proxy-Client-IP”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getRemoteAddr();        }        return ip;    }}java</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf elasticsearch-5.5.2.tar.gz</span><br></pre></td></tr></table></figure>
-
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><h4 id="新建用户并赋予权限"><a href="#新建用户并赋予权限" class="headerlink" title="新建用户并赋予权限"></a>新建用户并赋予权限</h4><p>新建一个用户<code>elastic</code>专门运行Elasticsearch，因为root用户一般不用来运行Elasticsearch的，输入以下三条命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#新建一个名为elastic的用户</span></span><br><span class="line">useradd elastic</span><br><span class="line"></span><br><span class="line"><span class="comment">#把目录权限赋予给elastic</span></span><br><span class="line">chown -R elastic:elastic /home/es/elasticsearch-5.5.2/</span><br><span class="line"></span><br><span class="line"><span class="comment">#切换当前身份为elastic</span></span><br><span class="line">su elastic</span><br></pre></td></tr></table></figure>
-
-<h4 id="第一次运行"><a href="#第一次运行" class="headerlink" title="第一次运行"></a>第一次运行</h4><p>输入以下命令运行Elasticsearch：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /home/es/elasticsearch-5.5.2/bin/elasticsearch</span><br></pre></td></tr></table></figure>
-
-<h4 id="可能出现的报错"><a href="#可能出现的报错" class="headerlink" title="可能出现的报错"></a>可能出现的报错</h4><blockquote>
-<p>报错1</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20222917.png"></p>
-<p>之所以会报错，是因为Elasticsearch需要的运行内存过大（Elasticsearch默认需要的运行内存为2G，而我的虚拟机的运行内存也是2G，所以这个虚拟机是运行不了Elasticsearch的），解决办法：修改Elasticsearch默认需要的运行内存，该配置文件在<code>/home/es/elasticsearch-5.5.2/config</code>目录下，文件名称为<code>jvm.options</code>,我修改为128M（内存过小Elasticsearch会自动挂掉，所以还是将虚拟机内存修改为4G比较好）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20221944.png"></p>
-<blockquote>
-<p>报错2</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20235306.png"></p>
-<p>关于<code>[1]: max file descriptors [4096] for elasticsearch process is too low, increase to at least [65536]</code>的解决办法如下：（每个进程最大同时打开文件数太小）</p>
-<p>切换到root用户</p>
-<p>修改/etc/security/limits.conf文件，添加或修改如下行：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">*</span>               <span class="string">hard    nofile            65536</span></span><br><span class="line"><span class="meta">*</span>               <span class="string">soft    nofile            65536</span></span><br></pre></td></tr></table></figure>
-
-<p>然后再切换到elastic用户，一定要切换，不然上面的配置不会立即生效，查看当前每个进程最大同时打开文件数的两个命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ulimit</span> -Hn</span><br><span class="line"><span class="built_in">ulimit</span> -Sn</span><br></pre></td></tr></table></figure>
-
-<p>关于<code>[2]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]</code>的解决办法如下：</p>
-<p>切换root用户</p>
-<ol>
-<li><p>方法一：输入命令，<font color="#dd0000">不推荐使用此方法</font>，此方法只是临时有效，系统重启后就会失效</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sysctl -w vm.max_map_count=2621441</span><br></pre></td></tr></table></figure></li>
-<li><p>方法二：修改/etc/sysctl.conf文件，增加配置<code>vm.max_map_count=262144</code>，保存后要执行下面一条命令让配置生效，<font color="#dd0000">推荐使用此方法</font>，系统重启后也有效</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo sysctl -p /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20024158.png"></p>
-</li>
-</ol>
-<h4 id="再次运行"><a href="#再次运行" class="headerlink" title="再次运行"></a>再次运行</h4><p>切换到elastic用户，再次输入以下命令运行Elasticsearch</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /home/es/elasticsearch-5.5.2/bin/elasticsearch</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20222158.png"></p>
-<p>上面的命令是在前台运行Elasticsearch，一般都是在后台运行以方便进行其它操作，停止Elasticsearch使用快捷键<code>CTRL+C</code>，后台运行的命令如下：（也就是在之前的命令后面加上<code>-d</code>）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /home/es/elasticsearch-5.5.2/bin/elasticsearch -d</span><br></pre></td></tr></table></figure>
-
-<p>使用以下命令查看Elasticsearch是否启动成功，出现下图的信息说明启动成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef | grep elasticsearch</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20223100.png"></p>
-<h4 id="验证服务是否正常"><a href="#验证服务是否正常" class="headerlink" title="验证服务是否正常"></a>验证服务是否正常</h4><p>验证服务是否正常运行，执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl http://localhost:9200</span><br></pre></td></tr></table></figure>
-
-<p>如果正常就会出现下图的信息</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20001252.png"></p>
-<h4 id="允许外网连接"><a href="#允许外网连接" class="headerlink" title="允许外网连接"></a>允许外网连接</h4><blockquote>
-<p>修改配置</p>
-</blockquote>
-<p>在/home/es/elasticsearch-5.5.2/config/elasticsearch.yml中找到并修改下图的配置</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20001818.png"></p>
-<blockquote>
-<p>重启Elasticsearch服务</p>
-</blockquote>
-<ol>
-<li><p>查看Elasticsearch服务的进程号</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ps -ef | grep elasticsearch</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20002636.png"></p>
-</li>
-<li><p>关闭进程</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">kill</span> -9 2328</span><br></pre></td></tr></table></figure></li>
-<li><p>再次启动Elasticsearch</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh /home/es/elasticsearch-5.5.2/bin/elasticsearch -d</span><br></pre></td></tr></table></figure></li>
-</ol>
-<blockquote>
-<p>关闭防火墙</p>
-</blockquote>
-<p>通过以下两条命令关闭防火墙并且设置开机不要启动</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#关闭</span></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"></span><br><span class="line"><span class="comment">#禁止开机启动</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>在电脑上的浏览器输入<code>虚拟机IP:9200</code>，出现下图的结果说明外网连接成功</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-15%20002258.png"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果修改了配置不生效，那就切换一下当前身份：在root身份修改了配置后，再将当前身份切换到elastic身份</p>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
-        <tag>Elasticsearch</tag>
       </tags>
   </entry>
   <entry>
@@ -14630,55 +14630,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows系统和CentOS7安装Nacos</title>
-    <url>/472.html</url>
-    <content><![CDATA[<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址：<a href="https://github.com/alibaba/nacos/releases/tag/1.4.3">Release 1.4.3 (Jan 27, 2022) · alibaba/nacos (github.com)</a>，下载后解压即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317231221977.png" alt="image-20220317231221977"></p>
-<h2 id="Windows系统安装"><a href="#Windows系统安装" class="headerlink" title="Windows系统安装"></a>Windows系统安装</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>cmd命令进入解压后的文件夹内的bin文件夹，输入以下命令运行Nacos，standalone代表单机模式运行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">startup.cmd -m standalone</span><br></pre></td></tr></table></figure>
-
-<p>在浏览器输入<a href="http://localhost:8848/nacos%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%9B%E8%A1%8C%E7%99%BB%E5%BD%95%EF%BC%8C%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E9%83%BD%E6%98%AF%60nacos%60%EF%BC%8C%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E8%BF%9B%E5%85%A5%E4%B8%8B%E9%9D%A2%E7%95%8C%E9%9D%A2">http://localhost:8848/nacos，然后进行登录，用户名和密码都是`nacos`，登录成功进入下面界面</a></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317212844381.png" alt="image-20220317212844381"></p>
-<h3 id="连接MySQL数据库"><a href="#连接MySQL数据库" class="headerlink" title="连接MySQL数据库"></a>连接MySQL数据库</h3><p>先关闭正在运行的Nacos程序，直接关闭cmd窗口即可</p>
-<p>Nacos默认使用的数据是本地的，也可以配置成使用MySQL的数据</p>
-<h4 id="导入数据库文件"><a href="#导入数据库文件" class="headerlink" title="导入数据库文件"></a>导入数据库文件</h4><p>Nacos的数据库文件在conf文件夹中，新建一个数据库然后导入Nacos的数据库文件</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317213310581.png" alt="image-20220317213310581"></p>
-<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>配置文件是上图的<code>application.properties</code>，把下图的黑色的代码的注释删除，然后把一些参数改为自己的</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317214017802.png" alt="image-20220317214017802"></p>
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>修改密码以测试是否成功连接数据库，如果直接在Nacos程序的界面修改密码会报错：<code>caused: user nacos,nacos not exist!;</code>，错误详情查看：<a href="https://github.com/alibaba/nacos/issues/7750">caused: user nacos,nacos not exist!; · Issue #7750 · alibaba/nacos (github.com)</a></p>
-<p>最后登录时使用新密码验证，登录成功说明连接数据库成功</p>
-<h2 id="在CentOS7中安装"><a href="#在CentOS7中安装" class="headerlink" title="在CentOS7中安装"></a>在CentOS7中安装</h2><p>将上面解压的文件夹上传到CentOS7系统中，步骤和上面基本相同，只是运行的命令不同，运行的命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh startup.sh -m standalone</span><br></pre></td></tr></table></figure>
-
-<p>停止运行的命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh shutdown.sh</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Nacos</category>
-      </categories>
-      <tags>
-        <tag>Windows系统</tag>
-        <tag>CentOS7</tag>
-        <tag>Nacos</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>谷歌搜索屏蔽某个网站</title>
-    <url>/473.html</url>
-    <content><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>无法使用谷歌搜索的就不要查看本博客了</p>
-<h3 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h3><p>谷歌插件商店地址：<a href="https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe/related">uBlacklist - Chrome 网上应用店 (google.com)</a></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在谷歌搜索某个关键词后，对应的搜索结果上面会有<code>加入黑名单</code>这个选项，点击该选项即可屏蔽对应网站</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220318163936595.png" alt="image-20220318163936595"></p>
-]]></content>
-      <categories>
-        <category>其它</category>
-      </categories>
-      <tags>
-        <tag>其它</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>微信开发者工具创建小程序</title>
     <url>/471.html</url>
     <content><![CDATA[<h3 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h3><p>注册地址为：<a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1">https://mp.weixin.qq.com/wxopen/waregister?action=step1</a></p>
@@ -14733,23 +14684,52 @@
       </tags>
   </entry>
   <entry>
-    <title>Nacos新建命名空间和读取命名空间内的配置文件</title>
-    <url>/475.html</url>
-    <content><![CDATA[<h3 id="新建命名空间"><a href="#新建命名空间" class="headerlink" title="新建命名空间"></a>新建命名空间</h3><p>创建成功后自动生成命名空间id，下面要用到</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319115238136.png" alt="image-20220319115238136"></p>
-<h3 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h3><p>在刚刚创建好的命名空间创建配置文件，创建步骤查看博客：<a href="https://blog.zoutl.cn/474.html">Spring Boot 读取 Nacos 的配置文件 </a>，配置文件位置为：命名空间&gt;&gt;分组&gt;&gt;配置文件，前面的包含后面的，不在同一个组的配置文件可以重名</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319120244832.png" alt="image-20220319120244832"></p>
-<h3 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h3><p>实现读取步骤查看博客：<a href="https://blog.zoutl.cn/474.html">Spring Boot 读取 Nacos 的配置文件 </a>，然后在<code>bootstrap.properties</code>中加上配置：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">spring.cloud.nacos.config.namespace</span>=<span class="string">cd6541df-8530-404f-8832-413a3cefa6</span></span><br></pre></td></tr></table></figure>
+    <title>Windows系统和CentOS7安装Nacos</title>
+    <url>/472.html</url>
+    <content><![CDATA[<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址：<a href="https://github.com/alibaba/nacos/releases/tag/1.4.3">Release 1.4.3 (Jan 27, 2022) · alibaba/nacos (github.com)</a>，下载后解压即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317231221977.png" alt="image-20220317231221977"></p>
+<h2 id="Windows系统安装"><a href="#Windows系统安装" class="headerlink" title="Windows系统安装"></a>Windows系统安装</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>cmd命令进入解压后的文件夹内的bin文件夹，输入以下命令运行Nacos，standalone代表单机模式运行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">startup.cmd -m standalone</span><br></pre></td></tr></table></figure>
 
-<p>完整配置如下：</p>
-<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#应用名称</span></span><br><span class="line"><span class="meta">spring.application.name</span>=<span class="string">nacos_config_test</span></span><br><span class="line"><span class="comment">#Nacos的IP地址和端口号</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.server-addr</span>=<span class="string">121.41.211.106:8848</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在命名空间id</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.namespace</span>=<span class="string">cd6541df-8530-404f-8832-413a3c118efa6</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在组名</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.group</span>=<span class="string">DEFAULT_GROUP</span></span><br><span class="line"><span class="comment">#要读取的配置文件名称</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.name</span>=<span class="string">nacos_config.properties</span></span><br></pre></td></tr></table></figure>
+<p>在浏览器输入<a href="http://localhost:8848/nacos%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%9B%E8%A1%8C%E7%99%BB%E5%BD%95%EF%BC%8C%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E9%83%BD%E6%98%AF%60nacos%60%EF%BC%8C%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E8%BF%9B%E5%85%A5%E4%B8%8B%E9%9D%A2%E7%95%8C%E9%9D%A2">http://localhost:8848/nacos，然后进行登录，用户名和密码都是`nacos`，登录成功进入下面界面</a></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317212844381.png" alt="image-20220317212844381"></p>
+<h3 id="连接MySQL数据库"><a href="#连接MySQL数据库" class="headerlink" title="连接MySQL数据库"></a>连接MySQL数据库</h3><p>先关闭正在运行的Nacos程序，直接关闭cmd窗口即可</p>
+<p>Nacos默认使用的数据是本地的，也可以配置成使用MySQL的数据</p>
+<h4 id="导入数据库文件"><a href="#导入数据库文件" class="headerlink" title="导入数据库文件"></a>导入数据库文件</h4><p>Nacos的数据库文件在conf文件夹中，新建一个数据库然后导入Nacos的数据库文件</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317213310581.png" alt="image-20220317213310581"></p>
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>配置文件是上图的<code>application.properties</code>，把下图的黑色的代码的注释删除，然后把一些参数改为自己的</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317214017802.png" alt="image-20220317214017802"></p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>修改密码以测试是否成功连接数据库，如果直接在Nacos程序的界面修改密码会报错：<code>caused: user nacos,nacos not exist!;</code>，错误详情查看：<a href="https://github.com/alibaba/nacos/issues/7750">caused: user nacos,nacos not exist!; · Issue #7750 · alibaba/nacos (github.com)</a></p>
+<p>最后登录时使用新密码验证，登录成功说明连接数据库成功</p>
+<h2 id="在CentOS7中安装"><a href="#在CentOS7中安装" class="headerlink" title="在CentOS7中安装"></a>在CentOS7中安装</h2><p>将上面解压的文件夹上传到CentOS7系统中，步骤和上面基本相同，只是运行的命令不同，运行的命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh startup.sh -m standalone</span><br></pre></td></tr></table></figure>
+
+<p>停止运行的命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sh shutdown.sh</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>Nacos</category>
       </categories>
       <tags>
+        <tag>Windows系统</tag>
+        <tag>CentOS7</tag>
         <tag>Nacos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谷歌搜索屏蔽某个网站</title>
+    <url>/473.html</url>
+    <content><![CDATA[<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>无法使用谷歌搜索的就不要查看本博客了</p>
+<h3 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h3><p>谷歌插件商店地址：<a href="https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe/related">uBlacklist - Chrome 网上应用店 (google.com)</a></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在谷歌搜索某个关键词后，对应的搜索结果上面会有<code>加入黑名单</code>这个选项，点击该选项即可屏蔽对应网站</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220318163936595.png" alt="image-20220318163936595"></p>
+]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>其它</tag>
       </tags>
   </entry>
   <entry>
@@ -14859,6 +14839,26 @@
       </categories>
       <tags>
         <tag>Spring Boot</tag>
+        <tag>Nacos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nacos新建命名空间和读取命名空间内的配置文件</title>
+    <url>/475.html</url>
+    <content><![CDATA[<h3 id="新建命名空间"><a href="#新建命名空间" class="headerlink" title="新建命名空间"></a>新建命名空间</h3><p>创建成功后自动生成命名空间id，下面要用到</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319115238136.png" alt="image-20220319115238136"></p>
+<h3 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h3><p>在刚刚创建好的命名空间创建配置文件，创建步骤查看博客：<a href="https://blog.zoutl.cn/474.html">Spring Boot 读取 Nacos 的配置文件 </a>，配置文件位置为：命名空间&gt;&gt;分组&gt;&gt;配置文件，前面的包含后面的，不在同一个组的配置文件可以重名</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319120244832.png" alt="image-20220319120244832"></p>
+<h3 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h3><p>实现读取步骤查看博客：<a href="https://blog.zoutl.cn/474.html">Spring Boot 读取 Nacos 的配置文件 </a>，然后在<code>bootstrap.properties</code>中加上配置：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">spring.cloud.nacos.config.namespace</span>=<span class="string">cd6541df-8530-404f-8832-413a3cefa6</span></span><br></pre></td></tr></table></figure>
+
+<p>完整配置如下：</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment">#应用名称</span></span><br><span class="line"><span class="meta">spring.application.name</span>=<span class="string">nacos_config_test</span></span><br><span class="line"><span class="comment">#Nacos的IP地址和端口号</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.server-addr</span>=<span class="string">121.41.211.106:8848</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在命名空间id</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.namespace</span>=<span class="string">cd6541df-8530-404f-8832-413a3c118efa6</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在组名</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.group</span>=<span class="string">DEFAULT_GROUP</span></span><br><span class="line"><span class="comment">#要读取的配置文件名称</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.name</span>=<span class="string">nacos_config.properties</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Nacos</category>
+      </categories>
+      <tags>
         <tag>Nacos</tag>
       </tags>
   </entry>
@@ -16133,6 +16133,26 @@
       </tags>
   </entry>
   <entry>
+    <title>Windows10获取锁屏壁纸</title>
+    <url>/51.html</url>
+    <content><![CDATA[<h3 id="找到壁纸文件"><a href="#找到壁纸文件" class="headerlink" title="找到壁纸文件"></a>找到壁纸文件</h3><p>首先打开“文件资源管理器”，或者随便打开一个文件夹，在地址栏输入下面的路径后回车</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\%username%\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201113005633.jpg" alt="img"></p>
+<h3 id="修改扩展名"><a href="#修改扩展名" class="headerlink" title="修改扩展名"></a>修改扩展名</h3><p>这个文件夹就是锁屏壁纸的存放文件夹了。不过系统去掉了这些文件的扩展名，所以看到的全都是不能打开的文件，也不能设置为桌面背景。我们要修改这些文件的扩展名为png或jpg，让它们变成图片文件，才能设为壁纸。我们首先将这个文件夹Assets复制到桌面，然后点击开始菜单，输入cmd，打开“命令提示符”,输入下面的命令:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Ren C:\Users\%username%\Desktop\Assets\*.* *.png</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201113013308.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201113013349.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>Windows系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>自加（++）自减（--）运算</title>
     <url>/52.html</url>
     <content><![CDATA[<h3 id="单独使用时"><a href="#单独使用时" class="headerlink" title="单独使用时"></a>单独使用时</h3><p>放在操作数的前面和后面效果一样，这种用法是我们比较常见的</p>
@@ -16163,26 +16183,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows10获取锁屏壁纸</title>
-    <url>/51.html</url>
-    <content><![CDATA[<h3 id="找到壁纸文件"><a href="#找到壁纸文件" class="headerlink" title="找到壁纸文件"></a>找到壁纸文件</h3><p>首先打开“文件资源管理器”，或者随便打开一个文件夹，在地址栏输入下面的路径后回车</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">C:\Users\%username%\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201113005633.jpg" alt="img"></p>
-<h3 id="修改扩展名"><a href="#修改扩展名" class="headerlink" title="修改扩展名"></a>修改扩展名</h3><p>这个文件夹就是锁屏壁纸的存放文件夹了。不过系统去掉了这些文件的扩展名，所以看到的全都是不能打开的文件，也不能设置为桌面背景。我们要修改这些文件的扩展名为png或jpg，让它们变成图片文件，才能设为壁纸。我们首先将这个文件夹Assets复制到桌面，然后点击开始菜单，输入cmd，打开“命令提示符”,输入下面的命令:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Ren C:\Users\%username%\Desktop\Assets\*.* *.png</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201113013308.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201113013349.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>Windows系统</tag>
       </tags>
   </entry>
   <entry>
@@ -16906,22 +16906,6 @@
       </tags>
   </entry>
   <entry>
-    <title>二元运算符连接两个值</title>
-    <url>/84.html</url>
-    <content><![CDATA[<p>当用一个二元运算符连接两个值时（例如a+b，a是整数，b是浮点数），先要将两个操作数转换成同一种类型，然后再进行计算</p>
-<p>如果两个数中有一个是double类型，则另一个会转换成double类型（不满足当前条件则向下判断）</p>
-<p>否则，如果两个数中有一个是float类型，则另一个会转换成float类型</p>
-<p>否则，如果两个数中有一个是long类型，则另一个会转换成long类型</p>
-<p>否则，两个数都被转换成int类型</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用天气插件</title>
     <url>/85.html</url>
     <content><![CDATA[<h3 id="进入网址"><a href="#进入网址" class="headerlink" title="进入网址"></a>进入网址</h3><p><a href="https://www.tianqi.com/plugin/">天气预报代码_天气预报插件_免费天气预报代码(插件)调用——天气网</a></p>
@@ -16937,6 +16921,22 @@
       </categories>
       <tags>
         <tag>其它</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>二元运算符连接两个值</title>
+    <url>/84.html</url>
+    <content><![CDATA[<p>当用一个二元运算符连接两个值时（例如a+b，a是整数，b是浮点数），先要将两个操作数转换成同一种类型，然后再进行计算</p>
+<p>如果两个数中有一个是double类型，则另一个会转换成double类型（不满足当前条件则向下判断）</p>
+<p>否则，如果两个数中有一个是float类型，则另一个会转换成float类型</p>
+<p>否则，如果两个数中有一个是long类型，则另一个会转换成long类型</p>
+<p>否则，两个数都被转换成int类型</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
