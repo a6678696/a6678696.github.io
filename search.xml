@@ -200,29 +200,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Github私有仓库改为公开</title>
-    <url>/11.html</url>
-    <content><![CDATA[<blockquote>
-<p>进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/07/29/u3lyp6t9j2k4V1F.png" alt="20210227090442.jpg"></p>
-<blockquote>
-<p>在出现的页面找到 Danger Zone（在最下面），点击 Change visibility 按钮</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165133.jpg"></p>
-<blockquote>
-<p>然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入 GitHub 账号的密码即可修改完成</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165306.jpg"></p>
-]]></content>
-      <categories>
-        <category>GitHub</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>部落冲突攻略</title>
     <url>/110.html</url>
     <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
@@ -250,6 +227,29 @@
       </categories>
       <tags>
         <tag>部落冲突</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Github私有仓库改为公开</title>
+    <url>/11.html</url>
+    <content><![CDATA[<blockquote>
+<p>进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/29/u3lyp6t9j2k4V1F.png" alt="20210227090442.jpg"></p>
+<blockquote>
+<p>在出现的页面找到 Danger Zone（在最下面），点击 Change visibility 按钮</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165133.jpg"></p>
+<blockquote>
+<p>然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入 GitHub 账号的密码即可修改完成</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165306.jpg"></p>
+]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -1118,22 +1118,6 @@
       </tags>
   </entry>
   <entry>
-    <title>title标签加图标</title>
-    <url>/133.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;short icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/static/images/favicon.ico&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210603224943.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果是Vue项目，要将图片放在<code>static</code>文件夹下面，上面的代码放在<code>index.html</code>里面</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220330011609865.png" alt="image-20220330011609865"></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>jQuery让鼠标定位到指定输入框</title>
     <url>/132.html</url>
     <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;codeStyle&quot;</span> <span class="attr">class</span>=<span class="string">&quot;easyui-validatebox&quot;</span> <span class="attr">required</span>=<span class="string">&quot;true&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1147,6 +1131,22 @@
       </categories>
       <tags>
         <tag>jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>title标签加图标</title>
+    <url>/133.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;short icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/static/images/favicon.ico&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210603224943.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果是Vue项目，要将图片放在<code>static</code>文件夹下面，上面的代码放在<code>index.html</code>里面</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220330011609865.png" alt="image-20220330011609865"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -1659,23 +1659,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows10系统定时关机cmd命令</title>
-    <url>/15.html</url>
-    <content><![CDATA[<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a><strong>定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 7200</span><br></pre></td></tr></table></figure>
-
-<p>最后面的数字为秒,一小时等于 3600 秒</p>
-<h3 id="取消定时关机"><a href="#取消定时关机" class="headerlink" title="取消定时关机"></a><strong>取消定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown /a</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>Windows系统</tag>
-        <tag>cmd</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>查看CentOS7的IP</title>
     <url>/149.html</url>
     <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
@@ -1693,6 +1676,23 @@
       </categories>
       <tags>
         <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows10系统定时关机cmd命令</title>
+    <url>/15.html</url>
+    <content><![CDATA[<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a><strong>定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 7200</span><br></pre></td></tr></table></figure>
+
+<p>最后面的数字为秒,一小时等于 3600 秒</p>
+<h3 id="取消定时关机"><a href="#取消定时关机" class="headerlink" title="取消定时关机"></a><strong>取消定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown /a</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>Windows系统</tag>
+        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
@@ -3427,34 +3427,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java环境配置</title>
-    <url>/2.html</url>
-    <content><![CDATA[<h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p>网上有很多教程，这里就不说明了</p>
-<h3 id="配置Java环境"><a href="#配置Java环境" class="headerlink" title="配置Java环境"></a>配置Java环境</h3><p>右击”我的电脑”，点击”属性”，选择”高级系统设置”</p>
-<h4 id="配置变量：JAVA-HOME"><a href="#配置变量：JAVA-HOME" class="headerlink" title="配置变量：JAVA_HOME"></a>配置变量：JAVA_HOME</h4><p>本地JDK安装路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">F:\java\jdk1.8.0_92</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010123055.jpg"></p>
-<h4 id="配置变量：classpath"><a href="#配置变量：classpath" class="headerlink" title="配置变量：classpath"></a>配置变量：classpath</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010123126.jpg"></p>
-<h4 id="配置变量：Path"><a href="#配置变量：Path" class="headerlink" title="配置变量：Path"></a>配置变量：Path</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">F:\java\jdk1.8.0_92\bin</span><br><span class="line">F:\java\jre\bin</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020230001.jpg" alt="20201010123126.jpg"></p>
-<h3 id="测试JDK是否安装成功"><a href="#测试JDK是否安装成功" class="headerlink" title="测试JDK是否安装成功"></a><strong>测试JDK是否安装成功</strong></h3><h4 id="打开cmd"><a href="#打开cmd" class="headerlink" title="打开cmd"></a>打开cmd</h4><p>快捷键：win+R，输入CMD</p>
-<h4 id="输入下面的命令"><a href="#输入下面的命令" class="headerlink" title="输入下面的命令"></a>输入下面的命令</h4><p>键入命令: java -version、java、javac 几个命令，出现以下信息，说明环境变量配置成功；</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124737.jpg" alt="20201010123126.jpg"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124749.jpg" alt="20201010123126.jpg"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124800.jpg" alt="20201010123126.jpg"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>进制</title>
     <url>/20.html</url>
     <content><![CDATA[<h3 id="十进制"><a href="#十进制" class="headerlink" title="十进制"></a>十进制</h3><p>我们平时所有的数字就是十进制</p>
@@ -3490,6 +3462,34 @@
       </tags>
   </entry>
   <entry>
+    <title>Java环境配置</title>
+    <url>/2.html</url>
+    <content><![CDATA[<h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p>网上有很多教程，这里就不说明了</p>
+<h3 id="配置Java环境"><a href="#配置Java环境" class="headerlink" title="配置Java环境"></a>配置Java环境</h3><p>右击”我的电脑”，点击”属性”，选择”高级系统设置”</p>
+<h4 id="配置变量：JAVA-HOME"><a href="#配置变量：JAVA-HOME" class="headerlink" title="配置变量：JAVA_HOME"></a>配置变量：JAVA_HOME</h4><p>本地JDK安装路径</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">F:\java\jdk1.8.0_92</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010123055.jpg"></p>
+<h4 id="配置变量：classpath"><a href="#配置变量：classpath" class="headerlink" title="配置变量：classpath"></a>配置变量：classpath</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar </span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010123126.jpg"></p>
+<h4 id="配置变量：Path"><a href="#配置变量：Path" class="headerlink" title="配置变量：Path"></a>配置变量：Path</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">F:\java\jdk1.8.0_92\bin</span><br><span class="line">F:\java\jre\bin</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020230001.jpg" alt="20201010123126.jpg"></p>
+<h3 id="测试JDK是否安装成功"><a href="#测试JDK是否安装成功" class="headerlink" title="测试JDK是否安装成功"></a><strong>测试JDK是否安装成功</strong></h3><h4 id="打开cmd"><a href="#打开cmd" class="headerlink" title="打开cmd"></a>打开cmd</h4><p>快捷键：win+R，输入CMD</p>
+<h4 id="输入下面的命令"><a href="#输入下面的命令" class="headerlink" title="输入下面的命令"></a>输入下面的命令</h4><p>键入命令: java -version、java、javac 几个命令，出现以下信息，说明环境变量配置成功；</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124737.jpg" alt="20201010123126.jpg"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124749.jpg" alt="20201010123126.jpg"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124800.jpg" alt="20201010123126.jpg"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安装vue-cli脚手架</title>
     <url>/200.html</url>
     <content><![CDATA[<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p>官网：<a href="https://nodejs.org/">https://nodejs.org</a></p>
@@ -3507,6 +3507,27 @@
       <tags>
         <tag>Vue.js</tag>
         <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>基于vue-cli搭建自己的项目</title>
+    <url>/202.html</url>
+    <content><![CDATA[<p>在src/components下新建一个HelloWorld.vue文件，每个.vue文件都包括三个部分：&lt;template&gt;模版代码块，&lt;script&gt;是js代码块，&lt;style&gt;是样式代码块，其中如果&lt;style&gt;使用了scoped属性（让当前组件的样式不会修改到其它地方的样式，在父组件中是不能直接修改子组件的样式的，需要在父组件中使用vue的深度作用选择器），该样式只在本.vue文件下生效</p>
+<h3 id="HelloWolrd-vue"><a href="#HelloWolrd-vue" class="headerlink" title="HelloWolrd.vue"></a>HelloWolrd.vue</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span>&#123;&#123; info &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;HelloWorld&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  data () &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">info</span>: <span class="string">&#x27;Hello Vue!&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-class">.info</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="css">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改App-vue"><a href="#修改App-vue" class="headerlink" title="修改App.vue"></a>修改App.vue</h3><p>删除App.vue的全部代码，重写，在&lt;template&gt;中使用组件，&lt;script&gt;中引入组件，&lt;style&gt;中写样式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">HelloWorld</span>&gt;</span><span class="tag">&lt;/<span class="name">HelloWorld</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">&#x27;./components/HelloWorld&#x27;</span><span class="comment">//引入组件HelloWorld.vue</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;App&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//映射组件标签,可以写成HelloWorld:HelloWorld,如果文件名和组件名一样那么可简写成HelloWorld</span></span></span><br><span class="line"><span class="javascript">    HelloWorld</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改main-js"><a href="#修改main-js" class="headerlink" title="修改main.js"></a>修改main.js</h3><p>src下的main.js 这个是项目入口配置文件，代码也删除重写</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">入口js:创建实例</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  <span class="attr">components</span>:&#123;</span><br><span class="line">    App</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">template</span>:<span class="string">&#x27;&lt;App&gt;&lt;/App&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626215741.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
       </tags>
   </entry>
   <entry>
@@ -3549,27 +3570,6 @@
       <tags>
         <tag>Vue.js</tag>
         <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基于vue-cli搭建自己的项目</title>
-    <url>/202.html</url>
-    <content><![CDATA[<p>在src/components下新建一个HelloWorld.vue文件，每个.vue文件都包括三个部分：&lt;template&gt;模版代码块，&lt;script&gt;是js代码块，&lt;style&gt;是样式代码块，其中如果&lt;style&gt;使用了scoped属性（让当前组件的样式不会修改到其它地方的样式，在父组件中是不能直接修改子组件的样式的，需要在父组件中使用vue的深度作用选择器），该样式只在本.vue文件下生效</p>
-<h3 id="HelloWolrd-vue"><a href="#HelloWolrd-vue" class="headerlink" title="HelloWolrd.vue"></a>HelloWolrd.vue</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span>&#123;&#123; info &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;HelloWorld&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  data () &#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="javascript">      <span class="attr">info</span>: <span class="string">&#x27;Hello Vue!&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-class">.info</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="css">  <span class="attribute">font-size</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改App-vue"><a href="#修改App-vue" class="headerlink" title="修改App.vue"></a>修改App.vue</h3><p>删除App.vue的全部代码，重写，在&lt;template&gt;中使用组件，&lt;script&gt;中引入组件，&lt;style&gt;中写样式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">HelloWorld</span>&gt;</span><span class="tag">&lt;/<span class="name">HelloWorld</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> HelloWorld <span class="keyword">from</span> <span class="string">&#x27;./components/HelloWorld&#x27;</span><span class="comment">//引入组件HelloWorld.vue</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="attr">name</span>: <span class="string">&#x27;App&#x27;</span>,</span></span><br><span class="line"><span class="javascript">  <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="javascript">    <span class="comment">//映射组件标签,可以写成HelloWorld:HelloWorld,如果文件名和组件名一样那么可简写成HelloWorld</span></span></span><br><span class="line"><span class="javascript">    HelloWorld</span></span><br><span class="line"><span class="javascript">  &#125;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改main-js"><a href="#修改main-js" class="headerlink" title="修改main.js"></a>修改main.js</h3><p>src下的main.js 这个是项目入口配置文件，代码也删除重写</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">入口js:创建实例</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App&#x27;</span></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">  <span class="attr">components</span>:&#123;</span><br><span class="line">    App</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">template</span>:<span class="string">&#x27;&lt;App&gt;&lt;/App&gt;&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626215741.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
       </tags>
   </entry>
   <entry>
@@ -5192,6 +5192,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Maven出现错误：&quot;Parent, please verify your project structure&quot;的解决办法</title>
+    <url>/259.html</url>
+    <content><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>该错误出现在使用parent节点继承其它模块的依赖版本号时</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>在parent节点加入&lt;relativePath/&gt;，完整parent节点如下：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>Parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Maven</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Maven使用parent统一管理依赖版本</title>
     <url>/258.html</url>
     <content><![CDATA[<h3 id="新建子模块"><a href="#新建子模块" class="headerlink" title="新建子模块"></a>新建子模块</h3><p>新建一个Maven子模块并命名为Parent，不需要勾选Create from archetype，删除src文件夹</p>
@@ -5217,20 +5231,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Maven出现错误：&quot;Parent, please verify your project structure&quot;的解决办法</title>
-    <url>/259.html</url>
-    <content><![CDATA[<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>该错误出现在使用parent节点继承其它模块的依赖版本号时</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>在parent节点加入&lt;relativePath/&gt;，完整parent节点如下：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>Parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Maven</category>
-      </categories>
-      <tags>
         <tag>Maven</tag>
       </tags>
   </entry>
@@ -5471,44 +5471,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ribbon调用服务</title>
-    <url>/269.html</url>
-    <content><![CDATA[<h3 id="Ribbon简介"><a href="#Ribbon简介" class="headerlink" title="Ribbon简介"></a>Ribbon简介</h3><p>Ribbon是Netflix发布的负载均衡器，它有助于控制HTTP和TCP的客户端的行为。为Ribbon配置服务提供者地址后，Ribbon就可基于某种负载均衡算法，自动地帮助服务消费者去请求。Ribbon默认为我们提供了很多负载均衡算法，例如轮询、随机等。当然，我们也可为Ribbon实现自定义的负载均衡算法。</p>
-<p>在Spring Cloud中，当Ribbon与Eureka配合使用时，Ribbon可自动从Eureka Server获取服务提供者地址列表，并基于负载均衡算法，请求其中一个服务提供者实例。下图展示了Ribbon与Eureka配合使用时的架构。</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20222222.jpg"></p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><p>我们修改microservice-student-consumer-80子模块项目</p>
-<h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-ribbon<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>添加下面内容：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">register-with-eureka:</span> <span class="literal">false</span> <span class="comment">#false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://eureka2001.ledao.com:2001/eureka/,http://eureka2002.ledao.com:2002/eureka/,http://eureka2003.ledao.com:2003/eureka/</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="添加-LoadBalanced注解"><a href="#添加-LoadBalanced注解" class="headerlink" title="添加@LoadBalanced注解"></a>添加@LoadBalanced注解</h4><p>SpringCloudConfig.java的getRestTemplate()方法上添加@LoadBalanced注解（负载均衡配置）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.client.loadbalancer.LoadBalanced;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.client.RestTemplate;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SpringCloud相关配置</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 14:46</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringCloudConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调用服务模版</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@LoadBalanced</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RestTemplate <span class="title">getRestTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加注解-EnableEurekaClient"><a href="#添加注解-EnableEurekaClient" class="headerlink" title="添加注解@EnableEurekaClient"></a>添加注解@EnableEurekaClient</h4><p>因为和eureka整合，所以启动类StudentConsumerApplication_80 加个注解 @EnableEurekaClient</p>
-<h4 id="指定应用名称"><a href="#指定应用名称" class="headerlink" title="指定应用名称"></a>指定应用名称</h4><p>在服务提供者microservice-student-provider-1001的application.yml以下配置（microservice-student为微服务应用名称）</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">application:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">microservice-student</span></span><br></pre></td></tr></table></figure>
-
-<p>在spring配置下添加，完整spring配置如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="修改PRE-HOST"><a href="#修改PRE-HOST" class="headerlink" title="修改PRE_HOST"></a>修改PRE_HOST</h4><p>修改服务消费者子模块项目的StudentConsumerController.java中的PRE_HOST为 <a href="http://microservice-student/">http://MICROSERVICE-STUDENT</a></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PRE_HOST = <span class="string">&quot;http://MICROSERVICE-STUDENT&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>依次运行microservice-eureka-server-2001、microservice-eureka-server-2002、microservice-eureka-server-2003、microservice-student-provider-1001、microservice-student-consumer-80子模块项目</p>
-<p>浏览器地址栏输入：<a href="http://localhost/student/list">http://localhost/student/list</a> ，出现下面结果说明调用服务成功（下面是格式化过的JSON串）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20232700.png"></p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-        <tag>Eureka</tag>
-        <tag>Ribbon</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Eureka注册中心高可用集群配置</title>
     <url>/268.html</url>
     <content><![CDATA[<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>当注册中心扛不住高并发时，就需要集群了</p>
@@ -5553,6 +5515,44 @@
       <tags>
         <tag>Spring Cloud</tag>
         <tag>Eureka</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ribbon调用服务</title>
+    <url>/269.html</url>
+    <content><![CDATA[<h3 id="Ribbon简介"><a href="#Ribbon简介" class="headerlink" title="Ribbon简介"></a>Ribbon简介</h3><p>Ribbon是Netflix发布的负载均衡器，它有助于控制HTTP和TCP的客户端的行为。为Ribbon配置服务提供者地址后，Ribbon就可基于某种负载均衡算法，自动地帮助服务消费者去请求。Ribbon默认为我们提供了很多负载均衡算法，例如轮询、随机等。当然，我们也可为Ribbon实现自定义的负载均衡算法。</p>
+<p>在Spring Cloud中，当Ribbon与Eureka配合使用时，Ribbon可自动从Eureka Server获取服务提供者地址列表，并基于负载均衡算法，请求其中一个服务提供者实例。下图展示了Ribbon与Eureka配合使用时的架构。</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20222222.jpg"></p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><p>我们修改microservice-student-consumer-80子模块项目</p>
+<h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-ribbon<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>添加下面内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">register-with-eureka:</span> <span class="literal">false</span> <span class="comment">#false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://eureka2001.ledao.com:2001/eureka/,http://eureka2002.ledao.com:2002/eureka/,http://eureka2003.ledao.com:2003/eureka/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="添加-LoadBalanced注解"><a href="#添加-LoadBalanced注解" class="headerlink" title="添加@LoadBalanced注解"></a>添加@LoadBalanced注解</h4><p>SpringCloudConfig.java的getRestTemplate()方法上添加@LoadBalanced注解（负载均衡配置）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.client.loadbalancer.LoadBalanced;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.client.RestTemplate;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SpringCloud相关配置</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 14:46</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringCloudConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调用服务模版</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@LoadBalanced</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RestTemplate <span class="title">getRestTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加注解-EnableEurekaClient"><a href="#添加注解-EnableEurekaClient" class="headerlink" title="添加注解@EnableEurekaClient"></a>添加注解@EnableEurekaClient</h4><p>因为和eureka整合，所以启动类StudentConsumerApplication_80 加个注解 @EnableEurekaClient</p>
+<h4 id="指定应用名称"><a href="#指定应用名称" class="headerlink" title="指定应用名称"></a>指定应用名称</h4><p>在服务提供者microservice-student-provider-1001的application.yml以下配置（microservice-student为微服务应用名称）</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">application:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">microservice-student</span></span><br></pre></td></tr></table></figure>
+
+<p>在spring配置下添加，完整spring配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改PRE-HOST"><a href="#修改PRE-HOST" class="headerlink" title="修改PRE_HOST"></a>修改PRE_HOST</h4><p>修改服务消费者子模块项目的StudentConsumerController.java中的PRE_HOST为 <a href="http://microservice-student/">http://MICROSERVICE-STUDENT</a></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PRE_HOST = <span class="string">&quot;http://MICROSERVICE-STUDENT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>依次运行microservice-eureka-server-2001、microservice-eureka-server-2002、microservice-eureka-server-2003、microservice-student-provider-1001、microservice-student-consumer-80子模块项目</p>
+<p>浏览器地址栏输入：<a href="http://localhost/student/list">http://localhost/student/list</a> ，出现下面结果说明调用服务成功（下面是格式化过的JSON串）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20232700.png"></p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Eureka</tag>
+        <tag>Ribbon</tag>
       </tags>
   </entry>
   <entry>
@@ -8838,6 +8838,38 @@
       </tags>
   </entry>
   <entry>
+    <title>短路与&amp;&amp;和逻辑与&amp;、短路或||和逻辑或|的区别</title>
+    <url>/35.html</url>
+    <content><![CDATA[<h3 id="短路-amp-amp-和逻辑-amp"><a href="#短路-amp-amp-和逻辑-amp" class="headerlink" title="短路&amp;&amp;和逻辑&amp;"></a>短路&amp;&amp;和逻辑&amp;</h3><p>相同点：</p>
+<p>有假则为假，全真则为真（有假必假，全真为真）</p>
+<p>区别：</p>
+<p>逻辑与&amp;的判断方式是：从左到右依次判断，直到结尾（逻辑全程运算）</p>
+<p>短路与&amp;&amp;的判断方式是：从左到右依次判断，直到出现false为止将不再判断，直接得到结果为false（短路遇false就停）</p>
+<p>示例：</p>
+<p>逻辑与&amp;</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020162940.jpg" alt="img"></p>
+<p>短路与&amp;&amp;</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020163050.jpg" alt="img"></p>
+<h3 id="短路-和逻辑"><a href="#短路-和逻辑" class="headerlink" title="短路||和逻辑|"></a>短路||和逻辑|</h3><p>共同点：</p>
+<p>有真则为真，全假则为假（有真必真，全假为假）</p>
+<p>区别：</p>
+<p>逻辑或|的判断方式是：从左到右依次判断，直到结尾</p>
+<p>短路或||的判断方式是：从左到右依次判断，直到出现true为止将不再判断，直接得到结果为true（短路遇true就停止）</p>
+<p>示例：</p>
+<p>逻辑或|</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020165415.jpg" alt="img"></p>
+<p>短路或||</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020165551.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>开发的时候用短路与&amp;&amp;和短路或||，可以减少程序运行时间</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>RabbitMQ实现路由模式Routing</title>
     <url>/349.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-05%20124523.png"></p>
@@ -8873,38 +8905,6 @@
       </categories>
       <tags>
         <tag>RabbitMQ</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>短路与&amp;&amp;和逻辑与&amp;、短路或||和逻辑或|的区别</title>
-    <url>/35.html</url>
-    <content><![CDATA[<h3 id="短路-amp-amp-和逻辑-amp"><a href="#短路-amp-amp-和逻辑-amp" class="headerlink" title="短路&amp;&amp;和逻辑&amp;"></a>短路&amp;&amp;和逻辑&amp;</h3><p>相同点：</p>
-<p>有假则为假，全真则为真（有假必假，全真为真）</p>
-<p>区别：</p>
-<p>逻辑与&amp;的判断方式是：从左到右依次判断，直到结尾（逻辑全程运算）</p>
-<p>短路与&amp;&amp;的判断方式是：从左到右依次判断，直到出现false为止将不再判断，直接得到结果为false（短路遇false就停）</p>
-<p>示例：</p>
-<p>逻辑与&amp;</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020162940.jpg" alt="img"></p>
-<p>短路与&amp;&amp;</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020163050.jpg" alt="img"></p>
-<h3 id="短路-和逻辑"><a href="#短路-和逻辑" class="headerlink" title="短路||和逻辑|"></a>短路||和逻辑|</h3><p>共同点：</p>
-<p>有真则为真，全假则为假（有真必真，全假为假）</p>
-<p>区别：</p>
-<p>逻辑或|的判断方式是：从左到右依次判断，直到结尾</p>
-<p>短路或||的判断方式是：从左到右依次判断，直到出现true为止将不再判断，直接得到结果为true（短路遇true就停止）</p>
-<p>示例：</p>
-<p>逻辑或|</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020165415.jpg" alt="img"></p>
-<p>短路或||</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020165551.jpg" alt="img"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>开发的时候用短路与&amp;&amp;和短路或||，可以减少程序运行时间</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -11000,26 +11000,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Nginx绑定二级域名到指定端口</title>
-    <url>/391.html</url>
-    <content><![CDATA[<p>我的Nginx版本号为：1.20.2，配置文件路径为：/etc/nginx，在conf.d文件夹的conf.d文件中添加以下代码：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">upstream</span> <span class="string">blog</span> &#123;</span><br><span class="line">  <span class="comment">#绑定8080端口</span></span><br><span class="line">  <span class="string">server</span> <span class="string">localhost:8080;</span></span><br><span class="line">  <span class="comment">#集群</span></span><br><span class="line">  <span class="comment">#server localhost:8081;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="string">server</span> &#123;</span><br><span class="line">    <span class="string">listen</span>       <span class="number">80</span><span class="string">;</span> </span><br><span class="line">    <span class="string">server_name</span>  <span class="string">www.zoutl.cn;</span> <span class="comment">#要绑定二级域名</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#charset koi8-r;</span></span><br><span class="line">    <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line">    <span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">        <span class="comment">#root   html;</span></span><br><span class="line">        <span class="comment">#index  index.html index.htm;</span></span><br><span class="line">      <span class="string">proxy_pass</span> <span class="string">http://blog;</span> <span class="comment">#要和指定的upstream相对应</span></span><br><span class="line">      <span class="string">proxy_connect_timeout</span> <span class="number">30</span><span class="string">;</span> <span class="comment">#连接超时 默认为60秒</span></span><br><span class="line">      <span class="string">proxy_read_timeout</span> <span class="number">30</span><span class="string">;</span> <span class="comment">#读取超时 默认为60秒</span></span><br><span class="line">      <span class="string">proxy_send_timeout</span> <span class="number">30</span><span class="string">;</span> <span class="comment">#发送超时 默认为60秒</span></span><br><span class="line">      <span class="string">access_log</span> <span class="string">off;</span></span><br><span class="line">      <span class="string">break;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#error_page  404              /404.html;</span></span><br><span class="line">    <span class="comment"># redirect server error pages to the static page /50x.html</span></span><br><span class="line">    <span class="string">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  <span class="string">/50x.html;</span></span><br><span class="line">    <span class="string">location</span> <span class="string">=</span> <span class="string">/50x.html</span> &#123;</span><br><span class="line">        <span class="string">root</span>   <span class="string">html;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>将上面代码复制过来后，要修改的地方有三处：</p>
-<ol>
-<li>upstream的名称，以及upstream里的端口号</li>
-<li>server下的server_name，server_name的值为二级域名</li>
-<li>server下的location /的proxy_pass填<code>http://upstream的名称</code></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Nginx</category>
-      </categories>
-      <tags>
-        <tag>Nginx</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea修改新建项目时Maven默认本地仓库地址</title>
     <url>/390.html</url>
     <content><![CDATA[<blockquote>
@@ -11037,6 +11017,26 @@
       <tags>
         <tag>Maven</tag>
         <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx绑定二级域名到指定端口</title>
+    <url>/391.html</url>
+    <content><![CDATA[<p>我的Nginx版本号为：1.20.2，配置文件路径为：/etc/nginx，在conf.d文件夹的conf.d文件中添加以下代码：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">upstream</span> <span class="string">blog</span> &#123;</span><br><span class="line">  <span class="comment">#绑定8080端口</span></span><br><span class="line">  <span class="string">server</span> <span class="string">localhost:8080;</span></span><br><span class="line">  <span class="comment">#集群</span></span><br><span class="line">  <span class="comment">#server localhost:8081;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="string">server</span> &#123;</span><br><span class="line">    <span class="string">listen</span>       <span class="number">80</span><span class="string">;</span> </span><br><span class="line">    <span class="string">server_name</span>  <span class="string">www.zoutl.cn;</span> <span class="comment">#要绑定二级域名</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">#charset koi8-r;</span></span><br><span class="line">    <span class="comment">#access_log  logs/host.access.log  main;</span></span><br><span class="line">    <span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">        <span class="comment">#root   html;</span></span><br><span class="line">        <span class="comment">#index  index.html index.htm;</span></span><br><span class="line">      <span class="string">proxy_pass</span> <span class="string">http://blog;</span> <span class="comment">#要和指定的upstream相对应</span></span><br><span class="line">      <span class="string">proxy_connect_timeout</span> <span class="number">30</span><span class="string">;</span> <span class="comment">#连接超时 默认为60秒</span></span><br><span class="line">      <span class="string">proxy_read_timeout</span> <span class="number">30</span><span class="string">;</span> <span class="comment">#读取超时 默认为60秒</span></span><br><span class="line">      <span class="string">proxy_send_timeout</span> <span class="number">30</span><span class="string">;</span> <span class="comment">#发送超时 默认为60秒</span></span><br><span class="line">      <span class="string">access_log</span> <span class="string">off;</span></span><br><span class="line">      <span class="string">break;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#error_page  404              /404.html;</span></span><br><span class="line">    <span class="comment"># redirect server error pages to the static page /50x.html</span></span><br><span class="line">    <span class="string">error_page</span>   <span class="number">500</span> <span class="number">502</span> <span class="number">503</span> <span class="number">504</span>  <span class="string">/50x.html;</span></span><br><span class="line">    <span class="string">location</span> <span class="string">=</span> <span class="string">/50x.html</span> &#123;</span><br><span class="line">        <span class="string">root</span>   <span class="string">html;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将上面代码复制过来后，要修改的地方有三处：</p>
+<ol>
+<li>upstream的名称，以及upstream里的端口号</li>
+<li>server下的server_name，server_name的值为二级域名</li>
+<li>server下的location /的proxy_pass填<code>http://upstream的名称</code></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
@@ -11960,19 +11960,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML取消页面的左右滚动条</title>
-    <url>/419.html</url>
-    <content><![CDATA[<p>要取消滚动条，只需要将<code>&lt;body&gt;</code>标签样式的overflow-x或overflow-y设置为hidden即可，其中overflow-x为左右滚动条，overflow-y为上下滚动条，代码示例如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">&quot;overflow-x: hidden&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>十大经典排序算法之快速排序</title>
     <url>/42.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>快速排序的基本思想：通过一趟排序将待排记录分隔成独立的两部分，其中一部分记录的关键字均比另一部分的关键字小，则可分别对这两部分记录继续进行排序，以达到整个序列有序</p>
@@ -11996,6 +11983,19 @@
       <tags>
         <tag>Java</tag>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML取消页面的左右滚动条</title>
+    <url>/419.html</url>
+    <content><![CDATA[<p>要取消滚动条，只需要将<code>&lt;body&gt;</code>标签样式的overflow-x或overflow-y设置为hidden即可，其中overflow-x为左右滚动条，overflow-y为上下滚动条，代码示例如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">&quot;overflow-x: hidden&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -15300,6 +15300,34 @@
       </tags>
   </entry>
   <entry>
+    <title>安装JMeter</title>
+    <url>/488.html</url>
+    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载地址：<a href="https://jmeter.apache.org/download_jmeter.cgi">Apache JMeter - Download Apache JMeter</a></p>
+<p>下载zip压缩包的那个，解压后即可使用</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054208135.png" alt="image-20220402054208135"></p>
+<h3 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h3><p>解压后，进入<code>bin</code>文件夹，双击<code>jmeter.bat</code>即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054503191.png" alt="image-20220402054503191"></p>
+<h3 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h3><h4 id="放大字体"><a href="#放大字体" class="headerlink" title="放大字体"></a>放大字体</h4><p>直接打开的话，可以看到界面的字体很小，我们需要将它放大一下</p>
+<blockquote>
+<p>打开<code>jmeter.properties</code>，修改jsyntaxtextarea.font.size的值，并把它前面的注释删除</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054738378.png" alt="image-20220402054738378"></p>
+<blockquote>
+<p>使用记事本工具打开jmeter.bat，在第一行下面加入以下代码：</p>
+</blockquote>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.controlFont=Dialog-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.systemFont=Dialog-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.userFont=SansSerif-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.smallFont=SansSerif-25</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改语言"><a href="#修改语言" class="headerlink" title="修改语言"></a>修改语言</h4><p>根据下图将语言修改为中文简体即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402055359121.png" alt="image-20220402055359121"></p>
+]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>其它</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ASCII码</title>
     <url>/49.html</url>
     <content><![CDATA[<h3 id="ASCII码的组成"><a href="#ASCII码的组成" class="headerlink" title="ASCII码的组成"></a>ASCII码的组成</h3><p>第一部分是：ASCII非打印控制字符</p>
@@ -16556,22 +16584,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java中的关键字</title>
-    <url>/7.html</url>
-    <content><![CDATA[<p>关键字的定义和特点：</p>
-<p>定义：被 Java 语言赋予了特殊含义的单词</p>
-<p>特点：关键字中所有字母都为小写</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010141136.jpg"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010141148.jpg" alt="20210227090442.jpg"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SQL里面的排序语句DESC和ASC</title>
     <url>/69.html</url>
     <content><![CDATA[<h3 id="DESC"><a href="#DESC" class="headerlink" title="DESC"></a>DESC</h3><p>用 DESC表示按倒序排序(即：从大到小排序) —降序排列</p>
@@ -16590,6 +16602,22 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java中的关键字</title>
+    <url>/7.html</url>
+    <content><![CDATA[<p>关键字的定义和特点：</p>
+<p>定义：被 Java 语言赋予了特殊含义的单词</p>
+<p>特点：关键字中所有字母都为小写</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010141136.jpg"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010141148.jpg" alt="20210227090442.jpg"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>

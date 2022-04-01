@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-03-29T09:26:45.208Z</updated>
+  <updated>2022-04-01T21:55:03.778Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安装JMeter</title>
+    <link href="https://blog.zoutl.cn/488.html"/>
+    <id>https://blog.zoutl.cn/488.html</id>
+    <published>2022-04-01T21:39:16.000Z</published>
+    <updated>2022-04-01T21:55:03.778Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载地址：<a href="https://jmeter.apache.org/download_jmeter.cgi">Apache JMeter - Download Apache JMeter</a></p><p>下载zip压缩包的那个，解压后即可使用</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054208135.png" alt="image-20220402054208135"></p><h3 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h3><p>解压后，进入<code>bin</code>文件夹，双击<code>jmeter.bat</code>即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054503191.png" alt="image-20220402054503191"></p><h3 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h3><h4 id="放大字体"><a href="#放大字体" class="headerlink" title="放大字体"></a>放大字体</h4><p>直接打开的话，可以看到界面的字体很小，我们需要将它放大一下</p><blockquote><p>打开<code>jmeter.properties</code>，修改jsyntaxtextarea.font.size的值，并把它前面的注释删除</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054738378.png" alt="image-20220402054738378"></p><blockquote><p>使用记事本工具打开jmeter.bat，在第一行下面加入以下代码：</p></blockquote><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.controlFont=Dialog-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.systemFont=Dialog-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.userFont=SansSerif-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.smallFont=SansSerif-25</span></span><br></pre></td></tr></table></figure><h4 id="修改语言"><a href="#修改语言" class="headerlink" title="修改语言"></a>修改语言</h4><p>根据下图将语言修改为中文简体即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402055359121.png" alt="image-20220402055359121"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; title=&quot;下载&quot;&gt;&lt;/a&gt;下载&lt;/h3&gt;&lt;p&gt;下载地址：&lt;a href=&quot;https://jmeter.apache.org/download_jmeter.cgi&quot;&gt;Apache JM</summary>
+      
+    
+    
+    
+    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="其它" scheme="https://blog.zoutl.cn/tags/%E5%85%B6%E5%AE%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring Boot项目在新版idea配置热部署</title>
@@ -496,31 +520,6 @@
     
     
     <category term="idea使用" scheme="https://blog.zoutl.cn/tags/idea%E4%BD%BF%E7%94%A8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IDM无法捕获以及下载APK文件</title>
-    <link href="https://blog.zoutl.cn/468.html"/>
-    <id>https://blog.zoutl.cn/468.html</id>
-    <published>2022-03-14T05:02:47.000Z</published>
-    <updated>2022-03-26T11:21:32.780Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当我们点击网页上某个APK文件下载链接时，无法通过IDM下载，而是直接通过浏览器下载了，这是因为IDM默认不捕获APK下载链接</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置捕获APK文件"><a href="#配置捕获APK文件" class="headerlink" title="配置捕获APK文件"></a>配置捕获APK文件</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220314131001181.png" alt="image-20220314131001181"></p><h4 id="设置保存路径"><a href="#设置保存路径" class="headerlink" title="设置保存路径"></a>设置保存路径</h4><p>上面已经实现了通过IDM下载APK文件，接下来设置将下载好的APK文件保存到指定路径</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220314131422077.png" alt="image-20220314131422077"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;当我们点击网页上某个APK文件下载链接时，无法通过IDM下载，而是直接通过浏览器下载了，这是因为IDM默认不捕获APK下载链接&lt;/p&gt;
-&lt;h</summary>
-      
-    
-    
-    
-    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
-    
-    
-    <category term="IDM" scheme="https://blog.zoutl.cn/tags/IDM/"/>
     
   </entry>
   
