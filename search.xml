@@ -914,23 +914,6 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML+JavaScript动态获取当前时间</title>
-    <url>/128.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;tipForTime&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: #00B0E8;text-align: center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>当前时间:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;time&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: grey&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取当前时间</span></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">window</span>.requestAnimationFrame(getDate)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">window</span>.requestAnimationFrame(getDate)</span><br><span class="line">	&#125;, <span class="number">1000</span> / <span class="number">2</span>)</span><br><span class="line">	<span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">	<span class="keyword">var</span> year = d.getFullYear()  <span class="comment">//获取年</span></span><br><span class="line">	<span class="keyword">var</span> month = d.getMonth() + <span class="number">1</span>;  <span class="comment">//获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1</span></span><br><span class="line">	<span class="keyword">var</span> day = d.getDay()    <span class="comment">//获取日</span></span><br><span class="line">	<span class="keyword">var</span> days = d.getDate() <span class="comment">//获取日期</span></span><br><span class="line">	<span class="keyword">var</span> hour = d.getHours()   <span class="comment">//获取小时</span></span><br><span class="line">	<span class="keyword">var</span> minute = d.getMinutes()  <span class="comment">//获取分钟</span></span><br><span class="line">	<span class="keyword">var</span> second = d.getSeconds()   <span class="comment">//获取秒</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (month &lt; <span class="number">10</span>) month = <span class="string">&quot;0&quot;</span> + month</span><br><span class="line">	<span class="keyword">if</span> (days &lt; <span class="number">10</span>) days = <span class="string">&quot;0&quot;</span> + days</span><br><span class="line">	<span class="keyword">if</span> (hour &lt; <span class="number">10</span>) hour = <span class="string">&quot;0&quot;</span> + hour</span><br><span class="line">	<span class="keyword">if</span> (minute &lt; <span class="number">10</span>) minute = <span class="string">&quot;0&quot;</span> + minute</span><br><span class="line">	<span class="keyword">if</span> (second &lt; <span class="number">10</span>) second = <span class="string">&quot;0&quot;</span> + second</span><br><span class="line">	<span class="keyword">if</span> (hour &gt;= <span class="number">6</span> &amp;&amp; hour &lt; <span class="number">12</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;早上好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &gt;= <span class="number">12</span> &amp;&amp; hour &lt; <span class="number">19</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;下午好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &gt;= <span class="number">19</span> &amp;&amp; hour &lt; <span class="number">23</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;晚上好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;夜深了!请注意休息!!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> week = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;星期日&quot;</span>, <span class="string">&quot;星期一&quot;</span>, <span class="string">&quot;星期二&quot;</span>, <span class="string">&quot;星期三&quot;</span>, <span class="string">&quot;星期四&quot;</span>, <span class="string">&quot;星期五&quot;</span>, <span class="string">&quot;星期六&quot;</span>)</span><br><span class="line">	<span class="keyword">var</span> Tools = <span class="built_in">document</span>.getElementById(<span class="string">&quot;time&quot;</span>)</span><br><span class="line">	<span class="keyword">var</span> time = year + <span class="string">&quot;-&quot;</span> + month + <span class="string">&quot;-&quot;</span> + days + <span class="string">&quot; &quot;</span> + hour + <span class="string">&quot;:&quot;</span> + minute + <span class="string">&quot;:&quot;</span> + second+<span class="string">&quot;  &quot;</span>+week[day]</span><br><span class="line">	$(<span class="string">&quot;#time&quot;</span>).html(time);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601074858.jpg" alt="img"></strong></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/qq_40625778/article/details/88880786">HTML+JS动态获取当前时间_公众号：【C you again】-CSDN博客_js显示当前时间</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一套绝佳的图标字体库和CSS框架：Font Awesome图标</title>
     <url>/127.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Font Awesome是一套绝佳的图标字体库和CSS框架。</p>
@@ -942,6 +925,23 @@
 <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-car&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-car&quot;</span> <span class="attr">style</span>=<span class="string">&quot;font-size:48px;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-car&quot;</span> <span class="attr">style</span>=<span class="string">&quot;font-size:60px;color:red;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>查看更多图标以及来源：<a href="https://www.runoob.com/font-awesome/fontawesome-tutorial.html">Font Awesome 图标 | 菜鸟教程</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML+JavaScript动态获取当前时间</title>
+    <url>/128.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;tipForTime&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: #00B0E8;text-align: center&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>当前时间:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;time&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: grey&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取当前时间</span></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">window</span>.requestAnimationFrame(getDate)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getDate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">	<span class="built_in">window</span>.setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">window</span>.requestAnimationFrame(getDate)</span><br><span class="line">	&#125;, <span class="number">1000</span> / <span class="number">2</span>)</span><br><span class="line">	<span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">	<span class="keyword">var</span> year = d.getFullYear()  <span class="comment">//获取年</span></span><br><span class="line">	<span class="keyword">var</span> month = d.getMonth() + <span class="number">1</span>;  <span class="comment">//获取月，从 Date 对象返回月份 (0 ~ 11)，故在此处+1</span></span><br><span class="line">	<span class="keyword">var</span> day = d.getDay()    <span class="comment">//获取日</span></span><br><span class="line">	<span class="keyword">var</span> days = d.getDate() <span class="comment">//获取日期</span></span><br><span class="line">	<span class="keyword">var</span> hour = d.getHours()   <span class="comment">//获取小时</span></span><br><span class="line">	<span class="keyword">var</span> minute = d.getMinutes()  <span class="comment">//获取分钟</span></span><br><span class="line">	<span class="keyword">var</span> second = d.getSeconds()   <span class="comment">//获取秒</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (month &lt; <span class="number">10</span>) month = <span class="string">&quot;0&quot;</span> + month</span><br><span class="line">	<span class="keyword">if</span> (days &lt; <span class="number">10</span>) days = <span class="string">&quot;0&quot;</span> + days</span><br><span class="line">	<span class="keyword">if</span> (hour &lt; <span class="number">10</span>) hour = <span class="string">&quot;0&quot;</span> + hour</span><br><span class="line">	<span class="keyword">if</span> (minute &lt; <span class="number">10</span>) minute = <span class="string">&quot;0&quot;</span> + minute</span><br><span class="line">	<span class="keyword">if</span> (second &lt; <span class="number">10</span>) second = <span class="string">&quot;0&quot;</span> + second</span><br><span class="line">	<span class="keyword">if</span> (hour &gt;= <span class="number">6</span> &amp;&amp; hour &lt; <span class="number">12</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;早上好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &gt;= <span class="number">12</span> &amp;&amp; hour &lt; <span class="number">19</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;下午好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> <span class="keyword">if</span> (hour &gt;= <span class="number">19</span> &amp;&amp; hour &lt; <span class="number">23</span>) &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;晚上好!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		$(<span class="string">&quot;#tipForTime&quot;</span>).html(<span class="string">&quot;夜深了!请注意休息!!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> week = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">&quot;星期日&quot;</span>, <span class="string">&quot;星期一&quot;</span>, <span class="string">&quot;星期二&quot;</span>, <span class="string">&quot;星期三&quot;</span>, <span class="string">&quot;星期四&quot;</span>, <span class="string">&quot;星期五&quot;</span>, <span class="string">&quot;星期六&quot;</span>)</span><br><span class="line">	<span class="keyword">var</span> Tools = <span class="built_in">document</span>.getElementById(<span class="string">&quot;time&quot;</span>)</span><br><span class="line">	<span class="keyword">var</span> time = year + <span class="string">&quot;-&quot;</span> + month + <span class="string">&quot;-&quot;</span> + days + <span class="string">&quot; &quot;</span> + hour + <span class="string">&quot;:&quot;</span> + minute + <span class="string">&quot;:&quot;</span> + second+<span class="string">&quot;  &quot;</span>+week[day]</span><br><span class="line">	$(<span class="string">&quot;#time&quot;</span>).html(time);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210601074858.jpg" alt="img"></strong></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/qq_40625778/article/details/88880786">HTML+JS动态获取当前时间_公众号：【C you again】-CSDN博客_js显示当前时间</a></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -1118,22 +1118,6 @@
       </tags>
   </entry>
   <entry>
-    <title>jQuery让鼠标定位到指定输入框</title>
-    <url>/132.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;codeStyle&quot;</span> <span class="attr">class</span>=<span class="string">&quot;easyui-validatebox&quot;</span> <span class="attr">required</span>=<span class="string">&quot;true&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="string">&quot;#codeStyle&quot;</span>).get(<span class="number">0</span>).focus();</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/yyj108317/article/details/109045695">用jquery让鼠标定位输入框_白不懂黑的静的专栏-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>jQuery</category>
-      </categories>
-      <tags>
-        <tag>jQuery</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>title标签加图标</title>
     <url>/133.html</url>
     <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;short icon&quot;</span> <span class="attr">href</span>=<span class="string">&quot;/static/images/favicon.ico&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1147,6 +1131,22 @@
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jQuery让鼠标定位到指定输入框</title>
+    <url>/132.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;codeStyle&quot;</span> <span class="attr">class</span>=<span class="string">&quot;easyui-validatebox&quot;</span> <span class="attr">required</span>=<span class="string">&quot;true&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="string">&quot;#codeStyle&quot;</span>).get(<span class="number">0</span>).focus();</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/yyj108317/article/details/109045695">用jquery让鼠标定位输入框_白不懂黑的静的专栏-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>jQuery</category>
+      </categories>
+      <tags>
+        <tag>jQuery</tag>
       </tags>
   </entry>
   <entry>
@@ -1659,6 +1659,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Windows10系统定时关机cmd命令</title>
+    <url>/15.html</url>
+    <content><![CDATA[<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a><strong>定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 7200</span><br></pre></td></tr></table></figure>
+
+<p>最后面的数字为秒,一小时等于 3600 秒</p>
+<h3 id="取消定时关机"><a href="#取消定时关机" class="headerlink" title="取消定时关机"></a><strong>取消定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown /a</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>Windows系统</tag>
+        <tag>cmd</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>查看CentOS7的IP</title>
     <url>/149.html</url>
     <content><![CDATA[<h3 id="查看IP"><a href="#查看IP" class="headerlink" title="查看IP"></a>查看IP</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ip addr</span><br></pre></td></tr></table></figure>
@@ -1676,23 +1693,6 @@
       </categories>
       <tags>
         <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows10系统定时关机cmd命令</title>
-    <url>/15.html</url>
-    <content><![CDATA[<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a><strong>定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 7200</span><br></pre></td></tr></table></figure>
-
-<p>最后面的数字为秒,一小时等于 3600 秒</p>
-<h3 id="取消定时关机"><a href="#取消定时关机" class="headerlink" title="取消定时关机"></a><strong>取消定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown /a</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>Windows系统</tag>
-        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
@@ -2113,25 +2113,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CentOS7实时查看Tomcat运行日志</title>
-    <url>/159.html</url>
-    <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
-
-<p>该文件在Tomcat安装目录的logs目录下</p>
-<h3 id="实时查看Tomcat运行日志命令"><a href="#实时查看Tomcat运行日志命令" class="headerlink" title="实时查看Tomcat运行日志命令"></a>实时查看Tomcat运行日志命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tail -f /home/tomcat9/apache-tomcat-9.0.46/logs/catalina.out</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618035601.jpg" alt="img"></strong></p>
-<p><font color="#dd0000">按CTRL+C退出</font></p>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CentOS7部署Java项目速度很慢</title>
     <url>/158.html</url>
     <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
@@ -2147,6 +2128,25 @@
       </categories>
       <tags>
         <tag>Java</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS7实时查看Tomcat运行日志</title>
+    <url>/159.html</url>
+    <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
+
+<p>该文件在Tomcat安装目录的logs目录下</p>
+<h3 id="实时查看Tomcat运行日志命令"><a href="#实时查看Tomcat运行日志命令" class="headerlink" title="实时查看Tomcat运行日志命令"></a>实时查看Tomcat运行日志命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tail -f /home/tomcat9/apache-tomcat-9.0.46/logs/catalina.out</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果如下图"><a href="#结果如下图" class="headerlink" title="结果如下图"></a>结果如下图</h3><p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618035601.jpg" alt="img"></strong></p>
+<p><font color="#dd0000">按CTRL+C退出</font></p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
         <tag>CentOS7</tag>
       </tags>
   </entry>
@@ -4221,6 +4221,30 @@
       </tags>
   </entry>
   <entry>
+    <title>MyBatis-Plus Mapper CRUD 接口之Insert</title>
+    <url>/225.html</url>
+    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 插入一条记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(T entity)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>参数为要插入的实体</p>
+<p>该方法返回的是成功插入的数据条数，所以我们可以根据返回的结果是否大于0来判断是否插入成功，大于代表成功，反之则是失败</p>
+<h3 id="配置application-yml"><a href="#配置application-yml" class="headerlink" title="配置application.yml"></a>配置application.yml</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">id-type:</span> <span class="string">auto</span></span><br></pre></td></tr></table></figure>
+
+<p>目的：让插入的数据的id自增</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>Java代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	BlogType blogType = <span class="keyword">new</span> BlogType();</span><br><span class="line">	blogType.setName(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">	blogType.setSortNum(<span class="number">22</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.insert(blogType);</span><br><span class="line">	<span class="keyword">if</span> (result &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;插入成功&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;插入失败&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210723011628.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>MyBatis-Plus</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MyBatis-Plus</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MyBatis-Plus 条件构造器</title>
     <url>/226.html</url>
     <content><![CDATA[<h3 id="条件构造器层级关系"><a href="#条件构造器层级关系" class="headerlink" title="条件构造器层级关系"></a>条件构造器层级关系</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210723091224.jpg" alt="img"></p>
@@ -4243,30 +4267,6 @@
 <h4 id="UpdateWrapper"><a href="#UpdateWrapper" class="headerlink" title="UpdateWrapper"></a>UpdateWrapper</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">updateWrapper</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	UpdateWrapper&lt;BlogType&gt; blogTypeUpdateWrapper = <span class="keyword">new</span> UpdateWrapper&lt;&gt;();</span><br><span class="line">	<span class="comment">//id是28的数据</span></span><br><span class="line">	blogTypeUpdateWrapper.eq(<span class="string">&quot;id&quot;</span>, <span class="number">28</span>);</span><br><span class="line">	BlogType blogType = <span class="keyword">new</span> BlogType();</span><br><span class="line">	blogType.setName(<span class="string">&quot;spring&quot;</span>);</span><br><span class="line">	blogType.setSortNum(<span class="number">23</span>);</span><br><span class="line">	<span class="comment">//更新成功返回1,失败返回0,可用于判断是否更新成功</span></span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.update(blogType, blogTypeUpdateWrapper);</span><br><span class="line">	<span class="keyword">if</span> (result &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;更新成功!!&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;更新失败!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/m0_37034294/article/details/82917234">https://blog.csdn.net/m0_37034294/article/details/82917234</a></p>
-]]></content>
-      <categories>
-        <category>MyBatis-Plus</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>MyBatis-Plus</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MyBatis-Plus Mapper CRUD 接口之Insert</title>
-    <url>/225.html</url>
-    <content><![CDATA[<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 插入一条记录</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(T entity)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<p>参数为要插入的实体</p>
-<p>该方法返回的是成功插入的数据条数，所以我们可以根据返回的结果是否大于0来判断是否插入成功，大于代表成功，反之则是失败</p>
-<h3 id="配置application-yml"><a href="#配置application-yml" class="headerlink" title="配置application.yml"></a>配置application.yml</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">global-config:</span></span><br><span class="line">    <span class="attr">db-config:</span></span><br><span class="line">      <span class="attr">id-type:</span> <span class="string">auto</span></span><br></pre></td></tr></table></figure>
-
-<p>目的：让插入的数据的id自增</p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>Java代码</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	BlogType blogType = <span class="keyword">new</span> BlogType();</span><br><span class="line">	blogType.setName(<span class="string">&quot;222&quot;</span>);</span><br><span class="line">	blogType.setSortNum(<span class="number">22</span>);</span><br><span class="line">	<span class="keyword">int</span> result = blogTypeMapper.insert(blogType);</span><br><span class="line">	<span class="keyword">if</span> (result &gt; <span class="number">0</span>) &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;插入成功&quot;</span>);</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;插入失败&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>结果</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210723011628.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>MyBatis-Plus</category>
@@ -4847,6 +4847,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Java获取随机数</title>
+    <url>/246.html</url>
+    <content><![CDATA[<h3 id="System-currentTimeMillis"><a href="#System-currentTimeMillis" class="headerlink" title="System.currentTimeMillis()"></a>System.currentTimeMillis()</h3><p>通过System.currentTimeMillis()来获取随机数，实际上是获取当前时间毫秒数，它是long类型</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> l = System.currentTimeMillis();</span><br><span class="line">        System.out.println(l);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Math-random"><a href="#Math-random" class="headerlink" title="Math.random()"></a>Math.random()</h3><p>它返回的是0(包含)到1(不包含)之间的double值，如果要返回[0,100]的int整数，只需要将获得的结果乘以100再转换为int类型即可</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//[0,1)</span></span><br><span class="line">        <span class="keyword">double</span> d = Math.random();</span><br><span class="line">        System.out.println(d);</span><br><span class="line">        <span class="comment">//[0,100]</span></span><br><span class="line">        <span class="keyword">int</span> i = (<span class="keyword">int</span>) (d * <span class="number">100</span>);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Random-nextInt-int-bound"><a href="#Random-nextInt-int-bound" class="headerlink" title="Random.nextInt(int bound)"></a>Random.nextInt(int bound)</h3><p>获取[0,bound-1]的int整数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Random random = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="comment">//[0,99]</span></span><br><span class="line">        <span class="keyword">int</span> i = random.nextInt(<span class="number">100</span>);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>修改hexo新建博客的模板</title>
     <url>/247.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>通过<font color="#dd0000">hexo new “博客名称”</font>命令新建博客时，默认使用的模板是<font color="#dd0000">post.md</font>，该文件在站点根目录的<font color="#dd0000">scaffolds</font>文件夹中，修改hexo新建博客的模板一共有两种方法：①直接修改post.md ②新建自己的模板。以添加categories（分类）为例：</p>
@@ -4869,28 +4891,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java获取随机数</title>
-    <url>/246.html</url>
-    <content><![CDATA[<h3 id="System-currentTimeMillis"><a href="#System-currentTimeMillis" class="headerlink" title="System.currentTimeMillis()"></a>System.currentTimeMillis()</h3><p>通过System.currentTimeMillis()来获取随机数，实际上是获取当前时间毫秒数，它是long类型</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> l = System.currentTimeMillis();</span><br><span class="line">        System.out.println(l);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Math-random"><a href="#Math-random" class="headerlink" title="Math.random()"></a>Math.random()</h3><p>它返回的是0(包含)到1(不包含)之间的double值，如果要返回[0,100]的int整数，只需要将获得的结果乘以100再转换为int类型即可</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//[0,1)</span></span><br><span class="line">        <span class="keyword">double</span> d = Math.random();</span><br><span class="line">        System.out.println(d);</span><br><span class="line">        <span class="comment">//[0,100]</span></span><br><span class="line">        <span class="keyword">int</span> i = (<span class="keyword">int</span>) (d * <span class="number">100</span>);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Random-nextInt-int-bound"><a href="#Random-nextInt-int-bound" class="headerlink" title="Random.nextInt(int bound)"></a>Random.nextInt(int bound)</h3><p>获取[0,bound-1]的int整数</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Random random = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="comment">//[0,99]</span></span><br><span class="line">        <span class="keyword">int</span> i = random.nextInt(<span class="number">100</span>);</span><br><span class="line">        System.out.println(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -5471,6 +5471,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Ribbon调用服务</title>
+    <url>/269.html</url>
+    <content><![CDATA[<h3 id="Ribbon简介"><a href="#Ribbon简介" class="headerlink" title="Ribbon简介"></a>Ribbon简介</h3><p>Ribbon是Netflix发布的负载均衡器，它有助于控制HTTP和TCP的客户端的行为。为Ribbon配置服务提供者地址后，Ribbon就可基于某种负载均衡算法，自动地帮助服务消费者去请求。Ribbon默认为我们提供了很多负载均衡算法，例如轮询、随机等。当然，我们也可为Ribbon实现自定义的负载均衡算法。</p>
+<p>在Spring Cloud中，当Ribbon与Eureka配合使用时，Ribbon可自动从Eureka Server获取服务提供者地址列表，并基于负载均衡算法，请求其中一个服务提供者实例。下图展示了Ribbon与Eureka配合使用时的架构。</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20222222.jpg"></p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><p>我们修改microservice-student-consumer-80子模块项目</p>
+<h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-ribbon<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>添加下面内容：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">register-with-eureka:</span> <span class="literal">false</span> <span class="comment">#false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://eureka2001.ledao.com:2001/eureka/,http://eureka2002.ledao.com:2002/eureka/,http://eureka2003.ledao.com:2003/eureka/</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="添加-LoadBalanced注解"><a href="#添加-LoadBalanced注解" class="headerlink" title="添加@LoadBalanced注解"></a>添加@LoadBalanced注解</h4><p>SpringCloudConfig.java的getRestTemplate()方法上添加@LoadBalanced注解（负载均衡配置）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.client.loadbalancer.LoadBalanced;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.client.RestTemplate;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SpringCloud相关配置</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 14:46</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringCloudConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调用服务模版</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@LoadBalanced</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RestTemplate <span class="title">getRestTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加注解-EnableEurekaClient"><a href="#添加注解-EnableEurekaClient" class="headerlink" title="添加注解@EnableEurekaClient"></a>添加注解@EnableEurekaClient</h4><p>因为和eureka整合，所以启动类StudentConsumerApplication_80 加个注解 @EnableEurekaClient</p>
+<h4 id="指定应用名称"><a href="#指定应用名称" class="headerlink" title="指定应用名称"></a>指定应用名称</h4><p>在服务提供者microservice-student-provider-1001的application.yml以下配置（microservice-student为微服务应用名称）</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">application:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">microservice-student</span></span><br></pre></td></tr></table></figure>
+
+<p>在spring配置下添加，完整spring配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="修改PRE-HOST"><a href="#修改PRE-HOST" class="headerlink" title="修改PRE_HOST"></a>修改PRE_HOST</h4><p>修改服务消费者子模块项目的StudentConsumerController.java中的PRE_HOST为 <a href="http://microservice-student/">http://MICROSERVICE-STUDENT</a></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PRE_HOST = <span class="string">&quot;http://MICROSERVICE-STUDENT&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>依次运行microservice-eureka-server-2001、microservice-eureka-server-2002、microservice-eureka-server-2003、microservice-student-provider-1001、microservice-student-consumer-80子模块项目</p>
+<p>浏览器地址栏输入：<a href="http://localhost/student/list">http://localhost/student/list</a> ，出现下面结果说明调用服务成功（下面是格式化过的JSON串）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20232700.png"></p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Eureka</tag>
+        <tag>Ribbon</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Eureka注册中心高可用集群配置</title>
     <url>/268.html</url>
     <content><![CDATA[<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>当注册中心扛不住高并发时，就需要集群了</p>
@@ -5515,44 +5553,6 @@
       <tags>
         <tag>Spring Cloud</tag>
         <tag>Eureka</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ribbon调用服务</title>
-    <url>/269.html</url>
-    <content><![CDATA[<h3 id="Ribbon简介"><a href="#Ribbon简介" class="headerlink" title="Ribbon简介"></a>Ribbon简介</h3><p>Ribbon是Netflix发布的负载均衡器，它有助于控制HTTP和TCP的客户端的行为。为Ribbon配置服务提供者地址后，Ribbon就可基于某种负载均衡算法，自动地帮助服务消费者去请求。Ribbon默认为我们提供了很多负载均衡算法，例如轮询、随机等。当然，我们也可为Ribbon实现自定义的负载均衡算法。</p>
-<p>在Spring Cloud中，当Ribbon与Eureka配合使用时，Ribbon可自动从Eureka Server获取服务提供者地址列表，并基于负载均衡算法，请求其中一个服务提供者实例。下图展示了Ribbon与Eureka配合使用时的架构。</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20222222.jpg"></p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><p>我们修改microservice-student-consumer-80子模块项目</p>
-<h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-eureka<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-ribbon<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="修改application-yml"><a href="#修改application-yml" class="headerlink" title="修改application.yml"></a>修改application.yml</h4><p>添加下面内容：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">eureka:</span></span><br><span class="line">  <span class="attr">client:</span></span><br><span class="line">    <span class="attr">register-with-eureka:</span> <span class="literal">false</span> <span class="comment">#false 由于注册中心的职责就是维护服务实例，它并不需要去检索服务，所以也设置为false</span></span><br><span class="line">    <span class="attr">service-url:</span></span><br><span class="line">      <span class="attr">defaultZone:</span> <span class="string">http://eureka2001.ledao.com:2001/eureka/,http://eureka2002.ledao.com:2002/eureka/,http://eureka2003.ledao.com:2003/eureka/</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="添加-LoadBalanced注解"><a href="#添加-LoadBalanced注解" class="headerlink" title="添加@LoadBalanced注解"></a>添加@LoadBalanced注解</h4><p>SpringCloudConfig.java的getRestTemplate()方法上添加@LoadBalanced注解（负载均衡配置）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.client.loadbalancer.LoadBalanced;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Bean;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.client.RestTemplate;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * SpringCloud相关配置</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-11 14:46</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringCloudConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 调用服务模版</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@LoadBalanced</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RestTemplate <span class="title">getRestTemplate</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> RestTemplate();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加注解-EnableEurekaClient"><a href="#添加注解-EnableEurekaClient" class="headerlink" title="添加注解@EnableEurekaClient"></a>添加注解@EnableEurekaClient</h4><p>因为和eureka整合，所以启动类StudentConsumerApplication_80 加个注解 @EnableEurekaClient</p>
-<h4 id="指定应用名称"><a href="#指定应用名称" class="headerlink" title="指定应用名称"></a>指定应用名称</h4><p>在服务提供者microservice-student-provider-1001的application.yml以下配置（microservice-student为微服务应用名称）</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">application:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">microservice-student</span></span><br></pre></td></tr></table></figure>
-
-<p>在spring配置下添加，完整spring配置如下：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_springcloud?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="修改PRE-HOST"><a href="#修改PRE-HOST" class="headerlink" title="修改PRE_HOST"></a>修改PRE_HOST</h4><p>修改服务消费者子模块项目的StudentConsumerController.java中的PRE_HOST为 <a href="http://microservice-student/">http://MICROSERVICE-STUDENT</a></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> String PRE_HOST = <span class="string">&quot;http://MICROSERVICE-STUDENT&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>依次运行microservice-eureka-server-2001、microservice-eureka-server-2002、microservice-eureka-server-2003、microservice-student-provider-1001、microservice-student-consumer-80子模块项目</p>
-<p>浏览器地址栏输入：<a href="http://localhost/student/list">http://localhost/student/list</a> ，出现下面结果说明调用服务成功（下面是格式化过的JSON串）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-11%20232700.png"></p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
-        <tag>Eureka</tag>
-        <tag>Ribbon</tag>
       </tags>
   </entry>
   <entry>
@@ -6857,6 +6857,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker提交运行时容器为镜像</title>
+    <url>/296.html</url>
+    <content><![CDATA[<p>命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker commit -a=<span class="string">&#x27;作者&#x27;</span> -m=<span class="string">&#x27;备注&#x27;</span> 运行时容器ID Docker用户名/新镜像名称:版本号</span><br></pre></td></tr></table></figure>
+
+<p>下图中划红线的镜像就是刚刚提交的镜像</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20150855.jpg"></p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker推送镜像到hub服务器</title>
     <url>/297.html</url>
     <content><![CDATA[<h3 id="注册Docker账号"><a href="#注册Docker账号" class="headerlink" title="注册Docker账号"></a>注册Docker账号</h3><p>在Docker的hub官网注册，官网地址为：<a href="https://hub.docker.com/">https://hub.docker.com/</a> ，注册后记住用户名和密码</p>
@@ -6871,22 +6887,6 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20212908.jpg"></p>
 <h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><p>查看镜像时有个拉取命令,如下图所示</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20002354.jpg"></p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker提交运行时容器为镜像</title>
-    <url>/296.html</url>
-    <content><![CDATA[<p>命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker commit -a=<span class="string">&#x27;作者&#x27;</span> -m=<span class="string">&#x27;备注&#x27;</span> 运行时容器ID Docker用户名/新镜像名称:版本号</span><br></pre></td></tr></table></figure>
-
-<p>下图中划红线的镜像就是刚刚提交的镜像</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20150855.jpg"></p>
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -11000,26 +11000,6 @@
       </tags>
   </entry>
   <entry>
-    <title>idea修改新建项目时Maven默认本地仓库地址</title>
-    <url>/390.html</url>
-    <content><![CDATA[<blockquote>
-<p>打开idea的新建项目默认配置设置</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-07%20215724.jpg"></p>
-<blockquote>
-<p>修改默认的本地仓库地址，记得勾上Override</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-07%20220331.jpg"></p>
-]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Nginx绑定二级域名到指定端口</title>
     <url>/391.html</url>
     <content><![CDATA[<p>我的Nginx版本号为：1.20.2，配置文件路径为：/etc/nginx，在conf.d文件夹的conf.d文件中添加以下代码：</p>
@@ -11037,6 +11017,26 @@
       </categories>
       <tags>
         <tag>Nginx</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea修改新建项目时Maven默认本地仓库地址</title>
+    <url>/390.html</url>
+    <content><![CDATA[<blockquote>
+<p>打开idea的新建项目默认配置设置</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-07%20215724.jpg"></p>
+<blockquote>
+<p>修改默认的本地仓库地址，记得勾上Override</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-07%20220331.jpg"></p>
+]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+        <tag>idea使用</tag>
       </tags>
   </entry>
   <entry>
@@ -13949,25 +13949,6 @@
       </tags>
   </entry>
   <entry>
-    <title>idea报错：Failed to load property source from location classpath:/application.yml的解决办法</title>
-    <url>/454.html</url>
-    <content><![CDATA[<blockquote>
-<p>打开设置，找到下图的设置并将画红线的3处都改为<code>UTF-8</code></p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205457181.png" alt="image-20220226205457181"></p>
-<blockquote>
-<p>打开Maven工具栏clean一下</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205836239.png" alt="image-20220226205836239"></p>
-]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前后端分离项目在本地IDE部署步骤</title>
     <url>/453.html</url>
     <content><![CDATA[<h3 id="使用到的项目和IDE"><a href="#使用到的项目和IDE" class="headerlink" title="使用到的项目和IDE"></a>使用到的项目和IDE</h3><h4 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h4><p>使用到的两个项目的GitHub链接为：</p>
@@ -14013,6 +13994,25 @@
         <tag>Java</tag>
         <tag>Vue.js</tag>
         <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>idea报错：Failed to load property source from location classpath:/application.yml的解决办法</title>
+    <url>/454.html</url>
+    <content><![CDATA[<blockquote>
+<p>打开设置，找到下图的设置并将画红线的3处都改为<code>UTF-8</code></p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205457181.png" alt="image-20220226205457181"></p>
+<blockquote>
+<p>打开Maven工具栏clean一下</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226205836239.png" alt="image-20220226205836239"></p>
+]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
       </tags>
   </entry>
   <entry>
@@ -16556,6 +16556,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Java中的关键字</title>
+    <url>/7.html</url>
+    <content><![CDATA[<p>关键字的定义和特点：</p>
+<p>定义：被 Java 语言赋予了特殊含义的单词</p>
+<p>特点：关键字中所有字母都为小写</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010141136.jpg"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010141148.jpg" alt="20210227090442.jpg"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQL里面的排序语句DESC和ASC</title>
     <url>/69.html</url>
     <content><![CDATA[<h3 id="DESC"><a href="#DESC" class="headerlink" title="DESC"></a>DESC</h3><p>用 DESC表示按倒序排序(即：从大到小排序) —降序排列</p>
@@ -16574,22 +16590,6 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java中的关键字</title>
-    <url>/7.html</url>
-    <content><![CDATA[<p>关键字的定义和特点：</p>
-<p>定义：被 Java 语言赋予了特殊含义的单词</p>
-<p>特点：关键字中所有字母都为小写</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010141136.jpg"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010141148.jpg" alt="20210227090442.jpg"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
