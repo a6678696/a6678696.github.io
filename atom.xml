@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-04-01T22:32:15.808Z</updated>
+  <updated>2022-04-04T17:32:58.678Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JMeter的基本使用</title>
+    <link href="https://blog.zoutl.cn/490.html"/>
+    <id>https://blog.zoutl.cn/490.html</id>
+    <published>2022-04-04T13:38:42.000Z</published>
+    <updated>2022-04-04T17:32:58.678Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="添加线程组"><a href="#添加线程组" class="headerlink" title="添加线程组"></a>添加线程组</h3><blockquote><p>右键点击Test Plan，新建一个线程组</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404214208686.png" alt="image-20220404214208686"></p><blockquote><p>填写线程数</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221153946.png" alt="image-20220404221153946"></p><h3 id="添加HTTP请求默认值"><a href="#添加HTTP请求默认值" class="headerlink" title="添加HTTP请求默认值"></a>添加HTTP请求默认值</h3><blockquote><p>添加了HTTP请求默认值后，可以统一管理HTTP请求的IP地址和端口号</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404214548026.png" alt="image-20220404214548026"></p><h3 id="添加HTTP请求"><a href="#添加HTTP请求" class="headerlink" title="添加HTTP请求"></a>添加HTTP请求</h3><blockquote><p>添加HTTP请求用于测试接口</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404214341922.png" alt="image-20220404214341922"></p><blockquote><p>如果配置了HTTP请求默认值，那么就不需要配置HTTP请求的Web服务器了</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404214909724.png" alt="image-20220404214909724"></p><blockquote><p>给请求添加参数</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404223512490.png" alt="image-20220404223512490"></p><blockquote><p>如果有一些数据是通过信息头传递的，那么需要配置一下HTTP信息头管理器，然后添加参数即可</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404225121947.png" alt="image-20220404225121947"></p><h3 id="添加监听器"><a href="#添加监听器" class="headerlink" title="添加监听器"></a>添加监听器</h3><blockquote><p>添加一些监听器，用于查看测试的效果</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404220619286.png" alt="image-20220404220619286"></p><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><blockquote><p>点击菜单栏的启动按钮</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221258553.png" alt="image-20220404221258553"></p><h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><h4 id="聚合报告"><a href="#聚合报告" class="headerlink" title="聚合报告"></a>聚合报告</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221421441.png" alt="image-20220404221421441"></p><h4 id="汇总报告"><a href="#汇总报告" class="headerlink" title="汇总报告"></a>汇总报告</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221436874.png" alt="image-20220404221436874"></p><h4 id="察看结果树"><a href="#察看结果树" class="headerlink" title="察看结果树"></a>察看结果树</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221657901.png" alt="image-20220404221657901"></p><h4 id="用表格察看结果"><a href="#用表格察看结果" class="headerlink" title="用表格察看结果"></a>用表格察看结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221716998.png" alt="image-20220404221716998"></p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><h4 id="解决中文乱码"><a href="#解决中文乱码" class="headerlink" title="解决中文乱码"></a>解决中文乱码</h4><blockquote><p>添加一个BeanShell PostProcessor后置处理器</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404222925854.png" alt="image-20220404222925854"></p><blockquote><p>添加以下代码</p></blockquote><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">prev.setDataEncoding(&quot;utf-8&quot;);</span></span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404223117964.png" alt="image-20220404223117964"></p><h4 id="禁用HTTP请求"><a href="#禁用HTTP请求" class="headerlink" title="禁用HTTP请求"></a>禁用HTTP请求</h4><p>如果有多个HTTP请求，那么JMeter启动时，这些HTTP请求都会被执行，如果不需要执行某个HTTP请求，那么我们需要禁用掉不需要执行的HTTP请求</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404224105191.png" alt="image-20220404224105191"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;添加线程组&quot;&gt;&lt;a href=&quot;#添加线程组&quot; class=&quot;headerlink&quot; title=&quot;添加线程组&quot;&gt;&lt;/a&gt;添加线程组&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;右键点击Test Plan，新建一个线程组&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;i</summary>
+      
+    
+    
+    
+    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="JMeter" scheme="https://blog.zoutl.cn/tags/JMeter/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue.js获取对象的值</title>
@@ -45,9 +72,9 @@
     <link href="https://blog.zoutl.cn/488.html"/>
     <id>https://blog.zoutl.cn/488.html</id>
     <published>2022-04-01T21:39:16.000Z</published>
-    <updated>2022-04-01T22:02:52.096Z</updated>
+    <updated>2022-04-04T13:39:31.776Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载地址：<a href="https://jmeter.apache.org/download_jmeter.cgi">Apache JMeter - Download Apache JMeter</a></p><p>下载zip压缩包的那个，解压后即可使用</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054208135.png" alt="image-20220402054208135"></p><h3 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h3><p>解压后，进入<code>bin</code>文件夹，双击<code>jmeter.bat</code>即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054503191.png" alt="image-20220402054503191"></p><h3 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h3><h4 id="放大字体"><a href="#放大字体" class="headerlink" title="放大字体"></a>放大字体</h4><p>直接打开的话，可以看到界面的字体很小，我们需要将它放大一下</p><blockquote><p>打开<code>jmeter.properties</code>，修改<code>jsyntaxtextarea.font.size</code>的值，并把它前面的注释删除</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054738378.png" alt="image-20220402054738378"></p><blockquote><p>使用记事本工具打开<code>jmeter.bat</code>，在第一行下面加入以下代码：</p></blockquote><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.controlFont=Dialog-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.systemFont=Dialog-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.userFont=SansSerif-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.smallFont=SansSerif-25</span></span><br></pre></td></tr></table></figure><h4 id="修改语言"><a href="#修改语言" class="headerlink" title="修改语言"></a>修改语言</h4><p>根据下图将语言修改为中文简体即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402055359121.png" alt="image-20220402055359121"></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>下载地址：<a href="https://jmeter.apache.org/download_jmeter.cgi">Apache JMeter - Download Apache JMeter</a></p><p>下载zip压缩包的那个，解压后即可使用</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054208135.png" alt="image-20220402054208135"></p><h3 id="打开"><a href="#打开" class="headerlink" title="打开"></a>打开</h3><p>解压后，进入<code>bin</code>文件夹，双击<code>jmeter.bat</code>即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054503191.png" alt="image-20220402054503191"></p><h3 id="改进"><a href="#改进" class="headerlink" title="改进"></a>改进</h3><h4 id="放大字体"><a href="#放大字体" class="headerlink" title="放大字体"></a>放大字体</h4><p>直接打开的话，可以看到界面的字体很小，我们需要将它放大一下</p><blockquote><p>打开<code>jmeter.properties</code>，修改<code>jsyntaxtextarea.font.size</code>的值，并把它前面的注释删除</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402054738378.png" alt="image-20220402054738378"></p><blockquote><p>使用记事本工具打开<code>jmeter.bat</code>，在第一行下面加入以下代码：</p></blockquote><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.controlFont=Dialog-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.systemFont=Dialog-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.userFont=SansSerif-25</span></span><br><span class="line"><span class="attr">set</span> <span class="string">JVM_ARGS=%JVM_ARGS% -Dswing.plaf.metal.smallFont=SansSerif-25</span></span><br></pre></td></tr></table></figure><h4 id="修改语言"><a href="#修改语言" class="headerlink" title="修改语言"></a>修改语言</h4><p> openMiaoShaDialog: function (id) {  let _this = this;  let url = getServerUrl(“miaoShaGoods/findById?id=” + id);  axios    .get(url)    .then(function (response) {      _this.miaoShaGoods = response.data;    })    .catch(function (error) {      console.log(error);    });}javascript</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220402055359121.png" alt="image-20220402055359121"></p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>直接进入官网下载的是最新版，历史版本的链接为：<a href="https://archive.apache.org/dist/jmeter/binaries/?C=M;O=A">Index of /dist/jmeter/binaries (apache.org)</a></p>]]></content>
     
     
       
@@ -60,7 +87,7 @@
     <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
     
     
-    <category term="其它" scheme="https://blog.zoutl.cn/tags/%E5%85%B6%E5%AE%83/"/>
+    <category term="JMeter" scheme="https://blog.zoutl.cn/tags/JMeter/"/>
     
   </entry>
   
@@ -495,31 +522,6 @@
     
     
     <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MyBatis插入数据时获取自增的id</title>
-    <link href="https://blog.zoutl.cn/470.html"/>
-    <id>https://blog.zoutl.cn/470.html</id>
-    <published>2022-03-16T04:05:20.000Z</published>
-    <updated>2022-03-26T10:52:33.817Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当表的id被设计为自增时，插入数据后想获得新插入数据的id</p><p>我曾经试过直接获取最新一条数据的id，虽然可以获取到id，但是这种方式不但麻烦而且也<font color="#dd0000">不推荐</font>，因为插入数据成功到获取到id的这段时间内如果又新增了一条数据，那么获取到的就不是我们希望得到的id了</p><p>Mybatis支持在插入数据后，返回这条数据的id，这种方式简单又不存在上面出现的问题，<font color="#00dd00">推荐</font>使用</p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="XML代码"><a href="#XML代码" class="headerlink" title="XML代码"></a>XML代码</h4><blockquote><p>添加数据的XML代码</p></blockquote><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;add&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;User&quot;</span> <span class="attr">useGeneratedKeys</span>=<span class="string">&quot;true&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;id&quot;</span> <span class="attr">keyColumn</span>=<span class="string">&quot;id&quot;</span>&gt;</span></span><br><span class="line">    insert into t_user (isBorrow, password, state, type, userName, nickName)</span><br><span class="line">    values (1, #&#123;password&#125;, 1, 2, #&#123;userName&#125;, #&#123;userName&#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure><blockquote><p>属性说明</p></blockquote><ol><li><p>parameterType</p><p>传入的参数类型</p></li><li><p>useGeneratedKeys</p><p>是否返回插入数据的id</p></li><li><p>keyProperty</p><p>实体类对应的字段</p></li><li><p>keyColumn</p><p>数据库中表对应的字段</p></li></ol><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addUser</span><span class="params">()</span></span>&#123;</span><br><span class="line">    User user = <span class="keyword">new</span> User();</span><br><span class="line">    user.setUserName(<span class="string">&quot;tom&quot;</span>);</span><br><span class="line">    user.setNickName(<span class="string">&quot;LeDao&quot;</span>);</span><br><span class="line">    user.setPassword(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">    userService.add(user);</span><br><span class="line">    System.out.println(<span class="string">&quot;自增的id为: &quot;</span>+user.getId());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316135314586.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;当表的id被设计为自增时，插入数据后想获得新插入数据的id&lt;/p&gt;
-&lt;p&gt;我曾经试过直接获取最新一条数据的id，虽然可以获取到id，但是这种</summary>
-      
-    
-    
-    
-    <category term="MyBatis" scheme="https://blog.zoutl.cn/categories/MyBatis/"/>
-    
-    
-    <category term="MyBatis" scheme="https://blog.zoutl.cn/tags/MyBatis/"/>
     
   </entry>
   
