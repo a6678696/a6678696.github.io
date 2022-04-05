@@ -51,16 +51,16 @@ window.addEventListener('load', () => {
 
   search.addWidgets([
     instantsearch.widgets.configure({
-      hitsPerPage: 5
+      hitsPerPage: 8 //每页记录数
     })
   ])
 
   search.addWidgets([
     instantsearch.widgets.searchBox({
       container: '#algolia-search-input',
-      showReset: false,
-      showSubmit: false,
-	  searchAsYouType: false,
+      showReset: false,//显示重置按钮
+      showSubmit: false,//显示搜索按钮
+	  searchAsYouType: false,//是否是实时搜索(输入一个字符就搜索一次)
 	  placeholder: "输入关键词后，按下回车键即可搜索文章...",
       //placeholder: GLOBAL_CONFIG.algolia.languages.input_placeholder,
       showLoadingIndicator: true

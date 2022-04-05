@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-04-05T17:31:52.208Z</updated>
+  <updated>2022-04-05T17:48:16.049Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.zoutl.cn/491.html"/>
     <id>https://blog.zoutl.cn/491.html</id>
     <published>2022-04-05T04:42:36.000Z</published>
-    <updated>2022-04-05T17:31:52.208Z</updated>
+    <updated>2022-04-05T17:48:16.049Z</updated>
     
     <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>使用CSV数据文件设置可以给HTTP请求设置多组参数</p><h3 id="使用过程"><a href="#使用过程" class="headerlink" title="使用过程"></a>使用过程</h3><h4 id="新建参数文件"><a href="#新建参数文件" class="headerlink" title="新建参数文件"></a>新建参数文件</h4><p>新建一个TXT文件，用于设置多组HTTP请求的参数，每一行为一组参数，多个参数之间用<code>英文逗号,</code>隔开</p><h4 id="新建CSV数据文件设置"><a href="#新建CSV数据文件设置" class="headerlink" title="新建CSV数据文件设置"></a>新建CSV数据文件设置</h4><blockquote><p>在对应线程下添加<code>CSV Data Set Config</code></p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220405140056182.png" alt="image-20220405140056182"></p><blockquote><p>一些设置</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220406013116079.png" alt="image-20220406013116079"></p><h4 id="配置参数的获取"><a href="#配置参数的获取" class="headerlink" title="配置参数的获取"></a>配置参数的获取</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220405141913021.png"></p>]]></content>
     
