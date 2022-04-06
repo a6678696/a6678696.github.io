@@ -372,26 +372,6 @@
       </tags>
   </entry>
   <entry>
-    <title>定时自动备份MySQL数据库</title>
-    <url>/116.html</url>
-    <content><![CDATA[<h3 id="方法一、使用任务计划程序"><a href="#方法一、使用任务计划程序" class="headerlink" title="方法一、使用任务计划程序"></a>方法一、使用任务计划程序</h3><ol>
-<li><a href="/113.html">Windows脚本代码备份MySQL数据库</a></li>
-<li><a href="/115.html">Windows10使用任务计划程序</a></li>
-</ol>
-<h3 id="方法二、使用Quartz定时任务"><a href="#方法二、使用Quartz定时任务" class="headerlink" title="方法二、使用Quartz定时任务"></a>方法二、使用Quartz定时任务</h3><ol>
-<li><a href="/109.html">Spring Boot引入Quartz定时任务</a></li>
-<li><a href="/4.html">常用cron表达式</a></li>
-<li><a href="/114.html">Java备份MySQL数据库</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>commons-io常用方法</title>
     <url>/117.html</url>
     <content><![CDATA[<h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -422,6 +402,26 @@
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>定时自动备份MySQL数据库</title>
+    <url>/116.html</url>
+    <content><![CDATA[<h3 id="方法一、使用任务计划程序"><a href="#方法一、使用任务计划程序" class="headerlink" title="方法一、使用任务计划程序"></a>方法一、使用任务计划程序</h3><ol>
+<li><a href="/113.html">Windows脚本代码备份MySQL数据库</a></li>
+<li><a href="/115.html">Windows10使用任务计划程序</a></li>
+</ol>
+<h3 id="方法二、使用Quartz定时任务"><a href="#方法二、使用Quartz定时任务" class="headerlink" title="方法二、使用Quartz定时任务"></a>方法二、使用Quartz定时任务</h3><ol>
+<li><a href="/109.html">Spring Boot引入Quartz定时任务</a></li>
+<li><a href="/4.html">常用cron表达式</a></li>
+<li><a href="/114.html">Java备份MySQL数据库</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -3915,6 +3915,27 @@
       </tags>
   </entry>
   <entry>
+    <title>浏览器格式化JSON数据插件</title>
+    <url>/214.html</url>
+    <content><![CDATA[<h3 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h3><p>①Edge直接安装</p>
+<p>微软Edge外接程序下载地址：<a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home">https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home</a></p>
+<p>搜索JSONview并安装即可</p>
+<p>②通过下载插件包安装</p>
+<p>下载地址：<a href="https://www.extfans.com/productivity/cgphfnglahpambfhocchajalljaeegef/">https://www.extfans.com/productivity/cgphfnglahpambfhocchajalljaeegef/</a></p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>直接在浏览器输入<a href="https://www.zoutl.cn/getFruitListJson">https://www.zoutl.cn/getFruitListJson</a> 测试</p>
+<p>使用插件前</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210714015811.jpg" alt="img"></p>
+<p>使用插件后</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210714015821.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MyBatis使用分页插件PageHelper</title>
     <url>/213.html</url>
     <content><![CDATA[<blockquote>
@@ -3945,27 +3966,6 @@
       <tags>
         <tag>Java</tag>
         <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浏览器格式化JSON数据插件</title>
-    <url>/214.html</url>
-    <content><![CDATA[<h3 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h3><p>①Edge直接安装</p>
-<p>微软Edge外接程序下载地址：<a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home">https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home</a></p>
-<p>搜索JSONview并安装即可</p>
-<p>②通过下载插件包安装</p>
-<p>下载地址：<a href="https://www.extfans.com/productivity/cgphfnglahpambfhocchajalljaeegef/">https://www.extfans.com/productivity/cgphfnglahpambfhocchajalljaeegef/</a></p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>直接在浏览器输入<a href="https://www.zoutl.cn/getFruitListJson">https://www.zoutl.cn/getFruitListJson</a> 测试</p>
-<p>使用插件前</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210714015811.jpg" alt="img"></p>
-<p>使用插件后</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210714015821.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>其它</category>
-      </categories>
-      <tags>
-        <tag>JSON</tag>
       </tags>
   </entry>
   <entry>
@@ -4567,45 +4567,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git上传本地代码到GitHub</title>
-    <url>/237.html</url>
-    <content><![CDATA[<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><p>初始化一个 Git 仓库，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变（需要进入要初始化的文件夹内部，右键点击选择Git Bash Here）</p>
-<p>输入初始化命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，文件名颜色为红色</p>
-<h3 id="添加到仓库中"><a href="#添加到仓库中" class="headerlink" title="添加到仓库中"></a>添加到仓库中</h3><p>输入添加命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
-
-<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，文件名颜色为绿色</p>
-<h3 id="commit到仓库"><a href="#commit到仓库" class="headerlink" title="commit到仓库"></a>commit到仓库</h3><p>输入提交命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，发现没有东西可以提交</p>
-<h3 id="复制项目的SSH地址"><a href="#复制项目的SSH地址" class="headerlink" title="复制项目的SSH地址"></a>复制项目的SSH地址</h3><p>记得先配置GitHub的SSH Key，如何配置查看博客：<a href="/236.html">GitHub配置SSH Key</a></p>
-<h3 id="将本地的仓库关联到GitHub上"><a href="#将本地的仓库关联到GitHub上" class="headerlink" title="将本地的仓库关联到GitHub上"></a>将本地的仓库关联到GitHub上</h3><p>把上一步复制的地址放到origin后，如果已经关联过则省略本步骤</p>
-<p>输入关联命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin SSH地址</span><br></pre></td></tr></table></figure>
-
-<h3 id="上传GitHub之前，要先pull一下"><a href="#上传GitHub之前，要先pull一下" class="headerlink" title="上传GitHub之前，要先pull一下"></a>上传GitHub之前，要先pull一下</h3><mark class="hl-label red">如果仓库为空的话，直接push就可以了</mark> 
-
-<p>输入拉取命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
-
-<h3 id="上传代码到GitHub远程仓库"><a href="#上传代码到GitHub远程仓库" class="headerlink" title="上传代码到GitHub远程仓库"></a>上传代码到GitHub远程仓库</h3><p>输入推送命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<h3 id="去GitHub查看结果"><a href="#去GitHub查看结果" class="headerlink" title="去GitHub查看结果"></a>去GitHub查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729132853.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>GitHub配置SSH Key</title>
     <url>/236.html</url>
     <content><![CDATA[<h3 id="配置SSH-Keys的好处"><a href="#配置SSH-Keys的好处" class="headerlink" title="配置SSH Keys的好处"></a>配置SSH Keys的好处</h3><p>在管理Git项目上，很多时候都是直接使用https url克隆到本地，当然也有有些人使用SSH url克隆到本地。</p>
@@ -4642,6 +4603,45 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git上传本地代码到GitHub</title>
+    <url>/237.html</url>
+    <content><![CDATA[<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><p>初始化一个 Git 仓库，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变（需要进入要初始化的文件夹内部，右键点击选择Git Bash Here）</p>
+<p>输入初始化命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，文件名颜色为红色</p>
+<h3 id="添加到仓库中"><a href="#添加到仓库中" class="headerlink" title="添加到仓库中"></a>添加到仓库中</h3><p>输入添加命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，文件名颜色为绿色</p>
+<h3 id="commit到仓库"><a href="#commit到仓库" class="headerlink" title="commit到仓库"></a>commit到仓库</h3><p>输入提交命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>输入命令查看当前状态：<mark class="hl-label blue">git status</mark> ，发现没有东西可以提交</p>
+<h3 id="复制项目的SSH地址"><a href="#复制项目的SSH地址" class="headerlink" title="复制项目的SSH地址"></a>复制项目的SSH地址</h3><p>记得先配置GitHub的SSH Key，如何配置查看博客：<a href="/236.html">GitHub配置SSH Key</a></p>
+<h3 id="将本地的仓库关联到GitHub上"><a href="#将本地的仓库关联到GitHub上" class="headerlink" title="将本地的仓库关联到GitHub上"></a>将本地的仓库关联到GitHub上</h3><p>把上一步复制的地址放到origin后，如果已经关联过则省略本步骤</p>
+<p>输入关联命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin SSH地址</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传GitHub之前，要先pull一下"><a href="#上传GitHub之前，要先pull一下" class="headerlink" title="上传GitHub之前，要先pull一下"></a>上传GitHub之前，要先pull一下</h3><mark class="hl-label red">如果仓库为空的话，直接push就可以了</mark> 
+
+<p>输入拉取命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传代码到GitHub远程仓库"><a href="#上传代码到GitHub远程仓库" class="headerlink" title="上传代码到GitHub远程仓库"></a>上传代码到GitHub远程仓库</h3><p>输入推送命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="去GitHub查看结果"><a href="#去GitHub查看结果" class="headerlink" title="去GitHub查看结果"></a>去GitHub查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729132853.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -4739,6 +4739,27 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo next开启本地搜索</title>
+    <url>/241.html</url>
+    <content><![CDATA[<h3 id="安装本地搜索插件"><a href="#安装本地搜索插件" class="headerlink" title="安装本地搜索插件"></a>安装本地搜索插件</h3><p>插件名称为：hexo-generator-search</p>
+<p>安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改next主题配置-config-yml"><a href="#修改next主题配置-config-yml" class="headerlink" title="修改next主题配置_config.yml"></a>修改next主题配置_config.yml</h3><p>修改local_search的enable为true，代表启用本地搜索</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">6</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="在根目录的-config-yml中添加以下内容"><a href="#在根目录的-config-yml中添加以下内容" class="headerlink" title="在根目录的_config.yml中添加以下内容"></a>在根目录的_config.yml中添加以下内容</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#本地搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+
+<p>重新部署网站后就可以使用本地搜索功能了</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo常用命令</title>
     <url>/242.html</url>
     <content><![CDATA[<h3 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h3><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p>
@@ -4755,27 +4776,6 @@
 <h3 id="hexo-new-“文章名称”"><a href="#hexo-new-“文章名称”" class="headerlink" title="hexo new “文章名称”"></a>hexo new “文章名称”</h3><p>新建一个<font color="#dd0000">文章名称.md</font>，该文件在站点根目录的<font color="#dd0000">source/_post/</font>中</p>
 <h3 id="hexo-new-page-“名称”"><a href="#hexo-new-page-“名称”" class="headerlink" title="hexo new page “名称”"></a>hexo new page “名称”</h3><p>新建一个页面，这个页面在站点根目录的<code>source/名称/</code>中（名为index.md），可以通过<code>/名称/</code>访问这个页面</p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>以上都是我常用的命令，更多命令及详情查看：<a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo next开启本地搜索</title>
-    <url>/241.html</url>
-    <content><![CDATA[<h3 id="安装本地搜索插件"><a href="#安装本地搜索插件" class="headerlink" title="安装本地搜索插件"></a>安装本地搜索插件</h3><p>插件名称为：hexo-generator-search</p>
-<p>安装命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改next主题配置-config-yml"><a href="#修改next主题配置-config-yml" class="headerlink" title="修改next主题配置_config.yml"></a>修改next主题配置_config.yml</h3><p>修改local_search的enable为true，代表启用本地搜索</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">6</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="在根目录的-config-yml中添加以下内容"><a href="#在根目录的-config-yml中添加以下内容" class="headerlink" title="在根目录的_config.yml中添加以下内容"></a>在根目录的_config.yml中添加以下内容</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#本地搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-
-<p>重新部署网站后就可以使用本地搜索功能了</p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -7142,6 +7142,28 @@
       </tags>
   </entry>
   <entry>
+    <title>DockerFile构建自定义CentOS</title>
+    <url>/305.html</url>
+    <content><![CDATA[<h3 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h3><p>新建一个文件，命名为：mycentosDockerFile，没有后缀名，内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FROM centos</span><br><span class="line">MAINTAINER ledao&lt;f1203007469@gmail.com&gt;</span><br><span class="line"></span><br><span class="line">LABEL name=<span class="string">&quot;LeDao CentOS Image&quot;</span> \</span><br><span class="line">	build-date=<span class="string">&quot;2021-08-21&quot;</span></span><br><span class="line"></span><br><span class="line">ENV WORKPATH /home/</span><br><span class="line">WORKDIR <span class="variable">$WORKPATH</span></span><br><span class="line"></span><br><span class="line">RUN yum -y install net-tools</span><br><span class="line">RUN yum -y install vim</span><br><span class="line"></span><br><span class="line">EXPOSE 80</span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h3><p>命令的最后面有个英文句号.（少了句号不行）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker build -f /home/dockerfile/mycentosDockerFile -t a6678696/mycentos:1.1 .</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20232745.png"></p>
+<h3 id="查看镜像构建历史"><a href="#查看镜像构建历史" class="headerlink" title="查看镜像构建历史"></a>查看镜像构建历史</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">history</span> 镜像id</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20233507.jpg"></p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>DockerFile</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DockerFile常用指令</title>
     <url>/304.html</url>
     <content><![CDATA[<h3 id="DockerFile简介"><a href="#DockerFile简介" class="headerlink" title="DockerFile简介"></a>DockerFile简介</h3><p>dockerfile用于快速有序且直观地完成对镜像的定制</p>
@@ -7217,28 +7239,6 @@
 <p><code>EXPOSE</code> 指令是声明运行时容器提供服务端口，这只是一个声明，在运行时并不会因为这个声明应用就会开启这个端口的服务。在 Dockerfile 中写入这样的声明有两个好处，一个是帮助镜像使用者理解这个镜像服务的守护端口，以方便配置映射；另一个用处则是在运行时使用随机端口映射时，也就是 <code>docker run -P</code> 时，会自动随机映射 <code>EXPOSE</code> 的端口</p>
 <p>要将 EXPOSE 和在运行时使用 <code>-p &lt;宿主端口&gt;:&lt;容器端口&gt;</code> 区分开来。<code>-p</code>，是映射宿主端口和容器端口，换句话说，就是将容器的对应端口服务公开给外界访问，而 EXPOSE 仅仅是声明容器打算使用什么端口而已，并不会自动在宿主进行端口映射</p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.jianshu.com/p/2a90fc6ee383">https://www.jianshu.com/p/2a90fc6ee383</a></p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>DockerFile</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DockerFile构建自定义CentOS</title>
-    <url>/305.html</url>
-    <content><![CDATA[<h3 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h3><p>新建一个文件，命名为：mycentosDockerFile，没有后缀名，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FROM centos</span><br><span class="line">MAINTAINER ledao&lt;f1203007469@gmail.com&gt;</span><br><span class="line"></span><br><span class="line">LABEL name=<span class="string">&quot;LeDao CentOS Image&quot;</span> \</span><br><span class="line">	build-date=<span class="string">&quot;2021-08-21&quot;</span></span><br><span class="line"></span><br><span class="line">ENV WORKPATH /home/</span><br><span class="line">WORKDIR <span class="variable">$WORKPATH</span></span><br><span class="line"></span><br><span class="line">RUN yum -y install net-tools</span><br><span class="line">RUN yum -y install vim</span><br><span class="line"></span><br><span class="line">EXPOSE 80</span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h3><p>命令的最后面有个英文句号.（少了句号不行）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker build -f /home/dockerfile/mycentosDockerFile -t a6678696/mycentos:1.1 .</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20232745.png"></p>
-<h3 id="查看镜像构建历史"><a href="#查看镜像构建历史" class="headerlink" title="查看镜像构建历史"></a>查看镜像构建历史</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker <span class="built_in">history</span> 镜像id</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20233507.jpg"></p>
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -7529,33 +7529,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows10释放被占用端口</title>
-    <url>/314.html</url>
-    <content><![CDATA[<h3 id="查看PID"><a href="#查看PID" class="headerlink" title="查看PID"></a>查看PID</h3><p>打开CMD，输入命令查看端口4000的PID</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;4000&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>看下图的0.0.0.0:4000，LISTENING后的数值：16388就是PID</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044304.png"></p>
-<h3 id="释放端口"><a href="#释放端口" class="headerlink" title="释放端口"></a>释放端口</h3><h4 id="CMD方式释放"><a href="#CMD方式释放" class="headerlink" title="CMD方式释放"></a>CMD方式释放</h4><p>输入以下命令，PID为上图LISTENING后的数值</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">taskkill /T /F /PID 16388</span><br></pre></td></tr></table></figure>
-
-<h4 id="任务管理器释放"><a href="#任务管理器释放" class="headerlink" title="任务管理器释放"></a>任务管理器释放</h4><p>查看指定 PID 的进程（也可以不看，记住PID即可）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tasklist|findstr <span class="string">&quot;16388&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044328.png"></p>
-<p>打开任务管理，选择详细信息选项，根据进程名称或者PID找到进程</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044726.jpg"></p>
-<p>右键点击并选择结束任务</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044745.jpg"></p>
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>Windows系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>form表单无法提交input disabled内容</title>
     <url>/315.html</url>
     <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用了disable属性让文本框无法编辑，但是提交form表单时无法获取该文本框的值，代码如下：</p>
@@ -7803,6 +7776,33 @@
         <tag>CentOS7</tag>
         <tag>Nginx</tag>
         <tag>Keepalived</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows10释放被占用端口</title>
+    <url>/314.html</url>
+    <content><![CDATA[<h3 id="查看PID"><a href="#查看PID" class="headerlink" title="查看PID"></a>查看PID</h3><p>打开CMD，输入命令查看端口4000的PID</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -aon|findstr <span class="string">&quot;4000&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>看下图的0.0.0.0:4000，LISTENING后的数值：16388就是PID</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044304.png"></p>
+<h3 id="释放端口"><a href="#释放端口" class="headerlink" title="释放端口"></a>释放端口</h3><h4 id="CMD方式释放"><a href="#CMD方式释放" class="headerlink" title="CMD方式释放"></a>CMD方式释放</h4><p>输入以下命令，PID为上图LISTENING后的数值</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">taskkill /T /F /PID 16388</span><br></pre></td></tr></table></figure>
+
+<h4 id="任务管理器释放"><a href="#任务管理器释放" class="headerlink" title="任务管理器释放"></a>任务管理器释放</h4><p>查看指定 PID 的进程（也可以不看，记住PID即可）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tasklist|findstr <span class="string">&quot;16388&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044328.png"></p>
+<p>打开任务管理，选择详细信息选项，根据进程名称或者PID找到进程</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044726.jpg"></p>
+<p>右键点击并选择结束任务</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-24%20044745.jpg"></p>
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>Windows系统</tag>
       </tags>
   </entry>
   <entry>
@@ -8476,6 +8476,26 @@
       </tags>
   </entry>
   <entry>
+    <title>基本数据类型之间的转换（显式转换和隐式转换）</title>
+    <url>/34.html</url>
+    <content><![CDATA[<h3 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h3><p>从表示范围小的类型转换为表示范围大的类型，可以直接转换，称为隐式转换。隐式类型转换又可以称为自动类型转换，就是由系统自动完成的类型转换。</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//数据类型转换之隐式转换（小的赋值给大的）</span></span><br><span class="line">        <span class="comment">//4个字节，占4个8位，int类型转换成byte时，去掉前3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">3</span>;</span><br><span class="line">        <span class="comment">//1个字节，占1个8位，byte类型转换成int时，在前面添加3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">byte</span> b=<span class="number">4</span>;</span><br><span class="line">        <span class="comment">/*小的数据类型和大的数据类型转换时，会将小的数据类型转换成大的数据类型，</span></span><br><span class="line"><span class="comment">        然后再进行运算，本程序中将byte类型转换成int类型,最终结果是int类型*/</span></span><br><span class="line">        x=x+b;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//控制台输出7</span></span><br><span class="line">        System.out.println(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="显式转换"><a href="#显式转换" class="headerlink" title="显式转换"></a>显式转换</h3><p>从表示范围大的类型转换为表示范围小的类型，需要强制转换，称为显式转换。强制类型转换的语法格式就是加一个括号，然后给出想要转换的目标类型。</p>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//int类型300转换成2进制为00000000 00000000 00000001 00101100</span></span><br><span class="line">        <span class="comment">//转换成byte去掉前3个8位：00101100</span></span><br><span class="line">        <span class="comment">//32+8+4=44</span></span><br><span class="line">        <span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)<span class="number">300</span>;</span><br><span class="line">        <span class="comment">//控制台输出44</span></span><br><span class="line">        System.out.println(b1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>自动类型转换规则：<a href="https://blog.zoutl.cn/84.html">二元运算符连接两个值 | LeDao的博客 (zoutl.cn)</a></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>RabbitMQ简介和使用场景</title>
     <url>/339.html</url>
     <content><![CDATA[<blockquote>
@@ -8529,26 +8549,6 @@
       </categories>
       <tags>
         <tag>RabbitMQ</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基本数据类型之间的转换（显式转换和隐式转换）</title>
-    <url>/34.html</url>
-    <content><![CDATA[<h3 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h3><p>从表示范围小的类型转换为表示范围大的类型，可以直接转换，称为隐式转换。隐式类型转换又可以称为自动类型转换，就是由系统自动完成的类型转换。</p>
-<p>例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//数据类型转换之隐式转换（小的赋值给大的）</span></span><br><span class="line">        <span class="comment">//4个字节，占4个8位，int类型转换成byte时，去掉前3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">int</span> x=<span class="number">3</span>;</span><br><span class="line">        <span class="comment">//1个字节，占1个8位，byte类型转换成int时，在前面添加3个8位（3个字节）</span></span><br><span class="line">        <span class="keyword">byte</span> b=<span class="number">4</span>;</span><br><span class="line">        <span class="comment">/*小的数据类型和大的数据类型转换时，会将小的数据类型转换成大的数据类型，</span></span><br><span class="line"><span class="comment">        然后再进行运算，本程序中将byte类型转换成int类型,最终结果是int类型*/</span></span><br><span class="line">        x=x+b;</span><br><span class="line"> </span><br><span class="line">        <span class="comment">//控制台输出7</span></span><br><span class="line">        System.out.println(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="显式转换"><a href="#显式转换" class="headerlink" title="显式转换"></a>显式转换</h3><p>从表示范围大的类型转换为表示范围小的类型，需要强制转换，称为显式转换。强制类型转换的语法格式就是加一个括号，然后给出想要转换的目标类型。</p>
-<p>例如：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//int类型300转换成2进制为00000000 00000000 00000001 00101100</span></span><br><span class="line">        <span class="comment">//转换成byte去掉前3个8位：00101100</span></span><br><span class="line">        <span class="comment">//32+8+4=44</span></span><br><span class="line">        <span class="keyword">byte</span> b1=(<span class="keyword">byte</span>)<span class="number">300</span>;</span><br><span class="line">        <span class="comment">//控制台输出44</span></span><br><span class="line">        System.out.println(b1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>自动类型转换规则：<a href="https://blog.zoutl.cn/84.html">二元运算符连接两个值 | LeDao的博客 (zoutl.cn)</a></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -9441,6 +9441,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Shiro授权</title>
+    <url>/360.html</url>
+    <content><![CDATA[<h3 id="授权过程"><a href="#授权过程" class="headerlink" title="授权过程"></a>授权过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-15%20193514.png"></p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authz.AuthorizationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,该用户的角色有admin和teacher</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher&quot;</span>);</span><br><span class="line">        <span class="comment">//构建securityManager环境</span></span><br><span class="line">        DefaultSecurityManager securityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将上面的用户交给securityManager管理</span></span><br><span class="line">        securityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(securityManager);</span><br><span class="line">        <span class="comment">//获取当前securityManager环境的subject主体</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">        <span class="comment">//设置登录用户的token</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//查看是否登录成功</span></span><br><span class="line">            System.out.println(subject.isAuthenticated() ? <span class="string">&quot;登录成功&quot;</span> : <span class="string">&quot;登录失败&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">//检查成功登录的用户是否有admin和teacher1两个角色</span></span><br><span class="line">                subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (AuthorizationException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">                System.out.println(<span class="string">&quot;登录的用户与检查的角色不相符!!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误!!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>如果subject.checkRoles(“admin”, “teacher1”)，那么程序会报错，提示没有teacher1这个角色；如果subject.checkRoles(“admin”, “teacher”)，那么程序不会报错</p>
+]]></content>
+      <categories>
+        <category>Shiro</category>
+      </categories>
+      <tags>
+        <tag>Shiro</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十大经典排序算法</title>
     <url>/36.html</url>
     <content><![CDATA[<h3 id="算法分类"><a href="#算法分类" class="headerlink" title="算法分类"></a>算法分类</h3><p>十种常见排序算法可以分为两大类：</p>
@@ -9459,21 +9474,6 @@
       <tags>
         <tag>Java</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Shiro授权</title>
-    <url>/360.html</url>
-    <content><![CDATA[<h3 id="授权过程"><a href="#授权过程" class="headerlink" title="授权过程"></a>授权过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-15%20193514.png"></p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authz.AuthorizationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,该用户的角色有admin和teacher</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher&quot;</span>);</span><br><span class="line">        <span class="comment">//构建securityManager环境</span></span><br><span class="line">        DefaultSecurityManager securityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将上面的用户交给securityManager管理</span></span><br><span class="line">        securityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(securityManager);</span><br><span class="line">        <span class="comment">//获取当前securityManager环境的subject主体</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">        <span class="comment">//设置登录用户的token</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//查看是否登录成功</span></span><br><span class="line">            System.out.println(subject.isAuthenticated() ? <span class="string">&quot;登录成功&quot;</span> : <span class="string">&quot;登录失败&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">//检查成功登录的用户是否有admin和teacher1两个角色</span></span><br><span class="line">                subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (AuthorizationException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">                System.out.println(<span class="string">&quot;登录的用户与检查的角色不相符!!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误!!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>如果subject.checkRoles(“admin”, “teacher1”)，那么程序会报错，提示没有teacher1这个角色；如果subject.checkRoles(“admin”, “teacher”)，那么程序不会报错</p>
-]]></content>
-      <categories>
-        <category>Shiro</category>
-      </categories>
-      <tags>
-        <tag>Shiro</tag>
       </tags>
   </entry>
   <entry>
@@ -9917,6 +9917,36 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL使用联结</title>
+    <url>/368.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>使用联结可以用一条SELECT语句检索出多个表的数据，使用联结的前提是表之间存在关联（一个表的除主键外的某一列，即：外键，是另一个表的主键），例如下图：（t_student的class_id是外键，表示班级和学生是一对多的关系，即一个班级有0个或多个学生）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-03%20185232.png"></p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="使用where"><a href="#使用where" class="headerlink" title="使用where"></a>使用where</h4><p>查询学生的班号、姓名、年龄</p>
+<p>其中班号在表t_class、姓名和年龄在表t_student</p>
+<p>表t_student的class_Id字段是外键</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,student_name,age <span class="keyword">FROM</span> t_class,t_student <span class="keyword">WHERE</span> t_class.`id`<span class="operator">=</span>t_student.`class_id`;</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用inner-join"><a href="#使用inner-join" class="headerlink" title="使用inner join"></a>使用inner join</h4><p>下面的SQL语句的作用和上一条语句的作用是一样的</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,student_name,age <span class="keyword">FROM</span> t_class <span class="keyword">INNER</span> <span class="keyword">JOIN</span> t_student <span class="keyword">ON</span> t_class.`id`<span class="operator">=</span>t_student.`class_id`;</span><br></pre></td></tr></table></figure>
+
+<h4 id="联结多个表"><a href="#联结多个表" class="headerlink" title="联结多个表"></a>联结多个表</h4><ol>
+<li><p>使用where</p>
+<p>查询学生的班号、姓名、语文成绩、数学成绩、英语成绩</p>
+<p>其中班号在表t_class，姓名和年龄在表t_student，语文成绩、数学成绩和英语成绩在表t_score2</p>
+<p>外键：表t_student的class_id字段，表t_score2的student_id字段</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,student_name,chinese_score,math_score,english_score <span class="keyword">FROM</span> t_class,t_student,t_score2 <span class="keyword">WHERE</span> t_class.`id`<span class="operator">=</span>t_student.`class_id` <span class="keyword">AND</span> t_student.`id`<span class="operator">=</span>t_score2.`student_id`;</span><br></pre></td></tr></table></figure></li>
+<li><p>使用inner join</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,student_name,chinese_score,math_score,english_score <span class="keyword">FROM</span> t_class <span class="keyword">INNER</span> <span class="keyword">JOIN</span> t_student <span class="keyword">INNER</span> <span class="keyword">JOIN</span> t_score2 <span class="keyword">ON</span> t_class.`id`<span class="operator">=</span>t_student.`class_Id` <span class="keyword">AND</span> t_student.`id`<span class="operator">=</span>t_score2.`student_id`;</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL组合查询</title>
     <url>/369.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>所谓组合查询，就是执行多个查询（多条SELECT语句），并将结果作为单个查询结果集返回</p>
@@ -9941,36 +9971,6 @@
 <h4 id="进行排序"><a href="#进行排序" class="headerlink" title="进行排序"></a>进行排序</h4><p>在SQL语句的最后加上ORDER BY即可</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t_student <span class="keyword">WHERE</span> student_name <span class="keyword">LIKE</span> <span class="string">&#x27;%赵%&#x27;</span> <span class="keyword">UNION</span> <span class="keyword">ALL</span> <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> t_student <span class="keyword">WHERE</span> age<span class="operator">&gt;</span><span class="number">10</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> id;</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL使用联结</title>
-    <url>/368.html</url>
-    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>使用联结可以用一条SELECT语句检索出多个表的数据，使用联结的前提是表之间存在关联（一个表的除主键外的某一列，即：外键，是另一个表的主键），例如下图：（t_student的class_id是外键，表示班级和学生是一对多的关系，即一个班级有0个或多个学生）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-03%20185232.png"></p>
-<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="使用where"><a href="#使用where" class="headerlink" title="使用where"></a>使用where</h4><p>查询学生的班号、姓名、年龄</p>
-<p>其中班号在表t_class、姓名和年龄在表t_student</p>
-<p>表t_student的class_Id字段是外键</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,student_name,age <span class="keyword">FROM</span> t_class,t_student <span class="keyword">WHERE</span> t_class.`id`<span class="operator">=</span>t_student.`class_id`;</span><br></pre></td></tr></table></figure>
-
-<h4 id="使用inner-join"><a href="#使用inner-join" class="headerlink" title="使用inner join"></a>使用inner join</h4><p>下面的SQL语句的作用和上一条语句的作用是一样的</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,student_name,age <span class="keyword">FROM</span> t_class <span class="keyword">INNER</span> <span class="keyword">JOIN</span> t_student <span class="keyword">ON</span> t_class.`id`<span class="operator">=</span>t_student.`class_id`;</span><br></pre></td></tr></table></figure>
-
-<h4 id="联结多个表"><a href="#联结多个表" class="headerlink" title="联结多个表"></a>联结多个表</h4><ol>
-<li><p>使用where</p>
-<p>查询学生的班号、姓名、语文成绩、数学成绩、英语成绩</p>
-<p>其中班号在表t_class，姓名和年龄在表t_student，语文成绩、数学成绩和英语成绩在表t_score2</p>
-<p>外键：表t_student的class_id字段，表t_score2的student_id字段</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,student_name,chinese_score,math_score,english_score <span class="keyword">FROM</span> t_class,t_student,t_score2 <span class="keyword">WHERE</span> t_class.`id`<span class="operator">=</span>t_student.`class_id` <span class="keyword">AND</span> t_student.`id`<span class="operator">=</span>t_score2.`student_id`;</span><br></pre></td></tr></table></figure></li>
-<li><p>使用inner join</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> class_num,student_name,chinese_score,math_score,english_score <span class="keyword">FROM</span> t_class <span class="keyword">INNER</span> <span class="keyword">JOIN</span> t_student <span class="keyword">INNER</span> <span class="keyword">JOIN</span> t_score2 <span class="keyword">ON</span> t_class.`id`<span class="operator">=</span>t_student.`class_Id` <span class="keyword">AND</span> t_student.`id`<span class="operator">=</span>t_score2.`student_id`;</span><br></pre></td></tr></table></figure></li>
-</ol>
 ]]></content>
       <categories>
         <category>MySQL</category>
@@ -13488,41 +13488,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring的c和p命名空间</title>
-    <url>/440.html</url>
-    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Spring的c和p命名空间可以注入依赖，也就是拓展方式注入</p>
-<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h3 id="StudentClass实体类"><a href="#StudentClass实体类" class="headerlink" title="StudentClass实体类"></a>StudentClass实体类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> entity;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-14 14:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentClass</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StudentClass</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StudentClass</span><span class="params">(<span class="keyword">int</span> id, String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Class&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="c命名空间"><a href="#c命名空间" class="headerlink" title="c命名空间"></a>c命名空间</h3><h4 id="在beans标签加上约束"><a href="#在beans标签加上约束" class="headerlink" title="在beans标签加上约束"></a>在beans标签加上约束</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">xmlns:c=&quot;http://www.springframework.org/schema/c&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="定义bean"><a href="#定义bean" class="headerlink" title="定义bean"></a>定义bean</h4><ol>
-<li><p>通过构造器参数注入</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass1&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">c:id</span>=<span class="string">&quot;1&quot;</span> <span class="attr">c:name</span>=<span class="string">&quot;www&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>通过构造器下标注入</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">c:_0</span>=<span class="string">&quot;2&quot;</span> <span class="attr">c:_1</span>=<span class="string">&quot;www2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>实体类中<font color="#dd0000">一定要定义一个有参构造器</font>，不然使用c命名空间会报错</p>
-<h3 id="p命名空间"><a href="#p命名空间" class="headerlink" title="p命名空间"></a>p命名空间</h3><h4 id="在beans标签加上约束-1"><a href="#在beans标签加上约束-1" class="headerlink" title="在beans标签加上约束"></a>在beans标签加上约束</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">xmlns:p=&quot;http://www.springframework.org/schema/p&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="定义bean-1"><a href="#定义bean-1" class="headerlink" title="定义bean"></a>定义bean</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass3&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">p:id</span>=<span class="string">&quot;3&quot;</span> <span class="attr">p:name</span>=<span class="string">&quot;www3&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h4><p>实体类中<font color="#dd0000">如果定义了一个有参构造器，就需要自己手动定义一个无参构造器</font>，不然使用p命名空间会报错</p>
-<h3 id="完整beans-xml代码"><a href="#完整beans-xml代码" class="headerlink" title="完整beans.xml代码"></a>完整beans.xml代码</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:p</span>=<span class="string">&quot;http://www.springframework.org/schema/p&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:c</span>=<span class="string">&quot;http://www.springframework.org/schema/c&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass1&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">c:id</span>=<span class="string">&quot;1&quot;</span> <span class="attr">c:name</span>=<span class="string">&quot;www&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">c:_0</span>=<span class="string">&quot;2&quot;</span> <span class="attr">c:_1</span>=<span class="string">&quot;www2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass3&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">p:id</span>=<span class="string">&quot;3&quot;</span> <span class="attr">p:name</span>=<span class="string">&quot;www3&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> config.MyConfig;</span><br><span class="line"><span class="keyword">import</span> entity.Student;</span><br><span class="line"><span class="keyword">import</span> entity.StudentClass;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-12 15:56</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">&quot;beans.xml&quot;</span>);</span><br><span class="line">        StudentClass studentClass = context.getBean(<span class="string">&quot;studentClass3&quot;</span>, StudentClass.class);</span><br><span class="line">        System.out.println(studentClass);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>控制打印出id为studentClass3的对象，该对象的id为3，name为www3</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220214153408511.png" alt="image-20220214153408511"></p>
-]]></content>
-      <categories>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Spring</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Spring bean作用域</title>
     <url>/441.html</url>
     <content><![CDATA[<h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><p>XML配置文件定义Scope时，bean标签使用scope属性即可</p>
@@ -13651,6 +13616,41 @@
 <h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220215185457615.png" alt="image-20220215185457615"></p>
 <h3 id="Resource"><a href="#Resource" class="headerlink" title="@Resource"></a>@Resource</h3><h4 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h4><p>和@Autowired的代码对比，只改动了People实体类</p>
 <h4 id="People实体类-1"><a href="#People实体类-1" class="headerlink" title="People实体类"></a>People实体类</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 18:13</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">People</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@Resource(name = &quot;dog2&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Dog dog;</span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> Cat cat;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Dog <span class="title">getDog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dog;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setDog</span><span class="params">(Dog dog)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.dog = dog;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Cat <span class="title">getCat</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> cat;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCat</span><span class="params">(Cat cat)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.cat = cat;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;People&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, dog=&quot;</span> + dog +</span><br><span class="line">                <span class="string">&quot;, cat=&quot;</span> + cat +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spring的c和p命名空间</title>
+    <url>/440.html</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Spring的c和p命名空间可以注入依赖，也就是拓展方式注入</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h3 id="StudentClass实体类"><a href="#StudentClass实体类" class="headerlink" title="StudentClass实体类"></a>StudentClass实体类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> entity;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-14 14:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentClass</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StudentClass</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">StudentClass</span><span class="params">(<span class="keyword">int</span> id, String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Class&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="c命名空间"><a href="#c命名空间" class="headerlink" title="c命名空间"></a>c命名空间</h3><h4 id="在beans标签加上约束"><a href="#在beans标签加上约束" class="headerlink" title="在beans标签加上约束"></a>在beans标签加上约束</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">xmlns:c=&quot;http://www.springframework.org/schema/c&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="定义bean"><a href="#定义bean" class="headerlink" title="定义bean"></a>定义bean</h4><ol>
+<li><p>通过构造器参数注入</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass1&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">c:id</span>=<span class="string">&quot;1&quot;</span> <span class="attr">c:name</span>=<span class="string">&quot;www&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>通过构造器下标注入</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">c:_0</span>=<span class="string">&quot;2&quot;</span> <span class="attr">c:_1</span>=<span class="string">&quot;www2&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>实体类中<font color="#dd0000">一定要定义一个有参构造器</font>，不然使用c命名空间会报错</p>
+<h3 id="p命名空间"><a href="#p命名空间" class="headerlink" title="p命名空间"></a>p命名空间</h3><h4 id="在beans标签加上约束-1"><a href="#在beans标签加上约束-1" class="headerlink" title="在beans标签加上约束"></a>在beans标签加上约束</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">xmlns:p=&quot;http://www.springframework.org/schema/p&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="定义bean-1"><a href="#定义bean-1" class="headerlink" title="定义bean"></a>定义bean</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass3&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">p:id</span>=<span class="string">&quot;3&quot;</span> <span class="attr">p:name</span>=<span class="string">&quot;www3&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h4><p>实体类中<font color="#dd0000">如果定义了一个有参构造器，就需要自己手动定义一个无参构造器</font>，不然使用p命名空间会报错</p>
+<h3 id="完整beans-xml代码"><a href="#完整beans-xml代码" class="headerlink" title="完整beans.xml代码"></a>完整beans.xml代码</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:p</span>=<span class="string">&quot;http://www.springframework.org/schema/p&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:c</span>=<span class="string">&quot;http://www.springframework.org/schema/c&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass1&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">c:id</span>=<span class="string">&quot;1&quot;</span> <span class="attr">c:name</span>=<span class="string">&quot;www&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">c:_0</span>=<span class="string">&quot;2&quot;</span> <span class="attr">c:_1</span>=<span class="string">&quot;www2&quot;</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;studentClass3&quot;</span> <span class="attr">class</span>=<span class="string">&quot;entity.StudentClass&quot;</span> <span class="attr">p:id</span>=<span class="string">&quot;3&quot;</span> <span class="attr">p:name</span>=<span class="string">&quot;www3&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> config.MyConfig;</span><br><span class="line"><span class="keyword">import</span> entity.Student;</span><br><span class="line"><span class="keyword">import</span> entity.StudentClass;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.ApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.support.ClassPathXmlApplicationContext;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-12 15:56</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">&quot;beans.xml&quot;</span>);</span><br><span class="line">        StudentClass studentClass = context.getBean(<span class="string">&quot;studentClass3&quot;</span>, StudentClass.class);</span><br><span class="line">        System.out.println(studentClass);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>控制打印出id为studentClass3的对象，该对象的id为3，name为www3</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220214153408511.png" alt="image-20220214153408511"></p>
 ]]></content>
       <categories>
         <category>Spring</category>
