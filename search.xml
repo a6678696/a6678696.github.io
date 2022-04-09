@@ -61,6 +61,19 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL数据库中text字段长度不够</title>
+    <url>/102.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>制作网站logo</title>
     <url>/103.html</url>
     <content><![CDATA[<h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p><a href="http://www.uugai.com/">http://www.uugai.com/</a></p>
@@ -78,19 +91,6 @@
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL数据库中text字段长度不够</title>
-    <url>/102.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）</p>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -151,13 +151,13 @@
       </tags>
   </entry>
   <entry>
-    <title>给网页添加背景图片（网页缩小放大都不受影响）</title>
-    <url>/107.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>鼠标移入div显示查看更多</title>
+    <url>/108.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -167,13 +167,13 @@
       </tags>
   </entry>
   <entry>
-    <title>鼠标移入div显示查看更多</title>
-    <url>/108.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>给网页添加背景图片（网页缩小放大都不受影响）</title>
+    <url>/107.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -280,23 +280,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows10脚本代码备份MySQL数据库</title>
-    <url>/113.html</url>
-    <content><![CDATA[<h3 id="创建backdb-bat文件"><a href="#创建backdb-bat文件" class="headerlink" title="创建backdb.bat文件"></a>创建backdb.bat文件</h3><p>打开该文件，输入以下内容并保存</p>
-<p>D盘创建名为db_backup文件夹，-u后的root是数据库连接时用户名，-p后的123456是密码，db_myblog是我的数据库名称</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 取日期、时间变量值<span class="built_in">set</span> yy=%date:~0,4%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mm=%date:~5,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> dd=%date:~8,2%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% lss 10 <span class="built_in">set</span> hh=0%time:~1,1%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% geq 10 <span class="built_in">set</span> hh=%time:~0,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mn=%time:~3,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> ss=%time:~6,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> date=%yy%%mm%%dd%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> time=%hh%%mn%%ss%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> filename=%date%_%time%</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="string">&quot;C:/Program Files/MySQL/MySQL Server 5.6/bin/mysqldump.exe&quot;</span> -uroot -p123456 --opt --default-character-set=utf8 -e --triggers -R --hex-blob --flush-logs -x --databases db_myblog &gt; D:/db_backup/db_myblog%filename%.sql</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> 导出已经完成</span><br><span class="line"> </span><br><span class="line"><span class="comment">#pause</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424001904.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>Windows系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mysqldump命令备份数据库</title>
     <url>/112.html</url>
     <content><![CDATA[<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p123456 db_myblog&gt; D:/db_backup/db_myblog.sql</span><br></pre></td></tr></table></figure>
@@ -318,19 +301,20 @@
       </tags>
   </entry>
   <entry>
-    <title>Java备份MySQL数据库</title>
-    <url>/114.html</url>
-    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-23 21:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Backup</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_psw;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要备份的数据库名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String db_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主机IP</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String host_ip;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_charset;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存放备份文件的路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String backup_path;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 命令</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String stmt;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Backup</span><span class="params">(String user_name, String user_psw, String db_name,</span></span></span><br><span class="line"><span class="params"><span class="function">                  String host_ip, String user_charset, String backup_path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">        <span class="keyword">this</span>.user_psw = user_psw;</span><br><span class="line">        <span class="keyword">this</span>.db_name = db_name;</span><br><span class="line">        <span class="comment">// 主机IP;</span></span><br><span class="line">        <span class="keyword">if</span> (host_ip == <span class="keyword">null</span> || host_ip.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为本机</span></span><br><span class="line">            <span class="keyword">this</span>.host_ip = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.host_ip = host_ip;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符集</span></span><br><span class="line">        <span class="keyword">if</span> (user_charset == <span class="keyword">null</span> || user_charset.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为安装时设置的字符集</span></span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; --default-character-set=&quot;</span> + user_charset;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.backup_path = backup_path;</span><br><span class="line">        <span class="keyword">this</span>.stmt = <span class="string">&quot;C:\\Program Files\\MySQL\\MySQL Server 5.6\\bin\\mysqldump &quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.db_name + <span class="string">&quot; -h &quot;</span> + <span class="keyword">this</span>.host_ip + <span class="string">&quot; -u&quot;</span> + <span class="keyword">this</span>.user_name</span><br><span class="line">                + <span class="string">&quot; -p&quot;</span> + <span class="keyword">this</span>.user_psw + <span class="keyword">this</span>.user_charset + <span class="string">&quot; --result-file=&quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.backup_path;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">backup_run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> run_result = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Runtime.getRuntime().exec(<span class="keyword">this</span>.stmt);</span><br><span class="line">            run_result = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> run_result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Backup backup = <span class="keyword">new</span> Backup(<span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;db_myblog&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;utf8&quot;</span>,</span><br><span class="line">                <span class="string">&quot;D:\\db_backup\\db_myblog.sql&quot;</span>);</span><br><span class="line">        <span class="keyword">boolean</span> result = backup.backup_run();</span><br><span class="line">        <span class="keyword">if</span> (result) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;备份成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Windows10脚本代码备份MySQL数据库</title>
+    <url>/113.html</url>
+    <content><![CDATA[<h3 id="创建backdb-bat文件"><a href="#创建backdb-bat文件" class="headerlink" title="创建backdb.bat文件"></a>创建backdb.bat文件</h3><p>打开该文件，输入以下内容并保存</p>
+<p>D盘创建名为db_backup文件夹，-u后的root是数据库连接时用户名，-p后的123456是密码，db_myblog是我的数据库名称</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 取日期、时间变量值<span class="built_in">set</span> yy=%date:~0,4%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mm=%date:~5,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> dd=%date:~8,2%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% lss 10 <span class="built_in">set</span> hh=0%time:~1,1%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% geq 10 <span class="built_in">set</span> hh=%time:~0,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mn=%time:~3,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> ss=%time:~6,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> date=%yy%%mm%%dd%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> time=%hh%%mn%%ss%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> filename=%date%_%time%</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="string">&quot;C:/Program Files/MySQL/MySQL Server 5.6/bin/mysqldump.exe&quot;</span> -uroot -p123456 --opt --default-character-set=utf8 -e --triggers -R --hex-blob --flush-logs -x --databases db_myblog &gt; D:/db_backup/db_myblog%filename%.sql</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> 导出已经完成</span><br><span class="line"> </span><br><span class="line"><span class="comment">#pause</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424002930.jpg" alt="img"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424003003.jpg" alt="img"></p>
+<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424001904.jpg" alt="img"></p>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>Windows系统</category>
       </categories>
       <tags>
-        <tag>Java</tag>
         <tag>MySQL</tag>
+        <tag>Windows系统</tag>
       </tags>
   </entry>
   <entry>
@@ -369,6 +353,22 @@
       </categories>
       <tags>
         <tag>Windows系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java备份MySQL数据库</title>
+    <url>/114.html</url>
+    <content><![CDATA[<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-04-23 21:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Backup</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数据库密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_psw;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 需要备份的数据库名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String db_name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 主机IP</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String host_ip;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 字符集</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String user_charset;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 存放备份文件的路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String backup_path;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 命令</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String stmt;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Backup</span><span class="params">(String user_name, String user_psw, String db_name,</span></span></span><br><span class="line"><span class="params"><span class="function">                  String host_ip, String user_charset, String backup_path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.user_name = user_name;</span><br><span class="line">        <span class="keyword">this</span>.user_psw = user_psw;</span><br><span class="line">        <span class="keyword">this</span>.db_name = db_name;</span><br><span class="line">        <span class="comment">// 主机IP;</span></span><br><span class="line">        <span class="keyword">if</span> (host_ip == <span class="keyword">null</span> || host_ip.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为本机</span></span><br><span class="line">            <span class="keyword">this</span>.host_ip = <span class="string">&quot;localhost&quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.host_ip = host_ip;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 字符集</span></span><br><span class="line">        <span class="keyword">if</span> (user_charset == <span class="keyword">null</span> || user_charset.equals(<span class="string">&quot;&quot;</span>)) &#123;</span><br><span class="line">            <span class="comment">// 默认为安装时设置的字符集</span></span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; &quot;</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.user_charset = <span class="string">&quot; --default-character-set=&quot;</span> + user_charset;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">this</span>.backup_path = backup_path;</span><br><span class="line">        <span class="keyword">this</span>.stmt = <span class="string">&quot;C:\\Program Files\\MySQL\\MySQL Server 5.6\\bin\\mysqldump &quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.db_name + <span class="string">&quot; -h &quot;</span> + <span class="keyword">this</span>.host_ip + <span class="string">&quot; -u&quot;</span> + <span class="keyword">this</span>.user_name</span><br><span class="line">                + <span class="string">&quot; -p&quot;</span> + <span class="keyword">this</span>.user_psw + <span class="keyword">this</span>.user_charset + <span class="string">&quot; --result-file=&quot;</span></span><br><span class="line">                + <span class="keyword">this</span>.backup_path;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">backup_run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span> run_result = <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Runtime.getRuntime().exec(<span class="keyword">this</span>.stmt);</span><br><span class="line">            run_result = <span class="keyword">true</span>;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> run_result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Backup backup = <span class="keyword">new</span> Backup(<span class="string">&quot;root&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;db_myblog&quot;</span>, <span class="keyword">null</span>, <span class="string">&quot;utf8&quot;</span>,</span><br><span class="line">                <span class="string">&quot;D:\\db_backup\\db_myblog.sql&quot;</span>);</span><br><span class="line">        <span class="keyword">boolean</span> result = backup.backup_run();</span><br><span class="line">        <span class="keyword">if</span> (result) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;备份成功&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424002930.jpg" alt="img"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424003003.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -425,6 +425,23 @@
       </tags>
   </entry>
   <entry>
+    <title>EasyUI自定义图标</title>
+    <url>/118.html</url>
+    <content><![CDATA[<h3 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ">https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ</a></p>
+<p>提取码：<code>cv65</code></p>
+<h3 id="复制到项目中"><a href="#复制到项目中" class="headerlink" title="复制到项目中"></a>复制到项目中</h3><p>在EasyUI文件夹的themes文件夹中放入下载好的图片（文件名后缀改为<code>.gif</code>）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210427000607.jpg" alt="img"></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在EasyUI文件夹的themes文件夹的icon.css中添加图标代码</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.icon-setMenuBlog</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">&#x27;usericons/setMenuBlog.gif&#x27;</span>) no-repeat center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>EasyUI</category>
+      </categories>
+      <tags>
+        <tag>EasyUI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java格式化时间</title>
     <url>/119.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Java格式化时间使用的类是SimpleDateFormat</p>
@@ -440,23 +457,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>EasyUI自定义图标</title>
-    <url>/118.html</url>
-    <content><![CDATA[<h3 id="下载图标"><a href="#下载图标" class="headerlink" title="下载图标"></a>下载图标</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ">https://pan.baidu.com/s/1Y0678vgcZbkHOTcdRr0hyQ</a></p>
-<p>提取码：<code>cv65</code></p>
-<h3 id="复制到项目中"><a href="#复制到项目中" class="headerlink" title="复制到项目中"></a>复制到项目中</h3><p>在EasyUI文件夹的themes文件夹中放入下载好的图片（文件名后缀改为<code>.gif</code>）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210427000607.jpg" alt="img"></p>
-<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>在EasyUI文件夹的themes文件夹的icon.css中添加图标代码</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.icon-setMenuBlog</span>&#123;</span><br><span class="line">	<span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">&#x27;usericons/setMenuBlog.gif&#x27;</span>) no-repeat center center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>EasyUI</category>
-      </categories>
-      <tags>
-        <tag>EasyUI</tag>
       </tags>
   </entry>
   <entry>
@@ -1861,6 +1861,46 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS7安装vsftp服务</title>
+    <url>/152.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>我们需要向CentOS7操作系统的服务器上上传文件或者下载文件，这时候，有必要安装下ftp，我们选择主流的vsftp；</p>
+<h3 id="安装vsftp"><a href="#安装vsftp" class="headerlink" title="安装vsftp"></a>安装vsftp</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br></pre></td></tr></table></figure>
+
+<h3 id="启动ftp服务"><a href="#启动ftp服务" class="headerlink" title="启动ftp服务"></a>启动ftp服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start vsftpd.service</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开防火墙"><a href="#打开防火墙" class="headerlink" title="打开防火墙"></a>打开防火墙</h3><p>永久添加tcp 21端口</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=21/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<p>添加ftp服务</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --add-service=ftp</span><br></pre></td></tr></table></figure>
+
+<p>重启防火墙</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><p>新建java1234用户 添加到root组，但是不允许用户登录，仅仅可以ftp登录，ftp登录后的默认目录是/home/data</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">useradd -g root -d /home/data -s /sbin/nologin java1234</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置用户密码"><a href="#设置用户密码" class="headerlink" title="设置用户密码"></a>设置用户密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd java1234</span><br></pre></td></tr></table></figure>
+
+<h3 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown -R java1234:root /home/data</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">setsebool -P ftpd_full_access on</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改vsftp配置文件，禁止匿名登录"><a href="#修改vsftp配置文件，禁止匿名登录" class="headerlink" title="修改vsftp配置文件，禁止匿名登录"></a>修改vsftp配置文件，禁止匿名登录</h3><p>把：anonymous_enable=YES 改为： anonymous_enable=NO</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/vsftpd/vsftpd.conf</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="http://blog.java1234.com/blog/articles/306.html">Centos7.3安装vsftp服务_Java开源博客系统-Powered by java1234</a></p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FTPRush向CentOS7上传文件和从CentOS7下载文件</title>
     <url>/153.html</url>
     <content><![CDATA[<h3 id="下载和安装FTPRush"><a href="#下载和安装FTPRush" class="headerlink" title="下载和安装FTPRush"></a>下载和安装FTPRush</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1TLBzFAs94nHdDHunPfSF3g">https://pan.baidu.com/s/1TLBzFAs94nHdDHunPfSF3g</a></p>
@@ -1914,46 +1954,6 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220203155516717.png" alt="image-20220203155516717"></p>
 </li>
 </ol>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7安装vsftp服务</title>
-    <url>/152.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>我们需要向CentOS7操作系统的服务器上上传文件或者下载文件，这时候，有必要安装下ftp，我们选择主流的vsftp；</p>
-<h3 id="安装vsftp"><a href="#安装vsftp" class="headerlink" title="安装vsftp"></a>安装vsftp</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y vsftpd</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> vsftpd</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动ftp服务"><a href="#启动ftp服务" class="headerlink" title="启动ftp服务"></a>启动ftp服务</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start vsftpd.service</span><br></pre></td></tr></table></figure>
-
-<h3 id="打开防火墙"><a href="#打开防火墙" class="headerlink" title="打开防火墙"></a>打开防火墙</h3><p>永久添加tcp 21端口</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=21/tcp --permanent</span><br></pre></td></tr></table></figure>
-
-<p>添加ftp服务</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --add-service=ftp</span><br></pre></td></tr></table></figure>
-
-<p>重启防火墙</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加用户"><a href="#添加用户" class="headerlink" title="添加用户"></a>添加用户</h3><p>新建java1234用户 添加到root组，但是不允许用户登录，仅仅可以ftp登录，ftp登录后的默认目录是/home/data</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">useradd -g root -d /home/data -s /sbin/nologin java1234</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置用户密码"><a href="#设置用户密码" class="headerlink" title="设置用户密码"></a>设置用户密码</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">passwd java1234</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置权限"><a href="#设置权限" class="headerlink" title="设置权限"></a>设置权限</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">chown -R java1234:root /home/data</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">setsebool -P ftpd_full_access on</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改vsftp配置文件，禁止匿名登录"><a href="#修改vsftp配置文件，禁止匿名登录" class="headerlink" title="修改vsftp配置文件，禁止匿名登录"></a>修改vsftp配置文件，禁止匿名登录</h3><p>把：anonymous_enable=YES 改为： anonymous_enable=NO</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /etc/vsftpd/vsftpd.conf</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>来源：<a href="http://blog.java1234.com/blog/articles/306.html">Centos7.3安装vsftp服务_Java开源博客系统-Powered by java1234</a></p>
 ]]></content>
       <categories>
         <category>CentOS7</category>
@@ -3115,24 +3115,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue.js事件处理器</title>
-    <url>/188.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>事件监听使用 v-on 指令</p>
-<p>v-on:click点击事件，可以简写成@click</p>
-<span id="more"></span>
-
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>计数器：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;counter&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;counter++&quot;</span>&gt;</span>加1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;counter--&quot;</span>&gt;</span>减1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;number&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;add(number)&quot;</span>&gt;</span>加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;number2&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;less(number2)&quot;</span>&gt;</span>减<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">number</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">number2</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">add</span>: <span class="function"><span class="keyword">function</span> (<span class="params">number</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter += <span class="built_in">parseInt</span>(number);</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">less</span>: <span class="function"><span class="keyword">function</span> (<span class="params">number2</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter -= <span class="built_in">parseInt</span>(number2);</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625015442.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue.js表单</title>
     <url>/189.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>用 v-model 指令在表单控件元素上创建双向数据绑定</p>
@@ -3158,14 +3140,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue.js遍历数组时获取对象的下标</title>
-    <url>/190.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>v-for=”(value, index) in 数组名”</p>
-<p>第一个参数表示遍历时的对象，第二个参数则代表下标（参数值可以根据自己的需求设置）</p>
-<h3 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h3><p>使用了数组下标设置数组的值</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>总价：&#123;&#123;calculatePriceTotal&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">v-for</span>=<span class="string">&quot;(value, index) in snacks&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;background: beige&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: blue&quot;</span>&gt;</span>数组下标:&#123;&#123;index&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>对象:&#123;&#123;value&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span>编号:&#123;&#123;value.id&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>名称:&#123;&#123;value.name&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>价格:&#123;&#123;value.price&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>数量:&#123;&#123;value.num&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>当前商品总价：&#123;&#123;value.num * value.price&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;margin-top: 5px&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;value.num&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;addNum(index)&quot;</span>&gt;</span>加1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;lessNum(index)&quot;</span>&gt;</span>减1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">snacks</span>: [</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">&#x27;零食1&#x27;</span>, <span class="attr">price</span>: <span class="number">11</span>, <span class="attr">num</span>: <span class="number">3</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">&#x27;零食2&#x27;</span>, <span class="attr">price</span>: <span class="number">5</span>, <span class="attr">num</span>: <span class="number">2</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">id</span>: <span class="number">3</span>, <span class="attr">name</span>: <span class="string">&#x27;零食3&#x27;</span>, <span class="attr">price</span>: <span class="number">8</span>, <span class="attr">num</span>: <span class="number">6</span>&#125;</span></span><br><span class="line"><span class="javascript">            ]</span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">addNum</span>: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.snacks[index].num++;</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">lessNum</span>: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span> (<span class="built_in">this</span>.snacks[index].num &gt; <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">this</span>.snacks[index].num--;</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">computed</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">calculatePriceTotal</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">let</span> total = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.snacks.length; i++) &#123;</span></span><br><span class="line"><span class="javascript">                    total += <span class="built_in">parseInt</span>(<span class="built_in">this</span>.snacks[i].num) * <span class="built_in">parseInt</span>(<span class="built_in">this</span>.snacks[i].price);</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> total;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>Vue.js事件处理器</title>
+    <url>/188.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>事件监听使用 v-on 指令</p>
+<p>v-on:click点击事件，可以简写成@click</p>
+<span id="more"></span>
 
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625135845.jpg" alt="img"></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span>&gt;</span>计数器：<span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>&#123;&#123;counter&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">&quot;counter++&quot;</span>&gt;</span>加1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;counter--&quot;</span>&gt;</span>减1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;number&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;add(number)&quot;</span>&gt;</span>加<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;number2&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;less(number2)&quot;</span>&gt;</span>减<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">counter</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">number</span>: <span class="number">0</span>,</span></span><br><span class="line"><span class="javascript">            <span class="attr">number2</span>: <span class="number">0</span></span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">add</span>: <span class="function"><span class="keyword">function</span> (<span class="params">number</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter += <span class="built_in">parseInt</span>(number);</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">less</span>: <span class="function"><span class="keyword">function</span> (<span class="params">number2</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.counter -= <span class="built_in">parseInt</span>(number2);</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625015442.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Vue.js</category>
@@ -3193,6 +3176,23 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue.js遍历数组时获取对象的下标</title>
+    <url>/190.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>v-for=”(value, index) in 数组名”</p>
+<p>第一个参数表示遍历时的对象，第二个参数则代表下标（参数值可以根据自己的需求设置）</p>
+<h3 id="参考代码"><a href="#参考代码" class="headerlink" title="参考代码"></a>参考代码</h3><p>使用了数组下标设置数组的值</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>总价：&#123;&#123;calculatePriceTotal&#125;&#125;<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h3</span> <span class="attr">v-for</span>=<span class="string">&quot;(value, index) in snacks&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;background: beige&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: blue&quot;</span>&gt;</span>数组下标:&#123;&#123;index&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>对象:&#123;&#123;value&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span>编号:&#123;&#123;value.id&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>名称:&#123;&#123;value.name&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>价格:&#123;&#123;value.price&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>数量:&#123;&#123;value.num&#125;&#125;<span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span>当前商品总价：&#123;&#123;value.num * value.price&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;margin-top: 5px&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;value.num&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;addNum(index)&quot;</span>&gt;</span>加1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;lessNum(index)&quot;</span>&gt;</span>减1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">snacks</span>: [</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">id</span>: <span class="number">1</span>, <span class="attr">name</span>: <span class="string">&#x27;零食1&#x27;</span>, <span class="attr">price</span>: <span class="number">11</span>, <span class="attr">num</span>: <span class="number">3</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">id</span>: <span class="number">2</span>, <span class="attr">name</span>: <span class="string">&#x27;零食2&#x27;</span>, <span class="attr">price</span>: <span class="number">5</span>, <span class="attr">num</span>: <span class="number">2</span>&#125;,</span></span><br><span class="line"><span class="javascript">                &#123;<span class="attr">id</span>: <span class="number">3</span>, <span class="attr">name</span>: <span class="string">&#x27;零食3&#x27;</span>, <span class="attr">price</span>: <span class="number">8</span>, <span class="attr">num</span>: <span class="number">6</span>&#125;</span></span><br><span class="line"><span class="javascript">            ]</span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">methods</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">addNum</span>: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="built_in">this</span>.snacks[index].num++;</span></span><br><span class="line"><span class="javascript">            &#125;,</span></span><br><span class="line"><span class="javascript">            <span class="attr">lessNum</span>: <span class="function"><span class="keyword">function</span> (<span class="params">index</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">if</span> (<span class="built_in">this</span>.snacks[index].num &gt; <span class="number">0</span>) &#123;</span></span><br><span class="line"><span class="javascript">                    <span class="built_in">this</span>.snacks[index].num--;</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;,</span></span><br><span class="line"><span class="javascript">        <span class="attr">computed</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">calculatePriceTotal</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">let</span> total = <span class="number">0</span>;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="built_in">this</span>.snacks.length; i++) &#123;</span></span><br><span class="line"><span class="javascript">                    total += <span class="built_in">parseInt</span>(<span class="built_in">this</span>.snacks[i].num) * <span class="built_in">parseInt</span>(<span class="built_in">this</span>.snacks[i].price);</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">                <span class="keyword">return</span> total;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625135845.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Vue.js组件</title>
     <url>/191.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Vue.js组件有全局组件和局部组件</p>
@@ -3209,6 +3209,24 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/component.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">测试app1（只有全局组件myh1生效，因为Vue实例中没有使用任何局部组件）</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">myh1</span>&gt;</span><span class="tag">&lt;/<span class="name">myh1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">myh2</span>&gt;</span><span class="tag">&lt;/<span class="name">myh2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">myh3</span>&gt;</span><span class="tag">&lt;/<span class="name">myh3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">测试app2（全局组件myh1和局部组件（Child，Child2）都生效）</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app2&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">myh1</span>&gt;</span><span class="tag">&lt;/<span class="name">myh1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">myh2</span>&gt;</span><span class="tag">&lt;/<span class="name">myh2</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">myh3</span>&gt;</span><span class="tag">&lt;/<span class="name">myh3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app1&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app2&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">components</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="string">&#x27;myh2&#x27;</span>: Child,</span></span><br><span class="line"><span class="javascript">            <span class="string">&#x27;myh3&#x27;</span>: Child2</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625151002.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>父组件向子组件传递数据</title>
+    <url>/192.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>prop 是子组件用来接受父组件传递过来的数据的一个自定义属性</p>
+<p>父组件的数据需要通过 props 把数据传给子组件，子组件需要显式地用 props 选项声明 “prop”</p>
+<p>关于父组件和子组件：（下面的这段话中相同颜色代表同一组件）</p>
+<p>我们将某段代码封装成一个组件，而这个组件又在另一个组件中被引入，而引入该封装的组件的组件叫做父组件（另一个组件），被引入的组件叫做子组件（这个组件）</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">-----------------------------------------------</span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>传递静态数据<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">my-span1</span> <span class="attr">message11</span>=<span class="string">&quot;11&quot;</span> <span class="attr">message22</span>=<span class="string">&quot;22&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">my-span1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="handlebars"><span class="xml"></span></span></span><br><span class="line"><span class="xml"><span class="handlebars">    Vue.component(&quot;my-span1&quot;, &#123;</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">        //传递多个数据</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">        props: [&#x27;message11&#x27;, &#x27;message22&#x27;],</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">        template: &#x27;<span class="tag">&lt;<span class="name">span</span>&gt;</span>message11=</span><span class="template-variable">&#123;&#123;<span class="name">message11</span>&#125;&#125;</span><span class="xml">,message22=</span><span class="template-variable">&#123;&#123;<span class="name">message22</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span>&#x27;</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">    &#125;)</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">    new Vue(&#123;</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">        el: &#x27;#app1&#x27;</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">    &#125;)</span></span></span><br><span class="line"><span class="xml"><span class="handlebars"></span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-----------------------------------------------</span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>传递动态数据<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app2&quot;</span>&gt;</span></span><br><span class="line">    父组件内容:</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;parentMessage&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    子组件内容:</span><br><span class="line">    <span class="tag">&lt;<span class="name">my-span1</span> <span class="attr">v-bind:message2</span>=<span class="string">&quot;parentMessage&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">my-span1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&#x27;my-span1&#x27;</span>, &#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//传递单个数据</span></span></span><br><span class="line"><span class="javascript">        <span class="attr">props</span>: [<span class="string">&#x27;message2&#x27;</span>],</span></span><br><span class="line"><span class="javascript">        <span class="attr">template</span>: <span class="string">&#x27;&lt;span&gt;&#123;&#123;message2&#125;&#125;&lt;/span&gt;&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app2&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">parentMessage</span>: <span class="string">&#x27;123456&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-----------------------------------------------</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625194623.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Vue.js</category>
@@ -3239,24 +3257,6 @@
       </tags>
   </entry>
   <entry>
-    <title>父组件向子组件传递数据</title>
-    <url>/192.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>prop 是子组件用来接受父组件传递过来的数据的一个自定义属性</p>
-<p>父组件的数据需要通过 props 把数据传给子组件，子组件需要显式地用 props 选项声明 “prop”</p>
-<p>关于父组件和子组件：（下面的这段话中相同颜色代表同一组件）</p>
-<p>我们将某段代码封装成一个组件，而这个组件又在另一个组件中被引入，而引入该封装的组件的组件叫做父组件（另一个组件），被引入的组件叫做子组件（这个组件）</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">-----------------------------------------------</span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>传递静态数据<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">my-span1</span> <span class="attr">message11</span>=<span class="string">&quot;11&quot;</span> <span class="attr">message22</span>=<span class="string">&quot;22&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">my-span1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="handlebars"><span class="xml"></span></span></span><br><span class="line"><span class="xml"><span class="handlebars">    Vue.component(&quot;my-span1&quot;, &#123;</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">        //传递多个数据</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">        props: [&#x27;message11&#x27;, &#x27;message22&#x27;],</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">        template: &#x27;<span class="tag">&lt;<span class="name">span</span>&gt;</span>message11=</span><span class="template-variable">&#123;&#123;<span class="name">message11</span>&#125;&#125;</span><span class="xml">,message22=</span><span class="template-variable">&#123;&#123;<span class="name">message22</span>&#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span>&#x27;</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">    &#125;)</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">    new Vue(&#123;</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">        el: &#x27;#app1&#x27;</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">    &#125;)</span></span></span><br><span class="line"><span class="xml"><span class="handlebars"></span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-----------------------------------------------</span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>传递动态数据<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app2&quot;</span>&gt;</span></span><br><span class="line">    父组件内容:</span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-model</span>=<span class="string">&quot;parentMessage&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    子组件内容:</span><br><span class="line">    <span class="tag">&lt;<span class="name">my-span1</span> <span class="attr">v-bind:message2</span>=<span class="string">&quot;parentMessage&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">my-span1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    Vue.component(<span class="string">&#x27;my-span1&#x27;</span>, &#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">//传递单个数据</span></span></span><br><span class="line"><span class="javascript">        <span class="attr">props</span>: [<span class="string">&#x27;message2&#x27;</span>],</span></span><br><span class="line"><span class="javascript">        <span class="attr">template</span>: <span class="string">&#x27;&lt;span&gt;&#123;&#123;message2&#125;&#125;&lt;/span&gt;&#x27;</span></span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app2&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">parentMessage</span>: <span class="string">&#x27;123456&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">-----------------------------------------------</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a><strong>结果</strong></h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625194623.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue.js自定义指令</title>
     <url>/194.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>除了默认设置的核心指令( v-model 和 v-show )，Vue 也允许注册自定义指令</p>
@@ -3269,6 +3269,23 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 444px&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;color: red&quot;</span>&gt;</span>页面加载时,input元素自动获取焦点<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    姓名:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">v-focus</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">directives</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">focus</span>: &#123;</span></span><br><span class="line"><span class="javascript">                <span class="attr">inserted</span>: <span class="function"><span class="keyword">function</span> (<span class="params">el</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    el.focus();</span></span><br><span class="line"><span class="javascript">                &#125;</span></span><br><span class="line"><span class="javascript">            &#125;</span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625211215.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue.js 路由</title>
+    <url>/195.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Vue.js 路由允许我们通过不同的 URL 访问不同的内容，通过 Vue.js 可以实现多视图的单页Web应用</p>
+<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 使用 router-link 组件来导航. --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 通过传入 `to` 属性指定链接. --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/blog1&quot;</span>&gt;</span>第一篇博客<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/blog2&quot;</span>&gt;</span>第二篇博客<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由出口 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 1. 定义（路由）组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> blog1 = &#123;<span class="attr">template</span>: <span class="string">&#x27;&lt;p style=&quot;color: blue&quot;&gt;现在是第一篇博客&lt;/p&gt;&#x27;</span>&#125;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> blog2 = &#123;<span class="attr">template</span>: <span class="string">&#x27;&lt;p style=&quot;color: red&quot;&gt;现在是第二篇博客&lt;/p&gt;&#x27;</span>&#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 2. 定义路由</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> routes = [</span></span><br><span class="line"><span class="javascript">        &#123;<span class="attr">path</span>: <span class="string">&#x27;/blog1&#x27;</span>, <span class="attr">component</span>: blog1&#125;,</span></span><br><span class="line"><span class="javascript">        &#123;<span class="attr">path</span>: <span class="string">&#x27;/blog2&#x27;</span>, <span class="attr">component</span>: blog2&#125;</span></span><br><span class="line"><span class="javascript">    ]</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 3. 创建 router 实例，然后传 `routes` 配置</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter(&#123;routes&#125;)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 4. 创建和挂载根实例</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        router</span></span><br><span class="line"><span class="javascript">    &#125;).$mount(<span class="string">&#x27;#app&#x27;</span>)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625213813.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Vue.js</category>
@@ -3307,23 +3324,6 @@
       <tags>
         <tag>Java</tag>
         <tag>Spring Boot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vue.js 路由</title>
-    <url>/195.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Vue.js 路由允许我们通过不同的 URL 访问不同的内容，通过 Vue.js 可以实现多视图的单页Web应用</p>
-<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="简单实例"><a href="#简单实例" class="headerlink" title="简单实例"></a>简单实例</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;js/vue.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/vue-router/2.7.0/vue-router.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 使用 router-link 组件来导航. --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 通过传入 `to` 属性指定链接. --&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/blog1&quot;</span>&gt;</span>第一篇博客<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">router-link</span> <span class="attr">to</span>=<span class="string">&quot;/blog2&quot;</span>&gt;</span>第二篇博客<span class="tag">&lt;/<span class="name">router-link</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由出口 --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>&gt;</span><span class="tag">&lt;/<span class="name">router-view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 1. 定义（路由）组件</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> blog1 = &#123;<span class="attr">template</span>: <span class="string">&#x27;&lt;p style=&quot;color: blue&quot;&gt;现在是第一篇博客&lt;/p&gt;&#x27;</span>&#125;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> blog2 = &#123;<span class="attr">template</span>: <span class="string">&#x27;&lt;p style=&quot;color: red&quot;&gt;现在是第二篇博客&lt;/p&gt;&#x27;</span>&#125;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 2. 定义路由</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> routes = [</span></span><br><span class="line"><span class="javascript">        &#123;<span class="attr">path</span>: <span class="string">&#x27;/blog1&#x27;</span>, <span class="attr">component</span>: blog1&#125;,</span></span><br><span class="line"><span class="javascript">        &#123;<span class="attr">path</span>: <span class="string">&#x27;/blog2&#x27;</span>, <span class="attr">component</span>: blog2&#125;</span></span><br><span class="line"><span class="javascript">    ]</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 3. 创建 router 实例，然后传 `routes` 配置</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> router = <span class="keyword">new</span> VueRouter(&#123;routes&#125;)</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="comment">// 4. 创建和挂载根实例</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        router</span></span><br><span class="line"><span class="javascript">    &#125;).$mount(<span class="string">&#x27;#app&#x27;</span>)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210625213813.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
       </tags>
   </entry>
   <entry>
@@ -4804,6 +4804,23 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo next添加页脚网站运行时间</title>
+    <url>/245.html</url>
+    <content><![CDATA[<h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;sitetime&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">javascript</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">siteTime</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">window</span>.setTimeout(<span class="string">&quot;siteTime()&quot;</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> seconds = <span class="number">1000</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> minutes = seconds * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> hours = minutes * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> days = hours * <span class="number">24</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> years = days * <span class="number">365</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayYear = today.getFullYear();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMonth = today.getMonth()+<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayDate = today.getDate();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayHour = today.getHours();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMinute = today.getMinutes();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todaySecond = today.getSeconds();</span></span><br><span class="line"><span class="javascript">		<span class="comment">/* </span></span></span><br><span class="line"><span class="comment"><span class="javascript">		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		year - 作为date对象的年份，为4位年份值</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		month - 0-11之间的整数，做为date对象的月份</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		day - 1-31之间的整数，做为date对象的天数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		minutes - 0-59之间的整数，做为date对象的分钟数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		seconds - 0-59之间的整数，做为date对象的秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		microseconds - 0-999之间的整数，做为date对象的毫秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">        */</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t1 = <span class="built_in">Date</span>.UTC(<span class="number">2020</span>,<span class="number">02</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">00</span>,<span class="number">00</span>); <span class="comment">//北京时间2018-2-13 00:00:00</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t2 = <span class="built_in">Date</span>.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diff = t2-t1;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffYears = <span class="built_in">Math</span>.floor(diff/years);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffDays = <span class="built_in">Math</span>.floor((diff/days)-diffYears*<span class="number">365</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffHours = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days)/hours);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffMinutes = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours)/minutes);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffSeconds = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">&quot;sitetime&quot;</span>).innerHTML=<span class="string">&quot; 已运行&quot;</span>+<span class="comment">/*diffYears+&quot; 年 &quot;+*/</span>diffDays+<span class="string">&quot; 天 &quot;</span>+diffHours+<span class="string">&quot; 小时 &quot;</span>+diffMinutes+<span class="string">&quot; 分钟 &quot;</span>+diffSeconds+<span class="string">&quot; 秒&quot;</span>;</span></span><br><span class="line"><span class="javascript">	&#125;</span></span><br><span class="line"><span class="javascript">	siteTime();</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="在页脚文件添加"><a href="#在页脚文件添加" class="headerlink" title="在页脚文件添加"></a>在页脚文件添加</h3><p>文件名称为：<font color="#dd0000">footer.swig</font>，文件路径：<font color="#dd0000">themes/next/layout/_partials/footer.swig</font></p>
+<p>在哪里添加根据自己的需求而定</p>
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20214348.png"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/qq_39720594/article/details/105411030">https://blog.csdn.net/qq_39720594/article/details/105411030</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java获取随机数</title>
     <url>/246.html</url>
     <content><![CDATA[<h3 id="System-currentTimeMillis"><a href="#System-currentTimeMillis" class="headerlink" title="System.currentTimeMillis()"></a>System.currentTimeMillis()</h3><p>通过System.currentTimeMillis()来获取随机数，实际上是获取当前时间毫秒数，它是long类型</p>
@@ -4823,23 +4840,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo next添加页脚网站运行时间</title>
-    <url>/245.html</url>
-    <content><![CDATA[<h3 id="关键代码"><a href="#关键代码" class="headerlink" title="关键代码"></a>关键代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;sitetime&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">language</span>=<span class="string">javascript</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">	<span class="function"><span class="keyword">function</span> <span class="title">siteTime</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">window</span>.setTimeout(<span class="string">&quot;siteTime()&quot;</span>, <span class="number">1000</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> seconds = <span class="number">1000</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> minutes = seconds * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> hours = minutes * <span class="number">60</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> days = hours * <span class="number">24</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> years = days * <span class="number">365</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> today = <span class="keyword">new</span> <span class="built_in">Date</span>();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayYear = today.getFullYear();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMonth = today.getMonth()+<span class="number">1</span>;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayDate = today.getDate();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayHour = today.getHours();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todayMinute = today.getMinutes();</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> todaySecond = today.getSeconds();</span></span><br><span class="line"><span class="javascript">		<span class="comment">/* </span></span></span><br><span class="line"><span class="comment"><span class="javascript">		Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		year - 作为date对象的年份，为4位年份值</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		month - 0-11之间的整数，做为date对象的月份</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		day - 1-31之间的整数，做为date对象的天数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		minutes - 0-59之间的整数，做为date对象的分钟数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		seconds - 0-59之间的整数，做为date对象的秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">		microseconds - 0-999之间的整数，做为date对象的毫秒数</span></span></span><br><span class="line"><span class="comment"><span class="javascript">        */</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t1 = <span class="built_in">Date</span>.UTC(<span class="number">2020</span>,<span class="number">02</span>,<span class="number">13</span>,<span class="number">15</span>,<span class="number">00</span>,<span class="number">00</span>); <span class="comment">//北京时间2018-2-13 00:00:00</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> t2 = <span class="built_in">Date</span>.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diff = t2-t1;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffYears = <span class="built_in">Math</span>.floor(diff/years);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffDays = <span class="built_in">Math</span>.floor((diff/days)-diffYears*<span class="number">365</span>);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffHours = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days)/hours);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffMinutes = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours)/minutes);</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> diffSeconds = <span class="built_in">Math</span>.floor((diff-(diffYears*<span class="number">365</span>+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);</span></span><br><span class="line"><span class="javascript">		<span class="built_in">document</span>.getElementById(<span class="string">&quot;sitetime&quot;</span>).innerHTML=<span class="string">&quot; 已运行&quot;</span>+<span class="comment">/*diffYears+&quot; 年 &quot;+*/</span>diffDays+<span class="string">&quot; 天 &quot;</span>+diffHours+<span class="string">&quot; 小时 &quot;</span>+diffMinutes+<span class="string">&quot; 分钟 &quot;</span>+diffSeconds+<span class="string">&quot; 秒&quot;</span>;</span></span><br><span class="line"><span class="javascript">	&#125;</span></span><br><span class="line"><span class="javascript">	siteTime();</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="在页脚文件添加"><a href="#在页脚文件添加" class="headerlink" title="在页脚文件添加"></a>在页脚文件添加</h3><p>文件名称为：<font color="#dd0000">footer.swig</font>，文件路径：<font color="#dd0000">themes/next/layout/_partials/footer.swig</font></p>
-<p>在哪里添加根据自己的需求而定</p>
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-03%20214348.png"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/qq_39720594/article/details/105411030">https://blog.csdn.net/qq_39720594/article/details/105411030</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -5756,6 +5756,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Hystrix修改默认超时时间</title>
+    <url>/275.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Hystrix的默认超时时间是1秒，有时候正常请求响应的时间就超过了1秒，所以1秒钟并不能满足日常的开发需求，需要根据实际情况设置超时时间</p>
+<h3 id="源码位置"><a href="#源码位置" class="headerlink" title="源码位置"></a>源码位置</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer default_executionTimeoutInMilliseconds = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20005052.png" alt="img"></p>
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>在application.yml中添加下面配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hystrix:</span> </span><br><span class="line">  <span class="attr">command:</span> </span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">      <span class="attr">execution:</span> </span><br><span class="line">        <span class="attr">isolation:</span> </span><br><span class="line">          <span class="attr">thread:</span> </span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure>
+
+<p>数值的单位为毫秒，1000毫秒==1秒</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
+<p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
+<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>
+]]></content>
+      <categories>
+        <category>Spring Cloud</category>
+      </categories>
+      <tags>
+        <tag>Spring Cloud</tag>
+        <tag>Hystrix</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hystrix使用服务监控</title>
     <url>/276.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Hystrix提供了 准实时的服务调用监控项目Dashboard，能够实时记录通过Hystrix发起的请求执行情况，可以通过图表的形式展现给用户看。</p>
@@ -5869,29 +5892,6 @@
       <tags>
         <tag>Spring Cloud</tag>
         <tag>Feign</tag>
-        <tag>Hystrix</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hystrix修改默认超时时间</title>
-    <url>/275.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Hystrix的默认超时时间是1秒，有时候正常请求响应的时间就超过了1秒，所以1秒钟并不能满足日常的开发需求，需要根据实际情况设置超时时间</p>
-<h3 id="源码位置"><a href="#源码位置" class="headerlink" title="源码位置"></a>源码位置</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Integer default_executionTimeoutInMilliseconds = <span class="number">1000</span>;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-15%20005052.png" alt="img"></p>
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>在application.yml中添加下面配置：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">hystrix:</span> </span><br><span class="line">  <span class="attr">command:</span> </span><br><span class="line">    <span class="attr">default:</span> </span><br><span class="line">      <span class="attr">execution:</span> </span><br><span class="line">        <span class="attr">isolation:</span> </span><br><span class="line">          <span class="attr">thread:</span> </span><br><span class="line">            <span class="attr">timeoutInMilliseconds:</span> <span class="number">3000</span></span><br></pre></td></tr></table></figure>
-
-<p>数值的单位为毫秒，1000毫秒==1秒</p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>先启动三个eureka，再启动带hystrix的provider，最后启动普通的consumer</p>
-<p>浏览器地址输入：<a href="http://localhost/student/getInfo">http://localhost/student/getInfo</a></p>
-<p>上面配置已经将Hystrix的默认超时时间修改为3秒，使用Thread.sleep(2000)让程序睡眠两秒也不会超时</p>
-]]></content>
-      <categories>
-        <category>Spring Cloud</category>
-      </categories>
-      <tags>
-        <tag>Spring Cloud</tag>
         <tag>Hystrix</tag>
       </tags>
   </entry>
@@ -6266,6 +6266,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Docker配置阿里云镜像仓库</title>
+    <url>/291.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Docker默认远程仓库是 <a href="https://hub.docker.com/">https://hub.docker.com/</a> ，下载速度会很慢，所以要配置一下国内镜像</p>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><h4 id="获取镜像地址"><a href="#获取镜像地址" class="headerlink" title="获取镜像地址"></a>获取镜像地址</h4><p>进入阿里云容器镜像服务地址：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">点这里快速进入</a>，登录后复制镜像仓库地址</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20200741.png"></p>
+<h4 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h4><p>在/etc/docker文件夹下新建一个名为 <mark class="hl-label blue">daemon.json</mark>  的配置文件，内容如下：（链接填自己的）</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://*********.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启daemon"><a href="#重启daemon" class="headerlink" title="重启daemon"></a>重启daemon</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>下载一个tomcat，命令为：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
+
+<p>发现速度快了很多</p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7安装Docker</title>
     <url>/290.html</url>
     <content><![CDATA[<h3 id="登录身份"><a href="#登录身份" class="headerlink" title="登录身份"></a>登录身份</h3><p>使用root身份登录，一般默认都是用root身份</p>
@@ -6302,31 +6327,6 @@
       </categories>
       <tags>
         <tag>CentOS7</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker配置阿里云镜像仓库</title>
-    <url>/291.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Docker默认远程仓库是 <a href="https://hub.docker.com/">https://hub.docker.com/</a> ，下载速度会很慢，所以要配置一下国内镜像</p>
-<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><h4 id="获取镜像地址"><a href="#获取镜像地址" class="headerlink" title="获取镜像地址"></a>获取镜像地址</h4><p>进入阿里云容器镜像服务地址：<a href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">点这里快速进入</a>，登录后复制镜像仓库地址</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20200741.png"></p>
-<h4 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h4><p>在/etc/docker文件夹下新建一个名为 <mark class="hl-label blue">daemon.json</mark>  的配置文件，内容如下：（链接填自己的）</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://*********.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启daemon"><a href="#重启daemon" class="headerlink" title="重启daemon"></a>重启daemon</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>下载一个tomcat，命令为：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
-
-<p>发现速度快了很多</p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
         <tag>Docker</tag>
       </tags>
   </entry>
@@ -7955,6 +7955,33 @@
       </tags>
   </entry>
   <entry>
+    <title>基本数据类型</title>
+    <url>/33.html</url>
+    <content><![CDATA[<p>在Java中一共有八种基本数据类型，他们分别是 byte、short、int、long、float、double、char、boolean</p>
+<h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><p>其中byte、short、int、long都是表示整数的，只不过他们的取值范围不一样</p>
+<p>byte的取值范围为-128~127，占用1个字节（-2的7次方到2的7次方-1）</p>
+<p>short的取值范围为-32768~32767，占用2个字节（-2的15次方到2的15次方-1）</p>
+<p>int的取值范围为（-2147483648~2147483647），占用4个字节（-2的31次方到2的31次方-1）</p>
+<p>long的取值范围为（-9223372036854774808~9223372036854774807），占用8个字节（-2的63次方到2的63次方-1）</p>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>float和double是表示浮点型的数据类型，他们之间的区别在于他们的精确度不同</p>
+<p>float 3.402823e+38 ~ 1.401298e-45（e+38表示是乘以10的38次方，同样，e-45表示乘以10的负45次方）占用4个字节</p>
+<p>double 1.797693e+308~ 4.9000000e-324 占用8个字节</p>
+<p>double型比float型存储范围更大，精度更高，所以通常的浮点型的数据在不声明的情况下都是double型的，如果要表示一个数据是float型的，可以在数据后面加上F。</p>
+<p>浮点型的数据是不能完全精确的，所以有的时候在计算的时候可能会在小数点最后几位出现浮动，这是正常的。</p>
+<h3 id="boolean型（布尔型）"><a href="#boolean型（布尔型）" class="headerlink" title="boolean型（布尔型）"></a>boolean型（布尔型）</h3><p>这个类型只有两个值，true和false（真和非真）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">boolean</span> t = <span class="keyword">true</span>；</span><br><span class="line"><span class="keyword">boolean</span> f = <span class="keyword">false</span>；</span><br></pre></td></tr></table></figure>
+
+<h3 id="char型（文本型）"><a href="#char型（文本型）" class="headerlink" title="char型（文本型）"></a>char型（文本型）</h3><p>用于存放字符的数据类型，占用2个字节，采用unicode编码，它的前128字节编码与ASCII兼容</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020142626.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Keepalived+Nginx+Tomcat负载均衡</title>
     <url>/330.html</url>
     <content><![CDATA[<h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>主机和备用机分别使用Docker启动一个Tomcat，版本号最好不同，启动成功后有可能通过外部浏览器无法访问，解决方法查看博客：<a href="https://blog.zoutl.cn/294.html">Docker启动Tomcat成功后外部却无法访问</a></p>
@@ -7985,33 +8012,6 @@
         <tag>Tomcat</tag>
         <tag>Nginx</tag>
         <tag>Keepalived</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>基本数据类型</title>
-    <url>/33.html</url>
-    <content><![CDATA[<p>在Java中一共有八种基本数据类型，他们分别是 byte、short、int、long、float、double、char、boolean</p>
-<h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><p>其中byte、short、int、long都是表示整数的，只不过他们的取值范围不一样</p>
-<p>byte的取值范围为-128~127，占用1个字节（-2的7次方到2的7次方-1）</p>
-<p>short的取值范围为-32768~32767，占用2个字节（-2的15次方到2的15次方-1）</p>
-<p>int的取值范围为（-2147483648~2147483647），占用4个字节（-2的31次方到2的31次方-1）</p>
-<p>long的取值范围为（-9223372036854774808~9223372036854774807），占用8个字节（-2的63次方到2的63次方-1）</p>
-<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>float和double是表示浮点型的数据类型，他们之间的区别在于他们的精确度不同</p>
-<p>float 3.402823e+38 ~ 1.401298e-45（e+38表示是乘以10的38次方，同样，e-45表示乘以10的负45次方）占用4个字节</p>
-<p>double 1.797693e+308~ 4.9000000e-324 占用8个字节</p>
-<p>double型比float型存储范围更大，精度更高，所以通常的浮点型的数据在不声明的情况下都是double型的，如果要表示一个数据是float型的，可以在数据后面加上F。</p>
-<p>浮点型的数据是不能完全精确的，所以有的时候在计算的时候可能会在小数点最后几位出现浮动，这是正常的。</p>
-<h3 id="boolean型（布尔型）"><a href="#boolean型（布尔型）" class="headerlink" title="boolean型（布尔型）"></a>boolean型（布尔型）</h3><p>这个类型只有两个值，true和false（真和非真）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">boolean</span> t = <span class="keyword">true</span>；</span><br><span class="line"><span class="keyword">boolean</span> f = <span class="keyword">false</span>；</span><br></pre></td></tr></table></figure>
-
-<h3 id="char型（文本型）"><a href="#char型（文本型）" class="headerlink" title="char型（文本型）"></a>char型（文本型）</h3><p>用于存放字符的数据类型，占用2个字节，采用unicode编码，它的前128字节编码与ASCII兼容</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020142626.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -8998,28 +8998,6 @@
       </tags>
   </entry>
   <entry>
-    <title>RabbitMQ消费端并发和限流设置</title>
-    <url>/353.html</url>
-    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>并发：有时候，我们需要加快消息的处理速度，这时候，我们可以通过提高消息处理程序的并发量，来提高消息的处理能力，本质就是多个消费者消费同一个队列的消息</p>
-<p>限流：有些场景，消费者端处理并发太大的时候，会影响消息处理端的性能，这时候需要限流</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>在要并发的监听队列的方法的@RabbitListener注解中配置concurency=“min-max”，min是最小并发数，max是最大并发数</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_QUEUE&#125;,concurrency = &quot;5-8&quot;)</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h4><p>在要限流的监听队列的方法所在类RabbitMQConsumerServiceImpl.java中添加以下代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> CachingConnectionFactory cachingConnectionFactory;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Bean(name = &quot;limitContainerFactory&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> SimpleRabbitListenerContainerFactory <span class="title">simpleRabbitListenerContainerFactory</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    SimpleRabbitListenerContainerFactory factory = <span class="keyword">new</span> SimpleRabbitListenerContainerFactory();</span><br><span class="line">    factory.setConnectionFactory(cachingConnectionFactory);</span><br><span class="line">    <span class="comment">//设置每次处理消息数量为5</span></span><br><span class="line">    factory.setPrefetchCount(<span class="number">5</span>);</span><br><span class="line">    <span class="keyword">return</span> factory;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在@RabbitListener注解中配置containerFactory = “limitContainerFactory”</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_QUEUE&#125;, concurrency = &quot;5-8&quot;,containerFactory = &quot;limitContainerFactory&quot;)</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>RabbitMQ</category>
-      </categories>
-      <tags>
-        <tag>RabbitMQ</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>RabbitMQ消费端手动ACK确认机制</title>
     <url>/352.html</url>
     <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>ack——acknowledge（vt. 承认；答谢；报偿；告知已收到；确认的意思），在RabbitMQ中指代的是消费者收到消息后确认的一种行为，关注点在于消费者能否实际接收到MQ发送的消息</p>
@@ -9060,6 +9038,28 @@
 <p>参数说明：</p>
 <p>第一个参数deliveryTag：消息ID，从1开始</p>
 <p>第二个参数requeue：被拒绝的消息是否重新入列</p>
+]]></content>
+      <categories>
+        <category>RabbitMQ</category>
+      </categories>
+      <tags>
+        <tag>RabbitMQ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RabbitMQ消费端并发和限流设置</title>
+    <url>/353.html</url>
+    <content><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>并发：有时候，我们需要加快消息的处理速度，这时候，我们可以通过提高消息处理程序的并发量，来提高消息的处理能力，本质就是多个消费者消费同一个队列的消息</p>
+<p>限流：有些场景，消费者端处理并发太大的时候，会影响消息处理端的性能，这时候需要限流</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h4><p>在要并发的监听队列的方法的@RabbitListener注解中配置concurency=“min-max”，min是最小并发数，max是最大并发数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_QUEUE&#125;,concurrency = &quot;5-8&quot;)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="限流"><a href="#限流" class="headerlink" title="限流"></a>限流</h4><p>在要限流的监听队列的方法所在类RabbitMQConsumerServiceImpl.java中添加以下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> CachingConnectionFactory cachingConnectionFactory;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Bean(name = &quot;limitContainerFactory&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> SimpleRabbitListenerContainerFactory <span class="title">simpleRabbitListenerContainerFactory</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    SimpleRabbitListenerContainerFactory factory = <span class="keyword">new</span> SimpleRabbitListenerContainerFactory();</span><br><span class="line">    factory.setConnectionFactory(cachingConnectionFactory);</span><br><span class="line">    <span class="comment">//设置每次处理消息数量为5</span></span><br><span class="line">    factory.setPrefetchCount(<span class="number">5</span>);</span><br><span class="line">    <span class="keyword">return</span> factory;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在@RabbitListener注解中配置containerFactory = “limitContainerFactory”</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@RabbitListener(queues = &#123;RabbitMQConfig.DIRECT_QUEUE&#125;, concurrency = &quot;5-8&quot;,containerFactory = &quot;limitContainerFactory&quot;)</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>RabbitMQ</category>
@@ -11215,6 +11215,25 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS7安装Git的最新版本</title>
+    <url>/397.html</url>
+    <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>输入下面命令即可完成安装</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看版本号"><a href="#查看版本号" class="headerlink" title="查看版本号"></a>查看版本号</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
+
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum remove git</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7安装Elasticsearch的head插件</title>
     <url>/398.html</url>
     <content><![CDATA[<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
@@ -11387,25 +11406,6 @@
       </categories>
       <tags>
         <tag>cron</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CentOS7安装Git的最新版本</title>
-    <url>/397.html</url>
-    <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>输入下面命令即可完成安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看版本号"><a href="#查看版本号" class="headerlink" title="查看版本号"></a>查看版本号</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
-<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum remove git</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>CentOS7</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -16221,7 +16221,7 @@
     <title>高并发商品秒杀系统</title>
     <url>/492.html</url>
     <content><![CDATA[<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>本项目为前后端分离项目，后端代码有两个版本：一个是单体架构，另一个是微服务架构（对单体架构进行了微服务拆分）</p>
-<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">前端代码</button></li><li class="tab"><button type="button" data-href="#-2">后端代码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><p><a href="https://github.com/a6678696/miaosha-web">a6678696/miaosha-web: 高并发商品秒杀系统前端代码（前后端分离项目） (github.com)</a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><p><strong>单体架构版本</strong></p>
+<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><div class="tabs" id="github地址"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#github地址-1">前端代码</button></li><li class="tab"><button type="button" data-href="#github地址-2">后端代码</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="github地址-1"><p><a href="https://github.com/a6678696/miaosha-web">a6678696/miaosha-web: 高并发商品秒杀系统前端代码（前后端分离项目） (github.com)</a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="github地址-2"><p><strong>单体架构版本</strong></p>
 <p><a href="https://github.com/a6678696/MiaoSha">a6678696/MiaoSha: 高并发商品秒杀系统后端代码（前后端分离项目，单体架构版本） (github.com)</a></p>
 <p><strong>微服务架构版本</strong></p>
 <p><a href="https://github.com/a6678696/miaosha-admin">a6678696/miaosha-admin: 高并发商品秒杀系统后端代码（前后端分离项目，微服务架构版本） (github.com)</a></p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
