@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-04-05T17:48:16.049Z</updated>
+  <updated>2022-04-09T15:29:45.385Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高并发商品秒杀系统</title>
+    <link href="https://blog.zoutl.cn/492.html"/>
+    <id>https://blog.zoutl.cn/492.html</id>
+    <published>2022-04-09T14:32:33.000Z</published>
+    <updated>2022-04-09T15:29:45.385Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><h4 id="GitHub地址"><a href="#GitHub地址" class="headerlink" title="GitHub地址"></a>GitHub地址</h4><p>后端代码</p><p><a href="https://github.com/a6678696/MiaoSha">a6678696/MiaoSha: 高并发商品秒杀系统后端代码（前后端分离项目） (github.com)</a></p><p>前端代码</p><p><a href="https://github.com/a6678696/miaosha-web">a6678696/miaosha-web: 高并发商品秒杀系统前端代码（前后端分离项目） (github.com)</a></p><h3 id="使用的技术"><a href="#使用的技术" class="headerlink" title="使用的技术"></a>使用的技术</h3><p>本项目为前后端分离项目，使用到的技术如下：</p><table><thead><tr><th align="center">技术</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">Spring Boot</td><td align="center">后端项目框架</td></tr><tr><td align="center">Mybatis-Plus</td><td align="center">持久层框架</td></tr><tr><td align="center">MySQL5.6</td><td align="center">数据库</td></tr><tr><td align="center">Redis</td><td align="center">缓存中间件</td></tr><tr><td align="center">RabbitMQ</td><td align="center">消息队列</td></tr><tr><td align="center">Vue.js</td><td align="center">前端JavaScript框架</td></tr><tr><td align="center">Element</td><td align="center">基于 Vue 2.0 的桌面端组件库</td></tr></tbody></table><h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><ol><li>用户注册与登录</li><li>查看正在秒杀的商品列表</li><li>查看正在秒杀的商品详情</li><li>秒杀商品，成功后下单</li><li>模拟支付</li></ol><h3 id="图片展示"><a href="#图片展示" class="headerlink" title="图片展示"></a>图片展示</h3><h4 id="注册界面"><a href="#注册界面" class="headerlink" title="注册界面"></a>注册界面</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409230821932.png" alt="image-20220409230821932"></p><h4 id="登录界面"><a href="#登录界面" class="headerlink" title="登录界面"></a>登录界面</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409230831836.png" alt="image-20220409230831836"></p><h4 id="查看正在秒杀的商品"><a href="#查看正在秒杀的商品" class="headerlink" title="查看正在秒杀的商品"></a>查看正在秒杀的商品</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409230857976.png" alt="image-20220409230857976"></p><h4 id="秒杀页面"><a href="#秒杀页面" class="headerlink" title="秒杀页面"></a>秒杀页面</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409230919527.png" alt="image-20220409230919527"></p><h4 id="我的订单"><a href="#我的订单" class="headerlink" title="我的订单"></a>我的订单</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409230953051.png" alt="image-20220409230953051"></p><h4 id="模拟支付"><a href="#模拟支付" class="headerlink" title="模拟支付"></a>模拟支付</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409231011260.png" alt="image-20220409231011260"></p><h4 id="注销登录"><a href="#注销登录" class="headerlink" title="注销登录"></a>注销登录</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409231025055.png" alt="image-20220409231025055"></p><h3 id="模拟海量用户秒杀"><a href="#模拟海量用户秒杀" class="headerlink" title="模拟海量用户秒杀"></a>模拟海量用户秒杀</h3><h4 id="用户批量注册"><a href="#用户批量注册" class="headerlink" title="用户批量注册"></a>用户批量注册</h4><p>下面方法批量注册1000个用户到数据库中，<code>如果是导入我的数据库文件可忽略此步</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409231858593.png" alt="image-20220409231858593"></p><h4 id="用户批量登录"><a href="#用户批量登录" class="headerlink" title="用户批量登录"></a>用户批量登录</h4><p>执行这步前要先注册用户</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409231653964.png" alt="image-20220409231653964"></p><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>并发测试使用JMeter这个软件，安装与使用教程查看这几篇博客：<a href="https://blog.zoutl.cn/tags/JMeter/">标签: JMeter | LeDao 的博客 (zoutl.cn)</a></p><p>测试前先删除Redis中对应的秒杀商品的key，确认可秒杀商品的数量不为0</p><p>测试的接口为：<code>http://localhost:8080/order/save</code>，参数如下图所示</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409232540517.png" alt="image-20220409232540517"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;项目地址&quot;&gt;&lt;a href=&quot;#项目地址&quot; class=&quot;headerlink&quot; title=&quot;项目地址&quot;&gt;&lt;/a&gt;项目地址&lt;/h3&gt;&lt;h4 id=&quot;GitHub地址&quot;&gt;&lt;a href=&quot;#GitHub地址&quot; class=&quot;headerlink&quot; title=&quot;G</summary>
+      
+    
+    
+    
+    <category term="个人项目" scheme="https://blog.zoutl.cn/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="个人项目" scheme="https://blog.zoutl.cn/tags/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>JMeter使用CSV数据文件设置</title>
@@ -495,34 +519,6 @@
     
     
     <category term="其它" scheme="https://blog.zoutl.cn/tags/%E5%85%B6%E5%AE%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows系统和CentOS7安装Nacos</title>
-    <link href="https://blog.zoutl.cn/472.html"/>
-    <id>https://blog.zoutl.cn/472.html</id>
-    <published>2022-03-17T13:00:17.000Z</published>
-    <updated>2022-03-26T10:30:46.602Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>下载地址：<a href="https://github.com/alibaba/nacos/releases/tag/1.4.3">Release 1.4.3 (Jan 27, 2022) · alibaba/nacos (github.com)</a>，下载后解压即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317231221977.png" alt="image-20220317231221977"></p><h2 id="Windows系统安装"><a href="#Windows系统安装" class="headerlink" title="Windows系统安装"></a>Windows系统安装</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>cmd命令进入解压后的文件夹内的bin文件夹，输入以下命令运行Nacos，standalone代表单机模式运行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">startup.cmd -m standalone</span><br></pre></td></tr></table></figure><p>在浏览器输入<a href="http://localhost:8848/nacos%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%9B%E8%A1%8C%E7%99%BB%E5%BD%95%EF%BC%8C%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E9%83%BD%E6%98%AF%60nacos%60%EF%BC%8C%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E8%BF%9B%E5%85%A5%E4%B8%8B%E9%9D%A2%E7%95%8C%E9%9D%A2">http://localhost:8848/nacos，然后进行登录，用户名和密码都是`nacos`，登录成功进入下面界面</a></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317212844381.png" alt="image-20220317212844381"></p><h3 id="连接MySQL数据库"><a href="#连接MySQL数据库" class="headerlink" title="连接MySQL数据库"></a>连接MySQL数据库</h3><p>先关闭正在运行的Nacos程序，直接关闭cmd窗口即可</p><p>Nacos默认使用的数据是本地的，也可以配置成使用MySQL的数据</p><h4 id="导入数据库文件"><a href="#导入数据库文件" class="headerlink" title="导入数据库文件"></a>导入数据库文件</h4><p>Nacos的数据库文件在conf文件夹中，新建一个数据库然后导入Nacos的数据库文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317213310581.png" alt="image-20220317213310581"></p><h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>配置文件是上图的<code>application.properties</code>，把下图的黑色的代码的注释删除，然后把一些参数改为自己的</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317214017802.png" alt="image-20220317214017802"></p><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>修改密码以测试是否成功连接数据库，如果直接在Nacos程序的界面修改密码会报错：<code>caused: user nacos,nacos not exist!;</code>，错误详情查看：<a href="https://github.com/alibaba/nacos/issues/7750">caused: user nacos,nacos not exist!; · Issue #7750 · alibaba/nacos (github.com)</a></p><p>最后登录时使用新密码验证，登录成功说明连接数据库成功</p><h2 id="在CentOS7中安装"><a href="#在CentOS7中安装" class="headerlink" title="在CentOS7中安装"></a>在CentOS7中安装</h2><p>将上面解压的文件夹上传到CentOS7系统中，步骤和上面基本相同，只是运行的命令不同，运行的命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh startup.sh -m standalone</span><br></pre></td></tr></table></figure><p>停止运行的命令如下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh shutdown.sh</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;下载&quot;&gt;&lt;a href=&quot;#下载&quot; class=&quot;headerlink&quot; title=&quot;下载&quot;&gt;&lt;/a&gt;下载&lt;/h2&gt;&lt;p&gt;下载地址：&lt;a href=&quot;https://github.com/alibaba/nacos/releases/tag/1.4.3&quot;&gt;Rel</summary>
-      
-    
-    
-    
-    <category term="Nacos" scheme="https://blog.zoutl.cn/categories/Nacos/"/>
-    
-    
-    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
-    
-    <category term="Nacos" scheme="https://blog.zoutl.cn/tags/Nacos/"/>
     
   </entry>
   
