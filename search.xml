@@ -200,6 +200,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Github私有仓库改为公开</title>
+    <url>/11.html</url>
+    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><blockquote>
+<p>进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/29/u3lyp6t9j2k4V1F.png" alt="20210227090442.jpg"></p>
+<h3 id="修改仓库visibility属性"><a href="#修改仓库visibility属性" class="headerlink" title="修改仓库visibility属性"></a>修改仓库visibility属性</h3><blockquote>
+<p>在出现的页面找到 Danger Zone（在最下面），点击 Change visibility 按钮</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165133.jpg"></p>
+<blockquote>
+<p>然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入 GitHub 账号的密码即可修改完成</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165306.jpg"></p>
+]]></content>
+      <categories>
+        <category>GitHub</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>部落冲突攻略</title>
     <url>/110.html</url>
     <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
@@ -223,29 +246,6 @@
       </categories>
       <tags>
         <tag>部落冲突</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github私有仓库改为公开</title>
-    <url>/11.html</url>
-    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><blockquote>
-<p>进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/07/29/u3lyp6t9j2k4V1F.png" alt="20210227090442.jpg"></p>
-<h3 id="修改仓库visibility属性"><a href="#修改仓库visibility属性" class="headerlink" title="修改仓库visibility属性"></a>修改仓库visibility属性</h3><blockquote>
-<p>在出现的页面找到 Danger Zone（在最下面），点击 Change visibility 按钮</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165133.jpg"></p>
-<blockquote>
-<p>然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入 GitHub 账号的密码即可修改完成</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165306.jpg"></p>
-]]></content>
-      <categories>
-        <category>GitHub</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -1562,6 +1562,31 @@
       </tags>
   </entry>
   <entry>
+    <title>idea从GitHub克隆项目</title>
+    <url>/146.html</url>
+    <content><![CDATA[<h3 id="获取Git链接"><a href="#获取Git链接" class="headerlink" title="获取Git链接"></a>获取Git链接</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035554.jpg" alt="img"></p>
+<h3 id="开始克隆"><a href="#开始克隆" class="headerlink" title="开始克隆"></a>开始克隆</h3><blockquote>
+<p>分两种类型：①克隆别人或自己的项目②克隆自己的项目</p>
+</blockquote>
+<p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035907.jpg" alt="img"></strong></p>
+<ol>
+<li><p>克隆别人或自己的项目</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615040001.jpg" alt="img"></p>
+</li>
+<li><p>克隆自己的项目</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615040107.jpg" alt="img"></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>idea使用</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MySQL5.6的安装与配置（解压版）</title>
     <url>/145.html</url>
     <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>百度网盘链接：<a href="https://pan.baidu.com/s/1Cqx8KPLHYgnKPSL21jBZZA">https://pan.baidu.com/s/1Cqx8KPLHYgnKPSL21jBZZA</a></p>
@@ -1594,31 +1619,6 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>idea从GitHub克隆项目</title>
-    <url>/146.html</url>
-    <content><![CDATA[<h3 id="获取Git链接"><a href="#获取Git链接" class="headerlink" title="获取Git链接"></a>获取Git链接</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035554.jpg" alt="img"></p>
-<h3 id="开始克隆"><a href="#开始克隆" class="headerlink" title="开始克隆"></a>开始克隆</h3><blockquote>
-<p>分两种类型：①克隆别人或自己的项目②克隆自己的项目</p>
-</blockquote>
-<p><strong><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615035907.jpg" alt="img"></strong></p>
-<ol>
-<li><p>克隆别人或自己的项目</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615040001.jpg" alt="img"></p>
-</li>
-<li><p>克隆自己的项目</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615040107.jpg" alt="img"></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
-        <tag>idea使用</tag>
       </tags>
   </entry>
   <entry>
@@ -2115,25 +2115,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CentOS7部署Java项目速度很慢</title>
-    <url>/158.html</url>
-    <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
-
-<h3 id="打开-java-security-文件"><a href="#打开-java-security-文件" class="headerlink" title="打开 java.security 文件"></a>打开 java.security 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/java/jdk1.8.0_131/jre/lib/security/java.security</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
-<p>保存并退出即可</p>
-]]></content>
-      <categories>
-        <category>CentOS7</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CentOS7实时查看Tomcat运行日志</title>
     <url>/159.html</url>
     <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
@@ -2149,6 +2130,25 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
+        <tag>CentOS7</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS7部署Java项目速度很慢</title>
+    <url>/158.html</url>
+    <content><![CDATA[<h3 id="查找-java-security-文件的路径"><a href="#查找-java-security-文件的路径" class="headerlink" title="查找 java.security 文件的路径"></a>查找 java.security 文件的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name java.security</span><br></pre></td></tr></table></figure>
+
+<h3 id="打开-java-security-文件"><a href="#打开-java-security-文件" class="headerlink" title="打开 java.security 文件"></a>打开 java.security 文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vi /home/java/jdk1.8.0_131/jre/lib/security/java.security</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改"><a href="#修改" class="headerlink" title="修改"></a>修改</h3><p>securerandom.source=file:/dev/<font color="#dd0000">random</font>替换成：securerandom.source=file:/dev/<font color="#dd0000">urandom</font></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210618032852.jpg" alt="img"></p>
+<p>保存并退出即可</p>
+]]></content>
+      <categories>
+        <category>CentOS7</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
         <tag>CentOS7</tag>
       </tags>
   </entry>
@@ -3489,48 +3489,6 @@
       </tags>
   </entry>
   <entry>
-    <title>vue-cli脚手架新建和删除Vue项目</title>
-    <url>/201.html</url>
-    <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>在 Vue 项目存储文件夹中打开 cmd ，输入命令：vue init webpack vue_demo，vue_demo 是项目名称，然后进行一些配置</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104020.png"></p>
-<h3 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h3><h4 id="项目名称"><a href="#项目名称" class="headerlink" title="项目名称"></a>项目名称</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/202237_090705_1646615226.png"></p>
-<h4 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091149551.png" alt="image-20220307091149551"></p>
-<h4 id="作者信息"><a href="#作者信息" class="headerlink" title="作者信息"></a>作者信息</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091418406.png" alt="image-20220307091418406"></p>
-<h4 id="构建方式"><a href="#构建方式" class="headerlink" title="构建方式"></a>构建方式</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091631999.png" alt="image-20220307091631999"></p>
-<h4 id="是否安装vue-router"><a href="#是否安装vue-router" class="headerlink" title="是否安装vue-router"></a>是否安装vue-router</h4><p>现在不安装的话，后期可以在项目中安装</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091923533.png" alt="image-20220307091923533"></p>
-<h4 id="使用ESLint"><a href="#使用ESLint" class="headerlink" title="使用ESLint"></a>使用ESLint</h4><p>ESLint是一个语法规则和代码风格的检查工具，可以用来保证写出语法正确、风格统一的代码，<font color="#dd0000">建议不使用</font></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092303480.png" alt="image-20220307092303480"></p>
-<h4 id="安装单元测试"><a href="#安装单元测试" class="headerlink" title="安装单元测试"></a>安装单元测试</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092422569.png" alt="image-20220307092422569"></p>
-<h4 id="安装E2E测试框架NightWatch"><a href="#安装E2E测试框架NightWatch" class="headerlink" title="安装E2E测试框架NightWatch"></a>安装E2E测试框架NightWatch</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092548041.png" alt="image-20220307092548041"></p>
-<h4 id="选择包管理工具"><a href="#选择包管理工具" class="headerlink" title="选择包管理工具"></a>选择包管理工具</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092719191.png" alt="image-20220307092719191"></p>
-<h4 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h4><p>打开package.json文件，点击第9行左边的启动按钮，选择第一个选项启动即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226203527215.png" alt="image-20220226203527215"></p>
-<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>打开运行信息的地址即可访问项目，出现以下页面说明成功运行</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151925.jpg" alt="img"></p>
-<p>要停止运行，使用快捷键CTRL+C，或者点击IDE的停止按钮</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104713.jpg"></p>
-<h3 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h3><p>修改端口为80，修改 config 文件夹的 index.js，<code>port:8080</code>改为<code>port:80</code></p>
-<p>让项目启动时自动打开浏览器，修改 config 文件夹的 index.js，<code>autoOpenBrower:false</code>改为<code>autoOpenBrower:true</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151833.jpg" alt="img"></p>
-<h3 id="删除项目"><a href="#删除项目" class="headerlink" title="删除项目"></a>删除项目</h3><p>直接删除对应文件夹即可</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果一直卡住在<code>/ fetchMetadata: sill pacote range manifest for</code>，那就更换成淘宝的源</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>查看设置结果</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220329180906559.png" alt="image-20220329180906559"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-        <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于vue-cli搭建自己的项目</title>
     <url>/202.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>在src/components下新建一个HelloWorld.vue文件，每个.vue文件都包括三个部分：&lt;template&gt;模版代码块，&lt;script&gt;是js代码块，&lt;style&gt;是样式代码块，其中如果&lt;style&gt;使用了scoped属性（让当前组件的样式不会修改到其它地方的样式，在父组件中是不能直接修改子组件的样式的，需要在父组件中使用vue的深度作用选择器），该样式只在本.vue文件下生效</p>
@@ -3657,6 +3615,48 @@
       </tags>
   </entry>
   <entry>
+    <title>vue-cli脚手架新建和删除Vue项目</title>
+    <url>/201.html</url>
+    <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>在 Vue 项目存储文件夹中打开 cmd ，输入命令：vue init webpack vue_demo，vue_demo 是项目名称，然后进行一些配置</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104020.png"></p>
+<h3 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h3><h4 id="项目名称"><a href="#项目名称" class="headerlink" title="项目名称"></a>项目名称</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/202237_090705_1646615226.png"></p>
+<h4 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091149551.png" alt="image-20220307091149551"></p>
+<h4 id="作者信息"><a href="#作者信息" class="headerlink" title="作者信息"></a>作者信息</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091418406.png" alt="image-20220307091418406"></p>
+<h4 id="构建方式"><a href="#构建方式" class="headerlink" title="构建方式"></a>构建方式</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091631999.png" alt="image-20220307091631999"></p>
+<h4 id="是否安装vue-router"><a href="#是否安装vue-router" class="headerlink" title="是否安装vue-router"></a>是否安装vue-router</h4><p>现在不安装的话，后期可以在项目中安装</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091923533.png" alt="image-20220307091923533"></p>
+<h4 id="使用ESLint"><a href="#使用ESLint" class="headerlink" title="使用ESLint"></a>使用ESLint</h4><p>ESLint是一个语法规则和代码风格的检查工具，可以用来保证写出语法正确、风格统一的代码，<font color="#dd0000">建议不使用</font></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092303480.png" alt="image-20220307092303480"></p>
+<h4 id="安装单元测试"><a href="#安装单元测试" class="headerlink" title="安装单元测试"></a>安装单元测试</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092422569.png" alt="image-20220307092422569"></p>
+<h4 id="安装E2E测试框架NightWatch"><a href="#安装E2E测试框架NightWatch" class="headerlink" title="安装E2E测试框架NightWatch"></a>安装E2E测试框架NightWatch</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092548041.png" alt="image-20220307092548041"></p>
+<h4 id="选择包管理工具"><a href="#选择包管理工具" class="headerlink" title="选择包管理工具"></a>选择包管理工具</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092719191.png" alt="image-20220307092719191"></p>
+<h4 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h4><p>打开package.json文件，点击第9行左边的启动按钮，选择第一个选项启动即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226203527215.png" alt="image-20220226203527215"></p>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>打开运行信息的地址即可访问项目，出现以下页面说明成功运行</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151925.jpg" alt="img"></p>
+<p>要停止运行，使用快捷键CTRL+C，或者点击IDE的停止按钮</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104713.jpg"></p>
+<h3 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h3><p>修改端口为80，修改 config 文件夹的 index.js，<code>port:8080</code>改为<code>port:80</code></p>
+<p>让项目启动时自动打开浏览器，修改 config 文件夹的 index.js，<code>autoOpenBrower:false</code>改为<code>autoOpenBrower:true</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151833.jpg" alt="img"></p>
+<h3 id="删除项目"><a href="#删除项目" class="headerlink" title="删除项目"></a>删除项目</h3><p>直接删除对应文件夹即可</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果一直卡住在<code>/ fetchMetadata: sill pacote range manifest for</code>，那就更换成淘宝的源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>查看设置结果</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220329180906559.png" alt="image-20220329180906559"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Element UI引入第三方图标</title>
     <url>/206.html</url>
     <content><![CDATA[<blockquote>
@@ -3702,6 +3702,40 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring Boot+Mybatis使用Element UI分页</title>
+    <url>/207.html</url>
+    <content><![CDATA[<blockquote>
+<p>前端向后端发送的数据有当前页、每页记录数，后端向前端发送的数据有查询到的数据集合、数据总记录数（满足查询条件的全部数据的总记录数）</p>
+</blockquote>
+<h3 id="前端分页代码"><a href="#前端分页代码" class="headerlink" title="前端分页代码"></a>前端分页代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-pagination</span></span></span><br><span class="line"><span class="tag">      <span class="attr">align</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">style</span>=<span class="string">&quot;margin-top: 8px&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">background</span></span></span><br><span class="line"><span class="tag">      <span class="attr">layout</span>=<span class="string">&quot;prev, pager, next&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:current-page.sync</span>=<span class="string">&quot;pagination.page&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:page-size.sync</span>=<span class="string">&quot;pagination.size&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:total</span>=<span class="string">&quot;pagination.count&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分页属性"><a href="#分页属性" class="headerlink" title="分页属性"></a>分页属性</h3><p>包括当前页，每页记录数，数据总记录数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pagination: &#123;</span><br><span class="line">  <span class="attr">page</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">size</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>更新当前页的值</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//刷新当前页的值</span></span><br><span class="line"><span class="function"><span class="title">handleCurrentChange</span>(<span class="params">page</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.pagination.page = page;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="请求后台"><a href="#请求后台" class="headerlink" title="请求后台"></a>请求后台</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(<span class="string">&#x27;http://localhost/paper/getListFindByUserId?userId=&#x27;</span> + sessionStorage.getItem(<span class="string">&quot;userId&quot;</span>) + <span class="string">&#x27;&amp;page=&#x27;</span> + <span class="built_in">this</span>.pagination.page + <span class="string">&#x27;&amp;size=&#x27;</span> + <span class="built_in">this</span>.pagination.size)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> (<span class="built_in">this</span>.myPaper = response.data.rows, <span class="built_in">this</span>.pagination.count = response.data.total))</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="mapper-xml代码"><a href="#mapper-xml代码" class="headerlink" title="mapper.xml代码"></a>mapper.xml代码</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;paperResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	order by id desc</span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getCount&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.Long&quot;</span>&gt;</span></span><br><span class="line">	select count(*)</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="请求的后端方法"><a href="#请求的后端方法" class="headerlink" title="请求的后端方法"></a>请求的后端方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据用户id获取试卷(分页)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> userId</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getListFindByUserId&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">getListFindByUserId</span><span class="params">(Integer userId, <span class="meta">@RequestParam(value = &quot;page&quot;,required = false)</span>Integer page, <span class="meta">@RequestParam(value = &quot;size&quot;,required = false)</span>Integer size)</span> </span>&#123;</span><br><span class="line">	PageBean pageBean = <span class="keyword">new</span> PageBean(page, size);</span><br><span class="line">	Map resultMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	Map map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;userId&quot;</span>, userId);</span><br><span class="line">	map.put(<span class="string">&quot;start&quot;</span>, pageBean.getStart());</span><br><span class="line">	map.put(<span class="string">&quot;size&quot;</span>, pageBean.getPageSize());</span><br><span class="line">	List&lt;Paper&gt; paperList = paperService.list(map);</span><br><span class="line">	resultMap.put(<span class="string">&quot;total&quot;</span>, paperService.getCount(map));</span><br><span class="line">	resultMap.put(<span class="string">&quot;rows&quot;</span>, paperList);</span><br><span class="line">	<span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分页Model类"><a href="#分页Model类" class="headerlink" title="分页Model类"></a>分页Model类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 分页Model类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-10 21:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PageBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第几页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> page;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 每页记录数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> pageSize;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 起始页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> start;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PageBean</span><span class="params">(<span class="keyword">int</span> page, <span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPage</span><span class="params">(<span class="keyword">int</span> page)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPageSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPageSize</span><span class="params">(<span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (page - <span class="number">1</span>) * pageSize;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210701223215.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Spring Boot</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+        <tag>MyBatis</tag>
+        <tag>Element UI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>在线考试系统</title>
     <url>/208.html</url>
     <content><![CDATA[<h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><h4 id="GitHub地址"><a href="#GitHub地址" class="headerlink" title="GitHub地址"></a>GitHub地址</h4><p>前端代码地址：<a href="https://github.com/a6678696/ExamSystem2">https://github.com/a6678696/ExamSystem2</a></p>
@@ -3743,37 +3777,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Spring Boot+Mybatis使用Element UI分页</title>
-    <url>/207.html</url>
-    <content><![CDATA[<blockquote>
-<p>前端向后端发送的数据有当前页、每页记录数，后端向前端发送的数据有查询到的数据集合、数据总记录数（满足查询条件的全部数据的总记录数）</p>
-</blockquote>
-<h3 id="前端分页代码"><a href="#前端分页代码" class="headerlink" title="前端分页代码"></a>前端分页代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-pagination</span></span></span><br><span class="line"><span class="tag">      <span class="attr">align</span>=<span class="string">&quot;center&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">style</span>=<span class="string">&quot;margin-top: 8px&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">background</span></span></span><br><span class="line"><span class="tag">      <span class="attr">layout</span>=<span class="string">&quot;prev, pager, next&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:current-page.sync</span>=<span class="string">&quot;pagination.page&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:page-size.sync</span>=<span class="string">&quot;pagination.size&quot;</span></span></span><br><span class="line"><span class="tag">      <span class="attr">:total</span>=<span class="string">&quot;pagination.count&quot;</span></span></span><br><span class="line"><span class="tag">      @<span class="attr">current-change</span>=<span class="string">&quot;handleCurrentChange&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-pagination</span>&gt;</span></span><br></pre></td></tr></table></figure>
+    <title>Java中四种循环语句</title>
+    <url>/209.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Java中循环有while、do…while…，for，增强for</p>
+<h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	System.out.println(<span class="string">&quot;请输入一个数字:&quot;</span>);</span><br><span class="line">	<span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= n) &#123;</span><br><span class="line">		System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="分页属性"><a href="#分页属性" class="headerlink" title="分页属性"></a>分页属性</h3><p>包括当前页，每页记录数，数据总记录数</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">pagination: &#123;</span><br><span class="line">  <span class="attr">page</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">size</span>: <span class="number">2</span>,</span><br><span class="line">  <span class="attr">count</span>: <span class="number">0</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="do…while…"><a href="#do…while…" class="headerlink" title="do…while…"></a>do…while…</h3><p>即使循环条件不满足，也至少执行一次</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">		i++;</span><br><span class="line">	&#125; <span class="keyword">while</span> (i &lt; <span class="number">6</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>更新当前页的值</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//刷新当前页的值</span></span><br><span class="line"><span class="function"><span class="title">handleCurrentChange</span>(<span class="params">page</span>)</span> &#123;</span><br><span class="line">  <span class="built_in">this</span>.pagination.page = page;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="请求后台"><a href="#请求后台" class="headerlink" title="请求后台"></a>请求后台</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios</span><br><span class="line">  .get(<span class="string">&#x27;http://localhost/paper/getListFindByUserId?userId=&#x27;</span> + sessionStorage.getItem(<span class="string">&quot;userId&quot;</span>) + <span class="string">&#x27;&amp;page=&#x27;</span> + <span class="built_in">this</span>.pagination.page + <span class="string">&#x27;&amp;size=&#x27;</span> + <span class="built_in">this</span>.pagination.size)</span><br><span class="line">  .then(<span class="function"><span class="params">response</span> =&gt;</span> (<span class="built_in">this</span>.myPaper = response.data.rows, <span class="built_in">this</span>.pagination.count = response.data.total))</span><br><span class="line">  .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="mapper-xml代码"><a href="#mapper-xml代码" class="headerlink" title="mapper.xml代码"></a>mapper.xml代码</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;paperResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	order by id desc</span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;getCount&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;java.lang.Long&quot;</span>&gt;</span></span><br><span class="line">	select count(*)</span><br><span class="line">	from t_paper</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;userId != null&quot;</span>&gt;</span></span><br><span class="line">			and userId = #&#123;userId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="请求的后端方法"><a href="#请求的后端方法" class="headerlink" title="请求的后端方法"></a>请求的后端方法</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据用户id获取试卷(分页)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> userId</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/getListFindByUserId&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Map <span class="title">getListFindByUserId</span><span class="params">(Integer userId, <span class="meta">@RequestParam(value = &quot;page&quot;,required = false)</span>Integer page, <span class="meta">@RequestParam(value = &quot;size&quot;,required = false)</span>Integer size)</span> </span>&#123;</span><br><span class="line">	PageBean pageBean = <span class="keyword">new</span> PageBean(page, size);</span><br><span class="line">	Map resultMap = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	Map map = <span class="keyword">new</span> HashMap&lt;&gt;(<span class="number">16</span>);</span><br><span class="line">	map.put(<span class="string">&quot;userId&quot;</span>, userId);</span><br><span class="line">	map.put(<span class="string">&quot;start&quot;</span>, pageBean.getStart());</span><br><span class="line">	map.put(<span class="string">&quot;size&quot;</span>, pageBean.getPageSize());</span><br><span class="line">	List&lt;Paper&gt; paperList = paperService.list(map);</span><br><span class="line">	resultMap.put(<span class="string">&quot;total&quot;</span>, paperService.getCount(map));</span><br><span class="line">	resultMap.put(<span class="string">&quot;rows&quot;</span>, paperList);</span><br><span class="line">	<span class="keyword">return</span> resultMap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="分页Model类"><a href="#分页Model类" class="headerlink" title="分页Model类"></a>分页Model类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 分页Model类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-10 21:53</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PageBean</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 第几页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> page;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 每页记录数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> pageSize;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 起始页</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> start;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">PageBean</span><span class="params">(<span class="keyword">int</span> page, <span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPage</span><span class="params">(<span class="keyword">int</span> page)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.page = page;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getPageSize</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPageSize</span><span class="params">(<span class="keyword">int</span> pageSize)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.pageSize = pageSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getStart</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (page - <span class="number">1</span>) * pageSize;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210701223215.jpg" alt="img"></p>
+<h3 id="增强for"><a href="#增强for" class="headerlink" title="增强for"></a>增强for</h3><p>一般用于遍历数组和集合，数据类型为数组或集合的数据类型</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>[] intArr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i : intArr) &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Spring Boot</category>
+        <category>Java</category>
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>Spring Boot</tag>
-        <tag>MyBatis</tag>
-        <tag>Element UI</tag>
       </tags>
   </entry>
   <entry>
@@ -3823,27 +3844,6 @@
       <tags>
         <tag>Java</tag>
         <tag>cmd</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java中四种循环语句</title>
-    <url>/209.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Java中循环有while、do…while…，for，增强for</p>
-<h3 id="while"><a href="#while" class="headerlink" title="while"></a>while</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">	System.out.println(<span class="string">&quot;请输入一个数字:&quot;</span>);</span><br><span class="line">	<span class="keyword">int</span> n = sc.nextInt();</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (i &lt;= n) &#123;</span><br><span class="line">		System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">		i++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="do…while…"><a href="#do…while…" class="headerlink" title="do…while…"></a>do…while…</h3><p>即使循环条件不满足，也至少执行一次</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">do</span> &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">		i++;</span><br><span class="line">	&#125; <span class="keyword">while</span> (i &lt; <span class="number">6</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="for"><a href="#for" class="headerlink" title="for"></a>for</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++) &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="增强for"><a href="#增强for" class="headerlink" title="增强for"></a>增强for</h3><p>一般用于遍历数组和集合，数据类型为数组或集合的数据类型</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span>[] intArr = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i : intArr) &#123;</span><br><span class="line">		System.out.print(i + <span class="string">&quot; &quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -4440,14 +4440,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Java跳出多重循环</title>
-    <url>/232.html</url>
-    <content><![CDATA[<p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </p>
-<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>给for循环添加一个标记，然后使用<code>break 标记</code>跳到标记处，即可实现跳出多重循环</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">JAVA</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        here:</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;外层第&quot;</span> + (i + <span class="number">1</span>) + <span class="string">&quot;次循环&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i1 = <span class="number">0</span>; i1 &lt; <span class="number">3</span>; i1++) &#123;</span><br><span class="line">                System.out.print(i1 + <span class="string">&quot; &quot;</span>);</span><br><span class="line">                <span class="keyword">if</span> (i1 == <span class="number">1</span> &amp;&amp; i == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">break</span> here;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Java将一个数组复制给另一个数组</title>
+    <url>/231.html</url>
+    <content><![CDATA[<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr1.length];</span><br><span class="line">        <span class="comment">//复制</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr1.length; i++) &#123;</span><br><span class="line">            arr2[i] = arr1[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p> /** * @author LeDao * @company * @create 2021-06-21 12:38 */public class Test {​    public static void main(String[] args) {        int[] arr1 = new int[]{6, 5, 4, 3, 2, 1};        int[] arr2 = arr1.clone();        //遍历        for (int j : arr2) {            System.out.print(j + “ “);        }    }}java</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210724110315.jpg" alt="img"></p>
+<h3 id="System-ararycopy"><a href="#System-ararycopy" class="headerlink" title="System.ararycopy"></a>System.ararycopy</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr1.length];</span><br><span class="line">        <span class="comment">//复制</span></span><br><span class="line">        System.arraycopy(arr1, <span class="number">0</span>, arr2, <span class="number">0</span>, arr1.length);</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="clone"><a href="#clone" class="headerlink" title="clone()"></a>clone()</h3><p>如果数组等长，而且对应copy，使用int[] B= A.clone()</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = arr1.clone();</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -4457,14 +4457,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Java将一个数组复制给另一个数组</title>
-    <url>/231.html</url>
-    <content><![CDATA[<h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr1.length];</span><br><span class="line">        <span class="comment">//复制</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr1.length; i++) &#123;</span><br><span class="line">            arr2[i] = arr1[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Java跳出多重循环</title>
+    <url>/232.html</url>
+    <content><![CDATA[<p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         </p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>给for循环添加一个标记，然后使用<code>break 标记</code>跳到标记处，即可实现跳出多重循环</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">JAVA</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        here:</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;外层第&quot;</span> + (i + <span class="number">1</span>) + <span class="string">&quot;次循环&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i1 = <span class="number">0</span>; i1 &lt; <span class="number">3</span>; i1++) &#123;</span><br><span class="line">                System.out.print(i1 + <span class="string">&quot; &quot;</span>);</span><br><span class="line">                <span class="keyword">if</span> (i1 == <span class="number">1</span> &amp;&amp; i == <span class="number">1</span>) &#123;</span><br><span class="line">                    <span class="keyword">break</span> here;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="System-ararycopy"><a href="#System-ararycopy" class="headerlink" title="System.ararycopy"></a>System.ararycopy</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = <span class="keyword">new</span> <span class="keyword">int</span>[arr1.length];</span><br><span class="line">        <span class="comment">//复制</span></span><br><span class="line">        System.arraycopy(arr1, <span class="number">0</span>, arr2, <span class="number">0</span>, arr1.length);</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="clone"><a href="#clone" class="headerlink" title="clone()"></a>clone()</h3><p>如果数组等长，而且对应copy，使用int[] B= A.clone()</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] arr2 = arr1.clone();</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j : arr2) &#123;</span><br><span class="line">            System.out.print(j + <span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p> /** * @author LeDao * @company * @create 2021-06-21 12:38 */public class Test {​    public static void main(String[] args) {        int[] arr1 = new int[]{6, 5, 4, 3, 2, 1};        int[] arr2 = arr1.clone();        //遍历        for (int j : arr2) {            System.out.print(j + “ “);        }    }}java</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210724110315.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>Java</category>
@@ -7256,22 +7256,6 @@
       </tags>
   </entry>
   <entry>
-    <title>DockerFile创建镜像时报错：file not found in build context or excluded by</title>
-    <url>/307.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
-<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>DockerFile</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DockerFile构建自定义Tomcat</title>
     <url>/306.html</url>
     <content><![CDATA[<h3 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h3><p>新建一个文件，命名为：mytomcatdockerfile，没有后缀名，内容如下：</p>
@@ -7294,6 +7278,22 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
+        <tag>Docker</tag>
+        <tag>DockerFile</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DockerFile创建镜像时报错：file not found in build context or excluded by</title>
+    <url>/307.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
+<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
         <tag>Docker</tag>
         <tag>DockerFile</tag>
       </tags>
@@ -9393,30 +9393,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Shiro认证</title>
-    <url>/359.html</url>
-    <content><![CDATA[<h3 id="认证过程"><a href="#认证过程" class="headerlink" title="认证过程"></a>认证过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20184019.png"></p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="引入Shiro依赖"><a href="#引入Shiro依赖" class="headerlink" title="引入Shiro依赖"></a>引入Shiro依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.shiro<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>shiro-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,参数为正确的用户名和密码</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//构建SecurityManager环境</span></span><br><span class="line">        DefaultSecurityManager defaultSecurityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将用户信息放入SecurityManager环境</span></span><br><span class="line">        defaultSecurityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//主体提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(defaultSecurityManager);</span><br><span class="line">        <span class="comment">//获取构建SecurityManager环境的当前用户</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        <span class="comment">//设置一个token用于登录,参数分别为用户登录的用户名和密码</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//当前状态为未登录,所以输出false</span></span><br><span class="line">        System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//当前状态为登录成功,所以输出true</span></span><br><span class="line">            System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">            <span class="comment">//注销登录</span></span><br><span class="line">            subject.logout();</span><br><span class="line">            System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><ol>
-<li><p>当token的两个参数和正确的用户名密码一致时，登录成功</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20185038.jpg"></p>
-</li>
-<li><p>不一致时，登录失败</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20185108.jpg"></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Shiro</category>
-      </categories>
-      <tags>
-        <tag>Shiro</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java内部类</title>
     <url>/358.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>在Java中，可以将一个类的定义放在另外一个类的定义内部，这就是内部类。内部类本身就是类的一个属性，与其他属性定义方式一致</p>
@@ -9492,12 +9468,21 @@
       </tags>
   </entry>
   <entry>
-    <title>Shiro授权</title>
-    <url>/360.html</url>
-    <content><![CDATA[<h3 id="授权过程"><a href="#授权过程" class="headerlink" title="授权过程"></a>授权过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-15%20193514.png"></p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authz.AuthorizationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,该用户的角色有admin和teacher</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher&quot;</span>);</span><br><span class="line">        <span class="comment">//构建securityManager环境</span></span><br><span class="line">        DefaultSecurityManager securityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将上面的用户交给securityManager管理</span></span><br><span class="line">        securityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(securityManager);</span><br><span class="line">        <span class="comment">//获取当前securityManager环境的subject主体</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">        <span class="comment">//设置登录用户的token</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//查看是否登录成功</span></span><br><span class="line">            System.out.println(subject.isAuthenticated() ? <span class="string">&quot;登录成功&quot;</span> : <span class="string">&quot;登录失败&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">//检查成功登录的用户是否有admin和teacher1两个角色</span></span><br><span class="line">                subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (AuthorizationException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">                System.out.println(<span class="string">&quot;登录的用户与检查的角色不相符!!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误!!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>Shiro认证</title>
+    <url>/359.html</url>
+    <content><![CDATA[<h3 id="认证过程"><a href="#认证过程" class="headerlink" title="认证过程"></a>认证过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20184019.png"></p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="引入Shiro依赖"><a href="#引入Shiro依赖" class="headerlink" title="引入Shiro依赖"></a>引入Shiro依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.apache.shiro/shiro-core --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.shiro<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>shiro-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>如果subject.checkRoles(“admin”, “teacher1”)，那么程序会报错，提示没有teacher1这个角色；如果subject.checkRoles(“admin”, “teacher”)，那么程序不会报错</p>
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,参数为正确的用户名和密码</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//构建SecurityManager环境</span></span><br><span class="line">        DefaultSecurityManager defaultSecurityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将用户信息放入SecurityManager环境</span></span><br><span class="line">        defaultSecurityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//主体提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(defaultSecurityManager);</span><br><span class="line">        <span class="comment">//获取构建SecurityManager环境的当前用户</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        <span class="comment">//设置一个token用于登录,参数分别为用户登录的用户名和密码</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="comment">//当前状态为未登录,所以输出false</span></span><br><span class="line">        System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//当前状态为登录成功,所以输出true</span></span><br><span class="line">            System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">            <span class="comment">//注销登录</span></span><br><span class="line">            subject.logout();</span><br><span class="line">            System.out.println(<span class="string">&quot;当前登录状态为:&quot;</span> + subject.isAuthenticated());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><ol>
+<li><p>当token的两个参数和正确的用户名密码一致时，登录成功</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20185038.jpg"></p>
+</li>
+<li><p>不一致时，登录失败</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-14%20185108.jpg"></p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>Shiro</category>
@@ -9525,6 +9510,21 @@
       <tags>
         <tag>Java</tag>
         <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Shiro授权</title>
+    <url>/360.html</url>
+    <content><![CDATA[<h3 id="授权过程"><a href="#授权过程" class="headerlink" title="授权过程"></a>授权过程</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-15%20193514.png"></p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.SecurityUtils;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.AuthenticationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authc.UsernamePasswordToken;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.authz.AuthorizationException;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.mgt.DefaultSecurityManager;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.realm.SimpleAccountRealm;</span><br><span class="line"><span class="keyword">import</span> org.apache.shiro.subject.Subject;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-09-14 11:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SimpleAccountRealm simpleAccountRealm = <span class="keyword">new</span> SimpleAccountRealm();</span><br><span class="line">        <span class="comment">//添加一个用户,该用户的角色有admin和teacher</span></span><br><span class="line">        simpleAccountRealm.addAccount(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>, <span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher&quot;</span>);</span><br><span class="line">        <span class="comment">//构建securityManager环境</span></span><br><span class="line">        DefaultSecurityManager securityManager = <span class="keyword">new</span> DefaultSecurityManager();</span><br><span class="line">        <span class="comment">//将上面的用户交给securityManager管理</span></span><br><span class="line">        securityManager.setRealm(simpleAccountRealm);</span><br><span class="line">        <span class="comment">//提交认证请求</span></span><br><span class="line">        SecurityUtils.setSecurityManager(securityManager);</span><br><span class="line">        <span class="comment">//获取当前securityManager环境的subject主体</span></span><br><span class="line">        Subject subject = SecurityUtils.getSubject();</span><br><span class="line">        subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">        <span class="comment">//设置登录用户的token</span></span><br><span class="line">        UsernamePasswordToken token = <span class="keyword">new</span> UsernamePasswordToken(<span class="string">&quot;ledao&quot;</span>, <span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">//登录</span></span><br><span class="line">            subject.login(token);</span><br><span class="line">            <span class="comment">//查看是否登录成功</span></span><br><span class="line">            System.out.println(subject.isAuthenticated() ? <span class="string">&quot;登录成功&quot;</span> : <span class="string">&quot;登录失败&quot;</span>);</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="comment">//检查成功登录的用户是否有admin和teacher1两个角色</span></span><br><span class="line">                subject.checkRoles(<span class="string">&quot;admin&quot;</span>, <span class="string">&quot;teacher1&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (AuthorizationException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">                System.out.println(<span class="string">&quot;登录的用户与检查的角色不相符!!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (AuthenticationException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;用户名或密码错误!!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>如果subject.checkRoles(“admin”, “teacher1”)，那么程序会报错，提示没有teacher1这个角色；如果subject.checkRoles(“admin”, “teacher”)，那么程序不会报错</p>
+]]></content>
+      <categories>
+        <category>Shiro</category>
+      </categories>
+      <tags>
+        <tag>Shiro</tag>
       </tags>
   </entry>
   <entry>
@@ -11769,33 +11769,6 @@
       </tags>
   </entry>
   <entry>
-    <title>十大经典排序算法之归并排序</title>
-    <url>/41.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并</p>
-<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><ol>
-<li><p>把长度为n的输入序列分成两个长度为n/2的子序列</p>
-</li>
-<li><p>对这两个子序列分别采用归并排序</p>
-</li>
-<li><p>将两个排序好的子序列合并成一个最终的排序序列</p>
-</li>
-</ol>
-<h3 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a>动图演示</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022214845.jpg" alt="img"></p>
-<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 归并排序</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">11</span>,<span class="number">44</span>,<span class="number">23</span>,<span class="number">67</span>,<span class="number">88</span>,<span class="number">65</span>,<span class="number">34</span>,<span class="number">48</span>,<span class="number">9</span>,<span class="number">12</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="comment">//新建一个临时数组存放</span></span><br><span class="line">        <span class="keyword">int</span>[] tmp = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">        mergeSort(arr,<span class="number">0</span>,arr.length-<span class="number">1</span>,tmp);</span><br><span class="line">        System.out.println(<span class="string">&quot;排序后:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> mid,<span class="keyword">int</span> high,<span class="keyword">int</span>[] tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//左边序列和右边序列起始索引</span></span><br><span class="line">        <span class="keyword">int</span> j = low,k = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(j &lt;= mid &amp;&amp; k &lt;= high)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[k])&#123;</span><br><span class="line">                tmp[i++] = arr[j++];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                tmp[i++] = arr[k++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//若左边序列还有剩余，则将其全部拷贝进tmp[]中</span></span><br><span class="line">        <span class="keyword">while</span>(j &lt;= mid)&#123;</span><br><span class="line">            tmp[i++] = arr[j++];</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">while</span>(k &lt;= high)&#123;</span><br><span class="line">            tmp[i++] = arr[k++];</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;i;t++)&#123;</span><br><span class="line">            arr[low+t] = tmp[t];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> high,<span class="keyword">int</span>[] tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(low&lt;high)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (low+high)/<span class="number">2</span>;</span><br><span class="line">            <span class="comment">//对左边序列进行归并排序</span></span><br><span class="line">            mergeSort(arr,low,mid,tmp);</span><br><span class="line">            <span class="comment">//对右边序列进行归并排序</span></span><br><span class="line">            mergeSort(arr,mid+<span class="number">1</span>,high,tmp);</span><br><span class="line">            <span class="comment">//合并两个有序序列</span></span><br><span class="line">            merge(arr,low,mid,high,tmp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022215330.jpg" alt="img"></p>
-<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>归并排序是一种稳定的排序方法。和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(nlogn）的时间复杂度。代价是需要额外的内存空间</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>搬运地址: <a href="https://www.cnblogs.com/onepixel/p/7674659.html">十大经典排序算法（动图演示） - 一像素 - 博客园 (cnblogs.com)</a></p>
-]]></content>
-      <categories>
-        <category>数据结构</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>idea提交代码到GitHub报错：Push to origin/master was rejected的解决办法</title>
     <url>/410.html</url>
     <content><![CDATA[<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>远程仓库和本地仓库的内容不一致</p>
@@ -11820,6 +11793,33 @@
         <tag>GitHub</tag>
         <tag>idea使用</tag>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>十大经典排序算法之归并排序</title>
+    <url>/41.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并</p>
+<h3 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h3><ol>
+<li><p>把长度为n的输入序列分成两个长度为n/2的子序列</p>
+</li>
+<li><p>对这两个子序列分别采用归并排序</p>
+</li>
+<li><p>将两个排序好的子序列合并成一个最终的排序序列</p>
+</li>
+</ol>
+<h3 id="动图演示"><a href="#动图演示" class="headerlink" title="动图演示"></a>动图演示</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022214845.jpg" alt="img"></p>
+<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 归并排序</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">11</span>,<span class="number">44</span>,<span class="number">23</span>,<span class="number">67</span>,<span class="number">88</span>,<span class="number">65</span>,<span class="number">34</span>,<span class="number">48</span>,<span class="number">9</span>,<span class="number">12</span>&#125;;</span><br><span class="line">        System.out.println(<span class="string">&quot;排序前:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="comment">//新建一个临时数组存放</span></span><br><span class="line">        <span class="keyword">int</span>[] tmp = <span class="keyword">new</span> <span class="keyword">int</span>[arr.length];</span><br><span class="line">        mergeSort(arr,<span class="number">0</span>,arr.length-<span class="number">1</span>,tmp);</span><br><span class="line">        System.out.println(<span class="string">&quot;排序后:&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : arr) &#123;</span><br><span class="line">            System.out.print(i+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> mid,<span class="keyword">int</span> high,<span class="keyword">int</span>[] tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//左边序列和右边序列起始索引</span></span><br><span class="line">        <span class="keyword">int</span> j = low,k = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(j &lt;= mid &amp;&amp; k &lt;= high)&#123;</span><br><span class="line">            <span class="keyword">if</span>(arr[j] &lt; arr[k])&#123;</span><br><span class="line">                tmp[i++] = arr[j++];</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                tmp[i++] = arr[k++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//若左边序列还有剩余，则将其全部拷贝进tmp[]中</span></span><br><span class="line">        <span class="keyword">while</span>(j &lt;= mid)&#123;</span><br><span class="line">            tmp[i++] = arr[j++];</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">while</span>(k &lt;= high)&#123;</span><br><span class="line">            tmp[i++] = arr[k++];</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> t=<span class="number">0</span>;t&lt;i;t++)&#123;</span><br><span class="line">            arr[low+t] = tmp[t];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] arr,<span class="keyword">int</span> low,<span class="keyword">int</span> high,<span class="keyword">int</span>[] tmp)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(low&lt;high)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = (low+high)/<span class="number">2</span>;</span><br><span class="line">            <span class="comment">//对左边序列进行归并排序</span></span><br><span class="line">            mergeSort(arr,low,mid,tmp);</span><br><span class="line">            <span class="comment">//对右边序列进行归并排序</span></span><br><span class="line">            mergeSort(arr,mid+<span class="number">1</span>,high,tmp);</span><br><span class="line">            <span class="comment">//合并两个有序序列</span></span><br><span class="line">            merge(arr,low,mid,high,tmp);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201022215330.jpg" alt="img"></p>
+<h3 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h3><p>归并排序是一种稳定的排序方法。和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(nlogn）的时间复杂度。代价是需要额外的内存空间</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>搬运地址: <a href="https://www.cnblogs.com/onepixel/p/7674659.html">十大经典排序算法（动图演示） - 一像素 - 博客园 (cnblogs.com)</a></p>
+]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>数据结构</tag>
       </tags>
   </entry>
   <entry>
@@ -16464,6 +16464,68 @@
       </categories>
       <tags>
         <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo的butterfly主题更换网站字体</title>
+    <url>/496.html</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>hexo的butterfly主题是可以更换字体的，更换字体的情况分为两种：</p>
+<ol>
+<li>使用系统自带的字体</li>
+<li>使用从网上下载的字体</li>
+</ol>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="使用系统自带的字体"><a href="#使用系统自带的字体" class="headerlink" title="使用系统自带的字体"></a>使用系统自带的字体</h3><h4 id="查看系统字体"><a href="#查看系统字体" class="headerlink" title="查看系统字体"></a>查看系统字体</h4><p>去查看系统有哪些字体，打开设置后根据下图查看（我的电脑系统是Windows11）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220412232308366.png" alt="image-20220412232308366"></p>
+<h4 id="设置字体"><a href="#设置字体" class="headerlink" title="设置字体"></a>设置字体</h4><p>去修改主题文件夹下的<code>_config.yml</code>的配置文件，找到下面代码</p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Global font settings</span></span><br><span class="line"><span class="comment"># Don&#x27;t modify the following settings unless you know how they work (非必要不要修改)</span></span><br><span class="line"><span class="attr">font</span>:<span class="string"></span></span><br><span class="line">  <span class="meta">global-font-size</span>:<span class="string"></span></span><br><span class="line">  <span class="meta">code-font-size</span>:<span class="string"></span></span><br><span class="line">  <span class="meta">font-family</span>: <span class="string"></span></span><br><span class="line">  <span class="meta">code-font-family</span>: <span class="string">consolas</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># Font settings for the site title and site subtitle</span></span><br><span class="line"><span class="comment"># 左上角網站名字 主頁居中網站名字</span></span><br><span class="line"><span class="attr">blog_title_font</span>:<span class="string"></span></span><br><span class="line">  <span class="attr">font_link</span>:<span class="string"></span></span><br><span class="line">  <span class="meta">font-family</span>: <span class="string"></span></span><br></pre></td></tr></table></figure>
+
+<p>一些配置说明如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">配置</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>font.font-family</code></td>
+<td align="center">全局字体样式</td>
+</tr>
+<tr>
+<td align="center"><code>font.code-font-family</code></td>
+<td align="center">代码字体样式</td>
+</tr>
+<tr>
+<td align="center"><code>blog_title_font.font-family</code></td>
+<td align="center">主页的左上角名字以及居中网站名字的字体样式，<font color="#dd0000">如果不设置就以全局字体为准</font></td>
+</tr>
+</tbody></table>
+<h3 id="使用从网上下载的字体"><a href="#使用从网上下载的字体" class="headerlink" title="使用从网上下载的字体"></a>使用从网上下载的字体</h3><h4 id="下载字体"><a href="#下载字体" class="headerlink" title="下载字体"></a>下载字体</h4><p>网址：<a href="https://www.ztxz.net.cn/">字体下载|字体下载大全免费 (ztxz.net.cn)</a></p>
+<p>下载好的字体文件后缀名都是<code>.ttf</code></p>
+<h4 id="使用字体"><a href="#使用字体" class="headerlink" title="使用字体"></a>使用字体</h4><blockquote>
+<p>新建存放下载字体的文件夹</p>
+</blockquote>
+<p>在主题的<code>source</code>文件夹下新建一个<code>font</code>文件夹，用于存放下载的字体</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220412233228994.png" alt="image-20220412233228994"></p>
+<blockquote>
+<p>新建CSS文件用于定义和设置网站的字体（设置字体也可以到主题的配置中设置，看上面）</p>
+</blockquote>
+<p>在主题文件夹的<code>/source/css</code>文件夹下新建一个CSS文件，命名为<code>font.css</code>，内容如下：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;HarmonyOS_Sans&#x27;</span>;</span><br><span class="line">    <span class="attribute">font-display</span>: swap;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;../font/HarmonyOS_Sans.ttf&#x27;</span>) <span class="built_in">format</span>(<span class="string">&quot;truetype&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">@font-face</span>&#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;MiaoKenTang&#x27;</span>;</span><br><span class="line">    <span class="attribute">font-display</span>: swap;</span><br><span class="line">    <span class="attribute">src</span>: <span class="built_in">url</span>(<span class="string">&#x27;../font/MiaoKenTang.ttf&#x27;</span>) <span class="built_in">format</span>(<span class="string">&quot;truetype&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">&#x27;MiaoKenTang&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在主题配置中引入CSS</p>
+</blockquote>
+<p>去修改主题文件夹下的<code>_config.yml</code>的配置文件，找到下面代码，引入<code>font.css</code></p>
+<figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject</span>:<span class="string"></span></span><br><span class="line">  <span class="attr">head</span>:<span class="string"></span></span><br><span class="line">     <span class="meta">-</span> <span class="string">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/font.css&quot;&gt;</span></span><br><span class="line">  <span class="attr">bottom</span>:<span class="string"></span></span><br><span class="line"><span class="comment">    # - &lt;script src=&quot;xxxx&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="效果截图"><a href="#效果截图" class="headerlink" title="效果截图"></a>效果截图</h2><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220412234312611.png" alt="image-20220412234312611"></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
