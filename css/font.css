@@ -8,6 +8,11 @@
     font-display: swap;
     src: url('../font/XiaoWuBold.ttf') format("truetype");
 }
+@font-face{
+    font-family: 'HLBS';
+    font-display: swap;
+    src: url('../font/HLBS.ttf') format("truetype");
+}
 body {
     font-family: 'XiaoWuBold';
 }
