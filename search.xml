@@ -15,41 +15,6 @@
       </tags>
   </entry>
   <entry>
-    <title>一个非常好用的Java工具包：HulTool</title>
-    <url>/100.html</url>
-    <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
-<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Hutool是一个Java工具包类库，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类</p>
-<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><p>日期工具：通过DateUtil类，提供高度便捷的日期访问、处理和转换方式</p>
-<p>HTTP客户端：通过HttpUtil对HTTP客户端的封装，实现便捷的HTTP请求，并简化文件上传操作</p>
-<p>转换工具：通过Convert类中的相应静态方法，提供一整套的类型转换解决方案，并通过ConverterRegistry工厂类自定义转换</p>
-<p>配置文件工具：通过Setting对象，提供兼容Properties文件的更加强大的配置文件工具，用于解决中文、分组等JDK配置文件存在的诸多问题</p>
-<p>日志工具：Hutool的日志功能，通过抽象Log接口，提供对Slf4j、LogBack、Log4j、JDK-Logging的全面兼容支持</p>
-<p>JDBC工具类：通过db模块，提供对MySQL、Oracle等关系型数据库的JDBC封装，借助ActiveRecord思想，大大简化数据库操作</p>
-<p>更多功能：<a href="https://www.hutool.cn/docs/#/">官方参考文档</a></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>引入依赖后就可以直接使用了</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL数据库中text字段长度不够</title>
-    <url>/102.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成<code>MEDIUMTEXT</code>（最多存放16777215个字符）或者<code>LONGTEXT</code>（最多存放4294967295个字符）</p>
-]]></content>
-      <categories>
-        <category>MySQL</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决：关于CKEditor的代码高亮</title>
     <url>/101.html</url>
     <content><![CDATA[<h3 id="获取HTML代码"><a href="#获取HTML代码" class="headerlink" title="获取HTML代码"></a>获取HTML代码</h3><blockquote>
@@ -74,6 +39,28 @@
       </tags>
   </entry>
   <entry>
+    <title>一个非常好用的Java工具包：HulTool</title>
+    <url>/100.html</url>
+    <content><![CDATA[<h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="https://www.hutool.cn/">https://www.hutool.cn/</a></p>
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Hutool是一个Java工具包类库，对文件、流、加密解密、转码、正则、线程、XML等JDK方法进行封装，组成各种Util工具类</p>
+<h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><p>日期工具：通过DateUtil类，提供高度便捷的日期访问、处理和转换方式</p>
+<p>HTTP客户端：通过HttpUtil对HTTP客户端的封装，实现便捷的HTTP请求，并简化文件上传操作</p>
+<p>转换工具：通过Convert类中的相应静态方法，提供一整套的类型转换解决方案，并通过ConverterRegistry工厂类自定义转换</p>
+<p>配置文件工具：通过Setting对象，提供兼容Properties文件的更加强大的配置文件工具，用于解决中文、分组等JDK配置文件存在的诸多问题</p>
+<p>日志工具：Hutool的日志功能，通过抽象Log接口，提供对Slf4j、LogBack、Log4j、JDK-Logging的全面兼容支持</p>
+<p>JDBC工具类：通过db模块，提供对MySQL、Oracle等关系型数据库的JDBC封装，借助ActiveRecord思想，大大简化数据库操作</p>
+<p>更多功能：<a href="https://www.hutool.cn/docs/#/">官方参考文档</a></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>引入依赖后就可以直接使用了</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>制作网站logo</title>
     <url>/103.html</url>
     <content><![CDATA[<h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p><a href="http://www.uugai.com/">http://www.uugai.com/</a></p>
@@ -91,6 +78,19 @@
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL数据库中text字段长度不够</title>
+    <url>/102.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成<code>MEDIUMTEXT</code>（最多存放16777215个字符）或者<code>LONGTEXT</code>（最多存放4294967295个字符）</p>
+]]></content>
+      <categories>
+        <category>MySQL</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -130,22 +130,6 @@
       </tags>
   </entry>
   <entry>
-    <title>给网页添加背景图片（网页缩小放大都不受影响）</title>
-    <url>/107.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决：Tomcat运行项目时Quartz定时任务执行两次</title>
     <url>/106.html</url>
     <content><![CDATA[<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>在Tomcat的配置文件<code>conf/server.xml</code>中：</p>
@@ -164,6 +148,22 @@
       </categories>
       <tags>
         <tag>Tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给网页添加背景图片（网页缩小放大都不受影响）</title>
+    <url>/107.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -276,23 +276,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows10脚本代码备份MySQL数据库</title>
-    <url>/113.html</url>
-    <content><![CDATA[<h3 id="创建backdb-bat文件"><a href="#创建backdb-bat文件" class="headerlink" title="创建backdb.bat文件"></a>创建backdb.bat文件</h3><p>打开该文件，输入以下内容并保存</p>
-<p>D盘创建名为db_backup文件夹，-u后的root是数据库连接时用户名，-p后的123456是密码，db_myblog是我的数据库名称</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 取日期、时间变量值<span class="built_in">set</span> yy=%date:~0,4%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mm=%date:~5,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> dd=%date:~8,2%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% lss 10 <span class="built_in">set</span> hh=0%time:~1,1%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% geq 10 <span class="built_in">set</span> hh=%time:~0,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mn=%time:~3,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> ss=%time:~6,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> date=%yy%%mm%%dd%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> time=%hh%%mn%%ss%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> filename=%date%_%time%</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="string">&quot;C:/Program Files/MySQL/MySQL Server 5.6/bin/mysqldump.exe&quot;</span> -uroot -p123456 --opt --default-character-set=utf8 -e --triggers -R --hex-blob --flush-logs -x --databases db_myblog &gt; D:/db_backup/db_myblog%filename%.sql</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> 导出已经完成</span><br><span class="line"> </span><br><span class="line"><span class="comment">#pause</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424001904.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Windows系统</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>Windows系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mysqldump命令备份数据库</title>
     <url>/112.html</url>
     <content><![CDATA[<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p123456 db_myblog&gt; D:/db_backup/db_myblog.sql</span><br></pre></td></tr></table></figure>
@@ -311,6 +294,23 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows10脚本代码备份MySQL数据库</title>
+    <url>/113.html</url>
+    <content><![CDATA[<h3 id="创建backdb-bat文件"><a href="#创建backdb-bat文件" class="headerlink" title="创建backdb.bat文件"></a>创建backdb.bat文件</h3><p>打开该文件，输入以下内容并保存</p>
+<p>D盘创建名为db_backup文件夹，-u后的root是数据库连接时用户名，-p后的123456是密码，db_myblog是我的数据库名称</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> 取日期、时间变量值<span class="built_in">set</span> yy=%date:~0,4%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mm=%date:~5,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> dd=%date:~8,2%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% lss 10 <span class="built_in">set</span> hh=0%time:~1,1%</span><br><span class="line"> </span><br><span class="line"><span class="keyword">if</span> /i %time:~0,2% geq 10 <span class="built_in">set</span> hh=%time:~0,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> mn=%time:~3,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> ss=%time:~6,2%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> date=%yy%%mm%%dd%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> time=%hh%%mn%%ss%</span><br><span class="line"> </span><br><span class="line"><span class="built_in">set</span> filename=%date%_%time%</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="string">&quot;C:/Program Files/MySQL/MySQL Server 5.6/bin/mysqldump.exe&quot;</span> -uroot -p123456 --opt --default-character-set=utf8 -e --triggers -R --hex-blob --flush-logs -x --databases db_myblog &gt; D:/db_backup/db_myblog%filename%.sql</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"><span class="built_in">echo</span> 导出已经完成</span><br><span class="line"> </span><br><span class="line"><span class="comment">#pause</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210424001904.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Windows系统</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>Windows系统</tag>
       </tags>
   </entry>
   <entry>
@@ -1219,24 +1219,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Maven找依赖包或下载jar包</title>
-    <url>/139.html</url>
-    <content><![CDATA[<h3 id="进入网站"><a href="#进入网站" class="headerlink" title="进入网站"></a>进入网站</h3><p><a href="https://mvnrepository.com/">https://mvnrepository.com/</a></p>
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>搜索要使用的依赖包（搜索gson）</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104110.jpg" alt="img"></p>
-<h3 id="选择版本"><a href="#选择版本" class="headerlink" title="选择版本"></a>选择版本</h3><p>选择要使用的版本，点击Version列的版本号</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104226.jpg" alt="img"></p>
-<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom.xml的引入代码</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104520.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Maven</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java解析JSON的四种方式</title>
     <url>/138.html</url>
     <content><![CDATA[<h3 id="Link实体类"><a href="#Link实体类" class="headerlink" title="Link实体类"></a>Link实体类</h3><p>已省略setter和getter方法</p>
@@ -1299,6 +1281,24 @@
       <tags>
         <tag>Java</tag>
         <tag>JSON</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Maven找依赖包或下载jar包</title>
+    <url>/139.html</url>
+    <content><![CDATA[<h3 id="进入网站"><a href="#进入网站" class="headerlink" title="进入网站"></a>进入网站</h3><p><a href="https://mvnrepository.com/">https://mvnrepository.com/</a></p>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>搜索要使用的依赖包（搜索gson）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104110.jpg" alt="img"></p>
+<h3 id="选择版本"><a href="#选择版本" class="headerlink" title="选择版本"></a>选择版本</h3><p>选择要使用的版本，点击Version列的版本号</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104226.jpg" alt="img"></p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>点击第一条红线处的jar链接即可下载jar包，第二条红线处选择maven就是pom.xml的引入代码</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210607104520.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Maven</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -1478,6 +1478,29 @@
       </tags>
   </entry>
   <entry>
+    <title>switch语句</title>
+    <url>/142.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>switch语句将从与选项值相匹配的case标签处开始执行直到遇到break语句，或者执行到switch语句的结束处为止。如果没有相匹配的case标签，而有default子句，就执行这个子句。（必须严格执行每个case必须以break语句结束，不然程序会继续执行下去，直到遇到break语句或者执行到default语句）</p>
+<h3 id="正确的例子"><a href="#正确的例子" class="headerlink" title="正确的例子"></a>正确的例子</h3><p>Java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163509.jpg" alt="img"></p>
+<h3 id="错误的例子"><a href="#错误的例子" class="headerlink" title="错误的例子"></a><strong>错误的例子</strong></h3><p>Java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163627.jpg" alt="img"></p>
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><p>在错误的例子中，即使只有条件1符合条件，但是由于没有break语句终止程序，程序会继续执行下去，直到遇到break语句或执行完程序。（如果条件2有break语句，那么控制台只输出1和2）</p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安装Maven</title>
     <url>/143.html</url>
     <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>网站链接：<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a></p>
@@ -1520,29 +1543,6 @@
       </categories>
       <tags>
         <tag>Maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>switch语句</title>
-    <url>/142.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>switch语句将从与选项值相匹配的case标签处开始执行直到遇到break语句，或者执行到switch语句的结束处为止。如果没有相匹配的case标签，而有default子句，就执行这个子句。（必须严格执行每个case必须以break语句结束，不然程序会继续执行下去，直到遇到break语句或者执行到default语句）</p>
-<h3 id="正确的例子"><a href="#正确的例子" class="headerlink" title="正确的例子"></a>正确的例子</h3><p>Java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163509.jpg" alt="img"></p>
-<h3 id="错误的例子"><a href="#错误的例子" class="headerlink" title="错误的例子"></a><strong>错误的例子</strong></h3><p>Java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163627.jpg" alt="img"></p>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><p>在错误的例子中，即使只有条件1符合条件，但是由于没有break语句终止程序，程序会继续执行下去，直到遇到break语句或执行完程序。（如果条件2有break语句，那么控制台只输出1和2）</p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -2134,6 +2134,21 @@
       </tags>
   </entry>
   <entry>
+    <title>一个Tomcat部署多个项目以及配置域名</title>
+    <url>/16.html</url>
+    <content><![CDATA[<p>首先找到服务器Tomcat的server.xml配置，然后在原来的基础上，多复制一份Host节点，然后 name 改成我们需要设置的域名以及Context节点对应好项目路径即可</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Host</span> <span class="attr">name</span>=<span class="string">&quot;jxc.zoutl.cn&quot;</span>  <span class="attr">appBase</span>=<span class="string">&quot;webapps&quot;</span> <span class="attr">unpackWARs</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;/home/tomcat9/apache-tomcat-9.0.46/webapps/JXC&quot;</span> <span class="attr">debug</span>=<span class="string">&quot;0&quot;</span> <span class="attr">reloadable</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- SingleSignOn valve, share authentication between web applications Documentation at: /docs/config/valve.html --&gt;</span></span><br><span class="line">     <span class="comment">&lt;!--&lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;--&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- Access log processes all example. Documentation at: /docs/config/valve.html <span class="doctag">Note:</span> The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">&quot;org.apache.catalina.valves.AccessLogValve&quot;</span> <span class="attr">directory</span>=<span class="string">&quot;logs&quot;</span> <span class="attr">prefix</span>=<span class="string">&quot;localhost_access_log&quot;</span> <span class="attr">suffix</span>=<span class="string">&quot;.txt&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;%h %l %u %t <span class="symbol">&amp;quot;</span>%r<span class="symbol">&amp;quot;</span> %s %b&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201011181925.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Tomcat</category>
+      </categories>
+      <tags>
+        <tag>Tomcat</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7实时查看Tomcat运行日志</title>
     <url>/159.html</url>
     <content><![CDATA[<h3 id="查找catalina-out的路径"><a href="#查找catalina-out的路径" class="headerlink" title="查找catalina.out的路径"></a>查找catalina.out的路径</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">find / -name catalina.out</span><br></pre></td></tr></table></figure>
@@ -2150,21 +2165,6 @@
       <tags>
         <tag>Tomcat</tag>
         <tag>CentOS7</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>一个Tomcat部署多个项目以及配置域名</title>
-    <url>/16.html</url>
-    <content><![CDATA[<p>首先找到服务器Tomcat的server.xml配置，然后在原来的基础上，多复制一份Host节点，然后 name 改成我们需要设置的域名以及Context节点对应好项目路径即可</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Host</span> <span class="attr">name</span>=<span class="string">&quot;jxc.zoutl.cn&quot;</span>  <span class="attr">appBase</span>=<span class="string">&quot;webapps&quot;</span> <span class="attr">unpackWARs</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;/home/tomcat9/apache-tomcat-9.0.46/webapps/JXC&quot;</span> <span class="attr">debug</span>=<span class="string">&quot;0&quot;</span> <span class="attr">reloadable</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- SingleSignOn valve, share authentication between web applications Documentation at: /docs/config/valve.html --&gt;</span></span><br><span class="line">     <span class="comment">&lt;!--&lt;Valve className=&quot;org.apache.catalina.authenticator.SingleSignOn&quot; /&gt;--&gt;</span></span><br><span class="line"></span><br><span class="line">     <span class="comment">&lt;!-- Access log processes all example. Documentation at: /docs/config/valve.html <span class="doctag">Note:</span> The pattern used is equivalent to using pattern=&quot;common&quot; --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">&quot;org.apache.catalina.valves.AccessLogValve&quot;</span> <span class="attr">directory</span>=<span class="string">&quot;logs&quot;</span> <span class="attr">prefix</span>=<span class="string">&quot;localhost_access_log&quot;</span> <span class="attr">suffix</span>=<span class="string">&quot;.txt&quot;</span> <span class="attr">pattern</span>=<span class="string">&quot;%h %l %u %t <span class="symbol">&amp;quot;</span>%r<span class="symbol">&amp;quot;</span> %s %b&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201011181925.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Tomcat</category>
-      </categories>
-      <tags>
-        <tag>Tomcat</tag>
       </tags>
   </entry>
   <entry>
@@ -2390,37 +2390,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Redis keys命令</title>
-    <url>/165.html</url>
-    <content><![CDATA[<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>获取指定 key 的值</p>
-<p><font color="#dd0000">get key</font></p>
-<p>127.0.0.1:6379&gt; <code>get name</code><br>“ledao”</p>
-<h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><p>删除指定key</p>
-<p><font color="#dd0000">del key</font></p>
-<p>127.0.0.1:6379&gt; <code>get num</code><br>“1”<br>127.0.0.1:6379&gt; <code>del num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>(nil)</p>
-<h3 id="exists"><a href="#exists" class="headerlink" title="exists"></a>exists</h3><p>检查给定 key 是否存在</p>
-<p><font color="#dd0000">exists key</font></p>
-<p>127.0.0.1:6379&gt; <code>exists name</code><br>(integer) 1</p>
-<h3 id="type"><a href="#type" class="headerlink" title="type"></a>type</h3><p>返回 key 所储存的值的类型删除指定key</p>
-<p><font color="#dd0000">type key</font></p>
-<p>127.0.0.1:6379&gt; <code>type name</code><br>string</p>
-<h3 id="keys"><a href="#keys" class="headerlink" title="keys"></a>keys</h3><h4 id="keys-1"><a href="#keys-1" class="headerlink" title="keys *"></a>keys *</h4><p>显示所有key</p>
-<p>127.0.0.1:6379&gt; <code>keys *</code><br>1)”set3”<br>2)”age”<br>3)”l1”<br>4)”newSet”<br>5)”l2”<br>6)”set1”<br>7)”1”<br>8)”fruitList”<br>9)”set2”</p>
-<h4 id="keys-f"><a href="#keys-f" class="headerlink" title="keys f*"></a>keys f*</h4><p>查找所有以某字符串开头的key</p>
-<p>127.0.0.1:6379&gt; <code>keys f*</code><br>1)”fruitList”</p>
-<h3 id="rename"><a href="#rename" class="headerlink" title="rename"></a>rename</h3><p>重命名key</p>
-<p><font color="#dd0000">rename key name</font></p>
-<p>127.0.0.1:6379&gt; <code>rename list1 list2</code><br>OK</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多命令：<a href="https://www.runoob.com/redis/redis-keys.html">https://www.runoob.com/redis/redis-keys.html</a></p>
-]]></content>
-      <categories>
-        <category>Redis</category>
-      </categories>
-      <tags>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Redis哈希(Hash)</title>
     <url>/166.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Redis hash 是一个 string 类型的 field（字段） 和 value（值） 的映射表，hash 特别适合用于存储对象。</p>
@@ -2470,6 +2439,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Redis keys命令</title>
+    <url>/165.html</url>
+    <content><![CDATA[<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>获取指定 key 的值</p>
+<p><font color="#dd0000">get key</font></p>
+<p>127.0.0.1:6379&gt; <code>get name</code><br>“ledao”</p>
+<h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><p>删除指定key</p>
+<p><font color="#dd0000">del key</font></p>
+<p>127.0.0.1:6379&gt; <code>get num</code><br>“1”<br>127.0.0.1:6379&gt; <code>del num</code><br>(integer) 1<br>127.0.0.1:6379&gt; <code>get num</code><br>(nil)</p>
+<h3 id="exists"><a href="#exists" class="headerlink" title="exists"></a>exists</h3><p>检查给定 key 是否存在</p>
+<p><font color="#dd0000">exists key</font></p>
+<p>127.0.0.1:6379&gt; <code>exists name</code><br>(integer) 1</p>
+<h3 id="type"><a href="#type" class="headerlink" title="type"></a>type</h3><p>返回 key 所储存的值的类型删除指定key</p>
+<p><font color="#dd0000">type key</font></p>
+<p>127.0.0.1:6379&gt; <code>type name</code><br>string</p>
+<h3 id="keys"><a href="#keys" class="headerlink" title="keys"></a>keys</h3><h4 id="keys-1"><a href="#keys-1" class="headerlink" title="keys *"></a>keys *</h4><p>显示所有key</p>
+<p>127.0.0.1:6379&gt; <code>keys *</code><br>1)”set3”<br>2)”age”<br>3)”l1”<br>4)”newSet”<br>5)”l2”<br>6)”set1”<br>7)”1”<br>8)”fruitList”<br>9)”set2”</p>
+<h4 id="keys-f"><a href="#keys-f" class="headerlink" title="keys f*"></a>keys f*</h4><p>查找所有以某字符串开头的key</p>
+<p>127.0.0.1:6379&gt; <code>keys f*</code><br>1)”fruitList”</p>
+<h3 id="rename"><a href="#rename" class="headerlink" title="rename"></a>rename</h3><p>重命名key</p>
+<p><font color="#dd0000">rename key name</font></p>
+<p>127.0.0.1:6379&gt; <code>rename list1 list2</code><br>OK</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a><strong>PS.</strong></h3><p>更多命令：<a href="https://www.runoob.com/redis/redis-keys.html">https://www.runoob.com/redis/redis-keys.html</a></p>
+]]></content>
+      <categories>
+        <category>Redis</category>
+      </categories>
+      <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Redis列表(List)</title>
     <url>/167.html</url>
     <content><![CDATA[<h3 id="lpush"><a href="#lpush" class="headerlink" title="lpush"></a>lpush</h3><p>方式添加，从左边开始添加</p>
@@ -2502,45 +2502,6 @@
         <category>Redis</category>
       </categories>
       <tags>
-        <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Redis结合JSON存储Java对象</title>
-    <url>/168.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>先将Java对象转化成json字符串，然后Redis存储json字符串</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="引入gson依赖"><a href="#引入gson依赖" class="headerlink" title="引入gson依赖"></a>引入gson依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.code.gson<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>gson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="使用到的方法"><a href="#使用到的方法" class="headerlink" title="使用到的方法"></a>使用到的方法</h4><p><strong>Jedis.rpop()</strong></p>
-<p>右侧弹出元素</p>
-<p><strong>Jedis.llen()</strong></p>
-<p>获取Redis的list长度</p>
-<p><strong>Jedis.rpush()</strong></p>
-<p>从右侧开始添加元素</p>
-<p><strong>Jedis.lrange()</strong></p>
-<p>获取全部元素集合</p>
-<p><strong>Gson.toJson()</strong></p>
-<p>Java对象转化成json</p>
-<p><strong>Gson.fromJson()</strong></p>
-<p>json转化成Java对象</p>
-<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><blockquote>
-<p>Fruit实体类</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 22:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">(String name, Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">(Integer id, String name, Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getNum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNum</span><span class="params">(Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Fruit&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, num=&quot;</span> + num +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>测试代码</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.gson.Gson;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        Fruit fruit1 = <span class="keyword">new</span> Fruit(<span class="number">1</span>, <span class="string">&quot;苹果&quot;</span>, <span class="number">11</span>);</span><br><span class="line">        Fruit fruit2 = <span class="keyword">new</span> Fruit(<span class="number">2</span>, <span class="string">&quot;梨&quot;</span>, <span class="number">6</span>);</span><br><span class="line">        Fruit fruit3 = <span class="keyword">new</span> Fruit(<span class="number">3</span>, <span class="string">&quot;油桃&quot;</span>, <span class="number">8</span>);</span><br><span class="line">        List&lt;Fruit&gt; fruitList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        fruitList.add(fruit1);</span><br><span class="line">        fruitList.add(fruit2);</span><br><span class="line">        fruitList.add(fruit3);</span><br><span class="line">        <span class="comment">//转化成json，便于redis存储Java对象</span></span><br><span class="line">        System.out.println(<span class="string">&quot;转化成json：&quot;</span>);</span><br><span class="line">        Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line">        <span class="keyword">for</span> (Fruit fruit : fruitList) &#123;</span><br><span class="line">            jedis.rpush(<span class="string">&quot;redisFruitList&quot;</span>, gson.toJson(fruit));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        List&lt;String&gt; redisFruitList = jedis.lrange(<span class="string">&quot;redisFruitList&quot;</span>, <span class="number">0</span>, -<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (String s : redisFruitList) &#123;</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//Redis的list转化成Java对象</span></span><br><span class="line">        System.out.println(<span class="string">&quot;转化成Java对象：&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; redisFruitList.size(); i++) &#123;</span><br><span class="line">            Fruit fruit = gson.fromJson(redisFruitList.get(i), Fruit.class);</span><br><span class="line">            System.out.println(fruit.toString());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//清空redisFruitList</span></span><br><span class="line">        Long length = jedis.llen(<span class="string">&quot;redisFruitList&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">                jedis.rpop(<span class="string">&quot;redisFruitList&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//关闭连接</span></span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621074556.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>JSON</tag>
         <tag>Redis</tag>
       </tags>
   </entry>
@@ -2591,6 +2552,45 @@
         <category>Redis</category>
       </categories>
       <tags>
+        <tag>Redis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Redis结合JSON存储Java对象</title>
+    <url>/168.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>先将Java对象转化成json字符串，然后Redis存储json字符串</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="引入gson依赖"><a href="#引入gson依赖" class="headerlink" title="引入gson依赖"></a>引入gson依赖</h4><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.code.gson<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>gson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.8.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="使用到的方法"><a href="#使用到的方法" class="headerlink" title="使用到的方法"></a>使用到的方法</h4><p><strong>Jedis.rpop()</strong></p>
+<p>右侧弹出元素</p>
+<p><strong>Jedis.llen()</strong></p>
+<p>获取Redis的list长度</p>
+<p><strong>Jedis.rpush()</strong></p>
+<p>从右侧开始添加元素</p>
+<p><strong>Jedis.lrange()</strong></p>
+<p>获取全部元素集合</p>
+<p><strong>Gson.toJson()</strong></p>
+<p>Java对象转化成json</p>
+<p><strong>Gson.fromJson()</strong></p>
+<p>json转化成Java对象</p>
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><blockquote>
+<p>Fruit实体类</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 22:30</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Fruit</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer num;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">(String name, Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Fruit</span><span class="params">(Integer id, String name, Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getNum</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNum</span><span class="params">(Integer num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Fruit&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;id=&quot;</span> + id +</span><br><span class="line">                <span class="string">&quot;, name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, num=&quot;</span> + num +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>测试代码</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.google.gson.Gson;</span><br><span class="line"><span class="keyword">import</span> redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-20 7:47</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JedisTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">&quot;192.168.0.153&quot;</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.auth(<span class="string">&quot;123456&quot;</span>);</span><br><span class="line">        Fruit fruit1 = <span class="keyword">new</span> Fruit(<span class="number">1</span>, <span class="string">&quot;苹果&quot;</span>, <span class="number">11</span>);</span><br><span class="line">        Fruit fruit2 = <span class="keyword">new</span> Fruit(<span class="number">2</span>, <span class="string">&quot;梨&quot;</span>, <span class="number">6</span>);</span><br><span class="line">        Fruit fruit3 = <span class="keyword">new</span> Fruit(<span class="number">3</span>, <span class="string">&quot;油桃&quot;</span>, <span class="number">8</span>);</span><br><span class="line">        List&lt;Fruit&gt; fruitList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        fruitList.add(fruit1);</span><br><span class="line">        fruitList.add(fruit2);</span><br><span class="line">        fruitList.add(fruit3);</span><br><span class="line">        <span class="comment">//转化成json，便于redis存储Java对象</span></span><br><span class="line">        System.out.println(<span class="string">&quot;转化成json：&quot;</span>);</span><br><span class="line">        Gson gson = <span class="keyword">new</span> Gson();</span><br><span class="line">        <span class="keyword">for</span> (Fruit fruit : fruitList) &#123;</span><br><span class="line">            jedis.rpush(<span class="string">&quot;redisFruitList&quot;</span>, gson.toJson(fruit));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//遍历</span></span><br><span class="line">        List&lt;String&gt; redisFruitList = jedis.lrange(<span class="string">&quot;redisFruitList&quot;</span>, <span class="number">0</span>, -<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (String s : redisFruitList) &#123;</span><br><span class="line">            System.out.println(s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//Redis的list转化成Java对象</span></span><br><span class="line">        System.out.println(<span class="string">&quot;转化成Java对象：&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; redisFruitList.size(); i++) &#123;</span><br><span class="line">            Fruit fruit = gson.fromJson(redisFruitList.get(i), Fruit.class);</span><br><span class="line">            System.out.println(fruit.toString());</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//清空redisFruitList</span></span><br><span class="line">        Long length = jedis.llen(<span class="string">&quot;redisFruitList&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">                jedis.rpop(<span class="string">&quot;redisFruitList&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//关闭连接</span></span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210621074556.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>JSON</tag>
         <tag>Redis</tag>
       </tags>
   </entry>
@@ -2995,24 +2995,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue.js条件语句</title>
-    <url>/182.html</url>
-    <content><![CDATA[<h3 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;flag&quot;</span>&gt;</span>flag是true就显示我<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">flag</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;flag&quot;</span>&gt;</span>flag==true<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>flag==false<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">flag</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="v-else-if"><a href="#v-else-if" class="headerlink" title="v-else-if"></a>v-else-if</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;type===&#x27;A&#x27;&quot;</span>&gt;</span>A<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else-if</span>=<span class="string">&quot;type===&#x27;B&#x27;&quot;</span>&gt;</span>B<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else-if</span>=<span class="string">&quot;type===&#x27;C&#x27;&quot;</span>&gt;</span>C<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>D<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">type</span>: <span class="string">&#x27;C&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-show</span>=<span class="string">&quot;flag&quot;</span>&gt;</span>11111111<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">flag</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vue.js循环语句</title>
     <url>/183.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>循环使用 v-for 指令</p>
@@ -3026,6 +3008,24 @@
 <h3 id="迭代整数"><a href="#迭代整数" class="headerlink" title="迭代整数"></a>迭代整数</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>遍历1到<span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span>:<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-for</span>=<span class="string">&quot;n in num&quot;</span> <span class="attr">v-if</span>=<span class="string">&quot;n&lt;num&quot;</span>&gt;</span>&#123;&#123;n&#125;&#125;，<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">v-else</span>&gt;</span>&#123;&#123;num&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>:<span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>:&#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">num</span>:<span class="number">33</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210624144827.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue.js条件语句</title>
+    <url>/182.html</url>
+    <content><![CDATA[<h3 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;flag&quot;</span>&gt;</span>flag是true就显示我<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">flag</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;flag&quot;</span>&gt;</span>flag==true<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>flag==false<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">flag</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="v-else-if"><a href="#v-else-if" class="headerlink" title="v-else-if"></a>v-else-if</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">&quot;type===&#x27;A&#x27;&quot;</span>&gt;</span>A<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else-if</span>=<span class="string">&quot;type===&#x27;B&#x27;&quot;</span>&gt;</span>B<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else-if</span>=<span class="string">&quot;type===&#x27;C&#x27;&quot;</span>&gt;</span>C<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-else</span>&gt;</span>D<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">type</span>: <span class="string">&#x27;C&#x27;</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-show</span>=<span class="string">&quot;flag&quot;</span>&gt;</span>11111111<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="javascript">        <span class="attr">el</span>: <span class="string">&#x27;#app&#x27;</span>,</span></span><br><span class="line"><span class="javascript">        <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="javascript">            <span class="attr">flag</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="javascript">        &#125;</span></span><br><span class="line"><span class="javascript">    &#125;)</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Vue.js</category>
@@ -3489,48 +3489,6 @@
       </tags>
   </entry>
   <entry>
-    <title>vue-cli脚手架新建和删除Vue项目</title>
-    <url>/201.html</url>
-    <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>在 Vue 项目存储文件夹中打开 cmd ，输入命令：vue init webpack vue_demo，vue_demo 是项目名称，然后进行一些配置</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104020.png"></p>
-<h3 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h3><h4 id="项目名称"><a href="#项目名称" class="headerlink" title="项目名称"></a>项目名称</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/202237_090705_1646615226.png"></p>
-<h4 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091149551.png" alt="image-20220307091149551"></p>
-<h4 id="作者信息"><a href="#作者信息" class="headerlink" title="作者信息"></a>作者信息</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091418406.png" alt="image-20220307091418406"></p>
-<h4 id="构建方式"><a href="#构建方式" class="headerlink" title="构建方式"></a>构建方式</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091631999.png" alt="image-20220307091631999"></p>
-<h4 id="是否安装vue-router"><a href="#是否安装vue-router" class="headerlink" title="是否安装vue-router"></a>是否安装vue-router</h4><p>现在不安装的话，后期可以在项目中安装</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091923533.png" alt="image-20220307091923533"></p>
-<h4 id="使用ESLint"><a href="#使用ESLint" class="headerlink" title="使用ESLint"></a>使用ESLint</h4><p>ESLint是一个语法规则和代码风格的检查工具，可以用来保证写出语法正确、风格统一的代码，<font color="#dd0000">建议不使用</font></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092303480.png" alt="image-20220307092303480"></p>
-<h4 id="安装单元测试"><a href="#安装单元测试" class="headerlink" title="安装单元测试"></a>安装单元测试</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092422569.png" alt="image-20220307092422569"></p>
-<h4 id="安装E2E测试框架NightWatch"><a href="#安装E2E测试框架NightWatch" class="headerlink" title="安装E2E测试框架NightWatch"></a>安装E2E测试框架NightWatch</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092548041.png" alt="image-20220307092548041"></p>
-<h4 id="选择包管理工具"><a href="#选择包管理工具" class="headerlink" title="选择包管理工具"></a>选择包管理工具</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092719191.png" alt="image-20220307092719191"></p>
-<h4 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h4><p>打开package.json文件，点击第9行左边的启动按钮，选择第一个选项启动即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226203527215.png" alt="image-20220226203527215"></p>
-<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>打开运行信息的地址即可访问项目，出现以下页面说明成功运行</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151925.jpg" alt="img"></p>
-<p>要停止运行，使用快捷键CTRL+C，或者点击IDE的停止按钮</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104713.jpg"></p>
-<h3 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h3><p>修改端口为80，修改 config 文件夹的 index.js，<code>port:8080</code>改为<code>port:80</code></p>
-<p>让项目启动时自动打开浏览器，修改 config 文件夹的 index.js，<code>autoOpenBrower:false</code>改为<code>autoOpenBrower:true</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151833.jpg" alt="img"></p>
-<h3 id="删除项目"><a href="#删除项目" class="headerlink" title="删除项目"></a>删除项目</h3><p>直接删除对应文件夹即可</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果一直卡住在<code>/ fetchMetadata: sill pacote range manifest for</code>，那就更换成淘宝的源</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-<p>查看设置结果</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220329180906559.png" alt="image-20220329180906559"></p>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-        <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>基于vue-cli搭建自己的项目</title>
     <url>/202.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>在src/components下新建一个HelloWorld.vue文件，每个.vue文件都包括三个部分：&lt;template&gt;模版代码块，&lt;script&gt;是js代码块，&lt;style&gt;是样式代码块，其中如果&lt;style&gt;使用了scoped属性（让当前组件的样式不会修改到其它地方的样式，在父组件中是不能直接修改子组件的样式的，需要在父组件中使用vue的深度作用选择器），该样式只在本.vue文件下生效</p>
@@ -3607,6 +3565,48 @@
       <tags>
         <tag>Vue.js</tag>
         <tag>Element UI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue-cli脚手架新建和删除Vue项目</title>
+    <url>/201.html</url>
+    <content><![CDATA[<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><p>在 Vue 项目存储文件夹中打开 cmd ，输入命令：vue init webpack vue_demo，vue_demo 是项目名称，然后进行一些配置</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104020.png"></p>
+<h3 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h3><h4 id="项目名称"><a href="#项目名称" class="headerlink" title="项目名称"></a>项目名称</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/202237_090705_1646615226.png"></p>
+<h4 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091149551.png" alt="image-20220307091149551"></p>
+<h4 id="作者信息"><a href="#作者信息" class="headerlink" title="作者信息"></a>作者信息</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091418406.png" alt="image-20220307091418406"></p>
+<h4 id="构建方式"><a href="#构建方式" class="headerlink" title="构建方式"></a>构建方式</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091631999.png" alt="image-20220307091631999"></p>
+<h4 id="是否安装vue-router"><a href="#是否安装vue-router" class="headerlink" title="是否安装vue-router"></a>是否安装vue-router</h4><p>现在不安装的话，后期可以在项目中安装</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307091923533.png" alt="image-20220307091923533"></p>
+<h4 id="使用ESLint"><a href="#使用ESLint" class="headerlink" title="使用ESLint"></a>使用ESLint</h4><p>ESLint是一个语法规则和代码风格的检查工具，可以用来保证写出语法正确、风格统一的代码，<font color="#dd0000">建议不使用</font></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092303480.png" alt="image-20220307092303480"></p>
+<h4 id="安装单元测试"><a href="#安装单元测试" class="headerlink" title="安装单元测试"></a>安装单元测试</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092422569.png" alt="image-20220307092422569"></p>
+<h4 id="安装E2E测试框架NightWatch"><a href="#安装E2E测试框架NightWatch" class="headerlink" title="安装E2E测试框架NightWatch"></a>安装E2E测试框架NightWatch</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092548041.png" alt="image-20220307092548041"></p>
+<h4 id="选择包管理工具"><a href="#选择包管理工具" class="headerlink" title="选择包管理工具"></a>选择包管理工具</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220307092719191.png" alt="image-20220307092719191"></p>
+<h4 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h4><p>打开package.json文件，点击第9行左边的启动按钮，选择第一个选项启动即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226203527215.png" alt="image-20220226203527215"></p>
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>打开运行信息的地址即可访问项目，出现以下页面说明成功运行</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151925.jpg" alt="img"></p>
+<p>要停止运行，使用快捷键CTRL+C，或者点击IDE的停止按钮</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-11-06%20104713.jpg"></p>
+<h3 id="修改端口"><a href="#修改端口" class="headerlink" title="修改端口"></a>修改端口</h3><p>修改端口为80，修改 config 文件夹的 index.js，<code>port:8080</code>改为<code>port:80</code></p>
+<p>让项目启动时自动打开浏览器，修改 config 文件夹的 index.js，<code>autoOpenBrower:false</code>改为<code>autoOpenBrower:true</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210626151833.jpg" alt="img"></p>
+<h3 id="删除项目"><a href="#删除项目" class="headerlink" title="删除项目"></a>删除项目</h3><p>直接删除对应文件夹即可</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果一直卡住在<code>/ fetchMetadata: sill pacote range manifest for</code>，那就更换成淘宝的源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<p>查看设置结果</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220329180906559.png" alt="image-20220329180906559"></p>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
+        <tag>Node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -7283,6 +7283,22 @@
       </tags>
   </entry>
   <entry>
+    <title>DockerFile创建镜像时报错：file not found in build context or excluded by</title>
+    <url>/307.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
+<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
+]]></content>
+      <categories>
+        <category>Docker</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+        <tag>DockerFile</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载</title>
     <url>/308.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>DockerFile创建镜像时通过VOLUME指令创建几个容器卷，然后创建这个镜像的容器时，这个容器就有了这几个容器卷目录，并与宿主机自动创建的对应目录实现了挂载</p>
@@ -7305,22 +7321,6 @@
 <p>找到Mounts节点，Source为宿主机的目录，Destination为容器的目录，两个目录是挂载的</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040846.jpg"></p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>docker run -v 命令创建挂载目录更好，可以自定义宿主机目录</p>
-]]></content>
-      <categories>
-        <category>Docker</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>DockerFile</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DockerFile创建镜像时报错：file not found in build context or excluded by</title>
-    <url>/307.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
-<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
 ]]></content>
       <categories>
         <category>Docker</category>
@@ -10368,6 +10368,23 @@
       </tags>
   </entry>
   <entry>
+    <title>在idea中使用Git命令</title>
+    <url>/379.html</url>
+    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><p>打开<code>idea</code>的设置界面，找到<code>Tools -&gt; Terminal</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-31%20213806.jpg"></p>
+<h3 id="设置本地Git"><a href="#设置本地Git" class="headerlink" title="设置本地Git"></a>设置本地Git</h3><p>在上图的<code>Shell path</code>中选择本地<code>Git</code>的<code>bash.exe</code>安装路径</p>
+<h3 id="使用Git命令"><a href="#使用Git命令" class="headerlink" title="使用Git命令"></a>使用Git命令</h3><p>点击<code>idea</code>最下面的<code>Terminal</code>，即可打开<code>Git</code>命令行界面，然后就可以使用<code>Git</code>命令了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-31%20214941.jpg"></p>
+]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>十大经典排序算法之选择排序</title>
     <url>/38.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>选择排序(Selection-sort)是一种简单直观的排序算法。它的工作原理：首先在未排序序列中找到最小(大)元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小(大)元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕</p>
@@ -10393,23 +10410,6 @@
       <tags>
         <tag>Java</tag>
         <tag>数据结构</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在idea中使用Git命令</title>
-    <url>/379.html</url>
-    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><p>打开<code>idea</code>的设置界面，找到<code>Tools -&gt; Terminal</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-31%20213806.jpg"></p>
-<h3 id="设置本地Git"><a href="#设置本地Git" class="headerlink" title="设置本地Git"></a>设置本地Git</h3><p>在上图的<code>Shell path</code>中选择本地<code>Git</code>的<code>bash.exe</code>安装路径</p>
-<h3 id="使用Git命令"><a href="#使用Git命令" class="headerlink" title="使用Git命令"></a>使用Git命令</h3><p>点击<code>idea</code>最下面的<code>Terminal</code>，即可打开<code>Git</code>命令行界面，然后就可以使用<code>Git</code>命令了</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-10-31%20214941.jpg"></p>
-]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>idea使用</tag>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -10924,6 +10924,29 @@
       </tags>
   </entry>
   <entry>
+    <title>List一般集合排序</title>
+    <url>/387.html</url>
+    <content><![CDATA[<h3 id="Collections-sort"><a href="#Collections-sort" class="headerlink" title="Collections.sort"></a>Collections.sort</h3><h4 id="只有一个参数"><a href="#只有一个参数" class="headerlink" title="只有一个参数"></a>只有一个参数</h4><p>参数为要排序的集合，将集合升序排序</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-22 20:43</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; integerList = Arrays.asList(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>);</span><br><span class="line">        Collections.sort(integerList);</span><br><span class="line">        integerList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Character&gt; characterList = Arrays.asList(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;v&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>);</span><br><span class="line">        Collections.sort(characterList);</span><br><span class="line">        characterList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; stringList = Arrays.asList(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;fcd&quot;</span>, <span class="string">&quot;bfd&quot;</span>);</span><br><span class="line">        Collections.sort(stringList);</span><br><span class="line">        stringList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Long&gt; longList = Arrays.asList(<span class="number">111L</span>,<span class="number">332L</span>,<span class="number">22L</span>);</span><br><span class="line">        Collections.sort(longList);</span><br><span class="line">        longList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="有两个参数"><a href="#有两个参数" class="headerlink" title="有两个参数"></a>有两个参数</h4><p>第一个参数是要排序的集合，第二个参数是比较器，排序结果由比较器确定（比较器内第一个参数在前面就是升序，在后面就是降序）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-22 20:43</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; integerList = Arrays.asList(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>);</span><br><span class="line">        Collections.sort(integerList, <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//第一个参数在前,升序</span></span><br><span class="line">                <span class="comment">//return o1-o2;</span></span><br><span class="line">                <span class="comment">//第一个参数在后,降序</span></span><br><span class="line">                <span class="keyword">return</span> o2-o1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        integerList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Character&gt; characterList = Arrays.asList(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;v&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">        Collections.sort(characterList, <span class="keyword">new</span> Comparator&lt;Character&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Character o1, Character o2)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//第一个参数在后,降序</span></span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        characterList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; stringList = Arrays.asList(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;fcd&quot;</span>, <span class="string">&quot;bfd&quot;</span>,<span class="string">&quot;Abd&quot;</span>);</span><br><span class="line">        Collections.sort(stringList, <span class="keyword">new</span> Comparator&lt;String&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String o1, String o2)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//return o2.compareTo(o1);</span></span><br><span class="line">                <span class="comment">//第一个参数在后,降序,忽略大小写</span></span><br><span class="line">                <span class="keyword">return</span> o2.compareToIgnoreCase(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        stringList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Long&gt; longList = Arrays.asList(<span class="number">111L</span>,<span class="number">332L</span>,<span class="number">22L</span>);</span><br><span class="line">        Collections.sort(longList, <span class="keyword">new</span> Comparator&lt;Long&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Long o1, Long o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        longList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="List-sort"><a href="#List-sort" class="headerlink" title="List.sort"></a>List.sort</h3><p>只有一个参数，参数为比较器，一般推荐用这种方法排序</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-22 20:43</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; integerList = Arrays.asList(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>);</span><br><span class="line">        integerList.sort(<span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2-o1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        integerList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Character&gt; characterList = Arrays.asList(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;v&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">        characterList.sort(<span class="keyword">new</span> Comparator&lt;Character&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Character o1, Character o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        characterList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; stringList = Arrays.asList(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;fcd&quot;</span>, <span class="string">&quot;bfd&quot;</span>,<span class="string">&quot;Abd&quot;</span>);</span><br><span class="line">        stringList.sort(<span class="keyword">new</span> Comparator&lt;String&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String o1, String o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        stringList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Long&gt; longList = Arrays.asList(<span class="number">111L</span>,<span class="number">332L</span>,<span class="number">22L</span>);</span><br><span class="line">        longList.sort(<span class="keyword">new</span> Comparator&lt;Long&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Long o1, Long o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        longList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Stream流操作"><a href="#Stream流操作" class="headerlink" title="Stream流操作"></a>Stream流操作</h3><p>通过Stream流操作会返回一个新的并且经过排序的List集合，具体步骤为：①创建要排序集合的流 ②进行排序 ③生成新集合</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-22 20:43</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; integerList = Arrays.asList(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>);</span><br><span class="line">        List&lt;Integer&gt; resultList = integerList</span><br><span class="line">                .stream()<span class="comment">//创建流</span></span><br><span class="line">                .sorted(<span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">                        <span class="keyword">return</span> o2 - o1;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)<span class="comment">//排序,降序</span></span><br><span class="line">                .collect(Collectors.toList()); <span class="comment">//生成一个新的 List</span></span><br><span class="line">        resultList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>List对象集合排序</title>
     <url>/388.html</url>
     <content><![CDATA[<h3 id="实体类"><a href="#实体类" class="headerlink" title="实体类"></a>实体类</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 学生实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-21 23:19</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 姓名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 年龄</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(Integer id, String name, Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(Integer age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -11040,29 +11063,6 @@
       <tags>
         <tag>Maven</tag>
         <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>List一般集合排序</title>
-    <url>/387.html</url>
-    <content><![CDATA[<h3 id="Collections-sort"><a href="#Collections-sort" class="headerlink" title="Collections.sort"></a>Collections.sort</h3><h4 id="只有一个参数"><a href="#只有一个参数" class="headerlink" title="只有一个参数"></a>只有一个参数</h4><p>参数为要排序的集合，将集合升序排序</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-22 20:43</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; integerList = Arrays.asList(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>);</span><br><span class="line">        Collections.sort(integerList);</span><br><span class="line">        integerList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Character&gt; characterList = Arrays.asList(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;v&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>);</span><br><span class="line">        Collections.sort(characterList);</span><br><span class="line">        characterList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; stringList = Arrays.asList(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;fcd&quot;</span>, <span class="string">&quot;bfd&quot;</span>);</span><br><span class="line">        Collections.sort(stringList);</span><br><span class="line">        stringList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Long&gt; longList = Arrays.asList(<span class="number">111L</span>,<span class="number">332L</span>,<span class="number">22L</span>);</span><br><span class="line">        Collections.sort(longList);</span><br><span class="line">        longList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="有两个参数"><a href="#有两个参数" class="headerlink" title="有两个参数"></a>有两个参数</h4><p>第一个参数是要排序的集合，第二个参数是比较器，排序结果由比较器确定（比较器内第一个参数在前面就是升序，在后面就是降序）</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-22 20:43</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; integerList = Arrays.asList(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>);</span><br><span class="line">        Collections.sort(integerList, <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//第一个参数在前,升序</span></span><br><span class="line">                <span class="comment">//return o1-o2;</span></span><br><span class="line">                <span class="comment">//第一个参数在后,降序</span></span><br><span class="line">                <span class="keyword">return</span> o2-o1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        integerList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Character&gt; characterList = Arrays.asList(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;v&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">        Collections.sort(characterList, <span class="keyword">new</span> Comparator&lt;Character&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Character o1, Character o2)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//第一个参数在后,降序</span></span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        characterList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; stringList = Arrays.asList(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;fcd&quot;</span>, <span class="string">&quot;bfd&quot;</span>,<span class="string">&quot;Abd&quot;</span>);</span><br><span class="line">        Collections.sort(stringList, <span class="keyword">new</span> Comparator&lt;String&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String o1, String o2)</span> </span>&#123;</span><br><span class="line">                <span class="comment">//return o2.compareTo(o1);</span></span><br><span class="line">                <span class="comment">//第一个参数在后,降序,忽略大小写</span></span><br><span class="line">                <span class="keyword">return</span> o2.compareToIgnoreCase(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        stringList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Long&gt; longList = Arrays.asList(<span class="number">111L</span>,<span class="number">332L</span>,<span class="number">22L</span>);</span><br><span class="line">        Collections.sort(longList, <span class="keyword">new</span> Comparator&lt;Long&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Long o1, Long o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        longList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="List-sort"><a href="#List-sort" class="headerlink" title="List.sort"></a>List.sort</h3><p>只有一个参数，参数为比较器，一般推荐用这种方法排序</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-22 20:43</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; integerList = Arrays.asList(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>);</span><br><span class="line">        integerList.sort(<span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2-o1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        integerList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Character&gt; characterList = Arrays.asList(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;v&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;A&#x27;</span>);</span><br><span class="line">        characterList.sort(<span class="keyword">new</span> Comparator&lt;Character&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Character o1, Character o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        characterList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;String&gt; stringList = Arrays.asList(<span class="string">&quot;abc&quot;</span>, <span class="string">&quot;fcd&quot;</span>, <span class="string">&quot;bfd&quot;</span>,<span class="string">&quot;Abd&quot;</span>);</span><br><span class="line">        stringList.sort(<span class="keyword">new</span> Comparator&lt;String&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String o1, String o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        stringList.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        List&lt;Long&gt; longList = Arrays.asList(<span class="number">111L</span>,<span class="number">332L</span>,<span class="number">22L</span>);</span><br><span class="line">        longList.sort(<span class="keyword">new</span> Comparator&lt;Long&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Long o1, Long o2)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        longList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Stream流操作"><a href="#Stream流操作" class="headerlink" title="Stream流操作"></a>Stream流操作</h3><p>通过Stream流操作会返回一个新的并且经过排序的List集合，具体步骤为：①创建要排序集合的流 ②进行排序 ③生成新集合</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-11-22 20:43</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        List&lt;Integer&gt; integerList = Arrays.asList(<span class="number">1</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>);</span><br><span class="line">        List&lt;Integer&gt; resultList = integerList</span><br><span class="line">                .stream()<span class="comment">//创建流</span></span><br><span class="line">                .sorted(<span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">                        <span class="keyword">return</span> o2 - o1;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)<span class="comment">//排序,降序</span></span><br><span class="line">                .collect(Collectors.toList()); <span class="comment">//生成一个新的 List</span></span><br><span class="line">        resultList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -14594,21 +14594,6 @@
       </tags>
   </entry>
   <entry>
-    <title>项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed</title>
-    <url>/469.html</url>
-    <content><![CDATA[<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>我的报错截图如下，报错下方可以看到：<code>org.yaml.snakeyaml.error.YAMLException</code>，这说明是yml配置文件错误。出现该错误的原因是：yml配置文件使用了中文，且项目使用了GBK编码</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316093858491.png" alt="image-20220316093858491"></p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>修改项目的编码为UTF-8</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316095206141.png" alt="image-20220316095206141"></p>
-]]></content>
-      <categories>
-        <category>idea使用</category>
-      </categories>
-      <tags>
-        <tag>idea使用</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IDM无法捕获以及下载APK文件</title>
     <url>/468.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当我们点击网页上某个APK文件下载链接时，无法通过IDM下载，而是直接通过浏览器下载了，这是因为IDM默认不捕获APK下载链接</p>
@@ -14621,6 +14606,21 @@
       </categories>
       <tags>
         <tag>IDM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed</title>
+    <url>/469.html</url>
+    <content><![CDATA[<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>我的报错截图如下，报错下方可以看到：<code>org.yaml.snakeyaml.error.YAMLException</code>，这说明是yml配置文件错误。出现该错误的原因是：yml配置文件使用了中文，且项目使用了GBK编码</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316093858491.png" alt="image-20220316093858491"></p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>修改项目的编码为UTF-8</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316095206141.png" alt="image-20220316095206141"></p>
+]]></content>
+      <categories>
+        <category>idea使用</category>
+      </categories>
+      <tags>
+        <tag>idea使用</tag>
       </tags>
   </entry>
   <entry>
@@ -15361,6 +15361,38 @@
       </categories>
       <tags>
         <tag>JMeter</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue.js获取对象的值</title>
+    <url>/489.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Vue.js要获取对象的值，不能像普通值那样设置，对象的每个字段都需要在<code>data()&#123;return&#123;&#125;&#125;</code>中进行设置，然后我们才可以获取到对象的值，对象的对象的值也可以获取到</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="实体类"><a href="#实体类" class="headerlink" title="实体类"></a>实体类</h4><p>秒杀商品实体类内有一个组合：商品实体类，也就是说，查询秒杀商品时也同时查询到对应的商品</p>
+<blockquote>
+<p>商品实体类</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableId;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableName;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 商品实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-04-01 17:59</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@TableName(&quot;t_goods&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Goods</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableId</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 价格</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Double price;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 图片</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String image;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 库存</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer stock;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 详情</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String detail;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>秒杀商品实体类</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableField;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableId;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableName;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 秒杀商品实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-04-01 18:31</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@TableName(&quot;t_miaosha_goods&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MiaoShaGoods</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableId</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 真实商品id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;goodsId&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer goodsId;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 商品实体,获取对应商品的信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(exist = false)</span></span><br><span class="line">    <span class="keyword">private</span> Goods goods;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 秒杀的价格</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Double price;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 秒杀的数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer stock;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 开始时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;startTime&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date startTime;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 结束时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;endTime&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date endTime;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Vue代码"><a href="#Vue代码" class="headerlink" title="Vue代码"></a>Vue代码</h4><blockquote>
+<p>数据绑定模板如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">miaoShaGoods</span>: &#123;</span><br><span class="line">      <span class="attr">id</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">goodsId</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">price</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">stock</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">startTime</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">endTime</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">goods</span>: &#123;</span><br><span class="line">        <span class="attr">id</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">price</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">image</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">stock</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">detail</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>下面的代码请求了后端，并把请求到的数据绑定到Vue，然后可以通过<code>&#123;&#123;miaoShaGoods.goods.id&#125;&#125;</code>查到秒杀商品对应的商品id了</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">openMiaoShaDialog: <span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> _this = <span class="built_in">this</span>;</span><br><span class="line">  <span class="keyword">let</span> url = getServerUrl(<span class="string">&quot;miaoShaGoods/findById?id=&quot;</span> + id);</span><br><span class="line">  axios</span><br><span class="line">    .get(url)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">      _this.miaoShaGoods = response.data;</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(error);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
       </tags>
   </entry>
   <entry>
@@ -16159,38 +16191,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Vue.js获取对象的值</title>
-    <url>/489.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Vue.js要获取对象的值，不能像普通值那样设置，对象的每个字段都需要在<code>data()&#123;return&#123;&#125;&#125;</code>中进行设置，然后我们才可以获取到对象的值，对象的对象的值也可以获取到</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="实体类"><a href="#实体类" class="headerlink" title="实体类"></a>实体类</h4><p>秒杀商品实体类内有一个组合：商品实体类，也就是说，查询秒杀商品时也同时查询到对应的商品</p>
-<blockquote>
-<p>商品实体类</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableId;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableName;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 商品实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-04-01 17:59</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@TableName(&quot;t_goods&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Goods</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableId</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 价格</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Double price;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 图片</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String image;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 库存</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer stock;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 详情</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String detail;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>秒杀商品实体类</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.Serializable;</span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableField;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableId;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableName;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 秒杀商品实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-04-01 18:31</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@TableName(&quot;t_miaosha_goods&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MiaoShaGoods</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableId</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 真实商品id</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;goodsId&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer goodsId;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 商品实体,获取对应商品的信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(exist = false)</span></span><br><span class="line">    <span class="keyword">private</span> Goods goods;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 秒杀的价格</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Double price;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 秒杀的数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer stock;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 开始时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;startTime&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date startTime;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 结束时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;endTime&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Date endTime;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Vue代码"><a href="#Vue代码" class="headerlink" title="Vue代码"></a>Vue代码</h4><blockquote>
-<p>数据绑定模板如下：</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="attr">miaoShaGoods</span>: &#123;</span><br><span class="line">      <span class="attr">id</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">goodsId</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">price</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">stock</span>: <span class="number">0</span>,</span><br><span class="line">      <span class="attr">startTime</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">endTime</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">goods</span>: &#123;</span><br><span class="line">        <span class="attr">id</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">price</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">image</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">        <span class="attr">stock</span>: <span class="number">0</span>,</span><br><span class="line">        <span class="attr">detail</span>: <span class="string">&#x27;&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>下面的代码请求了后端，并把请求到的数据绑定到Vue，然后可以通过<code>&#123;&#123;miaoShaGoods.goods.id&#125;&#125;</code>查到秒杀商品对应的商品id了</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">openMiaoShaDialog: <span class="function"><span class="keyword">function</span> (<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> _this = <span class="built_in">this</span>;</span><br><span class="line">  <span class="keyword">let</span> url = getServerUrl(<span class="string">&quot;miaoShaGoods/findById?id=&quot;</span> + id);</span><br><span class="line">  axios</span><br><span class="line">    .get(url)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span> (<span class="params">response</span>) </span>&#123;</span><br><span class="line">      _this.miaoShaGoods = response.data;</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(error);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue.js</category>
-      </categories>
-      <tags>
-        <tag>Vue.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JMeter的基本使用</title>
     <url>/490.html</url>
     <content><![CDATA[<h3 id="添加线程组"><a href="#添加线程组" class="headerlink" title="添加线程组"></a>添加线程组</h3><blockquote>
@@ -16763,6 +16763,36 @@
       </tags>
   </entry>
   <entry>
+    <title>CKEditor上传图片</title>
+    <url>/6.html</url>
+    <content><![CDATA[<h3 id="引入commons-io依赖"><a href="#引入commons-io依赖" class="headerlink" title="引入commons-io依赖"></a>引入commons-io依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span> </span><br></pre></td></tr></table></figure>
+
+<h3 id="修改config-js文件"><a href="#修改config-js文件" class="headerlink" title="修改config.js文件"></a>修改config.js文件</h3><p>在 ckeditor 文件夹中找到 config.js 文件，设置上传图片的请求地址，参考代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">CKEDITOR.editorConfig = <span class="function"><span class="keyword">function</span> (<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Define changes to default configuration here. For example:</span></span><br><span class="line">    <span class="comment">// config.language = &#x27;fr&#x27;;</span></span><br><span class="line">    <span class="comment">//编辑器颜色</span></span><br><span class="line">    config.uiColor = <span class="string">&#x27;#daeef5&#x27;</span>;</span><br><span class="line">    <span class="comment">//上传图片路径</span></span><br><span class="line">    config.filebrowserUploadUrl = <span class="string">&quot;/ckeditorUpload&quot;</span>;</span><br><span class="line">&#125;;  </span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ckeditor上传图片</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> file</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> CKEditorFuncNum</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/ckeditorUpload&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">ckeditorUpload</span><span class="params">(<span class="meta">@RequestParam(&quot;upload&quot;)</span> MultipartFile file, String CKEditorFuncNum)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 获取文件名</span></span><br><span class="line">    String fileName = file.getOriginalFilename();</span><br><span class="line">    <span class="comment">// 获取文件的后缀</span></span><br><span class="line">    String suffixName = fileName.substring(fileName.lastIndexOf(<span class="string">&quot;.&quot;</span>));</span><br><span class="line">    <span class="comment">//拼接新的文件名</span></span><br><span class="line">    String newFileName = DateUtil.getCurrentDateStr2() + System.currentTimeMillis() + <span class="string">&quot;.jpg&quot;</span>;</span><br><span class="line">    FileUtils.copyInputStreamToFile(file.getInputStream(), <span class="keyword">new</span> File(articleImageFilePath + <span class="string">&quot;/&quot;</span> + newFileName1));</span><br><span class="line">    StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">    sb.append(<span class="string">&quot;&lt;script type=\&quot;text/javascript\&quot;&gt;&quot;</span>);</span><br><span class="line">    sb.append(<span class="string">&quot;window.parent.CKEDITOR.tools.callFunction(&quot;</span> + CKEditorFuncNum + <span class="string">&quot;,&#x27;&quot;</span> + <span class="string">&quot;/static/images/articleImage/&quot;</span> + newFileName + <span class="string">&quot;&#x27;,&#x27;&#x27;)&quot;</span>);</span><br><span class="line">    sb.append(<span class="string">&quot;&lt;/script&gt;&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="上传步骤"><a href="#上传步骤" class="headerlink" title="上传步骤"></a>上传步骤</h3><ol>
+<li><p>在 CKEditor 编辑器工具栏找到图像按钮并点击</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210227090339.jpg"></p>
+</li>
+<li><p>选择上传标签页，选择文件并上传到服务器</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210227090442.jpg"></p>
+</li>
+<li><p>选择图片要显示的尺寸，并点击确定即可完成图片上传</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210227090625.jpg" alt="20210227090442.jpg"></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>CKEditor</category>
+      </categories>
+      <tags>
+        <tag>CKEditor</tag>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GitHub新建仓库</title>
     <url>/60.html</url>
     <content><![CDATA[<h3 id="点击新建按钮"><a href="#点击新建按钮" class="headerlink" title="点击新建按钮"></a>点击新建按钮</h3><blockquote>
@@ -16814,36 +16844,6 @@
       </categories>
       <tags>
         <tag>GitHub</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CKEditor上传图片</title>
-    <url>/6.html</url>
-    <content><![CDATA[<h3 id="引入commons-io依赖"><a href="#引入commons-io依赖" class="headerlink" title="引入commons-io依赖"></a>引入commons-io依赖</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span> </span><br></pre></td></tr></table></figure>
-
-<h3 id="修改config-js文件"><a href="#修改config-js文件" class="headerlink" title="修改config.js文件"></a>修改config.js文件</h3><p>在 ckeditor 文件夹中找到 config.js 文件，设置上传图片的请求地址，参考代码如下</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">CKEDITOR.editorConfig = <span class="function"><span class="keyword">function</span> (<span class="params">config</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Define changes to default configuration here. For example:</span></span><br><span class="line">    <span class="comment">// config.language = &#x27;fr&#x27;;</span></span><br><span class="line">    <span class="comment">//编辑器颜色</span></span><br><span class="line">    config.uiColor = <span class="string">&#x27;#daeef5&#x27;</span>;</span><br><span class="line">    <span class="comment">//上传图片路径</span></span><br><span class="line">    config.filebrowserUploadUrl = <span class="string">&quot;/ckeditorUpload&quot;</span>;</span><br><span class="line">&#125;;  </span><br></pre></td></tr></table></figure>
-
-<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ckeditor上传图片</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> file</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> CKEditorFuncNum</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/ckeditorUpload&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">ckeditorUpload</span><span class="params">(<span class="meta">@RequestParam(&quot;upload&quot;)</span> MultipartFile file, String CKEditorFuncNum)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    <span class="comment">// 获取文件名</span></span><br><span class="line">    String fileName = file.getOriginalFilename();</span><br><span class="line">    <span class="comment">// 获取文件的后缀</span></span><br><span class="line">    String suffixName = fileName.substring(fileName.lastIndexOf(<span class="string">&quot;.&quot;</span>));</span><br><span class="line">    <span class="comment">//拼接新的文件名</span></span><br><span class="line">    String newFileName = DateUtil.getCurrentDateStr2() + System.currentTimeMillis() + <span class="string">&quot;.jpg&quot;</span>;</span><br><span class="line">    FileUtils.copyInputStreamToFile(file.getInputStream(), <span class="keyword">new</span> File(articleImageFilePath + <span class="string">&quot;/&quot;</span> + newFileName1));</span><br><span class="line">    StringBuffer sb = <span class="keyword">new</span> StringBuffer();</span><br><span class="line">    sb.append(<span class="string">&quot;&lt;script type=\&quot;text/javascript\&quot;&gt;&quot;</span>);</span><br><span class="line">    sb.append(<span class="string">&quot;window.parent.CKEDITOR.tools.callFunction(&quot;</span> + CKEditorFuncNum + <span class="string">&quot;,&#x27;&quot;</span> + <span class="string">&quot;/static/images/articleImage/&quot;</span> + newFileName + <span class="string">&quot;&#x27;,&#x27;&#x27;)&quot;</span>);</span><br><span class="line">    sb.append(<span class="string">&quot;&lt;/script&gt;&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> sb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="上传步骤"><a href="#上传步骤" class="headerlink" title="上传步骤"></a>上传步骤</h3><ol>
-<li><p>在 CKEditor 编辑器工具栏找到图像按钮并点击</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210227090339.jpg"></p>
-</li>
-<li><p>选择上传标签页，选择文件并上传到服务器</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210227090442.jpg"></p>
-</li>
-<li><p>选择图片要显示的尺寸，并点击确定即可完成图片上传</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210227090625.jpg" alt="20210227090442.jpg"></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>CKEditor</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>CKEditor</tag>
       </tags>
   </entry>
   <entry>
@@ -17396,6 +17396,23 @@
       </tags>
   </entry>
   <entry>
+    <title>:hover实现鼠标悬停效果</title>
+    <url>/86.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p><code>:hover</code>选择器用于选择鼠标指针浮动在上面的元素</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">herf</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;test&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="css代码"><a href="#css代码" class="headerlink" title="css代码"></a>css代码</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-class">.test</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>鼠标悬停在a标签上时会将字体大小设置为15px</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用天气插件</title>
     <url>/85.html</url>
     <content><![CDATA[<h3 id="进入网址"><a href="#进入网址" class="headerlink" title="进入网址"></a>进入网址</h3><p><a href="https://www.tianqi.com/plugin/">天气预报代码_天气预报插件_免费天气预报代码(插件)调用——天气网</a></p>
@@ -17411,23 +17428,6 @@
       </categories>
       <tags>
         <tag>其它</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>:hover实现鼠标悬停效果</title>
-    <url>/86.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p><code>:hover</code>选择器用于选择鼠标指针浮动在上面的元素</p>
-<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">herf</span>=<span class="string">&quot;#&quot;</span> <span class="attr">class</span>=<span class="string">&quot;test&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="css代码"><a href="#css代码" class="headerlink" title="css代码"></a>css代码</h4><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-class">.test</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p>鼠标悬停在a标签上时会将字体大小设置为15px</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
