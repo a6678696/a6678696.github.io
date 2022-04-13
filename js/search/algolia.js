@@ -60,7 +60,7 @@ window.addEventListener('load', () => {
 
 	search.addWidgets([
 		instantsearch.widgets.configure({
-			hitsPerPage: 8 //每页记录数
+			hitsPerPage: 3 //每页记录数
 		})
 	])
 
@@ -81,12 +81,19 @@ window.addEventListener('load', () => {
 			container: '#algolia-hits',
 			templates: {
 				item: function(data) {
-					const link = data.permalink ? data.permalink : (GLOBAL_CONFIG.root + data
-						.path)
+					const link = data.permalink ?
+						data.permalink :
+						GLOBAL_CONFIG.root + data.path;
 					return `
-            <a href="${link}" class="algolia-hit-item-link">
-            ${data._highlightResult.title.value || 'no-title'}
-            </a>`
+					            <a href="${link}" class="algolia-hit-item-link">
+					            <b>${data._highlightResult.title.value || "no-title"}</b>
+					            <br>${data._snippetResult.contentStrip.value}</br>
+					            匹配字词: <em><mark>${
+					              data._highlightResult.contentStrip.matchedWords
+					            }</mark></em> | 匹配等级: <em><mark>${
+					            data._highlightResult.contentStrip.matchLevel
+					          }</emmark></em>
+					            </a>`;
 				},
 				empty: function(data) {
 					return (
@@ -123,10 +130,10 @@ window.addEventListener('load', () => {
 			container: '#algolia-pagination',
 			totalPages: 5,
 			templates: {
-				first: '<i class="fas fa-angle-double-left"></i>',
-				last: '<i class="fas fa-angle-double-right"></i>',
-				previous: '<i class="fas fa-angle-left"></i>',
-				next: '<i class="fas fa-angle-right"></i>'
+				first: '<i class="fas fa-angle-double-left" title="第一页"></i>',
+				last: '<i class="fas fa-angle-double-right" title="最后一页"></i>',
+				previous: '<i class="fas fa-angle-left" title="上一页"></i>',
+				next: '<i class="fas fa-angle-right" title="下一页"></i>',
 			}
 		})
 	])
