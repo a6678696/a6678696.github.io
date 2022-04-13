@@ -8,6 +8,11 @@
     font-display: swap;
     src: url('../font/XiaoWuBold.ttf') format("truetype");
 }
+@font-face{
+    font-family: 'HarmonyOS_Sans_SC_Regular';
+    font-display: swap;
+    src: url('../font/HarmonyOS_Sans_SC_Regular.ttf') format("truetype");
+}
 body {
-    font-family: 'HarmonyOS_Sans';
+    font-family: 'HarmonyOS_Sans_SC_Regular';
 }
