@@ -200,6 +200,29 @@
       </tags>
   </entry>
   <entry>
+    <title>Github私有仓库改为公开</title>
+    <url>/11.html</url>
+    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><blockquote>
+<p>进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）</p>
+</blockquote>
+<p><img src="https://i.loli.net/2021/07/29/u3lyp6t9j2k4V1F.png" alt="20210227090442.jpg"></p>
+<h3 id="修改仓库visibility属性"><a href="#修改仓库visibility属性" class="headerlink" title="修改仓库visibility属性"></a>修改仓库visibility属性</h3><blockquote>
+<p>在出现的页面找到 Danger Zone（在最下面），点击 Change visibility 按钮</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165133.jpg"></p>
+<blockquote>
+<p>然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入 GitHub 账号的密码即可修改完成</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165306.jpg"></p>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>部落冲突攻略</title>
     <url>/110.html</url>
     <content><![CDATA[<h3 id="指导网站"><a href="#指导网站" class="headerlink" title="指导网站"></a>指导网站</h3><p><a href="https://www.cocservice.top/">https://www.cocservice.top/</a></p>
@@ -223,29 +246,6 @@
       </categories>
       <tags>
         <tag>部落冲突</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Github私有仓库改为公开</title>
-    <url>/11.html</url>
-    <content><![CDATA[<h3 id="打开设置"><a href="#打开设置" class="headerlink" title="打开设置"></a>打开设置</h3><blockquote>
-<p>进入该仓库所在首页，找到Settings并点击（在首页的菜单栏）</p>
-</blockquote>
-<p><img src="https://i.loli.net/2021/07/29/u3lyp6t9j2k4V1F.png" alt="20210227090442.jpg"></p>
-<h3 id="修改仓库visibility属性"><a href="#修改仓库visibility属性" class="headerlink" title="修改仓库visibility属性"></a>修改仓库visibility属性</h3><blockquote>
-<p>在出现的页面找到 Danger Zone（在最下面），点击 Change visibility 按钮</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165133.jpg"></p>
-<blockquote>
-<p>然后选择Make public，并根据提示输入指定内容，点击同意按钮，然后输入 GitHub 账号的密码即可修改完成</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210311165306.jpg"></p>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -4247,6 +4247,45 @@
       </tags>
   </entry>
   <entry>
+    <title>GitHub配置SSH Key</title>
+    <url>/236.html</url>
+    <content><![CDATA[<h3 id="配置SSH-Keys的好处"><a href="#配置SSH-Keys的好处" class="headerlink" title="配置SSH Keys的好处"></a>配置SSH Keys的好处</h3><p>在管理Git项目上，很多时候都是直接使用https url克隆到本地，当然也有有些人使用SSH url克隆到本地。</p>
+<p>这两种方式的主要区别在于：</p>
+<p>使用https url克隆对初学者来说会比较方便，复制https url然后到Git Bash里面直接用clone命令克隆到本地就好了，但是每次fetch和push代码都需要输入账号和密码，这也是https方式的麻烦之处。</p>
+<p>而使用SSH url克隆却需要在克隆之前先配置和添加好SSH key，如果你想要使用SSH url将代码提交到GitHub的话，你必须是这个项目的拥有者，否则你是无法添加SSH key的。</p>
+<p>另外SSH默认是每次fetch和push代码都不需要输入账号和密码，如果你想要每次都输入账号密码才能进行fetch和push也可以另外进行设置。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h4 id="打开Git命令窗口"><a href="#打开Git命令窗口" class="headerlink" title="打开Git命令窗口"></a>打开Git命令窗口</h4><p>桌面上右键鼠标选择Git bash here打开Git</p>
+<h4 id="检查本机已存在的SSH密匙"><a href="#检查本机已存在的SSH密匙" class="headerlink" title="检查本机已存在的SSH密匙"></a>检查本机已存在的SSH密匙</h4><p>输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
+
+<p>出现 No such file or directory 说明本机没有SSH密匙，否则继续输入ls查看.ssh文件夹内的文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<p>如果有下面两个文件，说明本机有SSH密匙</p>
+<p>id_rsa  id_rsa.pub</p>
+<h4 id="创建本机的SSH密匙"><a href="#创建本机的SSH密匙" class="headerlink" title="创建本机的SSH密匙"></a>创建本机的SSH密匙</h4><p><font color="#dd0000">本机有SSH密匙则跳过本步骤</font></p>
+<p>输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;注册Github账户时用的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>连续按下回车键三次，至此本机的SSH密匙创建完成，该密钥一般存放在C盘的用户文件夹的.ssh文件夹中（我的是<code>C:\Users\LeDao\.ssh</code>）</p>
+<h4 id="配置Github的SSH-Key"><a href="#配置Github的SSH-Key" class="headerlink" title="配置Github的SSH Key"></a><strong>配置Github的SSH Key</strong></h4><p>进入Github首页，点击右上角的头像选择Settings，选择左侧菜单的SSH and GPG keys，然后点击右侧的New SSH key按钮，打开上面第三步的本地密钥id_rsa.pub文件（用记事本打开并复制其内容），复制到GitHub的key文本框中，title可以随意设置</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729123108.jpg" alt="img"></p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>输入下面命令来测试是否配置成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p>出现<font color="#dd0000">Are you sure you want to continue connecting (yes/no/[fingerprint])?</font></p>
+<p>输入<code>yes</code></p>
+<p>看到<font color="#00dd00">Hi a6678696! You’ve successfully authenticated, but GitHub does not provide shell access.</font></p>
+<p>说明配置成功</p>
+]]></content>
+      <categories>
+        <category>版本控制</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JustAuth实现GitHub登录</title>
     <url>/235.html</url>
     <content><![CDATA[<h3 id="GitHub创建第三方应用"><a href="#GitHub创建第三方应用" class="headerlink" title="GitHub创建第三方应用"></a>GitHub创建第三方应用</h3><p>具体步骤查看博客：<a href="/234.html">GitHub创建第三方应用</a></p>
@@ -4285,45 +4324,6 @@
         <tag>Java</tag>
         <tag>GitHub</tag>
         <tag>JustAuth</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GitHub配置SSH Key</title>
-    <url>/236.html</url>
-    <content><![CDATA[<h3 id="配置SSH-Keys的好处"><a href="#配置SSH-Keys的好处" class="headerlink" title="配置SSH Keys的好处"></a>配置SSH Keys的好处</h3><p>在管理Git项目上，很多时候都是直接使用https url克隆到本地，当然也有有些人使用SSH url克隆到本地。</p>
-<p>这两种方式的主要区别在于：</p>
-<p>使用https url克隆对初学者来说会比较方便，复制https url然后到Git Bash里面直接用clone命令克隆到本地就好了，但是每次fetch和push代码都需要输入账号和密码，这也是https方式的麻烦之处。</p>
-<p>而使用SSH url克隆却需要在克隆之前先配置和添加好SSH key，如果你想要使用SSH url将代码提交到GitHub的话，你必须是这个项目的拥有者，否则你是无法添加SSH key的。</p>
-<p>另外SSH默认是每次fetch和push代码都不需要输入账号和密码，如果你想要每次都输入账号密码才能进行fetch和push也可以另外进行设置。</p>
-<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><h4 id="打开Git命令窗口"><a href="#打开Git命令窗口" class="headerlink" title="打开Git命令窗口"></a>打开Git命令窗口</h4><p>桌面上右键鼠标选择Git bash here打开Git</p>
-<h4 id="检查本机已存在的SSH密匙"><a href="#检查本机已存在的SSH密匙" class="headerlink" title="检查本机已存在的SSH密匙"></a>检查本机已存在的SSH密匙</h4><p>输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/.ssh</span><br></pre></td></tr></table></figure>
-
-<p>出现 No such file or directory 说明本机没有SSH密匙，否则继续输入ls查看.ssh文件夹内的文件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
-
-<p>如果有下面两个文件，说明本机有SSH密匙</p>
-<p>id_rsa  id_rsa.pub</p>
-<h4 id="创建本机的SSH密匙"><a href="#创建本机的SSH密匙" class="headerlink" title="创建本机的SSH密匙"></a>创建本机的SSH密匙</h4><p><font color="#dd0000">本机有SSH密匙则跳过本步骤</font></p>
-<p>输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;注册Github账户时用的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>连续按下回车键三次，至此本机的SSH密匙创建完成，该密钥一般存放在C盘的用户文件夹的.ssh文件夹中（我的是<code>C:\Users\LeDao\.ssh</code>）</p>
-<h4 id="配置Github的SSH-Key"><a href="#配置Github的SSH-Key" class="headerlink" title="配置Github的SSH Key"></a><strong>配置Github的SSH Key</strong></h4><p>进入Github首页，点击右上角的头像选择Settings，选择左侧菜单的SSH and GPG keys，然后点击右侧的New SSH key按钮，打开上面第三步的本地密钥id_rsa.pub文件（用记事本打开并复制其内容），复制到GitHub的key文本框中，title可以随意设置</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729123108.jpg" alt="img"></p>
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>输入下面命令来测试是否配置成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
-
-<p>出现<font color="#dd0000">Are you sure you want to continue connecting (yes/no/[fingerprint])?</font></p>
-<p>输入<code>yes</code></p>
-<p>看到<font color="#00dd00">Hi a6678696! You’ve successfully authenticated, but GitHub does not provide shell access.</font></p>
-<p>说明配置成功</p>
-]]></content>
-      <categories>
-        <category>版本控制</category>
-      </categories>
-      <tags>
-        <tag>GitHub</tag>
       </tags>
   </entry>
   <entry>
@@ -4430,6 +4430,28 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo Next开启本地搜索</title>
+    <url>/241.html</url>
+    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>插件名称为：hexo-generator-search</p>
+<p>安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3><p>修改主题的_config.yml，修改local_search的enable为true，代表启用本地搜索</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">6</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改根目录的-config-yml"><a href="#修改根目录的-config-yml" class="headerlink" title="修改根目录的_config.yml"></a>修改根目录的_config.yml</h3><p>在根目录的_config.yml中添加以下内容</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#本地搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+
+<p>重新部署网站后就可以使用本地搜索功能了</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo Next安装黑暗模式</title>
     <url>/240.html</url>
     <content><![CDATA[<h3 id="next自带的黑暗模式"><a href="#next自带的黑暗模式" class="headerlink" title="next自带的黑暗模式"></a>next自带的黑暗模式</h3><h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><p>配置十分简单</p>
@@ -4446,28 +4468,6 @@
 <p>至此，黑暗模式安装完成，点击左下角的按钮即可切换黑暗模式</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-02%20101911.png"></p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.techgrow.cn/posts/abf4aee1.html">Hexo Next 8.x 主题添加可切换的暗黑模式</a></p>
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo Next开启本地搜索</title>
-    <url>/241.html</url>
-    <content><![CDATA[<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>插件名称为：hexo-generator-search</p>
-<p>安装命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改-config-yml"><a href="#修改-config-yml" class="headerlink" title="修改_config.yml"></a>修改_config.yml</h3><p>修改主题的_config.yml，修改local_search的enable为true，代表启用本地搜索</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># If auto, trigger search by changing input.</span></span><br><span class="line">  <span class="comment"># If manual, trigger search by pressing enter key or search button.</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># Show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">6</span></span><br><span class="line">  <span class="comment"># Unescape html strings to the readable one.</span></span><br><span class="line">  <span class="attr">unescape:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># Preload the search data when the page loads.</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改根目录的-config-yml"><a href="#修改根目录的-config-yml" class="headerlink" title="修改根目录的_config.yml"></a>修改根目录的_config.yml</h3><p>在根目录的_config.yml中添加以下内容</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment">#本地搜索</span></span><br><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-
-<p>重新部署网站后就可以使用本地搜索功能了</p>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -10853,7 +10853,7 @@
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-12-14%20215949.png"></p>
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h4 id="安装jre1-8"><a href="#安装jre1-8" class="headerlink" title="安装jre1.8"></a>安装jre1.8</h4><p>运行Elasticsearch5.5.2需要jre1.8及以上，安装jre过程查看博客：<a href="https://blog.zoutl.cn/154.html">CentOS7 安装和配置 jre1.8 | LeDao 的博客 (zoutl.cn)</a></p>
 <h4 id="上传到Linux服务器"><a href="#上传到Linux服务器" class="headerlink" title="上传到Linux服务器"></a>上传到Linux服务器</h4><p>在/home目录下创建一个名称为es的目录，然后将下载好的文件上传到这个目录</p>
-<h4 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h4><p>xxxxxxxxxx package com.ledao.util;​import javax.servlet.http.HttpServletRequest;​/** * @author LeDao * @company * @create 2021-12-14 12:20 */public class IpUtil {​    public static String getIpAddr(HttpServletRequest request) {        String fromSource = “X-Real-IP”;        String ip = request.getHeader(fromSource);        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“X-Forwarded-For”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“Proxy-Client-IP”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getHeader(“WL-Proxy-Client-IP”);        }        if (ip == null || ip.length() == 0 || “unknown”.equalsIgnoreCase(ip)) {            ip = request.getRemoteAddr();        }        return ip;    }}java</p>
+<h4 id="解压安装包"><a href="#解压安装包" class="headerlink" title="解压安装包"></a>解压安装包</h4><p>通过以下命令解压完成后，就已经安装完成了</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar -zxvf elasticsearch-5.5.2.tar.gz</span><br></pre></td></tr></table></figure>
 
 <h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><h4 id="新建用户并赋予权限"><a href="#新建用户并赋予权限" class="headerlink" title="新建用户并赋予权限"></a>新建用户并赋予权限</h4><p>新建一个用户<code>elastic</code>专门运行Elasticsearch，因为root用户一般不用来运行Elasticsearch的，输入以下三条命令：</p>
@@ -11607,7 +11607,7 @@
     <url>/415.html</url>
     <content><![CDATA[<h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><h4 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h4><p>百度网盘链接：<a href="https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA">https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA</a></p>
 <p>提取码：<code>n0vf</code></p>
-<h4 id="xxxxxxxxxx-package-com-ledao-entity-​import-com-baomidou-mybatisplus-annotation-FieldStrategy-import-com-baomidou-mybatisplus-annotation-TableField-import-com-baomidou-mybatisplus-annotation-TableId-import-com-baomidou-mybatisplus-annotation-TableName-import-lombok-Data-​import-java-util-Date-​-留言实体类-author-LeDao-company-create-2022-01-12-13-40-Data-TableName-value-“t-contact”-public-class-Contact-​-编号-TableId-private-Integer-id-留言内容-private-String-content-答复-TableField-updateStrategy-FieldStrategy-IGNORED-private-String-reply-留言时间-private-Date-time-留言用户id（普通用户）-TableField-value-“userId”-private-Integer-userId-回复用户id（管理员）-TableField-value-“userIdReply”-private-Integer-userIdReply-java"><a href="#xxxxxxxxxx-package-com-ledao-entity-​import-com-baomidou-mybatisplus-annotation-FieldStrategy-import-com-baomidou-mybatisplus-annotation-TableField-import-com-baomidou-mybatisplus-annotation-TableId-import-com-baomidou-mybatisplus-annotation-TableName-import-lombok-Data-​import-java-util-Date-​-留言实体类-author-LeDao-company-create-2022-01-12-13-40-Data-TableName-value-“t-contact”-public-class-Contact-​-编号-TableId-private-Integer-id-留言内容-private-String-content-答复-TableField-updateStrategy-FieldStrategy-IGNORED-private-String-reply-留言时间-private-Date-time-留言用户id（普通用户）-TableField-value-“userId”-private-Integer-userId-回复用户id（管理员）-TableField-value-“userIdReply”-private-Integer-userIdReply-java" class="headerlink" title="xxxxxxxxxx package com.ledao.entity;​import com.baomidou.mybatisplus.annotation.FieldStrategy;import com.baomidou.mybatisplus.annotation.TableField;import com.baomidou.mybatisplus.annotation.TableId;import com.baomidou.mybatisplus.annotation.TableName;import lombok.Data;​import java.util.Date;​/** * 留言实体类 * * @author LeDao * @company * @create 2022-01-12 13:40 /@Data@TableName(value = “t_contact”)public class Contact {​    /*     * 编号     /    @TableId    private Integer id;    /*     * 留言内容     /    private String content;    /*     * 答复     /    @TableField(updateStrategy = FieldStrategy.IGNORED)    private String reply;    /*     * 留言时间     /    private Date time;    /*     * 留言用户id（普通用户）     /    @TableField(value = “userId”)    private Integer userId;    /*     * 回复用户id（管理员）     */    @TableField(value = “userIdReply”)    private Integer userIdReply;}java"></a>xxxxxxxxxx package com.ledao.entity;​import com.baomidou.mybatisplus.annotation.FieldStrategy;import com.baomidou.mybatisplus.annotation.TableField;import com.baomidou.mybatisplus.annotation.TableId;import com.baomidou.mybatisplus.annotation.TableName;import lombok.Data;​import java.util.Date;​/** * 留言实体类 * * @author LeDao * @company * @create 2022-01-12 13:40 <em>/@Data@TableName(value = “t_contact”)public class Contact {​    /</em>*     * 编号     <em>/    @TableId    private Integer id;    /</em>*     * 留言内容     <em>/    private String content;    /</em>*     * 答复     <em>/    @TableField(updateStrategy = FieldStrategy.IGNORED)    private String reply;    /</em>*     * 留言时间     <em>/    private Date time;    /</em>*     * 留言用户id（普通用户）     <em>/    @TableField(value = “userId”)    private Integer userId;    /</em>*     * 回复用户id（管理员）     */    @TableField(value = “userIdReply”)    private Integer userIdReply;}java</h4><p>解压后即可运行，解压后的文件夹有两个exe可执行文件：FolderPainter.exe和FolderPainter_x64.exe，64位系统使用FolderPainter_x64.exe，其它使用FolderPainter_x64.exe</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>解压后即可运行，解压后的文件夹有两个exe可执行文件：FolderPainter.exe和FolderPainter_x64.exe，64位系统使用FolderPainter_x64.exe，其它使用FolderPainter_x64.exe</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112414.png"></p>
 <h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="设置软件语言为中文"><a href="#设置软件语言为中文" class="headerlink" title="设置软件语言为中文"></a>设置软件语言为中文</h4><p>打开软件后，依次选择右下角的Menu、Languages、Chinese-Simplified即可</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112627.png" alt="2022-01-15 112627"></p>
@@ -12435,7 +12435,7 @@
 
 <h3 id="application-yml"><a href="#application-yml" class="headerlink" title="application.yml"></a>application.yml</h3><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">80</span></span><br><span class="line">  <span class="attr">servlet:</span></span><br><span class="line">    <span class="attr">context-path:</span> <span class="string">/</span></span><br><span class="line">  <span class="attr">tomcat:</span></span><br><span class="line">    <span class="attr">uri-encoding:</span> <span class="string">UTF-8</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据源配置</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">microservice-student</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.jdbc.Driver</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/db_bookmanagesystem?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">123456</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">hibernate:</span></span><br><span class="line">      <span class="attr">ddl-auto:</span> <span class="string">update</span></span><br><span class="line">      <span class="attr">naming:</span></span><br><span class="line">        <span class="attr">physical-strategy:</span> <span class="string">org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl</span> <span class="comment">#配置后可以通过@Column注解的name属性自定义数据库的字段名称</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="xxxxxxxxxx-org-springframework-boot-spring-boot-starter-parent-2-6-2-xml"><a href="#xxxxxxxxxx-org-springframework-boot-spring-boot-starter-parent-2-6-2-xml" class="headerlink" title="xxxxxxxxxx     org.springframework.boot    spring-boot-starter-parent    2.6.2     xml"></a>xxxxxxxxxx <parent>    <groupId>org.springframework.boot</groupId>    <artifactId>spring-boot-starter-parent</artifactId>    <version>2.6.2</version>    <relativePath/> <!-- lookup parent from repository --></parent>xml</h3><p>使用了lombok，如果不想使用就自行生成setter和getter方法</p>
+<h3 id="实体类"><a href="#实体类" class="headerlink" title="实体类"></a>实体类</h3><p>使用了lombok，如果不想使用就自行生成setter和getter方法</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.persistence.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-01-21 16:26</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="meta">@Table(name = &quot;t_user&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue(strategy = GenerationType.IDENTITY)</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 用户名</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Column(name = &quot;userName&quot;, length = 100)</span></span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 昵称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Column(name = &quot;nickName&quot;, length = 100)</span></span><br><span class="line">    <span class="keyword">private</span> String nickName;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 密码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Column(length = 100)</span></span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 用户类型,1代表管理员,2代表普通用户</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer type;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 用户状态,1代表正常,2代表被封禁</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer state;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 是否可借书</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Column(name = &quot;isBorrow&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer isBorrow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="Repository接口"><a href="#Repository接口" class="headerlink" title="Repository接口"></a>Repository接口</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.repository;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.User;</span><br><span class="line"><span class="keyword">import</span> org.springframework.data.jpa.repository.JpaRepository;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户Repository接口</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-01-21 17:01</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserRepository</span> <span class="keyword">extends</span> <span class="title">JpaRepository</span>&lt;<span class="title">User</span>, <span class="title">Long</span>&gt; </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -12494,7 +12494,7 @@
 </tr>
 <tr>
 <td align="center">ANALYZE</td>
-<td align="center">xxxxxxxxxx package com.ledao.entity;​import lombok.Data;​import javax.persistence.<em>;​/</em>* * 用户实体类 * * @author LeDao * @company * @create 2022-01-21 16:26 <em>/@Data@Entity@Table(name = “t_user”)public class User {​    /</em>*     * 编号     <em>/    @Id    @GeneratedValue(strategy = GenerationType.IDENTITY)    private Integer id;    /</em>*     * 用户名     <em>/    @Column(name = “userName”, length = 100)    private String userName;    /</em>*     * 昵称     <em>/    @Column(name = “nickName”, length = 100)    private String nickName;    /</em>*     * 密码     <em>/    @Column(length = 100)    private String password;    /</em>*     * 用户类型,1代表管理员,2代表普通用户     <em>/    private Integer type;    /</em>*     * 用户状态,1代表正常,2代表被封禁     <em>/    private Integer state;    /</em>*     * 是否可借书     */    @Column(name = “isBorrow”)    private Integer isBorrow;}java</td>
+<td align="center">AND</td>
 <td align="center">AS</td>
 </tr>
 <tr>
@@ -14640,7 +14640,7 @@
 <h4 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h4><p>我在命名为dev的命名空间内创建了三个配置文件：<code>mysql_dev.properties</code>、 <code>server_dev.properties</code>和 <code>nacos_config.properties</code>，内容如下：</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220320205354950.png" alt="image-20220320205354950"></p>
 <blockquote>
-<p>xxxxxxxxxx #应用名称spring.application.name=nacos_config_test#Nacos的IP地址和端口号spring.cloud.nacos.config.server-addr=121.41.211.106:8848#Nacos配置文件所在命名空间idspring.cloud.nacos.config.namespace=cd6541df-8530-404f-8832-413a3c118efa6#Nacos配置文件所在组名spring.cloud.nacos.config.group=DEFAULT_GROUP#要读取的配置文件名称spring.cloud.nacos.config.name=nacos_config.propertiesproperties</p>
+<p>mysql_dev.properties</p>
 </blockquote>
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="meta">spring.datasource.type</span>=<span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line"><span class="meta">spring.datasource.driver-class-name</span>=<span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line"><span class="meta">spring.datasource.url</span>=<span class="string">jdbc:mysql://localhost:3306/db_secondhandtrade?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</span></span><br><span class="line"><span class="meta">spring.datasource.username</span>=<span class="string">root</span></span><br><span class="line"><span class="meta">spring.datasource.password</span>=<span class="string">123456</span></span><br></pre></td></tr></table></figure>
 
