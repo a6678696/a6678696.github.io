@@ -14799,7 +14799,7 @@
 <p>接下来修改搜索框的提示信息，上图横线下的<code>placeholder:</code>后接提示信息，建议直接注释掉该行（使用<code>//</code>注释），直接重写，不建议去修改语言配置文件（在<code>\themes\butterfly\languages</code>目录下）</p>
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">placeholder</span>: <span class="string">&quot;输入关键词后，按下回车键即可搜索文章...&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="依次执行以下命令"><a href="#依次执行以下命令" class="headerlink" title="依次执行以下命令"></a>依次执行以下命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#清除缓存文件 (db.json) 和已生成的静态文件 (public)</span></span><br><span class="line">hexo clean</span><br><span class="line"><span class="comment">#生成Algolia索引</span></span><br><span class="line">hexo algolia</span><br><span class="line"><span class="comment">#生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment">#部署网站，同时将网站的改动提交到GitHub仓库</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<h3 id="依次执行以下命令"><a href="#依次执行以下命令" class="headerlink" title="依次执行以下命令"></a>依次执行以下命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment">#生成Algolia索引</span></span><br><span class="line">hexo algolia</span><br><span class="line"><span class="comment">#部署网站，同时将网站的改动提交到GitHub仓库</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p>执行启动服务器命令<code>hexo s</code>查看结果，访问网址为： <code>http://localhost:4000/</code></p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323203020481.png" alt="image-20220323203020481"></p>
@@ -21800,7 +21800,7 @@
   <entry>
     <title>Java浮点数的加减乘除运算</title>
     <url>/500.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果直接直接浮点数之间的运算，有可能会得不到正确结果</p>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果直接进行浮点数之间的运算，有可能会得不到正确结果</p>
 <p>Java浮点数优先使用double，先把double转化为String，然后通过BigDecimal的构造方法转化为BigDecimal</p>
 <p>最后进行加减乘除的运算使用BigDecimal这个类的方法：</p>
 <ol>
