@@ -94,6 +94,22 @@
       </tags>
   </entry>
   <entry>
+    <title>实现鼠标移入文字向右移动效果</title>
+    <url>/105.html</url>
+    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;div1&#x27;</span>&gt;</span>&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">	-webkit-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-moz-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-o-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div1</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.cnblogs.com/smile1/p/12007164.html">鼠标移入文字上向右移动效果 - Crazy丶迷恋 - 博客园</a></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>根据ip地址获取真实地址</title>
     <url>/104.html</url>
     <content><![CDATA[<h3 id="pom-xml引入"><a href="#pom-xml引入" class="headerlink" title="pom.xml引入"></a>pom.xml引入</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -111,22 +127,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>实现鼠标移入文字向右移动效果</title>
-    <url>/105.html</url>
-    <content><![CDATA[<h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;div1&#x27;</span>&gt;</span>&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">	-webkit-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-moz-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-o-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div1</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a href="https://www.cnblogs.com/smile1/p/12007164.html">鼠标移入文字上向右移动效果 - Crazy丶迷恋 - 博客园</a></p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -249,6 +249,33 @@
       </tags>
   </entry>
   <entry>
+    <title>SQLyog备份和导入MySQL数据库</title>
+    <url>/111.html</url>
+    <content><![CDATA[<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><blockquote>
+<p>右键点击要备份的数据库，选中（备份数据库，转储到SQL）</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423234316.jpg" alt="img"></p>
+<blockquote>
+<p>第二条红线处选择存储的位置，然后点击导出即可</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423234600.jpg" alt="img"></p>
+<h3 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h3><blockquote>
+<p>右键点击要恢复的数据库，选中（执行SQL脚本）</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423234835.jpg" alt="img"></p>
+<blockquote>
+<p>选择对应的SQL文件，点击执行即可</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423235030.jpg" alt="img"></p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>mysqldump命令备份数据库</title>
     <url>/112.html</url>
     <content><![CDATA[<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysqldump -uroot -p123456 db_myblog&gt; D:/db_backup/db_myblog.sql</span><br></pre></td></tr></table></figure>
@@ -284,33 +311,6 @@
       <tags>
         <tag>MySQL</tag>
         <tag>Windows系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQLyog备份和导入MySQL数据库</title>
-    <url>/111.html</url>
-    <content><![CDATA[<h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><blockquote>
-<p>右键点击要备份的数据库，选中（备份数据库，转储到SQL）</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423234316.jpg" alt="img"></p>
-<blockquote>
-<p>第二条红线处选择存储的位置，然后点击导出即可</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423234600.jpg" alt="img"></p>
-<h3 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h3><blockquote>
-<p>右键点击要恢复的数据库，选中（执行SQL脚本）</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423234835.jpg" alt="img"></p>
-<blockquote>
-<p>选择对应的SQL文件，点击执行即可</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210423235030.jpg" alt="img"></p>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -564,6 +564,22 @@
       </tags>
   </entry>
   <entry>
+    <title>MyBatis的关联（association）元素</title>
+    <url>/125.html</url>
+    <content><![CDATA[<p>关联（association）元素处理“有一个”类型的关系。 比如，在示例中，每个博客有一个作者</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;blogResult&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;author&quot;</span> <span class="attr">column</span>=<span class="string">&quot;author_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;Author&quot;</span> <span class="attr">select</span>=<span class="string">&quot;selectAuthor&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectAuthor&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Author&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM AUTHOR WHERE ID = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>持久层框架</category>
+      </categories>
+      <tags>
+        <tag>MyBatis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MyBatis动态SQL示例</title>
     <url>/124.html</url>
     <content><![CDATA[<h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;list&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;map&quot;</span> <span class="attr">resultMap</span>=<span class="string">&quot;BlogResult&quot;</span>&gt;</span></span><br><span class="line">	select *</span><br><span class="line">	from t_blog</span><br><span class="line">	<span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null and title != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and title like #&#123;title&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;blogTypeId != null&quot;</span>&gt;</span></span><br><span class="line">			and blogTypeId = #&#123;blogTypeId&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlog != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog = #&#123;isMenuBlog&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;isMenuBlogKey != null&quot;</span>&gt;</span></span><br><span class="line">			and isMenuBlog != 1</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;releaseDateStr != null and releaseDateStr != &#x27;&#x27;&quot;</span>&gt;</span></span><br><span class="line">			and date_format(releaseDate, &#x27;%Y年%m月&#x27;) = #&#123;releaseDateStr&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;sortByReleaseDate == null&quot;</span>&gt;</span></span><br><span class="line">		order by releaseDate desc</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;start != null and size != null&quot;</span>&gt;</span></span><br><span class="line">		limit #&#123;start&#125;,#&#123;size&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -577,22 +593,6 @@
 <h3 id="script"><a href="#script" class="headerlink" title="script"></a>script</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">@Update(&#123;&quot;<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;update Author&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;username != null&#x27;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;password != null&#x27;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;email != null&#x27;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;    <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&#x27;bio != null&#x27;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;  <span class="tag">&lt;/<span class="name">set</span>&gt;</span>&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;where id=#&#123;id&#125;&quot;,</span></span></span><br><span class="line"><span class="xml"><span class="handlebars">  &quot;</span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>&quot;&#125;)</span><br><span class="line">void updateAuthorValues(Author author);</span><br></pre></td></tr></table></figure>
 
 <h3 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectBlogsLike&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">bind</span> <span class="attr">name</span>=<span class="string">&quot;pattern&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#x27;%&#x27; + _parameter.getTitle() + &#x27;%&#x27;&quot;</span> /&gt;</span></span><br><span class="line">  SELECT * FROM BLOG</span><br><span class="line">  WHERE title LIKE #&#123;pattern&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>持久层框架</category>
-      </categories>
-      <tags>
-        <tag>MyBatis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MyBatis的关联（association）元素</title>
-    <url>/125.html</url>
-    <content><![CDATA[<p>关联（association）元素处理“有一个”类型的关系。 比如，在示例中，每个博客有一个作者</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;blogResult&quot;</span> <span class="attr">type</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">&quot;author&quot;</span> <span class="attr">column</span>=<span class="string">&quot;author_id&quot;</span> <span class="attr">javaType</span>=<span class="string">&quot;Author&quot;</span> <span class="attr">select</span>=<span class="string">&quot;selectAuthor&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectAuthor&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Author&quot;</span>&gt;</span></span><br><span class="line">  SELECT * FROM AUTHOR WHERE ID = #&#123;id&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
 
 ]]></content>
       <categories>
@@ -1194,29 +1194,6 @@
       </tags>
   </entry>
   <entry>
-    <title>switch语句</title>
-    <url>/142.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>switch语句将从与选项值相匹配的case标签处开始执行直到遇到break语句，或者执行到switch语句的结束处为止。如果没有相匹配的case标签，而有default子句，就执行这个子句。（必须严格执行每个case必须以break语句结束，不然程序会继续执行下去，直到遇到break语句或者执行到default语句）</p>
-<h3 id="正确的例子"><a href="#正确的例子" class="headerlink" title="正确的例子"></a>正确的例子</h3><p>Java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163509.jpg" alt="img"></p>
-<h3 id="错误的例子"><a href="#错误的例子" class="headerlink" title="错误的例子"></a><strong>错误的例子</strong></h3><p>Java代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163627.jpg" alt="img"></p>
-<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><p>在错误的例子中，即使只有条件1符合条件，但是由于没有break语句终止程序，程序会继续执行下去，直到遇到break语句或执行完程序。（如果条件2有break语句，那么控制台只输出1和2）</p>
-]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装Maven</title>
     <url>/143.html</url>
     <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>网站链接：<a href="https://maven.apache.org/download.cgi">https://maven.apache.org/download.cgi</a></p>
@@ -1259,6 +1236,29 @@
       </categories>
       <tags>
         <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>switch语句</title>
+    <url>/142.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>switch语句将从与选项值相匹配的case标签处开始执行直到遇到break语句，或者执行到switch语句的结束处为止。如果没有相匹配的case标签，而有default子句，就执行这个子句。（必须严格执行每个case必须以break语句结束，不然程序会继续执行下去，直到遇到break语句或者执行到default语句）</p>
+<h3 id="正确的例子"><a href="#正确的例子" class="headerlink" title="正确的例子"></a>正确的例子</h3><p>Java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163509.jpg" alt="img"></p>
+<h3 id="错误的例子"><a href="#错误的例子" class="headerlink" title="错误的例子"></a><strong>错误的例子</strong></h3><p>Java代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">switch</span> (i) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">			System.out.println(<span class="number">1</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">			System.out.println(<span class="number">2</span>);</span><br><span class="line">			</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			System.out.println(<span class="number">3</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;    </span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210613163627.jpg" alt="img"></p>
+<h3 id="结果分析"><a href="#结果分析" class="headerlink" title="结果分析"></a>结果分析</h3><p>在错误的例子中，即使只有条件1符合条件，但是由于没有break语句终止程序，程序会继续执行下去，直到遇到break语句或执行完程序。（如果条件2有break语句，那么控制台只输出1和2）</p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -2553,6 +2553,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Maven出现错误：Plugin org.springframework.boot:spring-boot-maven-plugin: not found的解决办法</title>
+    <url>/177.html</url>
+    <content><![CDATA[<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>给spring-boot-maven-plugin指定版本</p>
+<h3 id="修改前"><a href="#修改前" class="headerlink" title="修改前"></a>修改前</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改后"><a href="#修改后" class="headerlink" title="修改后"></a>修改后</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Maven</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Redis的持久化之AOF方式</title>
     <url>/176.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>AOF方式：将以日志，记录每一个操作</p>
@@ -2588,21 +2603,6 @@
       </categories>
       <tags>
         <tag>Redis</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Maven出现错误：Plugin org.springframework.boot:spring-boot-maven-plugin: not found的解决办法</title>
-    <url>/177.html</url>
-    <content><![CDATA[<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>给spring-boot-maven-plugin指定版本</p>
-<h3 id="修改前"><a href="#修改前" class="headerlink" title="修改前"></a>修改前</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="修改后"><a href="#修改后" class="headerlink" title="修改后"></a>修改后</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>2.2.6.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>Maven</tag>
       </tags>
   </entry>
   <entry>
@@ -6015,6 +6015,22 @@
       </tags>
   </entry>
   <entry>
+    <title>IntelliJ IDEA连接MySQL数据库</title>
+    <url>/29.html</url>
+    <content><![CDATA[<h3 id="选择数据库类型"><a href="#选择数据库类型" class="headerlink" title="选择数据库类型"></a>选择数据库类型</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018003753.jpg" alt="img"></p>
+<h3 id="填写配置信息"><a href="#填写配置信息" class="headerlink" title="填写配置信息"></a>填写配置信息</h3><p>URL填：<code>jdbc:mysql://localhost:3306/db_myblog?serverTimezone=UTC</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018004005.jpg" alt="img"></p>
+<h3 id="测试是否连接成功"><a href="#测试是否连接成功" class="headerlink" title="测试是否连接成功"></a>测试是否连接成功</h3><p>点击上图的Test Connection按钮测试是否可以成功连接,成功后点击OK即可</p>
+]]></content>
+      <categories>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>IntelliJ IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CentOS7安装Docker</title>
     <url>/290.html</url>
     <content><![CDATA[<h3 id="登录身份"><a href="#登录身份" class="headerlink" title="登录身份"></a>登录身份</h3><p>使用root身份登录，一般默认都是用root身份</p>
@@ -6055,22 +6071,6 @@
       </tags>
   </entry>
   <entry>
-    <title>IntelliJ IDEA连接MySQL数据库</title>
-    <url>/29.html</url>
-    <content><![CDATA[<h3 id="选择数据库类型"><a href="#选择数据库类型" class="headerlink" title="选择数据库类型"></a>选择数据库类型</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018003753.jpg" alt="img"></p>
-<h3 id="填写配置信息"><a href="#填写配置信息" class="headerlink" title="填写配置信息"></a>填写配置信息</h3><p>URL填：<code>jdbc:mysql://localhost:3306/db_myblog?serverTimezone=UTC</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201018004005.jpg" alt="img"></p>
-<h3 id="测试是否连接成功"><a href="#测试是否连接成功" class="headerlink" title="测试是否连接成功"></a>测试是否连接成功</h3><p>点击上图的Test Connection按钮测试是否可以成功连接,成功后点击OK即可</p>
-]]></content>
-      <categories>
-        <category>开发工具</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>IntelliJ IDEA</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker配置阿里云镜像仓库</title>
     <url>/291.html</url>
     <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Docker默认远程仓库是 <a href="https://hub.docker.com/">https://hub.docker.com/</a> ，下载速度会很慢，所以要配置一下国内镜像</p>
@@ -6087,6 +6087,25 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
 
 <p>发现速度快了很多</p>
+]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>Docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Docker使用pull命令时报错</title>
+    <url>/292.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用pull命令安装容器时报错：Error response from daemon: Get “<a href="https://registry-1.docker.io/v2/&quot;">https://registry-1.docker.io/v2/&quot;</a>: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置国内镜像"><a href="#配置国内镜像" class="headerlink" title="配置国内镜像"></a>配置国内镜像</h4><p>查看博客：<a href="/291.html">Docker配置阿里云镜像仓库</a></p>
+<h4 id="添加DNS地址"><a href="#添加DNS地址" class="headerlink" title="添加DNS地址"></a>添加DNS地址</h4><p>如果配置了国内镜像地址还是报错，就添加DNS地址，在/etc/resolv.conf中添加两行代码：</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">nameserver <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nameserver <span class="number">8.8</span>.<span class="number">4.4</span></span><br></pre></td></tr></table></figure>
+
+<p>重启一下Docker</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>运维</category>
@@ -6270,25 +6289,6 @@
 <h4 id="查看元数据-1"><a href="#查看元数据-1" class="headerlink" title="查看元数据"></a>查看元数据</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker inspect 容器id</span><br></pre></td></tr></table></figure>
 
 <h4 id="重命名容器"><a href="#重命名容器" class="headerlink" title="重命名容器"></a>重命名容器</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker rename 原容器名 新容器名</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>运维</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker使用pull命令时报错</title>
-    <url>/292.html</url>
-    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用pull命令安装容器时报错：Error response from daemon: Get “<a href="https://registry-1.docker.io/v2/&quot;">https://registry-1.docker.io/v2/&quot;</a>: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置国内镜像"><a href="#配置国内镜像" class="headerlink" title="配置国内镜像"></a>配置国内镜像</h4><p>查看博客：<a href="/291.html">Docker配置阿里云镜像仓库</a></p>
-<h4 id="添加DNS地址"><a href="#添加DNS地址" class="headerlink" title="添加DNS地址"></a>添加DNS地址</h4><p>如果配置了国内镜像地址还是报错，就添加DNS地址，在/etc/resolv.conf中添加两行代码：</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">nameserver <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nameserver <span class="number">8.8</span>.<span class="number">4.4</span></span><br></pre></td></tr></table></figure>
-
-<p>重启一下Docker</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -16431,6 +16431,21 @@
       </categories>
       <tags>
         <tag>Gateway</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>屏蔽CSDN的会员资源</title>
+    <url>/499.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>在CSDN查资料总会出现一些会员下载页面，花钱下载是不可能的，况且不一定可以保证资源对我们有用，如果下载了这些没用的资源简直血亏，所以眼不见为净最好</p>
+<p>我们可以通过油猴插件的<code>CSDN屏蔽会员资源</code>脚本屏蔽掉这些下载链接（不是破解）</p>
+<h3 id="安装油猴插件"><a href="#安装油猴插件" class="headerlink" title="安装油猴插件"></a>安装油猴插件</h3><p>油猴插件安装地址：<a href="https://microsoftedge.microsoft.com/addons/detail/tampermonkey/iikmkjmpaadaobahmlepeloendndfphd?hl=zh-CN">Tampermonkey - Microsoft Edge Addons</a></p>
+<h3 id="安装脚本"><a href="#安装脚本" class="headerlink" title="安装脚本"></a>安装脚本</h3><p>脚本安装地址：<a href="https://greasyfork.org/zh-CN/scripts/432452-csdn%E5%B1%8F%E8%94%BD%E4%BC%9A%E5%91%98%E8%B5%84%E6%BA%90">CSDN屏蔽会员资源 (greasyfork.org)</a>，安装好后就可以进行屏蔽了</p>
+]]></content>
+      <categories>
+        <category>其它</category>
+      </categories>
+      <tags>
+        <tag>其它</tag>
       </tags>
   </entry>
   <entry>
