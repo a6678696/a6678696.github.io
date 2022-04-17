@@ -21797,4 +21797,42 @@
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Java浮点数的加减乘除运算</title>
+    <url>/500.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果直接直接浮点数之间的运算，有可能会得不到正确结果</p>
+<p>Java浮点数优先使用double，先把double转化为String，然后通过BigDecimal的构造方法转化为BigDecimal</p>
+<p>最后进行加减乘除的运算使用BigDecimal这个类的方法：</p>
+<ol>
+<li><p>加</p>
+<p><code>public BigDecimal add(BigDecimal augend)</code></p>
+<p>传入的参数为加数</p>
+</li>
+<li><p>减</p>
+<p> <code>public BigDecimal subtract(BigDecimal subtrahend)</code></p>
+<p>传入的参数为减数</p>
+</li>
+<li><p>乘</p>
+<p><code>public BigDecimal multiply(BigDecimal multiplicand)</code></p>
+<p>传入的参数为乘数</p>
+</li>
+<li><p>除</p>
+<p> <code>public BigDecimal divide(BigDecimal divisor,int scale,int roundingMode)</code></p>
+<p> 传入的参数一为除数，参数二为保留的小数位数，参数三为舍入的模式（各种模式看下图）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220417161001836.png" alt="image-20220417161001836"></p>
+</li>
+</ol>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.math.BigDecimal;</span><br><span class="line"><span class="keyword">import</span> java.math.RoundingMode;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> d1 = <span class="number">2.2</span>;</span><br><span class="line">        <span class="keyword">double</span> d2 = <span class="number">1.81</span>;</span><br><span class="line">        <span class="comment">//转化为BigDecimal</span></span><br><span class="line">        BigDecimal b1 = <span class="keyword">new</span> BigDecimal(String.valueOf(d1));</span><br><span class="line">        BigDecimal b2 = <span class="keyword">new</span> BigDecimal(String.valueOf(d2));</span><br><span class="line">        <span class="comment">//加</span></span><br><span class="line">        System.out.println(b1.add(b2));</span><br><span class="line">        <span class="comment">//减</span></span><br><span class="line">        System.out.println(b1.subtract(b2));</span><br><span class="line">        <span class="comment">//乘</span></span><br><span class="line">        System.out.println(b1.multiply(b2));</span><br><span class="line">        <span class="comment">//除</span></span><br><span class="line">        System.out.println(b1.divide(b2, <span class="number">2</span>, RoundingMode.HALF_UP));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>进行除法运算时，一定要指定保留的小数位数和舍入的模式</p>
+<p>如果使用<code>public BigDecimal divide(BigDecimal divisor)</code>这个方法，当除不尽时（即结果的小数无限），会报错，报错信息如下图：</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220417162129750.png" alt="image-20220417162129750"></p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
 </search>
