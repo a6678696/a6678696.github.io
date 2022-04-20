@@ -21919,7 +21919,7 @@
   </entry>
   <entry>
     <title>实现合并GitHub远程分支</title>
-    <url>/503.html</url>
+    <url>/504.html</url>
     <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>要合并的分支名称为a，主分支名称为master，实现合并GitHub远程分支的方法有两种：</p>
 <ol>
 <li>使用Git命令合并</li>
