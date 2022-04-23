@@ -16279,6 +16279,9 @@
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Inject</span></span><br><span class="line"><span class="comment"># Insert the code to head (before &#x27;&lt;/head&gt;&#x27; tag) and the bottom (before &#x27;&lt;/body&gt;&#x27; tag)</span></span><br><span class="line"><span class="comment"># 插入代码到头部 &lt;/head&gt; 之前 和 底部 &lt;/body&gt; 之前</span></span><br><span class="line"><span class="attr">inject</span>:<span class="string"></span></span><br><span class="line">  <span class="attr">head</span>:<span class="string"></span></span><br><span class="line">     <span class="meta">-</span> <span class="string">&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/font.css&quot;&gt;</span></span><br><span class="line">  <span class="attr">bottom</span>:<span class="string"></span></span><br><span class="line"><span class="comment">    # - &lt;script src=&quot;xxxx&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="效果截图"><a href="#效果截图" class="headerlink" title="效果截图"></a>效果截图</h2><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220412234312611.png" alt="image-20220412234312611"></p>
+<h2 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h2><p>如果使用了CDN加速网站的话，建议不要使用从网上下载的字体</p>
+<p>从下图可以看出，4月21日当天加速字体快使用了2个G的流量，又拍云每日花费0.5元左右，每年60块钱的免费额度根本不够用</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220423153014766.png" alt="image-20220423153014766"></p>
 ]]></content>
       <categories>
         <category>Hexo博客</category>
