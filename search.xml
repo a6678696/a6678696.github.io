@@ -22002,4 +22002,72 @@
         <tag>Git</tag>
       </tags>
   </entry>
+  <entry>
+    <title>LocalDateTime的基本使用</title>
+    <url>/505.html</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>java.util.Date以及它的格式化工具类SimpleDateFormat都是线程不安全的，不推荐使用</p>
+<p>Java 8之后推荐使用<code>LocalDateTime</code>代替Date，<code>DateTimeFormatter</code>代替SimpleDateFormat</p>
+<h2 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h2><h3 id="LocalDateTime"><a href="#LocalDateTime" class="headerlink" title="LocalDateTime"></a>LocalDateTime</h3><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">now()</td>
+<td align="center">从默认时区的系统时钟获取当前的日期时间</td>
+</tr>
+<tr>
+<td align="center">getYear()</td>
+<td align="center">获取年份字段</td>
+</tr>
+<tr>
+<td align="center">getMonthValue()</td>
+<td align="center">获取月份字段，从1到12</td>
+</tr>
+<tr>
+<td align="center">getDayOfMonth()</td>
+<td align="center">获取当前月的第几天</td>
+</tr>
+<tr>
+<td align="center">getHour()</td>
+<td align="center">获取小时字段</td>
+</tr>
+<tr>
+<td align="center">getMinute()</td>
+<td align="center">获取分钟字段</td>
+</tr>
+<tr>
+<td align="center">getSecond()</td>
+<td align="center">获取秒钟字段</td>
+</tr>
+</tbody></table>
+<h3 id="DateTimeFormatter"><a href="#DateTimeFormatter" class="headerlink" title="DateTimeFormatter"></a>DateTimeFormatter</h3><table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">ofPattern(String pattern)</td>
+<td align="center">使用指定的模式创建格式化程序</td>
+</tr>
+<tr>
+<td align="center">format(TemporalAccessor temporal)</td>
+<td align="center">使用此格式化程序格式化日期时间对象</td>
+</tr>
+</tbody></table>
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.time.LocalDateTime;</span><br><span class="line"><span class="keyword">import</span> java.time.format.DateTimeFormatter;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//获取当前时间</span></span><br><span class="line">        LocalDateTime localDateTime = LocalDateTime.now();</span><br><span class="line">        System.out.println(localDateTime);</span><br><span class="line">        <span class="comment">//年份</span></span><br><span class="line">        System.out.println(localDateTime.getYear());</span><br><span class="line">        <span class="comment">//格式化</span></span><br><span class="line">        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy年MM月dd日 HH:mm:ss&quot;</span>);</span><br><span class="line">        System.out.println(dateTimeFormatter.format(localDateTime));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220423115516512.png" alt="image-20220423115516512"></p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
 </search>
