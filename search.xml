@@ -4622,25 +4622,24 @@
   <entry>
     <title>修改Hexo新建博客的模板</title>
     <url>/247.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>通过<font color="#dd0000">hexo new “博客名称”</font>命令新建博客时，默认使用的模板是<font color="#dd0000">post.md</font>，该文件在站点根目录的<font color="#dd0000">scaffolds</font>文件夹中，修改hexo新建博客的模板一共有两种方法：</p>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>通过<code>hexo new &quot;博客名称&quot;</code>命令新建博客时，默认使用的模板是<code>post.md</code>，该文件在站点根目录的<code>scaffolds</code>文件夹中，修改hexo新建博客的模板一共有两种方法：</p>
 <ol>
 <li>直接修改post.md</li>
 <li>新建自己的模板</li>
 </ol>
 <p>下面以添加categories（分类）为例</p>
-<h3 id="直接修改post-md"><a href="#直接修改post-md" class="headerlink" title="直接修改post.md"></a>直接修改post.md</h3><p>在文章属性Front-matter中添加categories</p>
+<h3 id="直接修改post-md"><a href="#直接修改post-md" class="headerlink" title="直接修改post.md"></a>直接修改post.md</h3><p>在文章属性Front-matter中添加categories，<font color="#dd0000">推荐使用这种方式</font></p>
 <p><strong>添加前（markdown源码）</strong></p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line"><span class="section">tags:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>添加后（markdown源码）</strong></p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="新建自己的模板"><a href="#新建自己的模板" class="headerlink" title="新建自己的模板"></a>新建自己的模板</h3><p>新建一个名为<font color="#dd0000">blog.md</font>的模板（名称可以根据自己的需求随便取，但是不可以与当前的文件夹中的文件重名，也不可以命名为page.md，因为<font color="#dd0000">hexo new page “名称”</font>命令是新建一个页面）,添加以下内容（markdown源码）：</p>
+<h3 id="新建自己的模板"><a href="#新建自己的模板" class="headerlink" title="新建自己的模板"></a>新建自己的模板</h3><p>新建一个名为<code>blog.md</code>的模板（名称可以根据自己的需求随便取，但是不可以与当前的文件夹中的文件重名，也不可以命名为page.md，因为<code>hexo new page &quot;名称&quot;</code>命令是新建一个页面），添加以下内容（markdown源码）：</p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line"><span class="section">categories:</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
 
-<p>如果要新建博客，通过<font color="#dd0000">hexo new blog “博客名称”</font>命令新建，该命令中的<font color="#dd0000">blog</font>字段说明使用的是名为<font color="#dd0000">blog.md</font>的模板</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>推荐直接修改post.md</p>
-<p>详情查看hexo官网：<a href="https://hexo.io/zh-cn/docs/writing">https://hexo.io/zh-cn/docs/writing</a></p>
+<p>如果要新建博客，通过<code>hexo new blog &quot;博客名称&quot;</code>命令新建，该命令中的<code>blog</code>字段说明使用的是名为<code>blog.md</code>的模板</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>详情查看hexo官网：<a href="https://hexo.io/zh-cn/docs/writing">https://hexo.io/zh-cn/docs/writing</a></p>
 ]]></content>
       <categories>
         <category>Hexo博客</category>
@@ -16141,6 +16140,10 @@
 <p>测试前先删除Redis中对应的秒杀商品的key，确认可秒杀商品的数量不为0</p>
 <p>测试的接口为：<code>http://localhost:8080/order/save</code>，参数如下图所示</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220409232540517.png" alt="image-20220409232540517"></p>
+<h3 id="配置Gateway的IP限流"><a href="#配置Gateway的IP限流" class="headerlink" title="配置Gateway的IP限流"></a>配置Gateway的IP限流</h3><p>多种限流方式查看博客：<a href="https://blog.zoutl.cn/497.html#%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95">Gateway 的基本使用 | LeDao 的博客 (zoutl.cn)</a></p>
+<p>IP限流只在微服务架构版本有用，配置类<code>ipKeyResolver</code>已经写好了，现在只需要配置<code>miaosha-gateway</code>微服务的<code>spring-cloud.yml</code>配置就行了，完整配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">application:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">miaosha-gateway</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">nacos:</span></span><br><span class="line">      <span class="attr">discovery:</span></span><br><span class="line">        <span class="attr">namespace:</span> <span class="string">8b2d6583-c0a0-43bd-a2a8-b215eba8c70e</span></span><br><span class="line">        <span class="attr">group:</span> <span class="string">miaosha</span></span><br><span class="line">        <span class="attr">server-addr:</span> <span class="number">192.168</span><span class="number">.0</span><span class="number">.141</span><span class="string">:8848</span></span><br><span class="line">    <span class="attr">gateway:</span></span><br><span class="line">      <span class="attr">globalcors:</span></span><br><span class="line">        <span class="attr">cors-configurations:</span></span><br><span class="line">          <span class="string">&#x27;[/**]&#x27;</span><span class="string">:</span></span><br><span class="line">              <span class="attr">allowCredentials:</span> <span class="literal">true</span></span><br><span class="line">              <span class="attr">allowedHeaders:</span> <span class="string">&quot;*&quot;</span></span><br><span class="line">              <span class="attr">allowedOrigins:</span> <span class="string">&quot;*&quot;</span></span><br><span class="line">              <span class="attr">allowedMethods:</span> <span class="string">&quot;*&quot;</span></span><br><span class="line">      <span class="attr">routes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">id:</span> <span class="string">user_router</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">lb://miaosha-user</span></span><br><span class="line">          <span class="attr">predicates:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">Path=/user/**</span></span><br><span class="line"></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">id:</span> <span class="string">goods_router</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">lb://miaosha-goods</span></span><br><span class="line">          <span class="attr">predicates:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">Path=/miaoShaGoods/**</span></span><br><span class="line"></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">id:</span> <span class="string">order_router</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">lb://miaosha-order</span></span><br><span class="line">          <span class="attr">predicates:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">Path=/order/**</span></span><br><span class="line">          <span class="attr">filters:</span></span><br><span class="line">            <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">RequestRateLimiter</span></span><br><span class="line">              <span class="attr">args:</span></span><br><span class="line">                <span class="attr">redis-rate-limiter.replenishRate:</span> <span class="number">1</span> <span class="comment">#令牌桶每秒填充速率</span></span><br><span class="line">                <span class="attr">redis-rate-limiter.burstCapacity:</span> <span class="number">2</span> <span class="comment">#令牌桶总容量</span></span><br><span class="line">                <span class="attr">redis-rate-limiter.requestedTokens:</span> <span class="number">1</span> <span class="comment"># 每次请求消耗1个</span></span><br><span class="line">                <span class="attr">key-resolver:</span> <span class="string">&quot;#&#123;@ipKeyResolver&#125;&quot;</span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>个人项目</category>
@@ -22151,7 +22154,7 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>Lambda表达式</tag>
+        <tag>Lambda</tag>
       </tags>
   </entry>
 </search>
