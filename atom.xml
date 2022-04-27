@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-04-26T11:39:51.956Z</updated>
+  <updated>2022-04-27T14:30:04.753Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>IntelliJ IDEA将Spring Boot项目打包成jar包并在CentOS7运行</title>
+    <link href="https://blog.zoutl.cn/508.html"/>
+    <id>https://blog.zoutl.cn/508.html</id>
+    <published>2022-04-27T13:24:34.000Z</published>
+    <updated>2022-04-27T14:30:04.753Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="修改打包方式"><a href="#修改打包方式" class="headerlink" title="修改打包方式"></a>修改打包方式</h3><p>首先在pom.xml文件中修改打包的方式为jar</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220427212818312.png" alt="image-20220427212818312"></p><h3 id="跳过测试项目"><a href="#跳过测试项目" class="headerlink" title="跳过测试项目"></a>跳过测试项目</h3><p>打包项目时，可以把打包前测试这一步跳过，可以减少打包时间</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220427213216736.png" alt="image-20220427213216736"></p><h3 id="开始打包"><a href="#开始打包" class="headerlink" title="开始打包"></a>开始打包</h3><p>打包前先清理一下，移除所有上一次构建生成的文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220427213430502.png" alt="image-20220427213430502"></p><p>打包的jar包在当前项目文件夹下的<code>target</code>文件夹下</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220427213829083.png" alt="image-20220427213829083"></p><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><h4 id="前台运行"><a href="#前台运行" class="headerlink" title="前台运行"></a>前台运行</h4><p>把jar包复制到指定文件夹或者直接进入它所在文件夹，打开cmd命令，输入下面命令即可运行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar KangXin-0.0.1-SNAPSHOT.jar --server.port=8080</span><br></pre></td></tr></table></figure><h4 id="后台运行"><a href="#后台运行" class="headerlink" title="后台运行"></a>后台运行</h4><blockquote><p>上面的命令是前台运行的，按<code>CTRL+C</code>后就终止运行了，后台运行的命令如下</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar KangXin-0.0.1-SNAPSHOT.jar &gt; mylog.txt 2&gt;&amp;1</span><br></pre></td></tr></table></figure><p>命令解释：</p><p>将以往控制台输出的内容写入当前目录下的<code>mylog.txt</code></p><p><code>2&gt;&amp;1</code>：2 就是标准错误，1 是标准输出，该命令相当于把标准错误重定向到标准输出。这里 &amp; 相当于标准错误等效于标准输出，即把标准错误和标准输出同时输出到指定的文件<code>mylog.txt</code>中</p><blockquote><p>然后通过下面命令可以查看正在后台运行的程序</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">jobs</span></span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220427221426002.png" alt="image-20220427221426002"></p><blockquote><p>如果要终止这个程序就使用<code>fg 编号</code>命令调回前台控制，然后按<code>CTRL+C</code>终止运行，从上图可知编号为1</p></blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fg</span> 1</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220427221613702.png" alt="image-20220427221613702"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;修改打包方式&quot;&gt;&lt;a href=&quot;#修改打包方式&quot; class=&quot;headerlink&quot; title=&quot;修改打包方式&quot;&gt;&lt;/a&gt;修改打包方式&lt;/h3&gt;&lt;p&gt;首先在pom.xml文件中修改打包的方式为jar&lt;/p&gt;
+&lt;figure class=&quot;highlight </summary>
+      
+    
+    
+    
+    <category term="开发工具" scheme="https://blog.zoutl.cn/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="Spring Boot" scheme="https://blog.zoutl.cn/tags/Spring-Boot/"/>
+    
+    <category term="IntelliJ IDEA" scheme="https://blog.zoutl.cn/tags/IntelliJ-IDEA/"/>
+    
+  </entry>
   
   <entry>
     <title>Lambda表达式的基本使用</title>
@@ -492,33 +519,6 @@
     
     
     <category term="JMeter" scheme="https://blog.zoutl.cn/tags/JMeter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Boot项目在新版IntelliJ IDEA配置热部署</title>
-    <link href="https://blog.zoutl.cn/487.html"/>
-    <id>https://blog.zoutl.cn/487.html</id>
-    <published>2022-03-29T09:13:44.000Z</published>
-    <updated>2022-04-25T19:41:30.336Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>我当前使用的idea版本为<code>2021.3.3</code>，热部署的配置和以前不一样了，比以前更麻烦</p><h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><h4 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-devtools<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">optional</span>&gt;</span>true<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="修改设置"><a href="#修改设置" class="headerlink" title="修改设置"></a>修改设置</h4><p>使用<code>CTRL+ALT+S</code>快捷键打开设置，根据下面的图片设置</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220329172227485.png" alt="image-20220329172227485"></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220329172344403.png" alt="image-20220329172344403"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;我当前使用的idea版本为&lt;code&gt;2021.3.3&lt;/code&gt;，热部署的配置和以前不一样了，比以前更麻烦&lt;/p&gt;
-&lt;h3 id=&quot;配置</summary>
-      
-    
-    
-    
-    <category term="开发工具" scheme="https://blog.zoutl.cn/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Spring Boot" scheme="https://blog.zoutl.cn/tags/Spring-Boot/"/>
-    
-    <category term="IntelliJ IDEA" scheme="https://blog.zoutl.cn/tags/IntelliJ-IDEA/"/>
     
   </entry>
   
