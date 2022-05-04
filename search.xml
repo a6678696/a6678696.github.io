@@ -1399,7 +1399,7 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows10系统定时关机CMD命令</title>
+    <title>Windows10系统定时关机cmd命令</title>
     <url>/15.html</url>
     <content><![CDATA[<h3 id="定时关机"><a href="#定时关机" class="headerlink" title="定时关机"></a><strong>定时关机</strong></h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">shutdown -s -t 7200</span><br></pre></td></tr></table></figure>
 
@@ -1412,7 +1412,7 @@
       </categories>
       <tags>
         <tag>Windows系统</tag>
-        <tag>CMD</tag>
+        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
@@ -3565,7 +3565,7 @@
       </tags>
   </entry>
   <entry>
-    <title>CMD命令运行一个Java文件</title>
+    <title>cmd命令运行一个Java文件</title>
     <url>/210.html</url>
     <content><![CDATA[<h3 id="代码如下"><a href="#代码如下" class="headerlink" title="代码如下"></a>代码如下</h3><p>名称为HelloWorld.java</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloWorld</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">&quot;Hello World!!&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -3583,7 +3583,7 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>CMD</tag>
+        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
@@ -4432,7 +4432,7 @@
       </tags>
   </entry>
   <entry>
-    <title>CMD命令操作MySQL数据库</title>
+    <title>cmd命令操作MySQL数据库</title>
     <url>/24.html</url>
     <content><![CDATA[<h3 id="进入数据库命令行"><a href="#进入数据库命令行" class="headerlink" title="进入数据库命令行"></a>进入数据库命令行</h3><p>先进入数据库安装的盘符（如果要进入C盘根目录则连续敲两下命令cd .. ）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">d:</span><br></pre></td></tr></table></figure>
@@ -4460,7 +4460,7 @@
       </categories>
       <tags>
         <tag>MySQL</tag>
-        <tag>CMD</tag>
+        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
