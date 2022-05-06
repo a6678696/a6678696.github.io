@@ -14049,7 +14049,7 @@
 <h4 id="打开Terminal窗口执行命令"><a href="#打开Terminal窗口执行命令" class="headerlink" title="打开Terminal窗口执行命令"></a>打开Terminal窗口执行命令</h4><p>使用WebStorm打开项目ExamSystem2后，使用快捷键<code>ALT+F12</code>打开Terminal窗口，然后执行下面命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
-<h4 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h4><p><font color="#dd0000">一定要等到上面两个命令执行完再启动哦</font>，打开package.json文件，点击第9行左边的启动按钮，选择第一个选项启动即可</p>
+<h4 id="启动项目"><a href="#启动项目" class="headerlink" title="启动项目"></a>启动项目</h4><p><font color="#dd0000">一定要等到上面的命令执行完再启动哦</font>，打开<code>package.json</code>文件，点击第9行左边的启动按钮，选择第一个选项启动即可</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226203527215.png" alt="image-20220226203527215"></p>
 <h4 id="启动成功界面"><a href="#启动成功界面" class="headerlink" title="启动成功界面"></a>启动成功界面</h4><p>启动成功后会自动打开浏览器并可以看到下面界面，到此前端部署成功了，如果没有自动打开浏览器就再浏览器地址栏手动输入：<code>http://localhost:8888/</code></p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220226203804572.png" alt="image-20220226203804572"></p>
