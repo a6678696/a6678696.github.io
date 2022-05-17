@@ -22271,4 +22271,35 @@
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Vue项目实现统一管理请求的后端IP地址和端口</title>
+    <url>/511.html</url>
+    <content><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在前后端分离的项目中，每个请求后端的方法都要写一次IP地址以及端口，后面如果要修改IP地址或端口号的话就要改很多个地方了，这样会很麻烦，进行统一管理是很有必要的</p>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="新建JS文件"><a href="#新建JS文件" class="headerlink" title="新建JS文件"></a>新建JS文件</h3><p>新建一个JS文件，命名为<code>url.js</code>，内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getServerUrl</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;http://localhost:8080/&quot;</span> + url;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>首先在对应的页面引入上面的JavaScript文件，在<code>&lt;script&gt;&lt;/script&gt;</code>内使用以下代码引入</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;getServerUrl&#125; <span class="keyword">from</span> <span class="string">&quot;@/config/url&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>在最上面引入，如下图所示</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220517123847227.png" alt="image-20220517123847227"></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>例如我们要请求的后端路径为<code>http://localhost:8080/user/login</code>，那么使用的格式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> url = getServerUrl(<span class="string">&quot;user/login&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>上面的url就可以在axios请求中使用了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220517124258313.png" alt="image-20220517124258313"></p>
+<h2 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h2><p>如果请求的后端IP地址和端口有多个，那么我们可以再传入一个参数，以这个参数为条件选择对应的IP地址和端口</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getServerUrl</span>(<span class="params">url, moudle</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (moudle === <span class="string">&quot;miaosha-user&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;http://localhost:8081/&quot;</span> + url;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (moudle === <span class="string">&quot;miaosha-goods&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;http://localhost:8082/&quot;</span> + url;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (moudle === <span class="string">&quot;miaosha-order1&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;http://localhost:8083/&quot;</span> + url;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>则使用的格式如下</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> url = getServerUrl(<span class="string">&quot;user/login&quot;</span>,<span class="string">&quot;miaosha-user&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Vue.js</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
 </search>

@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-05-06T18:36:04.479Z</updated>
+  <updated>2022-05-17T04:51:05.211Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue项目实现统一管理请求的后端IP地址和端口</title>
+    <link href="https://blog.zoutl.cn/511.html"/>
+    <id>https://blog.zoutl.cn/511.html</id>
+    <published>2022-05-17T04:08:23.000Z</published>
+    <updated>2022-05-17T04:51:05.211Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>在前后端分离的项目中，每个请求后端的方法都要写一次IP地址以及端口，后面如果要修改IP地址或端口号的话就要改很多个地方了，这样会很麻烦，进行统一管理是很有必要的</p><h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="新建JS文件"><a href="#新建JS文件" class="headerlink" title="新建JS文件"></a>新建JS文件</h3><p>新建一个JS文件，命名为<code>url.js</code>，内容如下：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getServerUrl</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;http://localhost:8080/&quot;</span> + url;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><p>首先在对应的页面引入上面的JavaScript文件，在<code>&lt;script&gt;&lt;/script&gt;</code>内使用以下代码引入</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;getServerUrl&#125; <span class="keyword">from</span> <span class="string">&quot;@/config/url&quot;</span>;</span><br></pre></td></tr></table></figure><p>在最上面引入，如下图所示</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220517123847227.png" alt="image-20220517123847227"></p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>例如我们要请求的后端路径为<code>http://localhost:8080/user/login</code>，那么使用的格式如下：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = getServerUrl(<span class="string">&quot;user/login&quot;</span>);</span><br></pre></td></tr></table></figure><p>上面的url就可以在axios请求中使用了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220517124258313.png" alt="image-20220517124258313"></p><h2 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h2><p>如果请求的后端IP地址和端口有多个，那么我们可以再传入一个参数，以这个参数为条件选择对应的IP地址和端口</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">getServerUrl</span>(<span class="params">url, moudle</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (moudle === <span class="string">&quot;miaosha-user&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;http://localhost:8081/&quot;</span> + url;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (moudle === <span class="string">&quot;miaosha-goods&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;http://localhost:8082/&quot;</span> + url;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (moudle === <span class="string">&quot;miaosha-order1&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;http://localhost:8083/&quot;</span> + url;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>则使用的格式如下</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> url = getServerUrl(<span class="string">&quot;user/login&quot;</span>,<span class="string">&quot;miaosha-user&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;在前后端分离的项目中，每个请求后端的方法都要写一次IP地址以及端口，后面如果要修改IP地址或端口号的话就要改很多个地方了，这样会很麻烦，进行</summary>
+      
+    
+    
+    
+    <category term="Vue.js" scheme="https://blog.zoutl.cn/categories/Vue-js/"/>
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>激活IntelliJ IDEA的热部署插件Jrebel</title>
@@ -494,33 +518,6 @@
       
     <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;使用CSV数据文件设置可以给HTTP请求设置多组参数&lt;/p&gt;
 &lt;h3 id=&quot;使用过程&quot;&gt;&lt;a href=&quot;#使用过程&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
-    
-    
-    <category term="JMeter" scheme="https://blog.zoutl.cn/tags/JMeter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JMeter的基本使用</title>
-    <link href="https://blog.zoutl.cn/490.html"/>
-    <id>https://blog.zoutl.cn/490.html</id>
-    <published>2022-04-04T13:38:42.000Z</published>
-    <updated>2022-04-25T19:41:21.726Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="添加线程组"><a href="#添加线程组" class="headerlink" title="添加线程组"></a>添加线程组</h3><blockquote><p>右键点击Test Plan，新建一个线程组</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404214208686.png" alt="image-20220404214208686"></p><blockquote><p>填写线程数</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221153946.png" alt="image-20220404221153946"></p><h3 id="添加HTTP请求默认值"><a href="#添加HTTP请求默认值" class="headerlink" title="添加HTTP请求默认值"></a>添加HTTP请求默认值</h3><blockquote><p>添加了HTTP请求默认值后，可以统一管理HTTP请求的IP地址和端口号</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404214548026.png" alt="image-20220404214548026"></p><h3 id="添加HTTP请求"><a href="#添加HTTP请求" class="headerlink" title="添加HTTP请求"></a>添加HTTP请求</h3><blockquote><p>添加HTTP请求用于测试接口</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404214341922.png" alt="image-20220404214341922"></p><blockquote><p>如果配置了HTTP请求默认值，那么就不需要配置HTTP请求的Web服务器了</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404214909724.png"></p><blockquote><p>给请求添加参数</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404223512490.png" alt="image-20220404223512490"></p><blockquote><p>如果有一些数据是通过信息头传递的，那么需要配置一下HTTP信息头管理器，然后添加参数即可</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404225121947.png" alt="image-20220404225121947"></p><h3 id="添加监听器"><a href="#添加监听器" class="headerlink" title="添加监听器"></a>添加监听器</h3><blockquote><p>添加一些监听器，用于查看测试的效果</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404220619286.png" alt="image-20220404220619286"></p><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><blockquote><p>点击菜单栏的启动按钮</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221258553.png" alt="image-20220404221258553"></p><h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><h4 id="聚合报告"><a href="#聚合报告" class="headerlink" title="聚合报告"></a>聚合报告</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221421441.png" alt="image-20220404221421441"></p><h4 id="汇总报告"><a href="#汇总报告" class="headerlink" title="汇总报告"></a>汇总报告</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221436874.png" alt="image-20220404221436874"></p><h4 id="察看结果树"><a href="#察看结果树" class="headerlink" title="察看结果树"></a>察看结果树</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221657901.png" alt="image-20220404221657901"></p><h4 id="用表格察看结果"><a href="#用表格察看结果" class="headerlink" title="用表格察看结果"></a>用表格察看结果</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404221716998.png" alt="image-20220404221716998"></p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><h4 id="解决中文乱码"><a href="#解决中文乱码" class="headerlink" title="解决中文乱码"></a>解决中文乱码</h4><blockquote><p>添加一个BeanShell PostProcessor后置处理器</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404222925854.png" alt="image-20220404222925854"></p><blockquote><p>添加以下代码</p></blockquote><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">prev.setDataEncoding(&quot;utf-8&quot;);</span></span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404223117964.png" alt="image-20220404223117964"></p><h4 id="禁用HTTP请求"><a href="#禁用HTTP请求" class="headerlink" title="禁用HTTP请求"></a>禁用HTTP请求</h4><p>如果有多个HTTP请求，那么JMeter启动时，这些HTTP请求都会被执行，如果不需要执行某个HTTP请求，那么我们需要禁用掉不需要执行的HTTP请求</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220404224105191.png" alt="image-20220404224105191"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;添加线程组&quot;&gt;&lt;a href=&quot;#添加线程组&quot; class=&quot;headerlink&quot; title=&quot;添加线程组&quot;&gt;&lt;/a&gt;添加线程组&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;右键点击Test Plan，新建一个线程组&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;i</summary>
       
     
     
