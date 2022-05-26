@@ -22333,4 +22333,22 @@
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>IntelliJ IDEA使用插件实现对Stream流操作的调试</title>
+    <url>/513.html</url>
+    <content><![CDATA[<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>插件名称为：<code>Java Stream Debugger</code>，好像在IntelliJ IDEA的插件市场没找到，但是在已安装插件列表中已经有这个插件了，应该是新版的IntelliJ IDEA已经内置了这个插件（所以要使用这个插件就将IntelliJ IDEA更新为最新的版本即可）</p>
+<h2 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h2><h3 id="要调试的代码"><a href="#要调试的代码" class="headerlink" title="要调试的代码"></a>要调试的代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">&quot;blog.zoutl.cn&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;www.zoutl.cn&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;www.baidu.cn&quot;</span>);</span><br><span class="line">        List&lt;String&gt; resultList=list.stream()</span><br><span class="line">                .filter(e-&gt;e.contains(<span class="string">&quot;zoutl.cn&quot;</span>))</span><br><span class="line">                .filter(e-&gt;e.length()&gt;<span class="number">12</span>)</span><br><span class="line">                .collect(Collectors.toList());</span><br><span class="line">        System.out.println(resultList);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="调试过程"><a href="#调试过程" class="headerlink" title="调试过程"></a>调试过程</h3><p>首先打个断点，然后开始调试，当程序执行到流Stream操作时，插件的调试按钮就会被点亮</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220526112957403.png" alt="image-20220526112957403"></p>
+<p>点击上面被点亮的按钮，会出现下面界面，可以很清楚地看出每一个操作后符合条件的数据</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220526113247661.png" alt="image-20220526113247661"></p>
+]]></content>
+      <categories>
+        <category>开发工具</category>
+      </categories>
+      <tags>
+        <tag>IntelliJ IDEA</tag>
+      </tags>
+  </entry>
 </search>
