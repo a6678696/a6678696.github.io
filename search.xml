@@ -22358,7 +22358,7 @@
 <h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="替换方案"><a href="#替换方案" class="headerlink" title="替换方案"></a>替换方案</h3><p>把<code>cdn.jsdelivr.net</code>替换成下面四个网址之一即可，等到<code>cdn.jsdelivr.net</code>恢复后改回来即可</p>
 <figure class="highlight properties"><table><tr><td class="code"><pre><span class="line"><span class="attr">fastly.jsdelivr.net</span></span><br><span class="line"><span class="attr">gcore.jsdelivr.net</span></span><br><span class="line"><span class="attr">testingcf.jsdelivr.net</span></span><br><span class="line"><span class="attr">test1.jsdelivr.net</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="修改主题的配置"><a href="#修改主题的配置" class="headerlink" title="修改主题的配置"></a>修改主题的配置</h3><p><code>Butterfly</code>这个主题的引用定义在<code>/scripts/events</code>文件夹下的<code>config.js</code>中，打开它把<code>cdn.jsdelivr.net</code>替换成上面的四个网址之一</p>
+<h3 id="修改主题的配置"><a href="#修改主题的配置" class="headerlink" title="修改主题的配置"></a>修改主题的配置</h3><p><code>Butterfly</code>这个主题的静态资源引用定义在<code>/scripts/events</code>文件夹下的<code>config.js</code>中，打开它把<code>cdn.jsdelivr.net</code>替换成上面的四个网址之一</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220527135915798.png" alt="image-20220527135915798"></p>
 ]]></content>
       <categories>
