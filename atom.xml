@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-05-27T07:27:57.031Z</updated>
+  <updated>2022-05-27T09:10:31.229Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>去除来必力评论框下面的广告</title>
+    <link href="https://blog.zoutl.cn/515.html"/>
+    <id>https://blog.zoutl.cn/515.html</id>
+    <published>2022-05-27T09:01:32.000Z</published>
+    <updated>2022-05-27T09:10:31.229Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>关掉了浏览器的屏蔽广告插件后，突然发现来必力的评论框下面居然有广告，这肯定不能忍，找到了下面两个方法（通过添加CSS或JavaScript代码去除），这两个方法单独使用或者一起使用都可以把来必力的评论框下面的广告给去除</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="添加CSS代码"><a href="#添加CSS代码" class="headerlink" title="添加CSS代码"></a>添加CSS代码</h3><p>在主题的文件夹中找到normalize.min.css，具体路径看下图</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220527170745531.png" alt="image-20220527170745531"></p><p>打开文件后直接在最下面加入下面代码</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.trc_rbox_container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="添加JavaScript代码"><a href="#添加JavaScript代码" class="headerlink" title="添加JavaScript代码"></a>添加JavaScript代码</h3><p>在主题的文件夹中找到livere.pug，具体路径看下图</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220527170846522.png" alt="image-20220527170846522"></p><p>打开文件后直接在最下面加入下面代码</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">script.</span><br><span class="line">  <span class="keyword">var</span> intervalFunctionID = <span class="built_in">setInterval</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; myTimer() &#125;, <span class="number">1000</span>);</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">myTimer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">&quot;taboola-livere&quot;</span>) != <span class="literal">null</span>)</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">document</span>.getElementById(<span class="string">&quot;taboola-livere&quot;</span>).style.display == <span class="string">&quot;none&quot;</span>)</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="comment">//alert(&quot;Interval function stopped&quot;);</span></span><br><span class="line">          <span class="built_in">clearInterval</span>(intervalFunctionID);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">document</span>.getElementById(<span class="string">&quot;taboola-livere&quot;</span>).style.display=<span class="string">&quot;none&quot;</span>;</span><br><span class="line">      <span class="comment">//alert(&quot;Interval function running&quot;);</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;关掉了浏览器的屏蔽广告插件后，突然发现来必力的评论框下面居然有广告，这肯定不能忍，找到了下面两个方法（通过添加CSS或JavaScript代</summary>
+      
+    
+    
+    
+    <category term="Hexo博客" scheme="https://blog.zoutl.cn/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+    <category term="Hexo博客" scheme="https://blog.zoutl.cn/tags/Hexo%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>jsdelivr被污染导致本站不翻墙无法正常访问</title>
@@ -500,30 +524,6 @@
     
     
     <category term="Maven" scheme="https://blog.zoutl.cn/tags/Maven/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo安装和卸载插件命令</title>
-    <link href="https://blog.zoutl.cn/494.html"/>
-    <id>https://blog.zoutl.cn/494.html</id>
-    <published>2022-04-11T03:35:09.000Z</published>
-    <updated>2022-04-25T19:41:08.080Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="查看已安装插件"><a href="#查看已安装插件" class="headerlink" title="查看已安装插件"></a>查看已安装插件</h3><p>hexo的插件配置在根目录的<code>package.json</code>中，在<code>dependencies</code>节点中</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;hexo-site&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;private&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;build&quot;</span>: <span class="string">&quot;hexo generate&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;clean&quot;</span>: <span class="string">&quot;hexo clean&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;deploy&quot;</span>: <span class="string">&quot;hexo deploy&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;server&quot;</span>: <span class="string">&quot;hexo server&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;hexo&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;5.4.0&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;hexo&quot;</span>: <span class="string">&quot;^5.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-abbrlink&quot;</span>: <span class="string">&quot;^2.2.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-algoliasearch&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-blog-encrypt&quot;</span>: <span class="string">&quot;^3.1.6&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-browsersync&quot;</span>: <span class="string">&quot;^0.3.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hexo-deployer-git&quot;</span>: <span class="string">&quot;^3.0.0&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install 插件名称 --save</span><br></pre></td></tr></table></figure><h3 id="卸载命令"><a href="#卸载命令" class="headerlink" title="卸载命令"></a>卸载命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall 插件名称</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;查看已安装插件&quot;&gt;&lt;a href=&quot;#查看已安装插件&quot; class=&quot;headerlink&quot; title=&quot;查看已安装插件&quot;&gt;&lt;/a&gt;查看已安装插件&lt;/h3&gt;&lt;p&gt;hexo的插件配置在根目录的&lt;code&gt;package.json&lt;/code&gt;中，在&lt;code&gt;de</summary>
-      
-    
-    
-    
-    <category term="Hexo博客" scheme="https://blog.zoutl.cn/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="Hexo博客" scheme="https://blog.zoutl.cn/tags/Hexo%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
