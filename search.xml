@@ -14803,7 +14803,7 @@
 <h2 id="Windows系统安装"><a href="#Windows系统安装" class="headerlink" title="Windows系统安装"></a>Windows系统安装</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>CMD命令进入解压后的文件夹内的bin文件夹，输入以下命令运行Nacos，standalone代表单机模式运行</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">startup.cmd -m standalone</span><br></pre></td></tr></table></figure>
 
-<p>在浏览器输入<a href="http://localhost:8848/nacos%EF%BC%8C%E7%84%B6%E5%90%8E%E8%BF%9B%E8%A1%8C%E7%99%BB%E5%BD%95%EF%BC%8C%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E9%83%BD%E6%98%AF%60nacos%60%EF%BC%8C%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E8%BF%9B%E5%85%A5%E4%B8%8B%E9%9D%A2%E7%95%8C%E9%9D%A2">http://localhost:8848/nacos，然后进行登录，用户名和密码都是`nacos`，登录成功进入下面界面</a></p>
+<p>在浏览器输入<code>http://localhost:8848/nacos</code>，然后进行登录，用户名和密码都是<code>nacos</code>，登录成功进入下面界面</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220317212844381.png" alt="image-20220317212844381"></p>
 <h3 id="连接MySQL数据库"><a href="#连接MySQL数据库" class="headerlink" title="连接MySQL数据库"></a>连接MySQL数据库</h3><p>先关闭正在运行的Nacos程序，直接关闭cmd窗口即可</p>
 <p>Nacos默认使用的数据是本地的，也可以配置成使用MySQL的数据</p>
