@@ -2292,9 +2292,9 @@
 
 <h3 id="运行代码时出现错误"><a href="#运行代码时出现错误" class="headerlink" title="运行代码时出现错误"></a>运行代码时出现错误</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210620082302.jpg" alt="img"></p>
 <blockquote>
-<p>代表连接超时了，我们配置下防火墙，开一个6379端口权限</p>
+<p>代表连接超时了，我们配置下防火墙，开一个6379端口权限，<font color="#dd0000">如果是云服务器要开放6379的防火墙</font></p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd \--zone=public \--add-port=6379/tcp \--permanent</span><br><span class="line">firewall-cmd \--reload</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开端口</span></span><br><span class="line">firewall-cmd --zone=public --add-port=6379/tcp --permanent</span><br><span class="line"><span class="comment"># 重启</span></span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>修改 <code>/usr/local/redis/redis.conf</code> 配置文件，将<code>bind 127.0.0.1</code>注释掉，在前面加<code>#</code>号即可（因为这里绑定了本机）</p>
@@ -2303,7 +2303,7 @@
 <h3 id="重启Redis服务"><a href="#重启Redis服务" class="headerlink" title="重启Redis服务"></a>重启Redis服务</h3><blockquote>
 <p>重启Redis服务，再次运行Java代码</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 停止Redis服务</span></span><br><span class="line">./bin/redis-cli shutdown</span><br><span class="line"><span class="comment"># 启动Redis服务</span></span><br><span class="line">./bin/redis-server ./redis.conf </span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 停止Redis服务</span></span><br><span class="line">./bin/redis-cli shutdown</span><br><span class="line"><span class="comment"># 启动Redis服务</span></span><br><span class="line">./bin/redis-server ./redis.conf</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>再次出现错误（下面是错误信息）</p>
