@@ -14789,7 +14789,7 @@
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>参考文章：<a href="https://blog.csdn.net/cjy_lean/article/details/105822451">微信小程序项目和目录结构以及各个文件夹和文件的作用_cjy_lean的博客-CSDN博客</a></p>
 ]]></content>
       <categories>
-        <category>后端</category>
+        <category>微信小程序</category>
       </categories>
       <tags>
         <tag>微信小程序</tag>
@@ -22445,6 +22445,40 @@
       </categories>
       <tags>
         <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微信小程序引入Vant Weapp组件</title>
+    <url>/518.html</url>
+    <content><![CDATA[<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>GitHub地址：<a href="https://github.com/youzan/vant-weapp">youzan/vant-weapp: 轻量、可靠的小程序 UI 组件库 (github.com)</a></p>
+<p>下载地址：<a href="https://github.com/youzan/vant-weapp/archive/refs/heads/dev.zip">https://github.com/youzan/vant-weapp/archive/refs/heads/dev.zip</a></p>
+<p>解压后里面有一个名为<code>dist</code>的文件夹，这个文件夹包含了我们要使用的Vant Weapp组件</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221124201239421.png" alt="image-20221124201239421"></p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="复制dist文件夹"><a href="#复制dist文件夹" class="headerlink" title="复制dist文件夹"></a>复制dist文件夹</h4><p>将上面解压后得到的<code>dist</code>文件夹到项目文件夹中，和<code>pages</code>文件夹同级，如果不能直接在微信开发工具中粘贴就用电脑的资源管理器</p>
+<img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221124202226224.png" alt="image-20221124202226224" style="zoom:80%;" />
+
+<h4 id="修改app-json"><a href="#修改app-json" class="headerlink" title="修改app.json"></a>修改app.json</h4><p>将<code>app.json</code>中的 <code>&quot;style&quot;: &quot;v2&quot;</code> 删除，小程序的<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html#style">新版基础组件</a>强行加上了许多样式，难以覆盖，不关闭将造成部分组件样式混乱</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221124203510350.png" alt="image-20221124203510350"></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><blockquote>
+<p>在json文件中配置</p>
+</blockquote>
+<p>要在哪个页面使用组件，就在其对应的json文件中配置</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221124204847754.png" alt="image-20221124204847754"></p>
+<blockquote>
+<p>代码</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;default&quot;</span>&gt;</span>默认按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;primary&quot;</span>&gt;</span>主要按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;info&quot;</span>&gt;</span>信息按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;warning&quot;</span>&gt;</span>警告按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">type</span>=<span class="string">&quot;danger&quot;</span>&gt;</span>危险按钮<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>效果</p>
+</blockquote>
+<img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221124205104037.png" alt="image-20221124205104037" style="zoom:67%;" />
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
       </tags>
   </entry>
 </search>
