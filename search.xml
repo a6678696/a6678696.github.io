@@ -22474,6 +22474,12 @@
 <p>效果</p>
 </blockquote>
 <img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221124205104037.png" alt="image-20221124205104037" style="zoom:67%;" />
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>上面是<code>局部引入</code>组件（一般建议使用这种方式），也就是说，组件只在指定页面生效（谁引入谁才可以用）</p>
+<p>如果嫌麻烦可以使用<code>全局引入</code>，直接在<code>app.json</code>中添加以下代码来实现引入（和其它属性使用英文的<code>,</code>分隔），这样被引入的组件在所有页面都会生效</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;usingComponents&quot;</span>: &#123;</span><br><span class="line">    <span class="comment">//引入按钮组件</span></span><br><span class="line">    <span class="attr">&quot;van-button&quot;</span>: <span class="string">&quot;/dist/button/index&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221124231959231.png" alt="image-20221124231959231"></p>
 ]]></content>
       <categories>
         <category>微信小程序</category>
