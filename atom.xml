@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-11-27T17:09:48.689Z</updated>
+  <updated>2022-12-01T14:53:48.687Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序模板的使用与引用</title>
+    <link href="https://blog.zoutl.cn/524.html"/>
+    <id>https://blog.zoutl.cn/524.html</id>
+    <published>2022-12-01T13:39:20.000Z</published>
+    <updated>2022-12-01T14:53:48.687Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>对于一些重复使用的模块，我们可以将它封装成模板，以减少代码量</p><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>定义一个名为<code>template1</code>的模板</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">name</span>=<span class="string">&quot;template1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span>&gt;</span>&#123;&#123;myName&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure><p>初始数据，写在使用模板的页面js中</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 页面的初始数据</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">templateData</span>:&#123;</span><br><span class="line">    <span class="attr">myName</span>: <span class="string">&#x27;ledao&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><code>is属性</code>动态决定具体需要渲染哪个模板，<code>data属性</code>是要引用的数据，在定义模板的页面使用时不用import</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">&quot;template1&quot;</span> <span class="attr">data</span>=<span class="string">&quot;&#123;&#123;...templateData&#125;&#125;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="import"><a href="#import" class="headerlink" title="import"></a>import</h4><p>在一个页面引用<code>定义在其它页面的模板</code>时，这个模板本来的js和css就不能用了，需要在引用模板的页面重新写js和css，示例代码如下（<code>.wxml后缀</code>加不加都行）</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">import</span> <span class="attr">src</span>=<span class="string">&quot;/pages/templatetest/templatetest.wxml&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">&quot;template1&quot;</span> <span class="attr">data</span>=<span class="string">&quot;&#123;&#123;...templateData&#125;&#125;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><h4 id="include"><a href="#include" class="headerlink" title="include"></a>include</h4><p>include将目标文件<strong>除了</strong> <code>&lt;template/&gt;</code> <code>&lt;wxs/&gt;</code> 外的整个代码引入，相当于是拷贝到 <code>include</code> 位置</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">include</span> <span class="attr">src</span>=<span class="string">&quot;/pages/templatetest/templatetest.wxml&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>微信官方文档：<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/wxml/template.html">模板 | 微信开放文档 (qq.com)</a>和<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/wxml/import.html">引用 | 微信开放文档 (qq.com)</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;对于一些重复使用的模块，我们可以将它封装成模板，以减少代码量&lt;/p&gt;
+&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>微信小程序使用Vant Weapp组件库实现tabBar标签栏</title>
@@ -496,34 +521,6 @@
     
     
     <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实现合并GitHub远程分支</title>
-    <link href="https://blog.zoutl.cn/504.html"/>
-    <id>https://blog.zoutl.cn/504.html</id>
-    <published>2022-04-20T06:20:57.000Z</published>
-    <updated>2022-04-25T19:40:38.547Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>要合并的分支名称为a，主分支名称为master，实现合并GitHub远程分支的方法有两种：</p><ol><li>使用Git命令合并</li><li>直接在GitHub中合并</li></ol><h2 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h2><p>创建一个分支并把它提交到远程仓库中，为了有东西可测试</p><p>当前在master分支，新建一个a分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch a</span><br></pre></td></tr></table></figure><p>切换到a分支，也可以直接使用<code>git checkout -b a</code>命令创建并切换到a分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout a</span><br></pre></td></tr></table></figure><p>在分支a下新建一个名为aaa.txt的文件，并把a分支push到GitHub远程仓库，此时GitHub仓库就多了一个a分支</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220420143941714.png" alt="image-20220420143941714"></p><h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="使用Git命令合并"><a href="#使用Git命令合并" class="headerlink" title="使用Git命令合并"></a>使用Git命令合并</h3><p>切换到master分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure><p>删除本地的a分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D a</span><br></pre></td></tr></table></figure><p>创建一个本地的a分支，并同步GitHub远程a分支的内容到本地的a分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch a origin/a</span><br></pre></td></tr></table></figure><p>合并a分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge a</span><br></pre></td></tr></table></figure><p>删除已经被合并的a分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d a</span><br></pre></td></tr></table></figure><p>push本地master分支到GitHub远程库</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p>删除GitHub远程a分支</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin a -d</span><br></pre></td></tr></table></figure><h3 id="直接在GitHub中合并"><a href="#直接在GitHub中合并" class="headerlink" title="直接在GitHub中合并"></a>直接在GitHub中合并</h3><blockquote><p>进入GitHub仓库页面，查看所有分支</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220420145816162.png" alt="image-20220420145816162"></p><blockquote><p>选择a分支</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220420145950959.png" alt="image-20220420145950959"></p><blockquote><p>创建合并请求</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220420150043000.png" alt="image-20220420150043000"></p><blockquote><p>合并请求</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220420150245456.png" alt="image-20220420150245456"></p><blockquote><p>确认合并</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220420150320968.png" alt="image-20220420150320968"></p><blockquote><p>删除已经合并的分支</p></blockquote><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220420150426079.png" alt="image-20220420150426079"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;要合并的分支名称为a，主分支名称为master，实现合并GitHub远程分支的方法有两种：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;使用Git命令合并&lt;/</summary>
-      
-    
-    
-    
-    <category term="版本控制" scheme="https://blog.zoutl.cn/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
-    
-    
-    <category term="GitHub" scheme="https://blog.zoutl.cn/tags/GitHub/"/>
-    
-    <category term="Git" scheme="https://blog.zoutl.cn/tags/Git/"/>
     
   </entry>
   
