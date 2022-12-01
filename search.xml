@@ -16369,7 +16369,7 @@
 </tr>
 <tr>
 <td align="center">RabbitMQ</td>
-<td align="center">消息队列</td>
+<td align="center">消息队列（需要安装延迟队列的插件：<a href="https://blog.zoutl.cn/356.html">RabbitMQ 实现延时队列</a> ）</td>
 </tr>
 <tr>
 <td align="center">Vue.js</td>
