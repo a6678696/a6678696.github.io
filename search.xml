@@ -23107,9 +23107,9 @@
 <p>分析</p>
 </blockquote>
 <ol>
-<li>点击outer时，只会触发它本身的事件handout事件，即：<font color="#dd0000">触发了handout</font></li>
-<li>点击middle时，触发它本身的事件handmiddle事件后，向其父节点outer冒泡触发handout事件，即：<font color="#dd0000">触发了handout，handmiddle</font></li>
-<li>点击inner时，触发它本身的事件handinner事件后，向其父节点middle冒泡触发handmiddle事件（相当于点击了middle），最后触发了handout事件，即：<font color="#dd0000">触发了handout，handmiddle，handout</font></li>
+<li>点击outer时，只会触发它本身的事件handout事件，即：<font color="#dd0000">只触发了handout事件</font></li>
+<li>点击middle时，触发它本身的事件handmiddle事件后，向其父节点outer冒泡触发handout事件，即：<font color="#dd0000">依次触发了handmiddle、handout事件</font></li>
+<li>点击inner时，触发它本身的事件handinner事件后，向其父节点middle冒泡触发handmiddle事件（相当于点击了middle），最后触发了handout事件，即：<font color="#dd0000">依次触发了handinner、handmiddle、handout事件</font></li>
 </ol>
 <h4 id="非冒泡事件"><a href="#非冒泡事件" class="headerlink" title="非冒泡事件"></a>非冒泡事件</h4><p>catchtap会阻止事件向父节点冒泡</p>
 <blockquote>
@@ -23128,7 +23128,7 @@
 <blockquote>
 <p>分析</p>
 </blockquote>
-<p>因为catchtap是阻止向父节点冒泡的，所以点击outer、middle、inner都只会触发自身的事件</p>
+<p>因为catchtap是阻止向父节点冒泡的，所以点击outer、middle、inner都只会触发自身的事件，catchtap的事件可以被子节点触发</p>
 <h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>微信开发文档地址：<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html#%E6%99%AE%E9%80%9A%E4%BA%8B%E4%BB%B6%E7%BB%91%E5%AE%9A">事件 | 微信开放文档 (qq.com)</a></p>
 ]]></content>
       <categories>
