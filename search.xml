@@ -23223,20 +23223,4 @@
         <tag>微信小程序</tag>
       </tags>
   </entry>
-  <entry>
-    <title>MobaXterm配置Git Bash命令</title>
-    <url>/532.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>由于经常使用到Git Bash命令，因为有多个项目需要Git来管理，所以需要在多个文件夹中切换，这样子就会很麻烦，要是可以统一管理就好了，MobaXterm的功能强大可以很好地实现我的想法</p>
-<h3 id="找到sh-exe"><a href="#找到sh-exe" class="headerlink" title="找到sh.exe"></a>找到sh.exe</h3><p>到Git的安装目录下找到sh.exe，记住它的路径，我这里的路径为<code>D:\Git\bin\sh.exe</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221206202714722.png" alt="image-20221206202714722"></p>
-<h3 id="开始配置Git-Bash命令"><a href="#开始配置Git-Bash命令" class="headerlink" title="开始配置Git Bash命令"></a>开始配置Git Bash命令</h3><p>根据上面的路径在Advanced Shell settings处填<code>&quot;D:\Git\bin\sh.exe&quot; --login</code>，文件夹如果选择D盘则说明打开命令后直接进入D盘，可以配置Git Bash命令管理多个文件夹</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221206210021052.png" alt="image-20221206210021052"></p>
-]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
 </search>
