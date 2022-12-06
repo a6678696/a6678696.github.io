@@ -4660,28 +4660,26 @@
   <entry>
     <title>Git上传本地代码到GitHub</title>
     <url>/237.html</url>
-    <content><![CDATA[<h3 id="初始化仓库"><a href="#初始化仓库" class="headerlink" title="初始化仓库"></a>初始化仓库</h3><p>初始化一个 Git 仓库，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变（需要进入要初始化的文件夹内部，右键点击选择Git Bash Here）</p>
-<p>输入初始化命令：</p>
+    <content><![CDATA[<h3 id="初始化本地仓库"><a href="#初始化本地仓库" class="headerlink" title="初始化本地仓库"></a>初始化本地仓库</h3><p>初始化一个 Git 仓库，Git 仓库会生成一个 .git 目录，该目录包含了资源的所有元数据，其他的项目目录保持不变（需要进入要初始化的文件夹内部，右键点击选择Git Bash Here）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
 
 <p>输入命令查看当前状态：<code>git status</code>，文件名颜色为红色</p>
-<h3 id="添加到仓库中"><a href="#添加到仓库中" class="headerlink" title="添加到仓库中"></a>添加到仓库中</h3><p>输入添加命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+<h3 id="添加到本地仓库"><a href="#添加到本地仓库" class="headerlink" title="添加到本地仓库"></a>添加到本地仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
 <p>输入命令查看当前状态：<code>git status</code>，文件名颜色为绿色</p>
-<h3 id="commit到仓库"><a href="#commit到仓库" class="headerlink" title="commit到仓库"></a>commit到仓库</h3><p>输入提交命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注&quot;</span></span><br></pre></td></tr></table></figure>
+<h3 id="提交到本地仓库"><a href="#提交到本地仓库" class="headerlink" title="提交到本地仓库"></a>提交到本地仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;提交备注&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>输入命令查看当前状态：<code>git status</code>，发现没有东西可以提交</p>
-<h3 id="复制项目的SSH地址"><a href="#复制项目的SSH地址" class="headerlink" title="复制项目的SSH地址"></a>复制项目的SSH地址</h3><p>记得先配置GitHub的SSH Key，如何配置查看博客：<a href="/236.html">GitHub配置SSH Key</a></p>
-<h3 id="将本地的仓库关联到GitHub上"><a href="#将本地的仓库关联到GitHub上" class="headerlink" title="将本地的仓库关联到GitHub上"></a>将本地的仓库关联到GitHub上</h3><p>把上一步复制的地址放到origin后，如果已经关联过则省略本步骤</p>
+<h3 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h3><p>记得先配置GitHub的SSH Key，如何配置查看博客：<a href="https://blog.zoutl.cn/236.html">GitHub 配置 SSH Key | LeDao’s Blog (zoutl.cn)</a></p>
+<h3 id="和远程仓库关联"><a href="#和远程仓库关联" class="headerlink" title="和远程仓库关联"></a>和远程仓库关联</h3><p>把GitHub的SSH链接放到origin后，获取步骤看下图</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221206190919103.png" alt="image-20221206190919103"></p>
 <p>输入关联命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin SSH地址</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin GitHub的SSH链接</span><br></pre></td></tr></table></figure>
 
-<h3 id="上传代码到GitHub远程仓库"><a href="#上传代码到GitHub远程仓库" class="headerlink" title="上传代码到GitHub远程仓库"></a>上传代码到GitHub远程仓库</h3><p>输入推送命令：</p>
+<h3 id="上传到GitHub"><a href="#上传到GitHub" class="headerlink" title="上传到GitHub"></a>上传到GitHub</h3><p>输入推送命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
-<h3 id="去GitHub查看结果"><a href="#去GitHub查看结果" class="headerlink" title="去GitHub查看结果"></a>去GitHub查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729132853.jpg" alt="img"></p>
+<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210729132853.jpg" alt="img"></p>
 ]]></content>
       <categories>
         <category>版本控制</category>
@@ -22513,7 +22511,8 @@
 
 <img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221124231959231.png" alt="image-20221124231959231" style="zoom:67%;" />
 
-<h4 id="样式不生效"><a href="#样式不生效" class="headerlink" title="样式不生效"></a>样式不生效</h4><p>第一次引用某个组件时，要是样式不生效的话，就重启微信开发者工具即可</p>
+<h4 id="样式不生效"><a href="#样式不生效" class="headerlink" title="样式不生效"></a>样式不生效</h4><p>第一次引用某个组件时，<font color="#dd0000"><strong>需要先清除一下编译缓存，然后再编译一次</strong></font>，不然样式是不会生效的</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221206120651964.png" alt="image-20221206120651964"></p>
 <h4 id="关闭热重载"><a href="#关闭热重载" class="headerlink" title="关闭热重载"></a>关闭热重载</h4><p>不关闭的话，可能会出现一些问题</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-12-04%20162602.gif"></p>
 <h4 id="构建npm的作用"><a href="#构建npm的作用" class="headerlink" title="构建npm的作用"></a>构建npm的作用</h4><p>通过npm下载Vant Weapp组件库到项目中后，<code>node_modules</code>文件夹会生成一个<code>@vant</code>文件夹，然而这个<code>@vant</code>文件夹的内容是不能引用的</p>
@@ -23222,6 +23221,22 @@
       </categories>
       <tags>
         <tag>微信小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MobaXterm配置Git Bash命令</title>
+    <url>/532.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>由于经常使用到Git Bash命令，因为有多个项目需要Git来管理，所以需要在多个文件夹中切换，这样子就会很麻烦，要是可以统一管理就好了，MobaXterm的功能强大可以很好地实现我的想法</p>
+<h3 id="找到sh-exe"><a href="#找到sh-exe" class="headerlink" title="找到sh.exe"></a>找到sh.exe</h3><p>到Git的安装目录下找到sh.exe，记住它的路径，我这里的路径为<code>D:\Git\bin\sh.exe</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221206202714722.png" alt="image-20221206202714722"></p>
+<h3 id="开始配置Git-Bash命令"><a href="#开始配置Git-Bash命令" class="headerlink" title="开始配置Git Bash命令"></a>开始配置Git Bash命令</h3><p>根据上面的路径在Advanced Shell settings处填<code>&quot;D:\Git\bin\sh.exe&quot; --login</code>，文件夹如果选择D盘则说明打开命令后直接进入D盘，可以配置Git Bash命令管理多个文件夹</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221206210021052.png" alt="image-20221206210021052"></p>
+]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
       </tags>
   </entry>
 </search>
