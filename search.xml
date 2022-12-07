@@ -23454,4 +23454,25 @@
         <tag>微信小程序</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Spring Boot配置本地文件映射路径</title>
+    <url>/538.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Spring Boot项目只能访问项目static文件夹内的文件，如果想访问磁盘上的其它文件，就需要配置一下本地文件映射路径了</p>
+<h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><p>新建一个配置类，实现WebMvcConfigurerAdapter接口，然后在重写的方法中添加映射的路径和真实的文件路径，本地路径的格式有两种：（即下面代码的第二个字符串的内容）</p>
+<ol>
+<li>格式一：<code>file:E:\\data\\mall\\images\\swiper\\</code></li>
+<li>格式二：<code>file:E:/data/mall/images/swiper/</code></li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.servlet.config.annotation.WebMvcConfigurer;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 本地文件映射路径配置类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-12-08 3:08</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FilePathConfig</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addResourceHandlers</span><span class="params">(ResourceHandlerRegistry registry)</span> </span>&#123;</span><br><span class="line">        registry.addResourceHandler(<span class="string">&quot;/swiper/image/**&quot;</span>).addResourceLocations(<span class="string">&quot;file:E:\\data\\mall\\images\\swiper\\&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>我的项目端口为<code>8080</code>，在本地路径<code>E:\data\mall\images\swiper</code>中有一张图片<code>1.jpeg</code>，所以我可以通过<code>http://localhost:8080/swiper/image/1.jpeg</code>访问这张图片，如果可以看到图片则说明配置成功了</p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Spring Boot</tag>
+      </tags>
+  </entry>
 </search>
