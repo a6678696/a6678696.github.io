@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-12-07T12:36:34.295Z</updated>
+  <updated>2022-12-07T15:04:04.649Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序引入iconfont矢量图标样式</title>
+    <link href="https://blog.zoutl.cn/536.html"/>
+    <id>https://blog.zoutl.cn/536.html</id>
+    <published>2022-12-07T14:33:03.000Z</published>
+    <updated>2022-12-07T15:04:04.649Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="生成Font-class"><a href="#生成Font-class" class="headerlink" title="生成Font class"></a>生成Font class</h3><p>具体步骤查看博客：<a href="https://blog.zoutl.cn/477.html">Hexo 的 Butterfly 主题使用 iconfont 图标 | LeDao’s Blog (zoutl.cn)</a>，<font color="#dd0000">看到生成 Font class就行，然后接着看本博客</font></p><h3 id="在小程序中使用"><a href="#在小程序中使用" class="headerlink" title="在小程序中使用"></a>在小程序中使用</h3><h4 id="复制样式代码"><a href="#复制样式代码" class="headerlink" title="复制样式代码"></a>复制样式代码</h4><p>点击链接，会打开一个页面，页面内容就是我们需要的样式代码，然后把它复制下来</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207225241081.png" alt="image-20221207225241081"></p><h4 id="复制到小程序"><a href="#复制到小程序" class="headerlink" title="复制到小程序"></a>复制到小程序</h4><p>首先新建一个名为<code>styles</code>的文件夹（和<code>pages</code>的位置是同一级），在这个文件夹里面新建一个名为<code>iconfont.wxss</code>的文件，把上一步复制到的样式代码复制进去</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207225510817.png" alt="image-20221207225510817"></p><h4 id="全局使用样式"><a href="#全局使用样式" class="headerlink" title="全局使用样式"></a>全局使用样式</h4><p>在<code>app.wxss</code>里面加入以下代码，然后就可以全局使用引入的iconfont图标了</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 全局引入iconfont样式 */</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&quot;./styles/iconfont.wxss&quot;</span>;</span><br></pre></td></tr></table></figure><h4 id="使用图标"><a href="#使用图标" class="headerlink" title="使用图标"></a>使用图标</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">class</span>=<span class="string">&quot;iconfont icon-cart&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>每次加入一个新图标或修改后，都需要重新获取样式代码</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;生成Font-class&quot;&gt;&lt;a href=&quot;#生成Font-class&quot; class=&quot;headerlink&quot; title=&quot;生成Font class&quot;&gt;&lt;/a&gt;生成Font class&lt;/h3&gt;&lt;p&gt;具体步骤查看博客：&lt;a href=&quot;https://blog</summary>
+      
+    
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo博客报错: &quot;ENOENT: no such file or directory, open E:\hexo-blog\db.json&quot;</title>
@@ -494,31 +518,6 @@
     
     
     <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Markdown语法写邮件</title>
-    <link href="https://blog.zoutl.cn/516.html"/>
-    <id>https://blog.zoutl.cn/516.html</id>
-    <published>2022-06-25T13:10:42.000Z</published>
-    <updated>2022-06-25T14:09:30.926Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>插件名称为：<code>Markdown Here</code>，安装链接如下：（不会科学上网的使用第二个链接）</p><table><thead><tr><th align="center">出处</th><th align="center">链接</th></tr></thead><tbody><tr><td align="center">谷歌插件商店（可以科学上网的使用，最方便）</td><td align="center"><a href="https://chrome.google.com/webstore/detail/markdown-here/elifhakcjgalahccnjkneoccemfahfoa">查看</a></td></tr><tr><td align="center">扩展迷（国内使用）</td><td align="center"><a href="https://www.extfans.com/productivity/elifhakcjgalahccnjkneoccemfahfoa/">查看</a></td></tr></tbody></table><h2 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h2><p>安装后要启用插件，只可以在正文部分使用，使用Markdown语法后写完邮件后，在正文区域右键点击，点击<code>Markdown转换</code>然后发送即可，如果要继续编辑再次点击<code>Markdown转换</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-06-25%20214713.gif"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h2&gt;&lt;p&gt;插件名称为：&lt;code&gt;Markdown Here&lt;/code&gt;，安装链接如下：（不会科学上网的使用第二个链接）&lt;/p&gt;
-&lt;</summary>
-      
-    
-    
-    
-    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
-    
-    
-    <category term="Markdown" scheme="https://blog.zoutl.cn/tags/Markdown/"/>
     
   </entry>
   
