@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-12-05T08:54:44.108Z</updated>
+  <updated>2022-12-07T10:59:33.548Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Vite创建Vue3项目</title>
+    <link href="https://blog.zoutl.cn/534.html"/>
+    <id>https://blog.zoutl.cn/534.html</id>
+    <published>2022-12-07T10:45:31.000Z</published>
+    <updated>2022-12-07T10:59:33.548Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>和Vue CLI相比，Vite创建和启动项目都非常快，Vue.js的官方也推荐使用Vite</p><h3 id="创建过程"><a href="#创建过程" class="headerlink" title="创建过程"></a>创建过程</h3><ol><li><p>以管理员身份打开CMD，进入存放项目的文件夹</p></li><li><p>输入下面命令，然后填项目名称、选择Vue、选择JavaScript，项目几乎瞬间创建好了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init vite@latest</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207185134249.png" alt="image-20221207185134249"></p></li><li><p>执行一下提示的3条命令以安装依赖和启动项目，启动后通过<code>http://localhost:5173</code>访问</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207185537687.png" alt="image-20221207185537687"></p></li><li><p>成功运行的界面如下图，如果要停止项目的运行，在CMD窗口按下复制的快捷键（<code>CTRL+C</code>），然后确认即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207185836447.png" alt="image-20221207185836447"></p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;和Vue CLI相比，Vite创建和启动项目都非常快，Vue.js的官方也推荐使用Vite&lt;/p&gt;
+&lt;h3 id=&quot;创建过程&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
+    
+    <category term="Vite" scheme="https://blog.zoutl.cn/tags/Vite/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue CLI3.x及以上版本创建Vue项目</title>
+    <link href="https://blog.zoutl.cn/533.html"/>
+    <id>https://blog.zoutl.cn/533.html</id>
+    <published>2022-12-07T08:58:31.000Z</published>
+    <updated>2022-12-07T10:59:33.549Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>3.x及以上版本的Vue CLI创建Vue项目有两种方法：</p><ol><li>使用命令创建，更方便</li><li>使用图形化界面，更人性化</li></ol><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><p>主要看vue-cli的版本，如果版本是2.x，那么创建项目的命令为<code>vue init webpack 项目名称</code>；如果版本是3.x及以上，那么创建项目的命令为<code>vue create 项目名称</code></p><table><thead><tr><th align="center">名称</th><th align="center">版本</th></tr></thead><tbody><tr><td align="center">Node.js</td><td align="center">18.12.1</td></tr><tr><td align="center">npm</td><td align="center">8.19.2</td></tr><tr><td align="center">vue-cli</td><td align="center">5.0.8</td></tr></tbody></table><h3 id="创建过程"><a href="#创建过程" class="headerlink" title="创建过程"></a>创建过程</h3><h4 id="使用命令创建"><a href="#使用命令创建" class="headerlink" title="使用命令创建"></a>使用命令创建</h4><ol><li><p>以管理员身份打开CMD，进入存放项目的文件夹</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207173805890.png" alt="image-20221207173805890"></p></li><li><p>使用vue create命令创建项目，下面命令是创建一个名为<code>hello-world</code>的项目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create hello-world</span><br></pre></td></tr></table></figure></li><li><p>然后选第三个，手动搭建环境</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207171705084.png" alt="image-20221207171705084"></p></li><li><p>接下来安装一些插件，按<code>空格键</code>选择或取消选择，选好后按<code>回车键</code>进行下一步</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207172050407.png" alt="image-20221207172050407"></p></li><li><p>选择Vue.js的版本，可以选择<code>3.x</code>或<code>2.x</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207172434463.png" alt="image-20221207172434463"></p></li><li><p>选择router的模式，后期可以更改，这里填<code>y</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207172632880.png" alt="image-20221207172632880"></p></li><li><p>然后把一些配置放在<code>package.json</code>（个人习惯，选哪个都没问题）</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207173041954.png" alt="image-20221207173041954"></p></li><li><p>是否将当前选择的配置作为预设，下次新建项目时可以直接自动选择这些配置，我填<code>n</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207173333038.png" alt="image-20221207173333038"></p></li><li><p>项目创建好后，依次输入<code>cd hello-world</code>和<code>npm run serve</code>命令来启动项目，启动好后在浏览器地址栏输入<code>http://localhost:8080</code>即可访问，页面截图如下</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207174346837.png" alt="image-20221207174346837"></p></li><li><p>如果要停止项目的运行，在CMD窗口按下复制的快捷键（<code>CTRL+C</code>），然后确认即可</p></li></ol><h4 id="使用图形化界面"><a href="#使用图形化界面" class="headerlink" title="使用图形化界面"></a>使用图形化界面</h4><ol><li><p>也是使用管理员身份运行CMD，进入存放项目的文件夹</p></li><li><p>在自动打开的页面开始新建项目</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207175845800.png" alt="image-20221207175845800"></p></li><li><p>项目详情如下图</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207180050304.png" alt="image-20221207180050304"></p></li><li><p>选择一套预设，也就是项目的模板，我们选手动自己配置</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207180254563.png" alt="image-20221207180254563"></p></li><li><p>安装插件，一般安装下图3个即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207180416711.png" alt="image-20221207180416711"></p></li><li><p>选择Vue.js的版本和router的模式，然后点击下面的创建按钮</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207180553946.png" alt="image-20221207180553946"></p></li><li><p>是否保存为预设，一般不保存，创建一个项目很方便的，然后等着创建成功就行了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207180752175.png" alt="image-20221207180752175"></p></li><li><p>安装<code>axios</code>和<code>element-plus</code>依赖</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207181042374.png" alt="image-20221207181042374"></p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;3.x及以上版本的Vue CLI创建Vue项目有两种方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用命令创建，更方便&lt;/li&gt;
+&lt;li&gt;使用图形化界面</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows系统升级Node.js和Vue CLI</title>
+    <link href="https://blog.zoutl.cn/532.html"/>
+    <id>https://blog.zoutl.cn/532.html</id>
+    <published>2022-12-07T08:09:31.000Z</published>
+    <updated>2022-12-07T10:59:33.547Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>最近想升级一下电脑上的Node.js和Vue CLI，看了许多技术博客，基本上都是使用命令行安装，我试了一下老是出问题，最后还是卸载重装更加简单暴力。卸载Node.js后，Vue CLI也会被卸载</p><p>不过以前使用npm命令安装过的一些东西都要重新安装，卸载前先去看看安装过什么，以方便安装回来，安装路径看下图</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207164058394.png" alt="image-20221207164058394"></p><h3 id="升级过程"><a href="#升级过程" class="headerlink" title="升级过程"></a>升级过程</h3><h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><p>建议使用<code>Geek Uninstaller</code>来卸载Node.js，和使用控制面板卸载相比，<code>Geek Uninstaller</code>卸载得更干净，官网下载地址为：<a href="https://geekuninstaller.com/download">Geek Uninstaller - Download</a></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207164556852.png" alt="image-20221207164556852"></p><h4 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h4><p>安装Node.js步骤查看博客：<a href="https://blog.zoutl.cn/200.html">安装 vue-cli 脚手架 | LeDao’s Blog (zoutl.cn)</a>，安装好Node.js就行，先不安装Vue CLI（这是因为安装命令不一样）</p><h4 id="安装Vue-CLI"><a href="#安装Vue-CLI" class="headerlink" title="安装Vue CLI"></a>安装Vue CLI</h4><p>首先以管理员身份打开CMD，然后执行下面命令安装Vue CLI</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p>使用<code>vue -V</code>或<code>vue --version</code>查看Vue CLI的版本号，出现版本号说明安装成功了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221207165745889.png" alt="image-20221207165745889"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;最近想升级一下电脑上的Node.js和Vue CLI，看了许多技术博客，基本上都是使用命令行安装，我试了一下老是出问题，最后还是卸载重装更加</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Node.js" scheme="https://blog.zoutl.cn/tags/Node-js/"/>
+    
+  </entry>
   
   <entry>
     <title>微信小程序与Java后端接口交互</title>
@@ -269,7 +349,7 @@
     <link href="https://blog.zoutl.cn/521.html"/>
     <id>https://blog.zoutl.cn/521.html</id>
     <published>2022-07-27T05:37:38.000Z</published>
-    <updated>2022-11-27T08:24:38.564Z</updated>
+    <updated>2022-11-27T16:49:59.900Z</updated>
     
     <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>为了加快访问GitHub的速度，目前找到两个比较方便的方法：</p><ol><li>使用Edge插件<code>GitHub加速</code></li><li>使用软件<code>FastGithub</code>，<font color="#dd0000"><strong>这种方式比较稳定</strong></font></li></ol><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="使用Edge插件GitHub加速"><a href="#使用Edge插件GitHub加速" class="headerlink" title="使用Edge插件GitHub加速"></a>使用Edge插件GitHub加速</h4><p>插件地址：<a href="https://microsoftedge.microsoft.com/addons/detail/github%E5%8A%A0%E9%80%9F/alhnbdjjbokpmilgemopoomnldpejihb?hl=zh-CN">GitHub加速 - Microsoft Edge Addons</a>，安装后就可以访问GitHub了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221126134510390.png" alt="image-20221126134510390"></p><h4 id="使用软件FastGithub"><a href="#使用软件FastGithub" class="headerlink" title="使用软件FastGithub"></a>使用软件FastGithub</h4><p>GitHub地址：<a href="https://github.com/dotnetcore/FastGithub/releases">Releases · dotnetcore/FastGithub</a>，根据自己的电脑选择对应的版本</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221126134706416.png" alt="image-20221126134706416"></p><p>如果无法访问GitHub直接去百度搜索，我这里提供一下<code>Windows 64位</code>的版本</p><ul><li>百度网盘链接：<a href="https://pan.baidu.com/s/13MmCQgj1pDSEp9FsRUBv0g?pwd=rp1y">https://pan.baidu.com/s/13MmCQgj1pDSEp9FsRUBv0g?pwd=rp1y</a></li><li>提取码：<code>rp1y</code></li></ul><p>下载后解压，打开<code>fastgithub.exe</code>，<font color="#dd0000">不是FastGithub.UI.exe（这是监控流量的，可以不用打开）</font>，运行后是控制台窗口，只需保持运行即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221126135618956.png" alt="image-20221126135618956"></p>]]></content>
     
@@ -372,7 +452,7 @@
     <link href="https://blog.zoutl.cn/517.html"/>
     <id>https://blog.zoutl.cn/517.html</id>
     <published>2022-06-26T03:18:05.000Z</published>
-    <updated>2022-08-14T08:44:38.529Z</updated>
+    <updated>2022-08-14T08:45:33.278Z</updated>
     
     <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Java创建String字符串有两种方式：</p><ol><li>直接创建，存储在公共池，创建前会先检查公共池中是否已经存在相等的字符串，已存在就不会创建了直接引用已经存在的</li><li>通过new来创建，存储在堆上，无论是否已经存在相等的字符串，都会创建一个新的字符串</li></ol><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h3 id="直接创建"><a href="#直接创建" class="headerlink" title="直接创建"></a>直接创建</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str1 = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">String str2 = <span class="string">&quot;a&quot;</span>;</span><br></pre></td></tr></table></figure><h3 id="通过new来创建"><a href="#通过new来创建" class="headerlink" title="通过new来创建"></a>通过new来创建</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str4 = <span class="keyword">new</span> String(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">String str5 = <span class="keyword">new</span> String(<span class="string">&quot;a&quot;</span>);</span><br></pre></td></tr></table></figure><h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><h4 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-03-09 23:57</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str1 = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">        String str2 = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">        String str3 = str2;</span><br><span class="line">        String str4 = <span class="keyword">new</span> String(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        String str5 = <span class="keyword">new</span> String(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        String str6 = str5;</span><br><span class="line">        System.out.println(str1 == str2);</span><br><span class="line">        System.out.println(str2 == str3);</span><br><span class="line">        System.out.println(str3 == str4);</span><br><span class="line">        System.out.println(str4 == str5);</span><br><span class="line">        System.out.println(str5 == str6);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220626112852513.png" alt="image-20220626112852513"></p><h4 id="分析图解"><a href="#分析图解" class="headerlink" title="分析图解"></a>分析图解</h4><p>指向同一个的比较结果是true，反之则为false</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220626190134077.png" alt="image-20220626190134077"></p>]]></content>
     
@@ -439,78 +519,6 @@
     
     
     <category term="Hexo博客" scheme="https://blog.zoutl.cn/tags/Hexo%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jsdelivr被污染导致本站不翻墙无法正常访问</title>
-    <link href="https://blog.zoutl.cn/514.html"/>
-    <id>https://blog.zoutl.cn/514.html</id>
-    <published>2022-05-27T05:43:30.000Z</published>
-    <updated>2022-05-27T07:27:57.031Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本站使用的博客框架是<code>Hexo</code>，使用的主题是<code>Butterfly</code>，该主题使用的大多数都是<code>cdn.jsdelivr.net</code>上的静态资源，由于被污染后导致不翻墙无法访问，进而使本站无法正常访问</p><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><h3 id="替换方案"><a href="#替换方案" class="headerlink" title="替换方案"></a>替换方案</h3><p>把<code>cdn.jsdelivr.net</code>替换成下面四个网址之一即可（不保证一定可用，可以先试试行不行，貌似第二个最稳），等到<code>cdn.jsdelivr.net</code>恢复后改回来即可</p><figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">fastly.jsdelivr.net</span></span><br><span class="line"><span class="attr">gcore.jsdelivr.net</span></span><br><span class="line"><span class="attr">testingcf.jsdelivr.net</span></span><br><span class="line"><span class="attr">test1.jsdelivr.net</span></span><br></pre></td></tr></table></figure><h3 id="修改主题的配置"><a href="#修改主题的配置" class="headerlink" title="修改主题的配置"></a>修改主题的配置</h3><p><code>Butterfly</code>这个主题的静态资源引用定义在<code>/scripts/events</code>文件夹下的<code>config.js</code>中，打开它把<code>cdn.jsdelivr.net</code>替换成上面的四个网址之一</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220527135915798.png" alt="image-20220527135915798"></p><h2 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h2><p>还可以把这些静态资源下载下来，放在又拍云的云存储或直接放在主题文件夹中，只不过后期升级主题会很麻烦</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;本站使用的博客框架是&lt;code&gt;Hexo&lt;/code&gt;，使用的主题是&lt;code&gt;Butterfly&lt;/code&gt;，该主题使用的大多数都是&lt;c</summary>
-      
-    
-    
-    
-    <category term="Hexo博客" scheme="https://blog.zoutl.cn/categories/Hexo%E5%8D%9A%E5%AE%A2/"/>
-    
-    
-    <category term="Hexo博客" scheme="https://blog.zoutl.cn/tags/Hexo%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>IntelliJ IDEA使用插件实现对Stream流操作的调试</title>
-    <link href="https://blog.zoutl.cn/513.html"/>
-    <id>https://blog.zoutl.cn/513.html</id>
-    <published>2022-05-26T03:09:06.000Z</published>
-    <updated>2022-05-26T03:34:26.080Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><p>插件名称为：<code>Java Stream Debugger</code>，好像在IntelliJ IDEA的插件市场没找到，但是在已安装插件列表中已经有这个插件了，应该是新版的IntelliJ IDEA已经内置了这个插件（所以要使用这个插件就将IntelliJ IDEA更新为最新的版本即可）</p><h2 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h2><h3 id="要调试的代码"><a href="#要调试的代码" class="headerlink" title="要调试的代码"></a>要调试的代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Collectors;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-06-21 12:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        list.add(<span class="string">&quot;blog.zoutl.cn&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;www.zoutl.cn&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;www.baidu.cn&quot;</span>);</span><br><span class="line">        List&lt;String&gt; resultList=list.stream()</span><br><span class="line">                .filter(e-&gt;e.contains(<span class="string">&quot;zoutl.cn&quot;</span>))</span><br><span class="line">                .filter(e-&gt;e.length()&gt;<span class="number">12</span>)</span><br><span class="line">                .collect(Collectors.toList());</span><br><span class="line">        System.out.println(resultList);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="调试过程"><a href="#调试过程" class="headerlink" title="调试过程"></a>调试过程</h3><p>首先打个断点，然后开始调试，当程序执行到流Stream操作时，插件的调试按钮就会被点亮</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220526112957403.png" alt="image-20220526112957403"></p><p>点击上面被点亮的按钮，会出现下面界面，可以很清楚地看出每一个操作后符合条件的数据</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220526113247661.png" alt="image-20220526113247661"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h2&gt;&lt;p&gt;插件名称为：&lt;code&gt;Java Stream Debugger&lt;/code&gt;，好像在IntelliJ IDEA的插件市场没</summary>
-      
-    
-    
-    
-    <category term="开发工具" scheme="https://blog.zoutl.cn/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="IntelliJ IDEA" scheme="https://blog.zoutl.cn/tags/IntelliJ-IDEA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GitHub给仓库添加开源许可证</title>
-    <link href="https://blog.zoutl.cn/512.html"/>
-    <id>https://blog.zoutl.cn/512.html</id>
-    <published>2022-05-25T06:40:44.000Z</published>
-    <updated>2022-05-25T08:29:27.934Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><h3 id="什么时候"><a href="#什么时候" class="headerlink" title="什么时候"></a>什么时候</h3><p>GitHub创建开源许可证的情况有两种：</p><ol><li>创建仓库时，直接选择开源许可证</li><li>创建仓库后，需要新建一个LICENSE文件</li></ol><h3 id="如何选择"><a href="#如何选择" class="headerlink" title="如何选择"></a>如何选择</h3><p>世界上的开源许可证，大概有<a href="https://www.gnu.org/licenses/license-list.html">上百种</a>。很少有人搞得清楚它们的区别。即使在最流行的六种（<a href="https://www.gnu.org/licenses/gpl.html">GPL</a>、<a href="https://en.wikipedia.org/wiki/BSD_licenses">BSD</a>、<a href="https://en.wikipedia.org/wiki/MIT_License">MIT</a>、<a href="https://www.mozilla.org/MPL/">Mozilla</a>、<a href="https://www.apache.org/licenses/LICENSE-2.0">Apache</a>和<a href="https://www.gnu.org/copyleft/lesser.html">LGPL</a>）之中做选择，也很复杂，下面一图可以很简单地说明它们之间的区别</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/bg2011050101.png"></p><p>参考文章链接为：<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html">如何选择开源许可证？ - 阮一峰的网络日志 (ruanyifeng.com)</a></p><h2 id="创建开源许可证"><a href="#创建开源许可证" class="headerlink" title="创建开源许可证"></a>创建开源许可证</h2><h3 id="创建仓库时"><a href="#创建仓库时" class="headerlink" title="创建仓库时"></a>创建仓库时</h3><p>在创建仓库时，可以直接选择开源许可证</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220525145426878.png" alt="image-20220525145426878"></p><h3 id="创建仓库后"><a href="#创建仓库后" class="headerlink" title="创建仓库后"></a>创建仓库后</h3><p>添加一个文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220525150359985.png" alt="image-20220525150359985"></p><p>命名为<code>LICENSE</code>，会出现选择开源许可证的按钮</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220525150709925.png" alt="image-20220525150709925"></p><p>选择自己需要的开源许可证，然后提交，会跳回上一页</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220525151208973.png" alt="image-20220525151208973"></p><p>最后提交新文件的更改即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220525152630593.png" alt="image-20220525152630593"></p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220525152154265.png" alt="image-20220525152154265"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;h3 id=&quot;什么时候&quot;&gt;&lt;a href=&quot;#什么时候&quot; class=&quot;headerlink&quot; title=&quot;什么时候&quot;&gt;&lt;/a&gt;什么时候&lt;/h</summary>
-      
-    
-    
-    
-    <category term="版本控制" scheme="https://blog.zoutl.cn/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
-    
-    
-    <category term="GitHub" scheme="https://blog.zoutl.cn/tags/GitHub/"/>
     
   </entry>
   
