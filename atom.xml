@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-12-07T15:04:04.649Z</updated>
+  <updated>2022-12-07T17:03:25.889Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让微信开发者工具支持Less</title>
+    <link href="https://blog.zoutl.cn/537.html"/>
+    <id>https://blog.zoutl.cn/537.html</id>
+    <published>2022-12-07T16:21:39.000Z</published>
+    <updated>2022-12-07T17:03:25.889Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Less可以让我们的代码更加简洁，尤其是可以使用嵌套代替层叠或与层叠结合使用</p><p>微信开发者工具要支持Less，需要安装一个名为<code>Easy LESS</code>的扩展</p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="VS-Code安装扩展"><a href="#VS-Code安装扩展" class="headerlink" title="VS Code安装扩展"></a>VS Code安装扩展</h4><p>虽然微信开发者工具没有<code>Easy LESS</code>这个扩展，但是它支持我们从VS Code的已安装扩展中导入扩展，所以我们需要先在VS Code中安装这个扩展</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221208003553940.png" alt="image-20221208003553940"></p><h4 id="导入扩展"><a href="#导入扩展" class="headerlink" title="导入扩展"></a>导入扩展</h4><p>打开微信开发者工具，去扩展页操作，如下图所示</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221208004140355.png" alt="image-20221208004140355"></p><p>选择<code>mrcrowl.easy-less-1.7.4</code>这个文件夹，然后就开始安装了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221208004244518.png" alt="image-20221208004244518"></p><h4 id="修改扩展配置"><a href="#修改扩展配置" class="headerlink" title="修改扩展配置"></a>修改扩展配置</h4><p>首先打开<code>更多编辑器设置</code></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221208004737180.png" alt="image-20221208004737180"></p><p>搜索<code>Easy LESS</code>，打开该扩展的配置文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221208004923478.png" alt="image-20221208004923478"></p><p>在下图的位置加上代码<code>&quot;outExt&quot;: &quot;.wxss&quot;</code>，然后保存，这段代码是为了告诉微信开发者工具：目标文件的后缀名是wxss，默认是css</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221208005053798.png" alt="image-20221208005053798"></p><h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>我创建了一个名为<code>search-bar.less</code>的文件，那么它的目标文件就是<code>search-bar.wxss</code>，在<code>search-bar.less</code>中输入代码并保存后<code>search-bar.wxss</code>会自动生成代码</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-12-08%20005823.gif"></p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>Less的中文文档地址为：<a href="https://less.bootcss.com/">Less 快速入门 | Less.js 中文文档 - Less 中文网 (bootcss.com)</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;Less可以让我们的代码更加简洁，尤其是可以使用嵌套代替层叠或与层叠结合使用&lt;/p&gt;
+&lt;p&gt;微信开发者工具要支持Less，需要安装一个名为&lt;</summary>
+      
+    
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>微信小程序引入iconfont矢量图标样式</title>
@@ -492,32 +517,6 @@
     <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     <category term="Vant Weapp" scheme="https://blog.zoutl.cn/tags/Vant-Weapp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>创建String字符串的两种方式</title>
-    <link href="https://blog.zoutl.cn/517.html"/>
-    <id>https://blog.zoutl.cn/517.html</id>
-    <published>2022-06-26T03:18:05.000Z</published>
-    <updated>2022-08-14T08:45:33.278Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Java创建String字符串有两种方式：</p><ol><li>直接创建，存储在公共池，创建前会先检查公共池中是否已经存在相等的字符串，已存在就不会创建了直接引用已经存在的</li><li>通过new来创建，存储在堆上，无论是否已经存在相等的字符串，都会创建一个新的字符串</li></ol><h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><h3 id="直接创建"><a href="#直接创建" class="headerlink" title="直接创建"></a>直接创建</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str1 = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">String str2 = <span class="string">&quot;a&quot;</span>;</span><br></pre></td></tr></table></figure><h3 id="通过new来创建"><a href="#通过new来创建" class="headerlink" title="通过new来创建"></a>通过new来创建</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String str4 = <span class="keyword">new</span> String(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">String str5 = <span class="keyword">new</span> String(<span class="string">&quot;a&quot;</span>);</span><br></pre></td></tr></table></figure><h3 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h3><h4 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-03-09 23:57</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str1 = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">        String str2 = <span class="string">&quot;a&quot;</span>;</span><br><span class="line">        String str3 = str2;</span><br><span class="line">        String str4 = <span class="keyword">new</span> String(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        String str5 = <span class="keyword">new</span> String(<span class="string">&quot;a&quot;</span>);</span><br><span class="line">        String str6 = str5;</span><br><span class="line">        System.out.println(str1 == str2);</span><br><span class="line">        System.out.println(str2 == str3);</span><br><span class="line">        System.out.println(str3 == str4);</span><br><span class="line">        System.out.println(str4 == str5);</span><br><span class="line">        System.out.println(str5 == str6);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220626112852513.png" alt="image-20220626112852513"></p><h4 id="分析图解"><a href="#分析图解" class="headerlink" title="分析图解"></a>分析图解</h4><p>指向同一个的比较结果是true，反之则为false</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220626190134077.png" alt="image-20220626190134077"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;Java创建String字符串有两种方式：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;直接创建，存储在公共池，创建前会先检查公共池中是否已经存在相等的字符串</summary>
-      
-    
-    
-    
-    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
-    
-    
-    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
     
   </entry>
   
