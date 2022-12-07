@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-12-07T12:20:33.595Z</updated>
+  <updated>2022-12-07T12:36:34.295Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://blog.zoutl.cn/535.html"/>
     <id>https://blog.zoutl.cn/535.html</id>
     <published>2022-12-07T12:07:49.000Z</published>
-    <updated>2022-12-07T12:20:33.595Z</updated>
+    <updated>2022-12-07T12:36:34.295Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>我把14.x版本的Node.js卸载并安装最新版的Node.js后，使用<code>hexo algolia</code>命令上传Algolia索引时就报这个错误，报错原因是：<code>E:\hexo-blog\db.json</code>这个文件不存在</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在<code>E盘</code>的<code>hexo-blog文件夹</code>新建一个名为<code>db.json</code>的文件即可</p><p>本以为很麻烦，没想到通过自己新建文件就解决了，以前这个文件是会自动生成的</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>我把<code>14.17.1稳定版本</code>的Node.js卸载并安装最新版的Node.js后，使用<code>hexo algolia</code>命令上传Algolia索引时就报这个错误，报错原因是：<code>E:\hexo-blog\db.json</code>这个文件不存在</p><h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>执行<code>hexo g</code>命令后会自动生成一个<code>db.json</code>文件，但是执行完<code>hexo algolia</code>命令后，这个文件就被删除了，从而导致文件不存在而报错</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>把Node.js卸载重新安装回原来的<code>14.17.1稳定版本</code>，如果有其它办法欢迎到最下面的评论区给我留言！！</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;我把14.x版本的Node.js卸载并安装最新版的Node.js后，使用&lt;code&gt;hexo algolia&lt;/code&gt;命</summary>
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;我把&lt;code&gt;14.17.1稳定版本&lt;/code&gt;的Node.js卸载并安装最新版的Node.js后，使用&lt;code&gt;he</summary>
       
     
     
