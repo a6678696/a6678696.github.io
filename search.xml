@@ -6235,12 +6235,30 @@
       </tags>
   </entry>
   <entry>
-    <title>Git查看远程库地址</title>
+    <title>Git修改远程仓库地址</title>
     <url>/285.html</url>
-    <content><![CDATA[<p>命令：</p>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>由于需要将代码上传到另一个仓库，所以需要修改一下远程仓库地址，修改的方法有三个：</p>
+<ol>
+<li>直接使用命令修改</li>
+<li>删除原来的远程库地址，再绑定</li>
+<li>修改config文件</li>
+</ol>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="直接使用命令修改"><a href="#直接使用命令修改" class="headerlink" title="直接使用命令修改"></a>直接使用命令修改</h4><p>修改命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote set-url origin url地址</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221211191425708.png" alt="image-20221211191425708"></p>
+<h4 id="先删除再绑定"><a href="#先删除再绑定" class="headerlink" title="先删除再绑定"></a>先删除再绑定</h4><p>删除命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
+
+<p>绑定命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote add origin url地址</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221211191734828.png" alt="image-20221211191734828"></p>
+<h4 id="修改config文件"><a href="#修改config文件" class="headerlink" title="修改config文件"></a>修改config文件</h4><p>config文件的路径如下图所示，直接把里面的url地址改掉即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221211192024617.png" alt="image-20221211192024617"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>查看远程仓库地址命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
 
-<p>结果：</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-18%20182819.png"></p>
 ]]></content>
       <categories>
@@ -23489,7 +23507,7 @@
 <h4 id="引入组件"><a href="#引入组件" class="headerlink" title="引入组件"></a>引入组件</h4><p>需要引入的三个组件分别是：<code>输入框</code>、<code>弹出层</code>、<code>省市区选择</code></p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;van-field&quot;</span>: <span class="string">&quot;@vant/weapp/field/index&quot;</span>,</span><br><span class="line"><span class="string">&quot;van-popup&quot;</span>: <span class="string">&quot;@vant/weapp/popup/index&quot;</span>,</span><br><span class="line"><span class="string">&quot;van-area&quot;</span>: <span class="string">&quot;@vant/weapp/area/index&quot;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="页面wxml代码"><a href="#页面wxml代码" class="headerlink" title="页面wxml代码"></a>页面wxml代码</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-cell-group</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">van-field</span> <span class="attr">value</span>=<span class="string">&quot;&#123;&#123; address &#125;&#125;&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请选择省市区&quot;</span> <span class="attr">label</span>=<span class="string">&quot;省市区&quot;</span> <span class="attr">title-width</span>=<span class="string">&quot;4em&quot;</span> <span class="attr">is-link</span>=<span class="string">&quot;true&quot;</span> <span class="attr">readonly</span> <span class="attr">bind:click-input</span>=<span class="string">&quot;showPopup&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">van-cell-group</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">van-popup</span> <span class="attr">show</span>=<span class="string">&quot;&#123;&#123; show &#125;&#125;&quot;</span> <span class="attr">bind:close</span>=<span class="string">&quot;onClose&quot;</span> <span class="attr">position</span>=<span class="string">&quot;bottom&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">van-area</span> <span class="attr">area-list</span>=<span class="string">&quot;&#123;&#123; areaList &#125;&#125;&quot;</span> <span class="attr">columns-num</span>=<span class="string">&quot;&#123;&#123; 3 &#125;&#125;&quot;</span> <span class="attr">title</span>=<span class="string">&quot;选择省市区&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#123;&#123;value&#125;&#125;&quot;</span> <span class="attr">bind:cancel</span>=<span class="string">&quot;onCancel&quot;</span> <span class="attr">bind:confirm</span>=<span class="string">&quot;onConfirm&quot;</span> <span class="attr">bind:change</span>=<span class="string">&quot;onChange&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">van-popup</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="页面wxml代码"><a href="#页面wxml代码" class="headerlink" title="页面wxml代码"></a>页面wxml代码</h4><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-cell-group</span> <span class="attr">bindtap</span>=<span class="string">&quot;showPopup&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">van-field</span> <span class="attr">value</span>=<span class="string">&quot;&#123;&#123; area &#125;&#125;&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请选择省市区&quot;</span> <span class="attr">label</span>=<span class="string">&quot;省市区&quot;</span> <span class="attr">title-width</span>=<span class="string">&quot;4em&quot;</span> <span class="attr">is-link</span>=<span class="string">&quot;true&quot;</span> <span class="attr">readonly</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">van-cell-group</span>&gt;</span>江西省景德镇市珠山区新村街道</span><br><span class="line"><span class="tag">&lt;<span class="name">van-popup</span> <span class="attr">show</span>=<span class="string">&quot;&#123;&#123; show &#125;&#125;&quot;</span> <span class="attr">bind:close</span>=<span class="string">&quot;onClose&quot;</span> <span class="attr">position</span>=<span class="string">&quot;bottom&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">van-area</span> <span class="attr">area-list</span>=<span class="string">&quot;&#123;&#123; areaList &#125;&#125;&quot;</span> <span class="attr">columns-num</span>=<span class="string">&quot;&#123;&#123; 3 &#125;&#125;&quot;</span> <span class="attr">title</span>=<span class="string">&quot;选择省市区&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#123;&#123;value&#125;&#125;&quot;</span> <span class="attr">bind:cancel</span>=<span class="string">&quot;onCancel&quot;</span> <span class="attr">bind:confirm</span>=<span class="string">&quot;onConfirm&quot;</span> <span class="attr">bind:change</span>=<span class="string">&quot;onChange&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">van-popup</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="页面js代码"><a href="#页面js代码" class="headerlink" title="页面js代码"></a>页面js代码</h4><p>页面初始数据如下，value的默认值是为了让省市区选择组件一开始就选择一个地址，<code>110101</code>是官方默认的省市区数据中北京市东城区的代码（省市区选择组件可以通过区地址确定省和市）</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 页面的初始数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">data: &#123;</span><br><span class="line">	address: &#x27;&#x27;,</span><br><span class="line">	areaList,</span><br><span class="line">	value: <span class="number">110101</span>,</span><br><span class="line">	show: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -23533,6 +23551,61 @@
         <category>版本控制</category>
       </categories>
       <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Git的代码合并冲突</title>
+    <url>/541.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>两个人都修改了同一个文件，第一个人进行push操作后，如果第二个人也进行push操作，那么第二个人就会出现代码合并冲突同时push失败</p>
+<h3 id="情景复现"><a href="#情景复现" class="headerlink" title="情景复现"></a>情景复现</h3><p>本地仓库和远程GitHub仓库都有一个名为<code>bbb.txt</code>的文件，先在GitHub仓库中修改这个文件，然后在本地修改这个文件</p>
+<p>本地的bbb.txt文件内容如下：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">bbb</span><br><span class="line">bbb本地库修改</span><br><span class="line">bbb</span><br></pre></td></tr></table></figure>
+
+<p>GitHub仓库的bbb.txt文件内容如下：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">bbb</span><br><span class="line">bbb</span><br><span class="line">bbb远程库修改</span><br></pre></td></tr></table></figure>
+
+<p>进行add操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>进行commit操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;修改bbb.txt&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>进行push操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+<p>会出现下图的错误，提示我们在再次push前先进行pull操作</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221211230156646.png" alt="image-20221211230156646"></p>
+<h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><p>根据上面的提示进行pull操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p>然后查看本地的bbb.txt文件的内容，多了一些东西，<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code>和<code>=======</code>之间的内容是本地仓库和远程GitHub仓库冲突的内容（属于本地仓库），<code>=======</code>和<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>之间的内容是远程GitHub仓库和本地仓库冲突的内容（属于远程GitHub仓库）</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">bbb</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">bbb本地库修改</span><br><span class="line">bbb</span><br><span class="line">=======</span><br><span class="line">bbb</span><br><span class="line">bbb远程库修改</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; 4e4fb01336355e4e36f217905c8f2d0a883fcdc6</span><br></pre></td></tr></table></figure>
+
+<p>解决冲突的方案有三个：（是修改本地仓库的bbb.txt文件）</p>
+<ol>
+<li><p>以本地仓库的代码为准，修改后的bbb.txt内容如下：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">bbb</span><br><span class="line">bbb本地库修改</span><br><span class="line">bbb</span><br></pre></td></tr></table></figure></li>
+<li><p>以远程GitHub仓库的代码为准，修改后的bbb.txt内容如下：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">bbb</span><br><span class="line">bbb</span><br><span class="line">bbb远程库修改</span><br></pre></td></tr></table></figure></li>
+<li><p>都保留，修改后的bbb.txt内容如下：</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">bbb</span><br><span class="line">bbb本地库修改</span><br><span class="line">bbb远程库修改</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>修改了本地仓库的bbb.txt文件后再次进行add操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add bbb.txt</span><br></pre></td></tr></table></figure>
+
+<p>进行commit操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;以本地仓库的代码为准&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>进行push操作，这次可以push成功了，去GitHub查看结果，bbb.txt的内容已经变成本地仓库的了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>版本控制</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
         <tag>Git</tag>
       </tags>
   </entry>
