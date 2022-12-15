@@ -1477,7 +1477,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>前端</tag>
         <tag>Highcharts</tag>
       </tags>
   </entry>
@@ -23672,6 +23671,7 @@
     <title>将Element Plus的默认文字设置为中文</title>
     <url>/543.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当前Element Plus组件的默认文字是英文，为了方便，我们直接设置全局的默认文字让每个页面都生效</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221215162838853.png" alt="image-20221215162838853"></p>
 <h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><p>直接在App.vue中设置，首先引入简体中文的js文件</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> zhCn <span class="keyword">from</span> <span class="string">&quot;element-plus/lib/locale/lang/zh-cn&quot;</span>;</span><br></pre></td></tr></table></figure>
 
@@ -23681,6 +23681,8 @@
 <p>完整App.vue代码如下：</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> zhCn <span class="keyword">from</span> <span class="string">&quot;element-plus/lib/locale/lang/zh-cn&quot;</span>;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-config-provider</span> <span class="attr">:locale</span>=<span class="string">&quot;zhCn&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-config-provider</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p>效果如图所示</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221215162920988.png" alt="image-20221215162920988"></p>
 ]]></content>
       <categories>
         <category>前端</category>
