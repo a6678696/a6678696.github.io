@@ -23803,6 +23803,8 @@
 
 <h4 id="修改可上传文件的大小"><a href="#修改可上传文件的大小" class="headerlink" title="修改可上传文件的大小"></a>修改可上传文件的大小</h4><p>Spring Boot默认可上传的最大文件大小是1MB，可以去<code>application.yml</code>配置文件修改，配置如下：</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">servlet:</span></span><br><span class="line">    <span class="attr">multipart:</span></span><br><span class="line">      <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">      <span class="attr">max-file-size:</span> <span class="string">10MB</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>官网地址为：<a href="https://vueup.github.io/vue-quill/guide/modules.html#example-using-quill-image-uploader">Modules | VueQuill (vueup.github.io)</a>，只有前端代码，后端代码需要自己实现，前端根据后端返回的数据拿到url就行了，不规定格式</p>
 ]]></content>
       <categories>
         <category>前端</category>
@@ -23810,6 +23812,29 @@
       </categories>
       <tags>
         <tag>Spring Boot</tag>
+        <tag>Vue.js</tag>
+        <tag>VueQuill</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>VueQuill富文本编辑器实现图片的缩放</title>
+    <url>/547.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>VueQuill富文本编辑器添加的图片默认是不可以缩放的，如果图片尺寸过大的话，会非常影响用户的体验。虽然不支持缩放图片，但是可以通过安装<code>quill-blot-formatter</code>这个插件来实现</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save quill-blot-formatter</span><br></pre></td></tr></table></figure>
+
+<h4 id="引入插件"><a href="#引入插件" class="headerlink" title="引入插件"></a>引入插件</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> BlotFormatter <span class="keyword">from</span> <span class="string">&#x27;quill-blot-formatter&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a>配置插件</h4><p>下面是配置两个及以上插件的格式，如果只配置一个插件，其格式查看博客：<a href="https://blog.zoutl.cn/546.html">Spring Boot 实现 VueQuill 富文本编辑器上传图片到服务器 | LeDao’s Blog (zoutl.cn)</a></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> modules = [&#123;</span><br><span class="line">  <span class="comment">//这里是另一个插件的配置</span></span><br><span class="line">&#125;, &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&#x27;BlotFormatter&#x27;</span>,</span><br><span class="line">  <span class="attr">module</span>: BlotFormatter,</span><br><span class="line">  <span class="attr">options</span>: &#123;</span><br><span class="line">    <span class="attr">overlay</span>: &#123;</span><br><span class="line">      <span class="attr">style</span>: &#123;</span><br><span class="line">        <span class="attr">border</span>: <span class="string">&#x27;2px solid red&#x27;</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h4><p>使用编辑器的代码如下，关键代码是<code>:modules=&quot;modules&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;QuillEditor</span><br><span class="line">    v-model:content=&quot;content&quot;</span><br><span class="line">    placeholder=&quot;这里输入商品详情...&quot;</span><br><span class="line">    theme=&quot;snow&quot;</span><br><span class="line">    ref=&quot;editor&quot;</span><br><span class="line">    toolbar=&quot;full&quot;</span><br><span class="line">    contentType=&quot;html&quot;</span><br><span class="line">    :modules=&quot;modules&quot;</span><br><span class="line">    style=&quot;height: 300px;&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
         <tag>Vue.js</tag>
         <tag>VueQuill</tag>
       </tags>
