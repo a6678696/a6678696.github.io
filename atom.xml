@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2022-12-15T08:29:22.372Z</updated>
+  <updated>2022-12-17T12:23:09.301Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue3引入VueQuill富文本编辑器</title>
+    <link href="https://blog.zoutl.cn/545.html"/>
+    <id>https://blog.zoutl.cn/545.html</id>
+    <published>2022-12-16T15:19:32.000Z</published>
+    <updated>2022-12-17T12:23:09.301Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>官方文档：<a href="https://vueup.github.io/vue-quill/guide/">Introduction | VueQuill (vueup.github.io)</a></p><p>中文文档：<a href="https://www.kancloud.cn/liuwave/quill/1434140">vue-quill-editor · Quill官方中文文档 · 看云 (kancloud.cn)</a></p><p>在几款适合Vue3的富文本编辑器中，我发现VueQuill最简单易用，不过也有一个BUG：数据无法双向绑定，页面的数据不会显示到富文本编辑器中，实现数据双向绑定的办法看下面</p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install @vueup/vue-quill@latest --save</span><br></pre></td></tr></table></figure><h4 id="局部引入"><a href="#局部引入" class="headerlink" title="局部引入"></a>局部引入</h4><p>虽然可以全局引入，但是还是建议局部引入，首先引入组件和样式（在<code>&lt;script&gt;</code>标签中加入下面代码）</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;QuillEditor&#125; <span class="keyword">from</span> <span class="string">&#x27;@vueup/vue-quill&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;@vueup/vue-quill/dist/vue-quill.snow.css&#x27;</span>;</span><br></pre></td></tr></table></figure><p>使用组件的代码如下</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;QuillEditor</span><br><span class="line">    v-model:content=&quot;content&quot;</span><br><span class="line">    placeholder=&quot;这里输入商品详情...&quot;</span><br><span class="line">    theme=&quot;snow&quot;</span><br><span class="line">    ref=&quot;editor&quot;</span><br><span class="line">    toolbar=&quot;full&quot;</span><br><span class="line">    contentType=&quot;html&quot;</span><br><span class="line">    style=&quot;height: 300px;&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure><p>属性说明</p><table><thead><tr><th align="center">属性</th><th align="center">解释</th></tr></thead><tbody><tr><td align="center"><code>v-model:content=&quot;content&quot;</code></td><td align="center">绑定的数据是content</td></tr><tr><td align="center"><code>placeholder=&quot;这里输入商品详情...&quot;</code></td><td align="center">内容为空时的提示</td></tr><tr><td align="center"><code>theme=&quot;snow&quot;</code></td><td align="center"><a href="https://vueup.github.io/vue-quill/guide/themes.html">主题</a></td></tr><tr><td align="center"><code>ref=&quot;editor&quot;</code></td><td align="center">这个是重点，定义editor使用<a href="https://vueup.github.io/vue-quill/api/methods.html">官方的方法</a></td></tr><tr><td align="center"><code>toolbar=&quot;full&quot;</code></td><td align="center">工具栏的功能全部可以使用</td></tr><tr><td align="center"><code>contentType=&quot;html&quot;</code></td><td align="center">内容的格式是html</td></tr></tbody></table><p>由于双向绑定没有用，所以需要使用官方的方法<code>setHTML()</code>设置值，首先上面使用编辑器的代码中要有<code>ref=&quot;editor&quot;</code>，然后在<code>&lt;script&gt;</code>标签中定义一个空editor和上面对应，然后就可以使用编辑器的方法了</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个空editor</span></span><br><span class="line"><span class="keyword">const</span> editor = ref(<span class="literal">null</span>);</span><br><span class="line"><span class="comment">//设置值</span></span><br><span class="line">editor.value.setHTML(<span class="string">&quot;内容&quot;</span>);</span><br></pre></td></tr></table></figure><h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h4><p>只保留了和VueQuill富文本编辑器有关的代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">      &lt;QuillEditor</span><br><span class="line">          v-model:content=&quot;content&quot;</span><br><span class="line">          placeholder=&quot;这里输入商品详情...&quot;</span><br><span class="line">          theme=&quot;snow&quot;</span><br><span class="line">          ref=&quot;editor&quot;</span><br><span class="line">          toolbar=&quot;full&quot;</span><br><span class="line">          contentType=&quot;html&quot;</span><br><span class="line">          style=&quot;height: 300px;&quot;</span><br><span class="line">      /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123;ref, onMounted&#125; from &quot;vue&quot;;</span><br><span class="line">import &#123;QuillEditor&#125; from &#x27;@vueup/vue-quill&#x27;</span><br><span class="line">import &#x27;@vueup/vue-quill/dist/vue-quill.snow.css&#x27;;</span><br><span class="line">const content = ref(&#x27;&#x27;);</span><br><span class="line">const editor = ref(null);</span><br><span class="line"></span><br><span class="line">//根据id获取商品</span><br><span class="line">const getGoodsDetails = (id) =&gt; &#123;</span><br><span class="line">    //设置值</span><br><span class="line">    editor.value.setHTML(response.data.goods.details);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>实现编辑器的办法来源于Issue：<a href="https://github.com/vueup/vue-quill/issues/189">v-model:content not update when i am fetching data from api · Issue #189 · vueup/vue-quill (github.com)</a></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221217202135681.png" alt="image-20221217202135681"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;官方文档：&lt;a href=&quot;https://vueup.github.io/vue-quill/guide/&quot;&gt;Introduction |</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
+    
+    <category term="wangEditor" scheme="https://blog.zoutl.cn/tags/wangEditor/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java实体类中使用布尔类型的注意事项</title>
+    <link href="https://blog.zoutl.cn/544.html"/>
+    <id>https://blog.zoutl.cn/544.html</id>
+    <published>2022-12-16T11:28:26.000Z</published>
+    <updated>2022-12-17T12:23:09.300Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>在Java实体类中使用布尔类型的话，有一些细节要特别注意，不然这些布尔类型的字段用起来会很麻烦</p><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><h4 id="不要以is开头"><a href="#不要以is开头" class="headerlink" title="不要以is开头"></a>不要以is开头</h4><p>属性名不要以<code>is</code>开头，如果以<code>is</code>开头的话，自动生成的Setter和Getter的方法名会自动省略掉<code>is</code>，例如以下代码中Setter和Getter的方法名原本应该是<code>getIsHotGoods</code>和<code>setIsHotGoods</code>，但是实际上是<code>getHotGoods</code>和<code>setHotGoods</code>，会给我们带来一些困扰</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221216230829121.png" alt="image-20221216230829121"></p><h4 id="使用包装类"><a href="#使用包装类" class="headerlink" title="使用包装类"></a>使用包装类</h4><p>在实体类中，不要使用基本数据类型，而是使用它们的包装类，例如布尔基本类型boolean就要使用Boolean</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221216225306794.png" alt="image-20221216225306794"></p><p>如果使用了布尔基本类型boolean，那么我们自动生成Setter和Getter时不会有Getter方法，<font color="#dd0000">为了开发时减少麻烦，不要使用基本类型，无论如何都只使用包装类</font></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221216230712892.png" alt="image-20221216230712892"></p><h4 id="MySQL字段类型"><a href="#MySQL字段类型" class="headerlink" title="MySQL字段类型"></a>MySQL字段类型</h4><p>当实体类的属性类型是Boolean时，MySQL表的字段类型可以使用<code>tinyint</code>，长度设为<code>1</code></p><p>实体类的值为<code>true</code>时MySQL的值是<code>1</code>，值为<code>false</code>时MySQL的值是<code>0</code>，从MySQL查到的值会被转换成true或false，而不是1或0</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;在Java实体类中使用布尔类型的话，有一些细节要特别注意，不然这些布尔类型的字段用起来会很麻烦&lt;/p&gt;
+&lt;h3 id=&quot;注意事项&quot;&gt;&lt;a h</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>将Element Plus的默认文字设置为中文</title>
@@ -462,55 +513,6 @@
       
       
     <summary type="html">&lt;h3 id=&quot;修改AppId&quot;&gt;&lt;a href=&quot;#修改AppId&quot; class=&quot;headerlink&quot; title=&quot;修改AppId&quot;&gt;&lt;/a&gt;修改AppId&lt;/h3&gt;&lt;p&gt;如果新建项目时没有输入自己的AppId，而是使用测试号，那么就需要修改AppId了，否则跳过此步骤（</summary>
-      
-    
-    
-    
-    <category term="微信小程序" scheme="https://blog.zoutl.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-    <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序删除项目</title>
-    <link href="https://blog.zoutl.cn/525.html"/>
-    <id>https://blog.zoutl.cn/525.html</id>
-    <published>2022-12-02T07:31:52.000Z</published>
-    <updated>2022-12-04T09:16:09.212Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="查看所有项目"><a href="#查看所有项目" class="headerlink" title="查看所有项目"></a>查看所有项目</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221204153807920.png" alt="image-20221204153807920"></p><h3 id="删除记录"><a href="#删除记录" class="headerlink" title="删除记录"></a>删除记录</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-12-04%20154026.gif"></p><h3 id="删除本地文件"><a href="#删除本地文件" class="headerlink" title="删除本地文件"></a>删除本地文件</h3><p>上面只是删除了项目在微信开发者工具的记录而已，本地磁盘上的文件是没有删除的，我们需要找到项目的文件夹然后删除即可</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;查看所有项目&quot;&gt;&lt;a href=&quot;#查看所有项目&quot; class=&quot;headerlink&quot; title=&quot;查看所有项目&quot;&gt;&lt;/a&gt;查看所有项目&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://image.zoutl.cn/hexo-blog/blogImage/i</summary>
-      
-    
-    
-    
-    <category term="微信小程序" scheme="https://blog.zoutl.cn/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-    <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序模板的使用与引用</title>
-    <link href="https://blog.zoutl.cn/524.html"/>
-    <id>https://blog.zoutl.cn/524.html</id>
-    <published>2022-12-01T13:39:20.000Z</published>
-    <updated>2022-12-04T09:15:37.429Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>对于一些重复使用的代码，我们可以将它封装成模板，以减少代码量</p><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>定义一个名为<code>template1</code>的模板</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">name</span>=<span class="string">&quot;template1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span>&gt;</span>&#123;&#123;myName&#125;&#125;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure><p>初始数据，写在使用模板的页面js中</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 页面的初始数据</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="attr">data</span>: &#123;</span><br><span class="line">    <span class="attr">templateData</span>:&#123;</span><br><span class="line">    <span class="attr">myName</span>: <span class="string">&#x27;ledao&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p><code>is属性</code>动态决定具体需要渲染哪个模板，<code>data属性</code>是要引用的数据，在定义模板的页面使用时不用import</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">&quot;template1&quot;</span> <span class="attr">data</span>=<span class="string">&quot;&#123;&#123;...templateData&#125;&#125;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><h4 id="import"><a href="#import" class="headerlink" title="import"></a>import</h4><p>在一个页面引用<code>定义在其它页面的模板</code>时，这个模板本来的js和css就不能用了，需要在引用模板的页面重新写js和css，示例代码如下（<code>.wxml后缀</code>加不加都行）</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">import</span> <span class="attr">src</span>=<span class="string">&quot;/pages/templatetest/templatetest.wxml&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">is</span>=<span class="string">&quot;template1&quot;</span> <span class="attr">data</span>=<span class="string">&quot;&#123;&#123;...templateData&#125;&#125;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure><h4 id="include"><a href="#include" class="headerlink" title="include"></a>include</h4><p>include将目标文件<strong>除了</strong> <code>&lt;template/&gt;</code> <code>&lt;wxs/&gt;</code> 外的整个代码引入，相当于是拷贝到 <code>include</code> 位置</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">include</span> <span class="attr">src</span>=<span class="string">&quot;/pages/templatetest/templatetest.wxml&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>微信官方文档：<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/wxml/template.html">模板 | 微信开放文档 (qq.com)</a>和<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/wxml/import.html">引用 | 微信开放文档 (qq.com)</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;对于一些重复使用的代码，我们可以将它封装成模板，以减少代码量&lt;/p&gt;
-&lt;h3 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;he</summary>
       
     
     
