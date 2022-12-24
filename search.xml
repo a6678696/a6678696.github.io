@@ -23717,7 +23717,7 @@
     <url>/545.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>官方文档：<a href="https://vueup.github.io/vue-quill/guide/">Introduction | VueQuill (vueup.github.io)</a></p>
 <p>中文文档：<a href="https://www.kancloud.cn/liuwave/quill/1434140">vue-quill-editor · Quill官方中文文档 · 看云 (kancloud.cn)</a></p>
-<p>编辑器的插件列举查看官网：<a href="https://vueup.github.io/vue-quill/guide/modules.html#quill-modules">Modules | VueQuill (vueup.github.io)</a>，我实现了图片上传到服务器和图片插件的使用，博客链接为：<a href="https://blog.zoutl.cn/546.html">上传图片到服务器 </a>和<a href="https://blog.zoutl.cn/547.html">实现图片的缩放 </a></p>
+<p>编辑器的插件列举查看官网：<a href="https://vueup.github.io/vue-quill/guide/modules.html#quill-modules">Modules | VueQuill (vueup.github.io)</a>，我实现了图片上传到服务器和图片缩放插件的使用，博客链接为：<a href="https://blog.zoutl.cn/546.html">上传图片到服务器 </a>和<a href="https://blog.zoutl.cn/547.html">实现图片的缩放 </a></p>
 <p>在几款适合Vue3的富文本编辑器中，我发现VueQuill最简单易用，不过也有一个BUG：数据无法双向绑定，页面的数据不会显示到富文本编辑器中，实现数据双向绑定的办法看下面</p>
 <h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install @vueup/vue-quill@latest --save</span><br></pre></td></tr></table></figure>
 
@@ -23940,9 +23940,9 @@
   <entry>
     <title>让微信小程序的富文本图片宽度实现自适应</title>
     <url>/552.html</url>
-    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>微信小程序使用富文本时，其图片会超出微信小程序屏幕的默认最大宽度750rpx（rpx是动态像素，一个rpx宽度并不是固定的，可以根据屏幕宽度进行自适应），从而导致图片显示不全</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>直接在使用了富文本的页面的样式中加入以下代码即可</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[alt]</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>微信小程序使用富文本时，如果图片宽度超出微信小程序屏幕的默认最大宽度750rpx（rpx是动态像素，一个rpx宽度并不是固定的，可以根据屏幕宽度进行自适应），会导致图片显示不全</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>直接在使用了富文本的页面的样式中加入以下代码即可，值得注意的是图片一定要有<code>alt</code>这个属性，不然没有用，alt改成src也是可以的</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[alt]</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">100%</span>;//图片宽度过大,但是我只希望它把屏幕的宽度撑满就行</span><br><span class="line">    <span class="attribute">min-width</span>: <span class="number">100%</span>;//图片宽度过小,但是我希望它把屏幕的宽度撑满</span><br><span class="line">    <span class="attribute">height</span>: auto;//高度自动,防止图片的长宽比改变</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
