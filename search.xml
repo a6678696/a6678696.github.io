@@ -23937,4 +23937,19 @@
         <tag>微信小程序</tag>
       </tags>
   </entry>
+  <entry>
+    <title>让微信小程序的富文本图片宽度实现自适应</title>
+    <url>/552.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>微信小程序使用富文本时，其图片会超出微信小程序屏幕的默认最大宽度750rpx（rpx是动态像素，一个rpx宽度并不是固定的，可以根据屏幕宽度进行自适应），从而导致图片显示不全</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>直接在使用了富文本的页面的样式中加入以下代码即可</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[alt]</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
 </search>
