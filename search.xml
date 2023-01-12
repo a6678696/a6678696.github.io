@@ -24343,11 +24343,10 @@
     <url>/558.html</url>
     <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>隔行设置背景颜色可以让Excel表格更易读，平时数据少的时候可以<code>按住CTRL键同时使用鼠标</code>选中要设置背景颜色的单元格（虽然简单，但是操作起来容易出现漏选或多选），所以最好还是通过设置规则来实现隔行设置背景颜色比较好</p>
 <h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="选中单元格"><a href="#选中单元格" class="headerlink" title="选中单元格"></a>选中单元格</h4><p>首先选中所有要隔行设置背景颜色的单元格，不用选上表头</p>
-<h4 id="新建规则"><a href="#新建规则" class="headerlink" title="新建规则"></a>新建规则</h4><p>根据下图打开<code>新建规则</code>页面</p>
+<h4 id="新建规则"><a href="#新建规则" class="headerlink" title="新建规则"></a>新建规则</h4><p>根据下图打开<code>新建规则</code>界面</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230112045105584.png" alt="image-20230112045105584"></p>
 <p>根据下图填写规则公式和选择背景颜色及其它样式，最后点击确定即可</p>
-<p>关于公式<code>=MOD(ROW(),2)=0</code>的解释：</p>
-<p>行数除以2取余，余数为0（这里的行数从表头开始数，也就是说表头是第1行），该公式的取反公式为：<code>=MOD(ROW(),2)=1</code>，用哪个公式根据自己的情况选择</p>
+<p>关于公式<code>=MOD(ROW(),2)=0</code>的解释：行数除以2取余，余数为0（这里的行数从表头开始数，也就是说表头是第1行），该公式的取反公式为：<code>=MOD(ROW(),2)=1</code>，用哪个公式根据自己的情况选择</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230112050003101.png" alt="image-20230112050003101"></p>
 ]]></content>
       <categories>
