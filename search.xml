@@ -24417,7 +24417,7 @@
   <entry>
     <title>使用JSON Server快速搭建服务端接口</title>
     <url>/559.html</url>
-    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>JSON Server就是用来模拟服务端接口数据，一般用在前后端分离后，前端人员可以不依赖API开发，而在本地搭建一个JSON服务，自己产生测试数据</p>
+    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>JSON Server的作用是用来模拟服务端接口数据，一般用在前后端分离后，前端人员可以不依赖API开发，而在本地搭建一个JSON服务，自己产生测试数据</p>
 <h3 id="安装和启动"><a href="#安装和启动" class="headerlink" title="安装和启动"></a>安装和启动</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>使用npm安装，安装命令如下：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g json-server</span><br></pre></td></tr></table></figure>
 
