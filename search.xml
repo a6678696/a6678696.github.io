@@ -3519,23 +3519,31 @@
   <entry>
     <title>Java环境配置</title>
     <url>/2.html</url>
-    <content><![CDATA[<h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p>网上有很多教程，这里就不说明了</p>
-<h3 id="配置Java环境"><a href="#配置Java环境" class="headerlink" title="配置Java环境"></a>配置Java环境</h3><p>右击”我的电脑”，点击”属性”，选择”高级系统设置”</p>
-<h4 id="配置变量：JAVA-HOME"><a href="#配置变量：JAVA-HOME" class="headerlink" title="配置变量：JAVA_HOME"></a>配置变量：JAVA_HOME</h4><p>本地JDK安装路径</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">F:\java\jdk1.8.0_92</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><p><code>jdk-8u202</code>是Java最后一个免费版本，以后的版本个人可以免费使用，但是商用需要交钱，商用又不想交钱的可以使用<code>OpenJDK</code></p>
+<p>阿里云盘链接：<a href="https://www.aliyundrive.com/s/Tx9puSr4LJ9">阿里云盘分享 (aliyundrive.com)</a></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>双击下载好的文件后，一直下一步即可完成安装，可自己修改JDK和JRE的安装路径</p>
+<h3 id="配置Java环境"><a href="#配置Java环境" class="headerlink" title="配置Java环境"></a>配置Java环境</h3><h4 id="打开编辑系统变量的界面"><a href="#打开编辑系统变量的界面" class="headerlink" title="打开编辑系统变量的界面"></a>打开编辑系统变量的界面</h4><p>在<code>系统变量</code>中配置Java环境：<code>JAVA_HOME</code>、<code>Path</code>，<font color="#dd0000">需要特别注意的是，配置环境变量后需要重新打开cmd命令窗口，不然命令不会生效从而怀疑自己的配置有问题</font></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230121195718442.png" alt="image-20230121195718442"></p>
+<h4 id="配置变量JAVA-HOME"><a href="#配置变量JAVA-HOME" class="headerlink" title="配置变量JAVA_HOME"></a>配置变量JAVA_HOME</h4><p>变量名</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">JAVA<span class="built_in">_</span>HOME</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010123055.jpg"></p>
-<h4 id="配置变量：classpath"><a href="#配置变量：classpath" class="headerlink" title="配置变量：classpath"></a>配置变量：classpath</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar </span><br></pre></td></tr></table></figure>
+<p>变量值，填刚刚安装时的本地JDK安装路径，我的安装在<code>D:\Java\jdk1.8</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">D:\Java\jdk1.8.0_202</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010123126.jpg"></p>
-<h4 id="配置变量：Path"><a href="#配置变量：Path" class="headerlink" title="配置变量：Path"></a>配置变量：Path</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">F:\java\jdk1.8.0_92\bin</span><br><span class="line">F:\java\jre\bin</span><br></pre></td></tr></table></figure>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230121200033160.png" alt="image-20230121200033160"></p>
+<h4 id="配置变量Path"><a href="#配置变量Path" class="headerlink" title="配置变量Path"></a>配置变量Path</h4><p>变量名</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">Path</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201020230001.jpg" alt="20201010123126.jpg"></p>
-<h3 id="测试JDK是否安装成功"><a href="#测试JDK是否安装成功" class="headerlink" title="测试JDK是否安装成功"></a><strong>测试JDK是否安装成功</strong></h3><h4 id="打开CMD"><a href="#打开CMD" class="headerlink" title="打开CMD"></a>打开CMD</h4><p>快捷键：win+R，输入CMD</p>
-<h4 id="输入下面的命令"><a href="#输入下面的命令" class="headerlink" title="输入下面的命令"></a>输入下面的命令</h4><p>键入命令: java -version、java、javac 几个命令，出现以下信息，说明环境变量配置成功；</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124737.jpg" alt="20201010123126.jpg"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124749.jpg" alt="20201010123126.jpg"></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20201010124800.jpg" alt="20201010123126.jpg"></p>
+<p>变量值</p>
+<figure class="highlight tex"><table><tr><td class="code"><pre><span class="line"><span class="comment">%JAVA_HOME%\bin</span></span><br></pre></td></tr></table></figure>
+
+<p>为避免以后安装多版本JDK切换时出问题，<code>%JAVA_HOME%\bin</code>要放在的第一行，而不是像下图一样放在最后</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230121200104881.png" alt="image-20230121200104881"></p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>依次输入命令：<code>java -version</code>、<code>java</code>、<code>javac</code>几个命令，出现以下信息，说明环境变量配置成功</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230121200135714.png" alt="image-20230121200135714"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230121200157669.png" alt="image-20230121200157669"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230121200223239.png" alt="image-20230121200223239"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p><code>classpath</code>变量在<code>1.5</code>以上版本的JDK是不用设置的，<code>Path</code>变量不用设置JRE的路径</p>
 ]]></content>
       <categories>
         <category>后端</category>
@@ -24784,6 +24792,61 @@
       </categories>
       <tags>
         <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>安装多个版本的JDK并切换</title>
+    <url>/562.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>有时候需要学习一下其它版本的JDK，那么就需要安装多个JDK了，然后通过修改环境变量来实现切换JDK的版本，我这里安装的是<code>JDK1.8</code>和<code>JDK11</code>两个版本，继续安装其它的版本也是一样的步骤</p>
+<h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><table>
+<thead>
+<tr>
+<th align="center">版本</th>
+<th align="center">阿里云盘链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>JDK1.8.0_202</code></td>
+<td align="center"><a href="https://www.aliyundrive.com/s/Tx9puSr4LJ9">阿里云盘分享 (aliyundrive.com)</a></td>
+</tr>
+<tr>
+<td align="center"><code>JDK11.0.18</code></td>
+<td align="center"><a href="https://www.aliyundrive.com/s/ZoV6gGPeKjZ">阿里云盘分享 (aliyundrive.com)</a></td>
+</tr>
+</tbody></table>
+<h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><p><code>JAVA_HOME</code>直接引用要切换的JDK的安装路径，<code>JAVA_HOME_8</code>和<code>JAVA_HOME_11</code>是JDK的安装路径</p>
+<p><code>Path</code>变量的设置和博客<a href="https://blog.zoutl.cn/2.html">Java 环境配置 | LeDao’s Blog (zoutl.cn)</a>的一样就行，<code>Path</code>变量的设置要放在第一行</p>
+<table>
+<thead>
+<tr>
+<th align="center">变量名</th>
+<th align="center">变量值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>JAVA_HOME</code></td>
+<td align="center"><code>%JAVA_HOME_8%</code></td>
+<td align="center">用于切换JDK版本</td>
+</tr>
+<tr>
+<td align="center"><code>JAVA_HOME_8</code></td>
+<td align="center"><code>D:\Java\jdk1.8.0_202</code></td>
+<td align="center">jdk1.8.0_202的安装路径</td>
+</tr>
+<tr>
+<td align="center"><code>JAVA_HOME_11</code></td>
+<td align="center"><code>D:\Java\jdk11.0.18</code></td>
+<td align="center">dk11.0.18的安装路径</td>
+</tr>
+</tbody></table>
+<h3 id="切换JDK"><a href="#切换JDK" class="headerlink" title="切换JDK"></a>切换JDK</h3><p>直接修改<code>JAVA_HOME</code>这个变量，修改成<code>%JAVA_HOME_8%</code>或<code>%JAVA_HOME_11%</code>就可以切换了</p>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
       </tags>
   </entry>
 </search>
