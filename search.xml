@@ -24840,8 +24840,9 @@
 <td align="center">dk11.0.18的安装路径</td>
 </tr>
 </tbody></table>
-<h3 id="切换JDK"><a href="#切换JDK" class="headerlink" title="切换JDK"></a>切换JDK</h3><p>直接修改<code>JAVA_HOME</code>这个变量，修改成<code>%JAVA_HOME_8%</code>或<code>%JAVA_HOME_11%</code>就可以切换了</p>
-<h3 id="修改IntelliJ-IDEA配置"><a href="#修改IntelliJ-IDEA配置" class="headerlink" title="修改IntelliJ IDEA配置"></a>修改IntelliJ IDEA配置</h3><h4 id="pom-xml配置文件"><a href="#pom-xml配置文件" class="headerlink" title="pom.xml配置文件"></a>pom.xml配置文件</h4><p>首先修改<code>pom.xml</code>文件的Java版本，这里关系到写代码时是否提示出错，例如：在Java1.8中写Java11的var类型会提示有错误</p>
+<h3 id="切换JDK"><a href="#切换JDK" class="headerlink" title="切换JDK"></a>切换JDK</h3><p>直接修改<code>JAVA_HOME</code>这个变量，修改成<code>%JAVA_HOME_8%</code>或<code>%JAVA_HOME_11%</code>就可以切换了，切换后要重新打开cmd命令窗口，不然用的还是之前的环境变量</p>
+<h3 id="修改IntelliJ-IDEA配置"><a href="#修改IntelliJ-IDEA配置" class="headerlink" title="修改IntelliJ IDEA配置"></a>修改IntelliJ IDEA配置</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>IntelliJ IDEA中使用的Java版本和本地环境变量配置的Java版本没有关系，以IntelliJ IDEA的Java版本为准</p>
+<h4 id="pom-xml配置文件"><a href="#pom-xml配置文件" class="headerlink" title="pom.xml配置文件"></a>pom.xml配置文件</h4><p>首先修改<code>pom.xml</code>文件的Java版本，这里关系到写代码时是否提示出错，例如：在Java1.8中写Java11的var类型会提示有错误</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230121220504410.png" alt="image-20230121220504410"></p>
 <h4 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h4><p>然后修改运行项目的Java版本（使用<code>CTRL+ALT+SHIFT+S</code>组合快捷键打开项目的配置），版本不同的话运行时会出错，例如：Java11的var类型在Java1.8中运行会报错</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230121220559531.png" alt="image-20230121220559531"></p>
