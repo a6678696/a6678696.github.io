@@ -24895,8 +24895,8 @@
 <img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230122150928547.png" alt="image-20230122150928547" style="zoom:50%;" />
 
 <h3 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h3><h4 id="进入安装界面"><a href="#进入安装界面" class="headerlink" title="进入安装界面"></a>进入安装界面</h4><p>开机前将U盘插入USB3.0的插口中（安装会比USB2.0快），我安装时会自动进入安装界面，如果不是自动的，那么就需要使用快捷键从U盘启动然后安装系统即可，具体用什么快捷键查看博客：<a href="https://zhuanlan.zhihu.com/p/510003495">各种品牌的电脑从U盘启动的快捷键大全 - 知乎 (zhihu.com)</a>，选择安装<code>专业版</code></p>
-<h4 id="转换磁盘格式为GPT"><a href="#转换磁盘格式为GPT" class="headerlink" title="转换磁盘格式为GPT"></a>转换磁盘格式为GPT</h4><p>在选择系统盘时，如果提示：Windows无法安装到这个磁盘，选中的磁盘具有MBR分区表，那么就需要转换磁盘格式为GPT，但是会清除所有磁盘，</p>
-<p>按下<code>Shift+F10</code>组合键打开cmd命令行窗口，依次输入下图的命令即可将磁盘格式转换为GPT，关闭cmd后刷新一下就可以继续安装系统了</p>
+<h4 id="转换磁盘格式为GPT"><a href="#转换磁盘格式为GPT" class="headerlink" title="转换磁盘格式为GPT"></a>转换磁盘格式为GPT</h4><p>在选择系统盘时，如果提示：Windows无法安装到这个磁盘，选中的磁盘具有MBR分区表，那么就需要转换磁盘格式为GPT，但是会清除所有磁盘</p>
+<p>不要关闭安装的界面，直接按下<code>Shift+F10</code>组合键打开cmd命令行窗口，依次输入下图的命令即可将磁盘格式转换为GPT，关闭cmd后刷新一下就可以继续安装系统了</p>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230122154434656.png" alt="image-20230122154434656"></p>
 <h3 id="激活系统"><a href="#激活系统" class="headerlink" title="激活系统"></a>激活系统</h3><p>右键点击左下角的开始菜单，选择<code>以管理员身份运行的Windows PowerShell</code>，依次输入下面命令（按回车键执行）即可激活系统，可能会过一会儿才会提示激活成功</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</span><br><span class="line">slmgr /skms kms.03k.org</span><br><span class="line">slmgr /ato</span><br></pre></td></tr></table></figure>
