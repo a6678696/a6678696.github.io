@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2023-01-21T14:42:14.295Z</updated>
+  <updated>2023-01-22T07:57:47.037Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>制作Windows 10的U盘启动盘重装系统</title>
+    <link href="https://blog.zoutl.cn/563.html"/>
+    <id>https://blog.zoutl.cn/563.html</id>
+    <published>2023-01-22T05:50:39.000Z</published>
+    <updated>2023-01-22T07:57:47.037Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="制作U盘启动盘"><a href="#制作U盘启动盘" class="headerlink" title="制作U盘启动盘"></a>制作U盘启动盘</h3><h4 id="下载Rufus"><a href="#下载Rufus" class="headerlink" title="下载Rufus"></a>下载Rufus</h4><p>下载地址：<a href="https://rufus.ie/zh/">Rufus - 轻松创建USB启动盘</a></p><p>Rufus是用来将下载好的ISO镜像文件制作成U盘启动盘，下载好后直接打开即可运行</p><h4 id="下载ISO镜像文件"><a href="#下载ISO镜像文件" class="headerlink" title="下载ISO镜像文件"></a>下载ISO镜像文件</h4><p>下载地址：<a href="https://msdn.itellyou.cn/">MSDN, 我告诉你 - 做一个安静的工具站 (itellyou.cn)</a></p><p>在这里可以找到各种版本的Windows系统，x64是64位系统，x86是32位，我们个人安装的是消费者版本的系统，点击右边的详细信息复制ed2k链接后使用迅雷下载ISO镜像文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230122151542100.png" alt="image-20230122151542100"></p><h4 id="开始制作"><a href="#开始制作" class="headerlink" title="开始制作"></a>开始制作</h4><p>打开Rufus后会自动检测插入的U盘，U盘的容量最好在8G及以上，<font color="#dd0000">开始制作前U盘会被格式化，如果有重要文件请先备份</font></p><p>设备选项的配置说明查看下表，格式化选项不用修改，状态是准备就绪就可以开始制作了</p><table><thead><tr><th align="center">配置</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">设备</td><td align="center">选择要制作成启动盘的U盘，会自动选择</td></tr><tr><td align="center">引导类型选择</td><td align="center">选择<code>镜像文件</code>，然后点击右边的<code>选择</code>按钮后选中下载好的镜像文件</td></tr><tr><td align="center">镜像选择</td><td align="center">默认选择<code>标准Windows安装</code>就行</td></tr><tr><td align="center">分区类型</td><td align="center">磁盘的分区类型，这里默认选<code>GPT</code>就行</td></tr><tr><td align="center">目标系统类型</td><td align="center">只有一个选项<code>UEFI（非CSM）</code></td></tr></tbody></table><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230122150928547.png" alt="image-20230122150928547" style="zoom:50%;" /><h3 id="重装系统"><a href="#重装系统" class="headerlink" title="重装系统"></a>重装系统</h3><h4 id="进入安装界面"><a href="#进入安装界面" class="headerlink" title="进入安装界面"></a>进入安装界面</h4><p>开机前将U盘插入USB3.0的插口中（安装会比USB2.0快），我安装时会自动进入安装界面，如果不是自动的，那么就需要使用快捷键从U盘启动然后安装系统即可，具体用什么快捷键查看博客：<a href="https://zhuanlan.zhihu.com/p/510003495">各种品牌的电脑从U盘启动的快捷键大全 - 知乎 (zhihu.com)</a></p><h4 id="转换磁盘格式为GPT"><a href="#转换磁盘格式为GPT" class="headerlink" title="转换磁盘格式为GPT"></a>转换磁盘格式为GPT</h4><p>在选择系统盘时，如果提示：Windows无法安装到这个磁盘，选中的磁盘具有MBR分区表，那么就需要转换磁盘格式为GPT，但是会清除所有磁盘，</p><p>按下<code>Shift+F10</code>组合键打开cmd命令行窗口，依次输入下图的命令即可将磁盘格式转换位GPT，关闭cmd后刷新一下就可以继续安装系统了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230122154434656.png" alt="image-20230122154434656"></p><h3 id="激活系统"><a href="#激活系统" class="headerlink" title="激活系统"></a>激活系统</h3><p>右键点击左下角的开始菜单，选择<code>以管理员身份运行的Windows PowerShell</code>，依次输入下面命令（按回车键执行）即可激活系统，可能会过一会儿才会提示激活成功</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX</span><br><span class="line">slmgr /skms kms.03k.org</span><br><span class="line">slmgr /ato</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;制作U盘启动盘&quot;&gt;&lt;a href=&quot;#制作U盘启动盘&quot; class=&quot;headerlink&quot; title=&quot;制作U盘启动盘&quot;&gt;&lt;/a&gt;制作U盘启动盘&lt;/h3&gt;&lt;h4 id=&quot;下载Rufus&quot;&gt;&lt;a href=&quot;#下载Rufus&quot; class=&quot;headerlink</summary>
+      
+    
+    
+    
+    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>安装多个版本的JDK并切换</title>
@@ -512,33 +536,6 @@
     
     
     <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>将Element Plus的默认文字设置为中文</title>
-    <link href="https://blog.zoutl.cn/543.html"/>
-    <id>https://blog.zoutl.cn/543.html</id>
-    <published>2022-12-15T08:11:15.000Z</published>
-    <updated>2022-12-15T08:29:22.372Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>当前Element Plus组件的默认文字是英文，为了方便，我们直接设置全局的默认文字让每个页面都生效</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221215162838853.png" alt="image-20221215162838853"></p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><p>直接在App.vue中设置，首先引入简体中文的js文件</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zhCn <span class="keyword">from</span> <span class="string">&quot;element-plus/lib/locale/lang/zh-cn&quot;</span>;</span><br></pre></td></tr></table></figure><p>​    使用<code>&lt;el-config-provider :locale=&quot;zhCn&quot;&gt;&lt;/el-config-provider&gt;</code>将<code>&lt;router-view/&gt;</code>包住即可生效</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-config-provider</span> <span class="attr">:locale</span>=<span class="string">&quot;zhCn&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">router-view</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-config-provider</span>&gt;</span></span><br></pre></td></tr></table></figure><p>完整App.vue代码如下：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> zhCn <span class="keyword">from</span> <span class="string">&quot;element-plus/lib/locale/lang/zh-cn&quot;</span>;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-config-provider</span> <span class="attr">:locale</span>=<span class="string">&quot;zhCn&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">router-view</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-config-provider</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure><p>效果如图所示</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20221215162920988.png" alt="image-20221215162920988"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;当前Element Plus组件的默认文字是英文，为了方便，我们直接设置全局的默认文字让每个页面都生效&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;h</summary>
-      
-    
-    
-    
-    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
-    
-    <category term="Element Plus" scheme="https://blog.zoutl.cn/tags/Element-Plus/"/>
     
   </entry>
   
