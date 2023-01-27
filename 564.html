@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Pinia的基本使用 | LeDao's Blog</title><meta name="keywords" content="Vue.js,Pinia"><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="介绍Pinia是Vue的专属状态管理库，它允许我们跨组件或页面共享状态，官方文档链接：Home | Pinia (vuejs.org) 安装我使用的Vue.js版本是3.2.45（也就是Vue 3），并且项目使用Vite4创建的，Vue 3安装Pinia只需要执行下面的命令即可，Vue 2则还需要安装一个插件，这里不讨论，可以去查看官方文档：安装 | Pinia (vuejs.org) 1npm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pinia的基本使用">
+<meta property="og:url" content="https://blog.zoutl.cn/564.html">
+<meta property="og:site_name" content="LeDao&#39;s Blog">
+<meta property="og:description" content="介绍Pinia是Vue的专属状态管理库，它允许我们跨组件或页面共享状态，官方文档链接：Home | Pinia (vuejs.org) 安装我使用的Vue.js版本是3.2.45（也就是Vue 3），并且项目使用Vite4创建的，Vue 3安装Pinia只需要执行下面的命令即可，Vue 2则还需要安装一个插件，这里不讨论，可以去查看官方文档：安装 | Pinia (vuejs.org) 1npm">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/blogCoverImage/564.jpg">
+<meta property="article:published_time" content="2023-01-23T13:30:04.000Z">
+<meta property="article:modified_time" content="2023-01-27T13:00:11.356Z">
+<meta property="article:author" content="LeDao">
+<meta property="article:tag" content="Vue.js">
+<meta property="article:tag" content="Pinia">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/blogCoverImage/564.jpg"><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/564"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="fp2ohQruhOqzbyAh"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JZJWXGK1VV"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JZJWXGK1VV');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.js',
+      css: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Pinia的基本使用',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-27 21:00:11'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3265865_vc1sierqa1.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">561</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">91</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">11</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://image.zoutl.cn/iTabImage/8.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeDao's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Pinia的基本使用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2023-01-23T13:30:04.000Z" title="发表于 2023-01-23 21:30:04">2023-01-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Pinia的基本使用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/564.html#post-comment"><span class="gitalk-comment-count"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Pinia是Vue的专属状态管理库，它允许我们跨组件或页面共享状态，官方文档链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pinia.vuejs.org/zh/">Home | Pinia (vuejs.org)</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>我使用的Vue.js版本是3.2.45（也就是Vue 3），并且项目使用Vite4创建的，Vue 3安装Pinia只需要执行下面的命令即可，Vue 2则还需要安装一个插件，这里不讨论，可以去查看官方文档：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pinia.vuejs.org/zh/getting-started.html#installation">安装 | Pinia (vuejs.org)</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install pinia</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="创建实例传递给应用"><a href="#创建实例传递给应用" class="headerlink" title="创建实例传递给应用"></a>创建实例传递给应用</h3><p>创建一个pinia实例（根store）并将其传递给应用</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createPinia &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./style.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pinia = createPinia()</span><br><span class="line"></span><br><span class="line">createApp(App).use(pinia).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义store"><a href="#定义store" class="headerlink" title="定义store"></a>定义store</h3><p>在<code>/src/stores</code>目录下创建一个<code>index.ts</code>文件</p>
+<p><code>useStore</code>是返回值的名称，<code>main</code>是名字id，都可以随意命名，但是返回值的名称最好使用store的名字，同时以 <code>use</code> 开头且以 <code>Store</code> 结尾(比如 <code>useUserStore</code>，<code>useCartStore</code>，<code>useProductStore</code>)</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">   	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><h4 id="定义state"><a href="#定义state" class="headerlink" title="定义state"></a>定义state</h4><p>state是store的核心，用于跨组件或页面共享状态</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="访问state"><a href="#访问state" class="headerlink" title="访问state"></a>访问state</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup lang=&quot;ts&quot;&gt;</span><br><span class="line">// 引入useStore</span><br><span class="line">import &#123; useStore &#125; from &quot;./stores/index&quot;;</span><br><span class="line">// 获得useStore的返回值</span><br><span class="line">const store = useStore();</span><br><span class="line">// store.count自加1</span><br><span class="line">const addCount = () =&gt; &#123;</span><br><span class="line">  store.count++;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;&#123;&#123; store.count &#125;&#125;&lt;/h1&gt;</span><br><span class="line">    &lt;button @click=&quot;addCount&quot;&gt;+1&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">div &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">h1 &#123;</span><br><span class="line">  color: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="重置state"><a href="#重置state" class="headerlink" title="重置state"></a>重置state</h4><p>通过<code>store.$reset()</code>可以重置state的值</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重置</span></span><br><span class="line"><span class="keyword">const</span> reset = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  store.$reset();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="变更state"><a href="#变更state" class="headerlink" title="变更state"></a>变更state</h4><p>通过<code>store.$patch</code>修改state（一般用于修改多个数据），只修改一个可以直接修改</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// store.$patch修改成123</span></span><br><span class="line"><span class="keyword">const</span> modify = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">  store.$patch(<span class="function"><span class="params">state</span> =&gt;</span> &#123;</span><br><span class="line">    state.count = <span class="number">123</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 直接修改成123</span></span><br><span class="line"><span class="keyword">const</span> modify2 = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">  store.count = <span class="number">123</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="替换state"><a href="#替换state" class="headerlink" title="替换state"></a>替换state</h4><p>替换和变更的区别就是，替换用于<font color="#dd0000">修改全部数据</font>，而变更是修改一个或多个数据</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 替换</span></span><br><span class="line"><span class="keyword">const</span> replace = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">  store.$state = &#123;</span><br><span class="line">    <span class="attr">count</span>: <span class="number">666</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;jack&quot;</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="订阅state"><a href="#订阅state" class="headerlink" title="订阅state"></a>订阅state</h4><p>通过<code>store.$subscribe</code>方法订阅state后，一旦state的数据发生变更，我们可以对变更后的数据进行一些操作，例如可以对数据进行持久化，不然一刷新页面数据就重置了</p>
+<p>mutation返回值包含了操作的状态、state改变前的值、state改变后的值……</p>
+<p>state返回值则是修改后的state的数据</p>
+<p>上面两个返回值的名称可以随便写</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 订阅</span></span><br><span class="line">store.$subscribe(<span class="function">(<span class="params">mutation, state</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(mutation);</span><br><span class="line">  <span class="built_in">console</span>.log(state);</span><br><span class="line">  <span class="built_in">window</span>.localStorage.setItem(<span class="string">&quot;useStoreState&quot;</span>, <span class="built_in">JSON</span>.stringify(state));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Getter"><a href="#Getter" class="headerlink" title="Getter"></a>Getter</h3><p>Getter完全等同于store的state的<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cn.vuejs.org/guide/essentials/computed.html">计算值</a>，接收 <code>state</code> 作为第一个参数，对state的数据进行统一处理，下面的<code>doubleCount</code>是<code>对state.count乘以2</code>，直接通过<code>store.doubleCount()</code>调用</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;tom&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">getters</span>: &#123;</span><br><span class="line">        <span class="comment">// 计算state.count * 2</span></span><br><span class="line">        <span class="attr">doubleCount</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> state.count * <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>调用同一个store的getter可以使用<code>this</code>关键词</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;tom&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">getters</span>: &#123;</span><br><span class="line">        <span class="comment">// 计算state.count * 2</span></span><br><span class="line">        <span class="attr">doubleCount</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> state.count * <span class="number">2</span>,</span><br><span class="line">        <span class="comment">// 调用同一个store的getter</span></span><br><span class="line">        doublePlusOne(): <span class="built_in">number</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">this</span>.doubleCount + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h3><p>Action相当于组件中的method，在组件中直接通过<code>store.increment()</code>进行调用</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;tom&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">getters</span>: &#123;</span><br><span class="line">        <span class="comment">// 计算state.count * 2</span></span><br><span class="line">        <span class="attr">doubleCount</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> state.count * <span class="number">2</span>,</span><br><span class="line">        <span class="comment">// 调用同一个store的getter</span></span><br><span class="line">        doublePlusOne(): <span class="built_in">number</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">this</span>.doubleCount + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">actions</span>: &#123;</span><br><span class="line">        <span class="function"><span class="title">increment</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">            <span class="built_in">this</span>.count++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h3><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><p>state改变后，一旦刷新页面后就恢复默认值了，如果我们需要保留修改后的state，那么就需要将state持久化了，持久化的方法有两个：</p>
+<ol>
+<li>使用<code>pinia-plugin-persist</code>插件，<font color="#dd0000">建议使用</font></li>
+<li>通过订阅state将每次改变后的数据通过<code>localStorage</code>或者<code>sessionStorage</code>持久化到本地</li>
+</ol>
+<h4 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h4><h5 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h5><p>使用下面命令安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i pinia-plugin-persistedstate</span><br></pre></td></tr></table></figure>
+
+<h5 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h5><p>在<code>main.ts</code>中全局引入</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createPinia &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"><span class="keyword">import</span> piniaPluginPersistedstate <span class="keyword">from</span> <span class="string">&quot;pinia-plugin-persistedstate&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./style.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pinia = createPinia()</span><br><span class="line">pinia.use(piniaPluginPersistedstate)</span><br><span class="line"></span><br><span class="line">createApp(App).use(pinia).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h5><p>在要持久化的store中加上persist</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;mary&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">persist</span>: &#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&#x27;useStore&#x27;</span>,</span><br><span class="line">        <span class="attr">storage</span>: sessionStorage,</span><br><span class="line">        <span class="attr">paths</span>: [<span class="string">&#x27;count&#x27;</span>, <span class="string">&#x27;name&#x27;</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>参数说明如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">key</td>
+<td align="center">自定义存储的key，默认是<code>store.$id</code></td>
+</tr>
+<tr>
+<td align="center">storage</td>
+<td align="center">存储的类型：<code>sessionStorage</code>或<code>localStorage</code>，默认是<code>sessionStorage</code></td>
+</tr>
+<tr>
+<td align="center">paths</td>
+<td align="center">要持久化的数据，state中的字段名，默认是全部</td>
+</tr>
+</tbody></table>
+<h4 id="通过订阅state"><a href="#通过订阅state" class="headerlink" title="通过订阅state"></a>通过订阅state</h4><p>首先订阅state，然后将数据放到<code>localStorage</code>或<code>sessionStorage</code>中</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 订阅</span></span><br><span class="line">store.$subscribe(<span class="function">(<span class="params">mutation, state</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(mutation);</span><br><span class="line">  <span class="built_in">console</span>.log(state);</span><br><span class="line">  <span class="built_in">window</span>.localStorage.setItem(<span class="string">&quot;useStoreState&quot;</span>, <span class="built_in">JSON</span>.stringify(state));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>需要持久化哪个数据就从本地存储的state中获取它，不然就是默认值</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"><span class="comment">// 获取本地存储的useStoreState,如果没有就设置默认值</span></span><br><span class="line"><span class="keyword">const</span> json: <span class="built_in">string</span> = <span class="built_in">window</span>.localStorage.getItem(<span class="string">&quot;useStoreState&quot;</span>) || <span class="string">&#x27;&#123;&quot;count&quot;:1,&quot;name&quot;:&quot;tom&quot;&#125;&#x27;</span></span><br><span class="line"><span class="comment">// 解析</span></span><br><span class="line"><span class="keyword">const</span> obj: <span class="built_in">any</span> = <span class="built_in">JSON</span>.parse(json)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: obj.count,</span><br><span class="line">            <span class="attr">name</span>: obj.name</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">getters</span>: &#123;</span><br><span class="line">        <span class="comment">// 计算state.count * 2</span></span><br><span class="line">        <span class="attr">doubleCount</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> state.count * <span class="number">2</span>,</span><br><span class="line">        <span class="comment">// 调用同一个store的getter</span></span><br><span class="line">        doublePlusOne(): <span class="built_in">number</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">this</span>.doubleCount + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">actions</span>: &#123;</span><br><span class="line">        <span class="function"><span class="title">increment</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">            <span class="built_in">this</span>.count++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">LeDao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.zoutl.cn/564.html">https://blog.zoutl.cn/564.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.zoutl.cn" target="_blank">LeDao's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Vue-js/">Vue.js</a><a class="post-meta__tags" href="/tags/Pinia/">Pinia</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/563.html"><img class="next-cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/563.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">制作Windows 10的U盘启动盘重装系统</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/180.html" title="创建第一个Vue应用"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/180.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-24</div><div class="title">创建第一个Vue应用</div></div></a></div><div><a href="/182.html" title="Vue.js条件语句"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/182.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-24</div><div class="title">Vue.js条件语句</div></div></a></div><div><a href="/184.html" title="Vue.js计算属性"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/184.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-24</div><div class="title">Vue.js计算属性</div></div></a></div><div><a href="/183.html" title="Vue.js循环语句"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/183.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-24</div><div class="title">Vue.js循环语句</div></div></a></div><div><a href="/185.html" title="Vue.js监听属性"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/185.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-24</div><div class="title">Vue.js监听属性</div></div></a></div><div><a href="/186.html" title="Vue.js样式绑定"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/186.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-24</div><div class="title">Vue.js样式绑定</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text">使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BE%8B%E4%BC%A0%E9%80%92%E7%BB%99%E5%BA%94%E7%94%A8"><span class="toc-number">3.1.</span> <span class="toc-text">创建实例传递给应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89store"><span class="toc-number">3.2.</span> <span class="toc-text">定义store</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#State"><span class="toc-number">3.3.</span> <span class="toc-text">State</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89state"><span class="toc-number">3.3.1.</span> <span class="toc-text">定义state</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BF%E9%97%AEstate"><span class="toc-number">3.3.2.</span> <span class="toc-text">访问state</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%87%8D%E7%BD%AEstate"><span class="toc-number">3.3.3.</span> <span class="toc-text">重置state</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E6%9B%B4state"><span class="toc-number">3.3.4.</span> <span class="toc-text">变更state</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9B%BF%E6%8D%A2state"><span class="toc-number">3.3.5.</span> <span class="toc-text">替换state</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%A2%E9%98%85state"><span class="toc-number">3.3.6.</span> <span class="toc-text">订阅state</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Getter"><span class="toc-number">3.4.</span> <span class="toc-text">Getter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Action"><span class="toc-number">3.5.</span> <span class="toc-text">Action</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%81%E4%B9%85%E5%8C%96"><span class="toc-number">3.6.</span> <span class="toc-text">持久化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D-1"><span class="toc-number">3.6.1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%8F%92%E4%BB%B6"><span class="toc-number">3.6.2.</span> <span class="toc-text">使用插件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-1"><span class="toc-number">3.6.2.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BC%95%E5%85%A5"><span class="toc-number">3.6.2.2.</span> <span class="toc-text">引入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-number">3.6.2.3.</span> <span class="toc-text">使用</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%9A%E8%BF%87%E8%AE%A2%E9%98%85state"><span class="toc-number">3.6.3.</span> <span class="toc-text">通过订阅state</span></a></li></ol></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('https://image.zoutl.cn/iTabImage/8.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Algolia</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/fancybox.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://image.zoutl.cn/hexo-blog/file/source/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://image.zoutl.cn/hexo-blog/file/source/algoliasearch-lite.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://image.zoutl.cn/hexo-blog/file/source/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e85b530ea329d17050fe',
+      clientSecret: '47090eb530100dd0d587d4e4a23de09b8c25d44d',
+      repo: 'a6678696.github.io',
+      owner: 'a6678696',
+      admin: ['a6678696'],
+      id: '617c1e9cc6011c215a0f1e4008021a47',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://image.zoutl.cn/hexo-blog/file/source/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script defer="defer" id="ribbon" src="https://image.zoutl.cn/hexo-blog/file/source/canvas-ribbon.min.js" size="222" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://image.zoutl.cn/hexo-blog/file/source/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
