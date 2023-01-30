@@ -24916,7 +24916,7 @@
     <title>Pinia的基本使用</title>
     <url>/564.html</url>
     <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Pinia是Vue的专属状态管理库，它允许我们跨组件或页面共享状态，官方文档链接：<a href="https://pinia.vuejs.org/zh/">Home | Pinia (vuejs.org)</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>我使用的Vue.js版本是3.2.45（也就是Vue 3），并且项目使用Vite4创建的，Vue 3安装Pinia只需要执行下面的命令即可，Vue 2则还需要安装一个插件，这里不讨论，可以去查看官方文档：<a href="https://pinia.vuejs.org/zh/getting-started.html#installation">安装 | Pinia (vuejs.org)</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>我使用的Vue.js版本是3.2.45（也就是Vue3），并且项目使用Vite4创建的，Vue3安装Pinia只需要执行下面的命令即可，Vue2则还需要安装一个插件，这里不讨论，可以去查看官方文档：<a href="https://pinia.vuejs.org/zh/getting-started.html#installation">安装 | Pinia (vuejs.org)</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install pinia</span><br></pre></td></tr></table></figure>
 
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="创建实例传递给应用"><a href="#创建实例传递给应用" class="headerlink" title="创建实例传递给应用"></a>创建实例传递给应用</h3><p>创建一个pinia实例（根store）并将其传递给应用</p>
@@ -25002,6 +25002,125 @@
       <tags>
         <tag>Vue.js</tag>
         <tag>Pinia</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue项目使用右滑拼图验证</title>
+    <url>/565.html</url>
+    <content><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>和输入验证码相比，使用右滑拼图验证对用户更友好</p>
+<p>右滑拼图验证插件的GitHub仓库地址为：<a href="https://github.com/javaLuo/vue-puzzle-vcode">javaLuo/vue-puzzle-vcode: vue 拼图人机验证 右滑拼图验证 (github.com)</a></p>
+<p>Vue2和Vue3的使用文档都有，根据自己的需求选择，我使用的是Vue3</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install vue3-puzzle-vcode --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>下面是一个最简单的例子，使用的图片是内置的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;button @click=&quot;onShow&quot;&gt;开始验证&lt;/button&gt;</span><br><span class="line">    &lt;Vcode :show=&quot;isShow&quot; @success=&quot;onSuccess&quot; @close=&quot;onClose&quot; /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">  import &#123; ref &#125; from &quot;vue&quot;;</span><br><span class="line">  import Vcode from &quot;vue3-puzzle-vcode&quot;;</span><br><span class="line"></span><br><span class="line">  const isShow = ref(false);</span><br><span class="line"></span><br><span class="line">  const onShow = () =&gt; &#123;</span><br><span class="line">    isShow.value = true;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  const onClose = () =&gt; &#123;</span><br><span class="line">    isShow.value = false;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  const onSuccess = () =&gt; &#123;</span><br><span class="line">    onClose(); // 验证成功，需要手动关闭模态框</span><br><span class="line">  &#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>一般直接用内置的图片就行了，如果要自定义图片，示例代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;Vcode :imgs=&quot;imgs&quot; /&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import Vcode from &quot;vue3-puzzle-vcode&quot;;</span><br><span class="line">import Img1 from &quot;~/assets/img1.png&quot;;</span><br><span class="line">import Img2 from &quot;~/assets/img2.png&quot;;</span><br><span class="line"></span><br><span class="line">const imgs = [Img1, Img2];</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>上面自定义的图片是本地的图片，还可以使用网络图片</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> imgs = [<span class="string">&#x27;https://image.zoutl.cn/1.jpeg&#x27;</span>, <span class="string">&#x27;https://image.zoutl.cn/2.jpeg&#x27;</span>];</span><br></pre></td></tr></table></figure>
+
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><table>
+<thead>
+<tr>
+<th align="center">字段</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">show</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">是否显示验证码弹框</td>
+</tr>
+<tr>
+<td align="center">canvasWidth</td>
+<td align="center">Number</td>
+<td align="center">310</td>
+<td align="center">主图区域的宽度，单位 px</td>
+</tr>
+<tr>
+<td align="center">canvasHeight</td>
+<td align="center">Number</td>
+<td align="center">160</td>
+<td align="center">主图区域的高度，单位 px</td>
+</tr>
+<tr>
+<td align="center">puzzleScale</td>
+<td align="center">Number</td>
+<td align="center">1</td>
+<td align="center">拼图块(小的拼图)的大小比例，0.2 ～ 2 ，数字越大，拼图越大</td>
+</tr>
+<tr>
+<td align="center">sliderSize</td>
+<td align="center">Number</td>
+<td align="center">50</td>
+<td align="center">左下角用户拖动的那个滑块的尺寸，单位 px</td>
+</tr>
+<tr>
+<td align="center">range</td>
+<td align="center">Number</td>
+<td align="center">10</td>
+<td align="center">判断成功的误差范围，单位 px, 滑动的距离和拼图的距离小于等于此值时，会判定重合</td>
+</tr>
+<tr>
+<td align="center">imgs</td>
+<td align="center">Array</td>
+<td align="center">null</td>
+<td align="center">自定义图片，见下方例子</td>
+</tr>
+<tr>
+<td align="center">successText</td>
+<td align="center">String</td>
+<td align="center">“验证通过！”</td>
+<td align="center">验证成功时的提示文字</td>
+</tr>
+<tr>
+<td align="center">failText</td>
+<td align="center">String</td>
+<td align="center">“验证失败，请重试”</td>
+<td align="center">验证失败时的提示文字</td>
+</tr>
+<tr>
+<td align="center">sliderText</td>
+<td align="center">String</td>
+<td align="center">“拖动滑块完成拼图”</td>
+<td align="center">下方滑动条里的文字</td>
+</tr>
+</tbody></table>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><table>
+<thead>
+<tr>
+<th align="center">事件名</th>
+<th align="center">返回值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">success</td>
+<td align="center">偏差值</td>
+<td align="center">验证通过时会触发，返回值是用户移动的距离跟目标距离的偏差值 px</td>
+</tr>
+<tr>
+<td align="center">fail</td>
+<td align="center">偏差值</td>
+<td align="center">验证失败时会触发，返回值同上</td>
+</tr>
+<tr>
+<td align="center">close</td>
+<td align="center">null</td>
+<td align="center">用户点击遮罩层的回调</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Vue.js</tag>
       </tags>
   </entry>
 </search>
