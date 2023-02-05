@@ -25228,4 +25228,106 @@
         <tag>Nginx</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Vim常用命令或快捷键</title>
+    <url>/570.html</url>
+    <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Vim是Vi的升级版本，可以当作Vi来使用，完全替代Vi，也就是说：不要使用Vi了，而是使用它的升级版本Vim</p>
+<p>下面只列举了一些我常用的命令或快捷键，并不是列举全部，其它没有列出的命令或快捷键如果用到了就在下方放出</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>Vim命令的类型分为<code>命令模式</code>、<code>输入模式</code>和<code>底线命令模式</code>，<code>vim 文件名</code>打开文件后就是命令模式，在命令模式下按下<code>i</code>键就切换到了输入模式，在命令模式下输入<code>:</code>就切换到了底线命令模式</p>
+<h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p><code>vim 文件名</code>打开文件后就是命令模式</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令或快捷键</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>:</code></td>
+<td align="center">切换到底线命令模式</td>
+</tr>
+<tr>
+<td align="center"><code>i</code></td>
+<td align="center">切换到输入模式</td>
+</tr>
+<tr>
+<td align="center"><code>x</code></td>
+<td align="center">删除当前光标所在处的字符</td>
+</tr>
+<tr>
+<td align="center"><code>dd</code></td>
+<td align="center">删除光标所在行</td>
+</tr>
+<tr>
+<td align="center"><code>/关键词</code></td>
+<td align="center">向下搜索关键词，按<code>n</code>查找下一个搜索结果，按<code>N</code>则查找上一个</td>
+</tr>
+<tr>
+<td align="center"><code>?关键词</code></td>
+<td align="center">向上搜索关键词，按<code>n</code>查找上一个搜索结果，按<code>N</code>则查找下一个，和上面相反</td>
+</tr>
+</tbody></table>
+<h4 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h4><p>在命令模式下，按下<code>i</code>键就切换到了输入模式，输入模式没有什么好说的，就和平时在Windows系统中编辑文本一样</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令或快捷键</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>ESC</code></td>
+<td align="center">切换到命令模式</td>
+</tr>
+<tr>
+<td align="center"><code>CTRL+INSERT</code></td>
+<td align="center">复制文本</td>
+</tr>
+<tr>
+<td align="center"><code>SHIFT+INSERT</code></td>
+<td align="center">粘贴文本，可以选择文本后直接粘贴不用复制</td>
+</tr>
+</tbody></table>
+<h4 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h4><p>在命令模式下输入<code>:</code>就切换到了底线命令模式</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令或快捷键</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>ESC</code></td>
+<td align="center">切换到命令模式</td>
+</tr>
+<tr>
+<td align="center"><code>q</code></td>
+<td align="center">没有修改文件内容退出Vim回到系统中</td>
+</tr>
+<tr>
+<td align="center"><code>w</code></td>
+<td align="center">保存，修改了内容必须保存不然无法退出</td>
+</tr>
+<tr>
+<td align="center"><code>wq</code></td>
+<td align="center">保存后退出</td>
+</tr>
+<tr>
+<td align="center"><code>q!</code></td>
+<td align="center">不保存修改的内容直接退出</td>
+</tr>
+<tr>
+<td align="center"><code>noh</code></td>
+<td align="center">去除命令模式搜索关键词时高亮的效果</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>CentOS7</tag>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
 </search>
