@@ -25233,7 +25233,7 @@
     <url>/570.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Vim是Vi的升级版本，可以当作Vi来使用，完全替代Vi，也就是说：不要使用Vi了，而是使用它的升级版本Vim</p>
 <p>下面只列举了一些我常用的命令或快捷键，并不是列举全部，其它没有列出的命令或快捷键如果用到了就在下方放出</p>
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>Vim命令的类型分为<code>命令模式</code>、<code>输入模式</code>和<code>底线命令模式</code>，<code>vim 文件名</code>打开文件后就是命令模式，在命令模式下按下<code>i</code>键就切换到了输入模式，在命令模式下输入<code>:</code>就切换到了底线命令模式</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>我把Vim命令的类型分为<code>命令模式</code>、<code>输入模式</code>和<code>底线命令模式</code>，<code>vim 文件名</code>打开文件后就是命令模式，在命令模式下按下<code>i</code>键就切换到了输入模式，在命令模式下输入<code>:</code>就切换到了底线命令模式</p>
 <h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p><code>vim 文件名</code>打开文件后就是命令模式</p>
 <table>
 <thead>
@@ -25265,6 +25265,18 @@
 <tr>
 <td align="center"><code>?关键词</code></td>
 <td align="center">向上搜索关键词，按<code>n</code>查找上一个搜索结果，按<code>N</code>则查找下一个，和上面相反</td>
+</tr>
+<tr>
+<td align="center"><code>v</code></td>
+<td align="center">切换到<code>可视化模式</code>，可以选择一段文本后进行复制、粘贴、删除，一般用于删除一段文本</td>
+</tr>
+<tr>
+<td align="center"><code>r</code></td>
+<td align="center">切换到<code>单字符替换模式</code>，用于替换一个字符</td>
+</tr>
+<tr>
+<td align="center"><code>R</code></td>
+<td align="center">切换到<code>多字符替换模式</code>，用于替换多个字符</td>
 </tr>
 </tbody></table>
 <h4 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h4><p>在命令模式下，按下<code>i</code>键就切换到了输入模式，输入模式没有什么好说的，就和平时在Windows系统中编辑文本一样</p>
@@ -25320,7 +25332,23 @@
 <td align="center"><code>noh</code></td>
 <td align="center">去除命令模式搜索关键词时高亮的效果</td>
 </tr>
+<tr>
+<td align="center"><code>set nu</code></td>
+<td align="center">显示行号，只在本次编辑有效，下次再打开就没了</td>
+</tr>
+<tr>
+<td align="center"><code>set nonu</code></td>
+<td align="center">不显示行号</td>
+</tr>
+<tr>
+<td align="center"><code>数字</code></td>
+<td align="center">跳转到指定行</td>
+</tr>
 </tbody></table>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果编辑的文件内容改动了（添加一个字符再删除也是改动了），没有使用<code>:q</code>退出Vim而是关闭SSH连接或其它强制退出Vim的操作，那么再次打开这个文件就会提示：<font color="#dd0000">Found a swap file by the name</font>，无法正常编辑这个文件</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230205115000670.png" alt="image-20230205115000670"></p>
+<p>我们先按下<code>q</code>键退出，然后找到提示的文件并删除（和要编辑的文件在同一个目录下），不过<font color="#dd0000">上次的改动无效</font>了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230205115248806.png" alt="image-20230205115248806"></p>
 ]]></content>
       <categories>
         <category>运维</category>
