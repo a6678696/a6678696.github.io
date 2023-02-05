@@ -25218,6 +25218,7 @@
 <h3 id="重启Nginx"><a href="#重启Nginx" class="headerlink" title="重启Nginx"></a>重启Nginx</h3><p>修改完配置文件后，需要重启一下Nginx，不然修改的配置是不生效的</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure>
 
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>除了使用Nginx部署Vue项目，还可以使用Tomcat，直接把打包的文件夹丢到webapps目录下然后<a href="https://blog.zoutl.cn/9.html">配置一下访问不用加项目名称</a>就行了，不过还是推荐使用Nginx</p>
 ]]></content>
       <categories>
         <category>运维</category>
