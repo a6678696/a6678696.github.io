@@ -25445,20 +25445,8 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="center">annotation.None</td>
-<td align="center">不给实体类添加注解</td>
-</tr>
-<tr>
-<td align="center">annotation.Mybatis-Plus 2</td>
-<td align="center">给实体类添加Mybatis-Plus 2注解</td>
-</tr>
-<tr>
-<td align="center">annotation.Mybatis-Plus 3</td>
-<td align="center">给实体类添加Mybatis-Plus 3注解</td>
-</tr>
-<tr>
-<td align="center">annotation.JPA</td>
-<td align="center">给实体类添加JPA注解</td>
+<td align="center">annotation</td>
+<td align="center">给实体类添加的注解类型</td>
 </tr>
 <tr>
 <td align="center">options.Comment</td>
