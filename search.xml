@@ -25497,7 +25497,7 @@
       </tags>
   </entry>
   <entry>
-    <title>使用npkill管理node_modules包</title>
+    <title>使用npkill查找和清理node_modules包</title>
     <url>/572.html</url>
     <content><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>进行前端开发时，电脑上会有很多node_modules包，会占用很多磁盘空间，我们可以把一些暂时不会打开的项目的node_modules包删除掉，等到要运行项目的时候再安装回来，如果我们一个个手动删除的话，会很麻烦</p>
 <p><code>npkill</code>可以很好的解决上述问题，不仅可以快速找到某个文件夹下的全部node_modules包，还可以根据路径、大小和上次修改时间进行排序，管理起来更加方便</p>

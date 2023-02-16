@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2023-02-16T05:37:57.671Z</updated>
+  <updated>2023-02-16T05:47:11.383Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用npkill管理node_modules包</title>
+    <title>使用npkill查找和清理node_modules包</title>
     <link href="https://blog.zoutl.cn/572.html"/>
     <id>https://blog.zoutl.cn/572.html</id>
     <published>2023-02-16T04:26:56.000Z</published>
-    <updated>2023-02-16T05:37:57.671Z</updated>
+    <updated>2023-02-16T05:47:11.383Z</updated>
     
     <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>进行前端开发时，电脑上会有很多node_modules包，会占用很多磁盘空间，我们可以把一些暂时不会打开的项目的node_modules包删除掉，等到要运行项目的时候再安装回来，如果我们一个个手动删除的话，会很麻烦</p><p><code>npkill</code>可以很好的解决上述问题，不仅可以快速找到某个文件夹下的全部node_modules包，还可以根据路径、大小和上次修改时间进行排序，管理起来更加方便</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>打开cmd然后执行下面命令即可完成安装，不安装也可以使用<code>npkill</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g npkill</span><br></pre></td></tr></table></figure><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>cmd进入一个文件夹后，执行下面命令即可搜索该文件夹下的全部node_modules包，方向键的上下可以选择node_modules包，用空格键删除，<font color="#dd0000">直接删除不会有确认提示</font></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230216132204625.png" alt="image-20230216132204625"></p><h4 id="不安装使用"><a href="#不安装使用" class="headerlink" title="不安装使用"></a>不安装使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx npkill</span><br></pre></td></tr></table></figure><h4 id="安装后使用"><a href="#安装后使用" class="headerlink" title="安装后使用"></a>安装后使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npkill</span><br></pre></td></tr></table></figure><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p>一般只用到<code>-s</code>参数根据<code>size</code>进行排序，</p><table><thead><tr><th align="center">参数</th><th align="center">说明</th><th align="center">默认</th></tr></thead><tbody><tr><td align="center">-c, --bg-color</td><td align="center">更改行突出显示颜色，可用颜色有: blue,cyan,magenta,white,red ,yellow</td><td align="center">blue</td></tr><tr><td align="center">-d, --directory</td><td align="center">设置要开始搜索的目录</td><td align="center">.</td></tr><tr><td align="center">-D, --delete-all</td><td align="center">目前禁用，自动删除所有node _ module文件夹</td><td align="center">--</td></tr><tr><td align="center">-e, --show-errors</td><td align="center">显示错误消息(如果有的话)</td><td align="center">false</td></tr><tr><td align="center">-E, --exclude</td><td align="center">从搜索中排除目录(目录名列表必须在双引号“”中，每个目录之间用’,’分隔)示例: “ ignore1，ignore2”</td><td align="center">--</td></tr><tr><td align="center">-f, --full</td><td align="center">从用户的主页开始搜索(例如: Linux 中的“/home/user”)</td><td align="center">false</td></tr><tr><td align="center">-gb</td><td align="center">以千兆字节而不是兆字节显示文件夹大小</td><td align="center">false</td></tr><tr><td align="center">-h, --help, ?</td><td align="center">显示帮助</td><td align="center">false</td></tr><tr><td align="center">-nu, --no-check-update</td><td align="center">启动时不要检查更新</td><td align="center">false</td></tr><tr><td align="center">-s, --sort</td><td align="center">根据 <code>size</code>、 <code>path</code> 或 <code>last-mod</code>排序，一般使用<code>size</code></td><td align="center">none</td></tr><tr><td align="center">-t, --target</td><td align="center">指定要搜索的目录的名称</td><td align="center">node_modules</td></tr><tr><td align="center">-x, --exclude-hidden-directories</td><td align="center">从搜索中排除隐藏目录(“点”目录)</td><td align="center">false</td></tr><tr><td align="center">-v, --version</td><td align="center">显示npkill版本</td><td align="center">false</td></tr></tbody></table>]]></content>
     
