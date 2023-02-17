@@ -1615,6 +1615,7 @@
 <p>查看是否配置成功，运行CMD，输入mvn help:system</p>
 </blockquote>
 <p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210615020715.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果不是最新版的IntelliJ IDEA，可能无法使用Maven的最新版本，直接使用IntelliJ IDEA内置的Maven就行了，也就是说：不需要自己安装Maven，IntelliJ IDEA会帮我们安装好，但是我们可以根据上面的步骤配置一下镜像仓库和依赖存放路径</p>
 ]]></content>
       <categories>
         <category>后端</category>
