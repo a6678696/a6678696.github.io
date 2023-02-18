@@ -15371,7 +15371,7 @@
 <li><p>重启MySQL，新密码就生效了</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>CentOS7操作MySQL命令的一些命令如下：</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><h4 id="操作MySQL命令"><a href="#操作MySQL命令" class="headerlink" title="操作MySQL命令"></a>操作MySQL命令</h4><p>CentOS7操作MySQL命令的一些命令如下：</p>
 <blockquote>
 <p>查看MySQL运行状态</p>
 </blockquote>
@@ -15391,6 +15391,8 @@
 <p>重启MySQL</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
+
+<h4 id="Windows系统修改密码"><a href="#Windows系统修改密码" class="headerlink" title="Windows系统修改密码"></a>Windows系统修改密码</h4><p>如果是Windows系统要修改MySQL的密码，可以参考博客：<a href="https://blog.csdn.net/Shao_jiaxiang/article/details/123405067">MySQL忘记密码怎么办？MySQL修改密码（简单有效哦）_mysql忘记密码怎么修改密码_酷酷的扫地僧的博客-CSDN博客</a>，需要注意的是登录MySQL时，要先进入bin文件夹，然后执行<code>.\mysql -uroot -p</code>命令，而不是像博客一样，不然可能会报错：<font color="#dd0000">mysql : 无法将“mysql”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次</font></p>
 ]]></content>
       <categories>
         <category>运维</category>
