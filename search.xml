@@ -3946,7 +3946,7 @@
       </tags>
   </entry>
   <entry>
-    <title>idea将Spring Boot项目打包成war包</title>
+    <title>IntelliJ IDEA将Spring Boot项目打包成war包</title>
     <url>/21.html</url>
     <content><![CDATA[<h3 id="修改pom-xml文件"><a href="#修改pom-xml文件" class="headerlink" title="修改pom.xml文件"></a>修改pom.xml文件</h3><h4 id="修改打包方式"><a href="#修改打包方式" class="headerlink" title="修改打包方式"></a>修改打包方式</h4><p>修改pom.xml的packaging节点改 war</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
