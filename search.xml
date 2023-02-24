@@ -10191,7 +10191,7 @@
 <h5 id="Day"><a href="#Day" class="headerlink" title="Day()"></a>Day()</h5><p>返回一个日期的天数部分</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DAY</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
 
-<h5 id="DayOfWeek"><a href="#DayOfWeek" class="headerlink" title="DayOfWeek()"></a>DayOfWeek()</h5><p>对于一个日期，返回对应的星期几</p>
+<h5 id="DayOfWeek"><a href="#DayOfWeek" class="headerlink" title="DayOfWeek()"></a>DayOfWeek()</h5><p>对于一个日期，返回对应的星期几，<font color="#dd0000">从1到7，表示星期日到星期六</font></p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DAYOFWEEK(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
 
 <h5 id="Hour"><a href="#Hour" class="headerlink" title="Hour()"></a>Hour()</h5><p>返回一个时间的小时部分</p>
@@ -25976,12 +25976,26 @@
 <p>分页查询，查出第1条数据之后的2条数据</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t_student limit <span class="number">1</span>,<span class="number">2</span>;</span><br></pre></td></tr></table></figure>
 
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>备份指定数据库命令如下，是cmd命令而不是MySQL命令行命令，<code>db_student</code>是要备份的数据库名称，<code>db_student.sql</code>是生成的备份文件，下面命令是在bin文件夹里面生成备份文件</p>
+<h3 id="备份和还原数据库"><a href="#备份和还原数据库" class="headerlink" title="备份和还原数据库"></a>备份和还原数据库</h3><p>备份指定数据库命令如下，是cmd命令而不是MySQL命令行命令，<code>db_student</code>是要备份的数据库名称，<code>db_student.sql</code>是生成的备份文件，下面命令是在bin文件夹里面生成备份文件</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysqldump -u root -p db_student &gt; db_student.sql</span><br></pre></td></tr></table></figure>
 
 <p>还原指定数据库的命令如下，是cmd命令而不是MySQL命令行命令，需要先创建一个名为<code>db_student</code>的数据库，不然会报错</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mysql -u root -p db_student &lt; db_student.sql</span><br></pre></td></tr></table></figure>
 
+<h3 id="查看SQL语句执行时间"><a href="#查看SQL语句执行时间" class="headerlink" title="查看SQL语句执行时间"></a>查看SQL语句执行时间</h3><p>首先查看profile是否开启，一关闭MySQL的命令行就会关闭profile</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> variables <span class="keyword">like</span> <span class="string">&#x27;profiling&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>如果上面的结果是<code>OFF</code>，那么我们要将其设置为<code>ON</code></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">set</span> profiling<span class="operator">=</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>然后我们可以执行一条命令，然后通过下面命令查看执行时间，Duration的单位是秒</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> profiles;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230224230749690.png" alt="image-20230224230749690"></p>
+<p>我们还可以通过下面命令根据上面的Query_ID查看详细信息</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> profile <span class="keyword">for</span> query <span class="number">6</span>;</span><br></pre></td></tr></table></figure>
+
+<img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230224231149146.png" alt="image-20230224231149146" style="zoom: 80%;" />
 ]]></content>
       <categories>
         <category>数据库</category>
