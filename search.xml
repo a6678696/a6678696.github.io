@@ -26013,4 +26013,25 @@
         <tag>Markdown</tag>
       </tags>
   </entry>
+  <entry>
+    <title>微信小程序wx.previewImage退出预览图片后自动触发onShow()的解决办法</title>
+    <url>/575.html</url>
+    <content><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>微信小程序使用wx.previewImage预览图片时，退出后会自动触发onShow()方法，但是我不需要触发onShow()方法</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>首先在页面初始数据中添加一个<code>refresh</code>字段，用于控制是否执行onShow()方法</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">refresh: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>在预览图片JavaScript代码中将<code>refresh</code>设置为true</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="title">seeImage</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">	wx.previewImage(&#123;</span><br><span class="line">		<span class="attr">current</span>: e.target.dataset.imageurl, <span class="comment">// 当前显示图片的http链接</span></span><br><span class="line">		<span class="attr">urls</span>: [e.target.dataset.imageurl] <span class="comment">// 需要预览的图片http链接列表</span></span><br><span class="line">	&#125;)</span><br><span class="line">	<span class="built_in">this</span>.data.refresh = <span class="literal">true</span></span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>在onShow方法加入下面代码，当<code>refresh</code>为true时onShow()方法不往下执行，同时设置为false</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">this</span>.data.refresh) &#123;</span><br><span class="line">	<span class="built_in">this</span>.data.refresh = <span class="literal">false</span></span><br><span class="line">	<span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>微信小程序</tag>
+      </tags>
+  </entry>
 </search>
