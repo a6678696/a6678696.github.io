@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2023-07-24T16:59:57.066Z</updated>
+  <updated>2023-07-24T17:01:46.126Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.zoutl.cn/576.html"/>
     <id>https://blog.zoutl.cn/576.html</id>
     <published>2023-07-21T14:56:20.000Z</published>
-    <updated>2023-07-24T16:59:57.066Z</updated>
+    <updated>2023-07-24T17:01:46.126Z</updated>
     
     <content type="html"><![CDATA[<h3 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>我一般新建数据库时，字符集选用<code>utf-8</code>，校对规则选用<code>utf8_general_ci</code></p><p>然而最近我发现如果存放的数据里面有<code>Emoji表情符号</code>时，会报错无法把数据添加到数据库中</p><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>我查了一下utf-8字符集不支持存入Emoji表情符号，要存入Emoji表情符号则要使用<code>utf8mb4</code>字符集，然后校对规则使用<code>utf8mb4_unicode_ci</code>，所以一开始创建数据库时推荐使用<code>utf8mb4</code>字符集</p><h4 id="其它说明"><a href="#其它说明" class="headerlink" title="其它说明"></a>其它说明</h4><p>MySQL数据库的字符集以及校对规则和数据表的关系：</p><p>表默认使用数据库的字符集和校对规则，也可以选择其它的（可以和数据库的不一样），不过建议弄成一样的</p><h3 id="修改过程"><a href="#修改过程" class="headerlink" title="修改过程"></a>修改过程</h3><h4 id="先备份数据库"><a href="#先备份数据库" class="headerlink" title="先备份数据库"></a>先备份数据库</h4><p><font color="#dd0000">在进行任何修改之前，请确保对数据库进行备份，以防止意外数据丢失</font></p><h4 id="选中要操作的数据库"><a href="#选中要操作的数据库" class="headerlink" title="选中要操作的数据库"></a>选中要操作的数据库</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE 你的数据库名称;</span><br></pre></td></tr></table></figure><h4 id="查看字符集和校对规则"><a href="#查看字符集和校对规则" class="headerlink" title="查看字符集和校对规则"></a>查看字符集和校对规则</h4><p>修改之前先看一下当前数据库是什么字符集和校对规则</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#查看字符集</span><br><span class="line">SHOW VARIABLES LIKE &#x27;character_set_database&#x27;;</span><br><span class="line"></span><br><span class="line">#查看校对规则</span><br><span class="line">SHOW VARIABLES LIKE &#x27;collation_database&#x27;;</span><br></pre></td></tr></table></figure><h4 id="开始修改数据库"><a href="#开始修改数据库" class="headerlink" title="开始修改数据库"></a>开始修改数据库</h4><p>要将数据库字符集修改为 utf8mb4，并使用 utf8mb4_unicode_ci 校对规则，可以执行以下命令，然后再使用上面命令看修改后的字符集和校对规则</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER DATABASE 你的数据库名称 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;</span><br></pre></td></tr></table></figure><h4 id="修改数据表"><a href="#修改数据表" class="headerlink" title="修改数据表"></a>修改数据表</h4><p>修改数据库的字符集和校对规则后，数据表的字符集和校对规则不会随之变化，我们可以使用下面命令修改</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ALTER TABLE 你的数据表名称 CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</span><br></pre></td></tr></table></figure><h4 id="重启MySQL服务"><a href="#重启MySQL服务" class="headerlink" title="重启MySQL服务"></a>重启MySQL服务</h4><p>一般不需要修改，我修改数据库的字符集和校对规则后不重启也生效了，如果不生效的话可以尝试重启MySQL服务</p>]]></content>
     
