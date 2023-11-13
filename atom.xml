@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2023-11-13T22:29:17.138Z</updated>
+  <updated>2023-11-13T22:31:26.600Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.zoutl.cn/579.html"/>
     <id>https://blog.zoutl.cn/579.html</id>
     <published>2023-11-13T22:12:23.000Z</published>
-    <updated>2023-11-13T22:29:17.138Z</updated>
+    <updated>2023-11-13T22:31:26.600Z</updated>
     
     <content type="html"><![CDATA[<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>如果<code>data-</code>后面接的参数名的命名格式是驼峰格式，那么我们拿数据时要把参数名的大写字母转换成小写字符</p><h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">bind:click</span>=<span class="string">&quot;goToModifyFriendPage&quot;</span> <span class="attr">data-playerName</span>=<span class="string">&quot;&#123;&#123;item.playerName&#125;&#125;&quot;</span>&gt;</span>修改<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h4><p>上面的HTML代码是<code>data-playerName</code>，但是通过<code>playerName</code>是拿不到数据的</p><p>必须把驼峰格式全部变成小写：<code>playername</code>，如下所示</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">goToModifyFriendPage</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target.dataset.playername);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
