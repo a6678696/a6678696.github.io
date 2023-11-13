@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2023-09-12T17:23:46.792Z</updated>
+  <updated>2023-11-13T19:30:27.793Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序实现跳转到其他页面</title>
+    <link href="https://blog.zoutl.cn/578.html"/>
+    <id>https://blog.zoutl.cn/578.html</id>
+    <published>2023-11-13T19:20:07.000Z</published>
+    <updated>2023-11-13T19:30:27.793Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>微信小程序实现跳转到其他页面可以使用<code>wx.navigateTo</code>方法，该方法保留当前页面的导航方式，用户可以通过左上角的返回按钮返回到原页面，跳转时还可以传递参数给目标页面</p><p>如果想要关闭当前页面并跳转到目标页面，可以使用<code>wx.redirectTo</code>方法</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="不传递参数"><a href="#不传递参数" class="headerlink" title="不传递参数"></a>不传递参数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateTo(&#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;/pages/somePage/somePage&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h4 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h4><p>直接在url中拼接要传递的参数</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateTo(&#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;/pages/somePage/somePage?id=1&amp;name=example&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>在目标页面中，通过<code>onLoad</code>生命周期函数接收这些参数</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">onLoad: <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(options.id) <span class="comment">// 输出: 1</span></span><br><span class="line">  <span class="built_in">console</span>.log(options.name) <span class="comment">// 输出: example</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;微信小程序实现跳转到其他页面可以使用&lt;code&gt;wx.navigateTo&lt;/code&gt;方法，该方法保留当前页面的导航方式，用户可以通过左上</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Element Plus表格实现多选数据（JS实现）</title>
@@ -487,30 +511,6 @@
     
     
     <category term="json-server" scheme="https://blog.zoutl.cn/tags/json-server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Microsoft Office Excel隔行设置背景颜色</title>
-    <link href="https://blog.zoutl.cn/558.html"/>
-    <id>https://blog.zoutl.cn/558.html</id>
-    <published>2023-01-11T20:37:55.000Z</published>
-    <updated>2023-01-12T01:57:29.880Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>隔行设置背景颜色可以让Excel表格更易读，平时数据少的时候可以<code>按住CTRL键同时使用鼠标</code>选中要设置背景颜色的单元格（虽然简单，但是操作起来容易出现漏选或多选），所以最好还是通过设置规则来实现隔行设置背景颜色比较好</p><h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="选中单元格"><a href="#选中单元格" class="headerlink" title="选中单元格"></a>选中单元格</h4><p>首先选中所有要隔行设置背景颜色的单元格，不用选上表头</p><h4 id="新建规则"><a href="#新建规则" class="headerlink" title="新建规则"></a>新建规则</h4><p>根据下图打开<code>新建规则</code>界面</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230112045105584.png" alt="image-20230112045105584"></p><p>根据下图填写规则公式和选择背景颜色及其它样式，最后点击确定即可</p><p>关于公式<code>=MOD(ROW(),2)=0</code>的解释：行数除以2取余，余数为0（这里的行数从表头开始数，也就是说表头是第1行），该公式的取反公式为：<code>=MOD(ROW(),2)=1</code>，用哪个公式根据自己的情况选择</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230112050003101.png" alt="image-20230112050003101"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;隔行设置背景颜色可以让Excel表格更易读，平时数据少的时候可以&lt;code&gt;按住CTRL键同时使用鼠标&lt;/code&gt;选中要设置背景颜色的单元</summary>
-      
-    
-    
-    
-    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
-    
-    
-    <category term="Microsoft Office" scheme="https://blog.zoutl.cn/tags/Microsoft-Office/"/>
     
   </entry>
   
