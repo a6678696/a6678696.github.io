@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2024-03-06T04:29:04.503Z</updated>
+  <updated>2024-03-06T04:33:32.222Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.zoutl.cn/587.html"/>
     <id>https://blog.zoutl.cn/587.html</id>
     <published>2024-03-06T04:12:05.000Z</published>
-    <updated>2024-03-06T04:29:04.503Z</updated>
+    <updated>2024-03-06T04:33:32.222Z</updated>
     
     <content type="html"><![CDATA[<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>这个报错发生在从GitHub仓库clone代码在本地部署的时候，和配置文件<code>application.yml</code>有关</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ol><li><p>修改IntelliJ IDEA的编码为UTF-8，下图的三个地方都改掉</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20240306121612530.png" alt="image-20240306121612530"></p></li><li><p>先复制配置文件application.yml的内容，再把它删除，最后新建配置文件application.yml，把之前复制的配置内容复制进去即可</p></li></ol>]]></content>
     
