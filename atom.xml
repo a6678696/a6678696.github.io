@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2024-03-09T13:57:07.600Z</updated>
+  <updated>2024-10-07T17:25:10.116Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Nginx重新部署SSL证书</title>
+    <link href="https://blog.zoutl.cn/590.html"/>
+    <id>https://blog.zoutl.cn/590.html</id>
+    <published>2024-10-07T16:39:44.000Z</published>
+    <updated>2024-10-07T17:25:10.116Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>现在腾讯云免费的SSL证书有效期只有3个月，每三个月就要部署一次SSL证书，写本文是为了以后的方便</p><p>腾讯云可以申请50个免费证书，当证书到期后会自动释放额度，例如：如果你的证书全部到期，那么你还是可以申请50个免费证书</p><h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="申请证书"><a href="#申请证书" class="headerlink" title="申请证书"></a>申请证书</h4><p>选择免费证书</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241008010632595.png" alt="image-20241008010632595"></p><p>验证方式选自动，并勾选自动删除验证，其它的根据自己的情况填即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241008010723313.png" alt="image-20241008010723313"></p><h4 id="下载证书"><a href="#下载证书" class="headerlink" title="下载证书"></a>下载证书</h4><p>下载Nginx格式的证书</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241008010203489.png" alt="image-20241008010203489"></p><h4 id="解压证书"><a href="#解压证书" class="headerlink" title="解压证书"></a>解压证书</h4><p>解压刚才下载的压缩文件，里面会有4个文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241008011049109.png" alt="image-20241008011049109"></p><h4 id="替换云服务器中的文件"><a href="#替换云服务器中的文件" class="headerlink" title="替换云服务器中的文件"></a>替换云服务器中的文件</h4><p>Nginx的配置文件一般在<code>/etc/nginx/conf.d/</code>目录下，把旧的直接删除再在把新的复制进去即可，旧的文件和新的文件的文件名应该是一样的，不一样的话就去改配置</p><h4 id="重新加载Nginx的配置文件"><a href="#重新加载Nginx的配置文件" class="headerlink" title="重新加载Nginx的配置文件"></a>重新加载Nginx的配置文件</h4><p><font color="#dd0000">不重新加载的话，生效的还会是旧的文件，即使已经删除了旧的文件</font></p><p>先测试配置是否有语法错误，可以使用以下命令进行测试，如果输出显示 <code>syntax is ok</code> 和 <code>test is successful</code>，说明配置文件没有问题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure><p>测试通过后，可以通过以下命令让Nginx重新加载配置文件而不中断服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure><p>使用下面命令查看Nginx是否正常运行，如果输出显示绿色字体的<code>active (running)</code>，说明没有问题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status nginx</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;现在腾讯云免费的SSL证书有效期只有3个月，每三个月就要部署一次SSL证书，写本文是为了以后的方便&lt;/p&gt;
+&lt;p&gt;腾讯云可以</summary>
+      
+    
+    
+    
+    <category term="运维" scheme="https://blog.zoutl.cn/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+    <category term="SSL证书" scheme="https://blog.zoutl.cn/tags/SSL%E8%AF%81%E4%B9%A6/"/>
+    
+    <category term="Nginx" scheme="https://blog.zoutl.cn/tags/Nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</title>
@@ -490,33 +517,6 @@
     <category term="IntelliJ IDEA" scheme="https://blog.zoutl.cn/tags/IntelliJ-IDEA/"/>
     
     <category term="MyBatisX" scheme="https://blog.zoutl.cn/tags/MyBatisX/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim常用命令或快捷键</title>
-    <link href="https://blog.zoutl.cn/570.html"/>
-    <id>https://blog.zoutl.cn/570.html</id>
-    <published>2023-02-05T01:24:45.000Z</published>
-    <updated>2023-02-15T05:43:32.891Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Vim是Vi的升级版本，可以当作Vi来使用，完全替代Vi，也就是说：不要使用Vi了，而是使用它的升级版本Vim</p><p>下面只列举了一些我常用的命令或快捷键，并不是列举全部，其它没有列出的命令或快捷键如果用到了就在下方放出</p><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>我把Vim命令的类型分为<code>命令模式</code>、<code>输入模式</code>和<code>底线命令模式</code>，<code>vim 文件名</code>打开文件后就是命令模式，在命令模式下按下<code>i</code>键就切换到了输入模式，在命令模式下输入<code>:</code>就切换到了底线命令模式</p><h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p><code>vim 文件名</code>打开文件后就是命令模式</p><table><thead><tr><th align="center">命令或快捷键</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center"><code>:</code></td><td align="center">切换到底线命令模式</td></tr><tr><td align="center"><code>i</code></td><td align="center">切换到输入模式</td></tr><tr><td align="center"><code>x</code></td><td align="center">删除当前光标所在处的字符</td></tr><tr><td align="center"><code>dd</code></td><td align="center">删除光标所在行</td></tr><tr><td align="center"><code>/关键词</code></td><td align="center">向下搜索关键词，按<code>n</code>查找下一个搜索结果，按<code>N</code>则查找上一个</td></tr><tr><td align="center"><code>?关键词</code></td><td align="center">向上搜索关键词，按<code>n</code>查找上一个搜索结果，按<code>N</code>则查找下一个，和上面相反</td></tr><tr><td align="center"><code>v</code></td><td align="center">切换到<code>可视化模式</code>，一般用于删除一段文本</td></tr><tr><td align="center"><code>r</code></td><td align="center">切换到<code>单字符替换模式</code>，用于替换一个字符</td></tr><tr><td align="center"><code>R</code></td><td align="center">切换到<code>多字符替换模式</code>，用于替换多个字符</td></tr></tbody></table><h4 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h4><p>在命令模式下，按下<code>i</code>键就切换到了输入模式，输入模式没有什么好说的，就和平时在Windows系统中编辑文本一样</p><table><thead><tr><th align="center">命令或快捷键</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center"><code>ESC</code></td><td align="center">切换到命令模式</td></tr><tr><td align="center"><code>CTRL+INSERT</code></td><td align="center">复制文本</td></tr><tr><td align="center"><code>SHIFT+INSERT</code></td><td align="center">粘贴文本，可以选择文本后直接粘贴不用复制</td></tr></tbody></table><h4 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h4><p>在命令模式下输入<code>:</code>就切换到了底线命令模式</p><table><thead><tr><th align="center">命令或快捷键</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center"><code>ESC</code></td><td align="center">切换到命令模式</td></tr><tr><td align="center"><code>q</code></td><td align="center">没有修改文件内容退出Vim回到系统中</td></tr><tr><td align="center"><code>w</code></td><td align="center">保存，修改了内容必须保存不然无法退出</td></tr><tr><td align="center"><code>wq</code></td><td align="center">保存后退出</td></tr><tr><td align="center"><code>q!</code></td><td align="center">不保存修改的内容直接退出</td></tr><tr><td align="center"><code>noh</code></td><td align="center">去除命令模式搜索关键词时高亮的效果</td></tr><tr><td align="center"><code>set nu</code></td><td align="center">显示行号，只在本次编辑有效，下次再打开就没了</td></tr><tr><td align="center"><code>set nonu</code></td><td align="center">不显示行号</td></tr><tr><td align="center"><code>数字</code></td><td align="center">跳转到指定行</td></tr></tbody></table><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果编辑的文件内容改动了（添加一个字符再删除也是改动了），没有使用<code>:q</code>退出Vim而是关闭SSH连接或其它强制退出Vim的操作，那么再次打开这个文件就会提示：<font color="#dd0000">Found a swap file by the name</font>，无法正常编辑这个文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230205115000670.png" alt="image-20230205115000670"></p><p>我们先按下<code>q</code>键退出，然后找到提示的文件并删除（和要编辑的文件在同一个目录下），不过<font color="#dd0000">上次的改动无效</font>了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230205115248806.png" alt="image-20230205115248806"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;Vim是Vi的升级版本，可以当作Vi来使用，完全替代Vi，也就是说：不要使用Vi了，而是使用它的升级版本Vim&lt;/p&gt;
-&lt;p&gt;下面只列举了一</summary>
-      
-    
-    
-    
-    <category term="运维" scheme="https://blog.zoutl.cn/categories/%E8%BF%90%E7%BB%B4/"/>
-    
-    
-    <category term="CentOS7" scheme="https://blog.zoutl.cn/tags/CentOS7/"/>
-    
-    <category term="Vim" scheme="https://blog.zoutl.cn/tags/Vim/"/>
     
   </entry>
   
