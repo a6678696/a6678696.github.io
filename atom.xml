@@ -6,7 +6,7 @@
   <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
   
   <link href="https://blog.zoutl.cn/"/>
-  <updated>2024-11-13T21:28:56.342Z</updated>
+  <updated>2025-04-24T02:25:20.105Z</updated>
   <id>https://blog.zoutl.cn/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java项目部署后代码中字体设置显示中文乱码</title>
+    <link href="https://blog.zoutl.cn/593.html"/>
+    <id>https://blog.zoutl.cn/593.html</id>
+    <published>2025-04-24T01:49:35.000Z</published>
+    <updated>2025-04-24T02:25:20.105Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>代码中使用到<code>java.awt.Font</code>这个类，在自己的电脑上没有问题，但是在Linux上部署后出现中文乱码</p><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>Linux系统没有安装对应的字体，要想解决这个问题有两个方法：①直接在Linux系统安装对应的字体②下载字体文件到Linux系统，在代码中加载</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="下载字体文件"><a href="#下载字体文件" class="headerlink" title="下载字体文件"></a>下载字体文件</h4><p>直接在自己的电脑搜索<code>simhei.ttf</code>，找到该文件并复制到指定的位置</p><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加载字体文件</span></span><br><span class="line">Font font = Font.createFont(Font.TRUETYPE_FONT, <span class="keyword">new</span> File(<span class="string">&quot;E://data/coc/simhei.ttf&quot;</span>))</span><br><span class="line">        .deriveFont(Font.BOLD, (<span class="keyword">int</span>)(width * <span class="number">0.05</span>));</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;代码中使用到&lt;code&gt;java.awt.Font&lt;/code&gt;这个类，在自己的电脑上没有问题，但是在Linux上部署后出现</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</title>
@@ -490,32 +514,6 @@
     
     
     <category term="MySQL" scheme="https://blog.zoutl.cn/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Apifox Helper插件自动生成接口文档</title>
-    <link href="https://blog.zoutl.cn/573.html"/>
-    <id>https://blog.zoutl.cn/573.html</id>
-    <published>2023-02-19T01:43:41.000Z</published>
-    <updated>2023-02-19T04:07:07.324Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Apifox Helper是Apifox官方开发的一个IntelliJ IDEA插件，可以根据Controller层的接口方法快速在Apifox中自动生成接口文档，以进行接口测试</p><p>Apifox的官网地址：<a href="https://www.apifox.cn/">Apifox - API 文档、调试、Mock、测试一体化协作平台</a></p><p>使用文档：<a href="https://www.apifox.cn/help/">帮助中心 | Apifox 使用文档</a></p><h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="生成API访问令牌"><a href="#生成API访问令牌" class="headerlink" title="生成API访问令牌"></a>生成API访问令牌</h4><p>根据下图生成一个访问令牌，该令牌只有在创建时才能看到，所以要保管好，不然忘记了就只能再重新新建一个</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219110842615.png" alt="image-20230219110842615"></p><h4 id="获取项目ID"><a href="#获取项目ID" class="headerlink" title="获取项目ID"></a>获取项目ID</h4><p>打开新建的项目，根据下图获取项目的ID</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219111344880.png" alt="image-20230219111344880"></p><h4 id="配置Apifox-Helper"><a href="#配置Apifox-Helper" class="headerlink" title="配置Apifox Helper"></a>配置Apifox Helper</h4><p>打开IntelliJ IDEA的设置后，根据下图配置Apifox Helper，模块项目ID配置可以有多个</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219111904041.png" alt="image-20230219111904041"></p><h4 id="生成接口文档"><a href="#生成接口文档" class="headerlink" title="生成接口文档"></a>生成接口文档</h4><ol><li><p>生成一个类的某个方法的文档</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219115851243.png" alt="image-20230219115851243"></p></li><li><p>生成一个类的全部方法的文档</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219115931777.png" alt="image-20230219115931777"></p></li><li><p>生成多个类的全部方法的文档</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219115955359.png" alt="image-20230219115955359"></p></li></ol><h4 id="配置Apifox请求的前置URL"><a href="#配置Apifox请求的前置URL" class="headerlink" title="配置Apifox请求的前置URL"></a>配置Apifox请求的前置URL</h4><p>打开项目后，根据下图配置请求的前置URL，这样每次请求都会自动加上了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219120607584.png" alt="image-20230219120607584"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;Apifox Helper是Apifox官方开发的一个IntelliJ IDEA插件，可以根据Controller层的接口方法快速在Apif</summary>
-      
-    
-    
-    
-    <category term="开发工具" scheme="https://blog.zoutl.cn/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="IntelliJ IDEA" scheme="https://blog.zoutl.cn/tags/IntelliJ-IDEA/"/>
-    
-    <category term="Apifox" scheme="https://blog.zoutl.cn/tags/Apifox/"/>
     
   </entry>
   
