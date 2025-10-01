@@ -1,377 +1,1270 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>LeDao's Blog</title><meta name="keywords" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js"><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.zoutl.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":6,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
 <meta property="og:title" content="LeDao&#39;s Blog">
 <meta property="og:url" content="https://blog.zoutl.cn/page/49/index.html">
 <meta property="og:site_name" content="LeDao&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
 <meta property="article:author" content="LeDao">
 <meta property="article:tag" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/page/49/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="fp2ohQruhOqzbyAh"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JZJWXGK1VV"></script><script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-JZJWXGK1VV');
-</script><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
-  source: {
-    justifiedGallery: {
-      js: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.js',
-      css: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'LeDao\'s Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2025-10-02 02:48:12'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+<link rel="canonical" href="https://blog.zoutl.cn/page/49/">
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+  <title>LeDao's Blog</title>
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">LeDao's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-项目">
+
+    <a href="/project/" rel="section"><i class="fa fa-paw fa-fw"></i>项目</a>
+
+  </li>
+        <li class="menu-item menu-item-友链">
+
+    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/a6678696" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
   
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/110.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/110.html" class="post-title-link" itemprop="url">部落冲突复制阵型教程</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-27 01:09:34" itemprop="dateCreated datePublished" datetime="2021-03-27T01:09:34+08:00">2021-03-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-04-24 09:25:50" itemprop="dateModified" datetime="2025-04-24T09:25:50+08:00">2025-04-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>使用阵型链接的方式有两种：</p>
+<ol>
+<li>使用官方的网站，如果链接打不开就用下面这种方式</li>
+<li>使用我开发的网站，复制阵型的原理和官方网站一样，不用担心会被封号</li>
+</ol>
+<h3 id="使用官方的网站"><a href="#使用官方的网站" class="headerlink" title="使用官方的网站"></a>使用官方的网站</h3><p>在小程序内复制到阵型的链接后，打开手机的浏览器，在浏览器中打开阵型的链接，然后点击中间的《打开部落冲突》按钮即可将阵型复制到游戏中，复制失败先看最下面的注意事项，如果不行请换一个浏览器试试</p>
+<h3 id="使用我开发的网站"><a href="#使用我开发的网站" class="headerlink" title="使用我开发的网站"></a>使用我开发的网站</h3><p><font color="#dd0000">无法直接打开阵型的链接，再使用本方法</font></p>
+<p>网站的地址为：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://coc.zoutl.cn/">https://coc.zoutl.cn</a></p>
+<p>点击上面网站的链接打开网址后，点击网站最上面的《教程》，然后根据提示来操作就行了，在教程页面输入链接复制阵型是不需要登录的</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241110083421381.png" alt="image-20241110083421381"></p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p><font color="#dd0000"><strong>一定要保证游戏在后台运行</strong></font>，也不要切后台时间太久，太久就会要重新加载游戏，大概率会复制不成功</p>
+<p><font color="#dd0000"><strong>国服阵型链接和国际服的阵型链接是不通用的</strong></font>，也就是说国服玩家不能使用国际服的阵型链接，反之亦然</p>
+<p><font color="#dd0000"><strong>如果发现阵型链接失效或者复制出来的阵型和图片不一样</strong></font>，请点击阵型图片下面的《纠错》按钮向我提交错误，如果我验证阵型链接有误，会返还你的复制次数</p>
+<p><font color="#dd0000"><strong>家乡可以复制和你等级差一级的阵型</strong></font>，例如：你现在是10本，你除了可以复制10本的阵型外，还可以复制9本和11本的阵型，但是夜世界和都城不适用于这个规则</p>
+<p><font color="#dd0000"><strong>如果你既玩国服又玩国际服</strong></font>，在手机浏览器复制阵型时，如果提示你选哪个应用打开，请不要勾选《不再提醒》或默认打开方式之类的东西，否则该浏览器就无法既复制国服阵型又复制国际服阵型了</p>
+<img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20250424092335038.png" alt="image-20250424092335038" style="zoom:50%;" />
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/109.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/109.html" class="post-title-link" itemprop="url">Spring Boot引入Quartz定时任务</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-16 20:56:45" itemprop="dateCreated datePublished" datetime="2021-03-16T20:56:45+08:00">2021-03-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-09-18 21:58:55" itemprop="dateModified" datetime="2022-09-18T21:58:55+08:00">2022-09-18</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="引入依赖"><a href="#引入依赖" class="headerlink" title="引入依赖"></a>引入依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.quartz-scheduler<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>quartz<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.quartz;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.EnableScheduling;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.Scheduled;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 每天23点自动删除已被删除文章中的图片</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2020-09-23 11:27</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DeleteInvalidImage</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> BlogService blogService;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Scheduled(cron = &quot;0 0 23 * * ?&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//这里填入定时执行的代码</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>常用cron表达式：<a href="https://blog.zoutl.cn/4.html">常用 cron 表达式 | LeDao’s Blog (zoutl.cn)</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/108.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/108.html" class="post-title-link" itemprop="url">鼠标移入div显示查看更多</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-15 03:19:44" itemprop="dateCreated datePublished" datetime="2021-03-15T03:19:44+08:00">2021-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-15 01:44:19" itemprop="dateModified" datetime="2023-01-15T01:44:19+08:00">2023-01-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;box&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;image&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">width</span>=<span class="string">&#x27;100%&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;mask&#x27;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">&#x27;link&#x27;</span> <span class="attr">href</span>=<span class="string">&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;</span>&gt;</span></span><br><span class="line">	查看更多</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">background-color</span>:<span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">116</span>);</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">	<span class="attribute">position</span>: absolute;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">	<span class="attribute">display</span>: none</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.image</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: relative;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.mask</span> &#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:hover</span> <span class="selector-class">.link</span> &#123;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">background</span>: <span class="number">#FFF</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">	<span class="attribute">text-align</span>: center;</span><br><span class="line">	<span class="attribute">margin</span>: <span class="number">80px</span> auto;</span><br><span class="line">	<span class="attribute">color</span>: <span class="number">#ff00a5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/Hreticent/article/details/85109668">鼠标移入div显示查看更多demo_Hey-CSDN博客</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/107.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/107.html" class="post-title-link" itemprop="url">给网页添加背景图片（网页缩小放大都不受影响）</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-15 03:15:14" itemprop="dateCreated datePublished" datetime="2021-03-15T03:15:14+08:00">2021-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-15 01:44:06" itemprop="dateModified" datetime="2023-01-15T01:44:06+08:00">2023-01-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;bjimg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.bjimg</span> &#123;</span><br><span class="line">	<span class="attribute">position</span>: fixed;</span><br><span class="line">	<span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">	<span class="attribute">min-width</span>: <span class="number">1000px</span>;</span><br><span class="line">	<span class="attribute">z-index</span>: -<span class="number">10</span>;</span><br><span class="line">	zoom: <span class="number">1</span>;</span><br><span class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">	<span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">../static/images/background.png</span>);</span><br><span class="line">	<span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">	<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-webkit-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	-o-<span class="attribute">background-size</span>: cover;</span><br><span class="line">	<span class="attribute">background-position</span>: center <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/luo1831251387/article/details/110772006?utm_medium=distribute.pc_relevant.none-task-blog-baidujs_title-0&spm=1001.2101.3001.4242">给网页添加背景图片 html+css_北极光之夜。-CSDN博客</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/106.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/106.html" class="post-title-link" itemprop="url">解决：Tomcat运行项目时Quartz定时任务执行两次</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-15 01:51:21" itemprop="dateCreated datePublished" datetime="2021-03-15T01:51:21+08:00">2021-03-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 04:05:06" itemprop="dateModified" datetime="2022-04-26T04:05:06+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>在Tomcat的配置文件<code>conf/server.xml</code>中：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Host</span> <span class="attr">name</span>=<span class="string">&quot;localhost&quot;</span>  <span class="attr">appBase</span>=<span class="string">&quot;webapps&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">unpackWARs</span>=<span class="string">&quot;true&quot;</span> <span class="attr">autoDeploy</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;/test&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中&lt;Host&gt;告诉Tomcat，在启动的时候加载webapps下的所有项目工程文件，&lt;Context&gt;又让Tomcat再加载了一遍（一般情况下配置&lt;Context&gt;，主要是由于想域名访问时将工程名去掉的原因配置），这种情况下会导致工程中的quartz定时被两次触发，执行两次</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>将Tomcat的配置文件conf/server.xml修改为：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Host</span> <span class="attr">name</span>=<span class="string">&quot;localhost&quot;</span>  <span class="attr">appBase</span>=<span class="string">&quot;webapps&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">unpackWARs</span>=<span class="string">&quot;true&quot;</span> <span class="attr">autoDeploy</span>=<span class="string">&quot;false&quot;</span> <span class="attr">deployOnStartup</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;/test&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>autoDeploy：是否允许自动部署，默认值是true，即表示 Tomcat 会自动检测appBase目录下面的文件变化从而自动应用到正在运行的 Web 应用程序<br>deployOnStartup=”false”，表示Tomcat服务器启动时, 不会自动发布appBase目录下所有的Web应用</p>
+<h3 id="会出现的问题"><a href="#会出现的问题" class="headerlink" title="会出现的问题"></a>会出现的问题</h3><p>但是这样虽然解决了Quartz的执行两次的问题，但也存在另一个问题——无法解压war包。就是war包放到webapps目录下，不会自动解压生成项目文件夹，你所看到的项目文件夹是历史文件夹。所以，这是一个不断修改conf/server.xml的过程。当需要解压文件夹的时候，修改成true，解压完成后，改成false，记得重启Tomcat</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/qq_38410730/article/details/88370891">【Java Web】Quartz定时任务执行两次的解决方法_Yngz_Miao的博客-CSDN博客</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/105.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/105.html" class="post-title-link" itemprop="url">实现鼠标移入文字向右移动效果</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-14 22:41:04" itemprop="dateCreated datePublished" datetime="2021-03-14T22:41:04+08:00">2021-03-14</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-15 01:43:51" itemprop="dateModified" datetime="2023-01-15T01:43:51+08:00">2023-01-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;div1&#x27;</span>&gt;</span>&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="CSS代码"><a href="#CSS代码" class="headerlink" title="CSS代码"></a>CSS代码</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">	-webkit-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-moz-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line">	-o-<span class="attribute">transition</span>: margin-left .<span class="number">8s</span>;</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div1</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">	<span class="attribute">margin-left</span>: <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/smile1/p/12007164.html">鼠标移入文字上向右移动效果 - Crazy丶迷恋 - 博客园</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/104.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/104.html" class="post-title-link" itemprop="url">根据ip地址获取真实地址</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-13 12:11:14" itemprop="dateCreated datePublished" datetime="2021-03-13T12:11:14+08:00">2021-03-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 04:05:13" itemprop="dateModified" datetime="2022-04-26T04:05:13+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="pom-xml引入"><a href="#pom-xml引入" class="headerlink" title="pom.xml引入"></a>pom.xml引入</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>cn.hutool<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>hutool-all<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.9<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.util;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">import</span> cn.hutool.http.HttpUtil;</span><br><span class="line"> </span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 根据IP获取真实地址</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-03-13 11:18</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddressUtil</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">getAddress</span><span class="params">(String ip)</span> </span>&#123;</span><br><span class="line">        String result1 = HttpUtil.get(<span class="string">&quot;https://www.ip138.com/iplookup.asp?ip=&quot;</span> + ip + <span class="string">&quot;&amp;action=2&quot;</span>);</span><br><span class="line">        String result = result1.split(<span class="string">&quot;\&quot;ASN归属地\&quot;:\&quot;&quot;</span>)[<span class="number">1</span>].split(<span class="string">&quot;\&quot;, \&quot;iP段\&quot;:&quot;</span>)[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String ip = <span class="string">&quot;180.136.86.160&quot;</span>;</span><br><span class="line">        System.out.println(getAddress(ip));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210313120545.jpg" alt="img"></p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>找到一个查ip的网站，随便查一个ip，然后将地址栏中的链接复制下来，链接中的ip之后在Java代码中可以动态拼接</p>
+<p>通过<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.hutool.cn/">Hutool工具包</a>的HttpUtil.get方法获取查某个ip得到结果后的网站源码</p>
+<p>通过Java的String.split方法截取网站源码中的真实地址</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>另一种方法：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.cnblogs.com/GoslingWu/p/13689958.html">java-通过ip获取地址 - 公众号/架构师与哈苏 - 博客园</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/103.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/103.html" class="post-title-link" itemprop="url">制作网站logo</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-12 22:39:30" itemprop="dateCreated datePublished" datetime="2021-03-12T22:39:30+08:00">2021-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 04:05:16" itemprop="dateModified" datetime="2022-04-26T04:05:16+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="网站地址"><a href="#网站地址" class="headerlink" title="网站地址"></a>网站地址</h3><p><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.uugai.com/">http://www.uugai.com/</a></p>
+<h3 id="输入logo的名称"><a href="#输入logo的名称" class="headerlink" title="输入logo的名称"></a>输入logo的名称</h3><p>进入网站后，输入logo的名称，然后点击开始设计</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223126.jpg" alt="img"></p>
+<h3 id="设计文案"><a href="#设计文案" class="headerlink" title="设计文案"></a>设计文案</h3><p>下方的拼音（我称之为副标题）不删除的话最近的logo图片会有两行字（副标题可以根据自己的需要输入，如果不需要两行字就把下面的副标题删除即可），然后提交文案</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223528.jpg" alt="img"></p>
+<h3 id="选择字体"><a href="#选择字体" class="headerlink" title="选择字体"></a>选择字体</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223625.jpg" alt="img"></p>
+<h3 id="选择logo图案"><a href="#选择logo图案" class="headerlink" title="选择logo图案"></a>选择logo图案</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223719.jpg" alt="img"></p>
+<h3 id="生成logo下载"><a href="#生成logo下载" class="headerlink" title="生成logo下载"></a>生成logo下载</h3><p>也可在下方选择字体的颜色（小字体即前面说的副标题）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312223854.jpg" alt="img"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/102.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/102.html" class="post-title-link" itemprop="url">MySQL数据库中text字段长度不够</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-12 20:42:40" itemprop="dateCreated datePublished" datetime="2021-03-12T20:42:40+08:00">2021-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 04:05:22" itemprop="dateModified" datetime="2022-04-26T04:05:22+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>可以把字段类型改成<code>MEDIUMTEXT</code>（最多存放16777215个字符）或者<code>LONGTEXT</code>（最多存放4294967295个字符）</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/101.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/101.html" class="post-title-link" itemprop="url">解决：关于CKEditor的代码高亮</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-12 19:45:29" itemprop="dateCreated datePublished" datetime="2021-03-12T19:45:29+08:00">2021-03-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 04:05:25" itemprop="dateModified" datetime="2022-04-26T04:05:25+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="获取HTML代码"><a href="#获取HTML代码" class="headerlink" title="获取HTML代码"></a>获取HTML代码</h3><blockquote>
+<p>去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）</p>
+</blockquote>
+<p>地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://c.runoob.com/front-end/5536">https://c.runoob.com/front-end/5536</a></p>
+<p>①处填入要高亮的原始代码，②处是高亮后的HTML代码（是我们需要的），③处是高亮后的代码的效果预览</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194044.jpg" alt="img"></p>
+<h3 id="复制到CKEditor"><a href="#复制到CKEditor" class="headerlink" title="复制到CKEditor"></a>复制到CKEditor</h3><blockquote>
+<p>点击CKEditor富文本编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可</p>
+</blockquote>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/20210312194504.jpg" alt="img"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><blockquote>
+<p>利用highlight.js实现代码高亮：<a href="/126.html">highlight.js实现代码高亮</a></p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/48/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/">48</a><span class="page-number current">49</span><a class="page-number" href="/page/50/">50</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/">59</a><a class="extend next" rel="next" href="/page/50/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
     }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3265865_vc1sierqa1.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeDao's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">LeDao's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/110.html" title="部落冲突复制阵型教程"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/110.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突复制阵型教程"></a></div><div class="recent-post-info"><a class="article-title" href="/110.html" title="部落冲突复制阵型教程">部落冲突复制阵型教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-26T17:09:34.000Z" title="发表于 2021-03-27 01:09:34">2021-03-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">说明使用阵型链接的方式有两种：
-
-使用官方的网站，如果链接打不开就用下面这种方式
-使用我开发的网站，复制阵型的原理和官方网站一样，不用担心会被封号
-
-使用官方的网站在小程序内复制到阵型的链接后，打开手机的浏览器，在浏览器中打开阵型的链接，然后点击中间的《打开部落冲突》按钮即可将阵型复制到游戏中，复制失败先看最下面的注意事项，如果不行请换一个浏览器试试
-使用我开发的网站无法直接打开阵型的链接，再使用本方法
-网站的地址为：https://coc.zoutl.cn
-点击上面网站的链接打开网址后，点击网站最上面的《教程》，然后根据提示来操作就行了，在教程页面输入链接复制阵型是不需要登录的
-
-注意事项一定要保证游戏在后台运行，也不要切后台时间太久，太久就会要重新加载游戏，大概率会复制不成功
-国服阵型链接和国际服的阵型链接是不通用的，也就是说国服玩家不能使用国际服的阵型链接，反之亦然
-如果发现阵型链接失效或者复制出来的阵型和图片不一样，请点击阵型图片下面的《纠错》按钮向我提交错误，如果我验证阵型链接有误，会返还你的复制次数
-家乡可以复制和你等级差一级的阵型，例如：你现在是10本，你除了可以复制10 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/109.html" title="Spring Boot引入Quartz定时任务"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/109.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring Boot引入Quartz定时任务"></a></div><div class="recent-post-info"><a class="article-title" href="/109.html" title="Spring Boot引入Quartz定时任务">Spring Boot引入Quartz定时任务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-16T12:56:45.000Z" title="发表于 2021-03-16 20:56:45">2021-03-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></span></div><div class="content">引入依赖12345&lt;dependency&gt;    &lt;groupId&gt;org.quartz-scheduler&lt;/groupId&gt;    &lt;artifactId&gt;quartz&lt;/artifactId&gt;    &lt;version&gt;2.3.2&lt;/version&gt;&lt;/dependency&gt;
-
-Java代码12345678910111213141516171819202122232425262728package com.ledao.quartz; import org.springframework.context.annotation.Configuration;import org.springframework.scheduling.annotation.EnableScheduling;import org.springframework.scheduling.annotation.Scheduled; import javax.annotation.Resource;import java. ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/108.html" title="鼠标移入div显示查看更多"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/108.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="鼠标移入div显示查看更多"></a></div><div class="recent-post-info"><a class="article-title" href="/108.html" title="鼠标移入div显示查看更多">鼠标移入div显示查看更多</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-14T19:19:44.000Z" title="发表于 2021-03-15 03:19:44">2021-03-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">HTML代码1234567891011&lt;div class=&#x27;box&#x27;&gt;&lt;div class=&#x27;image&#x27;&gt;  &lt;img src=&#x27;https://photo.tuchong.com/316540/f/6406791.jpg&#x27;  width=&#x27;100%&#x27;&gt;&lt;/div&gt;&lt;div class=&#x27;mask&#x27;&gt;  &lt;a class=&#x27;link&#x27; href=&#x27;https://blog.csdn.net/Hreticent/article/details/85109668&#x27;&gt;	查看更多  &lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
-
-CSS代码12345678910111213141516171819202122232425262728293031323334.mask &#123;	background-color:rgb(255, 0, 116);	widt ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/107.html" title="给网页添加背景图片（网页缩小放大都不受影响）"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/107.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="给网页添加背景图片（网页缩小放大都不受影响）"></a></div><div class="recent-post-info"><a class="article-title" href="/107.html" title="给网页添加背景图片（网页缩小放大都不受影响）">给网页添加背景图片（网页缩小放大都不受影响）</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-14T19:15:14.000Z" title="发表于 2021-03-15 03:15:14">2021-03-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">HTML代码1&lt;div class=&quot;bjimg&quot;&gt;&lt;/div&gt;
-
-CSS代码1234567891011121314151617.bjimg &#123;	position: fixed;	top: 0;	left: 0;	width: 100%;	height: 100%;	min-width: 1000px;	z-index: -10;	zoom: 1;	background-color: #fff;	background-image: url(../static/images/background.png);	background-repeat: no-repeat;	background-size: cover;	-webkit-background-size: cover;	-o-background-size: cover;	background-position: center 0;&#125;
-
-PS.来源：给网页添加背景图片 html+css_北极光之夜。-CSDN博客
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/106.html" title="解决：Tomcat运行项目时Quartz定时任务执行两次"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/106.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决：Tomcat运行项目时Quartz定时任务执行两次"></a></div><div class="recent-post-info"><a class="article-title" href="/106.html" title="解决：Tomcat运行项目时Quartz定时任务执行两次">解决：Tomcat运行项目时Quartz定时任务执行两次</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-14T17:51:21.000Z" title="发表于 2021-03-15 01:51:21">2021-03-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">原因在Tomcat的配置文件conf/server.xml中：
-1234&lt;Host name=&quot;localhost&quot;  appBase=&quot;webapps&quot;            unpackWARs=&quot;true&quot; autoDeploy=&quot;true&quot;&gt;    &lt;Context path=&quot;&quot; docBase=&quot;/test&quot; /&gt;&lt;/Host&gt;
-
-其中&lt;Host&gt;告诉Tomcat，在启动的时候加载webapps下的所有项目工程文件，&lt;Context&gt;又让Tomcat再加载了一遍（一般情况下配置&lt;Context&gt;，主要是由于想域名访问时将工程名去掉的原因配置），这种情况下会导致工程中的quartz定时被两次触发，执行两次
-解决办法将Tomcat的配置文件conf/server.xml修改为：
-1234&lt;Host name=&quot;localhost&quot;  appBase=&quot;w ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/105.html" title="实现鼠标移入文字向右移动效果"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/105.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实现鼠标移入文字向右移动效果"></a></div><div class="recent-post-info"><a class="article-title" href="/105.html" title="实现鼠标移入文字向右移动效果">实现鼠标移入文字向右移动效果</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-14T14:41:04.000Z" title="发表于 2021-03-14 22:41:04">2021-03-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">HTML代码1&lt;div id=&#x27;div1&#x27;&gt;&gt;&gt;&gt;鼠标移入此行会缓慢向右路移动&lt;&lt;&lt;&lt;/div&gt;
-
-CSS代码123456789#div1 &#123;	-webkit-transition: margin-left .8s;	-moz-transition: margin-left .8s;	-o-transition: margin-left .8s; &#125;#div1:hover &#123;	margin-left: 5px;&#125;
-
-PS.来源：鼠标移入文字上向右移动效果 - Crazy丶迷恋 - 博客园
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/104.html" title="根据ip地址获取真实地址"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/104.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="根据ip地址获取真实地址"></a></div><div class="recent-post-info"><a class="article-title" href="/104.html" title="根据ip地址获取真实地址">根据ip地址获取真实地址</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-13T04:11:14.000Z" title="发表于 2021-03-13 12:11:14">2021-03-13</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></span></div><div class="content">pom.xml引入12345&lt;dependency&gt;    &lt;groupId&gt;cn.hutool&lt;/groupId&gt;    &lt;artifactId&gt;hutool-all&lt;/artifactId&gt;    &lt;version&gt;5.5.9&lt;/version&gt;&lt;/dependency&gt;
-
-Java代码123456789101112131415161718192021222324package com.ledao.util; import cn.hutool.http.HttpUtil; /** * 根据IP获取真实地址 * * @author LeDao * @company * @create 2021-03-13 11:18 */public class AddressUtil &#123;     public static String getAddress(String ip) &#123;        String result1 = HttpUtil.get(&quot;https:/ ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/103.html" title="制作网站logo"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/103.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="制作网站logo"></a></div><div class="recent-post-info"><a class="article-title" href="/103.html" title="制作网站logo">制作网站logo</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-12T14:39:30.000Z" title="发表于 2021-03-12 22:39:30">2021-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">网站地址http://www.uugai.com/
-输入logo的名称进入网站后，输入logo的名称，然后点击开始设计
-
-设计文案下方的拼音（我称之为副标题）不删除的话最近的logo图片会有两行字（副标题可以根据自己的需要输入，如果不需要两行字就把下面的副标题删除即可），然后提交文案
-
-选择字体
-选择logo图案
-生成logo下载也可在下方选择字体的颜色（小字体即前面说的副标题）
-
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/102.html" title="MySQL数据库中text字段长度不够"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/102.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MySQL数据库中text字段长度不够"></a></div><div class="recent-post-info"><a class="article-title" href="/102.html" title="MySQL数据库中text字段长度不够">MySQL数据库中text字段长度不够</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-12T12:42:40.000Z" title="发表于 2021-03-12 20:42:40">2021-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></span></div><div class="content">问题描述text类型是可变长度的字符串，最多65535个字符，有时候会超过其长度
-解决办法可以把字段类型改成MEDIUMTEXT（最多存放16777215个字符）或者LONGTEXT（最多存放4294967295个字符）
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/101.html" title="解决：关于CKEditor的代码高亮"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/101.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="解决：关于CKEditor的代码高亮"></a></div><div class="recent-post-info"><a class="article-title" href="/101.html" title="解决：关于CKEditor的代码高亮">解决：关于CKEditor的代码高亮</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-03-12T11:45:29.000Z" title="发表于 2021-03-12 19:45:29">2021-03-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">获取HTML代码
-去代码在线高亮网站获得高亮后的HTML代码：（网站如下图所示）
-
-地址：https://c.runoob.com/front-end/5536
-①处填入要高亮的原始代码，②处是高亮后的HTML代码（是我们需要的），③处是高亮后的代码的效果预览
-
-复制到CKEditor
-点击CKEditor富文本编辑器左上角的源码选项，进入编辑源码状态，在对应的位置将刚刚得到的HTML代码复制进去即可
-
-
-PS.
-利用highlight.js实现代码高亮：highlight.js实现代码高亮
-
-</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/48/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/48/#content-inner">48</a><span class="page-number current">49</span><a class="page-number" href="/page/50/#content-inner">50</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/#content-inner">59</a><a class="extend next" rel="next" href="/page/50/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LeDao</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/a6678696"><i></i><span>To My GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">接Java毕业设计和课设，便宜靠谱，需要的加Q：3519577180</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/590.html" title="Nginx重新部署SSL证书"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/590.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx重新部署SSL证书"/></a><div class="content"><a class="title" href="/590.html" title="Nginx重新部署SSL证书">Nginx重新部署SSL证书</a><time datetime="2024-10-07T16:39:44.000Z" title="发表于 2024-10-08 00:39:44">2024-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/589.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"/></a><div class="content"><a class="title" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法">VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</a><time datetime="2024-03-09T13:43:26.000Z" title="发表于 2024-03-09 21:43:26">2024-03-09</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">590</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-07-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">258.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-01T18:48:08.040Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Algolia</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/fancybox.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('https://image.zoutl.cn/hexo-blog/file/source/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
-  }
-}
-
-function panguInit () {
-  if (true){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
-  }
-}
-
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://image.zoutl.cn/hexo-blog/file/source/algoliasearch-lite.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
-  fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      if (true) {
-        const from = '出自 ' + data.from
-        const sub = []
-        sub.unshift(data.hitokoto, from)
-        window.typed = new Typed('#subtitle', {
-          strings: sub,
-          startDelay: 300,
-          typeSpeed: 150,
-          loop: true,
-          backSpeed: 50,
-        })
-      } else {
-        document.getElementById('subtitle').innerHTML = data.hitokoto
-      }
-    })
-}
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://image.zoutl.cn/hexo-blog/file/source/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}
-</script></div><script>window.addEventListener('load', () => {
-  const changeContent = (content) => {
-    if (content === '') return content
-
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
-    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
-    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
-    content = content.replace(/<[^>]+>/g,"") // remove html tag
-
-    if (content.length > 150) {
-      content = content.substring(0,150) + '...'
-    }
-    return content
-  }
-
-  const findTrueUrl = (array) => {
-    Promise.all(array.map(item =>
-      fetch(item.url).then(resp => resp.json()).then(data => {
-        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
-        if (data.user.login === 'utterances-bot') {
-          return urlArray.pop()
-        } else {
-          return urlArray.shift()
-        }
-      })
-    )).then(res => {
-        array = array.map((i,index)=> {
-          return {
-            ...i,
-            url: res[index]
-          }
-        })
-
-        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
-        generateHtml(array)
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
   }
+</script>
 
-  const getComment = () => {
-    fetch('https://api.github.com/repos/a6678696/a6678696.github.io/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
-      "headers": {
-        Accept: 'application/vnd.github.v3.html+json'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        const githubArray = data.map(item => {
-          return {
-            'avatar': item.user.avatar_url,
-            'content': changeContent(item.body_html),
-            'nick': item.user.login,
-            'url': item.issue_url,
-            'date': item.updated_at,
-            'githubUrl': item.html_url
-          }
-        })
-        findTrueUrl(githubArray)
-      }).catch(e => {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      })
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LeDao"
+      src="https://image.zoutl.cn/hexo-blog/images/logo.png">
+  <p class="site-author-name" itemprop="name">LeDao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">590</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/a6678696" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a6678696" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1203007469@qq.com" title="E-Mail → mailto:1203007469@qq.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LeDao</span>
+</div>
+<div>
+    <span style="text-align: left;display: inline-block;vertical-align: middle;">本网站由 </span>
+	<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src='https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png' style="height: 30px;vertical-align: middle;display: inline-block;"></a>
+	<span style="text-align: left;display: inline-block;vertical-align: middle;">提供CDN加速/云存储服务</span>
+</div>
+<div class="id111">
+    <span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a></span>
+	<img src='https://image.zoutl.cn/hexo-blog/images/beian.png' style="vertical-align: middle;display: inline-block;">
+	<span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,51,51' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
   }
+});
+</script>
 
-  const generateHtml = array => {
-    let result = ''
 
-    if (array.length) {
-      for (let i = 0; i < array.length; i++) {
-        result += '<div class=\'aside-list-item\'>'
 
-        if (true) {
-          const name = 'src'
-          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
-        }
 
-        result += `<div class='content'>
-        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
-        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
-        </div></div>`
-      }
-    } else {
-      result += '没有评论'
-    }
+  
 
-    let $dom = document.querySelector('#card-newest-comments .aside-list')
-    $dom.innerHTML= result
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    window.pjax && window.pjax.refresh($dom)
-  }
+  
 
-  const newestCommentInit = () => {
-    if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('github-newest-comments')
-      if (data) {
-        generateHtml(JSON.parse(data))
-      } else {
-        getComment()
-      }
-    }
-  }
 
-  newestCommentInit()
-  document.addEventListener('pjax:complete', newestCommentInit)
-})</script><script defer="defer" id="ribbon" src="https://image.zoutl.cn/hexo-blog/file/source/canvas-ribbon.min.js" size="222" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-POWERMODE.mobile = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script id="click-heart" src="https://image.zoutl.cn/hexo-blog/file/source/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</body>
+</html>

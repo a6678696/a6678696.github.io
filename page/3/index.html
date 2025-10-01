@@ -1,470 +1,1750 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>LeDao's Blog</title><meta name="keywords" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js"><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.zoutl.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":6,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
 <meta property="og:title" content="LeDao&#39;s Blog">
 <meta property="og:url" content="https://blog.zoutl.cn/page/3/index.html">
 <meta property="og:site_name" content="LeDao&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
 <meta property="article:author" content="LeDao">
 <meta property="article:tag" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/page/3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="fp2ohQruhOqzbyAh"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JZJWXGK1VV"></script><script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-JZJWXGK1VV');
-</script><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
-  source: {
-    justifiedGallery: {
-      js: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.js',
-      css: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'LeDao\'s Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2025-10-02 02:48:12'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+<link rel="canonical" href="https://blog.zoutl.cn/page/3/">
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+  <title>LeDao's Blog</title>
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">LeDao's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-项目">
+
+    <a href="/project/" rel="section"><i class="fa fa-paw fa-fw"></i>项目</a>
+
+  </li>
+        <li class="menu-item menu-item-友链">
+
+    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/a6678696" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
   
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/573.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/573.html" class="post-title-link" itemprop="url">使用Apifox Helper插件自动生成接口文档</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-19 09:43:41 / 修改时间：12:07:07" itemprop="dateCreated datePublished" datetime="2023-02-19T09:43:41+08:00">2023-02-19</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Apifox Helper是Apifox官方开发的一个IntelliJ IDEA插件，可以根据Controller层的接口方法快速在Apifox中自动生成接口文档，以进行接口测试</p>
+<p>Apifox的官网地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.apifox.cn/">Apifox - API 文档、调试、Mock、测试一体化协作平台</a></p>
+<p>使用文档：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.apifox.cn/help/">帮助中心 | Apifox 使用文档</a></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="生成API访问令牌"><a href="#生成API访问令牌" class="headerlink" title="生成API访问令牌"></a>生成API访问令牌</h4><p>根据下图生成一个访问令牌，该令牌只有在创建时才能看到，所以要保管好，不然忘记了就只能再重新新建一个</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219110842615.png" alt="image-20230219110842615"></p>
+<h4 id="获取项目ID"><a href="#获取项目ID" class="headerlink" title="获取项目ID"></a>获取项目ID</h4><p>打开新建的项目，根据下图获取项目的ID</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219111344880.png" alt="image-20230219111344880"></p>
+<h4 id="配置Apifox-Helper"><a href="#配置Apifox-Helper" class="headerlink" title="配置Apifox Helper"></a>配置Apifox Helper</h4><p>打开IntelliJ IDEA的设置后，根据下图配置Apifox Helper，模块项目ID配置可以有多个</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219111904041.png" alt="image-20230219111904041"></p>
+<h4 id="生成接口文档"><a href="#生成接口文档" class="headerlink" title="生成接口文档"></a>生成接口文档</h4><ol>
+<li><p>生成一个类的某个方法的文档</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219115851243.png" alt="image-20230219115851243"></p>
+</li>
+<li><p>生成一个类的全部方法的文档</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219115931777.png" alt="image-20230219115931777"></p>
+</li>
+<li><p>生成多个类的全部方法的文档</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219115955359.png" alt="image-20230219115955359"></p>
+</li>
+</ol>
+<h4 id="配置Apifox请求的前置URL"><a href="#配置Apifox请求的前置URL" class="headerlink" title="配置Apifox请求的前置URL"></a>配置Apifox请求的前置URL</h4><p>打开项目后，根据下图配置请求的前置URL，这样每次请求都会自动加上了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230219120607584.png" alt="image-20230219120607584"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/572.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/572.html" class="post-title-link" itemprop="url">使用npkill查找和清理node_modules包</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-16 12:26:56 / 修改时间：13:53:49" itemprop="dateCreated datePublished" datetime="2023-02-16T12:26:56+08:00">2023-02-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>进行前端开发时，电脑上会有很多node_modules包，会占用很多磁盘空间，我们可以把一些暂时不会打开的项目的node_modules包删除掉，等到要运行项目的时候再安装回来，如果我们一个个手动删除的话，会很麻烦</p>
+<p><code>npkill</code>可以很好的解决上述问题，不仅可以快速找到某个文件夹下的全部node_modules包，还可以根据路径、大小和上次修改时间进行排序，管理起来更加方便</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>打开cmd然后执行下面命令即可完成安装，不安装也可以使用<code>npkill</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g npkill</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>cmd进入一个文件夹后，执行下面命令即可搜索该文件夹下的全部node_modules包，方向键的上下可以选择node_modules包，用空格键删除，<font color="#dd0000">直接删除不会有确认提示</font></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230216132204625.png" alt="image-20230216132204625"></p>
+<h4 id="不安装使用"><a href="#不安装使用" class="headerlink" title="不安装使用"></a>不安装使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx npkill</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装后使用"><a href="#安装后使用" class="headerlink" title="安装后使用"></a>安装后使用</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npkill</span><br></pre></td></tr></table></figure>
+
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p>一般只用到<code>-s</code>参数根据<code>size</code>进行排序</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">说明</th>
+<th align="center">默认</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">-c, --bg-color</td>
+<td align="center">更改行突出显示颜色，可用颜色有: blue,cyan,magenta,white,red ,yellow</td>
+<td align="center">blue</td>
+</tr>
+<tr>
+<td align="center">-d, --directory</td>
+<td align="center">设置要开始搜索的目录</td>
+<td align="center">.</td>
+</tr>
+<tr>
+<td align="center">-D, --delete-all</td>
+<td align="center">目前禁用，自动删除所有node _ module文件夹</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center">-e, --show-errors</td>
+<td align="center">显示错误消息(如果有的话)</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">-E, --exclude</td>
+<td align="center">从搜索中排除目录(目录名列表必须在双引号“”中，每个目录之间用’,’分隔)示例: “ ignore1，ignore2”</td>
+<td align="center">--</td>
+</tr>
+<tr>
+<td align="center">-f, --full</td>
+<td align="center">从用户的主页开始搜索(例如: Linux 中的“/home/user”)</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">-gb</td>
+<td align="center">以千兆字节而不是兆字节显示文件夹大小</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">-h, --help, ?</td>
+<td align="center">显示帮助</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">-nu, --no-check-update</td>
+<td align="center">启动时不要检查更新</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">-s, --sort</td>
+<td align="center">根据 <code>size</code>、 <code>path</code> 或 <code>last-mod</code>排序，一般使用<code>size</code></td>
+<td align="center">none</td>
+</tr>
+<tr>
+<td align="center">-t, --target</td>
+<td align="center">指定要搜索的目录的名称</td>
+<td align="center">node_modules</td>
+</tr>
+<tr>
+<td align="center">-x, --exclude-hidden-directories</td>
+<td align="center">从搜索中排除隐藏目录(“点”目录)</td>
+<td align="center">false</td>
+</tr>
+<tr>
+<td align="center">-v, --version</td>
+<td align="center">显示npkill版本</td>
+<td align="center">false</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/571.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/571.html" class="post-title-link" itemprop="url">IntelliJ IDEA使用MyBatisX插件生成基础代码</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-10 19:31:03 / 修改时间：23:03:06" itemprop="dateCreated datePublished" datetime="2023-02-10T19:31:03+08:00">2023-02-10</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">开发工具</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>使用MyBatis-Plus开发时，一般开发的顺序都是：新建数据库表、实体类、Mapper接口、Mapper.xml文件、Service接口、Service接口实现类，然后才进行相应业务的开发工作</p>
+<p>上面的操作都是重复性的，如果已经熟悉了MyBatis-Plus的基本使用，经常做这些重复性的工作对我们没有什么好处，如果这些操作可以自动完成，就可以提高工作效率了</p>
+<p>MyBatis-Plus官方出了一个名叫<code>MyBatisX</code>的插件，可以有效解决上述问题，我们只需要自己手动在数据库中新建一张表，然后就可以使用插件自动生成实体类、Mapper接口、Mapper.xml文件、Service接口、Service接口实现类的基础模板了</p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>直接到IntelliJ IDEA的插件市场安装即可</p>
+<h4 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h4><p>需要在IntelliJ IDEA中配置数据源，具体操作步骤查看博客：<a href="https://blog.zoutl.cn/29.html">IntelliJ IDEA 连接 MySQL 数据库 | LeDao’s Blog (zoutl.cn)</a></p>
+<h4 id="开始生成"><a href="#开始生成" class="headerlink" title="开始生成"></a>开始生成</h4><p>右键点击对应的数据库表，然后选择<code>MybatisX-Generator</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230210195600505.png" alt="image-20230210195600505"></p>
+<p>然后配置生成代码的存放位置，图片下的表格是参数的说明，一般像下图一样配置就行了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230210195831572.png" alt="image-20230210195831572"></p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">module path</td>
+<td align="center">模块路径，此处填写项目所在路径，生成的代码会在相应位置</td>
+</tr>
+<tr>
+<td align="center">base package</td>
+<td align="center">填写项目的包</td>
+</tr>
+<tr>
+<td align="center">base path</td>
+<td align="center">代码所在路径</td>
+</tr>
+<tr>
+<td align="center">relative package</td>
+<td align="center">决定实体类会被生成在哪里，默认生成在domain包中，可以修改为其他包但不要为空</td>
+</tr>
+<tr>
+<td align="center">extra class suffix</td>
+<td align="center">生成的实体类后面会加上里面的内容。举例：图中如果这里写入Test，最后生成实体类会叫FilesTest</td>
+</tr>
+<tr>
+<td align="center">encoding</td>
+<td align="center">编码，使用UTF-8即可</td>
+</tr>
+<tr>
+<td align="center">ignore field prefix</td>
+<td align="center">忽略字段前缀</td>
+</tr>
+<tr>
+<td align="center">ignore field suffix</td>
+<td align="center">忽略字段后缀</td>
+</tr>
+<tr>
+<td align="center">class name strategy</td>
+<td align="center">实体类名策略，camel是驼峰命名，same as tablename是实体类名称和表名一样</td>
+</tr>
+<tr>
+<td align="center">superClass</td>
+<td align="center">生成实体类继承的父类</td>
+</tr>
+<tr>
+<td align="center">ignore table prefix</td>
+<td align="center">忽略表名前缀</td>
+</tr>
+<tr>
+<td align="center">ignore table suffix</td>
+<td align="center">忽略表名后缀</td>
+</tr>
+</tbody></table>
+<p>最后配置生成代码的格式，图片下的表格是参数的说明，一般像下图一样配置就行了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230210200137977.png" alt="image-20230210200137977"></p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">annotation</td>
+<td align="center">给实体类添加的注解类型</td>
+</tr>
+<tr>
+<td align="center">options.Comment</td>
+<td align="center">给实体类属性名加上注释，和表字段的注释一样</td>
+</tr>
+<tr>
+<td align="center">options.toString/hashCode/equals</td>
+<td align="center">生成相应的方法，使用了Lombok的话可以不勾选</td>
+</tr>
+<tr>
+<td align="center">options.Lombok</td>
+<td align="center">会给实体类加上<code>@Data</code>注解</td>
+</tr>
+<tr>
+<td align="center">options.Actual Column</td>
+<td align="center">生成的实体类属性名和数据库表字段名一样</td>
+</tr>
+<tr>
+<td align="center">options.Actual Column Annotation</td>
+<td align="center">对所有属性名都加上注解标明对应字段</td>
+</tr>
+<tr>
+<td align="center">options.JSR310:Data API</td>
+<td align="center">使用新标准的时间日期API，新标准时间的类型是LocalDateTime，否则是Date</td>
+</tr>
+<tr>
+<td align="center">options.Model</td>
+<td align="center">生成实体类</td>
+</tr>
+<tr>
+<td align="center">template</td>
+<td align="center">模板类型</td>
+</tr>
+</tbody></table>
+<h4 id="修改生成的模板代码"><a href="#修改生成的模板代码" class="headerlink" title="修改生成的模板代码"></a>修改生成的模板代码</h4><p>在<code>Project</code>栏找到对应的模板然后修改即可</p>
+<img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230210223906706.png" alt="image-20230210223906706" style="zoom: 67%;" />
+
+<p>如果想恢复成默认的模板，就右键点击<code>MyBatisX</code>文件夹，然后选择<code>Restore Default Extensions</code>，前面的操作是重置全部模板，如果只重置某一个模板就右键点击对应的模板文件夹即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230210224123733.png" alt="image-20230210224123733"></p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>该插件的其它操作可以查看博客：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.lilinchao.com/archives/2718.html">09.MyBatisX插件介绍 - 李林超博客 ~ 个人博客 (lilinchao.com)</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/570.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/570.html" class="post-title-link" itemprop="url">Vim常用命令或快捷键</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-05 09:24:45" itemprop="dateCreated datePublished" datetime="2023-02-05T09:24:45+08:00">2023-02-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-02-15 13:43:32" itemprop="dateModified" datetime="2023-02-15T13:43:32+08:00">2023-02-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>Vim是Vi的升级版本，可以当作Vi来使用，完全替代Vi，也就是说：不要使用Vi了，而是使用它的升级版本Vim</p>
+<p>下面只列举了一些我常用的命令或快捷键，并不是列举全部，其它没有列出的命令或快捷键如果用到了就在下方放出</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><h4 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h4><p>我把Vim命令的类型分为<code>命令模式</code>、<code>输入模式</code>和<code>底线命令模式</code>，<code>vim 文件名</code>打开文件后就是命令模式，在命令模式下按下<code>i</code>键就切换到了输入模式，在命令模式下输入<code>:</code>就切换到了底线命令模式</p>
+<h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p><code>vim 文件名</code>打开文件后就是命令模式</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令或快捷键</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>:</code></td>
+<td align="center">切换到底线命令模式</td>
+</tr>
+<tr>
+<td align="center"><code>i</code></td>
+<td align="center">切换到输入模式</td>
+</tr>
+<tr>
+<td align="center"><code>x</code></td>
+<td align="center">删除当前光标所在处的字符</td>
+</tr>
+<tr>
+<td align="center"><code>dd</code></td>
+<td align="center">删除光标所在行</td>
+</tr>
+<tr>
+<td align="center"><code>/关键词</code></td>
+<td align="center">向下搜索关键词，按<code>n</code>查找下一个搜索结果，按<code>N</code>则查找上一个</td>
+</tr>
+<tr>
+<td align="center"><code>?关键词</code></td>
+<td align="center">向上搜索关键词，按<code>n</code>查找上一个搜索结果，按<code>N</code>则查找下一个，和上面相反</td>
+</tr>
+<tr>
+<td align="center"><code>v</code></td>
+<td align="center">切换到<code>可视化模式</code>，一般用于删除一段文本</td>
+</tr>
+<tr>
+<td align="center"><code>r</code></td>
+<td align="center">切换到<code>单字符替换模式</code>，用于替换一个字符</td>
+</tr>
+<tr>
+<td align="center"><code>R</code></td>
+<td align="center">切换到<code>多字符替换模式</code>，用于替换多个字符</td>
+</tr>
+</tbody></table>
+<h4 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h4><p>在命令模式下，按下<code>i</code>键就切换到了输入模式，输入模式没有什么好说的，就和平时在Windows系统中编辑文本一样</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令或快捷键</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>ESC</code></td>
+<td align="center">切换到命令模式</td>
+</tr>
+<tr>
+<td align="center"><code>CTRL+INSERT</code></td>
+<td align="center">复制文本</td>
+</tr>
+<tr>
+<td align="center"><code>SHIFT+INSERT</code></td>
+<td align="center">粘贴文本，可以选择文本后直接粘贴不用复制</td>
+</tr>
+</tbody></table>
+<h4 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h4><p>在命令模式下输入<code>:</code>就切换到了底线命令模式</p>
+<table>
+<thead>
+<tr>
+<th align="center">命令或快捷键</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>ESC</code></td>
+<td align="center">切换到命令模式</td>
+</tr>
+<tr>
+<td align="center"><code>q</code></td>
+<td align="center">没有修改文件内容退出Vim回到系统中</td>
+</tr>
+<tr>
+<td align="center"><code>w</code></td>
+<td align="center">保存，修改了内容必须保存不然无法退出</td>
+</tr>
+<tr>
+<td align="center"><code>wq</code></td>
+<td align="center">保存后退出</td>
+</tr>
+<tr>
+<td align="center"><code>q!</code></td>
+<td align="center">不保存修改的内容直接退出</td>
+</tr>
+<tr>
+<td align="center"><code>noh</code></td>
+<td align="center">去除命令模式搜索关键词时高亮的效果</td>
+</tr>
+<tr>
+<td align="center"><code>set nu</code></td>
+<td align="center">显示行号，只在本次编辑有效，下次再打开就没了</td>
+</tr>
+<tr>
+<td align="center"><code>set nonu</code></td>
+<td align="center">不显示行号</td>
+</tr>
+<tr>
+<td align="center"><code>数字</code></td>
+<td align="center">跳转到指定行</td>
+</tr>
+</tbody></table>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>如果编辑的文件内容改动了（添加一个字符再删除也是改动了），没有使用<code>:q</code>退出Vim而是关闭SSH连接或其它强制退出Vim的操作，那么再次打开这个文件就会提示：<font color="#dd0000">Found a swap file by the name</font>，无法正常编辑这个文件</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230205115000670.png" alt="image-20230205115000670"></p>
+<p>我们先按下<code>q</code>键退出，然后找到提示的文件并删除（和要编辑的文件在同一个目录下），不过<font color="#dd0000">上次的改动无效</font>了</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230205115248806.png" alt="image-20230205115248806"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/569.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/569.html" class="post-title-link" itemprop="url">在CentOS7系统中使用Nginx部署Vue项目</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-04 03:49:01" itemprop="dateCreated datePublished" datetime="2023-02-04T03:49:01+08:00">2023-02-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-11-26 11:56:08" itemprop="dateModified" datetime="2023-11-26T11:56:08+08:00">2023-11-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="打包项目"><a href="#打包项目" class="headerlink" title="打包项目"></a>打包项目</h3><p>使用下面命令将Vue项目打包，会生成一个名为<code>dist</code>的文件夹，然后将它上传到CentOS7系统中，也可以重命名这个文件夹以作区分</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改Nginx配置"><a href="#修改Nginx配置" class="headerlink" title="修改Nginx配置"></a>修改Nginx配置</h3><p>在配置文件中加入下面代码，我的配置文件路径为<code>/etc/nginx/conf.d/default.conf</code>，如果是部署到云服务器需要在安全组或防火墙中开放端口，不然无法访问</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">server</span> &#123;</span><br><span class="line">   <span class="string">listen</span>       <span class="number">8081</span><span class="string">;</span> <span class="comment">#访问的端口</span></span><br><span class="line"></span><br><span class="line">   <span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">      <span class="string">root</span> <span class="string">/home/project/vue/project-template;</span> <span class="comment">#要部署的Vue项目存放的位置</span></span><br><span class="line">      <span class="string">index</span>  <span class="string">index.html</span> <span class="string">index.htm;</span> <span class="comment">#首页文件</span></span><br><span class="line">      <span class="string">try_files</span> <span class="string">$uri</span> <span class="string">$uri/</span> <span class="string">/index.html;</span> <span class="comment">#防止刷新后自动跳到自带404页面</span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="重新加载Nginx配置文件"><a href="#重新加载Nginx配置文件" class="headerlink" title="重新加载Nginx配置文件"></a>重新加载Nginx配置文件</h3><p>首先使用下面命令测试 Nginx 配置文件的语法和结构是否正确，而不会加载或应用这些配置，如果配置文件中存在语法错误或其他问题，它会显示相关的错误信息。如果配置文件正确，它会显示类似 &quot;syntax is okay&quot; 和 &quot;test is successful&quot; 的消息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure>
+
+<p>如果配置文件正确，在使用下面命令加载Nginx配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>除了使用Nginx部署Vue项目，还可以使用Tomcat，直接把打包的文件夹丢到webapps目录下然后<a href="https://blog.zoutl.cn/9.html">配置一下访问不用加项目名称</a>就行了，不过还是推荐使用Nginx</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/568.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/568.html" class="post-title-link" itemprop="url">Vue3项目使用i18n实现国际化</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-03 05:25:27 / 修改时间：07:52:29" itemprop="dateCreated datePublished" datetime="2023-02-03T05:25:27+08:00">2023-02-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>和使用浏览器的全文翻译（机器翻译）相比，使用i18n实现国际化（人工翻译）应该会更准确，但是挺麻烦的，因为每一个组件的文字都需要翻译和配置</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-i18n@next</span><br></pre></td></tr></table></figure>
+
+<h4 id="新建语言配置文件"><a href="#新建语言配置文件" class="headerlink" title="新建语言配置文件"></a>新建语言配置文件</h4><p>在src目录下新建一个名为<code>locales</code>的目录，在这个目录下新建一个名为<code>lang</code>的目录、<code>i18n.js</code>和<code>index.js</code>文件，最后在<code>lang</code>目录下新建<code>en.js</code>和<code>zh.js</code>文件</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230203074504773.png" alt="image-20230203074504773"></p>
+<p><code>en.js</code>的内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    <span class="attr">menu</span>: &#123;</span><br><span class="line">        <span class="attr">name</span>: <span class="string">&#x27;Background&#x27;</span>,</span><br><span class="line">        <span class="attr">home</span>: <span class="string">&#x27;Home&#x27;</span>,</span><br><span class="line">        <span class="attr">userManage</span>: <span class="string">&#x27;Manage User&#x27;</span>,</span><br><span class="line">        <span class="attr">announcementManage</span>: <span class="string">&#x27;Manage Notice&#x27;</span>,</span><br><span class="line">        <span class="attr">typeManage</span>: <span class="string">&#x27;Manage Type&#x27;</span>,</span><br><span class="line">        <span class="attr">bigTypeManage</span>: <span class="string">&#x27;Manage BigType&#x27;</span>,</span><br><span class="line">        <span class="attr">smallTypeManage</span>: <span class="string">&#x27;Manage SmallType&#x27;</span>,</span><br><span class="line">        <span class="attr">goodsManage</span>: <span class="string">&#x27;Manage Goods&#x27;</span>,</span><br><span class="line">        <span class="attr">orderManage</span>: <span class="string">&#x27;Manage Order&#x27;</span>,</span><br><span class="line">        <span class="attr">valuationManage</span>: <span class="string">&#x27;Manage Valuation&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">main</span>: &#123;</span><br><span class="line">        <span class="attr">home</span>: <span class="string">&#x27;Home&#x27;</span>,</span><br><span class="line">        <span class="attr">full</span>: <span class="string">&#x27;Full Screen&#x27;</span>,</span><br><span class="line">        <span class="attr">noFull</span>: <span class="string">&#x27;Exit Full Screen&#x27;</span>,</span><br><span class="line">        <span class="attr">openMenu</span>: <span class="string">&#x27;Open The Menu&#x27;</span>,</span><br><span class="line">        <span class="attr">closeMenu</span>: <span class="string">&#x27;Close The Menu&#x27;</span>,</span><br><span class="line">        <span class="attr">modifyPassword</span>: <span class="string">&#x27;Modify Password&#x27;</span>,</span><br><span class="line">        <span class="attr">logout</span>: <span class="string">&#x27;Logout&#x27;</span>,</span><br><span class="line">        <span class="attr">closeAll</span>: <span class="string">&#x27;Close All&#x27;</span>,</span><br><span class="line">        <span class="attr">closeLeft</span>: <span class="string">&#x27;Close The Left&#x27;</span>,</span><br><span class="line">        <span class="attr">closeRight</span>: <span class="string">&#x27;Close The Right&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>zh.js</code>的内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    <span class="attr">menu</span>:&#123;</span><br><span class="line">        <span class="attr">name</span>:<span class="string">&#x27;后台管理系统模板&#x27;</span>,</span><br><span class="line">        <span class="attr">home</span>:<span class="string">&#x27;首页&#x27;</span>,</span><br><span class="line">        <span class="attr">userManage</span>:<span class="string">&#x27;用户管理&#x27;</span>,</span><br><span class="line">        <span class="attr">announcementManage</span>: <span class="string">&#x27;公告管理&#x27;</span>,</span><br><span class="line">        <span class="attr">typeManage</span>: <span class="string">&#x27;商品分类管理&#x27;</span>,</span><br><span class="line">        <span class="attr">bigTypeManage</span>: <span class="string">&#x27;商品大类&#x27;</span>,</span><br><span class="line">        <span class="attr">smallTypeManage</span>: <span class="string">&#x27;商品小类&#x27;</span>,</span><br><span class="line">        <span class="attr">goodsManage</span>: <span class="string">&#x27;商品管理&#x27;</span>,</span><br><span class="line">        <span class="attr">orderManage</span>: <span class="string">&#x27;订单管理&#x27;</span>,</span><br><span class="line">        <span class="attr">valuationManage</span>: <span class="string">&#x27;评价管理&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">main</span>:&#123;</span><br><span class="line">        <span class="attr">home</span>:<span class="string">&#x27;首页&#x27;</span>,</span><br><span class="line">        <span class="attr">full</span>: <span class="string">&#x27;全屏&#x27;</span>,</span><br><span class="line">        <span class="attr">noFull</span>: <span class="string">&#x27;退出全屏&#x27;</span>,</span><br><span class="line">        <span class="attr">openMenu</span>:<span class="string">&#x27;打开菜单&#x27;</span>,</span><br><span class="line">        <span class="attr">closeMenu</span>:<span class="string">&#x27;关闭菜单&#x27;</span>,</span><br><span class="line">        <span class="attr">modifyPassword</span>: <span class="string">&#x27;修改密码&#x27;</span>,</span><br><span class="line">        <span class="attr">logout</span>: <span class="string">&#x27;注销&#x27;</span>,</span><br><span class="line">        <span class="attr">closeAll</span>: <span class="string">&#x27;关闭全部&#x27;</span>,</span><br><span class="line">        <span class="attr">closeLeft</span>: <span class="string">&#x27;关闭左侧&#x27;</span>,</span><br><span class="line">        <span class="attr">closeRight</span>: <span class="string">&#x27;关闭右侧&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>index.js</code>的内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> en <span class="keyword">from</span> <span class="string">&#x27;./lang/en&#x27;</span></span><br><span class="line"><span class="keyword">import</span> zh <span class="keyword">from</span> <span class="string">&#x27;./lang/zh&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">    en,</span><br><span class="line">    zh,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>i18n.js</code>的内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createI18n &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-i18n&#x27;</span> <span class="comment">//引入vue-i18n组件</span></span><br><span class="line"><span class="keyword">import</span> messages <span class="keyword">from</span> <span class="string">&#x27;./index&#x27;</span></span><br><span class="line"><span class="keyword">const</span> language = (</span><br><span class="line">    (navigator.language ? navigator.language : navigator.userLanguage) || <span class="string">&quot;zh&quot;</span></span><br><span class="line">).toLowerCase();</span><br><span class="line"><span class="keyword">const</span> i18n = createI18n(&#123;</span><br><span class="line">    <span class="attr">fallbackLocale</span>: <span class="string">&#x27;zh&#x27;</span>,</span><br><span class="line">    <span class="attr">globalInjection</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">legacy</span>: <span class="literal">false</span>, <span class="comment">// you must specify &#x27;legacy: false&#x27; option</span></span><br><span class="line">    <span class="attr">locale</span>: language.split(<span class="string">&quot;-&quot;</span>)[<span class="number">0</span>] || <span class="string">&quot;zh&quot;</span>,</span><br><span class="line">    messages,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> i18n</span><br></pre></td></tr></table></figure>
+
+<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><p>在<code>main.js</code>中引入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createPinia &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"><span class="keyword">import</span> piniaPluginPersistedstate <span class="keyword">from</span> <span class="string">&quot;pinia-plugin-persistedstate&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./style.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"><span class="comment">//引入router</span></span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">&#x27;./router&#x27;</span></span><br><span class="line"><span class="keyword">import</span> i18n <span class="keyword">from</span> <span class="string">&#x27;./locales/i18n&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pinia = createPinia()</span><br><span class="line">pinia.use(piniaPluginPersistedstate)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = createApp(App)</span><br><span class="line">app.use(pinia).use(router).use(i18n).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>在要实现国际化的页面使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123; t(&#x27;main.home&#x27;) &#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; ref, getCurrentInstance &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; useI18n &#125; <span class="keyword">from</span> <span class="string">&#x27;vue-i18n&#x27;</span><span class="comment">//要在js中使用国际化</span></span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> &#123; proxy &#125; = getCurrentInstance();</span></span><br><span class="line"><span class="javascript"><span class="comment">// 改变语言</span></span></span><br><span class="line"><span class="javascript"><span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params">type</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 设置语言</span></span></span><br><span class="line"><span class="javascript">    proxy.$i18n.locale = type;</span></span><br><span class="line"><span class="javascript">&#125;</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> &#123; t &#125; = useI18n()</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/567.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/567.html" class="post-title-link" itemprop="url">Vue3项目实现页面全屏</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-02-03 05:11:53 / 修改时间：07:52:29" itemprop="dateCreated datePublished" datetime="2023-02-03T05:11:53+08:00">2023-02-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>这里说的页面全屏和Microsoft Edge浏览器的F11快捷键的效果是一样的，Vue项目可以通过<code>screenfull</code>插件来实现</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install screenfull --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h4><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230203052359371.png" alt="image-20230203052359371" style="zoom:67%;" />
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>在要实现页面全屏效果的页面引入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> screenfull <span class="keyword">from</span> <span class="string">&quot;screenfull&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>实现页面全屏或退出全屏都直接调用下面函数即可</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fullScreenOrNot = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    screenfull.toggle();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/566.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/566.html" class="post-title-link" itemprop="url">创建uni-app项目</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-02-01 16:59:53" itemprop="dateCreated datePublished" datetime="2023-02-01T16:59:53+08:00">2023-02-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-02-02 01:55:39" itemprop="dateModified" datetime="2023-02-02T01:55:39+08:00">2023-02-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p><code>uni-app</code> 是一个使用<a target="_blank" rel="noopener external nofollow noreferrer" href="https://vuejs.org/">Vue.js</a>开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、Web（响应式）、以及各种小程序（微信/支付宝/百度/头条/飞书/QQ/快手/钉钉/淘宝）、快应用等多个平台</p>
+<h3 id="创建过程"><a href="#创建过程" class="headerlink" title="创建过程"></a>创建过程</h3><h4 id="安装开发工具"><a href="#安装开发工具" class="headerlink" title="安装开发工具"></a>安装开发工具</h4><p>开发<code>uni-app</code>项目指定的开发工具是<code>HBuilderX</code>，下载地址为：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.dcloud.io/hbuilderx.html">HBuilderX-高效极客技巧 (dcloud.io)</a></p>
+<h4 id="开始创建"><a href="#开始创建" class="headerlink" title="开始创建"></a>开始创建</h4><p>文件&gt;&gt;路径&gt;&gt;项目</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230201170544122.png" alt="image-20230201170544122"></p>
+<p>一般直接选择默认模板进行开发</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230201170943483.png" alt="image-20230201170943483"></p>
+<h3 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h3><h4 id="运行到浏览器"><a href="#运行到浏览器" class="headerlink" title="运行到浏览器"></a>运行到浏览器</h4><p>可以运行到电脑上安装的浏览器，也可以运行到HBuilderX内置的浏览器（推荐使用），第一次运行会自动安装一些插件</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230201171333480.png" alt="image-20230201171333480"></p>
+<h4 id="运行到小程序"><a href="#运行到小程序" class="headerlink" title="运行到小程序"></a>运行到小程序</h4><p>我这里说的小程序是微信小程序，需要先安装微信开发者工具，安装地址为：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">微信开发者工具下载地址与更新日志 | 微信开放文档 (qq.com)</a>，安装好后打开服务端口（设置&gt;&gt;安全设置）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230201172103045.png" alt="image-20230201172103045"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230201172127419.png" alt="image-20230201172127419"></p>
+<p>在HBuilderX中运行到微信开发者工具，会让我们配置微信开发者工具的安装路径，然后会自动打开微信开发者工具即可查看效果</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230201171908853.png" alt="image-20230201171908853"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/565.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/565.html" class="post-title-link" itemprop="url">Vue项目使用右滑拼图验证</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2023-01-30 22:24:13 / 修改时间：23:03:03" itemprop="dateCreated datePublished" datetime="2023-01-30T22:24:13+08:00">2023-01-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>和输入验证码相比，使用右滑拼图验证对用户更友好</p>
+<p>右滑拼图验证插件的GitHub仓库地址为：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/javaLuo/vue-puzzle-vcode">javaLuo/vue-puzzle-vcode: vue 拼图人机验证 右滑拼图验证 (github.com)</a></p>
+<p>Vue2和Vue3的使用文档都有，根据自己的需求选择，我使用的是Vue3</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vue3-puzzle-vcode --save</span><br></pre></td></tr></table></figure>
+
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>下面是一个最简单的例子，使用的图片是内置的</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;onShow&quot;</span>&gt;</span>开始验证<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Vcode</span> <span class="attr">:show</span>=<span class="string">&quot;isShow&quot;</span> @<span class="attr">success</span>=<span class="string">&quot;onSuccess&quot;</span> @<span class="attr">close</span>=<span class="string">&quot;onClose&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">import</span> Vcode <span class="keyword">from</span> <span class="string">&quot;vue3-puzzle-vcode&quot;</span>;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> isShow = ref(<span class="literal">false</span>);</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> onShow = <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">    isShow.value = <span class="literal">true</span>;</span></span><br><span class="line"><span class="javascript">  &#125;;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> onClose = <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">    isShow.value = <span class="literal">false</span>;</span></span><br><span class="line"><span class="javascript">  &#125;;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> onSuccess = <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">    onClose(); <span class="comment">// 验证成功，需要手动关闭模态框</span></span></span><br><span class="line"><span class="javascript">  &#125;;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>一般直接用内置的图片就行了，如果要自定义图片，示例代码如下</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Vcode</span> <span class="attr">:imgs</span>=<span class="string">&quot;imgs&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Vcode <span class="keyword">from</span> <span class="string">&quot;vue3-puzzle-vcode&quot;</span>;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Img1 <span class="keyword">from</span> <span class="string">&quot;~/assets/img1.png&quot;</span>;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> Img2 <span class="keyword">from</span> <span class="string">&quot;~/assets/img2.png&quot;</span>;</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> imgs = [Img1, Img2];</span></span><br><span class="line"><span class="javascript"></span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面自定义的图片是本地的图片，还可以使用网络图片</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> imgs = [<span class="string">&#x27;https://image.zoutl.cn/1.jpeg&#x27;</span>, <span class="string">&#x27;https://image.zoutl.cn/2.jpeg&#x27;</span>];</span><br></pre></td></tr></table></figure>
+
+<p>效果截图</p>
+<img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20230130230243751.png" alt="image-20230130230243751" style="zoom: 50%;" />
+
+<h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><table>
+<thead>
+<tr>
+<th align="center">字段</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">show</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">是否显示验证码弹框</td>
+</tr>
+<tr>
+<td align="center">canvasWidth</td>
+<td align="center">Number</td>
+<td align="center">310</td>
+<td align="center">主图区域的宽度，单位 px</td>
+</tr>
+<tr>
+<td align="center">canvasHeight</td>
+<td align="center">Number</td>
+<td align="center">160</td>
+<td align="center">主图区域的高度，单位 px</td>
+</tr>
+<tr>
+<td align="center">puzzleScale</td>
+<td align="center">Number</td>
+<td align="center">1</td>
+<td align="center">拼图块(小的拼图)的大小比例，0.2 ～ 2 ，数字越大，拼图越大</td>
+</tr>
+<tr>
+<td align="center">sliderSize</td>
+<td align="center">Number</td>
+<td align="center">50</td>
+<td align="center">左下角用户拖动的那个滑块的尺寸，单位 px</td>
+</tr>
+<tr>
+<td align="center">range</td>
+<td align="center">Number</td>
+<td align="center">10</td>
+<td align="center">判断成功的误差范围，单位 px, 滑动的距离和拼图的距离小于等于此值时，会判定重合</td>
+</tr>
+<tr>
+<td align="center">imgs</td>
+<td align="center">Array</td>
+<td align="center">null</td>
+<td align="center">自定义图片，见下方例子</td>
+</tr>
+<tr>
+<td align="center">successText</td>
+<td align="center">String</td>
+<td align="center">“验证通过！”</td>
+<td align="center">验证成功时的提示文字</td>
+</tr>
+<tr>
+<td align="center">failText</td>
+<td align="center">String</td>
+<td align="center">“验证失败，请重试”</td>
+<td align="center">验证失败时的提示文字</td>
+</tr>
+<tr>
+<td align="center">sliderText</td>
+<td align="center">String</td>
+<td align="center">“拖动滑块完成拼图”</td>
+<td align="center">下方滑动条里的文字</td>
+</tr>
+</tbody></table>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><table>
+<thead>
+<tr>
+<th align="center">事件名</th>
+<th align="center">返回值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">success</td>
+<td align="center">偏差值</td>
+<td align="center">验证通过时会触发，返回值是用户移动的距离跟目标距离的偏差值 px</td>
+</tr>
+<tr>
+<td align="center">fail</td>
+<td align="center">偏差值</td>
+<td align="center">验证失败时会触发，返回值同上</td>
+</tr>
+<tr>
+<td align="center">close</td>
+<td align="center">null</td>
+<td align="center">用户点击遮罩层的回调</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/564.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/564.html" class="post-title-link" itemprop="url">Pinia的基本使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-01-23 21:30:04" itemprop="dateCreated datePublished" datetime="2023-01-23T21:30:04+08:00">2023-01-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-30 22:59:39" itemprop="dateModified" datetime="2023-01-30T22:59:39+08:00">2023-01-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Pinia是Vue的专属状态管理库，它允许我们跨组件或页面共享状态，官方文档链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pinia.vuejs.org/zh/">Home | Pinia (vuejs.org)</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>我使用的Vue.js版本是3.2.45（也就是Vue3），并且项目使用Vite4创建的，Vue3安装Pinia只需要执行下面的命令即可，Vue2则还需要安装一个插件，这里不讨论，可以去查看官方文档：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pinia.vuejs.org/zh/getting-started.html#installation">安装 | Pinia (vuejs.org)</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install pinia</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="创建实例传递给应用"><a href="#创建实例传递给应用" class="headerlink" title="创建实例传递给应用"></a>创建实例传递给应用</h3><p>创建一个pinia实例（根store）并将其传递给应用</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createPinia &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./style.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pinia = createPinia()</span><br><span class="line"></span><br><span class="line">createApp(App).use(pinia).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="定义store"><a href="#定义store" class="headerlink" title="定义store"></a>定义store</h3><p>在<code>/src/stores</code>目录下创建一个<code>index.ts</code>文件</p>
+<p><code>useStore</code>是返回值的名称，<code>main</code>是名字id，都可以随意命名，但是返回值的名称最好使用store的名字，同时以 <code>use</code> 开头且以 <code>Store</code> 结尾(比如 <code>useUserStore</code>，<code>useCartStore</code>，<code>useProductStore</code>)</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">   	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><h4 id="定义state"><a href="#定义state" class="headerlink" title="定义state"></a>定义state</h4><p>state是store的核心，用于跨组件或页面共享状态</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h4 id="访问state"><a href="#访问state" class="headerlink" title="访问state"></a>访问state</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span> <span class="attr">lang</span>=<span class="string">&quot;ts&quot;</span>&gt;</span><span class="javascript"></span></span><br><span class="line"><span class="javascript"><span class="comment">// 引入useStore</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; useStore &#125; <span class="keyword">from</span> <span class="string">&quot;./stores/index&quot;</span>;</span></span><br><span class="line"><span class="javascript"><span class="comment">// 获得useStore的返回值</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> store = useStore();</span></span><br><span class="line"><span class="javascript"><span class="comment">// store.count自加1</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> addCount = <span class="function">() =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">  store.count++;</span></span><br><span class="line"><span class="javascript">&#125;;</span></span><br><span class="line"><span class="javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; store.count &#125;&#125;<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;addCount&quot;</span>&gt;</span>+1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"><span class="selector-tag">h1</span> &#123;</span></span><br><span class="line"><span class="css">  <span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="重置state"><a href="#重置state" class="headerlink" title="重置state"></a>重置state</h4><p>通过<code>store.$reset()</code>可以重置state的值</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 重置</span></span><br><span class="line"><span class="keyword">const</span> reset = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  store.$reset();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="变更state"><a href="#变更state" class="headerlink" title="变更state"></a>变更state</h4><p>通过<code>store.$patch</code>修改state（一般用于修改多个数据），只修改一个可以直接修改</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// store.$patch修改成123</span></span><br><span class="line"><span class="keyword">const</span> modify = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">  store.$patch(<span class="function"><span class="params">state</span> =&gt;</span> &#123;</span><br><span class="line">    state.count = <span class="number">123</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 直接修改成123</span></span><br><span class="line"><span class="keyword">const</span> modify2 = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">  store.count = <span class="number">123</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="替换state"><a href="#替换state" class="headerlink" title="替换state"></a>替换state</h4><p>替换和变更的区别就是，替换用于<font color="#dd0000">修改全部数据</font>，而变更是修改一个或多个数据</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 替换</span></span><br><span class="line"><span class="keyword">const</span> replace = (): <span class="function"><span class="params">void</span> =&gt;</span> &#123;</span><br><span class="line">  store.$state = &#123;</span><br><span class="line">    <span class="attr">count</span>: <span class="number">666</span>,</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;jack&quot;</span>,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="订阅state"><a href="#订阅state" class="headerlink" title="订阅state"></a>订阅state</h4><p>通过<code>store.$subscribe</code>方法订阅state后，一旦state的数据发生变更，我们可以对变更后的数据进行一些操作，例如可以对数据进行持久化，不然一刷新页面数据就重置了</p>
+<p>mutation返回值包含了操作的状态、state改变前的值、state改变后的值……</p>
+<p>state返回值则是修改后的state的数据</p>
+<p>上面两个返回值的名称可以随便写</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 订阅</span></span><br><span class="line">store.$subscribe(<span class="function">(<span class="params">mutation, state</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(mutation);</span><br><span class="line">  <span class="built_in">console</span>.log(state);</span><br><span class="line">  <span class="built_in">window</span>.localStorage.setItem(<span class="string">&quot;useStoreState&quot;</span>, <span class="built_in">JSON</span>.stringify(state));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Getter"><a href="#Getter" class="headerlink" title="Getter"></a>Getter</h3><p>Getter完全等同于store的state的<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cn.vuejs.org/guide/essentials/computed.html">计算值</a>，接收 <code>state</code> 作为第一个参数，对state的数据进行统一处理，下面的<code>doubleCount</code>是<code>对state.count乘以2</code>，直接通过<code>store.doubleCount()</code>调用</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;tom&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">getters</span>: &#123;</span><br><span class="line">        <span class="comment">// 计算state.count * 2</span></span><br><span class="line">        <span class="attr">doubleCount</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> state.count * <span class="number">2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>调用同一个store的getter可以使用<code>this</code>关键词</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;tom&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">getters</span>: &#123;</span><br><span class="line">        <span class="comment">// 计算state.count * 2</span></span><br><span class="line">        <span class="attr">doubleCount</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> state.count * <span class="number">2</span>,</span><br><span class="line">        <span class="comment">// 调用同一个store的getter</span></span><br><span class="line">        doublePlusOne(): <span class="built_in">number</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">this</span>.doubleCount + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Action"><a href="#Action" class="headerlink" title="Action"></a>Action</h3><p>Action相当于组件中的method，在组件中直接通过<code>store.increment()</code>进行调用</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;tom&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">getters</span>: &#123;</span><br><span class="line">        <span class="comment">// 计算state.count * 2</span></span><br><span class="line">        <span class="attr">doubleCount</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> state.count * <span class="number">2</span>,</span><br><span class="line">        <span class="comment">// 调用同一个store的getter</span></span><br><span class="line">        doublePlusOne(): <span class="built_in">number</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">this</span>.doubleCount + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">actions</span>: &#123;</span><br><span class="line">        <span class="function"><span class="title">increment</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">            <span class="built_in">this</span>.count++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h3><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><p>state改变后，一旦刷新页面后就恢复默认值了，如果我们需要保留修改后的state，那么就需要将state持久化了，持久化的方法有两个：</p>
+<ol>
+<li>使用<code>pinia-plugin-persist</code>插件，<font color="#dd0000">建议使用</font></li>
+<li>通过订阅state将每次改变后的数据通过<code>localStorage</code>或者<code>sessionStorage</code>持久化到本地</li>
+</ol>
+<h4 id="使用插件"><a href="#使用插件" class="headerlink" title="使用插件"></a>使用插件</h4><h5 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h5><p>使用下面命令安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i pinia-plugin-persistedstate</span><br></pre></td></tr></table></figure>
+
+<h5 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h5><p>在<code>main.ts</code>中全局引入</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createPinia &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"><span class="keyword">import</span> piniaPluginPersistedstate <span class="keyword">from</span> <span class="string">&quot;pinia-plugin-persistedstate&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;./style.css&#x27;</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> pinia = createPinia()</span><br><span class="line">pinia.use(piniaPluginPersistedstate)</span><br><span class="line"></span><br><span class="line">createApp(App).use(pinia).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h5><p>在要持久化的store中加上persist</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: <span class="number">1</span>,</span><br><span class="line">            <span class="attr">name</span>: <span class="string">&#x27;mary&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">persist</span>: &#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&#x27;useStore&#x27;</span>,</span><br><span class="line">        <span class="attr">storage</span>: sessionStorage,</span><br><span class="line">        <span class="attr">paths</span>: [<span class="string">&#x27;count&#x27;</span>, <span class="string">&#x27;name&#x27;</span>]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>参数说明如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">参数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">key</td>
+<td align="center">自定义存储的key，默认是<code>store.$id</code></td>
+</tr>
+<tr>
+<td align="center">storage</td>
+<td align="center">存储的类型：<code>sessionStorage</code>或<code>localStorage</code>，默认是<code>sessionStorage</code></td>
+</tr>
+<tr>
+<td align="center">paths</td>
+<td align="center">要持久化的数据，state中的字段名，默认是全部</td>
+</tr>
+</tbody></table>
+<h4 id="通过订阅state"><a href="#通过订阅state" class="headerlink" title="通过订阅state"></a>通过订阅state</h4><p>首先订阅state，然后将数据放到<code>localStorage</code>或<code>sessionStorage</code>中</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 订阅</span></span><br><span class="line">store.$subscribe(<span class="function">(<span class="params">mutation, state</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(mutation);</span><br><span class="line">  <span class="built_in">console</span>.log(state);</span><br><span class="line">  <span class="built_in">window</span>.localStorage.setItem(<span class="string">&quot;useStoreState&quot;</span>, <span class="built_in">JSON</span>.stringify(state));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>需要持久化哪个数据就从本地存储的state中获取它，不然就是默认值</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineStore &#125; <span class="keyword">from</span> <span class="string">&quot;pinia&quot;</span></span><br><span class="line"><span class="comment">// 获取本地存储的useStoreState,如果没有就设置默认值</span></span><br><span class="line"><span class="keyword">const</span> json: <span class="built_in">string</span> = <span class="built_in">window</span>.localStorage.getItem(<span class="string">&quot;useStoreState&quot;</span>) || <span class="string">&#x27;&#123;&quot;count&quot;:1,&quot;name&quot;:&quot;tom&quot;&#125;&#x27;</span></span><br><span class="line"><span class="comment">// 解析</span></span><br><span class="line"><span class="keyword">const</span> obj: <span class="built_in">any</span> = <span class="built_in">JSON</span>.parse(json)</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> useStore = defineStore(<span class="string">&#x27;main&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">state</span>: <span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> &#123;</span><br><span class="line">            <span class="attr">count</span>: obj.count,</span><br><span class="line">            <span class="attr">name</span>: obj.name</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">getters</span>: &#123;</span><br><span class="line">        <span class="comment">// 计算state.count * 2</span></span><br><span class="line">        <span class="attr">doubleCount</span>: <span class="function">(<span class="params">state</span>) =&gt;</span> state.count * <span class="number">2</span>,</span><br><span class="line">        <span class="comment">// 调用同一个store的getter</span></span><br><span class="line">        doublePlusOne(): <span class="built_in">number</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">this</span>.doubleCount + <span class="number">1</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">actions</span>: &#123;</span><br><span class="line">        <span class="function"><span class="title">increment</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">            <span class="built_in">this</span>.count++</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/">59</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
     }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3265865_vc1sierqa1.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeDao's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">LeDao's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/573.html" title="使用Apifox Helper插件自动生成接口文档"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/573.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Apifox Helper插件自动生成接口文档"></a></div><div class="recent-post-info"><a class="article-title" href="/573.html" title="使用Apifox Helper插件自动生成接口文档">使用Apifox Helper插件自动生成接口文档</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-19T01:43:41.000Z" title="发表于 2023-02-19 09:43:41">2023-02-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a></span></div><div class="content">介绍Apifox Helper是Apifox官方开发的一个IntelliJ IDEA插件，可以根据Controller层的接口方法快速在Apifox中自动生成接口文档，以进行接口测试
-Apifox的官网地址：Apifox - API 文档、调试、Mock、测试一体化协作平台
-使用文档：帮助中心 | Apifox 使用文档
-使用生成API访问令牌根据下图生成一个访问令牌，该令牌只有在创建时才能看到，所以要保管好，不然忘记了就只能再重新新建一个
-
-获取项目ID打开新建的项目，根据下图获取项目的ID
-
-配置Apifox Helper打开IntelliJ IDEA的设置后，根据下图配置Apifox Helper，模块项目ID配置可以有多个
-
-生成接口文档
-生成一个类的某个方法的文档
-
-
-生成一个类的全部方法的文档
-
-
-生成多个类的全部方法的文档
-
-
-
-配置Apifox请求的前置URL打开项目后，根据下图配置请求的前置URL，这样每次请求都会自动加上了
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/572.html" title="使用npkill查找和清理node_modules包"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/572.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用npkill查找和清理node_modules包"></a></div><div class="recent-post-info"><a class="article-title" href="/572.html" title="使用npkill查找和清理node_modules包">使用npkill查找和清理node_modules包</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-16T04:26:56.000Z" title="发表于 2023-02-16 12:26:56">2023-02-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">介绍进行前端开发时，电脑上会有很多node_modules包，会占用很多磁盘空间，我们可以把一些暂时不会打开的项目的node_modules包删除掉，等到要运行项目的时候再安装回来，如果我们一个个手动删除的话，会很麻烦
-npkill可以很好的解决上述问题，不仅可以快速找到某个文件夹下的全部node_modules包，还可以根据路径、大小和上次修改时间进行排序，管理起来更加方便
-安装打开cmd然后执行下面命令即可完成安装，不安装也可以使用npkill
-1npm i -g npkill
-
-使用cmd进入一个文件夹后，执行下面命令即可搜索该文件夹下的全部node_modules包，方向键的上下可以选择node_modules包，用空格键删除，直接删除不会有确认提示
-
-不安装使用1npx npkill
-
-安装后使用1npkill
-
-参数一般只用到-s参数根据size进行排序
-
-
-
-参数
-说明
-默认
-
-
-
--c, --bg-color
-更改行突出显示颜色，可用颜色有: blue,cyan,magenta,white,red ,yellow
-blue
-
-
--d, --directory
-设置要开始 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/571.html" title="IntelliJ IDEA使用MyBatisX插件生成基础代码"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/571.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="IntelliJ IDEA使用MyBatisX插件生成基础代码"></a></div><div class="recent-post-info"><a class="article-title" href="/571.html" title="IntelliJ IDEA使用MyBatisX插件生成基础代码">IntelliJ IDEA使用MyBatisX插件生成基础代码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-10T11:31:03.000Z" title="发表于 2023-02-10 19:31:03">2023-02-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">开发工具</a></span></div><div class="content">介绍使用MyBatis-Plus开发时，一般开发的顺序都是：新建数据库表、实体类、Mapper接口、Mapper.xml文件、Service接口、Service接口实现类，然后才进行相应业务的开发工作
-上面的操作都是重复性的，如果已经熟悉了MyBatis-Plus的基本使用，经常做这些重复性的工作对我们没有什么好处，如果这些操作可以自动完成，就可以提高工作效率了
-MyBatis-Plus官方出了一个名叫MyBatisX的插件，可以有效解决上述问题，我们只需要自己手动在数据库中新建一张表，然后就可以使用插件自动生成实体类、Mapper接口、Mapper.xml文件、Service接口、Service接口实现类的基础模板了
-使用安装直接到IntelliJ IDEA的插件市场安装即可
-连接数据库需要在IntelliJ IDEA中配置数据源，具体操作步骤查看博客：IntelliJ IDEA 连接 MySQL 数据库 | LeDao’s Blog (zoutl.cn)
-开始生成右键点击对应的数据库表，然后选择MybatisX-Generator
-
-然后配置生成代码的存放位置，图片下的表格是参数的 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/570.html" title="Vim常用命令或快捷键"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/570.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vim常用命令或快捷键"></a></div><div class="recent-post-info"><a class="article-title" href="/570.html" title="Vim常用命令或快捷键">Vim常用命令或快捷键</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-05T01:24:45.000Z" title="发表于 2023-02-05 09:24:45">2023-02-05</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">介绍Vim是Vi的升级版本，可以当作Vi来使用，完全替代Vi，也就是说：不要使用Vi了，而是使用它的升级版本Vim
-下面只列举了一些我常用的命令或快捷键，并不是列举全部，其它没有列出的命令或快捷键如果用到了就在下方放出
-常用命令说明我把Vim命令的类型分为命令模式、输入模式和底线命令模式，vim 文件名打开文件后就是命令模式，在命令模式下按下i键就切换到了输入模式，在命令模式下输入:就切换到了底线命令模式
-命令模式vim 文件名打开文件后就是命令模式
-
-
-
-命令或快捷键
-说明
-
-
-
-:
-切换到底线命令模式
-
-
-i
-切换到输入模式
-
-
-x
-删除当前光标所在处的字符
-
-
-dd
-删除光标所在行
-
-
-/关键词
-向下搜索关键词，按n查找下一个搜索结果，按N则查找上一个
-
-
-?关键词
-向上搜索关键词，按n查找上一个搜索结果，按N则查找下一个，和上面相反
-
-
-v
-切换到可视化模式，一般用于删除一段文本
-
-
-r
-切换到单字符替换模式，用于替换一个字符
-
-
-R
-切换到多字符替换模式，用于替换多个字符
-
-
-输入模式在命令模式下，按下i键就切换到了输入模式，输入模式没有什么好说的，就和平时在Windows系 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/569.html" title="在CentOS7系统中使用Nginx部署Vue项目"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/569.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在CentOS7系统中使用Nginx部署Vue项目"></a></div><div class="recent-post-info"><a class="article-title" href="/569.html" title="在CentOS7系统中使用Nginx部署Vue项目">在CentOS7系统中使用Nginx部署Vue项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-03T19:49:01.000Z" title="发表于 2023-02-04 03:49:01">2023-02-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">打包项目使用下面命令将Vue项目打包，会生成一个名为dist的文件夹，然后将它上传到CentOS7系统中，也可以重命名这个文件夹以作区分
-1npm run build
-
-修改Nginx配置在配置文件中加入下面代码，我的配置文件路径为/etc/nginx/conf.d/default.conf，如果是部署到云服务器需要在安全组或防火墙中开放端口，不然无法访问
-123456789server &#123;   listen       8081; #访问的端口   location / &#123;      root /home/project/vue/project-template; #要部署的Vue项目存放的位置      index  index.html index.htm; #首页文件      try_files $uri $uri/ /index.html; #防止刷新后自动跳到自带404页面   &#125;&#125;
-
-重新加载Nginx配置文件首先使用下面命令测试 Nginx 配置文件的语法和结构是否正确，而不会加载或应用这些配置，如果配置文件中存在语法错误或其他 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/568.html" title="Vue3项目使用i18n实现国际化"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/568.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue3项目使用i18n实现国际化"></a></div><div class="recent-post-info"><a class="article-title" href="/568.html" title="Vue3项目使用i18n实现国际化">Vue3项目使用i18n实现国际化</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-02T21:25:27.000Z" title="发表于 2023-02-03 05:25:27">2023-02-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">介绍和使用浏览器的全文翻译（机器翻译）相比，使用i18n实现国际化（人工翻译）应该会更准确，但是挺麻烦的，因为每一个组件的文字都需要翻译和配置
-实现过程安装1npm install vue-i18n@next
-
-新建语言配置文件在src目录下新建一个名为locales的目录，在这个目录下新建一个名为lang的目录、i18n.js和index.js文件，最后在lang目录下新建en.js和zh.js文件
-
-en.js的内容如下：
-1234567891011121314151617181920212223242526export default &#123;    menu: &#123;        name: &#x27;Background&#x27;,        home: &#x27;Home&#x27;,        userManage: &#x27;Manage User&#x27;,        announcementManage: &#x27;Manage Notice&#x27;,        typeManage: &#x27;Manage Type& ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/567.html" title="Vue3项目实现页面全屏"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/567.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue3项目实现页面全屏"></a></div><div class="recent-post-info"><a class="article-title" href="/567.html" title="Vue3项目实现页面全屏">Vue3项目实现页面全屏</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-02T21:11:53.000Z" title="发表于 2023-02-03 05:11:53">2023-02-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">介绍这里说的页面全屏和Microsoft Edge浏览器的F11快捷键的效果是一样的，Vue项目可以通过screenfull插件来实现
-实现过程安装1npm install screenfull --save
-
-常用方法
-
-使用在要实现页面全屏效果的页面引入
-1import screenfull from &quot;screenfull&quot;
-
-实现页面全屏或退出全屏都直接调用下面函数即可
-123const fullScreenOrNot = () =&gt; &#123;    screenfull.toggle();&#125;
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/566.html" title="创建uni-app项目"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/566.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="创建uni-app项目"></a></div><div class="recent-post-info"><a class="article-title" href="/566.html" title="创建uni-app项目">创建uni-app项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-02-01T08:59:53.000Z" title="发表于 2023-02-01 16:59:53">2023-02-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">介绍uni-app 是一个使用Vue.js开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、Web（响应式）、以及各种小程序（微信/支付宝/百度/头条/飞书/QQ/快手/钉钉/淘宝）、快应用等多个平台
-创建过程安装开发工具开发uni-app项目指定的开发工具是HBuilderX，下载地址为：HBuilderX-高效极客技巧 (dcloud.io)
-开始创建文件&gt;&gt;路径&gt;&gt;项目
-
-一般直接选择默认模板进行开发
-
-运行项目运行到浏览器可以运行到电脑上安装的浏览器，也可以运行到HBuilderX内置的浏览器（推荐使用），第一次运行会自动安装一些插件
-
-运行到小程序我这里说的小程序是微信小程序，需要先安装微信开发者工具，安装地址为：微信开发者工具下载地址与更新日志 | 微信开放文档 (qq.com)，安装好后打开服务端口（设置&gt;&gt;安全设置）
-
-
-在HBuilderX中运行到微信开发者工具，会让我们配置微信开发者工具的安装路径，然后会自动打开微信开发者工具即可查看效果
-
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/565.html" title="Vue项目使用右滑拼图验证"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/565.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Vue项目使用右滑拼图验证"></a></div><div class="recent-post-info"><a class="article-title" href="/565.html" title="Vue项目使用右滑拼图验证">Vue项目使用右滑拼图验证</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-30T14:24:13.000Z" title="发表于 2023-01-30 22:24:13">2023-01-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">概述和输入验证码相比，使用右滑拼图验证对用户更友好
-右滑拼图验证插件的GitHub仓库地址为：javaLuo/vue-puzzle-vcode: vue 拼图人机验证 右滑拼图验证 (github.com)
-Vue2和Vue3的使用文档都有，根据自己的需求选择，我使用的是Vue3
-实现安装1npm install vue3-puzzle-vcode --save
-
-使用下面是一个最简单的例子，使用的图片是内置的
-1234567891011121314151617181920212223&lt;template&gt;    &lt;button @click=&quot;onShow&quot;&gt;开始验证&lt;/button&gt;    &lt;Vcode :show=&quot;isShow&quot; @success=&quot;onSuccess&quot; @close=&quot;onClose&quot; /&gt;&lt;/template&gt;&lt;script setup&gt;  import &#123; ref &#125; from &quot ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/564.html" title="Pinia的基本使用"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/564.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Pinia的基本使用"></a></div><div class="recent-post-info"><a class="article-title" href="/564.html" title="Pinia的基本使用">Pinia的基本使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-01-23T13:30:04.000Z" title="发表于 2023-01-23 21:30:04">2023-01-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">介绍Pinia是Vue的专属状态管理库，它允许我们跨组件或页面共享状态，官方文档链接：Home | Pinia (vuejs.org)
-安装我使用的Vue.js版本是3.2.45（也就是Vue3），并且项目使用Vite4创建的，Vue3安装Pinia只需要执行下面的命令即可，Vue2则还需要安装一个插件，这里不讨论，可以去查看官方文档：安装 | Pinia (vuejs.org)
-1npm install pinia
-
-使用创建实例传递给应用创建一个pinia实例（根store）并将其传递给应用
-12345678import &#123; createApp &#125; from &#x27;vue&#x27;import &#123; createPinia &#125; from &quot;pinia&quot;import &#x27;./style.css&#x27;import App from &#x27;./App.vue&#x27;const pinia = createPinia()createApp(App).use(pinia).mount(&#x27;#ap ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/#content-inner">59</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LeDao</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/a6678696"><i></i><span>To My GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">接Java毕业设计和课设，便宜靠谱，需要的加Q：3519577180</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/590.html" title="Nginx重新部署SSL证书"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/590.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx重新部署SSL证书"/></a><div class="content"><a class="title" href="/590.html" title="Nginx重新部署SSL证书">Nginx重新部署SSL证书</a><time datetime="2024-10-07T16:39:44.000Z" title="发表于 2024-10-08 00:39:44">2024-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/589.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"/></a><div class="content"><a class="title" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法">VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</a><time datetime="2024-03-09T13:43:26.000Z" title="发表于 2024-03-09 21:43:26">2024-03-09</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">590</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-07-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">258.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-01T18:48:08.040Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Algolia</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/fancybox.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('https://image.zoutl.cn/hexo-blog/file/source/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
-  }
-}
-
-function panguInit () {
-  if (true){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
-  }
-}
-
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://image.zoutl.cn/hexo-blog/file/source/algoliasearch-lite.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
-  fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      if (true) {
-        const from = '出自 ' + data.from
-        const sub = []
-        sub.unshift(data.hitokoto, from)
-        window.typed = new Typed('#subtitle', {
-          strings: sub,
-          startDelay: 300,
-          typeSpeed: 150,
-          loop: true,
-          backSpeed: 50,
-        })
-      } else {
-        document.getElementById('subtitle').innerHTML = data.hitokoto
-      }
-    })
-}
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://image.zoutl.cn/hexo-blog/file/source/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}
-</script></div><script>window.addEventListener('load', () => {
-  const changeContent = (content) => {
-    if (content === '') return content
-
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
-    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
-    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
-    content = content.replace(/<[^>]+>/g,"") // remove html tag
-
-    if (content.length > 150) {
-      content = content.substring(0,150) + '...'
-    }
-    return content
-  }
-
-  const findTrueUrl = (array) => {
-    Promise.all(array.map(item =>
-      fetch(item.url).then(resp => resp.json()).then(data => {
-        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
-        if (data.user.login === 'utterances-bot') {
-          return urlArray.pop()
-        } else {
-          return urlArray.shift()
-        }
-      })
-    )).then(res => {
-        array = array.map((i,index)=> {
-          return {
-            ...i,
-            url: res[index]
-          }
-        })
-
-        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
-        generateHtml(array)
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
   }
+</script>
 
-  const getComment = () => {
-    fetch('https://api.github.com/repos/a6678696/a6678696.github.io/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
-      "headers": {
-        Accept: 'application/vnd.github.v3.html+json'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        const githubArray = data.map(item => {
-          return {
-            'avatar': item.user.avatar_url,
-            'content': changeContent(item.body_html),
-            'nick': item.user.login,
-            'url': item.issue_url,
-            'date': item.updated_at,
-            'githubUrl': item.html_url
-          }
-        })
-        findTrueUrl(githubArray)
-      }).catch(e => {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      })
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LeDao"
+      src="https://image.zoutl.cn/hexo-blog/images/logo.png">
+  <p class="site-author-name" itemprop="name">LeDao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">590</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/a6678696" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a6678696" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1203007469@qq.com" title="E-Mail → mailto:1203007469@qq.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LeDao</span>
+</div>
+<div>
+    <span style="text-align: left;display: inline-block;vertical-align: middle;">本网站由 </span>
+	<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src='https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png' style="height: 30px;vertical-align: middle;display: inline-block;"></a>
+	<span style="text-align: left;display: inline-block;vertical-align: middle;">提供CDN加速/云存储服务</span>
+</div>
+<div class="id111">
+    <span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a></span>
+	<img src='https://image.zoutl.cn/hexo-blog/images/beian.png' style="vertical-align: middle;display: inline-block;">
+	<span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,51,51' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
   }
+});
+</script>
 
-  const generateHtml = array => {
-    let result = ''
 
-    if (array.length) {
-      for (let i = 0; i < array.length; i++) {
-        result += '<div class=\'aside-list-item\'>'
 
-        if (true) {
-          const name = 'src'
-          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
-        }
 
-        result += `<div class='content'>
-        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
-        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
-        </div></div>`
-      }
-    } else {
-      result += '没有评论'
-    }
+  
 
-    let $dom = document.querySelector('#card-newest-comments .aside-list')
-    $dom.innerHTML= result
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    window.pjax && window.pjax.refresh($dom)
-  }
+  
 
-  const newestCommentInit = () => {
-    if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('github-newest-comments')
-      if (data) {
-        generateHtml(JSON.parse(data))
-      } else {
-        getComment()
-      }
-    }
-  }
 
-  newestCommentInit()
-  document.addEventListener('pjax:complete', newestCommentInit)
-})</script><script defer="defer" id="ribbon" src="https://image.zoutl.cn/hexo-blog/file/source/canvas-ribbon.min.js" size="222" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-POWERMODE.mobile = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script id="click-heart" src="https://image.zoutl.cn/hexo-blog/file/source/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</body>
+</html>

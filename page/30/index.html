@@ -1,593 +1,1755 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>LeDao's Blog</title><meta name="keywords" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js"><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.zoutl.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":6,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
 <meta property="og:title" content="LeDao&#39;s Blog">
 <meta property="og:url" content="https://blog.zoutl.cn/page/30/index.html">
 <meta property="og:site_name" content="LeDao&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
 <meta property="article:author" content="LeDao">
 <meta property="article:tag" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/page/30/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="fp2ohQruhOqzbyAh"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JZJWXGK1VV"></script><script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-JZJWXGK1VV');
-</script><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
-  source: {
-    justifiedGallery: {
-      js: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.js',
-      css: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'LeDao\'s Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2025-10-02 02:48:12'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+<link rel="canonical" href="https://blog.zoutl.cn/page/30/">
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+  <title>LeDao's Blog</title>
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">LeDao's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-项目">
+
+    <a href="/project/" rel="section"><i class="fa fa-paw fa-fw"></i>项目</a>
+
+  </li>
+        <li class="menu-item menu-item-友链">
+
+    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/a6678696" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
   
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/300.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/300.html" class="post-title-link" itemprop="url">Docker修改已创建容器的挂载目录</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-21 02:31:21" itemprop="dateCreated datePublished" datetime="2021-08-21T02:31:21+08:00">2021-08-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:53:43" itemprop="dateModified" datetime="2022-04-26T03:53:43+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>一般来说，都是创建容器时进行目录挂载，对于已经创建好的容器如果忘了挂载目录但是又想挂载目录</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ol>
+<li>提交这个容器为新的镜像，然后创建这个新镜像的容器同时进行目录挂载（此方式较简单）</li>
+<li>修改这个容器的配置文件</li>
+</ol>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="提交新镜像再创建容器"><a href="#提交新镜像再创建容器" class="headerlink" title="提交新镜像再创建容器"></a>提交新镜像再创建容器</h4><p>查看下面两篇博客即可实现修改已创建容器的挂载目录</p>
+<ol>
+<li><a href="/296.html">Docker提交运行时容器为镜像</a> ，将要挂载目录的已创建容器提交为本地新镜像</li>
+<li><a href="/299.html">Docker创建容器时目录挂载 </a>，创建容器时使用新镜像的镜像id顺便挂载目录</li>
+</ol>
+<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>停止Docker</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure>
+
+<p>配置文件路径</p>
+<p>/var/lib/docker/containers/[容器id]</p>
+<p>修改配置文件hostconfig.json，在”Binds”节点中增加挂载目录的关系，前面的<font color="#dd0000">/home/hData/</font>是宿主机目录，后面的<font color="#dd0000">/cData</font>是容器目录，如果是多个用英文逗号隔开</p>
+<p>单个目录例子：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Binds&quot;</span>:[<span class="string">&quot;/home/hData/:/cData&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>多个目录例子：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;Binds&quot;</span>:[<span class="string">&quot;/home/hData:/cData&quot;</span>,<span class="string">&quot;/home/hData2:/cData2&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件config.v2.json，在”MountPoints” 节点中增加挂载目录</p>
+<p>单个目录例子：（第一段代码是原始的，第二段代码是格式化过的，格式化后更好修改）</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;MountPoints&quot;</span>:&#123;<span class="attr">&quot;/cData&quot;</span>:&#123;<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData&quot;</span>,<span class="attr">&quot;Destination&quot;</span>:<span class="string">&quot;/cData&quot;</span>,<span class="attr">&quot;RW&quot;</span>:<span class="literal">true</span>,<span class="attr">&quot;Name&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Driver&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Propagation&quot;</span>:<span class="string">&quot;rprivate&quot;</span>,<span class="attr">&quot;Spec&quot;</span>:&#123;<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData/&quot;</span>,<span class="attr">&quot;Target&quot;</span>:<span class="string">&quot;/cData&quot;</span>&#125;,<span class="attr">&quot;SkipMountpointCreation&quot;</span>:<span class="literal">false</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;MountPoints&quot;</span>: &#123;</span><br><span class="line">	<span class="attr">&quot;/cData&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Destination&quot;</span>: <span class="string">&quot;/cData&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;RW&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">		<span class="attr">&quot;Name&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Driver&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Propagation&quot;</span>: <span class="string">&quot;rprivate&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Spec&quot;</span>: &#123;</span><br><span class="line">			<span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData/&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;Target&quot;</span>: <span class="string">&quot;/cData&quot;</span></span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="attr">&quot;SkipMountpointCreation&quot;</span>: <span class="literal">false</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>多个目录例子：（第一段代码是原始的，第二段代码是格式化过的，格式化后更好修改）</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;MountPoints&quot;</span>:&#123;<span class="attr">&quot;/cData&quot;</span>:&#123;<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData&quot;</span>,<span class="attr">&quot;Destination&quot;</span>:<span class="string">&quot;/cData&quot;</span>,<span class="attr">&quot;RW&quot;</span>:<span class="literal">true</span>,<span class="attr">&quot;Name&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Driver&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Propagation&quot;</span>:<span class="string">&quot;rprivate&quot;</span>,<span class="attr">&quot;Spec&quot;</span>:&#123;<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData&quot;</span>,<span class="attr">&quot;Target&quot;</span>:<span class="string">&quot;/cData&quot;</span>&#125;,<span class="attr">&quot;SkipMountpointCreation&quot;</span>:<span class="literal">false</span>&#125;,<span class="attr">&quot;/cData2&quot;</span>:&#123;<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData2&quot;</span>,<span class="attr">&quot;Destination&quot;</span>:<span class="string">&quot;/cData2&quot;</span>,<span class="attr">&quot;RW&quot;</span>:<span class="literal">true</span>,<span class="attr">&quot;Name&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Driver&quot;</span>:<span class="string">&quot;&quot;</span>,<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Propagation&quot;</span>:<span class="string">&quot;rprivate&quot;</span>,<span class="attr">&quot;Spec&quot;</span>:&#123;<span class="attr">&quot;Type&quot;</span>:<span class="string">&quot;bind&quot;</span>,<span class="attr">&quot;Source&quot;</span>:<span class="string">&quot;/home/hData2&quot;</span>,<span class="attr">&quot;Target&quot;</span>:<span class="string">&quot;/cData2&quot;</span>&#125;,<span class="attr">&quot;SkipMountpointCreation&quot;</span>:<span class="literal">false</span>&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;MountPoints&quot;</span>: &#123;</span><br><span class="line">	<span class="attr">&quot;/cData&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Destination&quot;</span>: <span class="string">&quot;/cData&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;RW&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">		<span class="attr">&quot;Name&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Driver&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Propagation&quot;</span>: <span class="string">&quot;rprivate&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Spec&quot;</span>: &#123;</span><br><span class="line">			<span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;Target&quot;</span>: <span class="string">&quot;/cData&quot;</span></span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="attr">&quot;SkipMountpointCreation&quot;</span>: <span class="literal">false</span></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="attr">&quot;/cData2&quot;</span>: &#123;</span><br><span class="line">		<span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData2&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Destination&quot;</span>: <span class="string">&quot;/cData2&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;RW&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">		<span class="attr">&quot;Name&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Driver&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Propagation&quot;</span>: <span class="string">&quot;rprivate&quot;</span>,</span><br><span class="line">		<span class="attr">&quot;Spec&quot;</span>: &#123;</span><br><span class="line">			<span class="attr">&quot;Type&quot;</span>: <span class="string">&quot;bind&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;Source&quot;</span>: <span class="string">&quot;/home/hData2&quot;</span>,</span><br><span class="line">			<span class="attr">&quot;Target&quot;</span>: <span class="string">&quot;/cData2&quot;</span></span><br><span class="line">		&#125;,</span><br><span class="line">		<span class="attr">&quot;SkipMountpointCreation&quot;</span>: <span class="literal">false</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>启动Docker</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<p>启动刚刚修改的容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start 容器id</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/299.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/299.html" class="post-title-link" itemprop="url">Docker创建容器时目录挂载</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-21 01:21:08" itemprop="dateCreated datePublished" datetime="2021-08-21T01:21:08+08:00">2021-08-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:53:45" itemprop="dateModified" datetime="2022-04-26T03:53:45+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样我们就可以实现宿主机和容器目录的双向自动同步</p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>Docker可以使用cp命令来实现数据传递，这种方式非常麻烦，通过容器目录挂载，能够轻松实现代码上传，配置修改，日志同步等需求</p>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><h4 id="单个目录"><a href="#单个目录" class="headerlink" title="单个目录"></a>单个目录</h4><p>拥有全部权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v  /宿主机目录:/容器目录 镜像名</span><br></pre></td></tr></table></figure>
+
+<p>挂载目录只读</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v  /宿主机目录:/容器目录:ro 镜像名</span><br></pre></td></tr></table></figure>
+
+<h4 id="多个目录"><a href="#多个目录" class="headerlink" title="多个目录"></a>多个目录</h4><p>拥有全部权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v /宿主机目录:/容器目录 -v /宿主机目录2:/容器目录2  镜像名</span><br></pre></td></tr></table></figure>
+
+<p>挂载目录只读</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v /宿主机目录:/容器目录:ro -v /宿主机目录2:/容器目录2:ro  镜像名</span><br></pre></td></tr></table></figure>
+
+<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p>同步的是多级目录，可能会出现权限不足的提示，这是因为Centos7中的安全模块selinux把权限禁掉了，我们需要在命令的后面添加<code>--privileged=true</code>来解决挂载的目录没有权限的问题</p>
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>一般来说，都是创建容器时进行目录挂载，对于已经创建好的容器如果忘了挂载目录但是又想挂载目录，方法有两种：①提交这个容器为新的镜像，然后创建这个新镜像的容器同时进行目录挂载（此方式较简单）②修改这个容器的配置文件</p>
+<p>具体步骤查看博客：<a href="https://blog.zoutl.cn/300.html">Docker修改已创建容器的挂载目录</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/298.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/298.html" class="post-title-link" itemprop="url">Docker推送镜像到阿里云</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-20 23:26:34" itemprop="dateCreated datePublished" datetime="2021-08-20T23:26:34+08:00">2021-08-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:53:49" itemprop="dateModified" datetime="2022-04-26T03:53:49+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="进入阿里云镜像控制台"><a href="#进入阿里云镜像控制台" class="headerlink" title="进入阿里云镜像控制台"></a>进入阿里云镜像控制台</h3><p>控制台地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cr.console.aliyun.com/">https://cr.console.aliyun.com</a> ，登录</p>
+<h3 id="创建命令空间"><a href="#创建命令空间" class="headerlink" title="创建命令空间"></a>创建命令空间</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232121.jpg"></p>
+<h3 id="创建镜像仓库"><a href="#创建镜像仓库" class="headerlink" title="创建镜像仓库"></a>创建镜像仓库</h3><h4 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232151.jpg"></p>
+<h4 id="填写仓库信息"><a href="#填写仓库信息" class="headerlink" title="填写仓库信息"></a>填写仓库信息</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232215.jpg"></p>
+<h4 id="选择本地仓库"><a href="#选择本地仓库" class="headerlink" title="选择本地仓库"></a>选择本地仓库</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232235.jpg"></p>
+<h4 id="阿里云提供的命令"><a href="#阿里云提供的命令" class="headerlink" title="阿里云提供的命令"></a>阿里云提供的命令</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20232417.jpg"></p>
+<h3 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h3><p>登录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login --username=用户名 registry.cn-hangzhou.aliyuncs.com</span><br></pre></td></tr></table></figure>
+
+<p>创建一个阿里云专用镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag 要推送的镜像id registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[镜像版本号]</span><br></pre></td></tr></table></figure>
+
+<p>下图中版本号为1.1的就是刚刚创建的</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20001143.jpg"></p>
+<p>推送</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[镜像版本号]</span><br></pre></td></tr></table></figure>
+
+<p>查看阿里云的镜像仓库中成功推送的镜像</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20001002.jpg"></p>
+<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[阿里云的镜像版本号]</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20001943.jpg"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/297.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/297.html" class="post-title-link" itemprop="url">Docker推送镜像到hub服务器</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-20 20:56:12" itemprop="dateCreated datePublished" datetime="2021-08-20T20:56:12+08:00">2021-08-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:53:52" itemprop="dateModified" datetime="2022-04-26T03:53:52+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="注册Docker账号"><a href="#注册Docker账号" class="headerlink" title="注册Docker账号"></a>注册Docker账号</h3><p>在Docker的hub官网注册，官网地址为：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://hub.docker.com/">https://hub.docker.com/</a> ，注册后记住用户名和密码</p>
+<h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>输入登录命令，在输入自己的用户名和密码即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login</span><br></pre></td></tr></table></figure>
+
+<h3 id="推送镜像"><a href="#推送镜像" class="headerlink" title="推送镜像"></a>推送镜像</h3><p>推送命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push Docker用户名/新镜像名称:版本号</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20211111.jpg"></p>
+<h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><p>在Docker的hub官网登录后即可看到刚刚推送的镜像</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20212908.jpg"></p>
+<h3 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h3><p>查看镜像时有个拉取命令,如下图所示</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20002354.jpg"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/296.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/296.html" class="post-title-link" itemprop="url">Docker提交运行时容器为镜像</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-20 15:06:21" itemprop="dateCreated datePublished" datetime="2021-08-20T15:06:21+08:00">2021-08-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:53:55" itemprop="dateModified" datetime="2022-04-26T03:53:55+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker commit -a=<span class="string">&#x27;作者&#x27;</span> -m=<span class="string">&#x27;备注&#x27;</span> 运行时容器ID Docker用户名/新镜像名称:版本号</span><br></pre></td></tr></table></figure>
+
+<p>下图中划红线的镜像就是刚刚提交的镜像</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-20%20150855.jpg"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/295.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/295.html" class="post-title-link" itemprop="url">Docker映射端口6666时无法访问</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-20 12:36:03" itemprop="dateCreated datePublished" datetime="2021-08-20T12:36:03+08:00">2021-08-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:53:57" itemprop="dateModified" datetime="2022-04-26T03:53:57+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在创建Docker的Tomcat容器时使用了端口映射，我映射的端口号是6666，外部使用谷歌浏览器却无法访问</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>6666端口使用谷歌浏览器、火狐浏览器、新版Edge浏览器是无法访问的，被我们遗忘的IE浏览器却可以访问！！</p>
+<p>上述浏览器我都亲自验证过，其它浏览器不清楚情况</p>
+<p>更多无法访问的端口号如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">端口</th>
+<th align="center">原因</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">tcpmux</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">echo</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">discard</td>
+</tr>
+<tr>
+<td align="center">11</td>
+<td align="center">systat</td>
+</tr>
+<tr>
+<td align="center">13</td>
+<td align="center">daytime</td>
+</tr>
+<tr>
+<td align="center">15</td>
+<td align="center">netstat</td>
+</tr>
+<tr>
+<td align="center">17</td>
+<td align="center">qotd</td>
+</tr>
+<tr>
+<td align="center">19</td>
+<td align="center">chargen</td>
+</tr>
+<tr>
+<td align="center">20</td>
+<td align="center">ftp data</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="center">ftp access</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">ssh</td>
+</tr>
+<tr>
+<td align="center">23</td>
+<td align="center">telnet</td>
+</tr>
+<tr>
+<td align="center">25</td>
+<td align="center">smtp</td>
+</tr>
+<tr>
+<td align="center">37</td>
+<td align="center">time</td>
+</tr>
+<tr>
+<td align="center">42</td>
+<td align="center">name</td>
+</tr>
+<tr>
+<td align="center">43</td>
+<td align="center">nicname</td>
+</tr>
+<tr>
+<td align="center">53</td>
+<td align="center">domain</td>
+</tr>
+<tr>
+<td align="center">77</td>
+<td align="center">priv-rjs</td>
+</tr>
+<tr>
+<td align="center">79</td>
+<td align="center">finger</td>
+</tr>
+<tr>
+<td align="center">87</td>
+<td align="center">ttylink</td>
+</tr>
+<tr>
+<td align="center">95</td>
+<td align="center">supdup</td>
+</tr>
+<tr>
+<td align="center">101</td>
+<td align="center">hostriame</td>
+</tr>
+<tr>
+<td align="center">102</td>
+<td align="center">iso-tsap</td>
+</tr>
+<tr>
+<td align="center">103</td>
+<td align="center">gppitnp</td>
+</tr>
+<tr>
+<td align="center">104</td>
+<td align="center">acr-nema</td>
+</tr>
+<tr>
+<td align="center">109</td>
+<td align="center">pop2</td>
+</tr>
+<tr>
+<td align="center">110</td>
+<td align="center">pop3</td>
+</tr>
+<tr>
+<td align="center">111</td>
+<td align="center">sunrpc</td>
+</tr>
+<tr>
+<td align="center">113</td>
+<td align="center">auth</td>
+</tr>
+<tr>
+<td align="center">115</td>
+<td align="center">sftp</td>
+</tr>
+<tr>
+<td align="center">117</td>
+<td align="center">uucp-path</td>
+</tr>
+<tr>
+<td align="center">119</td>
+<td align="center">nntp</td>
+</tr>
+<tr>
+<td align="center">123</td>
+<td align="center">NTP</td>
+</tr>
+<tr>
+<td align="center">135</td>
+<td align="center">loc-srv /epmap</td>
+</tr>
+<tr>
+<td align="center">139</td>
+<td align="center">netbios</td>
+</tr>
+<tr>
+<td align="center">143</td>
+<td align="center">imap2</td>
+</tr>
+<tr>
+<td align="center">179</td>
+<td align="center">BGP</td>
+</tr>
+<tr>
+<td align="center">389</td>
+<td align="center">ldap</td>
+</tr>
+<tr>
+<td align="center">465</td>
+<td align="center">smtp+ssl</td>
+</tr>
+<tr>
+<td align="center">512</td>
+<td align="center">print / exec</td>
+</tr>
+<tr>
+<td align="center">513</td>
+<td align="center">login</td>
+</tr>
+<tr>
+<td align="center">514</td>
+<td align="center">shell</td>
+</tr>
+<tr>
+<td align="center">515</td>
+<td align="center">printer</td>
+</tr>
+<tr>
+<td align="center">526</td>
+<td align="center">tempo</td>
+</tr>
+<tr>
+<td align="center">530</td>
+<td align="center">courier</td>
+</tr>
+<tr>
+<td align="center">531</td>
+<td align="center">chat</td>
+</tr>
+<tr>
+<td align="center">532</td>
+<td align="center">netnews</td>
+</tr>
+<tr>
+<td align="center">540</td>
+<td align="center">uucp</td>
+</tr>
+<tr>
+<td align="center">556</td>
+<td align="center">remotefs</td>
+</tr>
+<tr>
+<td align="center">563</td>
+<td align="center">nntp+ssl</td>
+</tr>
+<tr>
+<td align="center">587</td>
+<td align="center">stmp?</td>
+</tr>
+<tr>
+<td align="center">601</td>
+<td align="center">??</td>
+</tr>
+<tr>
+<td align="center">636</td>
+<td align="center">ldap+ssl</td>
+</tr>
+<tr>
+<td align="center">993</td>
+<td align="center">ldap+ssl</td>
+</tr>
+<tr>
+<td align="center">995</td>
+<td align="center">pop3+ssl</td>
+</tr>
+<tr>
+<td align="center">2049</td>
+<td align="center">nfs</td>
+</tr>
+<tr>
+<td align="center">3659</td>
+<td align="center">apple-sasl / PasswordServer</td>
+</tr>
+<tr>
+<td align="center">4045</td>
+<td align="center">lockd</td>
+</tr>
+<tr>
+<td align="center">6000</td>
+<td align="center">X11</td>
+</tr>
+<tr>
+<td align="center">6665</td>
+<td align="center">Alternate IRC [Apple addition]</td>
+</tr>
+<tr>
+<td align="center">6666</td>
+<td align="center">Alternate IRC [Apple addition]</td>
+</tr>
+<tr>
+<td align="center">6667</td>
+<td align="center">Standard IRC [Apple addition]</td>
+</tr>
+<tr>
+<td align="center">6668</td>
+<td align="center">Alternate IRC [Apple addition]</td>
+</tr>
+<tr>
+<td align="center">6669</td>
+<td align="center">Alternate IRC [Apple addition]</td>
+</tr>
+</tbody></table>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>修改端口号，避免使用上表的端口号</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/294.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/294.html" class="post-title-link" itemprop="url">Docker启动Tomcat成功后外部却无法访问</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-20 04:48:29" itemprop="dateCreated datePublished" datetime="2021-08-20T04:48:29+08:00">2021-08-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:54:00" itemprop="dateModified" datetime="2022-04-26T03:54:00+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在创建Docker的Tomcat容器时使用了端口映射，外部无法通过 <font color="#dd0000">http://虚拟机IP:映射的端口号</font> 来访问</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>Docker某些Tomcat版本的webapps是空的，直接访问是访问不到的，但是这些Tomcat有一个webapps.dist目录，这个目录就是原来的webapps目录</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="第一种办法"><a href="#第一种办法" class="headerlink" title="第一种办法"></a>第一种办法</h4><p>使用webapps目录不为空的Tomcat版本，webapps目录不为空的Tomcat版本有：8.0.52、8.5.28，直接使用这两个版本即可</p>
+<h4 id="第二种办法"><a href="#第二种办法" class="headerlink" title="第二种办法"></a>第二种办法</h4><p>使用webapps目录为空的Tomcat版本，删除掉webapps空目录，再将webapps.dist目录命名为webapps</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/293.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/293.html" class="post-title-link" itemprop="url">Docker常用命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-19 20:52:43" itemprop="dateCreated datePublished" datetime="2021-08-19T20:52:43+08:00">2021-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:54:03" itemprop="dateModified" datetime="2022-04-26T03:54:03+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="Docker命令"><a href="#Docker命令" class="headerlink" title="Docker命令"></a>Docker命令</h3><h4 id="启动Docker"><a href="#启动Docker" class="headerlink" title="启动Docker"></a>启动Docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h4 id="停止Docker"><a href="#停止Docker" class="headerlink" title="停止Docker"></a>停止Docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop docker</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启Docker"><a href="#重启Docker" class="headerlink" title="重启Docker"></a>重启Docker</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> docker</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看Docker概要信息"><a href="#查看Docker概要信息" class="headerlink" title="查看Docker概要信息"></a>查看Docker概要信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker info	</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看Docker帮助文档"><a href="#查看Docker帮助文档" class="headerlink" title="查看Docker帮助文档"></a>查看Docker帮助文档</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="查看Docker版本信息"><a href="#查看Docker版本信息" class="headerlink" title="查看Docker版本信息"></a>查看Docker版本信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+
+<h3 id="镜像命令"><a href="#镜像命令" class="headerlink" title="镜像命令"></a>镜像命令</h3><h4 id="查看所有镜像"><a href="#查看所有镜像" class="headerlink" title="查看所有镜像"></a>查看所有镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20211328.png"></p>
+<table>
+<thead>
+<tr>
+<th align="center">目录名称</th>
+<th align="center">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">REPOSITORY</td>
+<td align="center">镜像的仓库源</td>
+</tr>
+<tr>
+<td align="center">TAG</td>
+<td align="center">镜像的标签（版本）同一个仓库有多个TAG的镜像，多个版本；我们用REPOSITORY:TAG来定义不同的镜像；</td>
+</tr>
+<tr>
+<td align="center">IMAGE ID</td>
+<td align="center">镜像ID，镜像的唯一标识</td>
+</tr>
+<tr>
+<td align="center">CREATE</td>
+<td align="center">镜像创建时间</td>
+</tr>
+<tr>
+<td align="center">SIZE</td>
+<td align="center">镜像大小</td>
+</tr>
+</tbody></table>
+<h4 id="搜索镜像"><a href="#搜索镜像" class="headerlink" title="搜索镜像"></a>搜索镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search 镜像名称</span><br></pre></td></tr></table></figure>
+
+<h4 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h4><p>下载最新版</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull 镜像名称</span><br></pre></td></tr></table></figure>
+
+<p>下载指定版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull 镜像名称:版本号</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h4><p>不加版本号就删除最新版</p>
+<p>普通删除，如果镜像正在运行就无法删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi 镜像名称:版本号</span><br></pre></td></tr></table></figure>
+
+<p>强制删除，即使镜像正在运行也可以删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi -f 镜像名称:版本号</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看元数据"><a href="#查看元数据" class="headerlink" title="查看元数据"></a>查看元数据</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect 镜像id</span><br></pre></td></tr></table></figure>
+
+<h3 id="容器命令"><a href="#容器命令" class="headerlink" title="容器命令"></a>容器命令</h3><h4 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h4><p>普通方式创建容器：创建容器（容器为<font color="#dd0000">停止</font>状态）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name 自定义名称 镜像id</span><br></pre></td></tr></table></figure>
+
+<p>交互式创建容器：创建并进入该容器（容器为<font color="#00dd00">运行</font>状态）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --name 自定义名称 镜像id</span><br></pre></td></tr></table></figure>
+
+<p>守护方式创建容器：创建容器但是不进入（容器为<font color="#00dd00">运行</font>状态）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -di --name 自定义名称 镜像id</span><br></pre></td></tr></table></figure>
+
+<p>端口映射，可以通过：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://192.168.0.140:8888/">http://192.168.0.140:8888/</a> 访问</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name 自定义名称 -d -p 8888:8080 镜像id</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li><strong>-a stdin:</strong> 指定标准输入输出内容类型，可选 STDIN/STDOUT/STDERR 三项；</li>
+<li><strong>-d:</strong> 后台运行容器，并返回容器ID；</li>
+<li><strong>-i:</strong> 以交互模式运行容器，通常与 -t 同时使用；</li>
+<li><strong>-P:</strong> 随机端口映射，容器内部端口<strong>随机</strong>映射到主机的端口</li>
+<li><strong>-p:</strong> 指定端口映射，格式为：<strong>主机(宿主)端口:容器端口</strong></li>
+<li><strong>-t:</strong> 为容器重新分配一个伪输入终端，通常与 -i 同时使用；</li>
+<li><strong>–name=”nginx-lb”:</strong> 为容器指定一个名称；</li>
+<li><strong>–dns 8.8.8.8:</strong> 指定容器使用的DNS服务器，默认和宿主一致；</li>
+<li><strong>–dns-search example.com:</strong> 指定容器DNS搜索域名，默认和宿主一致；</li>
+<li><strong>-h “mars”:</strong> 指定容器的hostname；</li>
+<li><strong>-e username=”ritchie”:</strong> 设置环境变量；</li>
+<li><strong>–env-file=[]:</strong> 从指定文件读入环境变量；</li>
+<li><strong>–cpuset=”0-2” or –cpuset=”0,1,2”:</strong> 绑定容器到指定CPU运行；</li>
+<li>**-m:**设置容器使用内存最大值；</li>
+<li><strong>–net=”bridge”:</strong> 指定容器的网络连接类型，支持 bridge/host/none/container: 四种类型；</li>
+<li><strong>–link=[]:</strong> 添加链接到另一个容器；</li>
+<li><strong>–expose=[]:</strong> 开放一个端口或一组端口；</li>
+<li><strong>–volume , -v:</strong> 绑定一个卷</li>
+</ul>
+<h4 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h4><p>容器停止并退出，命令为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<p>容器不停止退出，按键组合为：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CTRL+P+Q</span><br></pre></td></tr></table></figure>
+
+<h4 id="列出容器"><a href="#列出容器" class="headerlink" title="列出容器"></a>列出容器</h4><p>查看正在运行的容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+
+<p>查看所有容器，包括已经停止的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<p>显示最近创建的2个容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -n 2</span><br></pre></td></tr></table></figure>
+
+<p>查看停止的容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -f status=exited</span><br></pre></td></tr></table></figure>
+
+<p>所有选项说明：</p>
+<p>-a ：显示所有的容器，包括未运行的</p>
+<p>-f ：根据条件过滤显示的内容</p>
+<p>–format ：指定返回值的模板文件</p>
+<p>-l ：显示最近创建的容器</p>
+<p>-n ：列出最近创建的n个容器</p>
+<p>–no-trunc ：不截断输出</p>
+<p>-q ：静默模式，只显示容器编号</p>
+<p>-s ：显示总的文件大小</p>
+<h4 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h4><p>进入正在运行的容器，参数可以是容器id也可以是容器名称，<font color="#dd0000">建议使用容器id</font></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker attach 容器id或者容器名称</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h4><p>启动已经停止的容器，参数可以是容器id也可以是容器名称，<font color="#dd0000">建议使用容器id</font></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start 容器id或者容器名称</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启容器"><a href="#重启容器" class="headerlink" title="重启容器"></a>重启容器</h4><p>重启正在运行的容器，参数可以是容器id也可以是容器名称，<font color="#dd0000">建议使用容器id</font></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker restart 容器id或者容器名称</span><br></pre></td></tr></table></figure>
+
+<h4 id="停止容器"><a href="#停止容器" class="headerlink" title="停止容器"></a>停止容器</h4><p>停止正在运行的容器，参数可以是容器id也可以是容器名称，<font color="#dd0000">建议使用容器id</font></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop 容器id或者容器名称</span><br></pre></td></tr></table></figure>
+
+<p>暴力删除，直接杀掉进程，参数可以是容器id也可以是容器名称，<font color="#dd0000">建议使用容器id，不推荐此方法</font></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">kill</span> 容器id或者容器名称</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除容器"><a href="#删除容器" class="headerlink" title="删除容器"></a>删除容器</h4><p>删除已经停止的容器，正在运行的容器要先停止再删除</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm 容器id</span><br></pre></td></tr></table></figure>
+
+<p>强制删除正在运行的容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm -f 容器id</span><br></pre></td></tr></table></figure>
+
+<p>删除多个容器，多个容器id用空格隔开</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm -f 容器id1 容器id2</span><br></pre></td></tr></table></figure>
+
+<p>删除所有容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm -f $(docker ps -qa)</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li><code>-f</code>：通过 SIGKILL 信号强制删除一个运行中的容器。</li>
+<li><code>-l</code>：移除容器间的网络连接，而非容器本身。</li>
+<li><code>-v</code>：删除与容器关联的卷。</li>
+</ul>
+<h4 id="执行容器命令"><a href="#执行容器命令" class="headerlink" title="执行容器命令"></a>执行容器命令</h4><p>不进入容器并执行容器的命令，例子：<font color="#dd0000">docker exec 0f4c269bb2cf ls -l /sys/</font>，本例子的容器为CentOS系统</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it 容器id 容器的可执行命令</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看容器日志"><a href="#查看容器日志" class="headerlink" title="查看容器日志"></a>查看容器日志</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker logs 容器id</span><br></pre></td></tr></table></figure>
+
+<p>某容器的日志文件位置为：在<font color="#dd0000">/var/lib/docker/containers</font>下找到对应容器的文件夹，打开文件夹后后一个.log后缀的文件，这就是日志文件了,如果时间久了日志文件变得很大，就直接操作该文件即可</p>
+<h4 id="查看容器进程"><a href="#查看容器进程" class="headerlink" title="查看容器进程"></a>查看容器进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker top 容器id</span><br></pre></td></tr></table></figure>
+
+<h4 id="文件拷贝"><a href="#文件拷贝" class="headerlink" title="文件拷贝"></a>文件拷贝</h4><p>宿主机（当前系统：VM虚拟机正在运行的系统）文件或者目录拷贝到容器内</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 需要拷贝的文件或者目录 容器名称或r:容器目录</span><br></pre></td></tr></table></figure>
+
+<p>容器文件或者目录拷贝到宿主机内</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器名称:容器文件或者目录 宿主机目录</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看元数据-1"><a href="#查看元数据-1" class="headerlink" title="查看元数据"></a>查看元数据</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect 容器id</span><br></pre></td></tr></table></figure>
+
+<h4 id="重命名容器"><a href="#重命名容器" class="headerlink" title="重命名容器"></a>重命名容器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rename 原容器名 新容器名</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/292.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/292.html" class="post-title-link" itemprop="url">Docker使用pull命令时报错</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-19 20:29:55" itemprop="dateCreated datePublished" datetime="2021-08-19T20:29:55+08:00">2021-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:54:05" itemprop="dateModified" datetime="2022-04-26T03:54:05+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用pull命令安装容器时报错：Error response from daemon: Get “<a target="_blank" rel="noopener external nofollow noreferrer" href="https://registry-1.docker.io/v2/&quot;">https://registry-1.docker.io/v2/&quot;</a>: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="配置国内镜像"><a href="#配置国内镜像" class="headerlink" title="配置国内镜像"></a>配置国内镜像</h4><p>查看博客：<a href="/291.html">Docker配置阿里云镜像仓库</a></p>
+<h4 id="添加DNS地址"><a href="#添加DNS地址" class="headerlink" title="添加DNS地址"></a>添加DNS地址</h4><p>如果配置了国内镜像地址还是报错，就添加DNS地址，在/etc/resolv.conf中添加两行代码：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nameserver <span class="number">8.8</span>.<span class="number">8.8</span></span><br><span class="line">nameserver <span class="number">8.8</span>.<span class="number">4.4</span></span><br></pre></td></tr></table></figure>
+
+<p>重启一下Docker</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/291.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/291.html" class="post-title-link" itemprop="url">Docker配置阿里云镜像仓库</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-08-19 19:59:43" itemprop="dateCreated datePublished" datetime="2021-08-19T19:59:43+08:00">2021-08-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:54:09" itemprop="dateModified" datetime="2022-04-26T03:54:09+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Docker默认远程仓库是 <a target="_blank" rel="noopener external nofollow noreferrer" href="https://hub.docker.com/">https://hub.docker.com/</a> ，下载速度会很慢，所以要配置一下国内镜像</p>
+<h3 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h3><h4 id="获取镜像地址"><a href="#获取镜像地址" class="headerlink" title="获取镜像地址"></a>获取镜像地址</h4><p>进入阿里云容器镜像服务地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors">点这里快速进入</a>，登录后复制镜像仓库地址</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-19%20200741.png"></p>
+<h4 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h4><p>在/etc/docker文件夹下新建一个名为 <mark class="hl-label blue">daemon.json</mark>  的配置文件，内容如下：（链接填自己的）</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="attr">&quot;registry-mirrors&quot;</span>: [<span class="string">&quot;https://*********.mirror.aliyuncs.com&quot;</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启daemon"><a href="#重启daemon" class="headerlink" title="重启daemon"></a>重启daemon</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+
+<h4 id="重启docker服务"><a href="#重启docker服务" class="headerlink" title="重启docker服务"></a>重启docker服务</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>下载一个tomcat，命令为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull tomcat</span><br></pre></td></tr></table></figure>
+
+<p>发现速度快了很多</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/29/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/">59</a><a class="extend next" rel="next" href="/page/31/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
     }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3265865_vc1sierqa1.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeDao's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">LeDao's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/300.html" title="Docker修改已创建容器的挂载目录"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/300.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker修改已创建容器的挂载目录"></a></div><div class="recent-post-info"><a class="article-title" href="/300.html" title="Docker修改已创建容器的挂载目录">Docker修改已创建容器的挂载目录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-20T18:31:21.000Z" title="发表于 2021-08-21 02:31:21">2021-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">问题描述一般来说，都是创建容器时进行目录挂载，对于已经创建好的容器如果忘了挂载目录但是又想挂载目录
-解决办法
-提交这个容器为新的镜像，然后创建这个新镜像的容器同时进行目录挂载（此方式较简单）
-修改这个容器的配置文件
-
-实现过程提交新镜像再创建容器查看下面两篇博客即可实现修改已创建容器的挂载目录
-
-Docker提交运行时容器为镜像 ，将要挂载目录的已创建容器提交为本地新镜像
-Docker创建容器时目录挂载 ，创建容器时使用新镜像的镜像id顺便挂载目录
-
-修改配置文件停止Docker
-1systemctl stop docker
-
-配置文件路径
-/var/lib/docker/containers/[容器id]
-修改配置文件hostconfig.json，在”Binds”节点中增加挂载目录的关系，前面的/home/hData/是宿主机目录，后面的/cData是容器目录，如果是多个用英文逗号隔开
-单个目录例子：
-1&quot;Binds&quot;:[&quot;/home/hData/:/cData&quot;]
-
-多个目录例子：
-1&quot;Binds&quot;:[&quot;/ho ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/299.html" title="Docker创建容器时目录挂载"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/299.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker创建容器时目录挂载"></a></div><div class="recent-post-info"><a class="article-title" href="/299.html" title="Docker创建容器时目录挂载">Docker创建容器时目录挂载</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-20T17:21:08.000Z" title="发表于 2021-08-21 01:21:08">2021-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">简介在创建容器的时候，将宿主机的目录与容器内的目录进行映射，这样我们就可以实现宿主机和容器目录的双向自动同步
-作用Docker可以使用cp命令来实现数据传递，这种方式非常麻烦，通过容器目录挂载，能够轻松实现代码上传，配置修改，日志同步等需求
-命令单个目录拥有全部权限
-1docker run -it -v  /宿主机目录:/容器目录 镜像名
-
-挂载目录只读
-1docker run -it -v  /宿主机目录:/容器目录:ro 镜像名
-
-多个目录拥有全部权限
-1docker run -it -v /宿主机目录:/容器目录 -v /宿主机目录2:/容器目录2  镜像名
-
-挂载目录只读
-1docker run -it -v /宿主机目录:/容器目录:ro -v /宿主机目录2:/容器目录2:ro  镜像名
-
-注意同步的是多级目录，可能会出现权限不足的提示，这是因为Centos7中的安全模块selinux把权限禁掉了，我们需要在命令的后面添加--privileged=true来解决挂载的目录没有权限的问题
-PS.一般来说，都是创建容器时进行目录挂载，对于已经创建好的容器如果忘了挂载目录但是又想 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/298.html" title="Docker推送镜像到阿里云"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/298.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker推送镜像到阿里云"></a></div><div class="recent-post-info"><a class="article-title" href="/298.html" title="Docker推送镜像到阿里云">Docker推送镜像到阿里云</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-20T15:26:34.000Z" title="发表于 2021-08-20 23:26:34">2021-08-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">进入阿里云镜像控制台控制台地址：https://cr.console.aliyun.com ，登录
-创建命令空间
-创建镜像仓库创建仓库
-填写仓库信息
-选择本地仓库
-阿里云提供的命令
-推送镜像登录
-1docker login --username=用户名 registry.cn-hangzhou.aliyuncs.com
-
-创建一个阿里云专用镜像
-1docker tag 要推送的镜像id registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[镜像版本号]
-
-下图中版本号为1.1的就是刚刚创建的
-
-推送
-1docker push registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[镜像版本号]
-
-查看阿里云的镜像仓库中成功推送的镜像
-
-拉取镜像1docker pull registry.cn-hangzhou.aliyuncs.com/ledao/tomcat:[阿里云的镜像版本号]
-
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/297.html" title="Docker推送镜像到hub服务器"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/297.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker推送镜像到hub服务器"></a></div><div class="recent-post-info"><a class="article-title" href="/297.html" title="Docker推送镜像到hub服务器">Docker推送镜像到hub服务器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-20T12:56:12.000Z" title="发表于 2021-08-20 20:56:12">2021-08-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">注册Docker账号在Docker的hub官网注册，官网地址为：https://hub.docker.com/ ，注册后记住用户名和密码
-登录输入登录命令，在输入自己的用户名和密码即可
-1docker login
-
-推送镜像推送命令：
-1docker push Docker用户名/新镜像名称:版本号
-
-
-查看在Docker的hub官网登录后即可看到刚刚推送的镜像
-
-拉取镜像查看镜像时有个拉取命令,如下图所示
-
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/296.html" title="Docker提交运行时容器为镜像"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/296.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker提交运行时容器为镜像"></a></div><div class="recent-post-info"><a class="article-title" href="/296.html" title="Docker提交运行时容器为镜像">Docker提交运行时容器为镜像</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-20T07:06:21.000Z" title="发表于 2021-08-20 15:06:21">2021-08-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">命令：
-1docker commit -a=&#x27;作者&#x27; -m=&#x27;备注&#x27; 运行时容器ID Docker用户名/新镜像名称:版本号
-
-下图中划红线的镜像就是刚刚提交的镜像
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/295.html" title="Docker映射端口6666时无法访问"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/295.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker映射端口6666时无法访问"></a></div><div class="recent-post-info"><a class="article-title" href="/295.html" title="Docker映射端口6666时无法访问">Docker映射端口6666时无法访问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-20T04:36:03.000Z" title="发表于 2021-08-20 12:36:03">2021-08-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">问题描述在创建Docker的Tomcat容器时使用了端口映射，我映射的端口号是6666，外部使用谷歌浏览器却无法访问
-原因6666端口使用谷歌浏览器、火狐浏览器、新版Edge浏览器是无法访问的，被我们遗忘的IE浏览器却可以访问！！
-上述浏览器我都亲自验证过，其它浏览器不清楚情况
-更多无法访问的端口号如下：
-
-
-
-端口
-原因
-
-
-
-1
-tcpmux
-
-
-7
-echo
-
-
-9
-discard
-
-
-11
-systat
-
-
-13
-daytime
-
-
-15
-netstat
-
-
-17
-qotd
-
-
-19
-chargen
-
-
-20
-ftp data
-
-
-21
-ftp access
-
-
-22
-ssh
-
-
-23
-telnet
-
-
-25
-smtp
-
-
-37
-time
-
-
-42
-name
-
-
-43
-nicname
-
-
-53
-domain
-
-
-77
-priv-rjs
-
-
-79
-finger
-
-
-87
-ttylink
-
-
-95
-supdup
-
-
-101
-hostriame
-
-
-102
-iso-tsap
-
-
-103
-gppitnp
-
-
-104
-acr-nema
-
-
-109
-pop2
-
-
-110
-pop3
-
-
-11 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/294.html" title="Docker启动Tomcat成功后外部却无法访问"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/294.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker启动Tomcat成功后外部却无法访问"></a></div><div class="recent-post-info"><a class="article-title" href="/294.html" title="Docker启动Tomcat成功后外部却无法访问">Docker启动Tomcat成功后外部却无法访问</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-19T20:48:29.000Z" title="发表于 2021-08-20 04:48:29">2021-08-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">问题描述在创建Docker的Tomcat容器时使用了端口映射，外部无法通过 http://虚拟机IP:映射的端口号 来访问
-原因Docker某些Tomcat版本的webapps是空的，直接访问是访问不到的，但是这些Tomcat有一个webapps.dist目录，这个目录就是原来的webapps目录
-解决办法第一种办法使用webapps目录不为空的Tomcat版本，webapps目录不为空的Tomcat版本有：8.0.52、8.5.28，直接使用这两个版本即可
-第二种办法使用webapps目录为空的Tomcat版本，删除掉webapps空目录，再将webapps.dist目录命名为webapps
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/293.html" title="Docker常用命令"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/293.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker常用命令"></a></div><div class="recent-post-info"><a class="article-title" href="/293.html" title="Docker常用命令">Docker常用命令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-19T12:52:43.000Z" title="发表于 2021-08-19 20:52:43">2021-08-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">Docker命令启动Docker1systemctl start docker
-
-停止Docker1systemctl stop docker
-
-重启Docker1systemctl restart docker
-
-设置开机启动1systemctl enable docker
-
-查看Docker概要信息1docker info	
-
-查看Docker帮助文档1docker --help
-
-查看Docker版本信息1docker version
-
-镜像命令查看所有镜像1docker images
-
-
-
-
-
-目录名称
-含义
-
-
-
-REPOSITORY
-镜像的仓库源
-
-
-TAG
-镜像的标签（版本）同一个仓库有多个TAG的镜像，多个版本；我们用REPOSITORY:TAG来定义不同的镜像；
-
-
-IMAGE ID
-镜像ID，镜像的唯一标识
-
-
-CREATE
-镜像创建时间
-
-
-SIZE
-镜像大小
-
-
-搜索镜像1docker search 镜像名称
-
-下载镜像下载最新版
-1docker pull 镜像名称
-
-下载指定版本
-1docker pull 镜像名称:版本号
-
-删除镜像不加版本号就删除最新版
-普 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/292.html" title="Docker使用pull命令时报错"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/292.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker使用pull命令时报错"></a></div><div class="recent-post-info"><a class="article-title" href="/292.html" title="Docker使用pull命令时报错">Docker使用pull命令时报错</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-19T12:29:55.000Z" title="发表于 2021-08-19 20:29:55">2021-08-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">问题描述使用pull命令安装容器时报错：Error response from daemon: Get “https://registry-1.docker.io/v2/&quot;: net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
-解决办法配置国内镜像查看博客：Docker配置阿里云镜像仓库
-添加DNS地址如果配置了国内镜像地址还是报错，就添加DNS地址，在/etc/resolv.conf中添加两行代码：
-12nameserver 8.8.8.8nameserver 8.8.4.4
-
-重启一下Docker
-1systemctl restart docker
-
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/291.html" title="Docker配置阿里云镜像仓库"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/291.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker配置阿里云镜像仓库"></a></div><div class="recent-post-info"><a class="article-title" href="/291.html" title="Docker配置阿里云镜像仓库">Docker配置阿里云镜像仓库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-19T11:59:43.000Z" title="发表于 2021-08-19 19:59:43">2021-08-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">问题描述Docker默认远程仓库是 https://hub.docker.com/ ，下载速度会很慢，所以要配置一下国内镜像
-配置过程获取镜像地址进入阿里云容器镜像服务地址：点这里快速进入，登录后复制镜像仓库地址
-
-新建配置文件在/etc/docker文件夹下新建一个名为 daemon.json  的配置文件，内容如下：（链接填自己的）
-123&#123; &quot;registry-mirrors&quot;: [&quot;https://*********.mirror.aliyuncs.com&quot;]&#125;
-
-重启daemon1systemctl daemon-reload
-
-重启docker服务1systemctl restart docker
-
-测试下载一个tomcat，命令为：
-1docker pull tomcat
-
-发现速度快了很多
-</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/29/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/29/#content-inner">29</a><span class="page-number current">30</span><a class="page-number" href="/page/31/#content-inner">31</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/#content-inner">59</a><a class="extend next" rel="next" href="/page/31/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LeDao</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/a6678696"><i></i><span>To My GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">接Java毕业设计和课设，便宜靠谱，需要的加Q：3519577180</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/590.html" title="Nginx重新部署SSL证书"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/590.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx重新部署SSL证书"/></a><div class="content"><a class="title" href="/590.html" title="Nginx重新部署SSL证书">Nginx重新部署SSL证书</a><time datetime="2024-10-07T16:39:44.000Z" title="发表于 2024-10-08 00:39:44">2024-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/589.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"/></a><div class="content"><a class="title" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法">VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</a><time datetime="2024-03-09T13:43:26.000Z" title="发表于 2024-03-09 21:43:26">2024-03-09</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">590</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-07-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">258.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-01T18:48:08.040Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Algolia</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/fancybox.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('https://image.zoutl.cn/hexo-blog/file/source/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
-  }
-}
-
-function panguInit () {
-  if (true){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
-  }
-}
-
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://image.zoutl.cn/hexo-blog/file/source/algoliasearch-lite.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
-  fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      if (true) {
-        const from = '出自 ' + data.from
-        const sub = []
-        sub.unshift(data.hitokoto, from)
-        window.typed = new Typed('#subtitle', {
-          strings: sub,
-          startDelay: 300,
-          typeSpeed: 150,
-          loop: true,
-          backSpeed: 50,
-        })
-      } else {
-        document.getElementById('subtitle').innerHTML = data.hitokoto
-      }
-    })
-}
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://image.zoutl.cn/hexo-blog/file/source/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}
-</script></div><script>window.addEventListener('load', () => {
-  const changeContent = (content) => {
-    if (content === '') return content
-
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
-    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
-    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
-    content = content.replace(/<[^>]+>/g,"") // remove html tag
-
-    if (content.length > 150) {
-      content = content.substring(0,150) + '...'
-    }
-    return content
-  }
-
-  const findTrueUrl = (array) => {
-    Promise.all(array.map(item =>
-      fetch(item.url).then(resp => resp.json()).then(data => {
-        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
-        if (data.user.login === 'utterances-bot') {
-          return urlArray.pop()
-        } else {
-          return urlArray.shift()
-        }
-      })
-    )).then(res => {
-        array = array.map((i,index)=> {
-          return {
-            ...i,
-            url: res[index]
-          }
-        })
-
-        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
-        generateHtml(array)
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
   }
+</script>
 
-  const getComment = () => {
-    fetch('https://api.github.com/repos/a6678696/a6678696.github.io/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
-      "headers": {
-        Accept: 'application/vnd.github.v3.html+json'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        const githubArray = data.map(item => {
-          return {
-            'avatar': item.user.avatar_url,
-            'content': changeContent(item.body_html),
-            'nick': item.user.login,
-            'url': item.issue_url,
-            'date': item.updated_at,
-            'githubUrl': item.html_url
-          }
-        })
-        findTrueUrl(githubArray)
-      }).catch(e => {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      })
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LeDao"
+      src="https://image.zoutl.cn/hexo-blog/images/logo.png">
+  <p class="site-author-name" itemprop="name">LeDao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">590</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/a6678696" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a6678696" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1203007469@qq.com" title="E-Mail → mailto:1203007469@qq.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LeDao</span>
+</div>
+<div>
+    <span style="text-align: left;display: inline-block;vertical-align: middle;">本网站由 </span>
+	<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src='https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png' style="height: 30px;vertical-align: middle;display: inline-block;"></a>
+	<span style="text-align: left;display: inline-block;vertical-align: middle;">提供CDN加速/云存储服务</span>
+</div>
+<div class="id111">
+    <span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a></span>
+	<img src='https://image.zoutl.cn/hexo-blog/images/beian.png' style="vertical-align: middle;display: inline-block;">
+	<span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,51,51' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
   }
+});
+</script>
 
-  const generateHtml = array => {
-    let result = ''
 
-    if (array.length) {
-      for (let i = 0; i < array.length; i++) {
-        result += '<div class=\'aside-list-item\'>'
 
-        if (true) {
-          const name = 'src'
-          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
-        }
 
-        result += `<div class='content'>
-        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
-        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
-        </div></div>`
-      }
-    } else {
-      result += '没有评论'
-    }
+  
 
-    let $dom = document.querySelector('#card-newest-comments .aside-list')
-    $dom.innerHTML= result
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    window.pjax && window.pjax.refresh($dom)
-  }
+  
 
-  const newestCommentInit = () => {
-    if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('github-newest-comments')
-      if (data) {
-        generateHtml(JSON.parse(data))
-      } else {
-        getComment()
-      }
-    }
-  }
 
-  newestCommentInit()
-  document.addEventListener('pjax:complete', newestCommentInit)
-})</script><script defer="defer" id="ribbon" src="https://image.zoutl.cn/hexo-blog/file/source/canvas-ribbon.min.js" size="222" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-POWERMODE.mobile = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script id="click-heart" src="https://image.zoutl.cn/hexo-blog/file/source/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</body>
+</html>

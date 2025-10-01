@@ -1,460 +1,1895 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>LeDao's Blog</title><meta name="keywords" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js"><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.zoutl.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":6,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta property="og:type" content="website">
 <meta property="og:title" content="LeDao&#39;s Blog">
 <meta property="og:url" content="https://blog.zoutl.cn/page/18/index.html">
 <meta property="og:site_name" content="LeDao&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
 <meta property="article:author" content="LeDao">
 <meta property="article:tag" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/page/18/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="fp2ohQruhOqzbyAh"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JZJWXGK1VV"></script><script>window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-JZJWXGK1VV');
-</script><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
-  source: {
-    justifiedGallery: {
-      js: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.js',
-      css: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'LeDao\'s Blog',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2025-10-02 02:48:12'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
+<link rel="canonical" href="https://blog.zoutl.cn/page/18/">
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
+  <title>LeDao's Blog</title>
   
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">LeDao's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-主页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-项目">
+
+    <a href="/project/" rel="section"><i class="fa fa-paw fa-fw"></i>项目</a>
+
+  </li>
+        <li class="menu-item menu-item-友链">
+
+    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+  <a href="https://github.com/a6678696" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
   
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/422.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/422.html" class="post-title-link" itemprop="url">HTML特殊字符编码对照表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-21 13:48:28" itemprop="dateCreated datePublished" datetime="2022-01-21T13:48:28+08:00">2022-01-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:11" itemprop="dateModified" datetime="2022-04-26T03:46:11+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
     
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
     
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <table>
+<thead>
+<tr>
+<th align="center">特殊符号</th>
+<th align="center">命名实体</th>
+<th align="center">十进制编码</th>
+<th align="center">特殊符号</th>
+<th align="center">命名实体</th>
+<th align="center">十进制编码</th>
+<th align="center">特殊符号</th>
+<th align="center">命名实体</th>
+<th align="center">十进制编码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>Α</code></td>
+<td align="center">&amp;Alpha;</td>
+<td align="center">&amp;#913;</td>
+<td align="center"><code>Β</code></td>
+<td align="center">&amp;Beta;</td>
+<td align="center">&amp;#914;</td>
+<td align="center"><code>Γ</code></td>
+<td align="center">&amp;Gamma;</td>
+<td align="center">&amp;#915;</td>
+</tr>
+<tr>
+<td align="center"><code>Δ</code></td>
+<td align="center">&amp;Delta;</td>
+<td align="center">&amp;#916;</td>
+<td align="center"><code>Ε</code></td>
+<td align="center">&amp;Epsilon;</td>
+<td align="center">&amp;Epsilon;</td>
+<td align="center"><code>Ζ</code></td>
+<td align="center">&amp;Zeta;</td>
+<td align="center">&amp;#918;</td>
+</tr>
+<tr>
+<td align="center"><code>Η</code></td>
+<td align="center">&amp;Eta;</td>
+<td align="center">&amp;#919;</td>
+<td align="center"><code>Θ</code></td>
+<td align="center">&amp;Theta;</td>
+<td align="center">&amp;#920;</td>
+<td align="center"><code>Ι</code></td>
+<td align="center">&amp;Iota;</td>
+<td align="center">&amp;#921;</td>
+</tr>
+<tr>
+<td align="center"><code>Κ</code></td>
+<td align="center">&amp;Kappa;</td>
+<td align="center">&amp;#922;</td>
+<td align="center"><code>Λ</code></td>
+<td align="center">&amp;Lambda;</td>
+<td align="center">&amp;#923;</td>
+<td align="center"><code>Μ</code></td>
+<td align="center">&amp;Mu;</td>
+<td align="center">&amp;#924;</td>
+</tr>
+<tr>
+<td align="center"><code>Ν</code></td>
+<td align="center">&amp;Nu;</td>
+<td align="center">&amp;#925;</td>
+<td align="center"><code>Ξ</code></td>
+<td align="center">&amp;Xi;</td>
+<td align="center">&amp;#926;</td>
+<td align="center"><code>Ο</code></td>
+<td align="center">&amp;Omicron;</td>
+<td align="center">&amp;#927;</td>
+</tr>
+<tr>
+<td align="center"><code>Π</code></td>
+<td align="center">&amp;Pi;</td>
+<td align="center">&amp;#928;</td>
+<td align="center"><code>Ρ</code></td>
+<td align="center">&amp;Rho;</td>
+<td align="center">&amp;#929;</td>
+<td align="center"><code>Σ</code></td>
+<td align="center">&amp;Sigma;</td>
+<td align="center">&amp;#931;</td>
+</tr>
+<tr>
+<td align="center"><code>Τ</code></td>
+<td align="center">&amp;Tau;</td>
+<td align="center">&amp;#932;</td>
+<td align="center"><code>Υ</code></td>
+<td align="center">&amp;Upsilon;</td>
+<td align="center">&amp;#933;</td>
+<td align="center"><code>Φ</code></td>
+<td align="center">&amp;Phi;</td>
+<td align="center">&amp;#934;</td>
+</tr>
+<tr>
+<td align="center"><code>Χ</code></td>
+<td align="center">&amp;Chi;</td>
+<td align="center">&amp;#935;</td>
+<td align="center"><code>Ψ</code></td>
+<td align="center">&amp;Psi;</td>
+<td align="center">&amp;#936;</td>
+<td align="center"><code>Ω</code></td>
+<td align="center">&amp;Omega;</td>
+<td align="center">&amp;#937;</td>
+</tr>
+<tr>
+<td align="center"><code>α</code></td>
+<td align="center">&amp;alpha;</td>
+<td align="center">&amp;#945;</td>
+<td align="center"><code>β</code></td>
+<td align="center">&amp;beta;</td>
+<td align="center">&amp;#946;</td>
+<td align="center"><code>γ</code></td>
+<td align="center">&amp;gamma;</td>
+<td align="center">&amp;#947;</td>
+</tr>
+<tr>
+<td align="center"><code>δ</code></td>
+<td align="center">&amp;delta;</td>
+<td align="center">&amp;#948;</td>
+<td align="center"><code>ε</code></td>
+<td align="center">&amp;epsilon;</td>
+<td align="center">&amp;#949;</td>
+<td align="center"><code>ζ</code></td>
+<td align="center">&amp;zeta;</td>
+<td align="center">&amp;#950;</td>
+</tr>
+<tr>
+<td align="center"><code>η</code></td>
+<td align="center">&amp;eta;</td>
+<td align="center">&amp;#951;</td>
+<td align="center"><code>θ</code></td>
+<td align="center">&amp;theta;</td>
+<td align="center">&amp;#952;</td>
+<td align="center"><code>ι</code></td>
+<td align="center">&amp;iota;</td>
+<td align="center">&amp;#953;</td>
+</tr>
+<tr>
+<td align="center"><code>κ</code></td>
+<td align="center">&amp;kappa;</td>
+<td align="center">&amp;#954;</td>
+<td align="center"><code>λ</code></td>
+<td align="center">&amp;lambda;</td>
+<td align="center">&amp;#955;</td>
+<td align="center"><code>μ</code></td>
+<td align="center">&amp;mu;</td>
+<td align="center">&amp;#956;</td>
+</tr>
+<tr>
+<td align="center"><code>ν</code></td>
+<td align="center">&amp;nu;</td>
+<td align="center">&amp;#957;</td>
+<td align="center"><code>ξ</code></td>
+<td align="center">&amp;xi;</td>
+<td align="center">&amp;#958;</td>
+<td align="center"><code>ο</code></td>
+<td align="center">&amp;omicron;</td>
+<td align="center">&amp;#959;</td>
+</tr>
+<tr>
+<td align="center"><code>π</code></td>
+<td align="center">&amp;pi;</td>
+<td align="center">&amp;#960;</td>
+<td align="center"><code>ρ</code></td>
+<td align="center">&amp;rho;</td>
+<td align="center">&amp;#961;</td>
+<td align="center"><code>ς</code></td>
+<td align="center">&amp;sigmaf;</td>
+<td align="center">&amp;#962;</td>
+</tr>
+<tr>
+<td align="center"><code>σ</code></td>
+<td align="center">&amp;sigma;</td>
+<td align="center">&amp;#963;</td>
+<td align="center"><code>τ</code></td>
+<td align="center">&amp;tau;</td>
+<td align="center">&amp;#964;</td>
+<td align="center"><code>υ</code></td>
+<td align="center">&amp;upsilon;</td>
+<td align="center">&amp;#965;</td>
+</tr>
+<tr>
+<td align="center"><code>φ</code></td>
+<td align="center">&amp;phi;</td>
+<td align="center">&amp;#966;</td>
+<td align="center"><code>χ</code></td>
+<td align="center">&amp;chi;</td>
+<td align="center">&amp;#967;</td>
+<td align="center"><code>ψ</code></td>
+<td align="center">&amp;psi;</td>
+<td align="center">&amp;#968;</td>
+</tr>
+<tr>
+<td align="center"><code>ω</code></td>
+<td align="center">&amp;omega;</td>
+<td align="center">&amp;#969;</td>
+<td align="center"><code>ϑ</code></td>
+<td align="center">&amp;thetasym;</td>
+<td align="center">&amp;#977;</td>
+<td align="center"><code>ϒ</code></td>
+<td align="center">&amp;upsih;</td>
+<td align="center">&amp;#978;</td>
+</tr>
+<tr>
+<td align="center"><code>ϖ</code></td>
+<td align="center">&amp;piv;</td>
+<td align="center">&amp;#982;</td>
+<td align="center"><code>•</code></td>
+<td align="center">&amp;bull;</td>
+<td align="center">&amp;#8226;</td>
+<td align="center"><code>…</code></td>
+<td align="center">&amp;hellip;</td>
+<td align="center">&amp;#8230;</td>
+</tr>
+<tr>
+<td align="center"><code>′</code></td>
+<td align="center">&amp;prime;</td>
+<td align="center">&amp;#8242;</td>
+<td align="center"><code>″</code></td>
+<td align="center">&amp;Prime;</td>
+<td align="center">&amp;#8243;</td>
+<td align="center"><code>‾</code></td>
+<td align="center">&amp;oline;</td>
+<td align="center">&amp;#8254;</td>
+</tr>
+<tr>
+<td align="center"><code>⁄</code></td>
+<td align="center">&amp;frasl;</td>
+<td align="center">&amp;#8260;</td>
+<td align="center"><code>℘</code></td>
+<td align="center">&amp;weierp;</td>
+<td align="center">&amp;#8472;</td>
+<td align="center"><code>ℑ</code></td>
+<td align="center">&amp;image;</td>
+<td align="center">&amp;#8465;</td>
+</tr>
+<tr>
+<td align="center"><code>ℜ</code></td>
+<td align="center">&amp;real;</td>
+<td align="center">&amp;#8476;</td>
+<td align="center"><code>™</code></td>
+<td align="center">&amp;trade;</td>
+<td align="center">&amp;#8482;</td>
+<td align="center"><code>ℵ</code></td>
+<td align="center">&amp;alefsym;</td>
+<td align="center">&amp;#8501;</td>
+</tr>
+<tr>
+<td align="center"><code>←</code></td>
+<td align="center">&amp;larr;</td>
+<td align="center">&amp;#8592;</td>
+<td align="center"><code>↑</code></td>
+<td align="center">&amp;uarr;</td>
+<td align="center">&amp;#8593;</td>
+<td align="center"><code>→</code></td>
+<td align="center">&amp;rarr;</td>
+<td align="center">&amp;#8594;</td>
+</tr>
+<tr>
+<td align="center"><code>↓</code></td>
+<td align="center">&amp;darr;</td>
+<td align="center">&amp;#8595;</td>
+<td align="center"><code>↔</code></td>
+<td align="center">&amp;harr;</td>
+<td align="center">&amp;#8596;</td>
+<td align="center"><code>↵</code></td>
+<td align="center">&amp;crarr;</td>
+<td align="center">&amp;#8629;</td>
+</tr>
+<tr>
+<td align="center"><code>⇐</code></td>
+<td align="center">&amp;lArr;</td>
+<td align="center">&amp;#8656;</td>
+<td align="center"><code>⇑</code></td>
+<td align="center">&amp;uArr;</td>
+<td align="center">&amp;#8657;</td>
+<td align="center"><code>⇒</code></td>
+<td align="center">&amp;rArr;</td>
+<td align="center">&amp;#8658;</td>
+</tr>
+<tr>
+<td align="center"><code>⇓</code></td>
+<td align="center">&amp;dArr;</td>
+<td align="center">&amp;#8659;</td>
+<td align="center"><code>⇔</code></td>
+<td align="center">&amp;hArr;</td>
+<td align="center">&amp;#8660;</td>
+<td align="center"><code>∀</code></td>
+<td align="center">&amp;forall;</td>
+<td align="center">&amp;#8704;</td>
+</tr>
+<tr>
+<td align="center"><code>∂</code></td>
+<td align="center">&amp;part;</td>
+<td align="center">&amp;#8706;</td>
+<td align="center"><code>∃</code></td>
+<td align="center">&amp;exist;</td>
+<td align="center">&amp;#8707;</td>
+<td align="center"><code>∅</code></td>
+<td align="center">&amp;empty;</td>
+<td align="center">&amp;#8709;</td>
+</tr>
+<tr>
+<td align="center"><code>∇</code></td>
+<td align="center">&amp;nabla;</td>
+<td align="center">&amp;#8711;</td>
+<td align="center"><code>∈</code></td>
+<td align="center">&amp;isin;</td>
+<td align="center">&amp;#8712;</td>
+<td align="center"><code>∉</code></td>
+<td align="center">&amp;notin;</td>
+<td align="center">&amp;#8713;</td>
+</tr>
+<tr>
+<td align="center"><code>∋</code></td>
+<td align="center">&amp;ni;</td>
+<td align="center">&amp;#8715;</td>
+<td align="center"><code>∏</code></td>
+<td align="center">&amp;prod;</td>
+<td align="center">&amp;#8719;</td>
+<td align="center"><code>∑</code></td>
+<td align="center">&amp;sum;</td>
+<td align="center">&amp;#8722;</td>
+</tr>
+<tr>
+<td align="center"><code>−</code></td>
+<td align="center">&amp;minus;</td>
+<td align="center">&amp;#8722;</td>
+<td align="center"><code>∗</code></td>
+<td align="center">&amp;lowast;</td>
+<td align="center">&amp;#8727;</td>
+<td align="center"><code>√</code></td>
+<td align="center">&amp;radic;</td>
+<td align="center">&amp;#8730;</td>
+</tr>
+<tr>
+<td align="center"><code>∝</code></td>
+<td align="center">&amp;prop;</td>
+<td align="center">&amp;#8733;</td>
+<td align="center"><code>∞</code></td>
+<td align="center">&amp;infin;</td>
+<td align="center">&amp;#8734;</td>
+<td align="center"><code>∠</code></td>
+<td align="center">&amp;ang;</td>
+<td align="center">&amp;#8736;</td>
+</tr>
+<tr>
+<td align="center"><code>∧</code></td>
+<td align="center">&amp;and;</td>
+<td align="center">&amp;#8869;</td>
+<td align="center"><code>∨</code></td>
+<td align="center">&amp;or;</td>
+<td align="center">&amp;#8870;</td>
+<td align="center"><code>∩</code></td>
+<td align="center">&amp;cap;</td>
+<td align="center">&amp;#8745;</td>
+</tr>
+<tr>
+<td align="center"><code>∪</code></td>
+<td align="center">&amp;cup;</td>
+<td align="center">&amp;#8746;</td>
+<td align="center"><code>∫</code></td>
+<td align="center">&amp;int;</td>
+<td align="center">&amp;#8747;</td>
+<td align="center"><code>∴</code></td>
+<td align="center">&amp;there4;</td>
+<td align="center">&amp;#8756;</td>
+</tr>
+<tr>
+<td align="center"><code>∼</code></td>
+<td align="center">&amp;sim;</td>
+<td align="center">&amp;#8764;</td>
+<td align="center"><code>≅</code></td>
+<td align="center">&amp;cong;</td>
+<td align="center">&amp;#8773;</td>
+<td align="center"><code>≈</code></td>
+<td align="center">&amp;asymp;</td>
+<td align="center">&amp;#8773;</td>
+</tr>
+<tr>
+<td align="center"><code>≠</code></td>
+<td align="center">&amp;ne;</td>
+<td align="center">&amp;#8800;</td>
+<td align="center"><code>≡</code></td>
+<td align="center">&amp;equiv;</td>
+<td align="center">&amp;#8801;</td>
+<td align="center"><code>≤</code></td>
+<td align="center">&amp;le;</td>
+<td align="center">&amp;#8804;</td>
+</tr>
+<tr>
+<td align="center"><code>≥</code></td>
+<td align="center">&amp;ge;</td>
+<td align="center">&amp;#8805;</td>
+<td align="center"><code>⊂</code></td>
+<td align="center">&amp;sub;</td>
+<td align="center">&amp;#8834;</td>
+<td align="center"><code>⊃</code></td>
+<td align="center">&amp;sup;</td>
+<td align="center">&amp;#8835;</td>
+</tr>
+<tr>
+<td align="center"><code>⊄</code></td>
+<td align="center">&amp;nsub;</td>
+<td align="center">&amp;#8836;</td>
+<td align="center"><code>⊆</code></td>
+<td align="center">&amp;sube;</td>
+<td align="center">&amp;#8838;</td>
+<td align="center"><code>⊇</code></td>
+<td align="center">&amp;supe;</td>
+<td align="center">&amp;#8839;</td>
+</tr>
+<tr>
+<td align="center"><code>⊕</code></td>
+<td align="center">&amp;oplus;</td>
+<td align="center">&amp;#8853;</td>
+<td align="center"><code>⊗</code></td>
+<td align="center">&amp;otimes;</td>
+<td align="center">&amp;#8855;</td>
+<td align="center"><code>⊥</code></td>
+<td align="center">&amp;perp;</td>
+<td align="center">&amp;#8869;</td>
+</tr>
+<tr>
+<td align="center"><code>⋅</code></td>
+<td align="center">&amp;sdot;</td>
+<td align="center">&amp;#8901;</td>
+<td align="center"><code>⌈</code></td>
+<td align="center">&amp;lceil;</td>
+<td align="center">&amp;#8968;</td>
+<td align="center"><code>⌉</code></td>
+<td align="center">&amp;rceil;</td>
+<td align="center">&amp;#8969;</td>
+</tr>
+<tr>
+<td align="center"><code>⌊</code></td>
+<td align="center">&amp;lfloor;</td>
+<td align="center">&amp;#8970;</td>
+<td align="center"><code>⌋</code></td>
+<td align="center">&amp;rfloor;</td>
+<td align="center">&amp;#8971;</td>
+<td align="center"><code>◊</code></td>
+<td align="center">&amp;loz;</td>
+<td align="center">&amp;#9674;</td>
+</tr>
+<tr>
+<td align="center"><code>♠</code></td>
+<td align="center">&amp;spades;</td>
+<td align="center">&amp;#9824;</td>
+<td align="center"><code>♣</code></td>
+<td align="center">&amp;clubs;</td>
+<td align="center">&amp;#9827;</td>
+<td align="center"><code>♥</code></td>
+<td align="center">&amp;hearts;</td>
+<td align="center">&amp;#9829;</td>
+</tr>
+<tr>
+<td align="center"><code>♦</code></td>
+<td align="center">&amp;diams;</td>
+<td align="center">&amp;#9830;</td>
+<td align="center"></td>
+<td align="center">&amp;nbsp;</td>
+<td align="center">&amp;#160;</td>
+<td align="center"><code>¡</code></td>
+<td align="center">&amp;iexcl;</td>
+<td align="center">&amp;#161;</td>
+</tr>
+<tr>
+<td align="center"><code>¢</code></td>
+<td align="center">&amp;cent;</td>
+<td align="center">&amp;#162;</td>
+<td align="center"><code>£</code></td>
+<td align="center">&amp;pound;</td>
+<td align="center">&amp;#163;</td>
+<td align="center"><code>¤</code></td>
+<td align="center">&amp;curren;</td>
+<td align="center">&amp;#164;</td>
+</tr>
+<tr>
+<td align="center"><code>¥</code></td>
+<td align="center">&amp;yen;</td>
+<td align="center">&amp;#165;</td>
+<td align="center"><code>¦</code></td>
+<td align="center">&amp;brvbar;</td>
+<td align="center">&amp;#166;</td>
+<td align="center"><code>§</code></td>
+<td align="center">&amp;sect;</td>
+<td align="center">&amp;#167;</td>
+</tr>
+<tr>
+<td align="center"><code>¨</code></td>
+<td align="center">&amp;uml;</td>
+<td align="center">&amp;#168;</td>
+<td align="center"><code>©</code></td>
+<td align="center">&amp;copy;</td>
+<td align="center">&amp;#169;</td>
+<td align="center"><code>ª</code></td>
+<td align="center">&amp;ordf;</td>
+<td align="center">&amp;#170;</td>
+</tr>
+<tr>
+<td align="center"><code>«</code></td>
+<td align="center">&amp;laquo;</td>
+<td align="center">&amp;#171;</td>
+<td align="center"><code>¬</code></td>
+<td align="center">&amp;not;</td>
+<td align="center">&amp;#172;</td>
+<td align="center">­</td>
+<td align="center">&amp;shy;</td>
+<td align="center">&amp;#173;</td>
+</tr>
+<tr>
+<td align="center"><code>®</code></td>
+<td align="center">&amp;reg;</td>
+<td align="center">&amp;#174;</td>
+<td align="center"><code>¯</code></td>
+<td align="center">&amp;macr;</td>
+<td align="center">&amp;#175;</td>
+<td align="center"><code>°</code></td>
+<td align="center">&amp;deg;</td>
+<td align="center">&amp;#176;</td>
+</tr>
+<tr>
+<td align="center"><code>±</code></td>
+<td align="center">&amp;plusmn;</td>
+<td align="center">&amp;#177;</td>
+<td align="center"><code>²</code></td>
+<td align="center">&amp;sup2;</td>
+<td align="center">&amp;#178;</td>
+<td align="center"><code>³</code></td>
+<td align="center">&amp;sup3;</td>
+<td align="center">&amp;#179;</td>
+</tr>
+<tr>
+<td align="center"><code>´</code></td>
+<td align="center">&amp;acute;</td>
+<td align="center">&amp;#180;</td>
+<td align="center"><code>µ</code></td>
+<td align="center">&amp;micro;</td>
+<td align="center">&amp;#181</td>
+<td align="center"><code>&quot;</code></td>
+<td align="center">&amp;quot;</td>
+<td align="center">&amp;#34;</td>
+</tr>
+<tr>
+<td align="center"><code>&lt;</code></td>
+<td align="center">&amp;lt;</td>
+<td align="center">&amp;#60;</td>
+<td align="center"><code>&gt;</code></td>
+<td align="center">&amp;gt;</td>
+<td align="center">&amp;#62;</td>
+<td align="center"><code>&#39;</code></td>
+<td align="center"></td>
+<td align="center">&amp;#39;</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/421.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/421.html" class="post-title-link" itemprop="url">EasyUI Combobox组合框从Java后端获取数据</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-19 17:08:17" itemprop="dateCreated datePublished" datetime="2022-01-19T17:08:17+08:00">2022-01-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:15" itemprop="dateModified" datetime="2022-04-26T03:46:15+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><p><code>editable=&quot;true&quot;</code>代表该组合框可以编辑，<code>valueField:&#39;id&#39;</code>代表每个选项的值对应的是goodsType的id，<code>textField:&#39;name&#39;</code>代表我们看到的文本是goodsType的name</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">&amp;nbsp;</span>商品类型:<span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">class</span>=<span class="string">&quot;easyui-combobox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;s_goodsTypeId&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 140px&quot;</span> <span class="attr">editable</span>=<span class="string">&quot;true&quot;</span> <span class="attr">data-options</span>=<span class="string">&quot;panelHeight:&#x27;auto&#x27;,valueField:&#x27;id&#x27;,textField:&#x27;name&#x27;,url:&#x27;/admin/goodsType/comboList&#x27;&quot;</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><p>下面只展示GoodsType实体类和组合框请求的方法comboList，GoodsTypeMapper、GoodsTypeService和GoodsTypeServiceImpl三个类就不展示了</p>
+<h5 id="GoodsType实体类"><a href="#GoodsType实体类" class="headerlink" title="GoodsType实体类"></a>GoodsType实体类</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableField;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableId;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableName;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 商品类别实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-01-15 21:08</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@TableName(value = &quot;t_goods_type&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GoodsType</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableId</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 名称</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 排序</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;sortNum&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer sortNum;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 分类下商品数量</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(exist = false)</span></span><br><span class="line">    <span class="keyword">private</span> Integer goodsNum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="请求的方法comboList"><a href="#请求的方法comboList" class="headerlink" title="请求的方法comboList"></a>请求的方法comboList</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.controller.admin;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.extension.plugins.pagination.Page;</span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Goods;</span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.GoodsType;</span><br><span class="line"><span class="keyword">import</span> com.ledao.service.GoodsService;</span><br><span class="line"><span class="keyword">import</span> com.ledao.service.GoodsTypeService;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestParam;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Map;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 后台商品类别Controller层</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-01-15 21:17</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/admin/goodsType&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GoodsTypeAdminController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> GoodsTypeService goodsTypeService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> GoodsService goodsService;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 下拉框模糊查询商品类别</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> q</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/comboList&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;GoodsType&gt; <span class="title">comboList</span><span class="params">(String q)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (q == <span class="keyword">null</span>) &#123;</span><br><span class="line">            q = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        QueryWrapper&lt;GoodsType&gt; goodsTypeQueryWrapper = <span class="keyword">new</span> QueryWrapper&lt;&gt;();</span><br><span class="line">        goodsTypeQueryWrapper.like(<span class="string">&quot;name&quot;</span>, q);</span><br><span class="line">        <span class="keyword">return</span> goodsTypeService.list(goodsTypeQueryWrapper);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-19%20223648.gif"></p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>如果设置了组合框可以编辑且组合框的值为数字，那么就需要判断用户的输入是否正确（即：判断组合框获取到的值是否为数字），这是因为：如果组合框看到的文本在数据库中不存在时我们通过组合框获取到的值为<code>在组合框看到的文本</code>，这时向后端传入一个<code>不是数字的字符串</code>，而后端要接收的却是数字，那么后端就会报错</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/420.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/420.html" class="post-title-link" itemprop="url">校园二手交易平台</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-19 00:04:47" itemprop="dateCreated datePublished" datetime="2022-01-19T00:04:47+08:00">2022-01-19</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:18" itemprop="dateModified" datetime="2022-04-26T03:46:18+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">个人项目</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h3><p>GitHub地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/a6678696/SecondHandTrade">a6678696/SecondHandTrade: 校园二手交易平台 (github.com)</a></p>
+<h3 id="使用的技术"><a href="#使用的技术" class="headerlink" title="使用的技术"></a>使用的技术</h3><p>本项目核心技术采用Spring Boot+Mybatis-Plus；开发工具 idea；数据库MySQL5.6；模版引擎采用的是Thymeleaf；在线编辑器CKEditor；<a href="https://blog.zoutl.cn/64.html">基于JavaMail实现用QQ邮箱发送邮件</a>；前台界面采用了Bootstrap4框架；后台界面采用了jQuery EasyUI框架；Redis存储用户购物车信息；Gson处理JSON数据；Quartz定时任务；</p>
+<h3 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h3><h4 id="普通用户"><a href="#普通用户" class="headerlink" title="普通用户"></a>普通用户</h4><ol>
+<li>添加商品到购物车、预订商品</li>
+<li>前台登录、通过邮箱接受验证码注册和找回密码</li>
+<li>查看和修改个人信息</li>
+<li>发布商品和管理自己发布的商品（修改、删除、查询、上架、下架、完成交易、取消商品被预订）</li>
+<li>管理自己的联系方式（添加、修改、删除、查询）</li>
+<li>查看预订记录以及取消预订</li>
+<li>查看自己的消息</li>
+<li>给管理员留言以及管理自己的留言（查询、修改、删除）</li>
+</ol>
+<h4 id="管理员"><a href="#管理员" class="headerlink" title="管理员"></a>管理员</h4><ol>
+<li>管理普通用户（添加、修改、删除、查询、封禁与取消封禁）</li>
+<li>商品类别管理（添加、修改、删除、查询）</li>
+<li>商品管理（查询、删除、审核商品、推荐商品）</li>
+<li>管理用户联系方式（修改、删除、查询）</li>
+<li>管理用户留言（答复用户的留言、删除、查询）</li>
+<li>管理首页的轮播图（添加、修改、删除、查询）</li>
+<li>管理公告（添加、修改、删除、查询）</li>
+<li>管理预订记录（查询、删除）</li>
+<li>管理用户消息（查询、删除）</li>
+<li>安全退出后台</li>
+</ol>
+<h4 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h4><ol>
+<li>每隔60分钟自动将推荐时间过期的商品的推荐状态设置为不推荐</li>
+</ol>
+<h3 id="图片展示"><a href="#图片展示" class="headerlink" title="图片展示"></a>图片展示</h3><h4 id="前台"><a href="#前台" class="headerlink" title="前台"></a>前台</h4><h5 id="首页"><a href="#首页" class="headerlink" title="首页"></a>首页</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003408138.png" alt="image-20220119003408138"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003433066.png" alt="image-20220119003433066"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003452725.png" alt="image-20220119003452725"></p>
+<h5 id="商品分类"><a href="#商品分类" class="headerlink" title="商品分类"></a>商品分类</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003529165.png" alt="image-20220119003529165"></p>
+<h5 id="查看用户求购"><a href="#查看用户求购" class="headerlink" title="查看用户求购"></a>查看用户求购</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003557519.png" alt="image-20220119003557519"></p>
+<h5 id="搜索商品"><a href="#搜索商品" class="headerlink" title="搜索商品"></a>搜索商品</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003624983.png" alt="image-20220119003624983"></p>
+<h5 id="查看商品详情"><a href="#查看商品详情" class="headerlink" title="查看商品详情"></a>查看商品详情</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003653798.png" alt="image-20220119003653798"></p>
+<h5 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003714458.png" alt="image-20220119003714458"></p>
+<h5 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003733398.png" alt="image-20220119003733398"></p>
+<h5 id="找回密码"><a href="#找回密码" class="headerlink" title="找回密码"></a>找回密码</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003801336.png" alt="image-20220119003801336"></p>
+<h5 id="查看公告详情"><a href="#查看公告详情" class="headerlink" title="查看公告详情"></a>查看公告详情</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003832637.png" alt="image-20220119003832637"></p>
+<h5 id="个人中心"><a href="#个人中心" class="headerlink" title="个人中心"></a>个人中心</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003907012.png" alt="image-20220119003907012"></p>
+<h5 id="查看个人信息"><a href="#查看个人信息" class="headerlink" title="查看个人信息"></a>查看个人信息</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003931967.png" alt="image-20220119003931967"></p>
+<h5 id="修改个人信息"><a href="#修改个人信息" class="headerlink" title="修改个人信息"></a>修改个人信息</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119003950116.png" alt="image-20220119003950116"></p>
+<h5 id="管理自己的联系方式"><a href="#管理自己的联系方式" class="headerlink" title="管理自己的联系方式"></a>管理自己的联系方式</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004014868.png" alt="image-20220119004014868"></p>
+<h5 id="发布商品"><a href="#发布商品" class="headerlink" title="发布商品"></a>发布商品</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004034074.png" alt="image-20220119004034074"></p>
+<h5 id="管理我的商品"><a href="#管理我的商品" class="headerlink" title="管理我的商品"></a>管理我的商品</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004059007.png" alt="image-20220119004059007"></p>
+<h5 id="查看自己的消息"><a href="#查看自己的消息" class="headerlink" title="查看自己的消息"></a>查看自己的消息</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004125370.png" alt="image-20220119004125370"></p>
+<h5 id="留言管理"><a href="#留言管理" class="headerlink" title="留言管理"></a>留言管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004145010.png" alt="image-20220119004145010"></p>
+<h5 id="给管理员留言"><a href="#给管理员留言" class="headerlink" title="给管理员留言"></a>给管理员留言</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004204044.png" alt="image-20220119004204044"></p>
+<h5 id="我的购物车"><a href="#我的购物车" class="headerlink" title="我的购物车"></a>我的购物车</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004254592.png" alt="image-20220119004254592"></p>
+<h5 id="注销登录"><a href="#注销登录" class="headerlink" title="注销登录"></a>注销登录</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004312028.png" alt="image-20220119004312028"></p>
+<h4 id="后台"><a href="#后台" class="headerlink" title="后台"></a>后台</h4><h5 id="首页-1"><a href="#首页-1" class="headerlink" title="首页"></a>首页</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004452355.png" alt="image-20220119004452355"></p>
+<h5 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004522381.png" alt="image-20220119004522381"></p>
+<h5 id="商品类别管理"><a href="#商品类别管理" class="headerlink" title="商品类别管理"></a>商品类别管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004537017.png" alt="image-20220119004537017"></p>
+<h5 id="商品管理"><a href="#商品管理" class="headerlink" title="商品管理"></a>商品管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004553399.png" alt="image-20220119004553399"></p>
+<h5 id="用户联系方式管理"><a href="#用户联系方式管理" class="headerlink" title="用户联系方式管理"></a>用户联系方式管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004631959.png" alt="image-20220119004631959"></p>
+<h5 id="用户留言管理"><a href="#用户留言管理" class="headerlink" title="用户留言管理"></a>用户留言管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004656637.png" alt="image-20220119004656637"></p>
+<h5 id="轮播图管理"><a href="#轮播图管理" class="headerlink" title="轮播图管理"></a>轮播图管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004715418.png" alt="image-20220119004715418"></p>
+<h5 id="公告管理"><a href="#公告管理" class="headerlink" title="公告管理"></a>公告管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004735171.png" alt="image-20220119004735171"></p>
+<h5 id="预订记录管理"><a href="#预订记录管理" class="headerlink" title="预订记录管理"></a>预订记录管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004754793.png" alt="image-20220119004754793"></p>
+<h5 id="用户消息管理"><a href="#用户消息管理" class="headerlink" title="用户消息管理"></a>用户消息管理</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004815923.png" alt="image-20220119004815923"></p>
+<h5 id="安全退出登录"><a href="#安全退出登录" class="headerlink" title="安全退出登录"></a>安全退出登录</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220119004835280.png" alt="image-20220119004835280"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/419.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/419.html" class="post-title-link" itemprop="url">HTML取消页面的左右滚动条</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-18 21:40:07" itemprop="dateCreated datePublished" datetime="2022-01-18T21:40:07+08:00">2022-01-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:21" itemprop="dateModified" datetime="2022-04-26T03:46:21+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>要取消滚动条，只需要将<code>&lt;body&gt;</code>标签样式的overflow-x或overflow-y设置为hidden即可，其中overflow-x为左右滚动条，overflow-y为上下滚动条，代码示例如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;zh-cn&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">&quot;overflow-x: hidden&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/418.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/418.html" class="post-title-link" itemprop="url">CKEditor设置编辑器的宽度以及高度</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-18 09:57:26" itemprop="dateCreated datePublished" datetime="2022-01-18T09:57:26+08:00">2022-01-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:24" itemprop="dateModified" datetime="2022-04-26T03:46:24+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>设置CKEditor编辑器宽度和高度的方法有两种：</p>
+<ol>
+<li>设置textarea标签的宽度和高度</li>
+<li>在CKEditor替换textarea的JavaScript代码中设置</li>
+</ol>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="设置textarea标签的宽度和高度"><a href="#设置textarea标签的宽度和高度" class="headerlink" title="设置textarea标签的宽度和高度"></a>设置textarea标签的宽度和高度</h4><p>rows属性是高度，cols属性是宽度，它们的值没有单位</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">id</span>=<span class="string">&quot;content&quot;</span> <span class="attr">name</span>=<span class="string">&quot;content&quot;</span> <span class="attr">rows</span>=<span class="string">&quot;30&quot;</span> <span class="attr">cols</span>=<span class="string">&quot;80&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="在CKEditor替换textarea的JavaScript代码中设置"><a href="#在CKEditor替换textarea的JavaScript代码中设置" class="headerlink" title="在CKEditor替换textarea的JavaScript代码中设置"></a>在CKEditor替换textarea的JavaScript代码中设置</h4><p><font color="#dd0000">如果上面的方法没有用，就使用此方法</font></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">    CKEDITOR.replace(<span class="string">&quot;contentGoods&quot;</span>, &#123;<span class="attr">height</span>: <span class="string">&#x27;240px&#x27;</span>, <span class="attr">width</span>: <span class="string">&#x27;100%&#x27;</span>&#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/417.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/417.html" class="post-title-link" itemprop="url">使用Thymeleaf的项目搜索时回显搜索的条件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-17 21:23:35" itemprop="dateCreated datePublished" datetime="2022-01-17T21:23:35+08:00">2022-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:27" itemprop="dateModified" datetime="2022-04-26T03:46:27+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>搜索后的新页面，一般情况下搜索条件的值都会被设置为空，但是如果想修改上一次搜索的条件再搜索，就需要获取到上一次的搜索条件</p>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><blockquote>
+<p>HTML代码（只有搜索form标签的代码，显示数据的代码已删除）</p>
+</blockquote>
+<p><code>th:value</code>获取上一次搜索条件的值</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/toGoodsManagePage&quot;</span> <span class="attr">method</span>=<span class="string">&quot;post&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 3px&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span> <span class="attr">id</span>=<span class="string">&quot;nameSearchGoods&quot;</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">th:value</span>=<span class="string">&quot;$&#123;name&#125;&quot;</span></span></span><br><span class="line"><span class="tag">               <span class="attr">placeholder</span>=<span class="string">&quot;请输入商品名称...&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;goodsTypeIdSearchGoods&quot;</span> <span class="attr">name</span>=<span class="string">&quot;goodsTypeId&quot;</span> <span class="attr">th:value</span>=<span class="string">&quot;$&#123;goodsTypeId&#125;&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">style</span>=<span class="string">&quot;width: 200px;margin-left: 2px&quot;</span> <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>选择商品类别...<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">th:each</span>=<span class="string">&quot;goodsType:$&#123;goodsTypeList&#125;&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;goodsType.name&#125;&quot;</span> <span class="attr">th:value</span>=<span class="string">&quot;$&#123;goodsType.id&#125;&quot;</span> <span class="attr">th:selected</span>=<span class="string">&quot;$&#123;goodsTypeId==goodsType.id&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;stateSearchGoods&quot;</span> <span class="attr">name</span>=<span class="string">&quot;state&quot;</span> <span class="attr">th:value</span>=<span class="string">&quot;$&#123;state&#125;&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px;margin-left: 2px&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>选择商品状态...<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;0&quot;</span> <span class="attr">th:selected</span>=<span class="string">&quot;$&#123;state==0&#125;&quot;</span>&gt;</span>未审核<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span> <span class="attr">th:selected</span>=<span class="string">&quot;$&#123;state==1&#125;&quot;</span>&gt;</span>上架中<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;2&quot;</span> <span class="attr">th:selected</span>=<span class="string">&quot;$&#123;state==2&#125;&quot;</span>&gt;</span>审核不通过<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;3&quot;</span> <span class="attr">th:selected</span>=<span class="string">&quot;$&#123;state==3&#125;&quot;</span>&gt;</span>已下架<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;4&quot;</span> <span class="attr">th:selected</span>=<span class="string">&quot;$&#123;state==4&#125;&quot;</span>&gt;</span>交易完成<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;isRecommendSearchGoods&quot;</span> <span class="attr">name</span>=<span class="string">&quot;isRecommend&quot;</span> <span class="attr">th:value</span>=<span class="string">&quot;$&#123;recommend&#125;&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 200px;margin-left: 2px&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">class</span>=<span class="string">&quot;form-control&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;&quot;</span>&gt;</span>商品是否被推荐...<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;0&quot;</span> <span class="attr">th:selected</span>=<span class="string">&quot;$&#123;recommend==0&#125;&quot;</span>&gt;</span>不推荐<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span> <span class="attr">th:selected</span>=<span class="string">&quot;$&#123;recommend==1&#125;&quot;</span>&gt;</span>被推荐<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary status-icon hint--top&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 2px&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;搜索&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-search&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;javascript:resetSearchGoodsValue()&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-info status-icon hint--top&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;重置&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-left: 2px&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fa fa-rotate-right&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Java代码（只保留了向页面传值的代码，其它业务代码已删除）</p>
+</blockquote>
+<p><code>ModelAndView.addObject(String 参数一,String 参数二)</code>方法向页面传值，参数一为键，参数二为值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 跳转到我的商品管理界面</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/toGoodsManagePage&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">toGoodsManagePage</span><span class="params">(HttpSession session, Goods searchGoods)</span> </span>&#123;</span><br><span class="line">    ModelAndView mav = <span class="keyword">new</span> ModelAndView();</span><br><span class="line">    <span class="keyword">if</span> (searchGoods.getName() != <span class="keyword">null</span>) &#123;</span><br><span class="line">        goodsQueryWrapper.like(<span class="string">&quot;name&quot;</span>, searchGoods.getName());</span><br><span class="line">        mav.addObject(<span class="string">&quot;name&quot;</span>, searchGoods.getName());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (searchGoods.getGoodsTypeId() != <span class="keyword">null</span>) &#123;</span><br><span class="line">        goodsQueryWrapper.eq(<span class="string">&quot;goodsTypeId&quot;</span>, searchGoods.getGoodsTypeId());</span><br><span class="line">        mav.addObject(<span class="string">&quot;goodsTypeId&quot;</span>, searchGoods.getGoodsTypeId());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (searchGoods.getState() != <span class="keyword">null</span>) &#123;</span><br><span class="line">        goodsQueryWrapper.eq(<span class="string">&quot;state&quot;</span>, searchGoods.getState());</span><br><span class="line">        mav.addObject(<span class="string">&quot;state&quot;</span>, searchGoods.getState());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (searchGoods.getIsRecommend() != <span class="keyword">null</span>) &#123;</span><br><span class="line">        goodsQueryWrapper.eq(<span class="string">&quot;isRecommend&quot;</span>, searchGoods.getIsRecommend());</span><br><span class="line">        mav.addObject(<span class="string">&quot;recommend&quot;</span>, searchGoods.getIsRecommend());</span><br><span class="line">    &#125;</span><br><span class="line">    mav.addObject(<span class="string">&quot;title&quot;</span>, <span class="string">&quot;我的商品管理--LeDao校园二手交易平台&quot;</span>);</span><br><span class="line">    mav.addObject(<span class="string">&quot;mainPage&quot;</span>, <span class="string">&quot;page/goodsManage&quot;</span>);</span><br><span class="line">    mav.addObject(<span class="string">&quot;mainPageKey&quot;</span>, <span class="string">&quot;#b&quot;</span>);</span><br><span class="line">    mav.setViewName(<span class="string">&quot;index&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> mav;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h4><p> <script type="text/javascript">    CKEDITOR.replace("contentGoods", {height: '240px', width: '100%'});</script>javascript</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/416.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/416.html" class="post-title-link" itemprop="url">Thymeleaf在一个页面嵌入另一个页面</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-17 19:22:45" itemprop="dateCreated datePublished" datetime="2022-01-17T19:22:45+08:00">2022-01-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:31" itemprop="dateModified" datetime="2022-04-26T03:46:31+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h3><p>向一个页面嵌入其它页面的情况一般有两种：</p>
+<ol>
+<li><p>被嵌入页面的名称不确定</p>
+<p>这种情况需要后端的介入，被嵌入页面的名称由后端传入，一般情况下使用Thymeleaf的项目都有一个主页面（要嵌入其它页面的页面，通常命名为index.html），我们可以在主页面上引入各种CSS、JS文件，被嵌入的页面也可以使用这些CSS、JS文件，这样做的好处是：统一管理CSS、JS文件</p>
+</li>
+<li><p>被嵌入页面的名称已确定</p>
+<p>这种情况不需要后端，被嵌入页面的名称直接写在要嵌入页面的页面上，如果多个页面上都有一部分代码是相同的，那么我们就可以将相同的代码抽取出来放到一个新页面上（也就是被嵌入的页面），然后在要嵌入的页面上嵌入新页面即可，这样做的好处是：使用嵌入页面前如果需要修改就要修改多个地方，而使用嵌入页面后只需要修改一个地方即可</p>
+</li>
+</ol>
+<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="名称不确定"><a href="#名称不确定" class="headerlink" title="名称不确定"></a>名称不确定</h4><blockquote>
+<p>主页面index.html（要嵌入页面的页面）</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--suppress ALL--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span> <span class="attr">th:text</span>=<span class="string">&quot;$&#123;title&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;short icon&quot;</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/static/images/favicon.ico&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">th:href</span>=<span class="string">&quot;@&#123;/static/css/hint.css&#125;&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/js/my.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">th:src</span>=<span class="string">&quot;@&#123;/static/ckeditor/ckeditor.js&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;width: 92%;margin-left: 4%&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">&quot;$&#123;mainPage&#125;::$&#123;mainPageKey&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>登录页面login.html（被嵌入的页面）</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--suppress ALL--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;b&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>java代码</p>
+</blockquote>
+<p>mainPage为被嵌入页面路径及名称，mainPageKey为被嵌入页面的<code>&lt;div&gt;</code>标签的id，index为主页面index.html的名称（省略后缀名即可）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 跳转到用户登录界面</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/toLoginPage&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">toLoginPage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    ModelAndView mav = <span class="keyword">new</span> ModelAndView();</span><br><span class="line">    mav.addObject(<span class="string">&quot;title&quot;</span>, <span class="string">&quot;用户登录--LeDao校园二手交易平台&quot;</span>);</span><br><span class="line">    mav.addObject(<span class="string">&quot;mainPage&quot;</span>, <span class="string">&quot;page/login&quot;</span>);</span><br><span class="line">    mav.addObject(<span class="string">&quot;mainPageKey&quot;</span>, <span class="string">&quot;#b&quot;</span>);</span><br><span class="line">    mav.setViewName(<span class="string">&quot;index&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> mav;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="名称已确定"><a href="#名称已确定" class="headerlink" title="名称已确定"></a>名称已确定</h4><blockquote>
+<p>要嵌入页面的页面（menuPersonalHubs为被嵌入页面的名称）</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--suppress ALL--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;b&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;row&quot;</span> <span class="attr">style</span>=<span class="string">&quot;margin-top: 5px&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-3&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">th:include</span>=<span class="string">&quot;common/menuPersonalHubs::#m&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;col-md-9&quot;</span>&gt;</span></span><br><span class="line">            </span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>menuPersonalHubs.html（被嵌入的页面）</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--suppress ALL--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span> <span class="attr">xmlns:th</span>=<span class="string">&quot;http://www.thymeleaf.org&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;m&quot;</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>被嵌入页面的<code>&lt;div&gt;</code>标签的id一定要和实际的对应哦，不然会出错</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/415.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/415.html" class="post-title-link" itemprop="url">改变Windows系统文件夹的样式及颜色</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-15 11:18:06" itemprop="dateCreated datePublished" datetime="2022-01-15T11:18:06+08:00">2022-01-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:35" itemprop="dateModified" datetime="2022-04-26T03:46:35+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="安装软件"><a href="#安装软件" class="headerlink" title="安装软件"></a>安装软件</h3><h4 id="下载链接"><a href="#下载链接" class="headerlink" title="下载链接"></a>下载链接</h4><p>百度网盘链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA">https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA</a></p>
+<p>提取码：<code>n0vf</code></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>解压后即可运行，解压后的文件夹有两个exe可执行文件：FolderPainter.exe和FolderPainter_x64.exe，64位系统使用FolderPainter_x64.exe，其它使用FolderPainter_x64.exe</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112414.png"></p>
+<h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="设置软件语言为中文"><a href="#设置软件语言为中文" class="headerlink" title="设置软件语言为中文"></a>设置软件语言为中文</h4><p>打开软件后，依次选择右下角的Menu、Languages、Chinese-Simplified即可</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112627.png" alt="2022-01-15 112627"></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20112558.png" alt="2022-01-15 112558"></p>
+<h4 id="安装颜色、样式、图标"><a href="#安装颜色、样式、图标" class="headerlink" title="安装颜色、样式、图标"></a>安装颜色、样式、图标</h4><p>要安装哪个就在左侧的选择框中给哪个打勾（下图只安装了颜色），然后点击安装即可（卸载的方法也一样）</p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20113019.png"></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>右键点击某个文件夹，然后选择<code>文件夹颜色</code>再选中自己喜欢的颜色即可，如果要恢复原状就选中<code>默认文件夹图标</code></p>
+<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2022-01-15%20113447.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/414.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/414.html" class="post-title-link" itemprop="url">MyBatis-Plus更新字段时无法设置为null值</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-12 18:31:10" itemprop="dateCreated datePublished" datetime="2022-01-12T18:31:10+08:00">2022-01-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:38" itemprop="dateModified" datetime="2022-04-26T03:46:38+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/" itemprop="url" rel="index"><span itemprop="name">持久层框架</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h3><p>我们在更新某个用户信息时，如果要将该用户信息的某个字段更新为null值，直接设置用户实体的对应属性为null值是不行的，因为MyBatis-Plus默认看到null值就不更新该字段</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在实体类的对应属性上添加注解<code>@TableField(updateStrategy = FieldStrategy.IGNORED)</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.entity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.FieldStrategy;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableField;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableId;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.TableName;</span><br><span class="line"><span class="keyword">import</span> lombok.Data;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Date;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 留言实体类</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-01-12 13:40</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@TableName(value = &quot;t_contact&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Contact</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 编号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableId</span></span><br><span class="line">    <span class="keyword">private</span> Integer id;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 留言内容</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String content;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 答复</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(updateStrategy = FieldStrategy.IGNORED)</span></span><br><span class="line">    <span class="keyword">private</span> String reply;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 留言时间</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Date time;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 留言用户id（普通用户）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;userId&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer userId;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 回复用户id（管理员）</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@TableField(value = &quot;userIdReply&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> Integer userIdReply;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/413.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
+      <meta itemprop="name" content="LeDao">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LeDao's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/413.html" class="post-title-link" itemprop="url">关于Ajax无法给请求方法外面的变量赋值</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-01-10 11:37:14" itemprop="dateCreated datePublished" datetime="2022-01-10T11:37:14+08:00">2022-01-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-04-26 03:46:40" itemprop="dateModified" datetime="2022-04-26T03:46:40+08:00">2022-04-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>$.ajax默认是异步的， 异步回调在js主线程执行结束后才会被执行</p>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p> 如果确实需要获取ajax的结果赋值给请求方法外面的变量，那么可以ajax多加一个参数：<code>async=false</code>，就会同步执行</p>
+<h3 id="Ajax完整请求代码"><a href="#Ajax完整请求代码" class="headerlink" title="Ajax完整请求代码"></a>Ajax完整请求代码</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkRegisterValue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> imageCode;</span><br><span class="line">    $.ajax(&#123;</span><br><span class="line">        <span class="attr">url</span>: <span class="string">&quot;/user/getRegisterCode&quot;</span>,</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&quot;get&quot;</span>,</span><br><span class="line">        <span class="attr">async</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">success</span>: <span class="function"><span class="keyword">function</span> (<span class="params">result</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (result.success) &#123;</span><br><span class="line">                imageCode = result.imageCode;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/17/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/">59</a><a class="extend next" rel="next" href="/page/19/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
     }
-    detectApple()
-    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3265865_vc1sierqa1.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeDao's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">LeDao's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/422.html" title="HTML特殊字符编码对照表"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/422.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML特殊字符编码对照表"></a></div><div class="recent-post-info"><a class="article-title" href="/422.html" title="HTML特殊字符编码对照表">HTML特殊字符编码对照表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-21T05:48:28.000Z" title="发表于 2022-01-21 13:48:28">2022-01-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">
-
-
-特殊符号
-命名实体
-十进制编码
-特殊符号
-命名实体
-十进制编码
-特殊符号
-命名实体
-十进制编码
-
-
-
-Α
-&amp;Alpha;
-&amp;#913;
-Β
-&amp;Beta;
-&amp;#914;
-Γ
-&amp;Gamma;
-&amp;#915;
-
-
-Δ
-&amp;Delta;
-&amp;#916;
-Ε
-&amp;Epsilon;
-&amp;Epsilon;
-Ζ
-&amp;Zeta;
-&amp;#918;
-
-
-Η
-&amp;Eta;
-&amp;#919;
-Θ
-&amp;Theta;
-&amp;#920;
-Ι
-&amp;Iota;
-&amp;#921;
-
-
-Κ
-&amp;Kappa;
-&amp;#922;
-Λ
-&amp;Lambda;
-&amp;#923;
-Μ
-&amp;Mu;
-&amp;#924;
-
-
-Ν
-&amp;Nu;
-&amp;#925;
-Ξ
-&amp;Xi;
-&amp;#926;
-Ο
-&amp;Omicron;
-&amp;#927;
-
-
-Π
-&amp;Pi;
-&amp;#928;
-Ρ
-&amp;Rho;
-&amp;#929;
-Σ
-&amp;Sigma;
-&amp;#93 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/421.html" title="EasyUI Combobox组合框从Java后端获取数据"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/421.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EasyUI Combobox组合框从Java后端获取数据"></a></div><div class="recent-post-info"><a class="article-title" href="/421.html" title="EasyUI Combobox组合框从Java后端获取数据">EasyUI Combobox组合框从Java后端获取数据</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-19T09:08:17.000Z" title="发表于 2022-01-19 17:08:17">2022-01-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">代码HTML代码editable=&quot;true&quot;代表该组合框可以编辑，valueField:&#39;id&#39;代表每个选项的值对应的是goodsType的id，textField:&#39;name&#39;代表我们看到的文本是goodsType的name
-1&amp;nbsp;商品类型:&amp;nbsp;&lt;input class=&quot;easyui-combobox&quot; id=&quot;s_goodsTypeId&quot; style=&quot;width: 140px&quot; editable=&quot;true&quot; data-options=&quot;panelHeight:&#x27;auto&#x27;,valueField:&#x27;id&#x27;,textField:&#x27;name&#x27;,url:&#x27;/admin/goodsType/comboList&#x27;&quot;/&gt;
-
-Java代码下面只展示GoodsType实体类和组合框请求的方法comboList，Goods ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/420.html" title="校园二手交易平台"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/420.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="校园二手交易平台"></a></div><div class="recent-post-info"><a class="article-title" href="/420.html" title="校园二手交易平台">校园二手交易平台</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-18T16:04:47.000Z" title="发表于 2022-01-19 00:04:47">2022-01-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/">个人项目</a></span></div><div class="content">项目地址GitHub地址：a6678696/SecondHandTrade: 校园二手交易平台 (github.com)
-使用的技术本项目核心技术采用Spring Boot+Mybatis-Plus；开发工具 idea；数据库MySQL5.6；模版引擎采用的是Thymeleaf；在线编辑器CKEditor；基于JavaMail实现用QQ邮箱发送邮件；前台界面采用了Bootstrap4框架；后台界面采用了jQuery EasyUI框架；Redis存储用户购物车信息；Gson处理JSON数据；Quartz定时任务；
-功能介绍普通用户
-添加商品到购物车、预订商品
-前台登录、通过邮箱接受验证码注册和找回密码
-查看和修改个人信息
-发布商品和管理自己发布的商品（修改、删除、查询、上架、下架、完成交易、取消商品被预订）
-管理自己的联系方式（添加、修改、删除、查询）
-查看预订记录以及取消预订
-查看自己的消息
-给管理员留言以及管理自己的留言（查询、修改、删除）
-
-管理员
-管理普通用户（添加、修改、删除、查询、封禁与取消封禁）
-商品类别管理（添加、修改、删除、查询）
-商品管理（查询、删除、审核商品、推荐商 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/419.html" title="HTML取消页面的左右滚动条"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/419.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HTML取消页面的左右滚动条"></a></div><div class="recent-post-info"><a class="article-title" href="/419.html" title="HTML取消页面的左右滚动条">HTML取消页面的左右滚动条</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-18T13:40:07.000Z" title="发表于 2022-01-18 21:40:07">2022-01-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">要取消滚动条，只需要将&lt;body&gt;标签样式的overflow-x或overflow-y设置为hidden即可，其中overflow-x为左右滚动条，overflow-y为上下滚动条，代码示例如下：
-12345678910&lt;!DOCTYPE html&gt;&lt;html lang=&quot;zh-cn&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;title&lt;/title&gt;&lt;/head&gt;&lt;body style=&quot;overflow-x: hidden&quot;&gt;&lt;/body&gt;&lt;/html&gt;
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/418.html" title="CKEditor设置编辑器的宽度以及高度"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/418.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CKEditor设置编辑器的宽度以及高度"></a></div><div class="recent-post-info"><a class="article-title" href="/418.html" title="CKEditor设置编辑器的宽度以及高度">CKEditor设置编辑器的宽度以及高度</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-18T01:57:26.000Z" title="发表于 2022-01-18 09:57:26">2022-01-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">概述设置CKEditor编辑器宽度和高度的方法有两种：
-
-设置textarea标签的宽度和高度
-在CKEditor替换textarea的JavaScript代码中设置
-
-实现设置textarea标签的宽度和高度rows属性是高度，cols属性是宽度，它们的值没有单位
-1&lt;textarea id=&quot;content&quot; name=&quot;content&quot; rows=&quot;30&quot; cols=&quot;80&quot;&gt;&lt;/textarea&gt;
-
-在CKEditor替换textarea的JavaScript代码中设置如果上面的方法没有用，就使用此方法
-123&lt;script type=&quot;text/javascript&quot;&gt;    CKEDITOR.replace(&quot;contentGoods&quot;, &#123;height: &#x27;240px&#x27;, width: &#x27;100%&#x27;&#125;);&lt;/script&gt;
-</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/417.html" title="使用Thymeleaf的项目搜索时回显搜索的条件"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/417.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Thymeleaf的项目搜索时回显搜索的条件"></a></div><div class="recent-post-info"><a class="article-title" href="/417.html" title="使用Thymeleaf的项目搜索时回显搜索的条件">使用Thymeleaf的项目搜索时回显搜索的条件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-17T13:23:35.000Z" title="发表于 2022-01-17 21:23:35">2022-01-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">概述搜索后的新页面，一般情况下搜索条件的值都会被设置为空，但是如果想修改上一次搜索的条件再搜索，就需要获取到上一次的搜索条件
-实现过程代码
-HTML代码（只有搜索form标签的代码，显示数据的代码已删除）
-
-th:value获取上一次搜索条件的值
-123456789101112131415161718192021222324252627282930313233343536&lt;form action=&quot;/toGoodsManagePage&quot; method=&quot;post&quot;&gt;    &lt;div class=&quot;row&quot; style=&quot;margin-left: 3px&quot;&gt;        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;nameSearchGoods&quot; name=&quot;name&quot; style=&quot;width: 200px&quot;              ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/416.html" title="Thymeleaf在一个页面嵌入另一个页面"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/416.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Thymeleaf在一个页面嵌入另一个页面"></a></div><div class="recent-post-info"><a class="article-title" href="/416.html" title="Thymeleaf在一个页面嵌入另一个页面">Thymeleaf在一个页面嵌入另一个页面</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-17T11:22:45.000Z" title="发表于 2022-01-17 19:22:45">2022-01-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">用法向一个页面嵌入其它页面的情况一般有两种：
-
-被嵌入页面的名称不确定
-这种情况需要后端的介入，被嵌入页面的名称由后端传入，一般情况下使用Thymeleaf的项目都有一个主页面（要嵌入其它页面的页面，通常命名为index.html），我们可以在主页面上引入各种CSS、JS文件，被嵌入的页面也可以使用这些CSS、JS文件，这样做的好处是：统一管理CSS、JS文件
-
-被嵌入页面的名称已确定
-这种情况不需要后端，被嵌入页面的名称直接写在要嵌入页面的页面上，如果多个页面上都有一部分代码是相同的，那么我们就可以将相同的代码抽取出来放到一个新页面上（也就是被嵌入的页面），然后在要嵌入的页面上嵌入新页面即可，这样做的好处是：使用嵌入页面前如果需要修改就要修改多个地方，而使用嵌入页面后只需要修改一个地方即可
-
-
-实现过程名称不确定
-主页面index.html（要嵌入页面的页面）
-
-123456789101112131415161718192021&lt;!DOCTYPE html&gt;&lt;!--suppress ALL--&gt;&lt;html lang=&quot;en&quot; xmln ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/415.html" title="改变Windows系统文件夹的样式及颜色"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/415.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="改变Windows系统文件夹的样式及颜色"></a></div><div class="recent-post-info"><a class="article-title" href="/415.html" title="改变Windows系统文件夹的样式及颜色">改变Windows系统文件夹的样式及颜色</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-15T03:18:06.000Z" title="发表于 2022-01-15 11:18:06">2022-01-15</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">安装软件下载链接百度网盘链接：https://pan.baidu.com/s/1wiMAMEtUgJ_lQyqo-izIMA
-提取码：n0vf
-安装解压后即可运行，解压后的文件夹有两个exe可执行文件：FolderPainter.exe和FolderPainter_x64.exe，64位系统使用FolderPainter_x64.exe，其它使用FolderPainter_x64.exe
-
-操作步骤设置软件语言为中文打开软件后，依次选择右下角的Menu、Languages、Chinese-Simplified即可
-
-
-安装颜色、样式、图标要安装哪个就在左侧的选择框中给哪个打勾（下图只安装了颜色），然后点击安装即可（卸载的方法也一样）
-
-使用右键点击某个文件夹，然后选择文件夹颜色再选中自己喜欢的颜色即可，如果要恢复原状就选中默认文件夹图标
-
-</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/414.html" title="MyBatis-Plus更新字段时无法设置为null值"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/414.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MyBatis-Plus更新字段时无法设置为null值"></a></div><div class="recent-post-info"><a class="article-title" href="/414.html" title="MyBatis-Plus更新字段时无法设置为null值">MyBatis-Plus更新字段时无法设置为null值</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-12T10:31:10.000Z" title="发表于 2022-01-12 18:31:10">2022-01-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/">持久层框架</a></span></div><div class="content">问题概述我们在更新某个用户信息时，如果要将该用户信息的某个字段更新为null值，直接设置用户实体的对应属性为null值是不行的，因为MyBatis-Plus默认看到null值就不更新该字段
-解决办法在实体类的对应属性上添加注解@TableField(updateStrategy = FieldStrategy.IGNORED)
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950package com.ledao.entity;import com.baomidou.mybatisplus.annotation.FieldStrategy;import com.baomidou.mybatisplus.annotation.TableField;import com.baomidou.mybatisplus.annotation.TableId;import com.baomidou.mybatisplus.annotation.TableName;impo ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/413.html" title="关于Ajax无法给请求方法外面的变量赋值"><img class="post_bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/413.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关于Ajax无法给请求方法外面的变量赋值"></a></div><div class="recent-post-info"><a class="article-title" href="/413.html" title="关于Ajax无法给请求方法外面的变量赋值">关于Ajax无法给请求方法外面的变量赋值</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-01-10T03:37:14.000Z" title="发表于 2022-01-10 11:37:14">2022-01-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="content">原因$.ajax默认是异步的， 异步回调在js主线程执行结束后才会被执行
-解决办法 如果确实需要获取ajax的结果赋值给请求方法外面的变量，那么可以ajax多加一个参数：async=false，就会同步执行
-Ajax完整请求代码1234567891011121314function checkRegisterValue() &#123;    let imageCode;    $.ajax(&#123;        url: &quot;/user/getRegisterCode&quot;,        type: &quot;get&quot;,        async: false,        success: function (result) &#123;            if (result.success) &#123;                imageCode = result.imageCode;            &#125;        &#125;    &#125;);&#125;
-</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/17/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/#content-inner">17</a><span class="page-number current">18</span><a class="page-number" href="/page/19/#content-inner">19</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/#content-inner">59</a><a class="extend next" rel="next" href="/page/19/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LeDao</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/a6678696"><i></i><span>To My GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">接Java毕业设计和课设，便宜靠谱，需要的加Q：3519577180</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/590.html" title="Nginx重新部署SSL证书"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/590.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx重新部署SSL证书"/></a><div class="content"><a class="title" href="/590.html" title="Nginx重新部署SSL证书">Nginx重新部署SSL证书</a><time datetime="2024-10-07T16:39:44.000Z" title="发表于 2024-10-08 00:39:44">2024-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/589.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"/></a><div class="content"><a class="title" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法">VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</a><time datetime="2024-03-09T13:43:26.000Z" title="发表于 2024-03-09 21:43:26">2024-03-09</time></div></div></div></div><div class="card-widget" id="card-newest-comments"><div class="item-headline"><i class="fas fa-comment-dots"></i><span>最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">590</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-07-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">258.5k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-01T18:48:08.040Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Algolia</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/fancybox.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.js"></script><script>function panguFn () {
-  if (typeof pangu === 'object') pangu.autoSpacingPage()
-  else {
-    getScript('https://image.zoutl.cn/hexo-blog/file/source/pangu.min.js')
-      .then(() => {
-        pangu.autoSpacingPage()
-      })
-  }
-}
-
-function panguInit () {
-  if (true){
-    GLOBAL_CONFIG_SITE.isPost && panguFn()
-  } else {
-    panguFn()
-  }
-}
-
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://image.zoutl.cn/hexo-blog/file/source/algoliasearch-lite.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
-
-  }
-}
-window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function subtitleType () {
-  fetch('https://v1.hitokoto.cn')
-    .then(response => response.json())
-    .then(data => {
-      if (true) {
-        const from = '出自 ' + data.from
-        const sub = []
-        sub.unshift(data.hitokoto, from)
-        window.typed = new Typed('#subtitle', {
-          strings: sub,
-          startDelay: 300,
-          typeSpeed: 150,
-          loop: true,
-          backSpeed: 50,
-        })
-      } else {
-        document.getElementById('subtitle').innerHTML = data.hitokoto
-      }
-    })
-}
-
-if (true) {
-  if (typeof Typed === 'function') {
-    subtitleType()
-  } else {
-    getScript('https://image.zoutl.cn/hexo-blog/file/source/typed.min.js').then(subtitleType)
-  }
-} else {
-  subtitleType()
-}
-</script></div><script>window.addEventListener('load', () => {
-  const changeContent = (content) => {
-    if (content === '') return content
-
-    content = content.replace(/<img.*?src="(.*?)"?[^\>]+>/ig, '[图片]') // replace image link
-    content = content.replace(/<a[^>]+?href=["']?([^"']+)["']?[^>]*>([^<]+)<\/a>/gi, '[链接]') // replace url
-    content = content.replace(/<pre><code>.*?<\/pre>/gi, '[代码]') // replace code
-    content = content.replace(/<[^>]+>/g,"") // remove html tag
-
-    if (content.length > 150) {
-      content = content.substring(0,150) + '...'
-    }
-    return content
-  }
-
-  const findTrueUrl = (array) => {
-    Promise.all(array.map(item =>
-      fetch(item.url).then(resp => resp.json()).then(data => {
-        const urlArray = data.body.match(/(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?/ig)
-        if (data.user.login === 'utterances-bot') {
-          return urlArray.pop()
-        } else {
-          return urlArray.shift()
-        }
-      })
-    )).then(res => {
-        array = array.map((i,index)=> {
-          return {
-            ...i,
-            url: res[index]
-          }
-        })
-
-        saveToLocal.set('github-newest-comments', JSON.stringify(array), 10/(60*24))
-        generateHtml(array)
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
   }
+</script>
 
-  const getComment = () => {
-    fetch('https://api.github.com/repos/a6678696/a6678696.github.io/issues/comments?sort=updated&direction=desc&per_page=6&page=1',{
-      "headers": {
-        Accept: 'application/vnd.github.v3.html+json'
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        const githubArray = data.map(item => {
-          return {
-            'avatar': item.user.avatar_url,
-            'content': changeContent(item.body_html),
-            'nick': item.user.login,
-            'url': item.issue_url,
-            'date': item.updated_at,
-            'githubUrl': item.html_url
-          }
-        })
-        findTrueUrl(githubArray)
-      }).catch(e => {
-        const $dom = document.querySelector('#card-newest-comments .aside-list')
-        $dom.innerHTML= "无法获取评论，请确认相关配置是否正确"
-      })
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="LeDao"
+      src="https://image.zoutl.cn/hexo-blog/images/logo.png">
+  <p class="site-author-name" itemprop="name">LeDao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">590</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">99</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/a6678696" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a6678696" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1203007469@qq.com" title="E-Mail → mailto:1203007469@qq.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        <div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heartbeat"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LeDao</span>
+</div>
+<div>
+    <span style="text-align: left;display: inline-block;vertical-align: middle;">本网站由 </span>
+	<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src='https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png' style="height: 30px;vertical-align: middle;display: inline-block;"></a>
+	<span style="text-align: left;display: inline-block;vertical-align: middle;">提供CDN加速/云存储服务</span>
+</div>
+<div class="id111">
+    <span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a></span>
+	<img src='https://image.zoutl.cn/hexo-blog/images/beian.png' style="vertical-align: middle;display: inline-block;">
+	<span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='255,51,51' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
   }
+});
+</script>
 
-  const generateHtml = array => {
-    let result = ''
 
-    if (array.length) {
-      for (let i = 0; i < array.length; i++) {
-        result += '<div class=\'aside-list-item\'>'
 
-        if (true) {
-          const name = 'src'
-          result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
-        }
 
-        result += `<div class='content'>
-        <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
-        <div class='name'><span>${array[i].nick} / </span><time datetime="${array[i].date}">${btf.diffDate(array[i].date, true)}</time></div>
-        </div></div>`
-      }
-    } else {
-      result += '没有评论'
-    }
+  
 
-    let $dom = document.querySelector('#card-newest-comments .aside-list')
-    $dom.innerHTML= result
-    window.lazyLoadInstance && window.lazyLoadInstance.update()
-    window.pjax && window.pjax.refresh($dom)
-  }
+  
 
-  const newestCommentInit = () => {
-    if (document.querySelector('#card-newest-comments .aside-list')) {
-      const data = saveToLocal.get('github-newest-comments')
-      if (data) {
-        generateHtml(JSON.parse(data))
-      } else {
-        getComment()
-      }
-    }
-  }
 
-  newestCommentInit()
-  document.addEventListener('pjax:complete', newestCommentInit)
-})</script><script defer="defer" id="ribbon" src="https://image.zoutl.cn/hexo-blog/file/source/canvas-ribbon.min.js" size="222" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
-POWERMODE.shake = true;
-POWERMODE.mobile = false;
-document.body.addEventListener('input', POWERMODE);
-</script><script id="click-heart" src="https://image.zoutl.cn/hexo-blog/file/source/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</body>
+</html>
