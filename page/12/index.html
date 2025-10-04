@@ -1,1461 +1,237 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.zoutl.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":6,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>LeDao's Blog</title><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="LeDao&#39;s Blog">
 <meta property="og:url" content="https://blog.zoutl.cn/page/12/index.html">
 <meta property="og:site_name" content="LeDao&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
 <meta property="article:author" content="LeDao">
 <meta property="article:tag" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://blog.zoutl.cn/page/12/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>LeDao's Blog</title>
-  
-
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">LeDao's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-主页">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-项目">
-
-    <a href="/project/" rel="section"><i class="fa fa-paw fa-fw"></i>项目</a>
-
-  </li>
-        <li class="menu-item menu-item-友链">
-
-    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-
-  <a href="https://github.com/a6678696" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
+<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/page/12/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/482.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/482.html" class="post-title-link" itemprop="url">CentOS7忘记MySQL密码后重置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-28 03:47:52" itemprop="dateCreated datePublished" datetime="2022-03-28T03:47:52+08:00">2022-03-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-02-18 11:26:49" itemprop="dateModified" datetime="2023-02-18T11:26:49+08:00">2023-02-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>MySQL是不能查看密码的，如果忘记了就只能重置了</p>
-<h3 id="重置过程"><a href="#重置过程" class="headerlink" title="重置过程"></a>重置过程</h3><ol>
-<li><p>先停止MySQL</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure></li>
-<li><p>修改<code>my.cnf</code>，路径为<code>/ect/my.cnf</code>，在[mysqld]下面添加<code>skip-grant-tables</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220328040522194.png" alt="image-20220328040522194"></p>
-</li>
-<li><p>启动MySQL</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></li>
-<li><p>使用下面命令进入MySQL命令行，提示要输入密码直接按回车键即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p</span><br></pre></td></tr></table></figure></li>
-<li><p>切换到mysql数据库</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use mysql</span><br></pre></td></tr></table></figure></li>
-<li><p>修改密码</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update user <span class="built_in">set</span> authentication_string=PASSWORD(<span class="string">&quot;这里填密码&quot;</span>) <span class="built_in">where</span> user=<span class="string">&#x27;root&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
-<li><p>刷新授权列表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></li>
-<li><p>退出</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure></li>
-<li><p>修改<code>my.cnf</code>，路径为<code>/ect/my.cnf</code>，删除[mysqld]下面之前添加的<code>skip-grant-tables</code>，或者在它前面加<code>#</code>符号注释掉</p>
-</li>
-<li><p>重启MySQL，新密码就生效了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><h4 id="操作MySQL命令"><a href="#操作MySQL命令" class="headerlink" title="操作MySQL命令"></a>操作MySQL命令</h4><p>CentOS7操作MySQL命令的一些命令如下：</p>
-<blockquote>
-<p>查看MySQL运行状态</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>停止MySQL</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>启动MySQL</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>重启MySQL</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
-
-<h4 id="Windows系统修改密码"><a href="#Windows系统修改密码" class="headerlink" title="Windows系统修改密码"></a>Windows系统修改密码</h4><p>如果是Windows系统要修改MySQL的密码，可以参考博客：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/Shao_jiaxiang/article/details/123405067">MySQL忘记密码怎么办？MySQL修改密码（简单有效哦）_mysql忘记密码怎么修改密码_酷酷的扫地僧的博客-CSDN博客</a>，需要注意的是登录MySQL时，要先进入bin文件夹，然后执行<code>.\mysql -uroot -p</code>命令，而不是像博客一样，不然可能会报错：<font color="#dd0000">mysql : 无法将“mysql”项识别为 cmdlet、函数、脚本文件或可运行程序的名称。请检查名称的拼写，如果包括路径，请确保路径正确，然后再试一次</font></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/481.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/481.html" class="post-title-link" itemprop="url">使用AdBlock屏蔽掉GitHub上一些让人恶心的仓库</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-26 00:11:10" itemprop="dateCreated datePublished" datetime="2022-03-26T00:11:10+08:00">2022-03-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:42:09" itemprop="dateModified" datetime="2022-04-26T03:42:09+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" itemprop="url" rel="index"><span itemprop="name">版本控制</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>GitHub虽然好用，但是上面有不少境外黑恶势力恶意造谣抹黑中国的仓库，看到了就让人恶心</p>
-<p>GitHub的屏蔽功能并没什么卵用，举报也没用，纯属浪费时间，但是我们可以通过<code>AdBlock</code>或<code>AdBlock Plus</code>插件进行屏蔽这些仓库的所有者</p>
-<p>下面的方法只实现了屏蔽掉搜索结果中的仓库，但还是可以直接通过链接访问这些仓库，不过这已经可以实现这些仓库不会出现在我们眼前，污了我们的眼睛</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h4><p>下面有两个下载地址，根据自己的情况选择：</p>
-<ol>
-<li>谷歌插件商店地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://chrome.google.com/webstore/detail/adblock-%E2%80%94-best-ad-blocker/gighmmpiobklfepjocnamgkkbiglidom?hl=zh">AdBlock — 最佳广告拦截工具 - Chrome 网上应用店 (google.com)</a></li>
-<li>扩展迷下载地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.extfans.com/productivity/gighmmpiobklfepjocnamgkkbiglidom/">https://www.extfans.com/productivity/gighmmpiobklfepjocnamgkkbiglidom/</a></li>
-</ol>
-<h4 id="添加拦截规则"><a href="#添加拦截规则" class="headerlink" title="添加拦截规则"></a>添加拦截规则</h4><p>点击工具栏的AdBlock的图标，打开选项</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220326002623430.png" alt="image-20220326002623430"></p>
-<p>添加自定义规则（下面列举几个常见的，每一条规则的第二个括号内就是仓库所有者的用户名，根据实际情况填写，发现其它的继续添加即可），最后保存即可，这样就可以在搜索结果中屏蔽掉这些仓库的所有者了，舒服！！</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">github.com#?#li.repo-list-item.public.source</span>:<span class="string">-abp-has(a:-abp-contains(cirosantilli))</span></span><br><span class="line"><span class="meta">github.com#?#li.repo-list-item.public.source</span>:<span class="string">-abp-has(a:-abp-contains(cheezcharmer))</span></span><br><span class="line"><span class="meta">github.com#?#li.repo-list-item.public.source</span>:<span class="string">-abp-has(a:-abp-contains(zaohmeing))</span></span><br><span class="line"><span class="meta">github.com#?#li.repo-list-item.public.source</span>:<span class="string">-abp-has(a:-abp-contains(zhaohmng-outlook-com))</span></span><br><span class="line"><span class="meta">github.com#?#li.repo-list-item.public.source</span>:<span class="string">-abp-has(a:-abp-contains(coding-stuffs))</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220326002854346.png" alt="image-20220326002854346"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.zhihu.com/question/388634161">如果举报github上的这种情况？ - 知乎 (zhihu.com)</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/480.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/480.html" class="post-title-link" itemprop="url">使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-25 14:19:53" itemprop="dateCreated datePublished" datetime="2022-03-25T14:19:53+08:00">2022-03-25</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:42:13" itemprop="dateModified" datetime="2022-04-26T03:42:13+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>如果需要执行多条命令才可以达到目的，都可以使用批处理脚本来提高工作效率，本博客主要实现：一键部署hexo博客以及一键上传代码到GitHub</p>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="一键部署hexo博客"><a href="#一键部署hexo博客" class="headerlink" title="一键部署hexo博客"></a>一键部署hexo博客</h4><p>新建一个<code>.bat</code>文件，命名为：<code>一键部署.bat</code>，内容如下：（我的博客使用了algolia搜索，如果没有使用就删除下面的<code>hexo algolia</code>）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line">hexo g&amp;&amp;hexo algolia&amp;&amp;hexo d</span><br></pre></td></tr></table></figure>
-
-<h4 id="一键上传代码到GitHub"><a href="#一键上传代码到GitHub" class="headerlink" title="一键上传代码到GitHub"></a>一键上传代码到GitHub</h4><p>先配置GitHub的SSH Key，配置步骤查看博客：<a href="https://blog.zoutl.cn/236.html">GitHub 配置 SSH Key | LeDao 的博客 (zoutl.cn)</a></p>
-<p>新建一个<code>.bat</code>文件，命名为<code>一键上传到GitHub.bat</code>：，内容如下：（<code>chcp 65001</code>是为了解决输出中文乱码）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">chcp 65001</span><br><span class="line"></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;1.进入要上传的文件hexo-blog&quot;</span></span><br><span class="line"><span class="built_in">cd</span> E:\hexo-blog</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;2.添加到本地仓库&quot;</span></span><br><span class="line">git add .</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;3.设置提交信息&quot;</span></span><br><span class="line"><span class="built_in">set</span> now=%date% %time%</span><br><span class="line">git commit -m <span class="string">&quot;%now%&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;4.开始push&quot;</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/479.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/479.html" class="post-title-link" itemprop="url">Hexo的Butterfly主题使用Algolia搜索</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-23 20:02:27" itemprop="dateCreated datePublished" datetime="2022-03-23T20:02:27+08:00">2022-03-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:42:16" itemprop="dateModified" datetime="2022-04-26T03:42:16+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">Hexo博客</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><p>在hexo博客的根目录打开<code>Git Bash</code>安装<code>hexo-algoliasearch</code>插件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
-
-<p>然后查看根目录的<code>package.json</code>文件，查看是否安装成功，出现插件名称就说明安装插件成功</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323200738339.png" alt="image-20220323200738339"></p>
-<h3 id="注册Algolia账号"><a href="#注册Algolia账号" class="headerlink" title="注册Algolia账号"></a>注册Algolia账号</h3><p>网址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.algolia.com/">Site Search &amp; Discovery powered by AI | Algolia</a></p>
-<h3 id="创建应用"><a href="#创建应用" class="headerlink" title="创建应用"></a>创建应用</h3><h4 id="打开创建页面"><a href="#打开创建页面" class="headerlink" title="打开创建页面"></a>打开创建页面</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323201316692.png" alt="image-20220323201316692"></p>
-<h4 id="填写应用信息"><a href="#填写应用信息" class="headerlink" title="填写应用信息"></a>填写应用信息</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323201515572.png" alt="image-20220323201515572"></p>
-<h4 id="选择相关节点"><a href="#选择相关节点" class="headerlink" title="选择相关节点"></a>选择相关节点</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323201811493.png" alt="image-20220323201811493"></p>
-<h4 id="勾选同意"><a href="#勾选同意" class="headerlink" title="勾选同意"></a>勾选同意</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323201932407.png" alt="image-20220323201932407"></p>
-<h3 id="获取API-Keys"><a href="#获取API-Keys" class="headerlink" title="获取API Keys"></a>获取API Keys</h3><p>在控制台主页，选择刚刚创建的应用，查看它的API Keys</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323202146576.png" alt="image-20220323202146576"></p>
-<p>获取下图的三个</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323202335997.png" alt="image-20220323202335997"></p>
-<h3 id="开始配置"><a href="#开始配置" class="headerlink" title="开始配置"></a>开始配置</h3><p>在hexo根目录下的<code>_config.yml</code>配置文件添加以下代码，appId、apiKey、adminApiKey、indexName根据自己的情况填写</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins</span>:<span class="string"></span></span><br><span class="line">  <span class="meta">-</span> <span class="string">hexo-algoliasearch</span></span><br><span class="line"></span><br><span class="line"><span class="attr">algolia</span>:<span class="string"></span></span><br><span class="line">  <span class="attr">appId</span>: <span class="string">&quot;0Z2Q111FG111&quot;</span></span><br><span class="line">  <span class="attr">apiKey</span>: <span class="string">&quot;079e96e1d3e11111116bf59011&quot;</span></span><br><span class="line">  <span class="attr">adminApiKey</span>: <span class="string">&quot;9e2f194f9f28111111199ce53111&quot;</span></span><br><span class="line">  <span class="attr">chunkSize</span>: <span class="string">5000</span></span><br><span class="line">  <span class="attr">indexName</span>: <span class="string">&quot;hexo_blog&quot;</span></span><br><span class="line">  <span class="attr">fields</span>:<span class="string"></span></span><br><span class="line">    <span class="meta">-</span> <span class="string">content:strip:truncate,0,200</span></span><br><span class="line">    <span class="meta">-</span> <span class="string">tags</span></span><br><span class="line">    <span class="meta">-</span> <span class="string">permalink</span></span><br><span class="line">    <span class="meta">-</span> <span class="string">excerpt:strip</span></span><br><span class="line">    <span class="meta">-</span> <span class="string">title</span></span><br><span class="line">    <span class="meta">-</span> <span class="string">categories</span></span><br></pre></td></tr></table></figure>
-
-<p>修改Butterfly主题的<code>_config.yml</code>配置文件</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Algolia search</span></span><br><span class="line"><span class="attr">algolia_search</span>:<span class="string"></span></span><br><span class="line">  <span class="attr">enable</span>: <span class="string">true</span></span><br><span class="line">  <span class="attr">hits</span>:<span class="string"></span></span><br><span class="line">    <span class="attr">per_page</span>: <span class="string">6</span></span><br></pre></td></tr></table></figure>
-
-<p>接下来需要将搜索方式设置为按回车键后才搜索，要不然每输入一个字符就实时搜索一次太浪费Algolia的搜索次数了，Algolia的免费次数每个月只有10000次，实时搜索很容易把次数用光，首先打开<code>algolia.js</code>文件，这个文件在<code>\themes\butterfly\source\js\search</code>目录下，在下图位置加入代码：</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">searchOnEnterKeyPressOnly</span>: <span class="string">true,</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220324215731530.png" alt="image-20220324215731530"></p>
-<p>接下来修改搜索框的提示信息，上图横线下的<code>placeholder:</code>后接提示信息，建议直接注释掉该行（使用<code>//</code>注释），直接重写，不建议去修改语言配置文件（在<code>\themes\butterfly\languages</code>目录下）</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">placeholder</span>: <span class="string">&quot;输入关键词后，按下回车键即可搜索文章...&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="依次执行以下命令"><a href="#依次执行以下命令" class="headerlink" title="依次执行以下命令"></a>依次执行以下命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment">#生成Algolia索引</span></span><br><span class="line">hexo algolia</span><br><span class="line"><span class="comment">#部署网站，同时将网站的改动提交到GitHub仓库</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看结果"><a href="#查看结果" class="headerlink" title="查看结果"></a>查看结果</h3><p>执行启动服务器命令<code>hexo s</code>查看结果，访问网址为： <code>http://localhost:4000/</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220323203020481.png" alt="image-20220323203020481"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>执行命令的顺序如下：（不然可能会出现一些错误）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#生成静态文件</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment">#生成algolia的搜索索引</span></span><br><span class="line">hexo algolia</span><br><span class="line"></span><br><span class="line"><span class="comment">#提交到GitHub</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/478.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/478.html" class="post-title-link" itemprop="url">PotPlayer播放视频选择音频</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-22 15:18:52" itemprop="dateCreated datePublished" datetime="2022-03-22T15:18:52+08:00">2022-03-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:42:18" itemprop="dateModified" datetime="2022-04-26T03:42:18+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>IDM下载B站的视频时，下载的视频是没有声音的，必须要下载对应的音频文件，例如：下图中，2是音频，3是视频，下面我将演示PotPlayer播放视频导入音频</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152156978.png" alt="image-20220322152156978"></p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><blockquote>
-<p>将音频文件的后缀名改为m4a</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152546093.png" alt="image-20220322152546093"></p>
-<blockquote>
-<p>使用PotPlayer播放视频，并选择刚刚修改后缀名的音频，然后就可以愉快地玩耍了</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322152929300.png" alt="image-20220322152929300"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/477.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/477.html" class="post-title-link" itemprop="url">Hexo的Butterfly主题使用iconfont图标</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-21 23:53:43" itemprop="dateCreated datePublished" datetime="2022-03-21T23:53:43+08:00">2022-03-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:42:21" itemprop="dateModified" datetime="2022-04-26T03:42:21+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2/" itemprop="url" rel="index"><span itemprop="name">Hexo博客</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><p>网址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.iconfont.cn/">iconfont-阿里巴巴矢量图标库</a></p>
-<h3 id="搜索图标"><a href="#搜索图标" class="headerlink" title="搜索图标"></a>搜索图标</h3><p>在搜索框输入图标名称</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322002436582.png" alt="image-20220322002436582"></p>
-<h3 id="添加入库"><a href="#添加入库" class="headerlink" title="添加入库"></a>添加入库</h3><p>将鼠标移到要使用的图标上</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322002618238.png" alt="image-20220322002618238"></p>
-<h3 id="添加到项目"><a href="#添加到项目" class="headerlink" title="添加到项目"></a>添加到项目</h3><p>打开项目选项，准备添加到项目</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322002730835.png" alt="image-20220322002730835"></p>
-<p>添加到指定项目</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322003043564.png" alt="image-20220322003043564"></p>
-<h3 id="生成Font-class"><a href="#生成Font-class" class="headerlink" title="生成Font class"></a>生成Font class</h3><p>生成Font class用于引入图标</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322003442415.png" alt="image-20220322003442415"></p>
-<h3 id="复制链接和图标"><a href="#复制链接和图标" class="headerlink" title="复制链接和图标"></a>复制链接和图标</h3><p>复制引入图标的链接以及图标名称</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322003649511.png" alt="image-20220322003649511"></p>
-<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>修改Butterfly主题的配置文件<code>_config.yml</code>，<font color="#dd0000">不是主配置文件</font>，主题配置文件在<code>\themes\butterfly</code>下</p>
-<h4 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h4><p>找到Inject配置，在head处引入</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322004010270.png" alt="image-20220322004010270"></p>
-<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>使用格式为：<code>iconfont 上面复制的图标名称</code></p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220322004105492.png" alt="image-20220322004105492"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/476.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/476.html" class="post-title-link" itemprop="url">实现加载Nacos多个配置文件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-20 20:43:51" itemprop="dateCreated datePublished" datetime="2022-03-20T20:43:51+08:00">2022-03-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:42:24" itemprop="dateModified" datetime="2022-04-26T03:42:24+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>多个微服务的配置之间有可能存在重复，重复的部分称为公共配置，我们可以把这些公共配置存储在Nacos中，各个微服务根据自己的需求加载对应的配置</p>
-<p>这样做的好处是：方便管理，只需要修改公共配置即可实现修改多个服务的配置</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h4><p>加载的配置文件必须在同一个命名空间内</p>
-<h4 id="添加配置"><a href="#添加配置" class="headerlink" title="添加配置"></a>添加配置</h4><p>我在命名为dev的命名空间内创建了三个配置文件：<code>mysql_dev.properties</code>、 <code>server_dev.properties</code>和 <code>nacos_config.properties</code>，内容如下：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220320205354950.png" alt="image-20220320205354950"></p>
-<blockquote>
-<p>mysql_dev.properties</p>
-</blockquote>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.datasource.type</span>=<span class="string">com.alibaba.druid.pool.DruidDataSource</span></span><br><span class="line"><span class="meta">spring.datasource.driver-class-name</span>=<span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line"><span class="meta">spring.datasource.url</span>=<span class="string">jdbc:mysql://localhost:3306/db_secondhandtrade?serverTimezone=GMT%2B8&amp;useUnicode=true&amp;characterEncoding=utf8</span></span><br><span class="line"><span class="meta">spring.datasource.username</span>=<span class="string">root</span></span><br><span class="line"><span class="meta">spring.datasource.password</span>=<span class="string">123456</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>server_dev.properties</p>
-</blockquote>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">server.port</span>=<span class="string">8888</span></span><br><span class="line"><span class="meta">server.servlet.context-path</span>=<span class="string">/</span></span><br><span class="line"><span class="meta">server.tomcat.uri-encoding</span>=<span class="string">UTF-8</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>nacos_config.properties</p>
-</blockquote>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">ledao.name</span>=<span class="string">mary</span></span><br><span class="line"><span class="meta">ledao.age</span>=<span class="string">22</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="bootstrap-properties加载"><a href="#bootstrap-properties加载" class="headerlink" title="bootstrap.properties加载"></a>bootstrap.properties加载</h4><p>bootstrap比application配置文件的优先级高，如果存在一样的配置，以bootstrap的为准，加载多配置使用数组的形式，项目的配置文件只需要配置<code>Nacos的IP地址和端口号</code>、<code>命名空间id</code>，其它的配置从Nacos中加载</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#应用名称,可省略</span></span><br><span class="line"><span class="meta">spring.application.name</span>=<span class="string">nacos_config_test</span></span><br><span class="line"><span class="comment">#Nacos的IP地址和端口号</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.server-addr</span>=<span class="string">121.41.211.106:8848</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在命名空间id</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.namespace</span>=<span class="string">e4f40c45-6d6d-44dc-8bea-645f5d727824</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在组名</span></span><br><span class="line"><span class="comment">#spring.cloud.nacos.config.group=DEFAULT_GROUP</span></span><br><span class="line"><span class="comment">#要读取的配置文件名称</span></span><br><span class="line"><span class="comment">#spring.cloud.nacos.config.name=nacos_config.properties</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#加载mysql_dev.properties的配置</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[0].dataId</span>=<span class="string">mysql_dev.properties</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[0].group</span>=<span class="string">DEFAULT_GROUP</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[0].refresh</span>=<span class="string">true</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#加载server_dev.properties的配置</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[1].dataId</span>=<span class="string">server_dev.properties</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[1].group</span>=<span class="string">DEFAULT_GROUP</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[1].refresh</span>=<span class="string">true</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#加载nacos_config.properties的配置</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[2].dataId</span>=<span class="string">nacos_config.properties</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[2].group</span>=<span class="string">DEFAULT_GROUP</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.extension-configs[2].refresh</span>=<span class="string">true</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="控制层"><a href="#控制层" class="headerlink" title="控制层"></a>控制层</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.context.config.annotation.RefreshScope;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.annotation.Resource;</span><br><span class="line"><span class="keyword">import</span> javax.sql.DataSource;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-03-19 10:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RefreshScope</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/nacos&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NacosConfigController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;ledao.name&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;ledao.age&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String age;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> DataSource dataSource;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/getUserInfo&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getUserInfo</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name + <span class="string">&quot; : &quot;</span> + age + <span class="string">&quot; , &quot;</span> + dataSource.getConnection();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><p>浏览器地址栏输入：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://localhost:8888/nacos/getUserInfo">http://localhost:8888/nacos/getUserInfo</a> ，看到下图说明已经成功加载三个配置文件</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220320211748947.png" alt="image-20220320211748947"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/475.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/475.html" class="post-title-link" itemprop="url">Nacos新建命名空间和读取命名空间内的配置文件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-19 11:49:46" itemprop="dateCreated datePublished" datetime="2022-03-19T11:49:46+08:00">2022-03-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:42:27" itemprop="dateModified" datetime="2022-04-26T03:42:27+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="新建命名空间"><a href="#新建命名空间" class="headerlink" title="新建命名空间"></a>新建命名空间</h3><p>创建成功后自动生成命名空间id，下面要用到</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319115238136.png" alt="image-20220319115238136"></p>
-<h3 id="新建配置文件"><a href="#新建配置文件" class="headerlink" title="新建配置文件"></a>新建配置文件</h3><p>在刚刚创建好的命名空间创建配置文件，创建步骤查看博客：<a href="https://blog.zoutl.cn/474.html">Spring Boot 读取 Nacos 的配置文件 </a>，配置文件位置为：命名空间&gt;&gt;分组&gt;&gt;配置文件，前面的包含后面的，不在同一个组的配置文件可以重名</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319120244832.png" alt="image-20220319120244832"></p>
-<h3 id="读取"><a href="#读取" class="headerlink" title="读取"></a>读取</h3><p>实现读取步骤查看博客：<a href="https://blog.zoutl.cn/474.html">Spring Boot 读取 Nacos 的配置文件 </a>，然后在<code>bootstrap.properties</code>中加上配置：</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">spring.cloud.nacos.config.namespace</span>=<span class="string">cd6541df-8530-404f-8832-413a3cefa6</span></span><br></pre></td></tr></table></figure>
-
-<p>完整配置如下：</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#应用名称</span></span><br><span class="line"><span class="meta">spring.application.name</span>=<span class="string">nacos_config_test</span></span><br><span class="line"><span class="comment">#Nacos的IP地址和端口号</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.server-addr</span>=<span class="string">121.41.211.106:8848</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在命名空间id</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.namespace</span>=<span class="string">cd6541df-8530-404f-8832-413a3c118efa6</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在组名</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.group</span>=<span class="string">DEFAULT_GROUP</span></span><br><span class="line"><span class="comment">#要读取的配置文件名称</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.name</span>=<span class="string">nacos_config.properties</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/474.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/474.html" class="post-title-link" itemprop="url">Spring Boot读取Nacos的配置文件</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-19 11:01:39" itemprop="dateCreated datePublished" datetime="2022-03-19T11:01:39+08:00">2022-03-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-11-12 14:41:46" itemprop="dateModified" datetime="2022-11-12T14:41:46+08:00">2022-11-12</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="毕业版本依赖关系"><a href="#毕业版本依赖关系" class="headerlink" title="毕业版本依赖关系"></a>毕业版本依赖关系</h2><p>链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E">版本说明 · alibaba/spring-cloud-alibaba Wiki (github.com)</a></p>
-<p>下表为按时间顺序发布的 Spring Cloud Alibaba 以及对应的适配 Spring Cloud 和 Spring Boot 版本关系（由于 Spring Cloud 版本命名有调整，所以对应的 Spring Cloud Alibaba 版本号也做了对应变化）</p>
-<table>
-<thead>
-<tr>
-<th align="center">Spring Cloud Alibaba Version</th>
-<th align="center">Spring Cloud Version</th>
-<th align="center">Spring Boot Version</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">2021.0.1.0</td>
-<td align="center">Spring Cloud 2021.0.1</td>
-<td align="center">2.6.3</td>
-</tr>
-<tr>
-<td align="center">2.2.7.RELEASE</td>
-<td align="center">Spring Cloud Hoxton.SR12</td>
-<td align="center">2.3.12.RELEASE</td>
-</tr>
-<tr>
-<td align="center">2021.1</td>
-<td align="center">Spring Cloud 2020.0.1</td>
-<td align="center">2.4.2</td>
-</tr>
-<tr>
-<td align="center">2.2.6.RELEASE</td>
-<td align="center">Spring Cloud Hoxton.SR9</td>
-<td align="center">2.3.2.RELEASE</td>
-</tr>
-<tr>
-<td align="center">2.1.4.RELEASE</td>
-<td align="center">Spring Cloud Greenwich.SR6</td>
-<td align="center">2.1.13.RELEASE</td>
-</tr>
-<tr>
-<td align="center">2.2.1.RELEASE</td>
-<td align="center">Spring Cloud Hoxton.SR3</td>
-<td align="center">2.2.5.RELEASE</td>
-</tr>
-<tr>
-<td align="center">2.2.0.RELEASE</td>
-<td align="center">Spring Cloud Hoxton.RELEASE</td>
-<td align="center">2.2.X.RELEASE</td>
-</tr>
-<tr>
-<td align="center">2.1.2.RELEASE</td>
-<td align="center">Spring Cloud Greenwich</td>
-<td align="center">2.1.X.RELEASE</td>
-</tr>
-<tr>
-<td align="center">2.0.4.RELEASE(停止维护，建议升级)</td>
-<td align="center">Spring Cloud Finchley</td>
-<td align="center">2.0.X.RELEASE</td>
-</tr>
-<tr>
-<td align="center">1.5.1.RELEASE(停止维护，建议升级)</td>
-<td align="center">Spring Cloud Edgware</td>
-<td align="center">1.5.X.RELEASE</td>
-</tr>
-</tbody></table>
-<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><h3 id="创建父项目"><a href="#创建父项目" class="headerlink" title="创建父项目"></a>创建父项目</h3><p>创建一个Maven项目，用于管理依赖，pom.xml文件内容如下：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>NacosDemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modules</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">module</span>&gt;</span>nacos_config_test<span class="tag">&lt;/<span class="name">module</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">modules</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">packaging</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">project.build.sourceEncoding</span>&gt;</span>UTF-8<span class="tag">&lt;/<span class="name">project.build.sourceEncoding</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.source</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">maven.compiler.target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">maven.compiler.target</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spring-cloud.version</span>&gt;</span>Hoxton.SR9<span class="tag">&lt;/<span class="name">spring-cloud.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">springboot.version</span>&gt;</span>2.3.2.RELEASE<span class="tag">&lt;/<span class="name">springboot.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">springcloudalibaba.version</span>&gt;</span>2.2.6.RELEASE<span class="tag">&lt;/<span class="name">springcloudalibaba.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spring-cloud.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;springboot.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-alibaba-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;springcloudalibaba.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建子项目"><a href="#创建子项目" class="headerlink" title="创建子项目"></a>创建子项目</h3><p>在父项目下创建子项目，用于测试读取Nacos的配置文件</p>
-<h4 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml"></a>pom.xml</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>NacosDemo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.example<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>nacos_config_test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 配置中心 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-nacos-config<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="创建配置文件"><a href="#创建配置文件" class="headerlink" title="创建配置文件"></a>创建配置文件</h4><p>在resources下创建，bootstrap比application的优先级高</p>
-<blockquote>
-<p>application.yml</p>
-</blockquote>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">server:</span><br><span class="line">  port: 8080</span><br><span class="line">  servlet:</span><br><span class="line">    context-path: /</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>bootstrap.properties</p>
-</blockquote>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#应用名称</span></span><br><span class="line"><span class="meta">spring.application.name</span>=<span class="string">nacos_config_test</span></span><br><span class="line"><span class="comment">#Nacos的IP地址和端口号</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.server-addr</span>=<span class="string">121.41.111.106:8848</span></span><br><span class="line"><span class="comment">#Nacos配置文件所在组名</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.group</span>=<span class="string">DEFAULT_GROUP</span></span><br><span class="line"><span class="comment">#要读取的配置文件名称</span></span><br><span class="line"><span class="meta">spring.cloud.nacos.config.name</span>=<span class="string">nacos_config.properties</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="新建Controller类"><a href="#新建Controller类" class="headerlink" title="新建Controller类"></a>新建Controller类</h4><p>新建一个controller包，并在里面新建一个Controller类，<code>@RefreshScope</code>注解的作用为：当Nacos的配置文件内容改变后，也能读取修改后的配置，如果不使用这个注解则只能读取修改前的配置</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Value;</span><br><span class="line"><span class="keyword">import</span> org.springframework.cloud.context.config.annotation.RefreshScope;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-03-19 10:45</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RefreshScope</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/nacos&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NacosConfigController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;ledao.name&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;ledao.age&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String age;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/getUserInfo&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getUserInfo</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name + <span class="string">&quot; : &quot;</span> + age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="新建启动类"><a href="#新建启动类" class="headerlink" title="新建启动类"></a>新建启动类</h4><p>在上面新建的controller包外新建一个启动类，内容如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-03-19 10:38</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NacosConfigApplication</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(NacosConfigApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Nacos新建配置文件"><a href="#Nacos新建配置文件" class="headerlink" title="Nacos新建配置文件"></a>Nacos新建配置文件</h3><blockquote>
-<p>先选择配置管理下的配置列表，再点击添加按钮</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319111616905.png" alt="image-20220319111616905"></p>
-<blockquote>
-<p>填写配置文件的配置内容，最后点击发布即可</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319112054775.png" alt="image-20220319112054775"></p>
-<blockquote>
-<p>我新建的配置文件如下图</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319112212373.png" alt="image-20220319112212373"></p>
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>运行启动类，在浏览器地址栏输入：<code>localhost:8080/nacos/getUserInfo</code>，结果截图如下：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220319112325323.png" alt="image-20220319112325323"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/473.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/473.html" class="post-title-link" itemprop="url">谷歌搜索屏蔽某个网站</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2022-03-18 16:31:27" itemprop="dateCreated datePublished" datetime="2022-03-18T16:31:27+08:00">2022-03-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:42:33" itemprop="dateModified" datetime="2022-04-26T03:42:33+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>无法使用谷歌搜索的就不要查看本博客了</p>
-<h3 id="下载插件"><a href="#下载插件" class="headerlink" title="下载插件"></a>下载插件</h3><p>谷歌插件商店地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe/related">uBlacklist - Chrome 网上应用店 (google.com)</a></p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>在谷歌搜索某个关键词后，对应的搜索结果上面会有<code>加入黑名单</code>这个选项，点击该选项即可屏蔽对应网站</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220318163936595.png" alt="image-20220318163936595"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/">59</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-        </div>
-          
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="LeDao"
-      src="https://image.zoutl.cn/hexo-blog/images/logo.png">
-  <p class="site-author-name" itemprop="name">LeDao</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-          <span class="site-state-item-count">590</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">99</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/a6678696" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a6678696" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:1203007469@qq.com" title="E-Mail → mailto:1203007469@qq.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hitsPerPage":6,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，耗时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'LeDao\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">LeDao's Blog</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">LeDao's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/482.html" title="CentOS7忘记MySQL密码后重置"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/482.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7忘记MySQL密码后重置"></a></div><div class="recent-post-info"><a class="article-title" href="/482.html" title="CentOS7忘记MySQL密码后重置">CentOS7忘记MySQL密码后重置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-27T19:47:52.000Z" title="发表于 2022-03-28 03:47:52">2022-03-28</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">概述MySQL是不能查看密码的，如果忘记了就只能重置了 重置过程 先停止MySQL 1systemctl stop mysqld 修改my.cnf，路径为/ect/my.cnf，在[mysqld]下面添加skip-grant-tables   启动MySQL 1systemctl start mysqld 使用下面命令进入MySQL命令行，提示要输入密码直接按回车键即可 1mysql -uroot -p 切换到mysql数据库 1use mysql 修改密码 1update user set authentication_string=PASSWORD(&quot;这里填密码&quot;) where user=&#x27;root&#x27;; 刷新授权列表 1flush privileges; 退出 1exit 修改my.cnf，路径为/ect/my.cnf，删除[mysqld]下面之前添加的skip-grant-tables，或者在它前面加#符号注释掉  重启MySQL，新密码就生效了 1systemctl restart mysqld  PS.操作MySQL命令CentO...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/481.html" title="使用AdBlock屏蔽掉GitHub上一些让人恶心的仓库"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/481.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用AdBlock屏蔽掉GitHub上一些让人恶心的仓库"></a></div><div class="recent-post-info"><a class="article-title" href="/481.html" title="使用AdBlock屏蔽掉GitHub上一些让人恶心的仓库">使用AdBlock屏蔽掉GitHub上一些让人恶心的仓库</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-25T16:11:10.000Z" title="发表于 2022-03-26 00:11:10">2022-03-26</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">版本控制</a></span></div><div class="content">概述GitHub虽然好用，但是上面有不少境外黑恶势力恶意造谣抹黑中国的仓库，看到了就让人恶心 GitHub的屏蔽功能并没什么卵用，举报也没用，纯属浪费时间，但是我们可以通过AdBlock或AdBlock Plus插件进行屏蔽这些仓库的所有者 下面的方法只实现了屏蔽掉搜索结果中的仓库，但还是可以直接通过链接访问这些仓库，不过这已经可以实现这些仓库不会出现在我们眼前，污了我们的眼睛 实现过程安装插件下面有两个下载地址，根据自己的情况选择：  谷歌插件商店地址：AdBlock — 最佳广告拦截工具 - Chrome 网上应用店 (google.com) 扩展迷下载地址：https://www.extfans.com/productivity/gighmmpiobklfepjocnamgkkbiglidom/  添加拦截规则点击工具栏的AdBlock的图标，打开选项  添加自定义规则（下面列举几个常见的，每一条规则的第二个括号内就是仓库所有者的用户名，根据实际情况填写，发现其它的继续添加即可），最后保存即可，这样就可以在搜索结果中屏蔽掉这些仓库的所有者了，舒服！！ 12345github...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/480.html" title="使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/480.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub"></a></div><div class="recent-post-info"><a class="article-title" href="/480.html" title="使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub">使用批处理脚本实现一键部署hexo博客以及一键上传代码到GitHub</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-25T06:19:53.000Z" title="发表于 2022-03-25 14:19:53">2022-03-25</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">概述如果需要执行多条命令才可以达到目的，都可以使用批处理脚本来提高工作效率，本博客主要实现：一键部署hexo博客以及一键上传代码到GitHub 实现一键部署hexo博客新建一个.bat文件，命名为：一键部署.bat，内容如下：（我的博客使用了algolia搜索，如果没有使用就删除下面的hexo algolia） 123@echo offcd E:\hexo-bloghexo g&amp;&amp;hexo algolia&amp;&amp;hexo d  一键上传代码到GitHub先配置GitHub的SSH Key，配置步骤查看博客：GitHub 配置 SSH Key | LeDao 的博客 (zoutl.cn) 新建一个.bat文件，命名为一键上传到GitHub.bat：，内容如下：（chcp 65001是为了解决输出中文乱码） 12345678910111213141516chcp 65001@echo offecho &quot;1.进入要上传的文件hexo-blog&quot;cd E:\hexo-blogecho &quot;2.添加到本地仓库&quot;git add...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/479.html" title="Hexo的Butterfly主题使用Algolia搜索"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/479.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo的Butterfly主题使用Algolia搜索"></a></div><div class="recent-post-info"><a class="article-title" href="/479.html" title="Hexo的Butterfly主题使用Algolia搜索">Hexo的Butterfly主题使用Algolia搜索</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-23T12:02:27.000Z" title="发表于 2022-03-23 20:02:27">2022-03-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Hexo%E5%8D%9A%E5%AE%A2/">Hexo博客</a></span></div><div class="content">安装插件在hexo博客的根目录打开Git Bash安装hexo-algoliasearch插件 1npm install hexo-algoliasearch --save  然后查看根目录的package.json文件，查看是否安装成功，出现插件名称就说明安装插件成功  注册Algolia账号网址：Site Search &amp; Discovery powered by AI | Algolia 创建应用打开创建页面 填写应用信息 选择相关节点 勾选同意 获取API Keys在控制台主页，选择刚刚创建的应用，查看它的API Keys  获取下图的三个  开始配置在hexo根目录下的_config.yml配置文件添加以下代码，appId、apiKey、adminApiKey、indexName根据自己的情况填写 12345678910111213141516plugins:  - hexo-algoliasearchalgolia:  appId: &quot;0Z2Q111FG111&quot;  apiKey: &quot;079e96e1d3e11111116bf590...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/478.html" title="PotPlayer播放视频选择音频"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/478.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PotPlayer播放视频选择音频"></a></div><div class="recent-post-info"><a class="article-title" href="/478.html" title="PotPlayer播放视频选择音频">PotPlayer播放视频选择音频</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-22T07:18:52.000Z" title="发表于 2022-03-22 15:18:52">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">概述IDM下载B站的视频时，下载的视频是没有声音的，必须要下载对应的音频文件，例如：下图中，2是音频，3是视频，下面我将演示PotPlayer播放视频导入音频  实现过程 将音频文件的后缀名改为m4a    使用PotPlayer播放视频，并选择刚刚修改后缀名的音频，然后就可以愉快地玩耍了   </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/477.html" title="Hexo的Butterfly主题使用iconfont图标"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/477.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo的Butterfly主题使用iconfont图标"></a></div><div class="recent-post-info"><a class="article-title" href="/477.html" title="Hexo的Butterfly主题使用iconfont图标">Hexo的Butterfly主题使用iconfont图标</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-21T15:53:43.000Z" title="发表于 2022-03-21 23:53:43">2022-03-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Hexo%E5%8D%9A%E5%AE%A2/">Hexo博客</a></span></div><div class="content">登录网址：iconfont-阿里巴巴矢量图标库 搜索图标在搜索框输入图标名称  添加入库将鼠标移到要使用的图标上  添加到项目打开项目选项，准备添加到项目  添加到指定项目  生成Font class生成Font class用于引入图标  复制链接和图标复制引入图标的链接以及图标名称  修改配置文件修改Butterfly主题的配置文件_config.yml，不是主配置文件，主题配置文件在\themes\butterfly下 引入找到Inject配置，在head处引入  使用使用格式为：iconfont 上面复制的图标名称  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/476.html" title="实现加载Nacos多个配置文件"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/476.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实现加载Nacos多个配置文件"></a></div><div class="recent-post-info"><a class="article-title" href="/476.html" title="实现加载Nacos多个配置文件">实现加载Nacos多个配置文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-20T12:43:51.000Z" title="发表于 2022-03-20 20:43:51">2022-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></span></div><div class="content">概述多个微服务的配置之间有可能存在重复，重复的部分称为公共配置，我们可以把这些公共配置存储在Nacos中，各个微服务根据自己的需求加载对应的配置 这样做的好处是：方便管理，只需要修改公共配置即可实现修改多个服务的配置 实现过程前提加载的配置文件必须在同一个命名空间内 添加配置我在命名为dev的命名空间内创建了三个配置文件：mysql_dev.properties、 server_dev.properties和 nacos_config.properties，内容如下：   mysql_dev.properties  12345spring.datasource.type=com.alibaba.druid.pool.DruidDataSourcespring.datasource.driver-class-name=com.mysql.cj.jdbc.Driverspring.datasource.url=jdbc:mysql://localhost:3306/db_secondhandtrade?serverTimezone=GMT%2B8&amp;useUnicode=tru...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/475.html" title="Nacos新建命名空间和读取命名空间内的配置文件"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/475.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nacos新建命名空间和读取命名空间内的配置文件"></a></div><div class="recent-post-info"><a class="article-title" href="/475.html" title="Nacos新建命名空间和读取命名空间内的配置文件">Nacos新建命名空间和读取命名空间内的配置文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-19T03:49:46.000Z" title="发表于 2022-03-19 11:49:46">2022-03-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></span></div><div class="content">新建命名空间创建成功后自动生成命名空间id，下面要用到  新建配置文件在刚刚创建好的命名空间创建配置文件，创建步骤查看博客：Spring Boot 读取 Nacos 的配置文件 ，配置文件位置为：命名空间&gt;&gt;分组&gt;&gt;配置文件，前面的包含后面的，不在同一个组的配置文件可以重名  读取实现读取步骤查看博客：Spring Boot 读取 Nacos 的配置文件 ，然后在bootstrap.properties中加上配置： 1spring.cloud.nacos.config.namespace=cd6541df-8530-404f-8832-413a3cefa6  完整配置如下： 12345678910#应用名称spring.application.name=nacos_config_test#Nacos的IP地址和端口号spring.cloud.nacos.config.server-addr=121.41.211.106:8848#Nacos配置文件所在命名空间idspring.cloud.nacos.config.namespace=cd6541df-85...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/474.html" title="Spring Boot读取Nacos的配置文件"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/474.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Spring Boot读取Nacos的配置文件"></a></div><div class="recent-post-info"><a class="article-title" href="/474.html" title="Spring Boot读取Nacos的配置文件">Spring Boot读取Nacos的配置文件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-19T03:01:39.000Z" title="发表于 2022-03-19 11:01:39">2022-03-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a></span></div><div class="content">毕业版本依赖关系链接：版本说明 · alibaba/spring-cloud-alibaba Wiki (github.com) 下表为按时间顺序发布的 Spring Cloud Alibaba 以及对应的适配 Spring Cloud 和 Spring Boot 版本关系（由于 Spring Cloud 版本命名有调整，所以对应的 Spring Cloud Alibaba 版本号也做了对应变化）    Spring Cloud Alibaba Version Spring Cloud Version Spring Boot Version    2021.0.1.0 Spring Cloud 2021.0.1 2.6.3   2.2.7.RELEASE Spring Cloud Hoxton.SR12 2.3.12.RELEASE   2021.1 Spring Cloud 2020.0.1 2.4.2   2.2.6.RELEASE Spring Cloud Hoxton.SR9 2.3.2.RELEASE   2.1.4.RELEASE Spring Cloud Green...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/473.html" title="谷歌搜索屏蔽某个网站"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/473.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="谷歌搜索屏蔽某个网站"></a></div><div class="recent-post-info"><a class="article-title" href="/473.html" title="谷歌搜索屏蔽某个网站">谷歌搜索屏蔽某个网站</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-03-18T08:31:27.000Z" title="发表于 2022-03-18 16:31:27">2022-03-18</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">前提无法使用谷歌搜索的就不要查看本博客了 下载插件谷歌插件商店地址：uBlacklist - Chrome 网上应用店 (google.com) 使用在谷歌搜索某个关键词后，对应的搜索结果上面会有加入黑名单这个选项，点击该选项即可屏蔽对应网站  </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/11/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/#content-inner">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/#content-inner">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/#content-inner">59</a><a class="extend next" rel="next" href="/page/13/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">LeDao</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/590.html" title="Nginx重新部署SSL证书"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/590.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx重新部署SSL证书"/></a><div class="content"><a class="title" href="/590.html" title="Nginx重新部署SSL证书">Nginx重新部署SSL证书</a><time datetime="2024-10-07T16:39:44.000Z" title="发表于 2024-10-08 00:39:44">2024-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/589.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"/></a><div class="content"><a class="title" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法">VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</a><time datetime="2024-03-09T13:43:26.000Z" title="发表于 2024-03-09 21:43:26">2024-03-09</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo%E5%8D%9A%E5%AE%A2/"><span class="card-category-list-name">Hexo博客</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">个人项目</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E5%AE%83/"><span class="card-category-list-name">其它</span><span class="card-category-list-count">39</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">121</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="card-category-list-name">后端</span><span class="card-category-list-count">219</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">41</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/"><span class="card-category-list-name">持久层框架</span><span class="card-category-list-count">20</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="card-category-list-name">数据库</span><span class="card-category-list-count">29</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Tomcat/" style="font-size: 1.4em; color: #99a5b6">Tomcat</a> <a href="/tags/OpenFeign/" style="font-size: 1.1em; color: #999">OpenFeign</a> <a href="/tags/jQuery/" style="font-size: 1.18em; color: #999ca0">jQuery</a> <a href="/tags/Docker/" style="font-size: 1.5em; color: #99a9bf">Docker</a> <a href="/tags/ZooKeeper/" style="font-size: 1.15em; color: #999b9e">ZooKeeper</a> <a href="/tags/%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF/" style="font-size: 1.1em; color: #999">报错信息</a> <a href="/tags/Typora/" style="font-size: 1.1em; color: #999">Typora</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.45em; color: #99a7ba">微信小程序</a> <a href="/tags/IDM/" style="font-size: 1.1em; color: #999">IDM</a> <a href="/tags/Zuul/" style="font-size: 1.15em; color: #999b9e">Zuul</a> <a href="/tags/CSS/" style="font-size: 1.32em; color: #99a2ae">CSS</a> <a href="/tags/Hystrix/" style="font-size: 1.23em; color: #999ea5">Hystrix</a> <a href="/tags/TypeScript/" style="font-size: 1.1em; color: #999">TypeScript</a> <a href="/tags/v-viewer/" style="font-size: 1.1em; color: #999">v-viewer</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.35em; color: #99a3b1">数据结构</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 1.15em; color: #999b9e">阿里云</a> <a href="/tags/Mycat/" style="font-size: 1.1em; color: #999">Mycat</a> <a href="/tags/Elasticsearch/" style="font-size: 1.2em; color: #999da3">Elasticsearch</a> <a href="/tags/%E9%83%A8%E8%90%BD%E5%86%B2%E7%AA%81/" style="font-size: 1.13em; color: #999a9b">部落冲突</a> <a href="/tags/Vite/" style="font-size: 1.13em; color: #999a9b">Vite</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/Highcharts/" style="font-size: 1.1em; color: #999">Highcharts</a> <a href="/tags/Thymeleaf/" style="font-size: 1.2em; color: #999da3">Thymeleaf</a> <a href="/tags/JWT/" style="font-size: 1.1em; color: #999">JWT</a> <a href="/tags/Ribbon/" style="font-size: 1.15em; color: #999b9e">Ribbon</a> <a href="/tags/Spring-Boot/" style="font-size: 1.48em; color: #99a8bd">Spring Boot</a> <a href="/tags/Ajax/" style="font-size: 1.18em; color: #999ca0">Ajax</a> <a href="/tags/Spring/" style="font-size: 1.38em; color: #99a4b3">Spring</a> <a href="/tags/Maven/" style="font-size: 1.3em; color: #99a1ac">Maven</a> <a href="/tags/MyBatisX/" style="font-size: 1.1em; color: #999">MyBatisX</a> <a href="/tags/Crontab/" style="font-size: 1.1em; color: #999">Crontab</a> <a href="/tags/Postman/" style="font-size: 1.1em; color: #999">Postman</a> <a href="/tags/Gateway/" style="font-size: 1.1em; color: #999">Gateway</a> <a href="/tags/SSL%E8%AF%81%E4%B9%A6/" style="font-size: 1.15em; color: #999b9e">SSL证书</a> <a href="/tags/MyBatis-Plus/" style="font-size: 1.25em; color: #999fa7">MyBatis-Plus</a> <a href="/tags/ECharts/" style="font-size: 1.1em; color: #999">ECharts</a> <a href="/tags/RabbitMQ/" style="font-size: 1.43em; color: #99a6b8">RabbitMQ</a> <a href="/tags/JavaScript/" style="font-size: 1.43em; color: #99a6b8">JavaScript</a> <a href="/tags/MyBatis/" style="font-size: 1.28em; color: #99a0aa">MyBatis</a> <a href="/tags/Hexo%E5%8D%9A%E5%AE%A2/" style="font-size: 1.43em; color: #99a6b8">Hexo博客</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        <div class="copyright">
   
-  &copy; 2020 – 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heartbeat"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">LeDao</span>
-</div>
-<div>
-    <span style="text-align: left;display: inline-block;vertical-align: middle;">本网站由 </span>
-	<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src='https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png' style="height: 30px;vertical-align: middle;display: inline-block;"></a>
-	<span style="text-align: left;display: inline-block;vertical-align: middle;">提供CDN加速/云存储服务</span>
-</div>
-<div class="id111">
-    <span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a></span>
-	<img src='https://image.zoutl.cn/hexo-blog/images/beian.png' style="vertical-align: middle;display: inline-block;">
-	<span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></span>
-</div>
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  
-  <script color='255,51,51' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
-</script>
-
-
-
-
-  
-
-  
-
-
-</body>
-</html>
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/02/">
+            <span class="card-archive-list-date">
+              二月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/09/">
+            <span class="card-archive-list-date">
+              九月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">590</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-04T01:34:24.574Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2020 - 2025 By LeDao</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 5.4.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div id="algolia-search-input"><div class="ais-SearchBox"><form class="ais-SearchBox-form" action="" role="search" novalidate=""><input class="ais-SearchBox-input" type="search" placeholder="搜索文章" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="512" aria-label="Search"/><button class="ais-SearchBox-submit" type="submit" title="Submit the search query" style="display:none;"><svg class="ais-SearchBox-submitIcon" width="10" height="10" viewBox="0 0 40 40" aria-hidden="true"><path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg></button></form></div><hr/><div id="algolia-search-results"><div id="algolia-hits"><div id="algolia-hits-empty" style="display:none;"></div><div class="ais-Hits" style="display:none;"><ol class="ais-Hits-list"></ol></div></div><div class="ais-Pagination" id="algolia-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="algolia-info"><span class="ais-Stats-text"></span><a class="algolia-poweredBy" href="https://www.algolia.com/?utm_source=algoliasearch.js&amp;utm_medium=website&amp;utm_content=localhost&amp;utm_campaign=poweredby" target="_blank" aria-label="Search by Algolia" rel="noopener noreferrer"><svg class="ais-PoweredBy-logo" height="1.2em" viewBox="0 0 572 64" style="width: auto;"><path fill="#36395A" d="M16 48.3c-3.4 0-6.3-.6-8.7-1.7A12.4 12.4 0 0 1 1.9 42C.6 40 0 38 0 35.4h6.5a6.7 6.7 0 0 0 3.9 6c1.4.7 3.3 1.1 5.6 1.1 2.2 0 4-.3 5.4-1a7 7 0 0 0 3-2.4 6 6 0 0 0 1-3.4c0-1.5-.6-2.8-1.9-3.7-1.3-1-3.3-1.6-5.9-1.8l-4-.4c-3.7-.3-6.6-1.4-8.8-3.4a10 10 0 0 1-3.3-7.9c0-2.4.6-4.6 1.8-6.4a12 12 0 0 1 5-4.3c2.2-1 4.7-1.6 7.5-1.6s5.5.5 7.6 1.6a12 12 0 0 1 5 4.4c1.2 1.8 1.8 4 1.8 6.7h-6.5a6.4 6.4 0 0 0-3.5-5.9c-1-.6-2.6-1-4.4-1s-3.2.3-4.4 1c-1.1.6-2 1.4-2.6 2.4-.5 1-.8 2-.8 3.1a5 5 0 0 0 1.5 3.6c1 1 2.6 1.7 4.7 1.9l4 .3c2.8.2 5.2.8 7.2 1.8 2.1 1 3.7 2.2 4.9 3.8a9.7 9.7 0 0 1 1.7 5.8c0 2.5-.7 4.7-2 6.6a13 13 0 0 1-5.6 4.4c-2.4 1-5.2 1.6-8.4 1.6Zm35.6 0c-2.6 0-4.8-.4-6.7-1.3a13 13 0 0 1-4.7-3.5 17.1 17.1 0 0 1-3.6-10.4v-1c0-2 .3-3.8 1-5.6a13 13 0 0 1 7.3-8.3 15 15 0 0 1 6.3-1.4A13.2 13.2 0 0 1 64 24.3c1 2.2 1.6 4.6 1.6 7.2V34H39.4v-4.3h21.8l-1.8 2.2c0-2-.3-3.7-.9-5.1a7.3 7.3 0 0 0-2.7-3.4c-1.2-.7-2.7-1.1-4.6-1.1s-3.4.4-4.7 1.3a8 8 0 0 0-2.9 3.6c-.6 1.5-.9 3.3-.9 5.4 0 2 .3 3.7 1 5.3a7.9 7.9 0 0 0 2.8 3.7c1.3.8 3 1.3 5 1.3s3.8-.5 5.1-1.3c1.3-1 2.1-2 2.4-3.2h6a11.8 11.8 0 0 1-7 8.7 16 16 0 0 1-6.4 1.2ZM80 48c-2.2 0-4-.3-5.7-1a8.4 8.4 0 0 1-3.7-3.3 9.7 9.7 0 0 1-1.3-5.2c0-2 .5-3.8 1.5-5.2a9 9 0 0 1 4.3-3.1c1.8-.7 4-1 6.7-1H89v4.1h-7.5c-2 0-3.4.5-4.4 1.4-1 1-1.6 2.1-1.6 3.6s.5 2.7 1.6 3.6c1 1 2.5 1.4 4.4 1.4 1.1 0 2.2-.2 3.2-.7 1-.4 1.9-1 2.6-2 .6-1 1-2.4 1-4.2l1.7 2.1c-.2 2-.7 3.8-1.5 5.2a9 9 0 0 1-3.4 3.3 12 12 0 0 1-5.3 1Zm9.5-.7v-8.8h-1v-10c0-1.8-.5-3.2-1.4-4.1-1-1-2.4-1.4-4.2-1.4a142.9 142.9 0 0 0-10.2.4v-5.6a74.8 74.8 0 0 1 8.6-.4c3 0 5.5.4 7.5 1.2s3.4 2 4.4 3.6c1 1.7 1.4 4 1.4 6.7v18.4h-5Zm12.9 0V17.8h5v12.3h-.2c0-4.2 1-7.4 2.8-9.5a11 11 0 0 1 8.3-3.1h1v5.6h-2a9 9 0 0 0-6.3 2.2c-1.5 1.5-2.2 3.6-2.2 6.4v15.6h-6.4Zm34.4 1a15 15 0 0 1-6.6-1.3c-1.9-.9-3.4-2-4.7-3.5a15.5 15.5 0 0 1-2.7-5c-.6-1.7-1-3.6-1-5.4v-1c0-2 .4-3.8 1-5.6a15 15 0 0 1 2.8-4.9c1.3-1.5 2.8-2.6 4.6-3.5a16.4 16.4 0 0 1 13.3.2c2 1 3.5 2.3 4.8 4a12 12 0 0 1 2 6H144c-.2-1.6-1-3-2.2-4.1a7.5 7.5 0 0 0-5.2-1.7 8 8 0 0 0-4.7 1.3 8 8 0 0 0-2.8 3.6 13.8 13.8 0 0 0 0 10.3c.6 1.5 1.5 2.7 2.8 3.6s2.8 1.3 4.8 1.3c1.5 0 2.7-.2 3.8-.8a7 7 0 0 0 2.6-2c.7-1 1-2 1.2-3.2h6.2a11 11 0 0 1-2 6.2 15.1 15.1 0 0 1-11.8 5.5Zm19.7-1v-40h6.4V31h-1.3c0-3 .4-5.5 1.1-7.6a9.7 9.7 0 0 1 3.5-4.8A9.9 9.9 0 0 1 172 17h.3c3.5 0 6 1.1 7.9 3.5 1.7 2.3 2.6 5.7 2.6 10v16.8h-6.4V29.6c0-2.1-.6-3.8-1.8-5a6.4 6.4 0 0 0-4.8-1.8c-2 0-3.7.7-5 2a7.8 7.8 0 0 0-1.9 5.5v17h-6.4Zm63.8 1a12.2 12.2 0 0 1-10.9-6.2 19 19 0 0 1-1.8-7.3h1.4v12.5h-5.1v-40h6.4v19.8l-2 3.5c.2-3.1.8-5.7 1.9-7.7a11 11 0 0 1 4.4-4.5c1.8-1 3.9-1.5 6.1-1.5a13.4 13.4 0 0 1 12.8 9.1c.7 1.9 1 3.8 1 6v1c0 2.2-.3 4.1-1 6a13.6 13.6 0 0 1-13.2 9.4Zm-1.2-5.5a8.4 8.4 0 0 0 7.9-5c.7-1.5 1.1-3.3 1.1-5.3s-.4-3.8-1.1-5.3a8.7 8.7 0 0 0-3.2-3.6 9.6 9.6 0 0 0-9.2-.2 8.5 8.5 0 0 0-3.3 3.2c-.8 1.4-1.3 3-1.3 5v2.3a9 9 0 0 0 1.3 4.8 9 9 0 0 0 3.4 3c1.4.7 2.8 1 4.4 1Zm27.3 3.9-10-28.9h6.5l9.5 28.9h-6Zm-7.5 12.2v-5.7h4.9c1 0 2-.1 2.9-.4a4 4 0 0 0 2-1.4c.4-.7.9-1.6 1.2-2.7l8.6-30.9h6.2l-9.3 32.4a14 14 0 0 1-2.5 5 8.9 8.9 0 0 1-4 2.8c-1.5.6-3.4.9-5.6.9h-4.4Zm9-12.2v-5.2h6.4v5.2H248Z"></path><path fill="#003DFF" d="M534.4 9.1H528a.8.8 0 0 1-.7-.7V1.8c0-.4.2-.7.6-.8l6.5-1c.4 0 .8.2.9.6v7.8c0 .4-.4.7-.8.7zM428 35.2V.8c0-.5-.3-.8-.7-.8h-.2l-6.4 1c-.4 0-.7.4-.7.8v35c0 1.6 0 11.8 12.3 12.2.5 0 .8-.4.8-.8V43c0-.4-.3-.7-.6-.8-4.5-.5-4.5-6-4.5-7zm106.5-21.8H528c-.4 0-.7.4-.7.8v34c0 .4.3.8.7.8h6.5c.4 0 .8-.4.8-.8v-34c0-.5-.4-.8-.8-.8zm-17.7 21.8V.8c0-.5-.3-.8-.8-.8l-6.5 1c-.4 0-.7.4-.7.8v35c0 1.6 0 11.8 12.3 12.2.4 0 .8-.4.8-.8V43c0-.4-.3-.7-.7-.8-4.4-.5-4.4-6-4.4-7zm-22.2-20.6a16.5 16.5 0 0 1 8.6 9.3c.8 2.2 1.3 4.8 1.3 7.5a19.4 19.4 0 0 1-4.6 12.6 14.8 14.8 0 0 1-5.2 3.6c-2 .9-5.2 1.4-6.8 1.4a21 21 0 0 1-6.7-1.4 15.4 15.4 0 0 1-8.6-9.3 21.3 21.3 0 0 1 0-14.4 15.2 15.2 0 0 1 8.6-9.3c2-.8 4.3-1.2 6.7-1.2s4.6.4 6.7 1.2zm-6.7 27.6c2.7 0 4.7-1 6.2-3s2.2-4.3 2.2-7.8-.7-6.3-2.2-8.3-3.5-3-6.2-3-4.7 1-6.1 3c-1.5 2-2.2 4.8-2.2 8.3s.7 5.8 2.2 7.8 3.5 3 6.2 3zm-88.8-28.8c-6.2 0-11.7 3.3-14.8 8.2a18.6 18.6 0 0 0 4.8 25.2c1.8 1.2 4 1.8 6.2 1.7s.1 0 .1 0h.9c4.2-.7 8-4 9.1-8.1v7.4c0 .4.3.7.8.7h6.4a.7.7 0 0 0 .7-.7V14.2c0-.5-.3-.8-.7-.8h-13.5zm6.3 26.5a9.8 9.8 0 0 1-5.7 2h-.5a10 10 0 0 1-9.2-14c1.4-3.7 5-6.3 9-6.3h6.4v18.3zm152.3-26.5h13.5c.5 0 .8.3.8.7v33.7c0 .4-.3.7-.8.7h-6.4a.7.7 0 0 1-.8-.7v-7.4c-1.2 4-4.8 7.4-9 8h-.1a4.2 4.2 0 0 1-.5.1h-.9a10.3 10.3 0 0 1-7-2.6c-4-3.3-6.5-8.4-6.5-14.2 0-3.7 1-7.2 3-10 3-5 8.5-8.3 14.7-8.3zm.6 28.4c2.2-.1 4.2-.6 5.7-2V21.7h-6.3a9.8 9.8 0 0 0-9 6.4 10.2 10.2 0 0 0 9.1 13.9h.5zM452.8 13.4c-6.2 0-11.7 3.3-14.8 8.2a18.5 18.5 0 0 0 3.6 24.3 10.4 10.4 0 0 0 13 .6c2.2-1.5 3.8-3.7 4.5-6.1v7.8c0 2.8-.8 5-2.2 6.3-1.5 1.5-4 2.2-7.5 2.2l-6-.3c-.3 0-.7.2-.8.5l-1.6 5.5c-.1.4.1.8.5 1h.1c2.8.4 5.5.6 7 .6 6.3 0 11-1.4 14-4.1 2.7-2.5 4.2-6.3 4.5-11.4V14.2c0-.5-.4-.8-.8-.8h-13.5zm6.3 8.2v18.3a9.6 9.6 0 0 1-5.6 2h-1a10.3 10.3 0 0 1-8.8-14c1.4-3.7 5-6.3 9-6.3h6.4zM291 31.5A32 32 0 0 1 322.8 0h30.8c.6 0 1.2.5 1.2 1.2v61.5c0 1.1-1.3 1.7-2.2 1l-19.2-17a18 18 0 0 1-11 3.4 18.1 18.1 0 1 1 18.2-14.8c-.1.4-.5.7-.9.6-.1 0-.3 0-.4-.2l-3.8-3.4c-.4-.3-.6-.8-.7-1.4a12 12 0 1 0-2.4 8.3c.4-.4 1-.5 1.6-.2l14.7 13.1v-46H323a26 26 0 1 0 10 49.7c.8-.4 1.6-.2 2.3.3l3 2.7c.3.2.3.7 0 1l-.2.2a32 32 0 0 1-47.2-28.6z"></path></svg></a></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.39.0/dist/lite/builds/browser.umd.min.js"></script><script src="/js/search/algolia.js?v=5.5.1"></script></div></div></body></html>

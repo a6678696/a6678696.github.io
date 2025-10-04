@@ -1,1400 +1,237 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.zoutl.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":6,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>LeDao's Blog</title><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="LeDao&#39;s Blog">
 <meta property="og:url" content="https://blog.zoutl.cn/page/27/index.html">
 <meta property="og:site_name" content="LeDao&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
 <meta property="article:author" content="LeDao">
 <meta property="article:tag" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://blog.zoutl.cn/page/27/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>LeDao's Blog</title>
-  
-
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">LeDao's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-主页">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-项目">
-
-    <a href="/project/" rel="section"><i class="fa fa-paw fa-fw"></i>项目</a>
-
-  </li>
-        <li class="menu-item menu-item-友链">
-
-    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-
-  <a href="https://github.com/a6678696" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
+<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/page/27/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/330.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/330.html" class="post-title-link" itemprop="url">Keepalived+Nginx+Tomcat负载均衡</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-01 20:41:02" itemprop="dateCreated datePublished" datetime="2021-09-01T20:41:02+08:00">2021-09-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:50:48" itemprop="dateModified" datetime="2022-04-26T03:50:48+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="启动Tomcat"><a href="#启动Tomcat" class="headerlink" title="启动Tomcat"></a>启动Tomcat</h3><p>主机和备用机分别使用Docker启动一个Tomcat，版本号最好不同，启动成功后有可能通过外部浏览器无法访问，解决方法查看博客：<a href="https://blog.zoutl.cn/294.html">Docker启动Tomcat成功后外部却无法访问</a></p>
-<h3 id="修改Nginx配置"><a href="#修改Nginx配置" class="headerlink" title="修改Nginx配置"></a>修改Nginx配置</h3><p>修改主机和备用机的Nginx配置，修改内容一样</p>
-<p>修改nginx.conf配置文件（在/etc/nginx目录下），在include /etc/nginx/conf.d/*.conf上方加上：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">upstream www.<span class="number">123</span>.com&#123;</span><br><span class="line">	 server <span class="number">192.168</span>.<span class="number">0.106</span>:<span class="number">8080</span> weight=<span class="number">5</span>;</span><br><span class="line">	 server <span class="number">192.168</span>.<span class="number">0.107</span>:<span class="number">8080</span> weight=<span class="number">10</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>修改default.conf配置文件（在/etc/nginx/conf.d目录下），在location /节点加上：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxy_pass  http://www.<span class="number">123</span>.com;</span><br></pre></td></tr></table></figure>
-
-<p>server_name可以修改成 <a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.123.com/">www.123.com</a> ，也可以不修改</p>
-<h3 id="重启Nginx"><a href="#重启Nginx" class="headerlink" title="重启Nginx"></a>重启Nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址输入：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://192.168.0.106/">http://192.168.0.106/</a>或者<a target="_blank" rel="noopener external nofollow noreferrer" href="http://192.168.0.107/">http://192.168.0.107/</a></p>
-<p>不断刷新页面，访问了主机和备用机的Tomcat，此时Nginx+Tomcat负载均衡完成</p>
-<p>如果出现错误：502 Bad Gateway，这是因为Nginx 主机的 SELinux 服务限制了其（即 Nginx）使用 http 访问权限引起的，输入以下命令即可解决此问题，如果不生效再重启Nginx</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setsebool -P httpd_can_network_connect 1    <span class="comment"># “1”为开启，“0”为关闭</span></span><br></pre></td></tr></table></figure>
-
-<p>打开Keepalived服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start keepalived</span><br></pre></td></tr></table></figure>
-
-<p>浏览器地址输入Keepalived配置的virtual_ipaddress，该配置文件在/etc/keepalived目录下，此时已经完成了Keepalived+Nginx+Tomcat负载均衡</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/329.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/329.html" class="post-title-link" itemprop="url">通过shell脚本优化Keepalived+Nginx高可用集群</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-01 12:46:56" itemprop="dateCreated datePublished" datetime="2021-09-01T12:46:56+08:00">2021-09-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:50:51" itemprop="dateModified" datetime="2022-04-26T03:50:51+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>Keepalived不容易挂掉，容易挂掉的是Nginx，如果Nginx挂掉了依然可以通过Keepalived访问机器，但是访问不到Nginx服务。所以这里需要借助Keepalived的vrrp_script配置来调用自定义shell脚本，来检测Nginx是否挂掉，如果Nginx挂掉了，就启动它，打开失败就关闭Keepalived启用备用机</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="编写shell脚本"><a href="#编写shell脚本" class="headerlink" title="编写shell脚本"></a>编写shell脚本</h4><p>在 / 目录下新建shell目录存放shell脚本文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /shell</span><br></pre></td></tr></table></figure>
-
-<p>新建 .sh文件，命名为：nginx_check.sh，内容如下：（该脚本的功能为通过 <font color="#dd0000">ps -ef|grep -w nginx|grep -v grep|wc -l</font>查看当前有多少个Nginx服务在运行，如果返回0说明Nginx服务没有运行，就启动Nginx，过2秒再查看是否启动成功，启动失败就停止Keepalived启用备用机）</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line">echo &#x27;check Nginx&#x27;</span><br><span class="line"></span><br><span class="line">count_nginx=`ps -ef|grep -w nginx|grep -v grep|wc -l`</span><br><span class="line"></span><br><span class="line">echo $count_nginx</span><br><span class="line"></span><br><span class="line">if [ $count_nginx -eq 0 ];then</span><br><span class="line"></span><br><span class="line">    systemctl start nginx</span><br><span class="line">    echo &#x27;start Nginx&#x27;</span><br><span class="line">    sleep 2</span><br><span class="line"></span><br><span class="line">    if [ `ps -ef|grep -w nginx|grep -v grep|wc -l` -eq 0 ];then</span><br><span class="line">        echo &#x27;stop keepalived&#x27;</span><br><span class="line">        systemctl stop keepalived</span><br><span class="line">    fi  </span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改Keepalived配置"><a href="#修改Keepalived配置" class="headerlink" title="修改Keepalived配置"></a>修改Keepalived配置</h4><p>配置文件路径为：/etc/keepalived/keepalived.conf</p>
-<p>添加节点：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vrrp_script check_nginx &#123;</span><br><span class="line">	script <span class="string">&quot;/shell/nginx_check.sh&quot;</span></span><br><span class="line">	nterval <span class="number">2</span></span><br><span class="line">	weight -<span class="number">20</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在vrrp_instance VI_1节点添加：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">track_script &#123;</span><br><span class="line">	check_nginx</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>完整keepalived.conf如下：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">! Configuration <span class="keyword">File</span> for keepalived</span><br><span class="line"></span><br><span class="line">global_defs &#123;</span><br><span class="line">   notification_email &#123;</span><br><span class="line">     acassen@firewall.loc</span><br><span class="line">     failover@firewall.loc</span><br><span class="line">     sysadmin@firewall.loc</span><br><span class="line">   &#125;</span><br><span class="line">   notification_email_from Alexandre.Cassen@firewall.loc</span><br><span class="line">   smtp_server <span class="number">192.168</span>.<span class="number">200.1</span></span><br><span class="line">   smtp_connect_timeout <span class="number">30</span></span><br><span class="line">   router_id KEEPALIVED_NGINX_MASTER</span><br><span class="line">   vrrp_skip_check_adv_addr</span><br><span class="line">   <span class="comment"># vrrp_strict</span></span><br><span class="line">   vrrp_garp_interval <span class="number">0</span></span><br><span class="line">   vrrp_gna_interval <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_script check_nginx &#123;</span><br><span class="line">	script <span class="string">&quot;/shell/nginx_check.sh&quot;</span></span><br><span class="line">	nterval <span class="number">2</span></span><br><span class="line">	weight -<span class="number">20</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state MASTER</span><br><span class="line">    interface ens33</span><br><span class="line">    virtual_router_id <span class="number">51</span></span><br><span class="line">    priority <span class="number">100</span></span><br><span class="line">    advert_int <span class="number">1</span></span><br><span class="line">    authentication &#123;</span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass <span class="number">1111</span></span><br><span class="line">    &#125;</span><br><span class="line">    track_script &#123;</span><br><span class="line">	    check_nginx</span><br><span class="line">    &#125;</span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        <span class="number">192.168</span>.<span class="number">1.99</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="重启Keepalived服务"><a href="#重启Keepalived服务" class="headerlink" title="重启Keepalived服务"></a>重启Keepalived服务</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart keepalived</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>关闭Nginx服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop nginx</span><br></pre></td></tr></table></figure>
-
-<p>等2秒查看Nginx服务状态：Nginx服务正在运行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status nginx</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-01%20132949.png"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>我在测试时keepalived vrrp_script始终不起作用，通过网上的解决方案也没有解决，所以我就不使用vrrp_script了，转而使用Linux的Crontab定时任务定时执行检测脚本，如何使用Crontab查看博客：<a href="https://blog.zoutl.cn/328.html">CentOS7使用Crontab定时任务 </a></p>
-<p>如果你解决了keepalived vrrp_script不起作用，请在评论区留言一下，谢谢(～￣▽￣)～</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/328.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/328.html" class="post-title-link" itemprop="url">CentOS7使用Crontab定时任务</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-01 12:01:53" itemprop="dateCreated datePublished" datetime="2021-09-01T12:01:53+08:00">2021-09-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:50:54" itemprop="dateModified" datetime="2022-04-26T03:50:54+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start crond</span><br></pre></td></tr></table></figure>
-
-<p>停止</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop crond</span><br></pre></td></tr></table></figure>
-
-<p>重启</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart crond</span><br></pre></td></tr></table></figure>
-
-<p>查看状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status crond</span><br></pre></td></tr></table></figure>
-
-<h3 id="赋予权限"><a href="#赋予权限" class="headerlink" title="赋予权限"></a>赋予权限</h3><p>Crontab定时任务是没有权限执行shell脚本的，要先赋予脚本777权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 脚本名称（不在当前目录要加上路径）</span><br></pre></td></tr></table></figure>
-
-<h3 id="执行方式"><a href="#执行方式" class="headerlink" title="执行方式"></a>执行方式</h3><h4 id="脚本放在目录"><a href="#脚本放在目录" class="headerlink" title="脚本放在目录"></a>脚本放在目录</h4><p>把脚本放在/etc/cron.hourly、/etc/cron.daily、/etc/cron.weekly、/etc/cron.monthly目录中，让它每小时/天/星期、月执行一次</p>
-<h4 id="编写crontab命令"><a href="#编写crontab命令" class="headerlink" title="编写crontab命令"></a>编写crontab命令</h4><p>进入当前用户的工作表编辑，是常见的vim界面，每行是一条命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
-
-<p>crontab的命令构成为 时间+动作，下面的* * * * *是时间，shell脚本路径为动作</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-01%20123513.png"></p>
-<p>时间有分、时、日、月、周五种，操作符有：</p>
-<p><font color="#dd0000">*****</font> ：取值范围内的所有数字</p>
-<p><font color="#dd0000"><strong>/</strong></font> ：每过多少个数字</p>
-<p><font color="#dd0000"><strong>-</strong></font> ：从X到Z</p>
-<p><font color="#dd0000"><strong>,</strong></font> ：散列数字</p>
-<p>一些实例：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">实例<span class="number">1</span>：每<span class="number">1</span>分钟执行一次myCommand</span><br><span class="line">* * * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">2</span>：每小时的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> * * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">3</span>：在上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> * * * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">4</span>：每隔两天的上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> */<span class="number">2</span>  *  * myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">5</span>：每周一上午<span class="number">8</span>点到<span class="number">11</span>点的第<span class="number">3</span>和第<span class="number">15</span>分钟执行</span><br><span class="line"><span class="number">3</span>,<span class="number">15</span> <span class="number">8</span>-<span class="number">11</span> * * <span class="number">1</span> myCommand</span><br><span class="line"></span><br><span class="line">实例<span class="number">6</span>：每晚的<span class="number">21</span>:<span class="number">30</span>重启smb</span><br><span class="line"><span class="number">30</span> <span class="number">21</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">7</span>：每月<span class="number">1</span>、<span class="number">10</span>、<span class="number">22</span>日的<span class="number">4</span> : <span class="number">45</span>重启smb</span><br><span class="line"><span class="number">45</span> <span class="number">4</span> <span class="number">1</span>,<span class="number">10</span>,<span class="number">22</span> * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">8</span>：每周六、周日的<span class="number">1</span> : <span class="number">10</span>重启smb</span><br><span class="line"><span class="number">10</span> <span class="number">1</span> * * <span class="number">6</span>,<span class="number">0</span> /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">9</span>：每天<span class="number">18</span> : <span class="number">00</span>至<span class="number">23</span> : <span class="number">00</span>之间每隔<span class="number">30</span>分钟重启smb</span><br><span class="line"><span class="number">0</span>,<span class="number">30</span> <span class="number">18</span>-<span class="number">23</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">10</span>：每星期六的晚上<span class="number">11</span> : <span class="number">00</span> pm重启smb</span><br><span class="line"><span class="number">0</span> <span class="number">23</span> * * <span class="number">6</span> /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">11</span>：每一小时重启smb</span><br><span class="line"><span class="number">0</span> */<span class="number">1</span> * * * /etc/init.d/smb restart</span><br><span class="line"></span><br><span class="line">实例<span class="number">12</span>：晚上<span class="number">11</span>点到早上<span class="number">7</span>点之间，每隔一小时重启smb</span><br><span class="line"><span class="number">0</span> <span class="number">23</span>-<span class="number">7</span>/<span class="number">1</span> * * * /etc/init.d/smb restart</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/327.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/327.html" class="post-title-link" itemprop="url">PotPlayer安装皮肤</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-30 21:06:23" itemprop="dateCreated datePublished" datetime="2021-08-30T21:06:23+08:00">2021-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:50:57" itemprop="dateModified" datetime="2022-04-26T03:50:57+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="下载皮肤"><a href="#下载皮肤" class="headerlink" title="下载皮肤"></a>下载皮肤</h3><p>下载地址：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.potplayercn.com/skins/">PotPlayer皮肤 - PotPlayer中文网 (potplayercn.com)</a></p>
-<h3 id="安装皮肤"><a href="#安装皮肤" class="headerlink" title="安装皮肤"></a>安装皮肤</h3><h4 id="下载后解压"><a href="#下载后解压" class="headerlink" title="下载后解压"></a>下载后解压</h4><p>解压时选择提取到xxxxx文件夹，xxxxx就是下载好的压缩包名称</p>
-<h4 id="找到皮肤文件夹"><a href="#找到皮肤文件夹" class="headerlink" title="找到皮肤文件夹"></a>找到皮肤文件夹</h4><p>打开PotPlayer后，在界面上右键点击，选择皮肤–&gt;&gt;皮肤设置</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-31%20132543.png"></p>
-<p>打开皮肤文件夹，找到PotPlayer的皮肤安装目录</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-31%20132618.png"></p>
-<h4 id="使用皮肤"><a href="#使用皮肤" class="headerlink" title="使用皮肤"></a>使用皮肤</h4><p>然后把上面解压后的文件夹复制到皮肤文件夹中，再重启PotPlayer，在界面上右键点击，选择皮肤再选择对应的皮肤即可</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-31%20133438.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/326.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/326.html" class="post-title-link" itemprop="url">Keepalived+Nginx实现高可用集群配置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-30 12:54:13" itemprop="dateCreated datePublished" datetime="2021-08-30T12:54:13+08:00">2021-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:51:02" itemprop="dateModified" datetime="2022-04-26T03:51:02+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="克隆虚拟机"><a href="#克隆虚拟机" class="headerlink" title="克隆虚拟机"></a>克隆虚拟机</h3><p>克隆当前虚拟机，查看克隆步骤：<a href="/325.html">VMware克隆虚拟机</a> ，当前虚拟机为主机，克隆的虚拟机为备用机（主机崩了才会启用备用机）</p>
-<h3 id="配置主机"><a href="#配置主机" class="headerlink" title="配置主机"></a>配置主机</h3><h4 id="配置虚拟机hosts"><a href="#配置虚拟机hosts" class="headerlink" title="配置虚拟机hosts"></a>配置虚拟机hosts</h4><p>文件路径为：/etc/hosts，在底部添加：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span> KEEPALIVED_NGINX_MASTER</span><br></pre></td></tr></table></figure>
-
-<h4 id="Keepalived配置介绍"><a href="#Keepalived配置介绍" class="headerlink" title="Keepalived配置介绍"></a>Keepalived配置介绍</h4><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 全局配置</span></span><br><span class="line">global_defs &#123;</span><br><span class="line">   notification_email &#123; <span class="comment"># keepalived服务宕机异常出现的时候，发送通知邮件 可以是多个</span></span><br><span class="line">     acassen@firewall.loc  <span class="comment">#  收件人邮箱1</span></span><br><span class="line">     failover@firewall.loc <span class="comment">#  收件人邮箱2</span></span><br><span class="line">     sysadmin@firewall.loc <span class="comment">#  收件人邮箱3</span></span><br><span class="line">   &#125;</span><br><span class="line">   notification_email_from Alexandre.Cassen@firewall.loc  <span class="comment">#邮件发件人</span></span><br><span class="line">   smtp_server <span class="number">192.168</span>.<span class="number">200.1</span>  <span class="comment"># 邮件服务器地址</span></span><br><span class="line">   smtp_connect_timeout <span class="number">30</span>   <span class="comment"># 超时时间</span></span><br><span class="line">   router_id LVS_DEVEL   <span class="comment"># 路由id 多个keepalived集群的时候 必须一致</span></span><br><span class="line">   vrrp_skip_check_adv_addr <span class="comment"># 默认是不跳过检查。检查收到的VRRP通告中的所有地址可能会比较耗时，设置此命令的意思是，如果通告与接收的上一个通告来自相同的master路由器，则不执行检查(跳过检查)。</span></span><br><span class="line">   vrrp_strict   <span class="comment"># 这个东西要注释掉，否则要出乱子。严格遵守VRRP协议。下列情况将会阻止启动Keepalived：1. 没有VIP地址。2. 单播邻居。3. 在VRRP版本2中有IPv6地址。</span></span><br><span class="line">   vrrp_garp_interval <span class="number">0</span>  <span class="comment"># 小数类型，单位秒，在一个网卡上每组gratuitous arp消息之间的延迟时间，默认为0，一个发送的消息=n组 arp报文</span></span><br><span class="line">   vrrp_gna_interval <span class="number">0</span> <span class="comment"># 小数类型，单位秒， 在一个网卡上每组na消息之间的延迟时间，默认为0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># vrrp实例  我们集群设置 多机配置，除了state和priority不一样，其他都一样</span></span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state MASTER  <span class="comment"># 服务器状态 MASTER是主服务器  BACKUP是备份服务器 主服务器的priority要比备份服务器大</span></span><br><span class="line">    interface eth0 <span class="comment"># 通信端口 通过ip addr可以看到 根据自己的机器配置</span></span><br><span class="line">    virtual_router_id <span class="number">51</span>  <span class="comment"># vrrp实例id  keepalived集群，实例id必须一致</span></span><br><span class="line">    priority <span class="number">100</span>  <span class="comment"># 权重比  主服务器的priority要比备份服务器大</span></span><br><span class="line">    advert_int <span class="number">1</span>  <span class="comment"># 心跳间隔  单位秒  keepalived多机器集群 通过心跳检测，如果发送心跳没反应 就立刻接管；</span></span><br><span class="line">    authentication &#123; <span class="comment"># 服务器之间通信密码</span></span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass <span class="number">1111</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    virtual_ipaddress &#123; <span class="comment"># 自定义虚拟IP </span></span><br><span class="line">        <span class="number">192.168</span>.<span class="number">200.16</span></span><br><span class="line">        <span class="number">192.168</span>.<span class="number">200.17</span></span><br><span class="line">        <span class="number">192.168</span>.<span class="number">200.18</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改Keepalived配置文件"><a href="#修改Keepalived配置文件" class="headerlink" title="修改Keepalived配置文件"></a>修改Keepalived配置文件</h4><p>修改 /etc/keepalived 目录下的keepalived.conf配置文件，除了global_defs和vrrp_instance VI_1节点配置外，下面的节点配置都删除</p>
-<p>global_defs.router_id修改为：KEEPALIVED_NGINX_MASTER</p>
-<p>把global_defs.vrrp_strict注释掉</p>
-<p>vrrp_instance VI_1.state修改为：MASTER</p>
-<p>vrrp_instance VI_1.interface修改为：ens33</p>
-<p>vrrp_instance VI_1.priority修改为：100</p>
-<p>vrrp_instance VI_1.virtual_ipaddress修改为：192.168.1.99</p>
-<p>完整keepalived.conf配置如下：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">! Configuration <span class="keyword">File</span> for keepalived</span><br><span class="line"></span><br><span class="line">global_defs &#123;</span><br><span class="line">   notification_email &#123;</span><br><span class="line">     acassen@firewall.loc</span><br><span class="line">     failover@firewall.loc</span><br><span class="line">     sysadmin@firewall.loc</span><br><span class="line">   &#125;</span><br><span class="line">   notification_email_from Alexandre.Cassen@firewall.loc</span><br><span class="line">   smtp_server <span class="number">192.168</span>.<span class="number">200.1</span></span><br><span class="line">   smtp_connect_timeout <span class="number">30</span></span><br><span class="line">   router_id KEEPALIVED_NGINX_MASTER</span><br><span class="line">   vrrp_skip_check_adv_addr</span><br><span class="line">   <span class="comment"># vrrp_strict</span></span><br><span class="line">   vrrp_garp_interval <span class="number">0</span></span><br><span class="line">   vrrp_gna_interval <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state MASTER</span><br><span class="line">    interface ens33</span><br><span class="line">    virtual_router_id <span class="number">51</span></span><br><span class="line">    priority <span class="number">100</span></span><br><span class="line">    advert_int <span class="number">1</span></span><br><span class="line">    authentication &#123;</span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass <span class="number">1111</span></span><br><span class="line">    &#125;</span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        <span class="number">192.168</span>.<span class="number">1.99</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="配置备用机"><a href="#配置备用机" class="headerlink" title="配置备用机"></a>配置备用机</h3><h4 id="配置虚拟机hosts-1"><a href="#配置虚拟机hosts-1" class="headerlink" title="配置虚拟机hosts"></a>配置虚拟机hosts</h4><p>文件路径为：/etc/hosts，在底部添加：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1 KEEPALIVED_NGINX_BACKUP</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改Keepalived配置文件-1"><a href="#修改Keepalived配置文件-1" class="headerlink" title="修改Keepalived配置文件"></a>修改Keepalived配置文件</h4><p>修改 /etc/keepalived 目录下的keepalived.conf配置文件，除了global_defs和vrrp_instance VI_1节点配置外，下面的节点配置都删除</p>
-<p>global_defs.router_id修改为：KEEPALIVED_NGINX_BACKUP</p>
-<p>把global_defs.vrrp_strict注释掉</p>
-<p>vrrp_instance VI_1.state修改为：BACKUP</p>
-<p>vrrp_instance VI_1.interface修改为：ens33</p>
-<p>vrrp_instance VI_1.priority修改为：50</p>
-<p>vrrp_instance VI_1.virtual_ipaddress修改为：192.168.1.99</p>
-<p>完整keepalived.conf配置如下：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">! Configuration <span class="keyword">File</span> for keepalived</span><br><span class="line"></span><br><span class="line">global_defs &#123;</span><br><span class="line">   notification_email &#123;</span><br><span class="line">     acassen@firewall.loc</span><br><span class="line">     failover@firewall.loc</span><br><span class="line">     sysadmin@firewall.loc</span><br><span class="line">   &#125;</span><br><span class="line">   notification_email_from Alexandre.Cassen@firewall.loc</span><br><span class="line">   smtp_server <span class="number">192.168</span>.<span class="number">200.1</span></span><br><span class="line">   smtp_connect_timeout <span class="number">30</span></span><br><span class="line">   router_id KEEPALIVED_NGINX_BACKUP</span><br><span class="line">   vrrp_skip_check_adv_addr</span><br><span class="line">   <span class="comment"># vrrp_strict</span></span><br><span class="line">   vrrp_garp_interval <span class="number">0</span></span><br><span class="line">   vrrp_gna_interval <span class="number">0</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">vrrp_instance VI_1 &#123;</span><br><span class="line">    state BACKUP <span class="comment"># 服务器状态 MASTER是主服务器  BACKUP是备份服务器 主服务器的priority要比备份服务器大</span></span><br><span class="line">    interface ens33 <span class="comment"># 通信端口 通过ip addr可以看到 根据自己的机器配置</span></span><br><span class="line">    virtual_router_id <span class="number">51</span></span><br><span class="line">    priority <span class="number">50</span> <span class="comment"># 权重</span></span><br><span class="line">    advert_int <span class="number">1</span></span><br><span class="line">    authentication &#123;</span><br><span class="line">        auth_type PASS</span><br><span class="line">        auth_pass <span class="number">1111</span></span><br><span class="line">    &#125;</span><br><span class="line">    virtual_ipaddress &#123;</span><br><span class="line">        <span class="number">192.168</span>.<span class="number">1.99</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><h4 id="修改Nginx首页"><a href="#修改Nginx首页" class="headerlink" title="修改Nginx首页"></a>修改Nginx首页</h4><p>分别修改主机和备用机的Nginx运行成功的首页，文件路径为：/usr/share/nginx/html/index.html，在首页代码中添加虚拟机IP以方便辨认访问的是哪个虚拟机</p>
-<h4 id="启动Keepalived"><a href="#启动Keepalived" class="headerlink" title="启动Keepalived"></a>启动Keepalived</h4><p>启动主机和备用机的Keepalived</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start keepalived.service</span><br></pre></td></tr></table></figure>
-
-<h4 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h4><p>浏览器地址栏输入：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://192.168.1.99/">http://192.168.1.99/</a>，此时访问的是主机的Nginx</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-30%20134623.png"></p>
-<p>然后停掉主机的Keepalived</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop keepalived.service</span><br></pre></td></tr></table></figure>
-
-<p>刷新一下页面，此时访问的是备用机的Nginx</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-30%20134604.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/325.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/325.html" class="post-title-link" itemprop="url">VMware克隆虚拟机</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-30 12:37:03" itemprop="dateCreated datePublished" datetime="2021-08-30T12:37:03+08:00">2021-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:51:05" itemprop="dateModified" datetime="2022-04-26T03:51:05+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%85%B6%E5%AE%83/" itemprop="url" rel="index"><span itemprop="name">其它</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="关闭虚拟机"><a href="#关闭虚拟机" class="headerlink" title="关闭虚拟机"></a>关闭虚拟机</h3><p>如果要克隆的虚拟机正在运行，就先把它停掉，正在运行的虚拟机是无法克隆的</p>
-<h3 id="开始克隆"><a href="#开始克隆" class="headerlink" title="开始克隆"></a>开始克隆</h3><blockquote>
-<p>选中要克隆的虚拟机右键点击，选择 <font color="#dd0000">管理–&gt;&gt;克隆</font></p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-30%20124552.png"></p>
-<blockquote>
-<p>克隆类型选择完整克隆</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-30%20124640.png"></p>
-<blockquote>
-<p>填写虚拟机名称以及存储路径</p>
-</blockquote>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-30%20124658.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/324.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/324.html" class="post-title-link" itemprop="url">CentOS7安装Keepalived</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-30 08:54:42" itemprop="dateCreated datePublished" datetime="2021-08-30T08:54:42+08:00">2021-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:51:08" itemprop="dateModified" datetime="2022-04-26T03:51:08+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install keepalived</span><br></pre></td></tr></table></figure>
-
-<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start keepalived.service</span><br></pre></td></tr></table></figure>
-
-<p>关闭</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop keepalived.service</span><br></pre></td></tr></table></figure>
-
-<p>重启</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart keepalived.service</span><br></pre></td></tr></table></figure>
-
-<p>查看日志</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail -f /var/<span class="built_in">log</span>/messages</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>配置文件在/etc/keepalived目录下，名称为：keepalived.conf</p>
-<p>日志文件在/var/log目录下，名称为：messages</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/323.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/323.html" class="post-title-link" itemprop="url">CentOS7安装Nginx</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-30 08:15:10" itemprop="dateCreated datePublished" datetime="2021-08-30T08:15:10+08:00">2021-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:51:11" itemprop="dateModified" datetime="2022-04-26T03:51:11+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="添加Nginx源"><a href="#添加Nginx源" class="headerlink" title="添加Nginx源"></a>添加Nginx源</h3><p>CentOS7默认是没有Nginx源的，Nginx官方提供了添加源的命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure>
-
-<h3 id="启动Nginx"><a href="#启动Nginx" class="headerlink" title="启动Nginx"></a>启动Nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置开机自动运行"><a href="#设置开机自动运行" class="headerlink" title="设置开机自动运行"></a>设置开机自动运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> nginx.service</span><br></pre></td></tr></table></figure>
-
-<h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>关闭</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
-
-<p>查看状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status  firewalld</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><p>浏览器地址栏输入虚拟机IP，看到 <font color="#dd0000">Welcome to nginx! </font>就说明安装成功</p>
-<h3 id="卸载nginx"><a href="#卸载nginx" class="headerlink" title="卸载nginx"></a>卸载nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove nginx</span><br></pre></td></tr></table></figure>
-
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>CentOS7关闭Nginx命令，nginx.service可简写成nginx</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop nginx.service</span><br></pre></td></tr></table></figure>
-
-<p>CentOS7启动Nginx命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx.service</span><br></pre></td></tr></table></figure>
-
-<p>CentOS7重启Nginx命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart nginx.service</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/322.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/322.html" class="post-title-link" itemprop="url">Nginx实现虚拟主机</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-30 00:02:51" itemprop="dateCreated datePublished" datetime="2021-08-30T00:02:51+08:00">2021-08-30</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:51:14" itemprop="dateModified" datetime="2022-04-26T03:51:14+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>虚拟主机概念比较广，可以是虚拟硬件来实现多网站，多应用运行，也可以是通过一些代理服务器来实现单机多网站运行，例如：我们一个服务器上可以部署三个网站，然后通过三个不同的域名访问</p>
-<p>Nginx可以通过反向代理来实现虚拟主机</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><p>查看博客：<a href="https://blog.zoutl.cn/317.html">Nginx 实现反向代理 | LeDao 的博客 (zoutl.cn)</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/321.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/321.html" class="post-title-link" itemprop="url">Nginx实现动静分离</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-29 23:15:00" itemprop="dateCreated datePublished" datetime="2021-08-29T23:15:00+08:00">2021-08-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:51:34" itemprop="dateModified" datetime="2022-04-26T03:51:34+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>动静分离是指在web服务器架构中，将静态页面与动态页面或者静态内容接口和动态内容接口分开不同系统访问的架构设计方法，进而提升整个服务访问性能和可维护性</p>
-<p>我们可以把静态html页面，css样式，js文件，以及图片文件这些静态放Nginx服务器中，然后把动态请求显示的文件放类似Tomcat这样的容器服务器</p>
-<p>这样方便维护，也可以提高系统性能</p>
-<h3 id="前提"><a href="#前提" class="headerlink" title="前提"></a>前提</h3><p>云服务器安装好Nginx，拥有自己的域名（解析一个二级域名来用于访问静态资源）</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="新建静态资源"><a href="#新建静态资源" class="headerlink" title="新建静态资源"></a>新建静态资源</h4><p>在/<code>home/nginx</code>目录下放静态资源</p>
-<blockquote>
-<p>index.html，放在/<code>home/nginx</code>目录下</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">&quot;stylesheet&quot;</span> <span class="attr">href</span>=<span class="string">&quot;http://static.zoutl.cn/static/css/my.css&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;http://static.zoutl.cn/static/js/my.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>Nginx静态资源服务器测试<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;http://static.zoutl.cn/static/img/2.jpg&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width: 666px&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>my.css，放在/<code>home/nginx/static/css</code>目录下</p>
-</blockquote>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>my.js，放在/<code>home/nginx/static/js</code>目录下</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alert(<span class="string">&quot;123456&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h4><p>修改Nginx的default.conf配置文件，修改成自己的域名和资源根目录</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220325130820874.png" alt="image-20220325130820874"></p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>浏览器地址栏输入：<a target="_blank" rel="noopener external nofollow noreferrer" href="http://static.zoutl.cn/">http://static.zoutl.cn/</a>，结果如下：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-29%20233353.gif"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/26/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/">28</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/">59</a><a class="extend next" rel="next" href="/page/28/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-        </div>
-          
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="LeDao"
-      src="https://image.zoutl.cn/hexo-blog/images/logo.png">
-  <p class="site-author-name" itemprop="name">LeDao</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-          <span class="site-state-item-count">590</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">99</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/a6678696" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a6678696" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:1203007469@qq.com" title="E-Mail → mailto:1203007469@qq.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hitsPerPage":6,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，耗时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'LeDao\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">LeDao's Blog</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">LeDao's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/330.html" title="Keepalived+Nginx+Tomcat负载均衡"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/330.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Keepalived+Nginx+Tomcat负载均衡"></a></div><div class="recent-post-info"><a class="article-title" href="/330.html" title="Keepalived+Nginx+Tomcat负载均衡">Keepalived+Nginx+Tomcat负载均衡</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T12:41:02.000Z" title="发表于 2021-09-01 20:41:02">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">启动Tomcat主机和备用机分别使用Docker启动一个Tomcat，版本号最好不同，启动成功后有可能通过外部浏览器无法访问，解决方法查看博客：Docker启动Tomcat成功后外部却无法访问 修改Nginx配置修改主机和备用机的Nginx配置，修改内容一样 修改nginx.conf配置文件（在/etc/nginx目录下），在include /etc/nginx/conf.d/*.conf上方加上： 1234upstream www.123.com&#123;	 server 192.168.0.106:8080 weight=5;	 server 192.168.0.107:8080 weight=10;&#125;  修改default.conf配置文件（在/etc/nginx/conf.d目录下），在location /节点加上： 1proxy_pass  http://www.123.com;  server_name可以修改成 www.123.com ，也可以不修改 重启Nginx1systemctl restart nginx  测试浏览器地址输入：http://19...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/329.html" title="通过shell脚本优化Keepalived+Nginx高可用集群"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/329.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="通过shell脚本优化Keepalived+Nginx高可用集群"></a></div><div class="recent-post-info"><a class="article-title" href="/329.html" title="通过shell脚本优化Keepalived+Nginx高可用集群">通过shell脚本优化Keepalived+Nginx高可用集群</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T04:46:56.000Z" title="发表于 2021-09-01 12:46:56">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">问题描述Keepalived不容易挂掉，容易挂掉的是Nginx，如果Nginx挂掉了依然可以通过Keepalived访问机器，但是访问不到Nginx服务。所以这里需要借助Keepalived的vrrp_script配置来调用自定义shell脚本，来检测Nginx是否挂掉，如果Nginx挂掉了，就启动它，打开失败就关闭Keepalived启用备用机 实现过程编写shell脚本在 / 目录下新建shell目录存放shell脚本文件 1mkdir /shell  新建 .sh文件，命名为：nginx_check.sh，内容如下：（该脚本的功能为通过 ps -ef|grep -w nginx|grep -v grep|wc -l查看当前有多少个Nginx服务在运行，如果返回0说明Nginx服务没有运行，就启动Nginx，过2秒再查看是否启动成功，启动失败就停止Keepalived启用备用机） 1234567891011121314151617181920#!/bin/bashecho &#x27;check Nginx&#x27;count_nginx=`ps -ef|grep -w n...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/328.html" title="CentOS7使用Crontab定时任务"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/328.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7使用Crontab定时任务"></a></div><div class="recent-post-info"><a class="article-title" href="/328.html" title="CentOS7使用Crontab定时任务">CentOS7使用Crontab定时任务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-09-01T04:01:53.000Z" title="发表于 2021-09-01 12:01:53">2021-09-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">常用命令启动 1systemctl start crond  停止 1systemctl stop crond  重启 1systemctl restart crond  查看状态 1systemctl status crond  赋予权限Crontab定时任务是没有权限执行shell脚本的，要先赋予脚本777权限 1chmod 777 脚本名称（不在当前目录要加上路径）  执行方式脚本放在目录把脚本放在/etc/cron.hourly、/etc/cron.daily、/etc/cron.weekly、/etc/cron.monthly目录中，让它每小时/天/星期、月执行一次 编写crontab命令进入当前用户的工作表编辑，是常见的vim界面，每行是一条命令 1crontab -e  crontab的命令构成为 时间+动作，下面的* * * * *是时间，shell脚本路径为动作  时间有分、时、日、月、周五种，操作符有： ***** ：取值范围内的所有数字 / ：每过多少个数字 - ：从X到Z , ：散列数字 一些实例： 1234567891011121314151617181...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/327.html" title="PotPlayer安装皮肤"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/327.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="PotPlayer安装皮肤"></a></div><div class="recent-post-info"><a class="article-title" href="/327.html" title="PotPlayer安装皮肤">PotPlayer安装皮肤</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T13:06:23.000Z" title="发表于 2021-08-30 21:06:23">2021-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">下载皮肤下载地址：PotPlayer皮肤 - PotPlayer中文网 (potplayercn.com) 安装皮肤下载后解压解压时选择提取到xxxxx文件夹，xxxxx就是下载好的压缩包名称 找到皮肤文件夹打开PotPlayer后，在界面上右键点击，选择皮肤–&gt;&gt;皮肤设置  打开皮肤文件夹，找到PotPlayer的皮肤安装目录  使用皮肤然后把上面解压后的文件夹复制到皮肤文件夹中，再重启PotPlayer，在界面上右键点击，选择皮肤再选择对应的皮肤即可  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/326.html" title="Keepalived+Nginx实现高可用集群配置"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/326.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Keepalived+Nginx实现高可用集群配置"></a></div><div class="recent-post-info"><a class="article-title" href="/326.html" title="Keepalived+Nginx实现高可用集群配置">Keepalived+Nginx实现高可用集群配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T04:54:13.000Z" title="发表于 2021-08-30 12:54:13">2021-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">克隆虚拟机克隆当前虚拟机，查看克隆步骤：VMware克隆虚拟机 ，当前虚拟机为主机，克隆的虚拟机为备用机（主机崩了才会启用备用机） 配置主机配置虚拟机hosts文件路径为：/etc/hosts，在底部添加： 1127.0.0.1 KEEPALIVED_NGINX_MASTER  Keepalived配置介绍1234567891011121314151617181920212223242526272829303132333435# 全局配置global_defs &#123;   notification_email &#123; # keepalived服务宕机异常出现的时候，发送通知邮件 可以是多个     acassen@firewall.loc  #  收件人邮箱1     failover@firewall.loc #  收件人邮箱2     sysadmin@firewall.loc #  收件人邮箱3   &#125;   notification_email_from Alexandre.Cassen@firewall.loc  #邮件发件人   smtp_serv...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/325.html" title="VMware克隆虚拟机"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/325.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VMware克隆虚拟机"></a></div><div class="recent-post-info"><a class="article-title" href="/325.html" title="VMware克隆虚拟机">VMware克隆虚拟机</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T04:37:03.000Z" title="发表于 2021-08-30 12:37:03">2021-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="content">关闭虚拟机如果要克隆的虚拟机正在运行，就先把它停掉，正在运行的虚拟机是无法克隆的 开始克隆 选中要克隆的虚拟机右键点击，选择 管理–&gt;&gt;克隆    克隆类型选择完整克隆    填写虚拟机名称以及存储路径   </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/324.html" title="CentOS7安装Keepalived"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/324.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7安装Keepalived"></a></div><div class="recent-post-info"><a class="article-title" href="/324.html" title="CentOS7安装Keepalived">CentOS7安装Keepalived</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T00:54:42.000Z" title="发表于 2021-08-30 08:54:42">2021-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">安装1yum install keepalived  常用命令启动 1systemctl start keepalived.service  关闭 1systemctl stop keepalived.service  重启 1systemctl restart keepalived.service  查看日志 1tail -f /var/log/messages  PS.配置文件在/etc/keepalived目录下，名称为：keepalived.conf 日志文件在/var/log目录下，名称为：messages </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/323.html" title="CentOS7安装Nginx"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/323.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CentOS7安装Nginx"></a></div><div class="recent-post-info"><a class="article-title" href="/323.html" title="CentOS7安装Nginx">CentOS7安装Nginx</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-30T00:15:10.000Z" title="发表于 2021-08-30 08:15:10">2021-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">添加Nginx源CentOS7默认是没有Nginx源的，Nginx官方提供了添加源的命令： 1rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm  安装Nginx1yum install -y nginx  启动Nginx1systemctl start nginx.service  设置开机自动运行1systemctl enable nginx.service  关闭防火墙关闭 1systemctl stop firewalld  查看状态 1systemctl status  firewalld  测试浏览器地址栏输入虚拟机IP，看到 Welcome to nginx! 就说明安装成功 卸载nginx1yum remove nginx  PS.CentOS7关闭Nginx命令，nginx.service可简写成nginx 1systemctl stop nginx.service  CentOS7启动Nginx命令 1system...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/322.html" title="Nginx实现虚拟主机"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/322.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx实现虚拟主机"></a></div><div class="recent-post-info"><a class="article-title" href="/322.html" title="Nginx实现虚拟主机">Nginx实现虚拟主机</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-29T16:02:51.000Z" title="发表于 2021-08-30 00:02:51">2021-08-30</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">简介虚拟主机概念比较广，可以是虚拟硬件来实现多网站，多应用运行，也可以是通过一些代理服务器来实现单机多网站运行，例如：我们一个服务器上可以部署三个网站，然后通过三个不同的域名访问 Nginx可以通过反向代理来实现虚拟主机 实现过程查看博客：Nginx 实现反向代理 | LeDao 的博客 (zoutl.cn) </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/321.html" title="Nginx实现动静分离"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/321.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx实现动静分离"></a></div><div class="recent-post-info"><a class="article-title" href="/321.html" title="Nginx实现动静分离">Nginx实现动静分离</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-29T15:15:00.000Z" title="发表于 2021-08-29 23:15:00">2021-08-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">简介动静分离是指在web服务器架构中，将静态页面与动态页面或者静态内容接口和动态内容接口分开不同系统访问的架构设计方法，进而提升整个服务访问性能和可维护性 我们可以把静态html页面，css样式，js文件，以及图片文件这些静态放Nginx服务器中，然后把动态请求显示的文件放类似Tomcat这样的容器服务器 这样方便维护，也可以提高系统性能 前提云服务器安装好Nginx，拥有自己的域名（解析一个二级域名来用于访问静态资源） 实现过程新建静态资源在/home/nginx目录下放静态资源  index.html，放在/home/nginx目录下  12345678910111213&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;Title&lt;/title&gt;    &lt;link rel=&quot;stylesheet&quot; href=&quot;http://stati...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/26/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/26/#content-inner">26</a><span class="page-number current">27</span><a class="page-number" href="/page/28/#content-inner">28</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/#content-inner">59</a><a class="extend next" rel="next" href="/page/28/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">LeDao</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/590.html" title="Nginx重新部署SSL证书"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/590.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx重新部署SSL证书"/></a><div class="content"><a class="title" href="/590.html" title="Nginx重新部署SSL证书">Nginx重新部署SSL证书</a><time datetime="2024-10-07T16:39:44.000Z" title="发表于 2024-10-08 00:39:44">2024-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/589.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"/></a><div class="content"><a class="title" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法">VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</a><time datetime="2024-03-09T13:43:26.000Z" title="发表于 2024-03-09 21:43:26">2024-03-09</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo%E5%8D%9A%E5%AE%A2/"><span class="card-category-list-name">Hexo博客</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">个人项目</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E5%AE%83/"><span class="card-category-list-name">其它</span><span class="card-category-list-count">39</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">121</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="card-category-list-name">后端</span><span class="card-category-list-count">219</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">41</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/"><span class="card-category-list-name">持久层框架</span><span class="card-category-list-count">20</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="card-category-list-name">数据库</span><span class="card-category-list-count">29</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Tomcat/" style="font-size: 1.4em; color: #99a5b6">Tomcat</a> <a href="/tags/OpenFeign/" style="font-size: 1.1em; color: #999">OpenFeign</a> <a href="/tags/jQuery/" style="font-size: 1.18em; color: #999ca0">jQuery</a> <a href="/tags/Docker/" style="font-size: 1.5em; color: #99a9bf">Docker</a> <a href="/tags/ZooKeeper/" style="font-size: 1.15em; color: #999b9e">ZooKeeper</a> <a href="/tags/%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF/" style="font-size: 1.1em; color: #999">报错信息</a> <a href="/tags/Typora/" style="font-size: 1.1em; color: #999">Typora</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.45em; color: #99a7ba">微信小程序</a> <a href="/tags/IDM/" style="font-size: 1.1em; color: #999">IDM</a> <a href="/tags/Zuul/" style="font-size: 1.15em; color: #999b9e">Zuul</a> <a href="/tags/CSS/" style="font-size: 1.32em; color: #99a2ae">CSS</a> <a href="/tags/Hystrix/" style="font-size: 1.23em; color: #999ea5">Hystrix</a> <a href="/tags/TypeScript/" style="font-size: 1.1em; color: #999">TypeScript</a> <a href="/tags/v-viewer/" style="font-size: 1.1em; color: #999">v-viewer</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.35em; color: #99a3b1">数据结构</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 1.15em; color: #999b9e">阿里云</a> <a href="/tags/Mycat/" style="font-size: 1.1em; color: #999">Mycat</a> <a href="/tags/Elasticsearch/" style="font-size: 1.2em; color: #999da3">Elasticsearch</a> <a href="/tags/%E9%83%A8%E8%90%BD%E5%86%B2%E7%AA%81/" style="font-size: 1.13em; color: #999a9b">部落冲突</a> <a href="/tags/Vite/" style="font-size: 1.13em; color: #999a9b">Vite</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/Highcharts/" style="font-size: 1.1em; color: #999">Highcharts</a> <a href="/tags/Thymeleaf/" style="font-size: 1.2em; color: #999da3">Thymeleaf</a> <a href="/tags/JWT/" style="font-size: 1.1em; color: #999">JWT</a> <a href="/tags/Ribbon/" style="font-size: 1.15em; color: #999b9e">Ribbon</a> <a href="/tags/Spring-Boot/" style="font-size: 1.48em; color: #99a8bd">Spring Boot</a> <a href="/tags/Ajax/" style="font-size: 1.18em; color: #999ca0">Ajax</a> <a href="/tags/Spring/" style="font-size: 1.38em; color: #99a4b3">Spring</a> <a href="/tags/Maven/" style="font-size: 1.3em; color: #99a1ac">Maven</a> <a href="/tags/MyBatisX/" style="font-size: 1.1em; color: #999">MyBatisX</a> <a href="/tags/Crontab/" style="font-size: 1.1em; color: #999">Crontab</a> <a href="/tags/Postman/" style="font-size: 1.1em; color: #999">Postman</a> <a href="/tags/Gateway/" style="font-size: 1.1em; color: #999">Gateway</a> <a href="/tags/SSL%E8%AF%81%E4%B9%A6/" style="font-size: 1.15em; color: #999b9e">SSL证书</a> <a href="/tags/MyBatis-Plus/" style="font-size: 1.25em; color: #999fa7">MyBatis-Plus</a> <a href="/tags/ECharts/" style="font-size: 1.1em; color: #999">ECharts</a> <a href="/tags/RabbitMQ/" style="font-size: 1.43em; color: #99a6b8">RabbitMQ</a> <a href="/tags/JavaScript/" style="font-size: 1.43em; color: #99a6b8">JavaScript</a> <a href="/tags/MyBatis/" style="font-size: 1.28em; color: #99a0aa">MyBatis</a> <a href="/tags/Hexo%E5%8D%9A%E5%AE%A2/" style="font-size: 1.43em; color: #99a6b8">Hexo博客</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        <div class="copyright">
   
-  &copy; 2020 – 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heartbeat"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">LeDao</span>
-</div>
-<div>
-    <span style="text-align: left;display: inline-block;vertical-align: middle;">本网站由 </span>
-	<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src='https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png' style="height: 30px;vertical-align: middle;display: inline-block;"></a>
-	<span style="text-align: left;display: inline-block;vertical-align: middle;">提供CDN加速/云存储服务</span>
-</div>
-<div class="id111">
-    <span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a></span>
-	<img src='https://image.zoutl.cn/hexo-blog/images/beian.png' style="vertical-align: middle;display: inline-block;">
-	<span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></span>
-</div>
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  
-  <script color='255,51,51' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
-</script>
-
-
-
-
-  
-
-  
-
-
-</body>
-</html>
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/02/">
+            <span class="card-archive-list-date">
+              二月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/09/">
+            <span class="card-archive-list-date">
+              九月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">590</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-04T01:34:24.574Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2020 - 2025 By LeDao</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 5.4.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div id="algolia-search-input"><div class="ais-SearchBox"><form class="ais-SearchBox-form" action="" role="search" novalidate=""><input class="ais-SearchBox-input" type="search" placeholder="搜索文章" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="512" aria-label="Search"/><button class="ais-SearchBox-submit" type="submit" title="Submit the search query" style="display:none;"><svg class="ais-SearchBox-submitIcon" width="10" height="10" viewBox="0 0 40 40" aria-hidden="true"><path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg></button></form></div><hr/><div id="algolia-search-results"><div id="algolia-hits"><div id="algolia-hits-empty" style="display:none;"></div><div class="ais-Hits" style="display:none;"><ol class="ais-Hits-list"></ol></div></div><div class="ais-Pagination" id="algolia-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="algolia-info"><span class="ais-Stats-text"></span><a class="algolia-poweredBy" href="https://www.algolia.com/?utm_source=algoliasearch.js&amp;utm_medium=website&amp;utm_content=localhost&amp;utm_campaign=poweredby" target="_blank" aria-label="Search by Algolia" rel="noopener noreferrer"><svg class="ais-PoweredBy-logo" height="1.2em" viewBox="0 0 572 64" style="width: auto;"><path fill="#36395A" d="M16 48.3c-3.4 0-6.3-.6-8.7-1.7A12.4 12.4 0 0 1 1.9 42C.6 40 0 38 0 35.4h6.5a6.7 6.7 0 0 0 3.9 6c1.4.7 3.3 1.1 5.6 1.1 2.2 0 4-.3 5.4-1a7 7 0 0 0 3-2.4 6 6 0 0 0 1-3.4c0-1.5-.6-2.8-1.9-3.7-1.3-1-3.3-1.6-5.9-1.8l-4-.4c-3.7-.3-6.6-1.4-8.8-3.4a10 10 0 0 1-3.3-7.9c0-2.4.6-4.6 1.8-6.4a12 12 0 0 1 5-4.3c2.2-1 4.7-1.6 7.5-1.6s5.5.5 7.6 1.6a12 12 0 0 1 5 4.4c1.2 1.8 1.8 4 1.8 6.7h-6.5a6.4 6.4 0 0 0-3.5-5.9c-1-.6-2.6-1-4.4-1s-3.2.3-4.4 1c-1.1.6-2 1.4-2.6 2.4-.5 1-.8 2-.8 3.1a5 5 0 0 0 1.5 3.6c1 1 2.6 1.7 4.7 1.9l4 .3c2.8.2 5.2.8 7.2 1.8 2.1 1 3.7 2.2 4.9 3.8a9.7 9.7 0 0 1 1.7 5.8c0 2.5-.7 4.7-2 6.6a13 13 0 0 1-5.6 4.4c-2.4 1-5.2 1.6-8.4 1.6Zm35.6 0c-2.6 0-4.8-.4-6.7-1.3a13 13 0 0 1-4.7-3.5 17.1 17.1 0 0 1-3.6-10.4v-1c0-2 .3-3.8 1-5.6a13 13 0 0 1 7.3-8.3 15 15 0 0 1 6.3-1.4A13.2 13.2 0 0 1 64 24.3c1 2.2 1.6 4.6 1.6 7.2V34H39.4v-4.3h21.8l-1.8 2.2c0-2-.3-3.7-.9-5.1a7.3 7.3 0 0 0-2.7-3.4c-1.2-.7-2.7-1.1-4.6-1.1s-3.4.4-4.7 1.3a8 8 0 0 0-2.9 3.6c-.6 1.5-.9 3.3-.9 5.4 0 2 .3 3.7 1 5.3a7.9 7.9 0 0 0 2.8 3.7c1.3.8 3 1.3 5 1.3s3.8-.5 5.1-1.3c1.3-1 2.1-2 2.4-3.2h6a11.8 11.8 0 0 1-7 8.7 16 16 0 0 1-6.4 1.2ZM80 48c-2.2 0-4-.3-5.7-1a8.4 8.4 0 0 1-3.7-3.3 9.7 9.7 0 0 1-1.3-5.2c0-2 .5-3.8 1.5-5.2a9 9 0 0 1 4.3-3.1c1.8-.7 4-1 6.7-1H89v4.1h-7.5c-2 0-3.4.5-4.4 1.4-1 1-1.6 2.1-1.6 3.6s.5 2.7 1.6 3.6c1 1 2.5 1.4 4.4 1.4 1.1 0 2.2-.2 3.2-.7 1-.4 1.9-1 2.6-2 .6-1 1-2.4 1-4.2l1.7 2.1c-.2 2-.7 3.8-1.5 5.2a9 9 0 0 1-3.4 3.3 12 12 0 0 1-5.3 1Zm9.5-.7v-8.8h-1v-10c0-1.8-.5-3.2-1.4-4.1-1-1-2.4-1.4-4.2-1.4a142.9 142.9 0 0 0-10.2.4v-5.6a74.8 74.8 0 0 1 8.6-.4c3 0 5.5.4 7.5 1.2s3.4 2 4.4 3.6c1 1.7 1.4 4 1.4 6.7v18.4h-5Zm12.9 0V17.8h5v12.3h-.2c0-4.2 1-7.4 2.8-9.5a11 11 0 0 1 8.3-3.1h1v5.6h-2a9 9 0 0 0-6.3 2.2c-1.5 1.5-2.2 3.6-2.2 6.4v15.6h-6.4Zm34.4 1a15 15 0 0 1-6.6-1.3c-1.9-.9-3.4-2-4.7-3.5a15.5 15.5 0 0 1-2.7-5c-.6-1.7-1-3.6-1-5.4v-1c0-2 .4-3.8 1-5.6a15 15 0 0 1 2.8-4.9c1.3-1.5 2.8-2.6 4.6-3.5a16.4 16.4 0 0 1 13.3.2c2 1 3.5 2.3 4.8 4a12 12 0 0 1 2 6H144c-.2-1.6-1-3-2.2-4.1a7.5 7.5 0 0 0-5.2-1.7 8 8 0 0 0-4.7 1.3 8 8 0 0 0-2.8 3.6 13.8 13.8 0 0 0 0 10.3c.6 1.5 1.5 2.7 2.8 3.6s2.8 1.3 4.8 1.3c1.5 0 2.7-.2 3.8-.8a7 7 0 0 0 2.6-2c.7-1 1-2 1.2-3.2h6.2a11 11 0 0 1-2 6.2 15.1 15.1 0 0 1-11.8 5.5Zm19.7-1v-40h6.4V31h-1.3c0-3 .4-5.5 1.1-7.6a9.7 9.7 0 0 1 3.5-4.8A9.9 9.9 0 0 1 172 17h.3c3.5 0 6 1.1 7.9 3.5 1.7 2.3 2.6 5.7 2.6 10v16.8h-6.4V29.6c0-2.1-.6-3.8-1.8-5a6.4 6.4 0 0 0-4.8-1.8c-2 0-3.7.7-5 2a7.8 7.8 0 0 0-1.9 5.5v17h-6.4Zm63.8 1a12.2 12.2 0 0 1-10.9-6.2 19 19 0 0 1-1.8-7.3h1.4v12.5h-5.1v-40h6.4v19.8l-2 3.5c.2-3.1.8-5.7 1.9-7.7a11 11 0 0 1 4.4-4.5c1.8-1 3.9-1.5 6.1-1.5a13.4 13.4 0 0 1 12.8 9.1c.7 1.9 1 3.8 1 6v1c0 2.2-.3 4.1-1 6a13.6 13.6 0 0 1-13.2 9.4Zm-1.2-5.5a8.4 8.4 0 0 0 7.9-5c.7-1.5 1.1-3.3 1.1-5.3s-.4-3.8-1.1-5.3a8.7 8.7 0 0 0-3.2-3.6 9.6 9.6 0 0 0-9.2-.2 8.5 8.5 0 0 0-3.3 3.2c-.8 1.4-1.3 3-1.3 5v2.3a9 9 0 0 0 1.3 4.8 9 9 0 0 0 3.4 3c1.4.7 2.8 1 4.4 1Zm27.3 3.9-10-28.9h6.5l9.5 28.9h-6Zm-7.5 12.2v-5.7h4.9c1 0 2-.1 2.9-.4a4 4 0 0 0 2-1.4c.4-.7.9-1.6 1.2-2.7l8.6-30.9h6.2l-9.3 32.4a14 14 0 0 1-2.5 5 8.9 8.9 0 0 1-4 2.8c-1.5.6-3.4.9-5.6.9h-4.4Zm9-12.2v-5.2h6.4v5.2H248Z"></path><path fill="#003DFF" d="M534.4 9.1H528a.8.8 0 0 1-.7-.7V1.8c0-.4.2-.7.6-.8l6.5-1c.4 0 .8.2.9.6v7.8c0 .4-.4.7-.8.7zM428 35.2V.8c0-.5-.3-.8-.7-.8h-.2l-6.4 1c-.4 0-.7.4-.7.8v35c0 1.6 0 11.8 12.3 12.2.5 0 .8-.4.8-.8V43c0-.4-.3-.7-.6-.8-4.5-.5-4.5-6-4.5-7zm106.5-21.8H528c-.4 0-.7.4-.7.8v34c0 .4.3.8.7.8h6.5c.4 0 .8-.4.8-.8v-34c0-.5-.4-.8-.8-.8zm-17.7 21.8V.8c0-.5-.3-.8-.8-.8l-6.5 1c-.4 0-.7.4-.7.8v35c0 1.6 0 11.8 12.3 12.2.4 0 .8-.4.8-.8V43c0-.4-.3-.7-.7-.8-4.4-.5-4.4-6-4.4-7zm-22.2-20.6a16.5 16.5 0 0 1 8.6 9.3c.8 2.2 1.3 4.8 1.3 7.5a19.4 19.4 0 0 1-4.6 12.6 14.8 14.8 0 0 1-5.2 3.6c-2 .9-5.2 1.4-6.8 1.4a21 21 0 0 1-6.7-1.4 15.4 15.4 0 0 1-8.6-9.3 21.3 21.3 0 0 1 0-14.4 15.2 15.2 0 0 1 8.6-9.3c2-.8 4.3-1.2 6.7-1.2s4.6.4 6.7 1.2zm-6.7 27.6c2.7 0 4.7-1 6.2-3s2.2-4.3 2.2-7.8-.7-6.3-2.2-8.3-3.5-3-6.2-3-4.7 1-6.1 3c-1.5 2-2.2 4.8-2.2 8.3s.7 5.8 2.2 7.8 3.5 3 6.2 3zm-88.8-28.8c-6.2 0-11.7 3.3-14.8 8.2a18.6 18.6 0 0 0 4.8 25.2c1.8 1.2 4 1.8 6.2 1.7s.1 0 .1 0h.9c4.2-.7 8-4 9.1-8.1v7.4c0 .4.3.7.8.7h6.4a.7.7 0 0 0 .7-.7V14.2c0-.5-.3-.8-.7-.8h-13.5zm6.3 26.5a9.8 9.8 0 0 1-5.7 2h-.5a10 10 0 0 1-9.2-14c1.4-3.7 5-6.3 9-6.3h6.4v18.3zm152.3-26.5h13.5c.5 0 .8.3.8.7v33.7c0 .4-.3.7-.8.7h-6.4a.7.7 0 0 1-.8-.7v-7.4c-1.2 4-4.8 7.4-9 8h-.1a4.2 4.2 0 0 1-.5.1h-.9a10.3 10.3 0 0 1-7-2.6c-4-3.3-6.5-8.4-6.5-14.2 0-3.7 1-7.2 3-10 3-5 8.5-8.3 14.7-8.3zm.6 28.4c2.2-.1 4.2-.6 5.7-2V21.7h-6.3a9.8 9.8 0 0 0-9 6.4 10.2 10.2 0 0 0 9.1 13.9h.5zM452.8 13.4c-6.2 0-11.7 3.3-14.8 8.2a18.5 18.5 0 0 0 3.6 24.3 10.4 10.4 0 0 0 13 .6c2.2-1.5 3.8-3.7 4.5-6.1v7.8c0 2.8-.8 5-2.2 6.3-1.5 1.5-4 2.2-7.5 2.2l-6-.3c-.3 0-.7.2-.8.5l-1.6 5.5c-.1.4.1.8.5 1h.1c2.8.4 5.5.6 7 .6 6.3 0 11-1.4 14-4.1 2.7-2.5 4.2-6.3 4.5-11.4V14.2c0-.5-.4-.8-.8-.8h-13.5zm6.3 8.2v18.3a9.6 9.6 0 0 1-5.6 2h-1a10.3 10.3 0 0 1-8.8-14c1.4-3.7 5-6.3 9-6.3h6.4zM291 31.5A32 32 0 0 1 322.8 0h30.8c.6 0 1.2.5 1.2 1.2v61.5c0 1.1-1.3 1.7-2.2 1l-19.2-17a18 18 0 0 1-11 3.4 18.1 18.1 0 1 1 18.2-14.8c-.1.4-.5.7-.9.6-.1 0-.3 0-.4-.2l-3.8-3.4c-.4-.3-.6-.8-.7-1.4a12 12 0 1 0-2.4 8.3c.4-.4 1-.5 1.6-.2l14.7 13.1v-46H323a26 26 0 1 0 10 49.7c.8-.4 1.6-.2 2.3.3l3 2.7c.3.2.3.7 0 1l-.2.2a32 32 0 0 1-47.2-28.6z"></path></svg></a></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.39.0/dist/lite/builds/browser.umd.min.js"></script><script src="/js/search/algolia.js?v=5.5.1"></script></div></div></body></html>

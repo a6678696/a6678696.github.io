@@ -1,1449 +1,237 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic|consolas:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.zoutl.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":6,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta property="og:type" content="website">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>LeDao's Blog</title><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
 <meta property="og:title" content="LeDao&#39;s Blog">
 <meta property="og:url" content="https://blog.zoutl.cn/page/29/index.html">
 <meta property="og:site_name" content="LeDao&#39;s Blog">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
 <meta property="article:author" content="LeDao">
 <meta property="article:tag" content="LeDao的博客,Java,idea使用,个人项目,Tomcat,MySQL,GitHub,前端,MyBatis,MyBatis-Plus,CentOS7,Redis,Vue.js">
 <meta name="twitter:card" content="summary">
-
-<link rel="canonical" href="https://blog.zoutl.cn/page/29/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : true,
-    isPost : false,
-    lang   : 'zh-CN'
-  };
-</script>
-
-  <title>LeDao's Blog</title>
-  
-
-
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-<link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">LeDao's Blog</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-主页">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>主页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-        <li class="menu-item menu-item-项目">
-
-    <a href="/project/" rel="section"><i class="fa fa-paw fa-fw"></i>项目</a>
-
-  </li>
-        <li class="menu-item menu-item-友链">
-
-    <a href="/links/" rel="section"><i class="fa fa-link fa-fw"></i>友链</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-
-  <a href="https://github.com/a6678696" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content index posts-expand">
-            
+<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/images/logo.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/page/29/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/310.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/310.html" class="post-title-link" itemprop="url">DockerFile的ONBUILD指令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-23 01:05:56" itemprop="dateCreated datePublished" datetime="2021-08-23T01:05:56+08:00">2021-08-23</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:07" itemprop="dateModified" datetime="2022-04-26T03:53:07+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>父镜像在被子镜像继承后父镜像的ONBUILD被触发，可以把ONBUID理解为一个触发器。编写Dockerfile的时候，其他命令都是为了自身镜像服务的，只有ONBUILD是为了子镜像服务</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="构建父镜像"><a href="#构建父镜像" class="headerlink" title="构建父镜像"></a>构建父镜像</h4><p>编写父镜像DockerFile，命名为：parent_df，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">ONBUILD RUN yum -y install vim</span><br><span class="line"></span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>构建父镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f parent_df -t parent .</span><br></pre></td></tr></table></figure>
-
-<h4 id="构建子镜像"><a href="#构建子镜像" class="headerlink" title="构建子镜像"></a>构建子镜像</h4><p>编写子镜像DockerFile，命名为：son_df，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM parent</span><br></pre></td></tr></table></figure>
-
-<p>构建子镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> docker build -f son_df -t son .</span><br></pre></td></tr></table></figure>
-
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>当构建子镜像的时候，父镜像的ONBUILD会触发，子镜像直接安装vim，父镜像是没有安装vim的。所以使用父镜像创建的容器使用vim命令会报错，而用子镜像创建的容器可以使用vim命令</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/309.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/309.html" class="post-title-link" itemprop="url">DockerFile的CMD, ENTRYPOINT指令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-22 23:33:20" itemprop="dateCreated datePublished" datetime="2021-08-22T23:33:20+08:00">2021-08-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:10" itemprop="dateModified" datetime="2022-04-26T03:53:10+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>CMD，ENTRYPOINT都是容器启动的时候，执行执行命令，都支持exec和shell方式</p>
-<p>一般用法有两种：①单独一个CMD②先使用ENTRYPOINT（用于执行命令），然后结合CMD使用（用于追加参数）</p>
-<p>有多个CMD时，只有最后一个CMD生效</p>
-<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>一般开发和Docker官方都建议用 exec格式</p>
-<h4 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h4><p>第一种用法：运行一个可执行的文件并提供参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD [<span class="string">&quot;executable&quot;</span>,<span class="string">&quot;param1&quot;</span>,<span class="string">&quot;param2&quot;</span>]</span><br></pre></td></tr></table></figure>
-
-<p>第二种用法：为ENTRYPOINT指定参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD [<span class="string">&quot;param1&quot;</span>,<span class="string">&quot;param2&quot;</span>] </span><br></pre></td></tr></table></figure>
-
-<p>第三种用法(shell格式)：是以”/bin/sh -c”的方法执行的命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CMD <span class="built_in">command</span> param1 param2</span><br></pre></td></tr></table></figure>
-
-<h4 id="ENTRYPOINT"><a href="#ENTRYPOINT" class="headerlink" title="ENTRYPOINT"></a>ENTRYPOINT</h4><p> exec 格式, 推荐</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT [“executable”, “param1”, “param2”]</span><br></pre></td></tr></table></figure>
-
-<p> shell 格式</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ENTRYPOINT <span class="built_in">command</span> param1 param2</span><br></pre></td></tr></table></figure>
-
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><h4 id="单个CMD"><a href="#单个CMD" class="headerlink" title="单个CMD"></a>单个CMD</h4><p>编写DockerFile，命名为df1，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">CMD <span class="built_in">echo</span> <span class="string">&quot;第一个CMD&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>构建镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f df1 -t a6678696/df:1.1 .</span><br></pre></td></tr></table></figure>
-
-<p>创建和运行该镜像的容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run 镜像id</span><br></pre></td></tr></table></figure>
-
-<p>结果如下图</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20000826.jpg"></p>
-<h4 id="多个CMD"><a href="#多个CMD" class="headerlink" title="多个CMD"></a>多个CMD</h4><p>编写DockerFile，命名为df2，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">CMD <span class="built_in">echo</span> <span class="string">&quot;第一个CMD&quot;</span></span><br><span class="line">CMD <span class="built_in">echo</span> <span class="string">&quot;第二个CMD&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>构建镜像</p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">docker</span> build -f df<span class="number">2</span> -t a<span class="number">6678696</span>/df:<span class="number">1</span>.<span class="number">2</span> .</span><br></pre></td></tr></table></figure>
-
-<p>创建和运行该镜像的容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run 镜像id</span><br></pre></td></tr></table></figure>
-
-<p>结果如下图，第一个CMD命令没有生效，生效的是最后一个CMD</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20000929.jpg"></p>
-<h4 id="先ENTRYPOINT后CMD"><a href="#先ENTRYPOINT后CMD" class="headerlink" title="先ENTRYPOINT后CMD"></a>先ENTRYPOINT后CMD</h4><p>编写DockerFile，命名为df3，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">ENTRYPOINT [<span class="string">&quot;ls&quot;</span>]</span><br><span class="line"></span><br><span class="line">CMD [<span class="string">&quot;-l&quot;</span>]</span><br></pre></td></tr></table></figure>
-
-<p>构建镜像</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f df3 -t a6678696/df:1.3 .</span><br></pre></td></tr></table></figure>
-
-<p>创建和运行该镜像的容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run 镜像id</span><br></pre></td></tr></table></figure>
-
-<p>结果如下图，以ls -l格式查看文件</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-23%20001442.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/308.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/308.html" class="post-title-link" itemprop="url">DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-22 03:46:11" itemprop="dateCreated datePublished" datetime="2021-08-22T03:46:11+08:00">2021-08-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:13" itemprop="dateModified" datetime="2022-04-26T03:53:13+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>DockerFile创建镜像时通过VOLUME指令创建几个容器卷，然后创建这个镜像的容器时，这个容器就有了这几个容器卷目录，并与宿主机自动创建的对应目录实现了挂载</p>
-<h3 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h3><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VOLUME[<span class="string">&#x27;目录1&#x27;</span>,<span class="string">&#x27;目录2&#x27;</span>]</span><br></pre></td></tr></table></figure>
-
-<h4 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h4><p>新建一个文件，命名为：myVolumeDockerFile，没有后缀名，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">VOLUME [<span class="string">&quot;/home/v1&quot;</span>,<span class="string">&quot;/home/v2&quot;</span>]</span><br><span class="line"></span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h4 id="构建镜像"><a href="#构建镜像" class="headerlink" title="构建镜像"></a>构建镜像</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f myVolumeDockerFile -t a6678696/mycentos:1.2 .</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040035.jpg"></p>
-<h4 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it 9123279cfb4f</span><br></pre></td></tr></table></figure>
-
-<h4 id="找到挂载的目录"><a href="#找到挂载的目录" class="headerlink" title="找到挂载的目录"></a>找到挂载的目录</h4><p>①找到容器挂载的容器卷v1，v2</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040322.jpg"></p>
-<p>②找到宿主机挂载的容器卷</p>
-<p>通过inspect命令获取容器的元数据</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect 容器id</span><br></pre></td></tr></table></figure>
-
-<p>找到Mounts节点，Source为宿主机的目录，Destination为容器的目录，两个目录是挂载的</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20040846.jpg"></p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>docker run -v 命令创建挂载目录更好，可以自定义宿主机目录</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/307.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/307.html" class="post-title-link" itemprop="url">DockerFile创建镜像时报错：file not found in build context or excluded by</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-22 01:25:02" itemprop="dateCreated datePublished" datetime="2021-08-22T01:25:02+08:00">2021-08-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:20" itemprop="dateModified" datetime="2022-04-26T03:53:20+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错</p>
-<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令</p>
-<p>例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20013057.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/306.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/306.html" class="post-title-link" itemprop="url">DockerFile构建自定义Tomcat</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-22 00:45:16" itemprop="dateCreated datePublished" datetime="2021-08-22T00:45:16+08:00">2021-08-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:22" itemprop="dateModified" datetime="2022-04-26T03:53:22+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h3><p>新建一个文件，命名为：mytomcatdockerfile，没有后缀名，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line">MAINTAINER LeDao&lt;f1203007469@gmail.com&gt;</span><br><span class="line"> </span><br><span class="line">LABEL name=<span class="string">&quot;LeDao Tomcat Image&quot;</span> \</span><br><span class="line">    build-date=<span class="string">&quot;2021-08-22 00:16:53&quot;</span></span><br><span class="line">    </span><br><span class="line">COPY  copyright.txt /home/copyright.txt</span><br><span class="line">ADD server-jre-8u151-linux-x64.tar.gz /home/</span><br><span class="line">ADD apache-tomcat-8.5.37.tar.gz /home/</span><br><span class="line"> </span><br><span class="line">ENV WORKPATH /home/apache-tomcat-8.5.37/</span><br><span class="line">WORKDIR <span class="variable">$WORKPATH</span></span><br><span class="line"> </span><br><span class="line">ENV JAVA_HOME /home/jdk1.8.0_151</span><br><span class="line">ENV CLASSPATH <span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line">ENV CATALINA_HOME /home/apache-tomcat-8.5.37/</span><br><span class="line">ENV CATALINA_BASE /home/apache-tomcat-8.5.37/</span><br><span class="line">ENV PATH <span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$CATALINA_HOME</span>/lib:<span class="variable">$CATALINA_HOME</span>/bin</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">EXPOSE 8080</span><br><span class="line">CMD [<span class="string">&quot;/home/apache-tomcat-8.5.37/bin/catalina.sh&quot;</span>,<span class="string">&quot;run&quot;</span>]</span><br></pre></td></tr></table></figure>
-
-<h3 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h3><p>创建/home/dockerfile目录，把mytomcatdockerfile、copyright.txt、server-jre-8u151-linux-x64.tar.gz、apache-tomcat-8.5.37.tar.gz复制到该目录下，并进入该目录</p>
-<p>四个文件的百度网盘链接：</p>
-<blockquote>
-<p>链接：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pan.baidu.com/s/1ldCQGNay95IvVlOzeMQdXg">https://pan.baidu.com/s/1ldCQGNay95IvVlOzeMQdXg</a> </p>
-<p>提取码：<code>62h2</code></p>
-</blockquote>
-<h3 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h3><p>命令的最后面有个英文句号.（少了句号不行）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f mytomcatdockerfile -t a6678696/mytomcat:1.2 .</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20010340.jpg"></p>
-<h3 id="查看镜像构造历史"><a href="#查看镜像构造历史" class="headerlink" title="查看镜像构造历史"></a>查看镜像构造历史</h3><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-22%20010515.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/305.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/305.html" class="post-title-link" itemprop="url">DockerFile构建自定义CentOS</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-21 23:06:20" itemprop="dateCreated datePublished" datetime="2021-08-21T23:06:20+08:00">2021-08-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:26" itemprop="dateModified" datetime="2022-04-26T03:53:26+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="编写DockerFile"><a href="#编写DockerFile" class="headerlink" title="编写DockerFile"></a>编写DockerFile</h3><p>新建一个文件，命名为：mycentosDockerFile，没有后缀名，内容如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line">MAINTAINER ledao&lt;f1203007469@gmail.com&gt;</span><br><span class="line"></span><br><span class="line">LABEL name=<span class="string">&quot;LeDao CentOS Image&quot;</span> \</span><br><span class="line">	build-date=<span class="string">&quot;2021-08-21&quot;</span></span><br><span class="line"></span><br><span class="line">ENV WORKPATH /home/</span><br><span class="line">WORKDIR <span class="variable">$WORKPATH</span></span><br><span class="line"></span><br><span class="line">RUN yum -y install net-tools</span><br><span class="line">RUN yum -y install vim</span><br><span class="line"></span><br><span class="line">EXPOSE 80</span><br><span class="line">CMD /bin/bash</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建镜像"><a href="#创建镜像" class="headerlink" title="创建镜像"></a>创建镜像</h3><p>命令的最后面有个英文句号.（少了句号不行）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -f /home/dockerfile/mycentosDockerFile -t a6678696/mycentos:1.1 .</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20232745.png"></p>
-<h3 id="查看镜像构建历史"><a href="#查看镜像构建历史" class="headerlink" title="查看镜像构建历史"></a>查看镜像构建历史</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">history</span> 镜像id</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20233507.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/304.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/304.html" class="post-title-link" itemprop="url">DockerFile常用指令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-21 21:38:01" itemprop="dateCreated datePublished" datetime="2021-08-21T21:38:01+08:00">2021-08-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:29" itemprop="dateModified" datetime="2022-04-26T03:53:29+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="DockerFile简介"><a href="#DockerFile简介" class="headerlink" title="DockerFile简介"></a>DockerFile简介</h3><p>dockerfile用于快速有序且直观地完成对镜像的定制</p>
-<p>Dockerfile 是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建</p>
-<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><h4 id="FROM"><a href="#FROM" class="headerlink" title="FROM"></a>FROM</h4><p>FROM指令是整个Dockerfile的入口，必须是第一条指令。其代表新制作镜像的基础镜像。基础镜像可以自己制作，也可以从开源的仓库pull，例如dockerhub或是国内阿里云的免费仓库。</p>
-<p>Docker中存在一种特殊的情况，就是不以任何基础镜像为基准，此时可以第一句话使用：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FROM scratch</span><br></pre></td></tr></table></figure>
-
-<p>来表示以空白镜像为基础，也就是直接将可执行文件复制进镜像。例如swarm、coreos/etcd等。</p>
-<h4 id="RUN指令"><a href="#RUN指令" class="headerlink" title="RUN指令"></a>RUN指令</h4><p>是dockerfile中最常用的指令之一。用来执行命令行上的命令。RUN的格式分为两种：</p>
-<p>第一种：<br>shell格式：<code>RUN&lt;命令&gt;</code>，类似于直接在终端输入命令。例如：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RUN echo <span class="string">&#x27;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#x27;</span> &gt; <span class="regexp">/usr/share</span><span class="regexp">/tomcat/welcome</span>.html</span><br></pre></td></tr></table></figure>
-
-<p>第二种：<br>exec格式：<code>RUN [&quot;可执行文件&quot;, &quot;参数1&quot;, &quot;参数2&quot;]</code>。<br>RUN既然可以像在命令行那样工作，那么就也可以实现传参来运行指令：</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu:<span class="number">14.04</span></span><br><span class="line"></span><br><span class="line">RUN apt-get update</span><br><span class="line">RUN apt-get install -y gcc libc6-dev <span class="built_in">make</span></span><br><span class="line">RUN wget -O redis.tar.gz <span class="string">&quot;http://download.redis.io/releases/redis-3.2.5.tar.gz&quot;</span></span><br><span class="line">RUN mkdir -p /usr/src/redis</span><br><span class="line">RUN tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=<span class="number">1</span></span><br><span class="line">RUN <span class="built_in">make</span> -C /usr/src/redis</span><br><span class="line">RUN <span class="built_in">make</span> -C /usr/src/redis install</span><br></pre></td></tr></table></figure>
-
-<p>RUN一次就代表Dockerfile中的一层。而docker镜像的构建就是不断去完善每一层需要做的事情。而dockerfi对一个file中层数是有限制的，最大不超过127层。因此，RUN提供命令的串联功能，也就是允许每一层可包含多种操作，他们会按照书写顺序来依次执行。那么上面的例子可以变为：</p>
-<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">FROM ubuntu:<span class="number">14.04</span></span><br><span class="line">RUN buildDeps=<span class="string">&#x27;gcc libc6-dev make&#x27;</span> \</span><br><span class="line">    &amp;&amp; apt-<span class="keyword">get</span> update \</span><br><span class="line">    &amp;&amp; apt-<span class="keyword">get</span> install -y $buildDeps \</span><br><span class="line">    &amp;&amp; wget -O redis.tar.gz <span class="string">&quot;http://download.redis.io/releases/redis-3.2.5.tar.gz&quot;</span> \</span><br><span class="line">    &amp;&amp; mkdir -p /usr/src/redis \</span><br><span class="line">    &amp;&amp; tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=<span class="number">1</span> \</span><br><span class="line">    &amp;&amp; make -C /usr/src/redis \</span><br><span class="line">    &amp;&amp; make -C /usr/src/redis install \</span><br><span class="line">    &amp;&amp; rm -rf /<span class="keyword">var</span>/lib/apt/lists<span class="comment">/* \</span></span><br><span class="line"><span class="comment">    &amp;&amp; rm redis.tar.gz \</span></span><br><span class="line"><span class="comment">    &amp;&amp; rm -r /usr/src/redis \</span></span><br><span class="line"><span class="comment">    &amp;&amp; apt-get purge -y --auto-remove $buildDeps</span></span><br></pre></td></tr></table></figure>
-
-<p>换行用 \ ，注释用 # ，平时书写注意缩进来保证文件的可读性。上述例子中的最后一句还进行了无关文件的清理，进一步保证每一层的最优和最小</p>
-<p>注意事项：<br>镜像的初衷是进行功能的模块化，也是尽可能让每个容器干最少的事情，那么我们在书写dockerfile的时候要注意这个问题，每一层的东西确保是必须的，否则就不要进行安装或是拷贝。</p>
-<h4 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h4><p>指定作者<br>句法：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MAINTAINER <span class="tag">&lt;<span class="name">name</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="LABEL"><a href="#LABEL" class="headerlink" title="LABEL"></a>LABEL</h4><p>该指令是为镜像添加标签<br>句法：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">LABEL <span class="tag">&lt;<span class="name">key</span>&gt;</span>=<span class="tag">&lt;<span class="name">value</span>&gt;</span> <span class="tag">&lt;<span class="name">key</span>&gt;</span>=<span class="tag">&lt;<span class="name">value</span>&gt;</span> <span class="tag">&lt;<span class="name">key</span>&gt;</span>=<span class="tag">&lt;<span class="name">value</span>&gt;</span> ...</span><br></pre></td></tr></table></figure>
-
-<p>一个Dockerfile种可以有多个LABEL，如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">LABEL multi.label1=<span class="string">&quot;value1&quot;</span> \</span><br><span class="line">multi.label2=<span class="string">&quot;value2&quot;</span> \</span><br><span class="line">other=<span class="string">&quot;value3&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>说明：LABEL会继承基础镜像种的LABEL，如遇到key相同，则值覆盖</p>
-<h4 id="COPY指令"><a href="#COPY指令" class="headerlink" title="COPY指令"></a>COPY指令</h4><p>该指令用于将宿主机文件拷贝至镜像内的指定路径<br>格式：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">COPY &lt;源路径&gt;... &lt;目标路径&gt;</span><br><span class="line">或</span><br><span class="line">COPY [&quot;&lt;源路径1&gt;&quot;,... &quot;&lt;目标路径&gt;&quot;]</span><br></pre></td></tr></table></figure>
-
-<p>也就是说，原路径可以有多个，而目标路径唯一<br>注意事项：</p>
-<p>1、可以使用符合GO规范的通配符，例如：<code>COPY hom* /mydir/</code><br>2、目的路径可以是镜像内的绝对路径，也可以是相对于当前工作目录的相对路径<br>3、COPY过来的文件权限与原始权限相同。如需更改，请用传统Liunx的chmod命令进行修改即可</p>
-<h4 id="ADD高级复制"><a href="#ADD高级复制" class="headerlink" title="ADD高级复制"></a>ADD高级复制</h4><p>ADD的本质作用类似于COPY，但是其更复杂：</p>
-<p>1、ADD过来的压缩包可以自动在目标路径下进行解压<br>2、原始路径可以是一个连接，ADD过程会尝试从该链接下载所需的文件到目的路径<br>3、一般情况下，建议使用COPY而不是ADD，因为COPY过来的文件可以配合使用RUN来进行解压或是其他操作，搭配使用更灵活，且单条语句所负担的功能唯一</p>
-<h4 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h4><p>该指令用于指定Dockerfile中该指令下面的操作所在的工作目录<br>类似于 cd 命令</p>
-<h4 id="CMD-服务启动指令"><a href="#CMD-服务启动指令" class="headerlink" title="CMD 服务启动指令"></a>CMD 服务启动指令</h4><p>Docker不是虚拟机而是一个进程，作为进程，当然可以制定启动镜像时的具体参数。说白了就是制定一些你想自动启动的服务<br>格式：</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">shell 格式：<span class="built_in">CMD</span> &lt;命令&gt;</span><br><span class="line">exec 格式：<span class="built_in">CMD</span> [<span class="string">&quot;可执行文件&quot;</span>, <span class="string">&quot;参数1&quot;</span>, <span class="string">&quot;参数2&quot;</span>...]</span><br><span class="line">参数列表格式：<span class="built_in">CMD</span> [<span class="string">&quot;参数1&quot;</span>, <span class="string">&quot;参数2&quot;</span>...]。在指定了 ENTRYPOINT 指令后，用 <span class="built_in">CMD</span> 指定具体的参数。</span><br></pre></td></tr></table></figure>
-
-<p>注意事项：</p>
-<p>1、CMD中的启动参数可以被更新覆盖。例如：<br>Dockerfile中若是用CMD指定启动镜像时执行/bin/bash，那么在启动镜像时输入<code>docker run -it ubuntu ./test.sh</code> 则会用./test.sh命令来覆盖/bin/bash命令<br>2、推荐使用exec格式的CMD书写。这类格式在解析时会被解析为 JSON 数组，因此一定要使用双引号 “，而不要使用单引号<br>3、如果使用 shell 格式的话，实际的命令会被包装为 sh -c 的参数的形式进行执行。比如：<code>CMD echo /java</code><br>在实际执行中，会将其变更为：<br><code>CMD [ &quot;sh&quot;, &quot;-c&quot;, &quot;echo /java&quot; ]</code></p>
-<h4 id="ENV设置环境变量"><a href="#ENV设置环境变量" class="headerlink" title="ENV设置环境变量"></a>ENV设置环境变量</h4><p>说是环境变量还不说是一个全局变量。在前面定义，后面可以通过 $ 取值进行使用<br>格式：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ENV <span class="tag">&lt;<span class="name">key</span>&gt;</span> <span class="tag">&lt;<span class="name">value</span>&gt;</span></span><br><span class="line">ENV <span class="tag">&lt;<span class="name">key1</span>&gt;</span>=<span class="tag">&lt;<span class="name">value1</span>&gt;</span> <span class="tag">&lt;<span class="name">key2</span>&gt;</span>=<span class="tag">&lt;<span class="name">value2</span>&gt;</span>...</span><br></pre></td></tr></table></figure>
-
-<p>例如可以指定一些包的版本号，这样更新镜像很方便，或是保存一些密码（该功能慎用，自己玩还是可以的）</p>
-<h4 id="ARG-构建参数"><a href="#ARG-构建参数" class="headerlink" title="ARG 构建参数"></a>ARG 构建参数</h4><p>语法形式: <code>ARG &lt;name&gt;[=&lt;default value&gt;]</code><br>ARG和ENV效果类似，都是用来设置观景变量的。唯一 不同的是dockerfile中的ARG编译好后是不会出现在打开的容器内的</p>
-<p>ARG在dockerfile中创建一个全局参数，参数可以给定一个默认值，在编译时可以传参对其进行覆盖。如果ARG指令有默认值并且在构建期间没有接收到参数、则使用默认值。一个dockerfile中可以包含多个ARG参数</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build --build-arg <span class="tag">&lt;<span class="name">varname</span>&gt;</span>=<span class="tag">&lt;<span class="name">value</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>可以使用ARG或ENV指令来指定RUN指令可用的变量，如果ARG和ENV同时指定了一个相同名称的变量、则ENV设置的变量会覆盖ARG设置的变量。如下:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 FROM ubuntu</span><br><span class="line">2 ARG CONT_IMG_VER</span><br><span class="line">3 ENV CONT_IMG_VER v1.0.0</span><br><span class="line">4 RUN <span class="built_in">echo</span> <span class="variable">$CONT_IMG_VER</span></span><br></pre></td></tr></table></figure>
-
-<p>使用   <code>docker build --build-arg CONT_IMG_VER=v2.0.1 .</code> 最终输出v1.0.0 </p>
-<p>一个ARG指令的有效范围在其定义的构建阶段内、如果要在多个阶段中都有效、则必须在每个阶段都使用ARG指令；<strong>与ARG不同  ENV设置参数的有效期为整个构建期内</strong></p>
-<h4 id="VOLUME-挂在共享卷"><a href="#VOLUME-挂在共享卷" class="headerlink" title="VOLUME 挂在共享卷"></a>VOLUME 挂在共享卷</h4><p>格式为：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VOLUME [&quot;&lt;路径1&gt;&quot;, &quot;&lt;路径2&gt;&quot;...]</span><br><span class="line">VOLUME &lt;路径&gt;</span><br></pre></td></tr></table></figure>
-
-<p>Docker的使用原则除了每个容器干尽量少的事情外，还尽可能要求容器运行时应该尽量保持容器存储层不发生写操作，对于数据库类需要保存动态数据的应用，其数据库文件应该保存于卷(volume)中，也就是将本地磁盘的某一个目录挂载至容器内。同时这样的共享目录可以被多个不同的容器所使用</p>
-<p>除了可以在dockerfile中指定这一参数外，在运行启动容器时也可以附带这一参数来指定共享卷：</p>
-<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --name container-test -h CONTAINER -v /<span class="keyword">data</span> debian /bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>上述命令也可以覆盖dockerfile中的目录设定。</p>
-<h4 id="USER指定用户"><a href="#USER指定用户" class="headerlink" title="USER指定用户"></a>USER指定用户</h4><p>在书写dockerfile时，某些层的操作若想切换用户名，可以使用该参数指定某些层的用户，并且是存在的用户名。<br> 格式：<code>USER &lt;用户名&gt;</code></p>
-<p>如果以 <code>root</code> 执行的脚本，在执行期间希望改变身份，比如希望以某个已经建立好的用户来运行某个服务进程，不要使用 <code>su</code> 或者 <code>sudo</code>，这些都需要比较麻烦的配置，而且在 TTY 缺失的环境下经常出错。建议使用 <code>gosu</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 建立 redis 用户，并使用 gosu 换另一个用户执行命令</span></span><br><span class="line">RUN groupadd -r redis &amp;&amp; useradd -r -g redis redis</span><br><span class="line"><span class="comment"># 下载 gosu</span></span><br><span class="line">RUN wget -O /usr/<span class="built_in">local</span>/bin/gosu <span class="string">&quot;https://github.com/tianon/gosu/releases/download/1.7/gosu-amd64&quot;</span> \</span><br><span class="line">    &amp;&amp; chmod +x /usr/<span class="built_in">local</span>/bin/gosu \</span><br><span class="line">    &amp;&amp; gosu nobody <span class="literal">true</span></span><br><span class="line"><span class="comment"># 设置 CMD，并以另外的用户执行</span></span><br><span class="line">CMD [ <span class="string">&quot;exec&quot;</span>, <span class="string">&quot;gosu&quot;</span>, <span class="string">&quot;redis&quot;</span>, <span class="string">&quot;redis-server&quot;</span> ]</span><br></pre></td></tr></table></figure>
-
-<h4 id="EXPOSE暴漏端口"><a href="#EXPOSE暴漏端口" class="headerlink" title="EXPOSE暴漏端口"></a>EXPOSE暴漏端口</h4><p>句法：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">EXPOSE &lt;端口1&gt; [&lt;端口2&gt;...]</span><br></pre></td></tr></table></figure>
-
-<p><code>EXPOSE</code> 指令是声明运行时容器提供服务端口，这只是一个声明，在运行时并不会因为这个声明应用就会开启这个端口的服务。在 Dockerfile 中写入这样的声明有两个好处，一个是帮助镜像使用者理解这个镜像服务的守护端口，以方便配置映射；另一个用处则是在运行时使用随机端口映射时，也就是 <code>docker run -P</code> 时，会自动随机映射 <code>EXPOSE</code> 的端口</p>
-<p>要将 EXPOSE 和在运行时使用 <code>-p &lt;宿主端口&gt;:&lt;容器端口&gt;</code> 区分开来。<code>-p</code>，是映射宿主端口和容器端口，换句话说，就是将容器的对应端口服务公开给外界访问，而 EXPOSE 仅仅是声明容器打算使用什么端口而已，并不会自动在宿主进行端口映射</p>
-<h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>来源：<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.jianshu.com/p/2a90fc6ee383">https://www.jianshu.com/p/2a90fc6ee383</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/303.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/303.html" class="post-title-link" itemprop="url">Docker备份和恢复镜像</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-21 21:01:27" itemprop="dateCreated datePublished" datetime="2021-08-21T21:01:27+08:00">2021-08-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:32" itemprop="dateModified" datetime="2022-04-26T03:53:32+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="备份镜像"><a href="#备份镜像" class="headerlink" title="备份镜像"></a>备份镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o 备份镜像的名称  源镜像名称:tag版本</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20211044.jpg"></p>
-<h3 id="恢复镜像"><a href="#恢复镜像" class="headerlink" title="恢复镜像"></a>恢复镜像</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker load -i 镜像文件</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20211126.jpg"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/302.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/302.html" class="post-title-link" itemprop="url">Docker安装和配置MySQL容器</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-21 10:38:08" itemprop="dateCreated datePublished" datetime="2021-08-21T10:38:08+08:00">2021-08-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:35" itemprop="dateModified" datetime="2022-04-26T03:53:35+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="创建MySQL容器"><a href="#创建MySQL容器" class="headerlink" title="创建MySQL容器"></a>创建MySQL容器</h3><p>创建的这个容器只是用来获取文件路径</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name 自定义名称 -di -p 3305:3306 -e MYSQL_ROOT_PASSWORD=123456 MySQL镜像id</span><br></pre></td></tr></table></figure>
-
-<h3 id="获取文件路径"><a href="#获取文件路径" class="headerlink" title="获取文件路径"></a>获取文件路径</h3><p>进入容器的文件夹中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it 容器id /bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>获取conf.d、log、mysql的文件路径，分别如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/etc/mysql/conf.d</span><br><span class="line">/var/<span class="built_in">log</span></span><br><span class="line">/var/lib/mysql</span><br></pre></td></tr></table></figure>
-
-<h3 id="复制文件到宿主机"><a href="#复制文件到宿主机" class="headerlink" title="复制文件到宿主机"></a>复制文件到宿主机</h3><p>在宿主机的 home 目录下新建 mysql 目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/mysql</span><br></pre></td></tr></table></figure>
-
-<p>复制容器里的 /etc/mysql/conf.d、/var/log、/var/lib/mysql到宿主机/home/mysql</p>
-<p>复制/etc/mysql/conf.d</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器id:/etc/mysql/conf.d /home/mysql/</span><br></pre></td></tr></table></figure>
-
-<p>复制/var/log</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器id:/var/<span class="built_in">log</span> /home/mysql/</span><br></pre></td></tr></table></figure>
-
-<p>复制/var/lib/mysql</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器id:/var/lib/mysql /home/mysql/</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建新的MySQL容器"><a href="#创建新的MySQL容器" class="headerlink" title="创建新的MySQL容器"></a>创建新的MySQL容器</h3><p>创建时挂载 /etc/mysql/conf.d、/var/log、/var/lib/mysql</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -di --name 自定义名称 -p 3303:3306 -v /etc/mysql/conf.d:/home/mysql/conf -v /var/<span class="built_in">log</span>:/home/mysql/<span class="built_in">log</span> -v /var/lib/mysql:/home/mysql/mysql -e MYSQL_ROOT_PASSWORD=123456 MySQL镜像id</span><br></pre></td></tr></table></figure>
-
-<p>重启新的MySQL容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker restart 容器id</span><br></pre></td></tr></table></figure>
-
-<h3 id="SQLyog连接数据库"><a href="#SQLyog连接数据库" class="headerlink" title="SQLyog连接数据库"></a>SQLyog连接数据库</h3><p>连接数据库，主机地址填虚拟机IP，端口和密码填创建容器时设置的，用户名是root</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20112355.png"></p>
-<p>执行sql脚本导入数据</p>
-<p>然后就可以操作mysql容器的数据库了，Java项目连接数据库的基本信息也是填上面的</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.zoutl.cn/301.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://image.zoutl.cn/hexo-blog/images/logo.png">
-      <meta itemprop="name" content="LeDao">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LeDao's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/301.html" class="post-title-link" itemprop="url">Docker安装和配置Tomcat容器并部署Java项目</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-08-21 09:31:21" itemprop="dateCreated datePublished" datetime="2021-08-21T09:31:21+08:00">2021-08-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-26 03:53:39" itemprop="dateModified" datetime="2022-04-26T03:53:39+08:00">2022-04-26</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%BF%90%E7%BB%B4/" itemprop="url" rel="index"><span itemprop="name">运维</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="创建Tomcat容器"><a href="#创建Tomcat容器" class="headerlink" title="创建Tomcat容器"></a>创建Tomcat容器</h3><p>创建的这个容器只是用来获取文件路径</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name 自定义名称 -di -p 8080:8080 Tomcat镜像id</span><br></pre></td></tr></table></figure>
-
-<h3 id="获取文件路径"><a href="#获取文件路径" class="headerlink" title="获取文件路径"></a>获取文件路径</h3><p>进入容器的文件夹中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it Tomcat容器id /bin/bash</span><br></pre></td></tr></table></figure>
-
-<p>获取三个文件夹<font color="#dd0000">conf、webapps、logs</font>的文件路径</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20095054.jpg"></p>
-<h3 id="复制文件到宿主机"><a href="#复制文件到宿主机" class="headerlink" title="复制文件到宿主机"></a>复制文件到宿主机</h3><p>在宿主机的 home 目录下新建 tomcat 目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/tomcat</span><br></pre></td></tr></table></figure>
-
-<p>复制容器里的 <font color="#dd0000">/usr/local/tomcat/conf、/usr/local/tomcat/webapps</font> 到宿主机/home/tomcat/</p>
-<p>复制 /usr/local/tomcat/conf</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器id:/usr/<span class="built_in">local</span>/tomcat/conf /home/tomcat/</span><br></pre></td></tr></table></figure>
-
-<p>复制 /usr/local/tomcat/webapps</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 容器id:/usr/<span class="built_in">local</span>/tomcat/webapps /home/tomcat/</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建新的Tomcat容器"><a href="#创建新的Tomcat容器" class="headerlink" title="创建新的Tomcat容器"></a>创建新的Tomcat容器</h3><p>这个容器是用来部署Java项目的，创建时挂载 <font color="#dd0000">/home/tomcat/conf、/home/tomcat/webapps、home/tomcat/logs</font></p>
-<p>创建容器并挂载目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name 自定义名称 -di -p 80:8080 -v /home/tomcat/conf:/usr/<span class="built_in">local</span>/tomcat/conf -v /home/tomcat/webapps:/usr/<span class="built_in">local</span>/tomcat/webapps -v /home/tomcat/logs:/usr/<span class="built_in">local</span>/tomcat/logs Tomcat镜像id</span><br></pre></td></tr></table></figure>
-
-<h3 id="上传Java项目"><a href="#上传Java项目" class="headerlink" title="上传Java项目"></a>上传Java项目</h3><p>上传到 <font color="#dd0000">/home/tomcat/webapps</font> 目录下，我上传的文件名为：WebTest.war，Docker 的 Tomcat 是热部署的所以会自动部署Java项目，过了一会儿就可以访问这个项目了，访问路径为：<font color="#dd0000">http://虚拟机的ip/WebTest</font></p>
-<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><p>修改宿主机的 <font color="#dd0000">/home/tomcat/conf</font> 目录下的 <font color="#dd0000">server.xml</font>，添加以下代码：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span> <span class="attr">path</span>=<span class="string">&quot;&quot;</span> <span class="attr">docBase</span>=<span class="string">&quot;/usr/local/tomcat/webapps/WebTest&quot;</span> <span class="attr">debug</span>=<span class="string">&quot;0&quot;</span> <span class="attr">reloadable</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>添加位置如下图：</p>
-<p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-08-21%20102700.png"></p>
-<p>重启新创建的Tomcat容器，即部署Java项目的容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker restart 容器id</span><br></pre></td></tr></table></figure>
-
-<p>然后访问项目可以不加项目名了，访问路径为：<font color="#dd0000">http://虚拟机的ip</font></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/28/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/">59</a><a class="extend next" rel="next" href="/page/30/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
       }
     }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
 
-        </div>
-          
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="LeDao"
-      src="https://image.zoutl.cn/hexo-blog/images/logo.png">
-  <p class="site-author-name" itemprop="name">LeDao</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
         
-          <span class="site-state-item-count">590</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">99</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/a6678696" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;a6678696" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:1203007469@qq.com" title="E-Mail → mailto:1203007469@qq.com" rel="noopener external nofollow noreferrer" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
-
-
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hitsPerPage":6,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，耗时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'LeDao\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://image.zoutl.cn/hexo-blog/images/homeBlogImage/00.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">LeDao's Blog</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">LeDao's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/310.html" title="DockerFile的ONBUILD指令"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/310.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DockerFile的ONBUILD指令"></a></div><div class="recent-post-info"><a class="article-title" href="/310.html" title="DockerFile的ONBUILD指令">DockerFile的ONBUILD指令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-22T17:05:56.000Z" title="发表于 2021-08-23 01:05:56">2021-08-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">简介父镜像在被子镜像继承后父镜像的ONBUILD被触发，可以把ONBUID理解为一个触发器。编写Dockerfile的时候，其他命令都是为了自身镜像服务的，只有ONBUILD是为了子镜像服务 使用构建父镜像编写父镜像DockerFile，命名为：parent_df，内容如下： 12345FROM centosONBUILD RUN yum -y install vimCMD /bin/bash  构建父镜像 1docker build -f parent_df -t parent .  构建子镜像编写子镜像DockerFile，命名为：son_df，内容如下： 1FROM parent  构建子镜像 1 docker build -f son_df -t son .  结果当构建子镜像的时候，父镜像的ONBUILD会触发，子镜像直接安装vim，父镜像是没有安装vim的。所以使用父镜像创建的容器使用vim命令会报错，而用子镜像创建的容器可以使用vim命令 </div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/309.html" title="DockerFile的CMD, ENTRYPOINT指令"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/309.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DockerFile的CMD, ENTRYPOINT指令"></a></div><div class="recent-post-info"><a class="article-title" href="/309.html" title="DockerFile的CMD, ENTRYPOINT指令">DockerFile的CMD, ENTRYPOINT指令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-22T15:33:20.000Z" title="发表于 2021-08-22 23:33:20">2021-08-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">简介CMD，ENTRYPOINT都是容器启动的时候，执行执行命令，都支持exec和shell方式 一般用法有两种：①单独一个CMD②先使用ENTRYPOINT（用于执行命令），然后结合CMD使用（用于追加参数） 有多个CMD时，只有最后一个CMD生效 语法一般开发和Docker官方都建议用 exec格式 CMD第一种用法：运行一个可执行的文件并提供参数 1CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]  第二种用法：为ENTRYPOINT指定参数 1CMD [&quot;param1&quot;,&quot;param2&quot;]   第三种用法(shell格式)：是以”/bin/sh -c”的方法执行的命令 1CMD command param1 param2  ENTRYPOINT exec 格式, 推荐 1ENTRYPOINT [“executable”, “param1”, “param2”]   shell 格式 1ENTRYPOINT command param1 param2 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/308.html" title="DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/308.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载"></a></div><div class="recent-post-info"><a class="article-title" href="/308.html" title="DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载">DockerFile通过VOLUME指令创建容器卷来实现容器的目录挂载</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-21T19:46:11.000Z" title="发表于 2021-08-22 03:46:11">2021-08-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">介绍DockerFile创建镜像时通过VOLUME指令创建几个容器卷，然后创建这个镜像的容器时，这个容器就有了这几个容器卷目录，并与宿主机自动创建的对应目录实现了挂载 实现过程语法1VOLUME[&#x27;目录1&#x27;,&#x27;目录2&#x27;]  编写DockerFile新建一个文件，命名为：myVolumeDockerFile，没有后缀名，内容如下： 12345FROM centosVOLUME [&quot;/home/v1&quot;,&quot;/home/v2&quot;]CMD /bin/bash  构建镜像1docker build -f myVolumeDockerFile -t a6678696/mycentos:1.2 .   创建容器1docker run -it 9123279cfb4f  找到挂载的目录①找到容器挂载的容器卷v1，v2  ②找到宿主机挂载的容器卷 通过inspect命令获取容器的元数据 1docker inspect 容器id  找到Mounts节点，Source为宿主机的目录，Destination为容器的目录，两个目录...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/307.html" title="DockerFile创建镜像时报错：file not found in build context or excluded by"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/307.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DockerFile创建镜像时报错：file not found in build context or excluded by"></a></div><div class="recent-post-info"><a class="article-title" href="/307.html" title="DockerFile创建镜像时报错：file not found in build context or excluded by">DockerFile创建镜像时报错：file not found in build context or excluded by</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-21T17:25:02.000Z" title="发表于 2021-08-22 01:25:02">2021-08-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">问题描述DockerFile创建镜像时使用COPY和ADD指令时，检测到源文件不存在就会报错 解决办法DockerFile文件和源文件放在同一目录下，并且先进入这个目录再执行创建镜像命令 例如我的DockerFile文件和源文件都在/home/dockerfile目录中（如下图所示），那么我就要进入/home/dockerfile目录，然后执行DockerFile创建镜像的命令  </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/306.html" title="DockerFile构建自定义Tomcat"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/306.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DockerFile构建自定义Tomcat"></a></div><div class="recent-post-info"><a class="article-title" href="/306.html" title="DockerFile构建自定义Tomcat">DockerFile构建自定义Tomcat</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-21T16:45:16.000Z" title="发表于 2021-08-22 00:45:16">2021-08-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">编写DockerFile新建一个文件，命名为：mytomcatdockerfile，没有后缀名，内容如下： 12345678910111213141516171819202122FROM centosMAINTAINER LeDao&lt;f1203007469@gmail.com&gt; LABEL name=&quot;LeDao Tomcat Image&quot; \    build-date=&quot;2021-08-22 00:16:53&quot;    COPY  copyright.txt /home/copyright.txtADD server-jre-8u151-linux-x64.tar.gz /home/ADD apache-tomcat-8.5.37.tar.gz /home/ ENV WORKPATH /home/apache-tomcat-8.5.37/WORKDIR $WORKPATH ENV JAVA_HOME /home/jdk1.8.0_151ENV CLASSPATH $JAVA_HOME/lib/dt.jar:$JAVA_HOME...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/305.html" title="DockerFile构建自定义CentOS"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/305.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DockerFile构建自定义CentOS"></a></div><div class="recent-post-info"><a class="article-title" href="/305.html" title="DockerFile构建自定义CentOS">DockerFile构建自定义CentOS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-21T15:06:20.000Z" title="发表于 2021-08-21 23:06:20">2021-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">编写DockerFile新建一个文件，命名为：mycentosDockerFile，没有后缀名，内容如下： 1234567891011121314FROM centosMAINTAINER ledao&lt;f1203007469@gmail.com&gt;LABEL name=&quot;LeDao CentOS Image&quot; \	build-date=&quot;2021-08-21&quot;ENV WORKPATH /home/WORKDIR $WORKPATHRUN yum -y install net-toolsRUN yum -y install vimEXPOSE 80CMD /bin/bash  创建镜像命令的最后面有个英文句号.（少了句号不行） 1docker build -f /home/dockerfile/mycentosDockerFile -t a6678696/mycentos:1.1 .   查看镜像构建历史1docker history 镜像id   </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/304.html" title="DockerFile常用指令"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/304.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DockerFile常用指令"></a></div><div class="recent-post-info"><a class="article-title" href="/304.html" title="DockerFile常用指令">DockerFile常用指令</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-21T13:38:01.000Z" title="发表于 2021-08-21 21:38:01">2021-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">DockerFile简介dockerfile用于快速有序且直观地完成对镜像的定制 Dockerfile 是一个文本文件，其内包含了一条条的指令(Instruction)，每一条指令构建一层，因此每一条指令的内容，就是描述该层应当如何构建 指令FROMFROM指令是整个Dockerfile的入口，必须是第一条指令。其代表新制作镜像的基础镜像。基础镜像可以自己制作，也可以从开源的仓库pull，例如dockerhub或是国内阿里云的免费仓库。 Docker中存在一种特殊的情况，就是不以任何基础镜像为基准，此时可以第一句话使用： 1FROM scratch  来表示以空白镜像为基础，也就是直接将可执行文件复制进镜像。例如swarm、coreos/etcd等。 RUN指令是dockerfile中最常用的指令之一。用来执行命令行上的命令。RUN的格式分为两种： 第一种：shell格式：RUN&lt;命令&gt;，类似于直接在终端输入命令。例如： 1RUN echo &#x27;&lt;h1&gt;Hello, Docker!&lt;/h1&gt;&#x27; &gt; /usr/share/...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/303.html" title="Docker备份和恢复镜像"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/303.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker备份和恢复镜像"></a></div><div class="recent-post-info"><a class="article-title" href="/303.html" title="Docker备份和恢复镜像">Docker备份和恢复镜像</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-21T13:01:27.000Z" title="发表于 2021-08-21 21:01:27">2021-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">备份镜像1docker save -o 备份镜像的名称  源镜像名称:tag版本   恢复镜像1docker load -i 镜像文件   </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/302.html" title="Docker安装和配置MySQL容器"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/302.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker安装和配置MySQL容器"></a></div><div class="recent-post-info"><a class="article-title" href="/302.html" title="Docker安装和配置MySQL容器">Docker安装和配置MySQL容器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-21T02:38:08.000Z" title="发表于 2021-08-21 10:38:08">2021-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">创建MySQL容器创建的这个容器只是用来获取文件路径 1docker run --name 自定义名称 -di -p 3305:3306 -e MYSQL_ROOT_PASSWORD=123456 MySQL镜像id  获取文件路径进入容器的文件夹中 1docker exec -it 容器id /bin/bash  获取conf.d、log、mysql的文件路径，分别如下： 123/etc/mysql/conf.d/var/log/var/lib/mysql  复制文件到宿主机在宿主机的 home 目录下新建 mysql 目录 1mkdir /home/mysql  复制容器里的 /etc/mysql/conf.d、/var/log、/var/lib/mysql到宿主机/home/mysql 复制/etc/mysql/conf.d 1docker cp 容器id:/etc/mysql/conf.d /home/mysql/  复制/var/log 1docker cp 容器id:/var/log /home/mysql/  复制/var/lib/mysql 1docker cp ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/301.html" title="Docker安装和配置Tomcat容器并部署Java项目"><img class="post-bg" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/301.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Docker安装和配置Tomcat容器并部署Java项目"></a></div><div class="recent-post-info"><a class="article-title" href="/301.html" title="Docker安装和配置Tomcat容器并部署Java项目">Docker安装和配置Tomcat容器并部署Java项目</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2021-08-21T01:31:21.000Z" title="发表于 2021-08-21 09:31:21">2021-08-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E7%BB%B4/">运维</a></span></div><div class="content">创建Tomcat容器创建的这个容器只是用来获取文件路径 1docker run --name 自定义名称 -di -p 8080:8080 Tomcat镜像id  获取文件路径进入容器的文件夹中 1docker exec -it Tomcat容器id /bin/bash  获取三个文件夹conf、webapps、logs的文件路径  复制文件到宿主机在宿主机的 home 目录下新建 tomcat 目录 1mkdir /home/tomcat  复制容器里的 /usr/local/tomcat/conf、/usr/local/tomcat/webapps 到宿主机/home/tomcat/ 复制 /usr/local/tomcat/conf 1docker cp 容器id:/usr/local/tomcat/conf /home/tomcat/  复制 /usr/local/tomcat/webapps 1docker cp 容器id:/usr/local/tomcat/webapps /home/tomcat/  创建新的Tomcat容器这个容器是用来部署Java项目的，创建时挂...</div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/28/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/28/#content-inner">28</a><span class="page-number current">29</span><a class="page-number" href="/page/30/#content-inner">30</a><span class="space">&hellip;</span><a class="page-number" href="/page/59/#content-inner">59</a><a class="extend next" rel="next" href="/page/30/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">LeDao</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/590.html" title="Nginx重新部署SSL证书"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/590.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Nginx重新部署SSL证书"/></a><div class="content"><a class="title" href="/590.html" title="Nginx重新部署SSL证书">Nginx重新部署SSL证书</a><time datetime="2024-10-07T16:39:44.000Z" title="发表于 2024-10-08 00:39:44">2024-10-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/589.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法"/></a><div class="content"><a class="title" href="/589.html" title="VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法">VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</a><time datetime="2024-03-09T13:43:26.000Z" title="发表于 2024-03-09 21:43:26">2024-03-09</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo%E5%8D%9A%E5%AE%A2/"><span class="card-category-list-name">Hexo博客</span><span class="card-category-list-count">18</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%AA%E4%BA%BA%E9%A1%B9%E7%9B%AE/"><span class="card-category-list-name">个人项目</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E5%AE%83/"><span class="card-category-list-name">其它</span><span class="card-category-list-count">39</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/"><span class="card-category-list-name">前端</span><span class="card-category-list-count">121</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/"><span class="card-category-list-name">后端</span><span class="card-category-list-count">219</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">开发工具</span><span class="card-category-list-count">41</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/"><span class="card-category-list-name">持久层框架</span><span class="card-category-list-count">20</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="card-category-list-name">数据库</span><span class="card-category-list-count">29</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/Tomcat/" style="font-size: 1.4em; color: #99a5b6">Tomcat</a> <a href="/tags/OpenFeign/" style="font-size: 1.1em; color: #999">OpenFeign</a> <a href="/tags/jQuery/" style="font-size: 1.18em; color: #999ca0">jQuery</a> <a href="/tags/Docker/" style="font-size: 1.5em; color: #99a9bf">Docker</a> <a href="/tags/ZooKeeper/" style="font-size: 1.15em; color: #999b9e">ZooKeeper</a> <a href="/tags/%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF/" style="font-size: 1.1em; color: #999">报错信息</a> <a href="/tags/Typora/" style="font-size: 1.1em; color: #999">Typora</a> <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.45em; color: #99a7ba">微信小程序</a> <a href="/tags/IDM/" style="font-size: 1.1em; color: #999">IDM</a> <a href="/tags/Zuul/" style="font-size: 1.15em; color: #999b9e">Zuul</a> <a href="/tags/CSS/" style="font-size: 1.32em; color: #99a2ae">CSS</a> <a href="/tags/Hystrix/" style="font-size: 1.23em; color: #999ea5">Hystrix</a> <a href="/tags/TypeScript/" style="font-size: 1.1em; color: #999">TypeScript</a> <a href="/tags/v-viewer/" style="font-size: 1.1em; color: #999">v-viewer</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 1.35em; color: #99a3b1">数据结构</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 1.15em; color: #999b9e">阿里云</a> <a href="/tags/Mycat/" style="font-size: 1.1em; color: #999">Mycat</a> <a href="/tags/Elasticsearch/" style="font-size: 1.2em; color: #999da3">Elasticsearch</a> <a href="/tags/%E9%83%A8%E8%90%BD%E5%86%B2%E7%AA%81/" style="font-size: 1.13em; color: #999a9b">部落冲突</a> <a href="/tags/Vite/" style="font-size: 1.13em; color: #999a9b">Vite</a> <a href="/tags/shell/" style="font-size: 1.1em; color: #999">shell</a> <a href="/tags/Highcharts/" style="font-size: 1.1em; color: #999">Highcharts</a> <a href="/tags/Thymeleaf/" style="font-size: 1.2em; color: #999da3">Thymeleaf</a> <a href="/tags/JWT/" style="font-size: 1.1em; color: #999">JWT</a> <a href="/tags/Ribbon/" style="font-size: 1.15em; color: #999b9e">Ribbon</a> <a href="/tags/Spring-Boot/" style="font-size: 1.48em; color: #99a8bd">Spring Boot</a> <a href="/tags/Ajax/" style="font-size: 1.18em; color: #999ca0">Ajax</a> <a href="/tags/Spring/" style="font-size: 1.38em; color: #99a4b3">Spring</a> <a href="/tags/Maven/" style="font-size: 1.3em; color: #99a1ac">Maven</a> <a href="/tags/MyBatisX/" style="font-size: 1.1em; color: #999">MyBatisX</a> <a href="/tags/Crontab/" style="font-size: 1.1em; color: #999">Crontab</a> <a href="/tags/Postman/" style="font-size: 1.1em; color: #999">Postman</a> <a href="/tags/Gateway/" style="font-size: 1.1em; color: #999">Gateway</a> <a href="/tags/SSL%E8%AF%81%E4%B9%A6/" style="font-size: 1.15em; color: #999b9e">SSL证书</a> <a href="/tags/MyBatis-Plus/" style="font-size: 1.25em; color: #999fa7">MyBatis-Plus</a> <a href="/tags/ECharts/" style="font-size: 1.1em; color: #999">ECharts</a> <a href="/tags/RabbitMQ/" style="font-size: 1.43em; color: #99a6b8">RabbitMQ</a> <a href="/tags/JavaScript/" style="font-size: 1.43em; color: #99a6b8">JavaScript</a> <a href="/tags/MyBatis/" style="font-size: 1.28em; color: #99a0aa">MyBatis</a> <a href="/tags/Hexo%E5%8D%9A%E5%AE%A2/" style="font-size: 1.43em; color: #99a6b8">Hexo博客</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        <div class="copyright">
   
-  &copy; 2020 – 
-  <span itemprop="copyrightYear">2025</span>
-  <span class="with-love">
-    <i class="fa fa-heartbeat"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">LeDao</span>
-</div>
-<div>
-    <span style="text-align: left;display: inline-block;vertical-align: middle;">本网站由 </span>
-	<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src='https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png' style="height: 30px;vertical-align: middle;display: inline-block;"></a>
-	<span style="text-align: left;display: inline-block;vertical-align: middle;">提供CDN加速/云存储服务</span>
-</div>
-<div class="id111">
-    <span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号 </a></span>
-	<img src='https://image.zoutl.cn/hexo-blog/images/beian.png' style="vertical-align: middle;display: inline-block;">
-	<span style="text-align: left;display: inline-block;vertical-align: middle;"><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></span>
-</div>
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  
-  <script color='255,51,51' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-  <script>
-    (function(){
-      var canonicalURL, curProtocol;
-      //Get the <link> tag
-      var x=document.getElementsByTagName("link");
-		//Find the last canonical URL
-		if(x.length > 0){
-			for (i=0;i<x.length;i++){
-				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
-					canonicalURL=x[i].href;
-				}
-			}
-		}
-    //Get protocol
-	    if (!canonicalURL){
-	    	curProtocol = window.location.protocol.split(':')[0];
-	    }
-	    else{
-	    	curProtocol = canonicalURL.split(':')[0];
-	    }
-      //Get current URL if the canonical URL does not exist
-	    if (!canonicalURL) canonicalURL = window.location.href;
-	    //Assign script content. Replace current URL with the canonical URL
-      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
-  </script>
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-<script>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
-</script>
-
-
-
-
-  
-
-  
-
-
-</body>
-</html>
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/11/">
+            <span class="card-archive-list-date">
+              十一月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/10/">
+            <span class="card-archive-list-date">
+              十月 2024
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/03/">
+            <span class="card-archive-list-date">
+              三月 2024
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/02/">
+            <span class="card-archive-list-date">
+              二月 2024
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/01/">
+            <span class="card-archive-list-date">
+              一月 2024
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/11/">
+            <span class="card-archive-list-date">
+              十一月 2023
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2023/09/">
+            <span class="card-archive-list-date">
+              九月 2023
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">590</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-10-04T01:34:24.574Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2020 - 2025 By LeDao</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo 5.4.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.1</a></span></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.1"></script><script src="/js/main.js?v=5.5.1"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div id="algolia-search-input"><div class="ais-SearchBox"><form class="ais-SearchBox-form" action="" role="search" novalidate=""><input class="ais-SearchBox-input" type="search" placeholder="搜索文章" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="512" aria-label="Search"/><button class="ais-SearchBox-submit" type="submit" title="Submit the search query" style="display:none;"><svg class="ais-SearchBox-submitIcon" width="10" height="10" viewBox="0 0 40 40" aria-hidden="true"><path d="M26.804 29.01c-2.832 2.34-6.465 3.746-10.426 3.746C7.333 32.756 0 25.424 0 16.378 0 7.333 7.333 0 16.378 0c9.046 0 16.378 7.333 16.378 16.378 0 3.96-1.406 7.594-3.746 10.426l10.534 10.534c.607.607.61 1.59-.004 2.202-.61.61-1.597.61-2.202.004L26.804 29.01zm-10.426.627c7.323 0 13.26-5.936 13.26-13.26 0-7.32-5.937-13.257-13.26-13.257C9.056 3.12 3.12 9.056 3.12 16.378c0 7.323 5.936 13.26 13.258 13.26z"></path></svg></button></form></div><hr/><div id="algolia-search-results"><div id="algolia-hits"><div id="algolia-hits-empty" style="display:none;"></div><div class="ais-Hits" style="display:none;"><ol class="ais-Hits-list"></ol></div></div><div class="ais-Pagination" id="algolia-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="algolia-info"><span class="ais-Stats-text"></span><a class="algolia-poweredBy" href="https://www.algolia.com/?utm_source=algoliasearch.js&amp;utm_medium=website&amp;utm_content=localhost&amp;utm_campaign=poweredby" target="_blank" aria-label="Search by Algolia" rel="noopener noreferrer"><svg class="ais-PoweredBy-logo" height="1.2em" viewBox="0 0 572 64" style="width: auto;"><path fill="#36395A" d="M16 48.3c-3.4 0-6.3-.6-8.7-1.7A12.4 12.4 0 0 1 1.9 42C.6 40 0 38 0 35.4h6.5a6.7 6.7 0 0 0 3.9 6c1.4.7 3.3 1.1 5.6 1.1 2.2 0 4-.3 5.4-1a7 7 0 0 0 3-2.4 6 6 0 0 0 1-3.4c0-1.5-.6-2.8-1.9-3.7-1.3-1-3.3-1.6-5.9-1.8l-4-.4c-3.7-.3-6.6-1.4-8.8-3.4a10 10 0 0 1-3.3-7.9c0-2.4.6-4.6 1.8-6.4a12 12 0 0 1 5-4.3c2.2-1 4.7-1.6 7.5-1.6s5.5.5 7.6 1.6a12 12 0 0 1 5 4.4c1.2 1.8 1.8 4 1.8 6.7h-6.5a6.4 6.4 0 0 0-3.5-5.9c-1-.6-2.6-1-4.4-1s-3.2.3-4.4 1c-1.1.6-2 1.4-2.6 2.4-.5 1-.8 2-.8 3.1a5 5 0 0 0 1.5 3.6c1 1 2.6 1.7 4.7 1.9l4 .3c2.8.2 5.2.8 7.2 1.8 2.1 1 3.7 2.2 4.9 3.8a9.7 9.7 0 0 1 1.7 5.8c0 2.5-.7 4.7-2 6.6a13 13 0 0 1-5.6 4.4c-2.4 1-5.2 1.6-8.4 1.6Zm35.6 0c-2.6 0-4.8-.4-6.7-1.3a13 13 0 0 1-4.7-3.5 17.1 17.1 0 0 1-3.6-10.4v-1c0-2 .3-3.8 1-5.6a13 13 0 0 1 7.3-8.3 15 15 0 0 1 6.3-1.4A13.2 13.2 0 0 1 64 24.3c1 2.2 1.6 4.6 1.6 7.2V34H39.4v-4.3h21.8l-1.8 2.2c0-2-.3-3.7-.9-5.1a7.3 7.3 0 0 0-2.7-3.4c-1.2-.7-2.7-1.1-4.6-1.1s-3.4.4-4.7 1.3a8 8 0 0 0-2.9 3.6c-.6 1.5-.9 3.3-.9 5.4 0 2 .3 3.7 1 5.3a7.9 7.9 0 0 0 2.8 3.7c1.3.8 3 1.3 5 1.3s3.8-.5 5.1-1.3c1.3-1 2.1-2 2.4-3.2h6a11.8 11.8 0 0 1-7 8.7 16 16 0 0 1-6.4 1.2ZM80 48c-2.2 0-4-.3-5.7-1a8.4 8.4 0 0 1-3.7-3.3 9.7 9.7 0 0 1-1.3-5.2c0-2 .5-3.8 1.5-5.2a9 9 0 0 1 4.3-3.1c1.8-.7 4-1 6.7-1H89v4.1h-7.5c-2 0-3.4.5-4.4 1.4-1 1-1.6 2.1-1.6 3.6s.5 2.7 1.6 3.6c1 1 2.5 1.4 4.4 1.4 1.1 0 2.2-.2 3.2-.7 1-.4 1.9-1 2.6-2 .6-1 1-2.4 1-4.2l1.7 2.1c-.2 2-.7 3.8-1.5 5.2a9 9 0 0 1-3.4 3.3 12 12 0 0 1-5.3 1Zm9.5-.7v-8.8h-1v-10c0-1.8-.5-3.2-1.4-4.1-1-1-2.4-1.4-4.2-1.4a142.9 142.9 0 0 0-10.2.4v-5.6a74.8 74.8 0 0 1 8.6-.4c3 0 5.5.4 7.5 1.2s3.4 2 4.4 3.6c1 1.7 1.4 4 1.4 6.7v18.4h-5Zm12.9 0V17.8h5v12.3h-.2c0-4.2 1-7.4 2.8-9.5a11 11 0 0 1 8.3-3.1h1v5.6h-2a9 9 0 0 0-6.3 2.2c-1.5 1.5-2.2 3.6-2.2 6.4v15.6h-6.4Zm34.4 1a15 15 0 0 1-6.6-1.3c-1.9-.9-3.4-2-4.7-3.5a15.5 15.5 0 0 1-2.7-5c-.6-1.7-1-3.6-1-5.4v-1c0-2 .4-3.8 1-5.6a15 15 0 0 1 2.8-4.9c1.3-1.5 2.8-2.6 4.6-3.5a16.4 16.4 0 0 1 13.3.2c2 1 3.5 2.3 4.8 4a12 12 0 0 1 2 6H144c-.2-1.6-1-3-2.2-4.1a7.5 7.5 0 0 0-5.2-1.7 8 8 0 0 0-4.7 1.3 8 8 0 0 0-2.8 3.6 13.8 13.8 0 0 0 0 10.3c.6 1.5 1.5 2.7 2.8 3.6s2.8 1.3 4.8 1.3c1.5 0 2.7-.2 3.8-.8a7 7 0 0 0 2.6-2c.7-1 1-2 1.2-3.2h6.2a11 11 0 0 1-2 6.2 15.1 15.1 0 0 1-11.8 5.5Zm19.7-1v-40h6.4V31h-1.3c0-3 .4-5.5 1.1-7.6a9.7 9.7 0 0 1 3.5-4.8A9.9 9.9 0 0 1 172 17h.3c3.5 0 6 1.1 7.9 3.5 1.7 2.3 2.6 5.7 2.6 10v16.8h-6.4V29.6c0-2.1-.6-3.8-1.8-5a6.4 6.4 0 0 0-4.8-1.8c-2 0-3.7.7-5 2a7.8 7.8 0 0 0-1.9 5.5v17h-6.4Zm63.8 1a12.2 12.2 0 0 1-10.9-6.2 19 19 0 0 1-1.8-7.3h1.4v12.5h-5.1v-40h6.4v19.8l-2 3.5c.2-3.1.8-5.7 1.9-7.7a11 11 0 0 1 4.4-4.5c1.8-1 3.9-1.5 6.1-1.5a13.4 13.4 0 0 1 12.8 9.1c.7 1.9 1 3.8 1 6v1c0 2.2-.3 4.1-1 6a13.6 13.6 0 0 1-13.2 9.4Zm-1.2-5.5a8.4 8.4 0 0 0 7.9-5c.7-1.5 1.1-3.3 1.1-5.3s-.4-3.8-1.1-5.3a8.7 8.7 0 0 0-3.2-3.6 9.6 9.6 0 0 0-9.2-.2 8.5 8.5 0 0 0-3.3 3.2c-.8 1.4-1.3 3-1.3 5v2.3a9 9 0 0 0 1.3 4.8 9 9 0 0 0 3.4 3c1.4.7 2.8 1 4.4 1Zm27.3 3.9-10-28.9h6.5l9.5 28.9h-6Zm-7.5 12.2v-5.7h4.9c1 0 2-.1 2.9-.4a4 4 0 0 0 2-1.4c.4-.7.9-1.6 1.2-2.7l8.6-30.9h6.2l-9.3 32.4a14 14 0 0 1-2.5 5 8.9 8.9 0 0 1-4 2.8c-1.5.6-3.4.9-5.6.9h-4.4Zm9-12.2v-5.2h6.4v5.2H248Z"></path><path fill="#003DFF" d="M534.4 9.1H528a.8.8 0 0 1-.7-.7V1.8c0-.4.2-.7.6-.8l6.5-1c.4 0 .8.2.9.6v7.8c0 .4-.4.7-.8.7zM428 35.2V.8c0-.5-.3-.8-.7-.8h-.2l-6.4 1c-.4 0-.7.4-.7.8v35c0 1.6 0 11.8 12.3 12.2.5 0 .8-.4.8-.8V43c0-.4-.3-.7-.6-.8-4.5-.5-4.5-6-4.5-7zm106.5-21.8H528c-.4 0-.7.4-.7.8v34c0 .4.3.8.7.8h6.5c.4 0 .8-.4.8-.8v-34c0-.5-.4-.8-.8-.8zm-17.7 21.8V.8c0-.5-.3-.8-.8-.8l-6.5 1c-.4 0-.7.4-.7.8v35c0 1.6 0 11.8 12.3 12.2.4 0 .8-.4.8-.8V43c0-.4-.3-.7-.7-.8-4.4-.5-4.4-6-4.4-7zm-22.2-20.6a16.5 16.5 0 0 1 8.6 9.3c.8 2.2 1.3 4.8 1.3 7.5a19.4 19.4 0 0 1-4.6 12.6 14.8 14.8 0 0 1-5.2 3.6c-2 .9-5.2 1.4-6.8 1.4a21 21 0 0 1-6.7-1.4 15.4 15.4 0 0 1-8.6-9.3 21.3 21.3 0 0 1 0-14.4 15.2 15.2 0 0 1 8.6-9.3c2-.8 4.3-1.2 6.7-1.2s4.6.4 6.7 1.2zm-6.7 27.6c2.7 0 4.7-1 6.2-3s2.2-4.3 2.2-7.8-.7-6.3-2.2-8.3-3.5-3-6.2-3-4.7 1-6.1 3c-1.5 2-2.2 4.8-2.2 8.3s.7 5.8 2.2 7.8 3.5 3 6.2 3zm-88.8-28.8c-6.2 0-11.7 3.3-14.8 8.2a18.6 18.6 0 0 0 4.8 25.2c1.8 1.2 4 1.8 6.2 1.7s.1 0 .1 0h.9c4.2-.7 8-4 9.1-8.1v7.4c0 .4.3.7.8.7h6.4a.7.7 0 0 0 .7-.7V14.2c0-.5-.3-.8-.7-.8h-13.5zm6.3 26.5a9.8 9.8 0 0 1-5.7 2h-.5a10 10 0 0 1-9.2-14c1.4-3.7 5-6.3 9-6.3h6.4v18.3zm152.3-26.5h13.5c.5 0 .8.3.8.7v33.7c0 .4-.3.7-.8.7h-6.4a.7.7 0 0 1-.8-.7v-7.4c-1.2 4-4.8 7.4-9 8h-.1a4.2 4.2 0 0 1-.5.1h-.9a10.3 10.3 0 0 1-7-2.6c-4-3.3-6.5-8.4-6.5-14.2 0-3.7 1-7.2 3-10 3-5 8.5-8.3 14.7-8.3zm.6 28.4c2.2-.1 4.2-.6 5.7-2V21.7h-6.3a9.8 9.8 0 0 0-9 6.4 10.2 10.2 0 0 0 9.1 13.9h.5zM452.8 13.4c-6.2 0-11.7 3.3-14.8 8.2a18.5 18.5 0 0 0 3.6 24.3 10.4 10.4 0 0 0 13 .6c2.2-1.5 3.8-3.7 4.5-6.1v7.8c0 2.8-.8 5-2.2 6.3-1.5 1.5-4 2.2-7.5 2.2l-6-.3c-.3 0-.7.2-.8.5l-1.6 5.5c-.1.4.1.8.5 1h.1c2.8.4 5.5.6 7 .6 6.3 0 11-1.4 14-4.1 2.7-2.5 4.2-6.3 4.5-11.4V14.2c0-.5-.4-.8-.8-.8h-13.5zm6.3 8.2v18.3a9.6 9.6 0 0 1-5.6 2h-1a10.3 10.3 0 0 1-8.8-14c1.4-3.7 5-6.3 9-6.3h6.4zM291 31.5A32 32 0 0 1 322.8 0h30.8c.6 0 1.2.5 1.2 1.2v61.5c0 1.1-1.3 1.7-2.2 1l-19.2-17a18 18 0 0 1-11 3.4 18.1 18.1 0 1 1 18.2-14.8c-.1.4-.5.7-.9.6-.1 0-.3 0-.4-.2l-3.8-3.4c-.4-.3-.6-.8-.7-1.4a12 12 0 1 0-2.4 8.3c.4-.4 1-.5 1.6-.2l14.7 13.1v-46H323a26 26 0 1 0 10 49.7c.8-.4 1.6-.2 2.3.3l3 2.7c.3.2.3.7 0 1l-.2.2a32 32 0 0 1-47.2-28.6z"></path></svg></a></div></div></div></div><div id="search-mask"></div><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.39.0/dist/lite/builds/browser.umd.min.js"></script><script src="/js/search/algolia.js?v=5.5.1"></script></div></div></body></html>
