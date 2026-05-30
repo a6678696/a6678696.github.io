@@ -1,0 +1,3082 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Markdown代码块编程语言清单 | LeDao's Blog</title><meta name="keywords" content="Markdown"><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="我的常用   语言名称 Markdown 语言声明    HTML html   CSS css   JavaScript javascript   Java java   Linux和Windows命令、Bash、文件路径 bash   XML xml   .yml yaml   SQL sql   所有   语言名称 Markdown 语言声明 常见文件名    1C Enterprise 1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown代码块编程语言清单">
+<meta property="og:url" content="https://blog.zoutl.cn/273.html">
+<meta property="og:site_name" content="LeDao&#39;s Blog">
+<meta property="og:description" content="我的常用   语言名称 Markdown 语言声明    HTML html   CSS css   JavaScript javascript   Java java   Linux和Windows命令、Bash、文件路径 bash   XML xml   .yml yaml   SQL sql   所有   语言名称 Markdown 语言声明 常见文件名    1C Enterprise 1">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/blogCoverImage/273.jpg">
+<meta property="article:published_time" content="2021-08-13T13:10:56.000Z">
+<meta property="article:modified_time" content="2026-05-29T11:12:53.776Z">
+<meta property="article:author" content="LeDao">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/blogCoverImage/273.jpg"><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/273"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="fp2ohQruhOqzbyAh"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JZJWXGK1VV"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JZJWXGK1VV');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.js',
+      css: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Markdown代码块编程语言清单',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-05-29 19:12:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3265865_vc1sierqa1.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://image.zoutl.cn/iTabImage/8.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeDao's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Markdown代码块编程语言清单</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2021-08-13T13:10:56.000Z" title="发表于 2021-08-13 21:10:56">2021-08-13</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%85%B6%E5%AE%83/">其它</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Markdown代码块编程语言清单"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/273.html#post-comment"><span class="gitalk-comment-count"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="我的常用"><a href="#我的常用" class="headerlink" title="我的常用"></a>我的常用</h3><table>
+<thead>
+<tr>
+<th align="center">语言名称</th>
+<th align="center">Markdown 语言声明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">HTML</td>
+<td align="center">html</td>
+</tr>
+<tr>
+<td align="center">CSS</td>
+<td align="center">css</td>
+</tr>
+<tr>
+<td align="center">JavaScript</td>
+<td align="center">javascript</td>
+</tr>
+<tr>
+<td align="center">Java</td>
+<td align="center">java</td>
+</tr>
+<tr>
+<td align="center">Linux和Windows命令、Bash、文件路径</td>
+<td align="center">bash</td>
+</tr>
+<tr>
+<td align="center">XML</td>
+<td align="center">xml</td>
+</tr>
+<tr>
+<td align="center">.yml</td>
+<td align="center">yaml</td>
+</tr>
+<tr>
+<td align="center">SQL</td>
+<td align="center">sql</td>
+</tr>
+</tbody></table>
+<h3 id="所有"><a href="#所有" class="headerlink" title="所有"></a>所有</h3><table>
+<thead>
+<tr>
+<th align="center">语言名称</th>
+<th align="center">Markdown 语言声明</th>
+<th align="center">常见文件名</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1C Enterprise</td>
+<td align="center">1c-enterprise</td>
+<td align="center">*.bsl</td>
+</tr>
+<tr>
+<td align="center">4D</td>
+<td align="center">4d</td>
+<td align="center">*.4dm</td>
+</tr>
+<tr>
+<td align="center">ABAP</td>
+<td align="center">abap</td>
+<td align="center">*.abap</td>
+</tr>
+<tr>
+<td align="center">ABNF</td>
+<td align="center">abnf</td>
+<td align="center">*.abnf</td>
+</tr>
+<tr>
+<td align="center">AGS Script</td>
+<td align="center">ags-script, ags</td>
+<td align="center">*.asc</td>
+</tr>
+<tr>
+<td align="center">AMPL</td>
+<td align="center">ampl</td>
+<td align="center">*.ampl</td>
+</tr>
+<tr>
+<td align="center">ANTLR</td>
+<td align="center">antlr</td>
+<td align="center">*.g4</td>
+</tr>
+<tr>
+<td align="center">API Blueprint</td>
+<td align="center">api-blueprint</td>
+<td align="center">*.apib</td>
+</tr>
+<tr>
+<td align="center">APL</td>
+<td align="center">apl</td>
+<td align="center">*.apl</td>
+</tr>
+<tr>
+<td align="center">ASN.1</td>
+<td align="center">asn.1</td>
+<td align="center">*.asn</td>
+</tr>
+<tr>
+<td align="center">ASP</td>
+<td align="center">asp, aspx, aspx-vb</td>
+<td align="center">*.asp</td>
+</tr>
+<tr>
+<td align="center">ATS</td>
+<td align="center">ats, ats2</td>
+<td align="center">*.dats</td>
+</tr>
+<tr>
+<td align="center">ActionScript</td>
+<td align="center">actionscript, actionscript3, as3</td>
+<td align="center">*.as</td>
+</tr>
+<tr>
+<td align="center">Ada</td>
+<td align="center">ada, ada95, ada2005</td>
+<td align="center">*.adb</td>
+</tr>
+<tr>
+<td align="center">Adobe Font Metrics</td>
+<td align="center">adobe-font-metrics, acfm, amfm</td>
+<td align="center">*.afm</td>
+</tr>
+<tr>
+<td align="center">Agda</td>
+<td align="center">agda</td>
+<td align="center">*.agda</td>
+</tr>
+<tr>
+<td align="center">Alloy</td>
+<td align="center">alloy</td>
+<td align="center">*.als</td>
+</tr>
+<tr>
+<td align="center">Alpine Abuild</td>
+<td align="center">alpine-abuild, abuild, apkbuild</td>
+<td align="center">APKBUILD</td>
+</tr>
+<tr>
+<td align="center">Altium Designer</td>
+<td align="center">altium-designer, altium</td>
+<td align="center">*.OutJob</td>
+</tr>
+<tr>
+<td align="center">AngelScript</td>
+<td align="center">angelscript</td>
+<td align="center">*.as</td>
+</tr>
+<tr>
+<td align="center">Ant Build System</td>
+<td align="center">ant-build-system</td>
+<td align="center">ant.xml</td>
+</tr>
+<tr>
+<td align="center">ApacheConf</td>
+<td align="center">apacheconf, aconf, apache</td>
+<td align="center">*.apacheconf, .htaccess</td>
+</tr>
+<tr>
+<td align="center">Apex</td>
+<td align="center">apex</td>
+<td align="center">*.cls</td>
+</tr>
+<tr>
+<td align="center">Apollo Guidance Computer</td>
+<td align="center">apollo-guidance-computer</td>
+<td align="center">*.agc</td>
+</tr>
+<tr>
+<td align="center">AppleScript</td>
+<td align="center">applescript, osascript</td>
+<td align="center">*.applescript</td>
+</tr>
+<tr>
+<td align="center">Arc</td>
+<td align="center">arc</td>
+<td align="center">*.arc</td>
+</tr>
+<tr>
+<td align="center">AsciiDoc</td>
+<td align="center">asciidoc</td>
+<td align="center">*.asciidoc</td>
+</tr>
+<tr>
+<td align="center">AspectJ</td>
+<td align="center">aspectj</td>
+<td align="center">*.aj</td>
+</tr>
+<tr>
+<td align="center">Assembly</td>
+<td align="center">assembly, asm, nasm</td>
+<td align="center">*.asm</td>
+</tr>
+<tr>
+<td align="center">Asymptote</td>
+<td align="center">asymptote</td>
+<td align="center">*.asy</td>
+</tr>
+<tr>
+<td align="center">Augeas</td>
+<td align="center">augeas</td>
+<td align="center">*.aug</td>
+</tr>
+<tr>
+<td align="center">AutoHotkey</td>
+<td align="center">autohotkey, ahk</td>
+<td align="center">*.ahk</td>
+</tr>
+<tr>
+<td align="center">AutoIt</td>
+<td align="center">autoit, au3, AutoIt3, AutoItScript</td>
+<td align="center">*.au3</td>
+</tr>
+<tr>
+<td align="center">Awk</td>
+<td align="center">awk</td>
+<td align="center">*.awk</td>
+</tr>
+<tr>
+<td align="center">Ballerina</td>
+<td align="center">ballerina</td>
+<td align="center">*.bal</td>
+</tr>
+<tr>
+<td align="center">Batchfile</td>
+<td align="center">batchfile, bat, batch, dosbatch, winbatch</td>
+<td align="center">*.bat</td>
+</tr>
+<tr>
+<td align="center">Befunge</td>
+<td align="center">befunge</td>
+<td align="center">*.befunge</td>
+</tr>
+<tr>
+<td align="center">BibTeX</td>
+<td align="center">bibtex</td>
+<td align="center">*.bib</td>
+</tr>
+<tr>
+<td align="center">Bison</td>
+<td align="center">bison</td>
+<td align="center">*.bison</td>
+</tr>
+<tr>
+<td align="center">BitBake</td>
+<td align="center">bitbake</td>
+<td align="center">*.bb</td>
+</tr>
+<tr>
+<td align="center">Blade</td>
+<td align="center">blade</td>
+<td align="center">*.blade</td>
+</tr>
+<tr>
+<td align="center">BlitzBasic</td>
+<td align="center">blitzbasic, b3d, blitz3d, blitzplus, bplus</td>
+<td align="center">*.bb</td>
+</tr>
+<tr>
+<td align="center">BlitzMax</td>
+<td align="center">blitzmax, bmax</td>
+<td align="center">*.bmx</td>
+</tr>
+<tr>
+<td align="center">Bluespec</td>
+<td align="center">bluespec</td>
+<td align="center">*.bsv</td>
+</tr>
+<tr>
+<td align="center">Boo</td>
+<td align="center">boo</td>
+<td align="center">*.boo</td>
+</tr>
+<tr>
+<td align="center">Brainfuck</td>
+<td align="center">brainfuck</td>
+<td align="center">*.b</td>
+</tr>
+<tr>
+<td align="center">Brightscript</td>
+<td align="center">brightscript</td>
+<td align="center">*.brs</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td align="center">c</td>
+<td align="center">*.c</td>
+</tr>
+<tr>
+<td align="center">C#</td>
+<td align="center">c#, csharp</td>
+<td align="center">*.cs</td>
+</tr>
+<tr>
+<td align="center">C++</td>
+<td align="center">c++, cpp</td>
+<td align="center">*.cpp</td>
+</tr>
+<tr>
+<td align="center">C-ObjDump</td>
+<td align="center">c-objdump</td>
+<td align="center">*.c-objdump</td>
+</tr>
+<tr>
+<td align="center">C2hs Haskell</td>
+<td align="center">c2hs-haskell, c2hs</td>
+<td align="center">*.chs</td>
+</tr>
+<tr>
+<td align="center">CLIPS</td>
+<td align="center">clips</td>
+<td align="center">*.clp</td>
+</tr>
+<tr>
+<td align="center">CMake</td>
+<td align="center">cmake</td>
+<td align="center">*.cmake, CMakeLists.txt</td>
+</tr>
+<tr>
+<td align="center">COBOL</td>
+<td align="center">cobol</td>
+<td align="center">*.cob</td>
+</tr>
+<tr>
+<td align="center">COLLADA</td>
+<td align="center">collada</td>
+<td align="center">*.dae</td>
+</tr>
+<tr>
+<td align="center">CSON</td>
+<td align="center">cson</td>
+<td align="center">*.cson</td>
+</tr>
+<tr>
+<td align="center">CSS</td>
+<td align="center">css</td>
+<td align="center">*.css</td>
+</tr>
+<tr>
+<td align="center">CSV</td>
+<td align="center">csv</td>
+<td align="center">*.csv</td>
+</tr>
+<tr>
+<td align="center">CWeb</td>
+<td align="center">cweb</td>
+<td align="center">*.w</td>
+</tr>
+<tr>
+<td align="center">Cabal Config</td>
+<td align="center">cabal-config, Cabal</td>
+<td align="center">*.cabal, cabal.config</td>
+</tr>
+<tr>
+<td align="center">Cap’n Proto</td>
+<td align="center">cap’n-proto</td>
+<td align="center">*.capnp</td>
+</tr>
+<tr>
+<td align="center">CartoCSS</td>
+<td align="center">cartocss, Carto</td>
+<td align="center">*.mss</td>
+</tr>
+<tr>
+<td align="center">Ceylon</td>
+<td align="center">ceylon</td>
+<td align="center">*.ceylon</td>
+</tr>
+<tr>
+<td align="center">Chapel</td>
+<td align="center">chapel, chpl</td>
+<td align="center">*.chpl</td>
+</tr>
+<tr>
+<td align="center">Charity</td>
+<td align="center">charity</td>
+<td align="center">*.ch</td>
+</tr>
+<tr>
+<td align="center">ChucK</td>
+<td align="center">chuck</td>
+<td align="center">*.ck</td>
+</tr>
+<tr>
+<td align="center">Cirru</td>
+<td align="center">cirru</td>
+<td align="center">*.cirru</td>
+</tr>
+<tr>
+<td align="center">Clarion</td>
+<td align="center">clarion</td>
+<td align="center">*.clw</td>
+</tr>
+<tr>
+<td align="center">Clean</td>
+<td align="center">clean</td>
+<td align="center">*.icl</td>
+</tr>
+<tr>
+<td align="center">Click</td>
+<td align="center">click</td>
+<td align="center">*.click</td>
+</tr>
+<tr>
+<td align="center">Clojure</td>
+<td align="center">clojure</td>
+<td align="center">*.clj, riemann.config</td>
+</tr>
+<tr>
+<td align="center">Closure Templates</td>
+<td align="center">closure-templates, soy</td>
+<td align="center">*.soy</td>
+</tr>
+<tr>
+<td align="center">Cloud Firestore Security Rules</td>
+<td align="center">cloud-firestore-security-rules</td>
+<td align="center">firestore.rules</td>
+</tr>
+<tr>
+<td align="center">CoNLL-U</td>
+<td align="center">conll-u, CoNLL, CoNLL-X</td>
+<td align="center">*.conllu</td>
+</tr>
+<tr>
+<td align="center">CodeQL</td>
+<td align="center">codeql, ql</td>
+<td align="center">*.ql</td>
+</tr>
+<tr>
+<td align="center">CoffeeScript</td>
+<td align="center">coffeescript, coffee, coffee-script</td>
+<td align="center">*.coffee, Cakefile</td>
+</tr>
+<tr>
+<td align="center">ColdFusion</td>
+<td align="center">coldfusion, cfm, cfml</td>
+<td align="center">*.cfm</td>
+</tr>
+<tr>
+<td align="center">ColdFusion CFC</td>
+<td align="center">coldfusion-cfc, cfc</td>
+<td align="center">*.cfc</td>
+</tr>
+<tr>
+<td align="center">Common Lisp</td>
+<td align="center">common-lisp, lisp</td>
+<td align="center">*.lisp</td>
+</tr>
+<tr>
+<td align="center">Common Workflow Language</td>
+<td align="center">common-workflow-language, cwl</td>
+<td align="center">*.cwl</td>
+</tr>
+<tr>
+<td align="center">Component Pascal</td>
+<td align="center">component-pascal, delphi, objectpascal</td>
+<td align="center">*.cp</td>
+</tr>
+<tr>
+<td align="center">Cool</td>
+<td align="center">cool</td>
+<td align="center">*.cl</td>
+</tr>
+<tr>
+<td align="center">Coq</td>
+<td align="center">coq</td>
+<td align="center">*.coq</td>
+</tr>
+<tr>
+<td align="center">Cpp-ObjDump</td>
+<td align="center">cpp-objdump, c++-objdump</td>
+<td align="center">*.cppobjdump</td>
+</tr>
+<tr>
+<td align="center">Creole</td>
+<td align="center">creole</td>
+<td align="center">*.creole</td>
+</tr>
+<tr>
+<td align="center">Crystal</td>
+<td align="center">crystal</td>
+<td align="center">*.cr</td>
+</tr>
+<tr>
+<td align="center">Csound</td>
+<td align="center">csound, csound-orc</td>
+<td align="center">*.orc</td>
+</tr>
+<tr>
+<td align="center">Csound Document</td>
+<td align="center">csound-document, csound-csd</td>
+<td align="center">*.csd</td>
+</tr>
+<tr>
+<td align="center">Csound Score</td>
+<td align="center">csound-score, csound-sco</td>
+<td align="center">*.sco</td>
+</tr>
+<tr>
+<td align="center">Cuda</td>
+<td align="center">cuda</td>
+<td align="center">*.cu</td>
+</tr>
+<tr>
+<td align="center">Cycript</td>
+<td align="center">cycript</td>
+<td align="center">*.cy</td>
+</tr>
+<tr>
+<td align="center">Cython</td>
+<td align="center">cython, pyrex</td>
+<td align="center">*.pyx</td>
+</tr>
+<tr>
+<td align="center">D</td>
+<td align="center">d</td>
+<td align="center">*.d</td>
+</tr>
+<tr>
+<td align="center">D-ObjDump</td>
+<td align="center">d-objdump</td>
+<td align="center">*.d-objdump</td>
+</tr>
+<tr>
+<td align="center">DIGITAL Command Language</td>
+<td align="center">digital-command-language, dcl</td>
+<td align="center">*.com</td>
+</tr>
+<tr>
+<td align="center">DM</td>
+<td align="center">dm, byond</td>
+<td align="center">*.dm</td>
+</tr>
+<tr>
+<td align="center">DNS Zone</td>
+<td align="center">dns-zone</td>
+<td align="center">*.zone</td>
+</tr>
+<tr>
+<td align="center">DTrace</td>
+<td align="center">dtrace, dtrace-script</td>
+<td align="center">*.d</td>
+</tr>
+<tr>
+<td align="center">Dafny</td>
+<td align="center">dafny</td>
+<td align="center">*.dfy</td>
+</tr>
+<tr>
+<td align="center">Darcs Patch</td>
+<td align="center">darcs-patch, dpatch</td>
+<td align="center">*.darcspatch</td>
+</tr>
+<tr>
+<td align="center">Dart</td>
+<td align="center">dart</td>
+<td align="center">*.dart</td>
+</tr>
+<tr>
+<td align="center">DataWeave</td>
+<td align="center">dataweave</td>
+<td align="center">*.dwl</td>
+</tr>
+<tr>
+<td align="center">Dhall</td>
+<td align="center">dhall</td>
+<td align="center">*.dhall</td>
+</tr>
+<tr>
+<td align="center">Diff</td>
+<td align="center">diff, udiff</td>
+<td align="center">*.diff</td>
+</tr>
+<tr>
+<td align="center">DirectX 3D File</td>
+<td align="center">directx-3d-file</td>
+<td align="center">*.x</td>
+</tr>
+<tr>
+<td align="center">Dockerfile</td>
+<td align="center">dockerfile</td>
+<td align="center">*.dockerfile, Dockerfile</td>
+</tr>
+<tr>
+<td align="center">Dogescript</td>
+<td align="center">dogescript</td>
+<td align="center">*.djs</td>
+</tr>
+<tr>
+<td align="center">Dylan</td>
+<td align="center">dylan</td>
+<td align="center">*.dylan</td>
+</tr>
+<tr>
+<td align="center">E</td>
+<td align="center">e</td>
+<td align="center">*.E</td>
+</tr>
+<tr>
+<td align="center">EBNF</td>
+<td align="center">ebnf</td>
+<td align="center">*.ebnf</td>
+</tr>
+<tr>
+<td align="center">ECL</td>
+<td align="center">ecl</td>
+<td align="center">*.ecl</td>
+</tr>
+<tr>
+<td align="center">ECLiPSe</td>
+<td align="center">eclipse</td>
+<td align="center">*.ecl</td>
+</tr>
+<tr>
+<td align="center">EJS</td>
+<td align="center">ejs</td>
+<td align="center">*.ejs</td>
+</tr>
+<tr>
+<td align="center">EML</td>
+<td align="center">eml</td>
+<td align="center">*.eml</td>
+</tr>
+<tr>
+<td align="center">EQ</td>
+<td align="center">eq</td>
+<td align="center">*.eq</td>
+</tr>
+<tr>
+<td align="center">Eagle</td>
+<td align="center">eagle</td>
+<td align="center">*.sch</td>
+</tr>
+<tr>
+<td align="center">Easybuild</td>
+<td align="center">easybuild</td>
+<td align="center">*.eb</td>
+</tr>
+<tr>
+<td align="center">Ecere Projects</td>
+<td align="center">ecere-projects</td>
+<td align="center">*.epj</td>
+</tr>
+<tr>
+<td align="center">EditorConfig</td>
+<td align="center">editorconfig, editor-config</td>
+<td align="center">.editorconfig</td>
+</tr>
+<tr>
+<td align="center">Edje Data Collection</td>
+<td align="center">edje-data-collection</td>
+<td align="center">*.edc</td>
+</tr>
+<tr>
+<td align="center">Eiffel</td>
+<td align="center">eiffel</td>
+<td align="center">*.e</td>
+</tr>
+<tr>
+<td align="center">Elixir</td>
+<td align="center">elixir</td>
+<td align="center">*.ex, mix.lock</td>
+</tr>
+<tr>
+<td align="center">Elm</td>
+<td align="center">elm</td>
+<td align="center">*.elm</td>
+</tr>
+<tr>
+<td align="center">Emacs Lisp</td>
+<td align="center">emacs-lisp, elisp, emacs</td>
+<td align="center">*.el, .abbrev_defs</td>
+</tr>
+<tr>
+<td align="center">EmberScript</td>
+<td align="center">emberscript</td>
+<td align="center">*.em</td>
+</tr>
+<tr>
+<td align="center">Erlang</td>
+<td align="center">erlang</td>
+<td align="center">*.erl, Emakefile</td>
+</tr>
+<tr>
+<td align="center">F#</td>
+<td align="center">f#, fsharp</td>
+<td align="center">*.fs</td>
+</tr>
+<tr>
+<td align="center">F*</td>
+<td align="center">f*, fstar</td>
+<td align="center">*.fst</td>
+</tr>
+<tr>
+<td align="center">FIGlet Font</td>
+<td align="center">figlet-font, FIGfont</td>
+<td align="center">*.flf</td>
+</tr>
+<tr>
+<td align="center">FLUX</td>
+<td align="center">flux</td>
+<td align="center">*.fx</td>
+</tr>
+<tr>
+<td align="center">Factor</td>
+<td align="center">factor</td>
+<td align="center">*.factor, .factor-boot-rc</td>
+</tr>
+<tr>
+<td align="center">Fancy</td>
+<td align="center">fancy</td>
+<td align="center">*.fy, Fakefile</td>
+</tr>
+<tr>
+<td align="center">Fantom</td>
+<td align="center">fantom</td>
+<td align="center">*.fan</td>
+</tr>
+<tr>
+<td align="center">Faust</td>
+<td align="center">faust</td>
+<td align="center">*.dsp</td>
+</tr>
+<tr>
+<td align="center">Filebench WML</td>
+<td align="center">filebench-wml</td>
+<td align="center">*.f</td>
+</tr>
+<tr>
+<td align="center">Filterscript</td>
+<td align="center">filterscript</td>
+<td align="center">*.fs</td>
+</tr>
+<tr>
+<td align="center">Formatted</td>
+<td align="center">formatted</td>
+<td align="center">*.for</td>
+</tr>
+<tr>
+<td align="center">Forth</td>
+<td align="center">forth</td>
+<td align="center">*.fth</td>
+</tr>
+<tr>
+<td align="center">Fortran</td>
+<td align="center">fortran</td>
+<td align="center">*.f</td>
+</tr>
+<tr>
+<td align="center">Fortran Free Form</td>
+<td align="center">fortran-free-form</td>
+<td align="center">*.f90</td>
+</tr>
+<tr>
+<td align="center">FreeMarker</td>
+<td align="center">freemarker, ftl</td>
+<td align="center">*.ftl</td>
+</tr>
+<tr>
+<td align="center">Frege</td>
+<td align="center">frege</td>
+<td align="center">*.fr</td>
+</tr>
+<tr>
+<td align="center">Futhark</td>
+<td align="center">futhark</td>
+<td align="center">*.fut</td>
+</tr>
+<tr>
+<td align="center">G-code</td>
+<td align="center">g-code</td>
+<td align="center">*.g</td>
+</tr>
+<tr>
+<td align="center">GAML</td>
+<td align="center">gaml</td>
+<td align="center">*.gaml</td>
+</tr>
+<tr>
+<td align="center">GAMS</td>
+<td align="center">gams</td>
+<td align="center">*.gms</td>
+</tr>
+<tr>
+<td align="center">GAP</td>
+<td align="center">gap</td>
+<td align="center">*.g</td>
+</tr>
+<tr>
+<td align="center">GCC Machine Description</td>
+<td align="center">gcc-machine-description</td>
+<td align="center">*.md</td>
+</tr>
+<tr>
+<td align="center">GDB</td>
+<td align="center">gdb</td>
+<td align="center">*.gdb</td>
+</tr>
+<tr>
+<td align="center">GDScript</td>
+<td align="center">gdscript</td>
+<td align="center">*.gd</td>
+</tr>
+<tr>
+<td align="center">GEDCOM</td>
+<td align="center">gedcom</td>
+<td align="center">*.ged</td>
+</tr>
+<tr>
+<td align="center">GLSL</td>
+<td align="center">glsl</td>
+<td align="center">*.glsl</td>
+</tr>
+<tr>
+<td align="center">GN</td>
+<td align="center">gn</td>
+<td align="center">*.gn, .gn</td>
+</tr>
+<tr>
+<td align="center">Game Maker Language</td>
+<td align="center">game-maker-language</td>
+<td align="center">*.gml</td>
+</tr>
+<tr>
+<td align="center">Genie</td>
+<td align="center">genie</td>
+<td align="center">*.gs</td>
+</tr>
+<tr>
+<td align="center">Genshi</td>
+<td align="center">genshi, xml+genshi, xml+kid</td>
+<td align="center">*.kid</td>
+</tr>
+<tr>
+<td align="center">Gentoo Ebuild</td>
+<td align="center">gentoo-ebuild</td>
+<td align="center">*.ebuild</td>
+</tr>
+<tr>
+<td align="center">Gentoo Eclass</td>
+<td align="center">gentoo-eclass</td>
+<td align="center">*.eclass</td>
+</tr>
+<tr>
+<td align="center">Gerber Image</td>
+<td align="center">gerber-image, rs-274x</td>
+<td align="center">*.gbr</td>
+</tr>
+<tr>
+<td align="center">Gettext Catalog</td>
+<td align="center">gettext-catalog, pot</td>
+<td align="center">*.po</td>
+</tr>
+<tr>
+<td align="center">Gherkin</td>
+<td align="center">gherkin, cucumber</td>
+<td align="center">*.feature</td>
+</tr>
+<tr>
+<td align="center">Git Attributes</td>
+<td align="center">git-attributes, gitattributes</td>
+<td align="center">.gitattributes</td>
+</tr>
+<tr>
+<td align="center">Git Config</td>
+<td align="center">git-config, gitconfig, gitmodules</td>
+<td align="center">*.gitconfig, .gitconfig</td>
+</tr>
+<tr>
+<td align="center">Glyph</td>
+<td align="center">glyph</td>
+<td align="center">*.glf</td>
+</tr>
+<tr>
+<td align="center">Glyph Bitmap Distribution Format</td>
+<td align="center">glyph-bitmap-distribution-format</td>
+<td align="center">*.bdf</td>
+</tr>
+<tr>
+<td align="center">Gnuplot</td>
+<td align="center">gnuplot</td>
+<td align="center">*.gp</td>
+</tr>
+<tr>
+<td align="center">Go</td>
+<td align="center">go, golang</td>
+<td align="center">*.go</td>
+</tr>
+<tr>
+<td align="center">Golo</td>
+<td align="center">golo</td>
+<td align="center">*.golo</td>
+</tr>
+<tr>
+<td align="center">Gosu</td>
+<td align="center">gosu</td>
+<td align="center">*.gs</td>
+</tr>
+<tr>
+<td align="center">Grace</td>
+<td align="center">grace</td>
+<td align="center">*.grace</td>
+</tr>
+<tr>
+<td align="center">Gradle</td>
+<td align="center">gradle</td>
+<td align="center">*.gradle</td>
+</tr>
+<tr>
+<td align="center">Grammatical Framework</td>
+<td align="center">grammatical-framework, gf</td>
+<td align="center">*.gf</td>
+</tr>
+<tr>
+<td align="center">Graph Modeling Language</td>
+<td align="center">graph-modeling-language</td>
+<td align="center">*.gml</td>
+</tr>
+<tr>
+<td align="center">GraphQL</td>
+<td align="center">graphql</td>
+<td align="center">*.graphql</td>
+</tr>
+<tr>
+<td align="center">Graphviz (DOT)</td>
+<td align="center">dot</td>
+<td align="center">*.dot</td>
+</tr>
+<tr>
+<td align="center">Groovy</td>
+<td align="center">groovy</td>
+<td align="center">*.groovy, Jenkinsfile</td>
+</tr>
+<tr>
+<td align="center">Groovy Server Pages</td>
+<td align="center">groovy-server-pages, gsp</td>
+<td align="center">*.gsp</td>
+</tr>
+<tr>
+<td align="center">HAProxy</td>
+<td align="center">haproxy</td>
+<td align="center">*.cfg, haproxy.cfg</td>
+</tr>
+<tr>
+<td align="center">HCL</td>
+<td align="center">hcl, terraform</td>
+<td align="center">*.hcl</td>
+</tr>
+<tr>
+<td align="center">HLSL</td>
+<td align="center">hlsl</td>
+<td align="center">*.hlsl</td>
+</tr>
+<tr>
+<td align="center">HTML</td>
+<td align="center">html, xhtml</td>
+<td align="center">*.html</td>
+</tr>
+<tr>
+<td align="center">HTML+Django</td>
+<td align="center">html+django, django, html+jinja, htmldjango</td>
+<td align="center">*.jinja</td>
+</tr>
+<tr>
+<td align="center">HTML+ECR</td>
+<td align="center">html+ecr, ecr</td>
+<td align="center">*.ecr</td>
+</tr>
+<tr>
+<td align="center">HTML+EEX</td>
+<td align="center">html+eex, eex</td>
+<td align="center">*.eex</td>
+</tr>
+<tr>
+<td align="center">HTML+ERB</td>
+<td align="center">html+erb, erb</td>
+<td align="center">*.erb</td>
+</tr>
+<tr>
+<td align="center">HTML+PHP</td>
+<td align="center">html+php</td>
+<td align="center">*.phtml</td>
+</tr>
+<tr>
+<td align="center">HTML+Razor</td>
+<td align="center">html+razor, razor</td>
+<td align="center">*.cshtml</td>
+</tr>
+<tr>
+<td align="center">HTTP</td>
+<td align="center">http</td>
+<td align="center">*.http</td>
+</tr>
+<tr>
+<td align="center">HXML</td>
+<td align="center">hxml</td>
+<td align="center">*.hxml</td>
+</tr>
+<tr>
+<td align="center">Hack</td>
+<td align="center">hack</td>
+<td align="center">*.hack</td>
+</tr>
+<tr>
+<td align="center">Haml</td>
+<td align="center">haml</td>
+<td align="center">*.haml</td>
+</tr>
+<tr>
+<td align="center">Handlebars</td>
+<td align="center">handlebars, hbs, htmlbars</td>
+<td align="center">*.handlebars</td>
+</tr>
+<tr>
+<td align="center">Harbour</td>
+<td align="center">harbour</td>
+<td align="center">*.hb</td>
+</tr>
+<tr>
+<td align="center">Haskell</td>
+<td align="center">haskell</td>
+<td align="center">*.hs</td>
+</tr>
+<tr>
+<td align="center">Haxe</td>
+<td align="center">haxe</td>
+<td align="center">*.hx</td>
+</tr>
+<tr>
+<td align="center">HiveQL</td>
+<td align="center">hiveql</td>
+<td align="center">*.q</td>
+</tr>
+<tr>
+<td align="center">HolyC</td>
+<td align="center">holyc</td>
+<td align="center">*.hc</td>
+</tr>
+<tr>
+<td align="center">Hy</td>
+<td align="center">hy, hylang</td>
+<td align="center">*.hy</td>
+</tr>
+<tr>
+<td align="center">HyPhy</td>
+<td align="center">hyphy</td>
+<td align="center">*.bf</td>
+</tr>
+<tr>
+<td align="center">IDL</td>
+<td align="center">idl</td>
+<td align="center">*.pro</td>
+</tr>
+<tr>
+<td align="center">IGOR Pro</td>
+<td align="center">igor-pro, igor, igorpro</td>
+<td align="center">*.ipf</td>
+</tr>
+<tr>
+<td align="center">INI</td>
+<td align="center">ini, dosini</td>
+<td align="center">*.ini, buildozer.spec</td>
+</tr>
+<tr>
+<td align="center">IRC log</td>
+<td align="center">irc-log, irc</td>
+<td align="center">*.irclog</td>
+</tr>
+<tr>
+<td align="center">Idris</td>
+<td align="center">idris</td>
+<td align="center">*.idr</td>
+</tr>
+<tr>
+<td align="center">Ignore List</td>
+<td align="center">ignore-list, ignore, gitignore, git-ignore</td>
+<td align="center">*.gitignore, .atomignore</td>
+</tr>
+<tr>
+<td align="center">Inform 7</td>
+<td align="center">inform-7, i7, inform7</td>
+<td align="center">*.ni</td>
+</tr>
+<tr>
+<td align="center">Inno Setup</td>
+<td align="center">inno-setup</td>
+<td align="center">*.iss</td>
+</tr>
+<tr>
+<td align="center">Io</td>
+<td align="center">io</td>
+<td align="center">*.io</td>
+</tr>
+<tr>
+<td align="center">Ioke</td>
+<td align="center">ioke</td>
+<td align="center">*.ik</td>
+</tr>
+<tr>
+<td align="center">Isabelle</td>
+<td align="center">isabelle</td>
+<td align="center">*.thy</td>
+</tr>
+<tr>
+<td align="center">Isabelle ROOT</td>
+<td align="center">isabelle-root</td>
+<td align="center">ROOT</td>
+</tr>
+<tr>
+<td align="center">J</td>
+<td align="center">j</td>
+<td align="center">*.ijs</td>
+</tr>
+<tr>
+<td align="center">JFlex</td>
+<td align="center">jflex</td>
+<td align="center">*.flex</td>
+</tr>
+<tr>
+<td align="center">JSON</td>
+<td align="center">json</td>
+<td align="center">*.json, .arcconfig</td>
+</tr>
+<tr>
+<td align="center">JSON with Comments</td>
+<td align="center">json-with-comments, jsonc</td>
+<td align="center">*.jsonc, .babelrc</td>
+</tr>
+<tr>
+<td align="center">JSON5</td>
+<td align="center">json5</td>
+<td align="center">*.json5</td>
+</tr>
+<tr>
+<td align="center">JSONLD</td>
+<td align="center">jsonld</td>
+<td align="center">*.jsonld</td>
+</tr>
+<tr>
+<td align="center">JSONiq</td>
+<td align="center">jsoniq</td>
+<td align="center">*.jq</td>
+</tr>
+<tr>
+<td align="center">JSX</td>
+<td align="center">jsx</td>
+<td align="center">*.jsx</td>
+</tr>
+<tr>
+<td align="center">Jasmin</td>
+<td align="center">jasmin</td>
+<td align="center">*.j</td>
+</tr>
+<tr>
+<td align="center">Java</td>
+<td align="center">java</td>
+<td align="center">*.java</td>
+</tr>
+<tr>
+<td align="center">Java Properties</td>
+<td align="center">java-properties</td>
+<td align="center">*.properties</td>
+</tr>
+<tr>
+<td align="center">Java Server Pages</td>
+<td align="center">java-server-pages, jsp</td>
+<td align="center">*.jsp</td>
+</tr>
+<tr>
+<td align="center">JavaScript</td>
+<td align="center">javascript, js, node</td>
+<td align="center">*.js, Jakefile</td>
+</tr>
+<tr>
+<td align="center">JavaScript+ERB</td>
+<td align="center">javascript+erb</td>
+<td align="center">*.js.erb</td>
+</tr>
+<tr>
+<td align="center">Jison</td>
+<td align="center">jison</td>
+<td align="center">*.jison</td>
+</tr>
+<tr>
+<td align="center">Jison Lex</td>
+<td align="center">jison-lex</td>
+<td align="center">*.jisonlex</td>
+</tr>
+<tr>
+<td align="center">Jolie</td>
+<td align="center">jolie</td>
+<td align="center">*.ol</td>
+</tr>
+<tr>
+<td align="center">Jsonnet</td>
+<td align="center">jsonnet</td>
+<td align="center">*.jsonnet</td>
+</tr>
+<tr>
+<td align="center">Julia</td>
+<td align="center">julia</td>
+<td align="center">*.jl</td>
+</tr>
+<tr>
+<td align="center">Jupyter Notebook</td>
+<td align="center">jupyter-notebook</td>
+<td align="center">*.ipynb, Notebook</td>
+</tr>
+<tr>
+<td align="center">KRL</td>
+<td align="center">krl</td>
+<td align="center">*.krl</td>
+</tr>
+<tr>
+<td align="center">KiCad Layout</td>
+<td align="center">kicad-layout, pcbnew</td>
+<td align="center">*.kicad_pcb, fp-lib-table</td>
+</tr>
+<tr>
+<td align="center">KiCad Legacy Layout</td>
+<td align="center">kicad-legacy-layout</td>
+<td align="center">*.brd</td>
+</tr>
+<tr>
+<td align="center">KiCad Schematic</td>
+<td align="center">kicad-schematic</td>
+<td align="center">*.sch</td>
+</tr>
+<tr>
+<td align="center">Kit</td>
+<td align="center">kit</td>
+<td align="center">*.kit</td>
+</tr>
+<tr>
+<td align="center">Kotlin</td>
+<td align="center">kotlin</td>
+<td align="center">*.kt</td>
+</tr>
+<tr>
+<td align="center">LFE</td>
+<td align="center">lfe</td>
+<td align="center">*.lfe</td>
+</tr>
+<tr>
+<td align="center">LLVM</td>
+<td align="center">llvm</td>
+<td align="center">*.ll</td>
+</tr>
+<tr>
+<td align="center">LOLCODE</td>
+<td align="center">lolcode</td>
+<td align="center">*.lol</td>
+</tr>
+<tr>
+<td align="center">LSL</td>
+<td align="center">lsl</td>
+<td align="center">*.lsl</td>
+</tr>
+<tr>
+<td align="center">LTspice Symbol</td>
+<td align="center">ltspice-symbol</td>
+<td align="center">*.asy</td>
+</tr>
+<tr>
+<td align="center">LabVIEW</td>
+<td align="center">labview</td>
+<td align="center">*.lvproj</td>
+</tr>
+<tr>
+<td align="center">Lasso</td>
+<td align="center">lasso, lassoscript</td>
+<td align="center">*.lasso</td>
+</tr>
+<tr>
+<td align="center">Latte</td>
+<td align="center">latte</td>
+<td align="center">*.latte</td>
+</tr>
+<tr>
+<td align="center">Lean</td>
+<td align="center">lean</td>
+<td align="center">*.lean</td>
+</tr>
+<tr>
+<td align="center">Less</td>
+<td align="center">less</td>
+<td align="center">*.less</td>
+</tr>
+<tr>
+<td align="center">Lex</td>
+<td align="center">lex, flex</td>
+<td align="center">*.l</td>
+</tr>
+<tr>
+<td align="center">LilyPond</td>
+<td align="center">lilypond</td>
+<td align="center">*.ly</td>
+</tr>
+<tr>
+<td align="center">Limbo</td>
+<td align="center">limbo</td>
+<td align="center">*.b</td>
+</tr>
+<tr>
+<td align="center">Linker Script</td>
+<td align="center">linker-script</td>
+<td align="center">*.ld, ld.script</td>
+</tr>
+<tr>
+<td align="center">Linux Kernel Module</td>
+<td align="center">linux-kernel-module</td>
+<td align="center">*.mod</td>
+</tr>
+<tr>
+<td align="center">Liquid</td>
+<td align="center">liquid</td>
+<td align="center">*.liquid</td>
+</tr>
+<tr>
+<td align="center">Literate Agda</td>
+<td align="center">literate-agda</td>
+<td align="center">*.lagda</td>
+</tr>
+<tr>
+<td align="center">Literate CoffeeScript</td>
+<td align="center">literate-coffeescript, litcoffee</td>
+<td align="center">*.litcoffee</td>
+</tr>
+<tr>
+<td align="center">Literate Haskell</td>
+<td align="center">literate-haskell, lhaskell, lhs</td>
+<td align="center">*.lhs</td>
+</tr>
+<tr>
+<td align="center">LiveScript</td>
+<td align="center">livescript, live-script, ls</td>
+<td align="center">*.ls, Slakefile</td>
+</tr>
+<tr>
+<td align="center">Logos</td>
+<td align="center">logos</td>
+<td align="center">*.xm</td>
+</tr>
+<tr>
+<td align="center">Logtalk</td>
+<td align="center">logtalk</td>
+<td align="center">*.lgt</td>
+</tr>
+<tr>
+<td align="center">LookML</td>
+<td align="center">lookml</td>
+<td align="center">*.lookml</td>
+</tr>
+<tr>
+<td align="center">LoomScript</td>
+<td align="center">loomscript</td>
+<td align="center">*.ls</td>
+</tr>
+<tr>
+<td align="center">Lua</td>
+<td align="center">lua</td>
+<td align="center">*.lua, .luacheckrc</td>
+</tr>
+<tr>
+<td align="center">M</td>
+<td align="center">m, mumps</td>
+<td align="center">*.mumps</td>
+</tr>
+<tr>
+<td align="center">M4</td>
+<td align="center">m4</td>
+<td align="center">*.m4</td>
+</tr>
+<tr>
+<td align="center">M4Sugar</td>
+<td align="center">m4sugar, autoconf</td>
+<td align="center">*.m4, configure.ac</td>
+</tr>
+<tr>
+<td align="center">MATLAB</td>
+<td align="center">matlab, octave</td>
+<td align="center">*.matlab</td>
+</tr>
+<tr>
+<td align="center">MAXScript</td>
+<td align="center">maxscript</td>
+<td align="center">*.ms</td>
+</tr>
+<tr>
+<td align="center">MLIR</td>
+<td align="center">mlir</td>
+<td align="center">*.mlir</td>
+</tr>
+<tr>
+<td align="center">MQL4</td>
+<td align="center">mql4</td>
+<td align="center">*.mq4</td>
+</tr>
+<tr>
+<td align="center">MQL5</td>
+<td align="center">mql5</td>
+<td align="center">*.mq5</td>
+</tr>
+<tr>
+<td align="center">MTML</td>
+<td align="center">mtml</td>
+<td align="center">*.mtml</td>
+</tr>
+<tr>
+<td align="center">MUF</td>
+<td align="center">muf</td>
+<td align="center">*.muf</td>
+</tr>
+<tr>
+<td align="center">Macaulay2</td>
+<td align="center">macaulay2, m2</td>
+<td align="center">*.m2</td>
+</tr>
+<tr>
+<td align="center">Makefile</td>
+<td align="center">makefile, bsdmake, make, mf</td>
+<td align="center">*.mak, BSDmakefile</td>
+</tr>
+<tr>
+<td align="center">Mako</td>
+<td align="center">mako</td>
+<td align="center">*.mako</td>
+</tr>
+<tr>
+<td align="center">Markdown</td>
+<td align="center">markdown, pandoc</td>
+<td align="center">*.md, contents.lr</td>
+</tr>
+<tr>
+<td align="center">Marko</td>
+<td align="center">marko, markojs</td>
+<td align="center">*.marko</td>
+</tr>
+<tr>
+<td align="center">Mask</td>
+<td align="center">mask</td>
+<td align="center">*.mask</td>
+</tr>
+<tr>
+<td align="center">Mathematica</td>
+<td align="center">mathematica, mma</td>
+<td align="center">*.mathematica</td>
+</tr>
+<tr>
+<td align="center">Maven POM</td>
+<td align="center">maven-pom</td>
+<td align="center">pom.xml</td>
+</tr>
+<tr>
+<td align="center">Max</td>
+<td align="center">max, max/msp, maxmsp</td>
+<td align="center">*.maxpat</td>
+</tr>
+<tr>
+<td align="center">MediaWiki</td>
+<td align="center">mediawiki</td>
+<td align="center">*.mediawiki</td>
+</tr>
+<tr>
+<td align="center">Mercury</td>
+<td align="center">mercury</td>
+<td align="center">*.m</td>
+</tr>
+<tr>
+<td align="center">Meson</td>
+<td align="center">meson</td>
+<td align="center">meson.build</td>
+</tr>
+<tr>
+<td align="center">Metal</td>
+<td align="center">metal</td>
+<td align="center">*.metal</td>
+</tr>
+<tr>
+<td align="center">Microsoft Developer Studio Project</td>
+<td align="center">microsoft-developer-studio-project</td>
+<td align="center">*.dsp</td>
+</tr>
+<tr>
+<td align="center">MiniD</td>
+<td align="center">minid</td>
+<td align="center">*.minid</td>
+</tr>
+<tr>
+<td align="center">Mirah</td>
+<td align="center">mirah</td>
+<td align="center">*.druby</td>
+</tr>
+<tr>
+<td align="center">Modelica</td>
+<td align="center">modelica</td>
+<td align="center">*.mo</td>
+</tr>
+<tr>
+<td align="center">Modula-2</td>
+<td align="center">modula-2</td>
+<td align="center">*.mod</td>
+</tr>
+<tr>
+<td align="center">Modula-3</td>
+<td align="center">modula-3</td>
+<td align="center">*.i3</td>
+</tr>
+<tr>
+<td align="center">Module Management System</td>
+<td align="center">module-management-system</td>
+<td align="center">*.mms, descrip.mmk</td>
+</tr>
+<tr>
+<td align="center">Monkey</td>
+<td align="center">monkey</td>
+<td align="center">*.monkey</td>
+</tr>
+<tr>
+<td align="center">Moocode</td>
+<td align="center">moocode</td>
+<td align="center">*.moo</td>
+</tr>
+<tr>
+<td align="center">MoonScript</td>
+<td align="center">moonscript</td>
+<td align="center">*.moon</td>
+</tr>
+<tr>
+<td align="center">Motorola 68K Assembly</td>
+<td align="center">motorola-68k-assembly, m68k</td>
+<td align="center">*.asm</td>
+</tr>
+<tr>
+<td align="center">Muse</td>
+<td align="center">muse, amusewiki</td>
+<td align="center">*.muse</td>
+</tr>
+<tr>
+<td align="center">Myghty</td>
+<td align="center">myghty</td>
+<td align="center">*.myt</td>
+</tr>
+<tr>
+<td align="center">NASL</td>
+<td align="center">nasl</td>
+<td align="center">*.nasl</td>
+</tr>
+<tr>
+<td align="center">NCL</td>
+<td align="center">ncl</td>
+<td align="center">*.ncl</td>
+</tr>
+<tr>
+<td align="center">NEON</td>
+<td align="center">neon, ne-on</td>
+<td align="center">*.neon</td>
+</tr>
+<tr>
+<td align="center">NL</td>
+<td align="center">nl</td>
+<td align="center">*.nl</td>
+</tr>
+<tr>
+<td align="center">NPM Config</td>
+<td align="center">npm-config, npmrc</td>
+<td align="center">.npmrc</td>
+</tr>
+<tr>
+<td align="center">NSIS</td>
+<td align="center">nsis</td>
+<td align="center">*.nsi</td>
+</tr>
+<tr>
+<td align="center">Nearley</td>
+<td align="center">nearley</td>
+<td align="center">*.ne</td>
+</tr>
+<tr>
+<td align="center">Nemerle</td>
+<td align="center">nemerle</td>
+<td align="center">*.n</td>
+</tr>
+<tr>
+<td align="center">NetLinx</td>
+<td align="center">netlinx</td>
+<td align="center">*.axs</td>
+</tr>
+<tr>
+<td align="center">NetLinx+ERB</td>
+<td align="center">netlinx+erb</td>
+<td align="center">*.axs.erb</td>
+</tr>
+<tr>
+<td align="center">NetLogo</td>
+<td align="center">netlogo</td>
+<td align="center">*.nlogo</td>
+</tr>
+<tr>
+<td align="center">NewLisp</td>
+<td align="center">newlisp</td>
+<td align="center">*.nl</td>
+</tr>
+<tr>
+<td align="center">Nextflow</td>
+<td align="center">nextflow</td>
+<td align="center">*.nf, nextflow.config</td>
+</tr>
+<tr>
+<td align="center">Nginx</td>
+<td align="center">nginx</td>
+<td align="center">*.nginxconf, nginx.conf</td>
+</tr>
+<tr>
+<td align="center">Nim</td>
+<td align="center">nim</td>
+<td align="center">*.nim, nim.cfg</td>
+</tr>
+<tr>
+<td align="center">Ninja</td>
+<td align="center">ninja</td>
+<td align="center">*.ninja</td>
+</tr>
+<tr>
+<td align="center">Nit</td>
+<td align="center">nit</td>
+<td align="center">*.nit</td>
+</tr>
+<tr>
+<td align="center">Nix</td>
+<td align="center">nix, nixos</td>
+<td align="center">*.nix</td>
+</tr>
+<tr>
+<td align="center">Nu</td>
+<td align="center">nu, nush</td>
+<td align="center">*.nu, Nukefile</td>
+</tr>
+<tr>
+<td align="center">NumPy</td>
+<td align="center">numpy</td>
+<td align="center">*.numpy</td>
+</tr>
+<tr>
+<td align="center">OCaml</td>
+<td align="center">ocaml</td>
+<td align="center">*.ml</td>
+</tr>
+<tr>
+<td align="center">ObjDump</td>
+<td align="center">objdump</td>
+<td align="center">*.objdump</td>
+</tr>
+<tr>
+<td align="center">Object Data Instance Notation</td>
+<td align="center">object-data-instance-notation</td>
+<td align="center">*.odin</td>
+</tr>
+<tr>
+<td align="center">ObjectScript</td>
+<td align="center">objectscript</td>
+<td align="center">*.cls</td>
+</tr>
+<tr>
+<td align="center">Objective-C</td>
+<td align="center">objective-c, obj-c, objc, objectivec</td>
+<td align="center">*.m</td>
+</tr>
+<tr>
+<td align="center">Objective-C++</td>
+<td align="center">objective-c++, obj-c++, objc++, objectivec++</td>
+<td align="center">*.mm</td>
+</tr>
+<tr>
+<td align="center">Objective-J</td>
+<td align="center">objective-j, obj-j, objectivej, objj</td>
+<td align="center">*.j</td>
+</tr>
+<tr>
+<td align="center">Odin</td>
+<td align="center">odin, odinlang, odin-lang</td>
+<td align="center">*.odin</td>
+</tr>
+<tr>
+<td align="center">Omgrofl</td>
+<td align="center">omgrofl</td>
+<td align="center">*.omgrofl</td>
+</tr>
+<tr>
+<td align="center">Opa</td>
+<td align="center">opa</td>
+<td align="center">*.opa</td>
+</tr>
+<tr>
+<td align="center">Opal</td>
+<td align="center">opal</td>
+<td align="center">*.opal</td>
+</tr>
+<tr>
+<td align="center">Open Policy Agent</td>
+<td align="center">open-policy-agent</td>
+<td align="center">*.rego</td>
+</tr>
+<tr>
+<td align="center">OpenCL</td>
+<td align="center">opencl</td>
+<td align="center">*.cl</td>
+</tr>
+<tr>
+<td align="center">OpenEdge ABL</td>
+<td align="center">openedge-abl, progress, openedge, abl</td>
+<td align="center">*.p</td>
+</tr>
+<tr>
+<td align="center">OpenQASM</td>
+<td align="center">openqasm</td>
+<td align="center">*.qasm</td>
+</tr>
+<tr>
+<td align="center">OpenRC runscript</td>
+<td align="center">openrc-runscript, openrc</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">OpenSCAD</td>
+<td align="center">openscad</td>
+<td align="center">*.scad</td>
+</tr>
+<tr>
+<td align="center">OpenStep Property List</td>
+<td align="center">openstep-property-list</td>
+<td align="center">*.plist</td>
+</tr>
+<tr>
+<td align="center">OpenType Feature File</td>
+<td align="center">opentype-feature-file, AFDKO</td>
+<td align="center">*.fea</td>
+</tr>
+<tr>
+<td align="center">Org</td>
+<td align="center">org</td>
+<td align="center">*.org</td>
+</tr>
+<tr>
+<td align="center">Ox</td>
+<td align="center">ox</td>
+<td align="center">*.ox</td>
+</tr>
+<tr>
+<td align="center">Oxygene</td>
+<td align="center">oxygene</td>
+<td align="center">*.oxygene</td>
+</tr>
+<tr>
+<td align="center">Oz</td>
+<td align="center">oz</td>
+<td align="center">*.oz</td>
+</tr>
+<tr>
+<td align="center">P4</td>
+<td align="center">p4</td>
+<td align="center">*.p4</td>
+</tr>
+<tr>
+<td align="center">PHP</td>
+<td align="center">php, inc</td>
+<td align="center">*.php, .php</td>
+</tr>
+<tr>
+<td align="center">PLSQL</td>
+<td align="center">plsql</td>
+<td align="center">*.pls</td>
+</tr>
+<tr>
+<td align="center">PLpgSQL</td>
+<td align="center">plpgsql</td>
+<td align="center">*.pgsql</td>
+</tr>
+<tr>
+<td align="center">POV-Ray SDL</td>
+<td align="center">pov-ray-sdl, pov-ray, povray</td>
+<td align="center">*.pov</td>
+</tr>
+<tr>
+<td align="center">Pan</td>
+<td align="center">pan</td>
+<td align="center">*.pan</td>
+</tr>
+<tr>
+<td align="center">Papyrus</td>
+<td align="center">papyrus</td>
+<td align="center">*.psc</td>
+</tr>
+<tr>
+<td align="center">Parrot</td>
+<td align="center">parrot</td>
+<td align="center">*.parrot</td>
+</tr>
+<tr>
+<td align="center">Parrot Assembly</td>
+<td align="center">parrot-assembly, pasm</td>
+<td align="center">*.pasm</td>
+</tr>
+<tr>
+<td align="center">Parrot Internal Representation</td>
+<td align="center">parrot-internal-representation, pir</td>
+<td align="center">*.pir</td>
+</tr>
+<tr>
+<td align="center">Pascal</td>
+<td align="center">pascal</td>
+<td align="center">*.pas</td>
+</tr>
+<tr>
+<td align="center">Pawn</td>
+<td align="center">pawn</td>
+<td align="center">*.pwn</td>
+</tr>
+<tr>
+<td align="center">Pep8</td>
+<td align="center">pep8</td>
+<td align="center">*.pep</td>
+</tr>
+<tr>
+<td align="center">Perl</td>
+<td align="center">perl, cperl</td>
+<td align="center">*.pl, Makefile.PL</td>
+</tr>
+<tr>
+<td align="center">Pic</td>
+<td align="center">pic</td>
+<td align="center">*.pic</td>
+</tr>
+<tr>
+<td align="center">Pickle</td>
+<td align="center">pickle</td>
+<td align="center">*.pkl</td>
+</tr>
+<tr>
+<td align="center">PicoLisp</td>
+<td align="center">picolisp</td>
+<td align="center">*.l</td>
+</tr>
+<tr>
+<td align="center">PigLatin</td>
+<td align="center">piglatin</td>
+<td align="center">*.pig</td>
+</tr>
+<tr>
+<td align="center">Pike</td>
+<td align="center">pike</td>
+<td align="center">*.pike</td>
+</tr>
+<tr>
+<td align="center">PlantUML</td>
+<td align="center">plantuml</td>
+<td align="center">*.puml</td>
+</tr>
+<tr>
+<td align="center">Pod</td>
+<td align="center">pod</td>
+<td align="center">*.pod</td>
+</tr>
+<tr>
+<td align="center">Pod 6</td>
+<td align="center">pod-6</td>
+<td align="center">*.pod</td>
+</tr>
+<tr>
+<td align="center">PogoScript</td>
+<td align="center">pogoscript</td>
+<td align="center">*.pogo</td>
+</tr>
+<tr>
+<td align="center">Pony</td>
+<td align="center">pony</td>
+<td align="center">*.pony</td>
+</tr>
+<tr>
+<td align="center">PostCSS</td>
+<td align="center">postcss</td>
+<td align="center">*.pcss</td>
+</tr>
+<tr>
+<td align="center">PostScript</td>
+<td align="center">postscript, postscr</td>
+<td align="center">*.ps</td>
+</tr>
+<tr>
+<td align="center">PowerBuilder</td>
+<td align="center">powerbuilder</td>
+<td align="center">*.pbt</td>
+</tr>
+<tr>
+<td align="center">PowerShell</td>
+<td align="center">powershell, posh, pwsh</td>
+<td align="center">*.ps1</td>
+</tr>
+<tr>
+<td align="center">Prisma</td>
+<td align="center">prisma</td>
+<td align="center">*.prisma</td>
+</tr>
+<tr>
+<td align="center">Processing</td>
+<td align="center">processing</td>
+<td align="center">*.pde</td>
+</tr>
+<tr>
+<td align="center">Proguard</td>
+<td align="center">proguard</td>
+<td align="center">*.pro</td>
+</tr>
+<tr>
+<td align="center">Prolog</td>
+<td align="center">prolog</td>
+<td align="center">*.pl</td>
+</tr>
+<tr>
+<td align="center">Propeller Spin</td>
+<td align="center">propeller-spin</td>
+<td align="center">*.spin</td>
+</tr>
+<tr>
+<td align="center">Protocol Buffer</td>
+<td align="center">protocol-buffer, protobuf</td>
+<td align="center">*.proto</td>
+</tr>
+<tr>
+<td align="center">Public Key</td>
+<td align="center">public-key</td>
+<td align="center">*.asc</td>
+</tr>
+<tr>
+<td align="center">Pug</td>
+<td align="center">pug</td>
+<td align="center">*.jade</td>
+</tr>
+<tr>
+<td align="center">Puppet</td>
+<td align="center">puppet</td>
+<td align="center">*.pp, Modulefile</td>
+</tr>
+<tr>
+<td align="center">Pure Data</td>
+<td align="center">pure-data</td>
+<td align="center">*.pd</td>
+</tr>
+<tr>
+<td align="center">PureBasic</td>
+<td align="center">purebasic</td>
+<td align="center">*.pb</td>
+</tr>
+<tr>
+<td align="center">PureScript</td>
+<td align="center">purescript</td>
+<td align="center">*.purs</td>
+</tr>
+<tr>
+<td align="center">Python</td>
+<td align="center">python, python3, rusthon</td>
+<td align="center">*.py, .gclient</td>
+</tr>
+<tr>
+<td align="center">Python console</td>
+<td align="center">python-console, pycon</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Python traceback</td>
+<td align="center">python-traceback</td>
+<td align="center">*.pytb</td>
+</tr>
+<tr>
+<td align="center">QML</td>
+<td align="center">qml</td>
+<td align="center">*.qml</td>
+</tr>
+<tr>
+<td align="center">QMake</td>
+<td align="center">qmake</td>
+<td align="center">*.pro</td>
+</tr>
+<tr>
+<td align="center">Quake</td>
+<td align="center">quake</td>
+<td align="center">m3makefile</td>
+</tr>
+<tr>
+<td align="center">R</td>
+<td align="center">r, R, Rscript, splus</td>
+<td align="center">*.r, .Rprofile</td>
+</tr>
+<tr>
+<td align="center">RAML</td>
+<td align="center">raml</td>
+<td align="center">*.raml</td>
+</tr>
+<tr>
+<td align="center">RDoc</td>
+<td align="center">rdoc</td>
+<td align="center">*.rdoc</td>
+</tr>
+<tr>
+<td align="center">REALbasic</td>
+<td align="center">realbasic</td>
+<td align="center">*.rbbas</td>
+</tr>
+<tr>
+<td align="center">REXX</td>
+<td align="center">rexx, arexx</td>
+<td align="center">*.rexx</td>
+</tr>
+<tr>
+<td align="center">RHTML</td>
+<td align="center">rhtml, html+ruby</td>
+<td align="center">*.rhtml</td>
+</tr>
+<tr>
+<td align="center">RMarkdown</td>
+<td align="center">rmarkdown</td>
+<td align="center">*.rmd</td>
+</tr>
+<tr>
+<td align="center">RPC</td>
+<td align="center">rpc, rpcgen, oncrpc, xdr</td>
+<td align="center">*.x</td>
+</tr>
+<tr>
+<td align="center">RPM Spec</td>
+<td align="center">rpm-spec, specfile</td>
+<td align="center">*.spec</td>
+</tr>
+<tr>
+<td align="center">RUNOFF</td>
+<td align="center">runoff</td>
+<td align="center">*.rnh</td>
+</tr>
+<tr>
+<td align="center">Racket</td>
+<td align="center">racket</td>
+<td align="center">*.rkt</td>
+</tr>
+<tr>
+<td align="center">Ragel</td>
+<td align="center">ragel, ragel-rb, ragel-ruby</td>
+<td align="center">*.rl</td>
+</tr>
+<tr>
+<td align="center">Raku</td>
+<td align="center">raku, perl6, perl-6</td>
+<td align="center">*.6pl</td>
+</tr>
+<tr>
+<td align="center">Rascal</td>
+<td align="center">rascal</td>
+<td align="center">*.rsc</td>
+</tr>
+<tr>
+<td align="center">Raw token data</td>
+<td align="center">raw-token-data, raw</td>
+<td align="center">*.raw</td>
+</tr>
+<tr>
+<td align="center">Readline Config</td>
+<td align="center">readline-config, inputrc, readline</td>
+<td align="center">.inputrc</td>
+</tr>
+<tr>
+<td align="center">Reason</td>
+<td align="center">reason</td>
+<td align="center">*.re</td>
+</tr>
+<tr>
+<td align="center">Rebol</td>
+<td align="center">rebol</td>
+<td align="center">*.reb</td>
+</tr>
+<tr>
+<td align="center">Red</td>
+<td align="center">red, red/system</td>
+<td align="center">*.red</td>
+</tr>
+<tr>
+<td align="center">Redcode</td>
+<td align="center">redcode</td>
+<td align="center">*.cw</td>
+</tr>
+<tr>
+<td align="center">Regular Expression</td>
+<td align="center">regular-expression, regexp, regex</td>
+<td align="center">*.regexp</td>
+</tr>
+<tr>
+<td align="center">Ren’Py</td>
+<td align="center">ren’py, renpy</td>
+<td align="center">*.rpy</td>
+</tr>
+<tr>
+<td align="center">RenderScript</td>
+<td align="center">renderscript</td>
+<td align="center">*.rs</td>
+</tr>
+<tr>
+<td align="center">Rich Text Format</td>
+<td align="center">rich-text-format</td>
+<td align="center">*.rtf</td>
+</tr>
+<tr>
+<td align="center">Ring</td>
+<td align="center">ring</td>
+<td align="center">*.ring</td>
+</tr>
+<tr>
+<td align="center">Riot</td>
+<td align="center">riot</td>
+<td align="center">*.riot</td>
+</tr>
+<tr>
+<td align="center">RobotFramework</td>
+<td align="center">robotframework</td>
+<td align="center">*.robot</td>
+</tr>
+<tr>
+<td align="center">Roff</td>
+<td align="center">roff, groff, mdoc, nroff, troff</td>
+<td align="center">*.roff, eqnrc</td>
+</tr>
+<tr>
+<td align="center">Roff Manpage</td>
+<td align="center">roff-manpage</td>
+<td align="center">*.1</td>
+</tr>
+<tr>
+<td align="center">Rouge</td>
+<td align="center">rouge</td>
+<td align="center">*.rg</td>
+</tr>
+<tr>
+<td align="center">Ruby</td>
+<td align="center">ruby, jruby, macruby, rake, rb, rbx</td>
+<td align="center">*.rb, .irbrc</td>
+</tr>
+<tr>
+<td align="center">Rust</td>
+<td align="center">rust</td>
+<td align="center">*.rs</td>
+</tr>
+<tr>
+<td align="center">SAS</td>
+<td align="center">sas</td>
+<td align="center">*.sas</td>
+</tr>
+<tr>
+<td align="center">SCSS</td>
+<td align="center">scss</td>
+<td align="center">*.scss</td>
+</tr>
+<tr>
+<td align="center">SMT</td>
+<td align="center">smt</td>
+<td align="center">*.smt2</td>
+</tr>
+<tr>
+<td align="center">SPARQL</td>
+<td align="center">sparql</td>
+<td align="center">*.sparql</td>
+</tr>
+<tr>
+<td align="center">SQF</td>
+<td align="center">sqf</td>
+<td align="center">*.sqf</td>
+</tr>
+<tr>
+<td align="center">SQL</td>
+<td align="center">sql</td>
+<td align="center">*.sql</td>
+</tr>
+<tr>
+<td align="center">SQLPL</td>
+<td align="center">sqlpl</td>
+<td align="center">*.sql</td>
+</tr>
+<tr>
+<td align="center">SRecode Template</td>
+<td align="center">srecode-template</td>
+<td align="center">*.srt</td>
+</tr>
+<tr>
+<td align="center">SSH Config</td>
+<td align="center">ssh-config</td>
+<td align="center">ssh-config</td>
+</tr>
+<tr>
+<td align="center">STON</td>
+<td align="center">ston</td>
+<td align="center">*.ston</td>
+</tr>
+<tr>
+<td align="center">SVG</td>
+<td align="center">svg</td>
+<td align="center">*.svg</td>
+</tr>
+<tr>
+<td align="center">SWIG</td>
+<td align="center">swig</td>
+<td align="center">*.i</td>
+</tr>
+<tr>
+<td align="center">Sage</td>
+<td align="center">sage</td>
+<td align="center">*.sage</td>
+</tr>
+<tr>
+<td align="center">SaltStack</td>
+<td align="center">saltstack, saltstate, salt</td>
+<td align="center">*.sls</td>
+</tr>
+<tr>
+<td align="center">Sass</td>
+<td align="center">sass</td>
+<td align="center">*.sass</td>
+</tr>
+<tr>
+<td align="center">Scala</td>
+<td align="center">scala</td>
+<td align="center">*.scala</td>
+</tr>
+<tr>
+<td align="center">Scaml</td>
+<td align="center">scaml</td>
+<td align="center">*.scaml</td>
+</tr>
+<tr>
+<td align="center">Scheme</td>
+<td align="center">scheme</td>
+<td align="center">*.scm</td>
+</tr>
+<tr>
+<td align="center">Scilab</td>
+<td align="center">scilab</td>
+<td align="center">*.sci</td>
+</tr>
+<tr>
+<td align="center">Self</td>
+<td align="center">self</td>
+<td align="center">*.self</td>
+</tr>
+<tr>
+<td align="center">ShaderLab</td>
+<td align="center">shaderlab</td>
+<td align="center">*.shader</td>
+</tr>
+<tr>
+<td align="center">Shell</td>
+<td align="center">shell, sh, shell-script, bash, zsh</td>
+<td align="center">*.sh, .bash_aliases</td>
+</tr>
+<tr>
+<td align="center">ShellSession</td>
+<td align="center">shellsession, console</td>
+<td align="center">*.sh-session</td>
+</tr>
+<tr>
+<td align="center">Shen</td>
+<td align="center">shen</td>
+<td align="center">*.shen</td>
+</tr>
+<tr>
+<td align="center">Sieve</td>
+<td align="center">sieve</td>
+<td align="center">*.sieve</td>
+</tr>
+<tr>
+<td align="center">Slash</td>
+<td align="center">slash</td>
+<td align="center">*.sl</td>
+</tr>
+<tr>
+<td align="center">Slice</td>
+<td align="center">slice</td>
+<td align="center">*.ice</td>
+</tr>
+<tr>
+<td align="center">Slim</td>
+<td align="center">slim</td>
+<td align="center">*.slim</td>
+</tr>
+<tr>
+<td align="center">SmPL</td>
+<td align="center">smpl, coccinelle</td>
+<td align="center">*.cocci</td>
+</tr>
+<tr>
+<td align="center">Smali</td>
+<td align="center">smali</td>
+<td align="center">*.smali</td>
+</tr>
+<tr>
+<td align="center">Smalltalk</td>
+<td align="center">smalltalk, squeak</td>
+<td align="center">*.st</td>
+</tr>
+<tr>
+<td align="center">Smarty</td>
+<td align="center">smarty</td>
+<td align="center">*.tpl</td>
+</tr>
+<tr>
+<td align="center">Solidity</td>
+<td align="center">solidity</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">SourcePawn</td>
+<td align="center">sourcepawn, sourcemod</td>
+<td align="center">*.sp</td>
+</tr>
+<tr>
+<td align="center">Spline Font Database</td>
+<td align="center">spline-font-database</td>
+<td align="center">*.sfd</td>
+</tr>
+<tr>
+<td align="center">Squirrel</td>
+<td align="center">squirrel</td>
+<td align="center">*.nut</td>
+</tr>
+<tr>
+<td align="center">Stan</td>
+<td align="center">stan</td>
+<td align="center">*.stan</td>
+</tr>
+<tr>
+<td align="center">Standard ML</td>
+<td align="center">standard-ml, sml</td>
+<td align="center">*.ML</td>
+</tr>
+<tr>
+<td align="center">Starlark</td>
+<td align="center">starlark, bazel, bzl</td>
+<td align="center">*.bzl, BUCK</td>
+</tr>
+<tr>
+<td align="center">Stata</td>
+<td align="center">stata</td>
+<td align="center">*.do</td>
+</tr>
+<tr>
+<td align="center">Stylus</td>
+<td align="center">stylus</td>
+<td align="center">*.styl</td>
+</tr>
+<tr>
+<td align="center">SubRip Text</td>
+<td align="center">subrip-text</td>
+<td align="center">*.srt</td>
+</tr>
+<tr>
+<td align="center">SugarSS</td>
+<td align="center">sugarss</td>
+<td align="center">*.sss</td>
+</tr>
+<tr>
+<td align="center">SuperCollider</td>
+<td align="center">supercollider</td>
+<td align="center">*.sc</td>
+</tr>
+<tr>
+<td align="center">Svelte</td>
+<td align="center">svelte</td>
+<td align="center">*.svelte</td>
+</tr>
+<tr>
+<td align="center">Swift</td>
+<td align="center">swift</td>
+<td align="center">*.swift</td>
+</tr>
+<tr>
+<td align="center">SystemVerilog</td>
+<td align="center">systemverilog</td>
+<td align="center">*.sv</td>
+</tr>
+<tr>
+<td align="center">TI Program</td>
+<td align="center">ti-program</td>
+<td align="center">*.8xp</td>
+</tr>
+<tr>
+<td align="center">TLA</td>
+<td align="center">tla</td>
+<td align="center">*.tla</td>
+</tr>
+<tr>
+<td align="center">TOML</td>
+<td align="center">toml</td>
+<td align="center">*.toml, Cargo.lock</td>
+</tr>
+<tr>
+<td align="center">TSQL</td>
+<td align="center">tsql</td>
+<td align="center">*.sql</td>
+</tr>
+<tr>
+<td align="center">TSX</td>
+<td align="center">tsx</td>
+<td align="center">*.tsx</td>
+</tr>
+<tr>
+<td align="center">TXL</td>
+<td align="center">txl</td>
+<td align="center">*.txl</td>
+</tr>
+<tr>
+<td align="center">Tcl</td>
+<td align="center">tcl</td>
+<td align="center">*.tcl, owh</td>
+</tr>
+<tr>
+<td align="center">Tcsh</td>
+<td align="center">tcsh</td>
+<td align="center">*.tcsh</td>
+</tr>
+<tr>
+<td align="center">TeX</td>
+<td align="center">tex, latex</td>
+<td align="center">*.tex</td>
+</tr>
+<tr>
+<td align="center">Tea</td>
+<td align="center">tea</td>
+<td align="center">*.tea</td>
+</tr>
+<tr>
+<td align="center">Terra</td>
+<td align="center">terra</td>
+<td align="center">*.t</td>
+</tr>
+<tr>
+<td align="center">Texinfo</td>
+<td align="center">texinfo</td>
+<td align="center">*.texinfo</td>
+</tr>
+<tr>
+<td align="center">Text</td>
+<td align="center">text, fundamental</td>
+<td align="center">*.txt, COPYING</td>
+</tr>
+<tr>
+<td align="center">Textile</td>
+<td align="center">textile</td>
+<td align="center">*.textile</td>
+</tr>
+<tr>
+<td align="center">Thrift</td>
+<td align="center">thrift</td>
+<td align="center">*.thrift</td>
+</tr>
+<tr>
+<td align="center">Turing</td>
+<td align="center">turing</td>
+<td align="center">*.t</td>
+</tr>
+<tr>
+<td align="center">Turtle</td>
+<td align="center">turtle</td>
+<td align="center">*.ttl</td>
+</tr>
+<tr>
+<td align="center">Twig</td>
+<td align="center">twig</td>
+<td align="center">*.twig</td>
+</tr>
+<tr>
+<td align="center">Type Language</td>
+<td align="center">type-language, tl</td>
+<td align="center">*.tl</td>
+</tr>
+<tr>
+<td align="center">TypeScript</td>
+<td align="center">typescript, ts</td>
+<td align="center">*.ts</td>
+</tr>
+<tr>
+<td align="center">Unified Parallel C</td>
+<td align="center">unified-parallel-c</td>
+<td align="center">*.upc</td>
+</tr>
+<tr>
+<td align="center">Unity3D Asset</td>
+<td align="center">unity3d-asset</td>
+<td align="center">*.anim</td>
+</tr>
+<tr>
+<td align="center">Unix Assembly</td>
+<td align="center">unix-assembly</td>
+<td align="center">*.s</td>
+</tr>
+<tr>
+<td align="center">Uno</td>
+<td align="center">uno</td>
+<td align="center">*.uno</td>
+</tr>
+<tr>
+<td align="center">UnrealScript</td>
+<td align="center">unrealscript</td>
+<td align="center">*.uc</td>
+</tr>
+<tr>
+<td align="center">UrWeb</td>
+<td align="center">urweb, Ur/Web, Ur</td>
+<td align="center">*.ur</td>
+</tr>
+<tr>
+<td align="center">V</td>
+<td align="center">v, vlang</td>
+<td align="center">*.v</td>
+</tr>
+<tr>
+<td align="center">VBA</td>
+<td align="center">vba, vb6</td>
+<td align="center">*.bas</td>
+</tr>
+<tr>
+<td align="center">VBScript</td>
+<td align="center">vbscript</td>
+<td align="center">*.vbs</td>
+</tr>
+<tr>
+<td align="center">VCL</td>
+<td align="center">vcl</td>
+<td align="center">*.vcl</td>
+</tr>
+<tr>
+<td align="center">VHDL</td>
+<td align="center">vhdl</td>
+<td align="center">*.vhdl</td>
+</tr>
+<tr>
+<td align="center">Vala</td>
+<td align="center">vala</td>
+<td align="center">*.vala</td>
+</tr>
+<tr>
+<td align="center">Verilog</td>
+<td align="center">verilog</td>
+<td align="center">*.v</td>
+</tr>
+<tr>
+<td align="center">Vim Snippet</td>
+<td align="center">vim-snippet, SnipMate, UltiSnip, NeoSnippet</td>
+<td align="center">*.snip</td>
+</tr>
+<tr>
+<td align="center">Vim script</td>
+<td align="center">vim-script, vim, viml, nvim</td>
+<td align="center">*.vim, .gvimrc</td>
+</tr>
+<tr>
+<td align="center">Visual Basic .NET</td>
+<td align="center">vbnet, vb.net</td>
+<td align="center">*.vb</td>
+</tr>
+<tr>
+<td align="center">Volt</td>
+<td align="center">volt</td>
+<td align="center">*.volt</td>
+</tr>
+<tr>
+<td align="center">Vue</td>
+<td align="center">vue</td>
+<td align="center">*.vue</td>
+</tr>
+<tr>
+<td align="center">Wavefront Material</td>
+<td align="center">wavefront-material</td>
+<td align="center">*.mtl</td>
+</tr>
+<tr>
+<td align="center">Wavefront Object</td>
+<td align="center">wavefront-object</td>
+<td align="center">*.obj</td>
+</tr>
+<tr>
+<td align="center">Web Ontology Language</td>
+<td align="center">web-ontology-language</td>
+<td align="center">*.owl</td>
+</tr>
+<tr>
+<td align="center">WebAssembly</td>
+<td align="center">webassembly, wast, wasm</td>
+<td align="center">*.wast</td>
+</tr>
+<tr>
+<td align="center">WebIDL</td>
+<td align="center">webidl</td>
+<td align="center">*.webidl</td>
+</tr>
+<tr>
+<td align="center">WebVTT</td>
+<td align="center">webvtt</td>
+<td align="center">*.vtt</td>
+</tr>
+<tr>
+<td align="center">Wget Config</td>
+<td align="center">wget-config, wgetrc</td>
+<td align="center">.wgetrc</td>
+</tr>
+<tr>
+<td align="center">Windows Registry Entries</td>
+<td align="center">windows-registry-entries</td>
+<td align="center">*.reg</td>
+</tr>
+<tr>
+<td align="center">Wollok</td>
+<td align="center">wollok</td>
+<td align="center">*.wlk</td>
+</tr>
+<tr>
+<td align="center">World of Warcraft Addon Data</td>
+<td align="center">world-of-warcraft-addon-data</td>
+<td align="center">*.toc</td>
+</tr>
+<tr>
+<td align="center">X BitMap</td>
+<td align="center">x-bitmap, xbm</td>
+<td align="center">*.xbm</td>
+</tr>
+<tr>
+<td align="center">X Font Directory Index</td>
+<td align="center">x-font-directory-index</td>
+<td align="center">encodings.dir</td>
+</tr>
+<tr>
+<td align="center">X PixMap</td>
+<td align="center">x-pixmap, xpm</td>
+<td align="center">*.xpm</td>
+</tr>
+<tr>
+<td align="center">X10</td>
+<td align="center">x10, xten</td>
+<td align="center">*.x10</td>
+</tr>
+<tr>
+<td align="center">XC</td>
+<td align="center">xc</td>
+<td align="center">*.xc</td>
+</tr>
+<tr>
+<td align="center">XCompose</td>
+<td align="center">xcompose</td>
+<td align="center">.XCompose</td>
+</tr>
+<tr>
+<td align="center">XML</td>
+<td align="center">xml, rss, xsd, wsdl</td>
+<td align="center">*.xml, .classpath</td>
+</tr>
+<tr>
+<td align="center">XML Property List</td>
+<td align="center">xml-property-list</td>
+<td align="center">*.plist</td>
+</tr>
+<tr>
+<td align="center">XPages</td>
+<td align="center">xpages</td>
+<td align="center">*.xsp-config</td>
+</tr>
+<tr>
+<td align="center">XProc</td>
+<td align="center">xproc</td>
+<td align="center">*.xpl</td>
+</tr>
+<tr>
+<td align="center">XQuery</td>
+<td align="center">xquery</td>
+<td align="center">*.xquery</td>
+</tr>
+<tr>
+<td align="center">XS</td>
+<td align="center">xs</td>
+<td align="center">*.xs</td>
+</tr>
+<tr>
+<td align="center">XSLT</td>
+<td align="center">xslt, xsl</td>
+<td align="center">*.xslt</td>
+</tr>
+<tr>
+<td align="center">Xojo</td>
+<td align="center">xojo</td>
+<td align="center">*.xojo_code</td>
+</tr>
+<tr>
+<td align="center">Xtend</td>
+<td align="center">xtend</td>
+<td align="center">*.xtend</td>
+</tr>
+<tr>
+<td align="center">YAML</td>
+<td align="center">yaml, yml</td>
+<td align="center">*.yml, .clang-format</td>
+</tr>
+<tr>
+<td align="center">YANG</td>
+<td align="center">yang</td>
+<td align="center">*.yang</td>
+</tr>
+<tr>
+<td align="center">YARA</td>
+<td align="center">yara</td>
+<td align="center">*.yar</td>
+</tr>
+<tr>
+<td align="center">YASnippet</td>
+<td align="center">yasnippet, snippet, yas</td>
+<td align="center">*.yasnippet</td>
+</tr>
+<tr>
+<td align="center">Yacc</td>
+<td align="center">yacc</td>
+<td align="center">*.y</td>
+</tr>
+<tr>
+<td align="center">ZAP</td>
+<td align="center">zap</td>
+<td align="center">*.zap</td>
+</tr>
+<tr>
+<td align="center">ZIL</td>
+<td align="center">zil</td>
+<td align="center">*.zil</td>
+</tr>
+<tr>
+<td align="center">Zeek</td>
+<td align="center">zeek, bro</td>
+<td align="center">*.zeek</td>
+</tr>
+<tr>
+<td align="center">ZenScript</td>
+<td align="center">zenscript</td>
+<td align="center">*.zs</td>
+</tr>
+<tr>
+<td align="center">Zephir</td>
+<td align="center">zephir</td>
+<td align="center">*.zep</td>
+</tr>
+<tr>
+<td align="center">Zig</td>
+<td align="center">zig</td>
+<td align="center">*.zig</td>
+</tr>
+<tr>
+<td align="center">Zimpl</td>
+<td align="center">zimpl</td>
+<td align="center">*.zimpl</td>
+</tr>
+<tr>
+<td align="center">cURL Config</td>
+<td align="center">curl-config, curlrc</td>
+<td align="center">.curlrc</td>
+</tr>
+<tr>
+<td align="center">desktop</td>
+<td align="center">desktop</td>
+<td align="center">*.desktop</td>
+</tr>
+<tr>
+<td align="center">dircolors</td>
+<td align="center">dircolors</td>
+<td align="center">*.dircolors, .dir_colors</td>
+</tr>
+<tr>
+<td align="center">eC</td>
+<td align="center">ec</td>
+<td align="center">*.ec</td>
+</tr>
+<tr>
+<td align="center">edn</td>
+<td align="center">edn</td>
+<td align="center">*.edn</td>
+</tr>
+<tr>
+<td align="center">fish</td>
+<td align="center">fish</td>
+<td align="center">*.fish</td>
+</tr>
+<tr>
+<td align="center">mIRC Script</td>
+<td align="center">mirc-script</td>
+<td align="center">*.mrc</td>
+</tr>
+<tr>
+<td align="center">mcfunction</td>
+<td align="center">mcfunction</td>
+<td align="center">*.mcfunction</td>
+</tr>
+<tr>
+<td align="center">mupad</td>
+<td align="center">mupad</td>
+<td align="center">*.mu</td>
+</tr>
+<tr>
+<td align="center">nanorc</td>
+<td align="center">nanorc</td>
+<td align="center">*.nanorc, .nanorc</td>
+</tr>
+<tr>
+<td align="center">nesC</td>
+<td align="center">nesc</td>
+<td align="center">*.nc</td>
+</tr>
+<tr>
+<td align="center">ooc</td>
+<td align="center">ooc</td>
+<td align="center">*.ooc</td>
+</tr>
+<tr>
+<td align="center">q</td>
+<td align="center">q</td>
+<td align="center">*.q</td>
+</tr>
+<tr>
+<td align="center">reStructuredText</td>
+<td align="center">restructuredtext, rst</td>
+<td align="center">*.rst</td>
+</tr>
+<tr>
+<td align="center">sed</td>
+<td align="center">sed</td>
+<td align="center">*.sed</td>
+</tr>
+<tr>
+<td align="center">wdl</td>
+<td align="center">wdl</td>
+<td align="center">*.wdl</td>
+</tr>
+<tr>
+<td align="center">wisp</td>
+<td align="center">wisp</td>
+<td align="center">*.wisp</td>
+</tr>
+<tr>
+<td align="center">xBase</td>
+<td align="center">xbase, advpl, clipper, foxpro</td>
+<td align="center">*.prg</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">LeDao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.zoutl.cn/273.html">https://blog.zoutl.cn/273.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.zoutl.cn" target="_blank">LeDao's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Markdown/">Markdown</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/274.html"><img class="prev-cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/274.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">使用Hystrix断路器</div></div></a></div><div class="next-post pull-right"><a href="/272.html"><img class="next-cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/272.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用Feign</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/402.html" title="Java将Markdown转化为HTML"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/402.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-18</div><div class="title">Java将Markdown转化为HTML</div></div></a></div><div><a href="/516.html" title="使用Markdown语法写邮件"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/516.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-25</div><div class="title">使用Markdown语法写邮件</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LeDao</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/a6678696"><i></i><span>To My GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">接Java毕业设计和课设，便宜靠谱，需要的加Q：3519577180</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">我的常用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%80%E6%9C%89"><span class="toc-number">2.</span> <span class="toc-text">所有</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/469.html" title="项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/469.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed"/></a><div class="content"><a class="title" href="/469.html" title="项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed">项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed</a><time datetime="2026-05-29T11:12:53.867Z" title="发表于 2026-05-29 19:12:53">2026-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/445.html" title="在字段上使用@Autowired注解时提示：Field injection is not recommended"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/445.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在字段上使用@Autowired注解时提示：Field injection is not recommended"/></a><div class="content"><a class="title" href="/445.html" title="在字段上使用@Autowired注解时提示：Field injection is not recommended">在字段上使用@Autowired注解时提示：Field injection is not recommended</a><time datetime="2026-05-29T11:12:53.855Z" title="发表于 2026-05-29 19:12:53">2026-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://image.zoutl.cn/iTabImage/8.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Algolia</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/fancybox.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://image.zoutl.cn/hexo-blog/file/source/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://image.zoutl.cn/hexo-blog/file/source/algoliasearch-lite.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://image.zoutl.cn/hexo-blog/file/source/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e85b530ea329d17050fe',
+      clientSecret: '47090eb530100dd0d587d4e4a23de09b8c25d44d',
+      repo: 'a6678696.github.io',
+      owner: 'a6678696',
+      admin: ['a6678696'],
+      id: 'b263d7daf163d31e27984e1cfff7c7d4',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://image.zoutl.cn/hexo-blog/file/source/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script defer="defer" id="ribbon" src="https://image.zoutl.cn/hexo-blog/file/source/canvas-ribbon.min.js" size="222" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://image.zoutl.cn/hexo-blog/file/source/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

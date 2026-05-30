@@ -1,0 +1,765 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>MySQL数据处理函数 | LeDao's Blog</title><meta name="keywords" content="MySQL"><meta name="author" content="LeDao"><meta name="copyright" content="LeDao"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="文本处理函数常用函数   函数 说明    Left() 返回串左边的字符   Length() 返回串的长度   Locate() 找出串的一个子串   Lower() 将串转换为小写   LTrim() 去掉串左边的空格   Right() 返回串右边的字符   RTrim() 去掉串右边的空格   Soundex() 返回串的SOUNDEX值   SubString() 返回子串的字符">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL数据处理函数">
+<meta property="og:url" content="https://blog.zoutl.cn/364.html">
+<meta property="og:site_name" content="LeDao&#39;s Blog">
+<meta property="og:description" content="文本处理函数常用函数   函数 说明    Left() 返回串左边的字符   Length() 返回串的长度   Locate() 找出串的一个子串   Lower() 将串转换为小写   LTrim() 去掉串左边的空格   Right() 返回串右边的字符   RTrim() 去掉串右边的空格   Soundex() 返回串的SOUNDEX值   SubString() 返回子串的字符">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://image.zoutl.cn/hexo-blog/blogCoverImage/364.jpg">
+<meta property="article:published_time" content="2021-09-17T01:34:24.000Z">
+<meta property="article:modified_time" content="2026-05-29T11:12:53.817Z">
+<meta property="article:author" content="LeDao">
+<meta property="article:tag" content="MySQL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.zoutl.cn/hexo-blog/blogCoverImage/364.jpg"><link rel="shortcut icon" href="https://image.zoutl.cn/hexo-blog/images/logo.png"><link rel="canonical" href="https://blog.zoutl.cn/364"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="fp2ohQruhOqzbyAh"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://image.zoutl.cn/hexo-blog/file/source/fancybox.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?112c188c9864ee3c98ba7e2495734acf";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JZJWXGK1VV"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-JZJWXGK1VV');
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"0Z2QSKFGM6","apiKey":"079e96e1d3e15e7f2f512596bf590eac","indexName":"hexo_blog","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.js',
+      css: 'https://image.zoutl.cn/hexo-blog/file/source/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'MySQL数据处理函数',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-05-29 19:12:53'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/font_3265865_vc1sierqa1.css"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LeDao's Blog" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://image.zoutl.cn/iTabImage/8.jpeg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LeDao's Blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">MySQL数据处理函数</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon far fa-calendar-alt"></i><span class="post-meta-label">发表于</span><time datetime="2021-09-17T01:34:24.000Z" title="发表于 2021-09-17 09:34:24">2021-09-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>9分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="MySQL数据处理函数"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/364.html#post-comment"><span class="gitalk-comment-count"></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="文本处理函数"><a href="#文本处理函数" class="headerlink" title="文本处理函数"></a>文本处理函数</h3><h4 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h4><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Left()</td>
+<td align="center">返回串左边的字符</td>
+</tr>
+<tr>
+<td align="center">Length()</td>
+<td align="center">返回串的长度</td>
+</tr>
+<tr>
+<td align="center">Locate()</td>
+<td align="center">找出串的一个子串</td>
+</tr>
+<tr>
+<td align="center">Lower()</td>
+<td align="center">将串转换为小写</td>
+</tr>
+<tr>
+<td align="center">LTrim()</td>
+<td align="center">去掉串左边的空格</td>
+</tr>
+<tr>
+<td align="center">Right()</td>
+<td align="center">返回串右边的字符</td>
+</tr>
+<tr>
+<td align="center">RTrim()</td>
+<td align="center">去掉串右边的空格</td>
+</tr>
+<tr>
+<td align="center">Soundex()</td>
+<td align="center">返回串的SOUNDEX值</td>
+</tr>
+<tr>
+<td align="center">SubString()</td>
+<td align="center">返回子串的字符</td>
+</tr>
+<tr>
+<td align="center">Upper()</td>
+<td align="center">将串转换为大写</td>
+</tr>
+</tbody></table>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><h5 id="Left"><a href="#Left" class="headerlink" title="Left()"></a>Left()</h5><p>从左边开始，截取前两位字符</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">LEFT</span>(&quot;123456&quot;,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Right"><a href="#Right" class="headerlink" title="Right()"></a>Right()</h5><p>从右边开始，截取后两位字符</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">RIGHT</span>(&quot;123456&quot;,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Length"><a href="#Length" class="headerlink" title="Length()"></a>Length()</h5><p>返回字符串”1234”的长度，长度为4</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> LENGTH(&quot;1234&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Locate"><a href="#Locate" class="headerlink" title="Locate()"></a>Locate()</h5><p>查看子串”12”在字符串”33312345612”中第一次出现的位置，结果为4</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> LOCATE(&quot;12&quot;,&quot;33312345612&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>从第6位开始查找，查看子串”12”在字符串”33312345612”中第一次出现的位置，结果为10</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> LOCATE(&quot;12&quot;,&quot;33312345612&quot;,<span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Lower"><a href="#Lower" class="headerlink" title="Lower()"></a>Lower()</h5><p>将字符串的所有大写字母转化为小写</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">LOWER</span>(&quot;aBcDe&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Upper"><a href="#Upper" class="headerlink" title="Upper()"></a>Upper()</h5><p>将字符串的所有小写字母转化为大写</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">UPPER</span>(&quot;aBcDe&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="LTrim"><a href="#LTrim" class="headerlink" title="LTrim()"></a>LTrim()</h5><p>去掉字符串左边的空格</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> LTRIM(&quot;   abc   &quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="RTrim"><a href="#RTrim" class="headerlink" title="RTrim()"></a>RTrim()</h5><p>去掉字符串右边的空格</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> RTRIM(&quot;   abc   &quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Trim"><a href="#Trim" class="headerlink" title="Trim()"></a>Trim()</h5><p>去掉字符串前后的空格</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">TRIM</span>(&quot;  abcd  &quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Soundex"><a href="#Soundex" class="headerlink" title="Soundex()"></a>Soundex()</h5><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/2021-09-17%20101813.jpg"></p>
+<h5 id="SubString"><a href="#SubString" class="headerlink" title="SubString()"></a>SubString()</h5><p>截取从第三位开始的及后面的字符串,下面两个sql语句的结果是一样的</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUBSTRING</span>(&quot;123456&quot;,<span class="number">3</span>);</span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUBSTRING</span>(&quot;123456&quot; <span class="keyword">FROM</span> <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<p>截取从第二位开始的及后面的字符串，且截取的字符串长度为2</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUBSTRING</span>(&quot;123456&quot;,<span class="number">2</span>,<span class="number">2</span>);</span><br><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SUBSTRING</span>(&quot;123456&quot; <span class="keyword">FROM</span> <span class="number">2</span> <span class="keyword">FOR</span> <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="日期和时间处理函数"><a href="#日期和时间处理函数" class="headerlink" title="日期和时间处理函数"></a>日期和时间处理函数</h3><h4 id="常用函数-1"><a href="#常用函数-1" class="headerlink" title="常用函数"></a>常用函数</h4><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">AddDate()</td>
+<td align="center">增加一个日期（天、周等）</td>
+</tr>
+<tr>
+<td align="center">AddTime()</td>
+<td align="center">增加一个时间（时、分等）</td>
+</tr>
+<tr>
+<td align="center">CurDate()</td>
+<td align="center">返回当前日期</td>
+</tr>
+<tr>
+<td align="center">CurTime()</td>
+<td align="center">返回当前时间</td>
+</tr>
+<tr>
+<td align="center">Date()</td>
+<td align="center">返回日期时间的日期部分</td>
+</tr>
+<tr>
+<td align="center">DateDiff()</td>
+<td align="center">计算两个日期之差</td>
+</tr>
+<tr>
+<td align="center">Date_Add()</td>
+<td align="center">高度灵活的日期运算函数</td>
+</tr>
+<tr>
+<td align="center">Date_Format()</td>
+<td align="center">返回一个格式化的日期或时间串</td>
+</tr>
+<tr>
+<td align="center">Day()</td>
+<td align="center">返回一个日期的天数部分</td>
+</tr>
+<tr>
+<td align="center">DayOfWeek()</td>
+<td align="center">对于一个日期，返回对应的星期几</td>
+</tr>
+<tr>
+<td align="center">Hour()</td>
+<td align="center">返回一个时间的小时部分</td>
+</tr>
+<tr>
+<td align="center">Minute()</td>
+<td align="center">返回一个时间的分钟部分</td>
+</tr>
+<tr>
+<td align="center">Month()</td>
+<td align="center">返回一个日期的月份部分</td>
+</tr>
+<tr>
+<td align="center">Now()</td>
+<td align="center">返回当前日期和时间</td>
+</tr>
+<tr>
+<td align="center">Second()</td>
+<td align="center">返回一个时间的秒部分</td>
+</tr>
+<tr>
+<td align="center">Time()</td>
+<td align="center">返回一个日期时间的时间部分</td>
+</tr>
+<tr>
+<td align="center">Year()</td>
+<td align="center">返回一个日期的年份部分</td>
+</tr>
+</tbody></table>
+<h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><h5 id="AddDate"><a href="#AddDate" class="headerlink" title="AddDate()"></a>AddDate()</h5><p>给日期加两天</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ADDDATE(&quot;2021-09-17 10:34:11&quot;,<span class="number">2</span>); </span><br></pre></td></tr></table></figure>
+
+<p>给日期加一天或周或月或年</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#加一天</span><br><span class="line"><span class="keyword">SELECT</span> ADDDATE(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">DAY</span>);</span><br><span class="line">#加一周</span><br><span class="line"><span class="keyword">SELECT</span> ADDDATE(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> WEEK);</span><br><span class="line">#加一月</span><br><span class="line"><span class="keyword">SELECT</span> ADDDATE(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">MONTH</span>);</span><br><span class="line">#加一年</span><br><span class="line"><span class="keyword">SELECT</span> ADDDATE(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">YEAR</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="AddTime"><a href="#AddTime" class="headerlink" title="AddTime()"></a>AddTime()</h5><p>给日期加1天1小时1分1秒</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ADDTIME(&quot;2021-09-17 10:34:11&quot;,&quot;1 1:1:1&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="CurDate"><a href="#CurDate" class="headerlink" title="CurDate()"></a>CurDate()</h5><p>返回当前日期</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> CURDATE();</span><br></pre></td></tr></table></figure>
+
+<h5 id="CurTime"><a href="#CurTime" class="headerlink" title="CurTime()"></a>CurTime()</h5><p>返回当前时间</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> CURTIME();</span><br></pre></td></tr></table></figure>
+
+<h5 id="Date"><a href="#Date" class="headerlink" title="Date()"></a>Date()</h5><p>返回日期时间的日期部分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="type">DATE</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="DateDiff"><a href="#DateDiff" class="headerlink" title="DateDiff()"></a>DateDiff()</h5><p>返回两个日期之差（结果为天数），前面的日期减去后面的</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DATEDIFF(&quot;2022-09-19 11:34:11&quot;,&quot;2021-09-18 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Date-Add"><a href="#Date-Add" class="headerlink" title="Date_Add()"></a>Date_Add()</h5><p>高度灵活的日期运算函数，给一个时间添加秒、分、小时、天、月、年</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#加<span class="number">1</span>天</span><br><span class="line"><span class="keyword">SELECT</span> DATE_ADD(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">DAY</span>);</span><br><span class="line">#加<span class="number">1</span>周</span><br><span class="line"><span class="keyword">SELECT</span> DATE_ADD(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> WEEK);</span><br><span class="line">#加<span class="number">1</span>月</span><br><span class="line"><span class="keyword">SELECT</span> DATE_ADD(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">MONTH</span>);</span><br><span class="line">#加<span class="number">1</span>年</span><br><span class="line"><span class="keyword">SELECT</span> DATE_ADD(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">YEAR</span>);</span><br><span class="line">#加<span class="number">1</span>秒</span><br><span class="line"><span class="keyword">SELECT</span> DATE_ADD(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">SECOND</span>);</span><br><span class="line">#加<span class="number">1</span>分</span><br><span class="line"><span class="keyword">SELECT</span> DATE_ADD(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">MINUTE</span>);</span><br><span class="line">#加<span class="number">1</span>小时</span><br><span class="line"><span class="keyword">SELECT</span> DATE_ADD(&quot;2021-09-17 10:34:11&quot;,<span class="type">INTERVAL</span> <span class="number">1</span> <span class="keyword">HOUR</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Date-Format"><a href="#Date-Format" class="headerlink" title="Date_Format()"></a>Date_Format()</h5><p>格式化时间，第一个参数为要格式化的时间，第二个参数为格式</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DATE_FORMAT(&quot;2021-09-17 10:34:11&quot;,&quot;%Y年%m月%d日 %H时%i分%s秒&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>以下是可用于构建日期格式字符串的说明符及其含义</p>
+<table>
+<thead>
+<tr>
+<th align="center"><strong>限定符</strong></th>
+<th align="center"><strong>含义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>%a</code></td>
+<td align="center">三个字符缩写的工作日名称，例如:<em>Mon</em>, <em>Tue</em>, <em>Wed</em>,等</td>
+</tr>
+<tr>
+<td align="center"><code>%b</code></td>
+<td align="center">三个字符缩写的月份名称，例如：<em>Jan</em>，<em>Feb</em>，<em>Mar</em>等</td>
+</tr>
+<tr>
+<td align="center"><code>%c</code></td>
+<td align="center">以数字表示的月份值，例如：1, 2, 3…12</td>
+</tr>
+<tr>
+<td align="center"><code>%D</code></td>
+<td align="center">英文后缀如：<em>0th</em>, <em>1st</em>, <em>2nd</em>等的一个月之中的第几天</td>
+</tr>
+<tr>
+<td align="center"><code>%d</code></td>
+<td align="center">如果是<code>1</code>个数字(小于<code>10</code>)，那么一个月之中的第几天表示为加前导加<code>0</code>， 如：00, 01,02, …31</td>
+</tr>
+<tr>
+<td align="center"><code>%e</code></td>
+<td align="center">没有前导零的月份的日子，例如：1,2，… 31</td>
+</tr>
+<tr>
+<td align="center"><code>%f</code></td>
+<td align="center">微秒，范围在<code>000000..999999</code></td>
+</tr>
+<tr>
+<td align="center"><code>%H</code></td>
+<td align="center">24小时格式的小时，前导加<code>0</code>，例如：00,01..23</td>
+</tr>
+<tr>
+<td align="center"><code>%h</code></td>
+<td align="center">小时，12小时格式，带前导零，例如：01，02 … 12</td>
+</tr>
+<tr>
+<td align="center"><code>%I</code></td>
+<td align="center">与<code>%h</code>相同</td>
+</tr>
+<tr>
+<td align="center"><code>%i</code></td>
+<td align="center">分数为零，例如：00,01，… 59</td>
+</tr>
+<tr>
+<td align="center"><code>%j</code></td>
+<td align="center">一年中的的第几天，前导为<code>0</code>，例如，001,002，… 366</td>
+</tr>
+<tr>
+<td align="center"><code>%k</code></td>
+<td align="center">24小时格式的小时，无前导零，例如：0,1,2 … 23</td>
+</tr>
+<tr>
+<td align="center"><code>%l</code></td>
+<td align="center">12小时格式的小时，无前导零，例如：0,1,2 … 12</td>
+</tr>
+<tr>
+<td align="center"><code>%M</code></td>
+<td align="center">月份全名称，例如：January, February,…December</td>
+</tr>
+<tr>
+<td align="center"><code>%m</code></td>
+<td align="center">具有前导零的月份名称，例如：00,01,02，… 12</td>
+</tr>
+<tr>
+<td align="center"><code>%p</code></td>
+<td align="center"><code>AM</code>或<code>PM</code>，取决于其他时间说明符</td>
+</tr>
+<tr>
+<td align="center"><code>%r</code></td>
+<td align="center">表示时间，<code>12</code>小时格式<code>hh:mm:ss AM</code>或<code>PM</code></td>
+</tr>
+<tr>
+<td align="center"><code>%S</code></td>
+<td align="center">表示秒，前导零，如：00,01，… 59</td>
+</tr>
+<tr>
+<td align="center"><code>%s</code></td>
+<td align="center">与<code>%S</code>相同</td>
+</tr>
+<tr>
+<td align="center"><code>%T</code></td>
+<td align="center">表示时间，24小时格式<code>hh:mm:ss</code></td>
+</tr>
+<tr>
+<td align="center"><code>%U</code></td>
+<td align="center">周的第一天是星期日，例如：00,01,02 … 53时，前导零的周数</td>
+</tr>
+<tr>
+<td align="center"><code>%u</code></td>
+<td align="center">周的第一天是星期一，例如：00,01,02 … 53时，前导零的周数</td>
+</tr>
+<tr>
+<td align="center"><code>%V</code></td>
+<td align="center">与<code>%U</code>相同，它与<code>%X</code>一起使用</td>
+</tr>
+<tr>
+<td align="center"><code>%v</code></td>
+<td align="center">与<code>%u</code>相同，它与<code>%x</code>一起使用</td>
+</tr>
+<tr>
+<td align="center"><code>%W</code></td>
+<td align="center">工作日的全称，例如：Sunday, Monday,…, Saturday</td>
+</tr>
+<tr>
+<td align="center"><code>%w</code></td>
+<td align="center">工作日，以数字来表示(0 = 星期日，1 = 星期一等)</td>
+</tr>
+<tr>
+<td align="center"><code>%X</code></td>
+<td align="center">周的四位数表示年份,第一天是星期日; 经常与<code>%V</code>一起使用</td>
+</tr>
+<tr>
+<td align="center"><code>%x</code></td>
+<td align="center">周的四位数表示年份,第一天是星期日; 经常与<code>%v</code>一起使用</td>
+</tr>
+<tr>
+<td align="center"><code>%Y</code></td>
+<td align="center">表示年份，四位数，例如2000，2001，…等。</td>
+</tr>
+<tr>
+<td align="center"><code>%y</code></td>
+<td align="center">表示年份，两位数，例如00，01，…等。</td>
+</tr>
+<tr>
+<td align="center"><code>%%</code></td>
+<td align="center">将百分比(<code>%</code>)字符添加到输出</td>
+</tr>
+</tbody></table>
+<p>以下是一些常用的日期格式字符串</p>
+<table>
+<thead>
+<tr>
+<th align="center">DATE_FORMAT字符串</th>
+<th align="center">格式化日期</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>%Y-%m-%d</code></td>
+<td align="center">2017/4/30</td>
+</tr>
+<tr>
+<td align="center"><code>%e/%c/%Y</code></td>
+<td align="center">4/7/2013</td>
+</tr>
+<tr>
+<td align="center"><code>%c/%e/%Y</code></td>
+<td align="center">7/4/2013</td>
+</tr>
+<tr>
+<td align="center"><code>%d/%m/%Y</code></td>
+<td align="center">4/7/2013</td>
+</tr>
+<tr>
+<td align="center"><code>%m/%d/%Y</code></td>
+<td align="center">7/4/2013</td>
+</tr>
+<tr>
+<td align="center"><code>%e/%c/%Y %H:%i</code></td>
+<td align="center">4/7/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%c/%e/%Y %H:%i</code></td>
+<td align="center">7/4/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%d/%m/%Y %H:%i</code></td>
+<td align="center">4/7/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%m/%d/%Y %H:%i</code></td>
+<td align="center">7/4/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%e/%c/%Y %T</code></td>
+<td align="center">4/7/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%c/%e/%Y %T</code></td>
+<td align="center">7/4/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%d/%m/%Y %T</code></td>
+<td align="center">4/7/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%m/%d/%Y %T</code></td>
+<td align="center">7/4/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%a %D %b %Y</code></td>
+<td align="center">Thu 4th Jul 2013</td>
+</tr>
+<tr>
+<td align="center"><code>%a %D %b %Y %H:%i</code></td>
+<td align="center">Thu 4th Jul 2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%a %D %b %Y %T</code></td>
+<td align="center">Thu 4th Jul 2013 11:20:05</td>
+</tr>
+<tr>
+<td align="center"><code>%a %b %e %Y</code></td>
+<td align="center">Thu Jul 4 2013</td>
+</tr>
+<tr>
+<td align="center"><code>%a %b %e %Y %H:%i</code></td>
+<td align="center">Thu Jul 4 2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%a %b %e %Y %T</code></td>
+<td align="center">Thu Jul 4 2013 11:20:05</td>
+</tr>
+<tr>
+<td align="center"><code>%W %D %M %Y</code></td>
+<td align="center">Thursday 4th July 2013</td>
+</tr>
+<tr>
+<td align="center"><code>%W %D %M %Y %H:%i</code></td>
+<td align="center">Thursday 4th July 2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%W %D %M %Y %T</code></td>
+<td align="center">Thursday 4th July 2013 11:20:05</td>
+</tr>
+<tr>
+<td align="center"><code>%l:%i %p %b %e, %Y</code></td>
+<td align="center">7/4/2013 11:20</td>
+</tr>
+<tr>
+<td align="center"><code>%M %e, %Y</code></td>
+<td align="center">4-Jul-13</td>
+</tr>
+<tr>
+<td align="center"><code>%a, %d %b %Y %T</code></td>
+<td align="center">Thu, 04 Jul 2013 11:20:05</td>
+</tr>
+</tbody></table>
+<h5 id="Day"><a href="#Day" class="headerlink" title="Day()"></a>Day()</h5><p>返回一个日期的天数部分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DAY</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="DayOfWeek"><a href="#DayOfWeek" class="headerlink" title="DayOfWeek()"></a>DayOfWeek()</h5><p>对于一个日期，返回对应的星期几，<font color="#dd0000">从1到7，表示星期日到星期六</font></p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> DAYOFWEEK(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Hour"><a href="#Hour" class="headerlink" title="Hour()"></a>Hour()</h5><p>返回一个时间的小时部分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">HOUR</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Minute"><a href="#Minute" class="headerlink" title="Minute()"></a>Minute()</h5><p>返回一个时间的分钟部分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MINUTE</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Month"><a href="#Month" class="headerlink" title="Month()"></a>Month()</h5><p>返回一个日期的月份部分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MONTH</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Now"><a href="#Now" class="headerlink" title="Now()"></a>Now()</h5><p>返回当前日期和时间</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> NOW();</span><br></pre></td></tr></table></figure>
+
+<h5 id="Second"><a href="#Second" class="headerlink" title="Second()"></a>Second()</h5><p>返回一个时间的秒部分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">SECOND</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Time"><a href="#Time" class="headerlink" title="Time()"></a>Time()</h5><p>返回一个日期时间的时间部分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="type">TIME</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Year"><a href="#Year" class="headerlink" title="Year()"></a>Year()</h5><p>返回一个日期的年份部分</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">YEAR</span>(&quot;2021-09-17 10:34:11&quot;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="数值处理函数"><a href="#数值处理函数" class="headerlink" title="数值处理函数"></a>数值处理函数</h3><h4 id="常用函数-2"><a href="#常用函数-2" class="headerlink" title="常用函数"></a>常用函数</h4><table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Abs()</td>
+<td align="center">返回一个数的绝对值</td>
+</tr>
+<tr>
+<td align="center">Cos()</td>
+<td align="center">返回一个角度的余弦</td>
+</tr>
+<tr>
+<td align="center">Exp()</td>
+<td align="center">返回一个数的指数值</td>
+</tr>
+<tr>
+<td align="center">Mod()</td>
+<td align="center">返回除操作的余数</td>
+</tr>
+<tr>
+<td align="center">Pi()</td>
+<td align="center">返回圆周率</td>
+</tr>
+<tr>
+<td align="center">Rand()</td>
+<td align="center">返回一个随机数</td>
+</tr>
+<tr>
+<td align="center">Sin()</td>
+<td align="center">返回一个角度的正弦</td>
+</tr>
+<tr>
+<td align="center">Sqrt()</td>
+<td align="center">返回一个数的平方根</td>
+</tr>
+<tr>
+<td align="center">Tan()</td>
+<td align="center">返回一个角度的正切</td>
+</tr>
+</tbody></table>
+<h4 id="实例-2"><a href="#实例-2" class="headerlink" title="实例"></a>实例</h4><h5 id="Abs"><a href="#Abs" class="headerlink" title="Abs()"></a>Abs()</h5><p>返回一个数的绝对值</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">ABS</span>(<span class="number">-1</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Cos"><a href="#Cos" class="headerlink" title="Cos()"></a>Cos()</h5><p>返回一个角度的余弦</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">COS</span>(<span class="number">45</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Exp"><a href="#Exp" class="headerlink" title="Exp()"></a>Exp()</h5><p>返回一个数的指数值，即：e的多少次方，e约等于2.718281828</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">EXP</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Mod"><a href="#Mod" class="headerlink" title="Mod()"></a>Mod()</h5><p>返回除操作的余数，前面参数除以后面的参数</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">MOD</span>(<span class="number">10</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Pi"><a href="#Pi" class="headerlink" title="Pi()"></a>Pi()</h5><p>返回圆周率</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> PI();</span><br></pre></td></tr></table></figure>
+
+<h5 id="Rand"><a href="#Rand" class="headerlink" title="Rand()"></a>Rand()</h5><p>返回一个随机数，产生一个在 0 和 1 之间的随机数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SELECT RAND();</span><br></pre></td></tr></table></figure>
+
+<h5 id="Sin"><a href="#Sin" class="headerlink" title="Sin()"></a>Sin()</h5><p>返回一个角度的正弦</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SIN</span>(<span class="number">30</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Sqrt"><a href="#Sqrt" class="headerlink" title="Sqrt()"></a>Sqrt()</h5><p>返回一个数的平方根</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">SQRT</span>(<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="Tan"><a href="#Tan" class="headerlink" title="Tan()"></a>Tan()</h5><p>返回一个角度的正切</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="built_in">TAN</span>(<span class="number">45</span>);</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined" rel="external nofollow noreferrer">LeDao</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.zoutl.cn/364.html">https://blog.zoutl.cn/364.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noreferrer" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.zoutl.cn" target="_blank">LeDao's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/MySQL/">MySQL</a></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/365.html"><img class="prev-cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/365.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">MySQL汇总数据</div></div></a></div><div class="next-post pull-right"><a href="/363.html"><img class="next-cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/363.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Spring Boot整合Shiro实现认证和授权</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/102.html" title="MySQL数据库中text字段长度不够"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/102.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-12</div><div class="title">MySQL数据库中text字段长度不够</div></div></a></div><div><a href="/114.html" title="Java备份MySQL数据库"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/114.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-24</div><div class="title">Java备份MySQL数据库</div></div></a></div><div><a href="/112.html" title="mysqldump命令备份数据库"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/112.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-24</div><div class="title">mysqldump命令备份数据库</div></div></a></div><div><a href="/113.html" title="Windows10脚本代码备份MySQL数据库"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/113.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-24</div><div class="title">Windows10脚本代码备份MySQL数据库</div></div></a></div><div><a href="/116.html" title="定时自动备份MySQL数据库"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/116.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-24</div><div class="title">定时自动备份MySQL数据库</div></div></a></div><div><a href="/111.html" title="SQLyog备份和导入MySQL数据库"><img class="cover" src="https://image.zoutl.cn/hexo-blog/blogCoverImage/111.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-23</div><div class="title">SQLyog备份和导入MySQL数据库</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://image.zoutl.cn/hexo-blog/images/logo.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">LeDao</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">590</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">99</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/a6678696"><i></i><span>To My GitHub</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Github"><i class="iconfont icon-github"></i></a><a class="social-icon" href="https://gitee.com/a6678696" rel="external nofollow noreferrer" target="_blank" title="Gitee"><i class="iconfont icon-gitee"></i></a><a class="social-icon" href="mailto:ledao.zou@qq.com" rel="external nofollow noreferrer" target="_blank" title="Email"><i class="iconfont icon-fasongyoujian"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-bokeyuan"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">接Java毕业设计和课设，便宜靠谱，需要的加Q：3519577180</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E6%9C%AC%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">文本处理函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.</span> <span class="toc-text">常用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.2.</span> <span class="toc-text">实例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Left"><span class="toc-number">1.2.1.</span> <span class="toc-text">Left()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Right"><span class="toc-number">1.2.2.</span> <span class="toc-text">Right()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Length"><span class="toc-number">1.2.3.</span> <span class="toc-text">Length()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Locate"><span class="toc-number">1.2.4.</span> <span class="toc-text">Locate()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Lower"><span class="toc-number">1.2.5.</span> <span class="toc-text">Lower()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Upper"><span class="toc-number">1.2.6.</span> <span class="toc-text">Upper()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#LTrim"><span class="toc-number">1.2.7.</span> <span class="toc-text">LTrim()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#RTrim"><span class="toc-number">1.2.8.</span> <span class="toc-text">RTrim()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Trim"><span class="toc-number">1.2.9.</span> <span class="toc-text">Trim()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Soundex"><span class="toc-number">1.2.10.</span> <span class="toc-text">Soundex()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#SubString"><span class="toc-number">1.2.11.</span> <span class="toc-text">SubString()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text">日期和时间处理函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0-1"><span class="toc-number">2.1.</span> <span class="toc-text">常用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B-1"><span class="toc-number">2.2.</span> <span class="toc-text">实例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#AddDate"><span class="toc-number">2.2.1.</span> <span class="toc-text">AddDate()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#AddTime"><span class="toc-number">2.2.2.</span> <span class="toc-text">AddTime()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CurDate"><span class="toc-number">2.2.3.</span> <span class="toc-text">CurDate()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#CurTime"><span class="toc-number">2.2.4.</span> <span class="toc-text">CurTime()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Date"><span class="toc-number">2.2.5.</span> <span class="toc-text">Date()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DateDiff"><span class="toc-number">2.2.6.</span> <span class="toc-text">DateDiff()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Date-Add"><span class="toc-number">2.2.7.</span> <span class="toc-text">Date_Add()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Date-Format"><span class="toc-number">2.2.8.</span> <span class="toc-text">Date_Format()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Day"><span class="toc-number">2.2.9.</span> <span class="toc-text">Day()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#DayOfWeek"><span class="toc-number">2.2.10.</span> <span class="toc-text">DayOfWeek()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Hour"><span class="toc-number">2.2.11.</span> <span class="toc-text">Hour()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Minute"><span class="toc-number">2.2.12.</span> <span class="toc-text">Minute()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Month"><span class="toc-number">2.2.13.</span> <span class="toc-text">Month()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Now"><span class="toc-number">2.2.14.</span> <span class="toc-text">Now()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Second"><span class="toc-number">2.2.15.</span> <span class="toc-text">Second()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Time"><span class="toc-number">2.2.16.</span> <span class="toc-text">Time()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Year"><span class="toc-number">2.2.17.</span> <span class="toc-text">Year()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%80%BC%E5%A4%84%E7%90%86%E5%87%BD%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text">数值处理函数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0-2"><span class="toc-number">3.1.</span> <span class="toc-text">常用函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E4%BE%8B-2"><span class="toc-number">3.2.</span> <span class="toc-text">实例</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Abs"><span class="toc-number">3.2.1.</span> <span class="toc-text">Abs()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Cos"><span class="toc-number">3.2.2.</span> <span class="toc-text">Cos()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Exp"><span class="toc-number">3.2.3.</span> <span class="toc-text">Exp()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Mod"><span class="toc-number">3.2.4.</span> <span class="toc-text">Mod()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Pi"><span class="toc-number">3.2.5.</span> <span class="toc-text">Pi()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Rand"><span class="toc-number">3.2.6.</span> <span class="toc-text">Rand()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Sin"><span class="toc-number">3.2.7.</span> <span class="toc-text">Sin()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Sqrt"><span class="toc-number">3.2.8.</span> <span class="toc-text">Sqrt()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Tan"><span class="toc-number">3.2.9.</span> <span class="toc-text">Tan()</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/469.html" title="项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/469.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed"/></a><div class="content"><a class="title" href="/469.html" title="项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed">项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed</a><time datetime="2026-05-29T11:12:53.867Z" title="发表于 2026-05-29 19:12:53">2026-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/445.html" title="在字段上使用@Autowired注解时提示：Field injection is not recommended"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/445.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="在字段上使用@Autowired注解时提示：Field injection is not recommended"/></a><div class="content"><a class="title" href="/445.html" title="在字段上使用@Autowired注解时提示：Field injection is not recommended">在字段上使用@Autowired注解时提示：Field injection is not recommended</a><time datetime="2026-05-29T11:12:53.855Z" title="发表于 2026-05-29 19:12:53">2026-05-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/593.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Java项目部署后代码中字体设置显示中文乱码"/></a><div class="content"><a class="title" href="/593.html" title="Java项目部署后代码中字体设置显示中文乱码">Java项目部署后代码中字体设置显示中文乱码</a><time datetime="2025-04-24T01:49:35.000Z" title="发表于 2025-04-24 09:49:35">2025-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/592.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource"/></a><div class="content"><a class="title" href="/592.html" title="前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource">前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</a><time datetime="2024-11-13T21:01:26.000Z" title="发表于 2024-11-14 05:01:26">2024-11-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数"><img src="https://image.zoutl.cn/hexo-blog/blogCoverImage/591.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="部落冲突阵型小程序通过赞助获取复制次数"/></a><div class="content"><a class="title" href="/591.html" title="部落冲突阵型小程序通过赞助获取复制次数">部落冲突阵型小程序通过赞助获取复制次数</a><time datetime="2024-11-10T00:15:53.000Z" title="发表于 2024-11-10 08:15:53">2024-11-10</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://image.zoutl.cn/iTabImage/8.jpeg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><span>本网站由</span><a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://image.zoutl.cn/hexo-blog/images/%E5%8F%88%E6%8B%8D%E4%BA%91_logo2.png"></a><span>提供CDN加速/云存储服务</span><br/><a target="_blank" rel="noopener external nofollow noreferrer" href="https://beian.miit.gov.cn/">桂ICP备20005695号-1 </a><img src='https://image.zoutl.cn/hexo-blog/images/beian.png'><a target="_blank" rel="noopener external nofollow noreferrer" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45098102000418"> 桂公网安备45098102000418号</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Algolia</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/fancybox.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.autoSpacingPage()
+  else {
+    getScript('https://image.zoutl.cn/hexo-blog/file/source/pangu.min.js')
+      .then(() => {
+        pangu.autoSpacingPage()
+      })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="https://image.zoutl.cn/hexo-blog/file/source/algoliasearch-lite.umd.js"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function addGitalkSource () {
+  const ele = document.createElement('link')
+  ele.rel = 'stylesheet'
+  ele.href= 'https://image.zoutl.cn/hexo-blog/file/source/gitalk.min.css'
+  document.getElementsByTagName('head')[0].appendChild(ele)
+}
+
+function loadGitalk () {
+  function initGitalk () {
+    var gitalk = new Gitalk(Object.assign({
+      clientID: 'e85b530ea329d17050fe',
+      clientSecret: '47090eb530100dd0d587d4e4a23de09b8c25d44d',
+      repo: 'a6678696.github.io',
+      owner: 'a6678696',
+      admin: ['a6678696'],
+      id: '448cec83c256ea524238ef10501375bc',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  if (typeof Gitalk === 'function') initGitalk()
+  else {
+    addGitalkSource()
+    getScript('https://image.zoutl.cn/hexo-blog/file/source/gitalk.min.js').then(initGitalk)
+  }
+}
+
+function commentCount(n){
+  let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+  if (isCommentCount) {
+    isCommentCount.innerHTML= n
+  }
+}
+
+if ('Gitalk' === 'Gitalk' || !false) {
+  if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+  else loadGitalk()
+} else {
+  function loadOtherComment () {
+    loadGitalk()
+  }
+}</script></div><script defer="defer" id="ribbon" src="https://image.zoutl.cn/hexo-blog/file/source/canvas-ribbon.min.js" size="222" alpha="0.6" zIndex="-1" mobile="false" data-click="true"></script><script src="https://image.zoutl.cn/hexo-blog/file/source/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script id="click-heart" src="https://image.zoutl.cn/hexo-blog/file/source/click-heart.min.js" async="async" mobile="false"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

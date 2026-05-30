@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LeDao&#39;s Blog</title>
+  
+  
+  <link href="https://blog.zoutl.cn/atom.xml" rel="self"/>
+  
+  <link href="https://blog.zoutl.cn/"/>
+  <updated>2026-05-29T11:12:53.867Z</updated>
+  <id>https://blog.zoutl.cn/</id>
+  
+  <author>
+    <name>LeDao</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>项目启动时报错：ERROR org.springframework.boot.SpringApplication - Application run failed</title>
+    <link href="https://blog.zoutl.cn/469.html"/>
+    <id>https://blog.zoutl.cn/469.html</id>
+    <published>2026-05-29T11:12:53.867Z</published>
+    <updated>2026-05-29T11:12:53.867Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h3><p>我的报错截图如下，报错下方可以看到：<code>org.yaml.snakeyaml.error.YAMLException</code>，这说明是yml配置文件错误。出现该错误的原因是：yml配置文件使用了中文，且项目使用了GBK编码</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316093858491.png" alt="image-20220316093858491"></p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>修改项目的编码为UTF-8</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220316095206141.png" alt="image-20220316095206141"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题分析&quot;&gt;&lt;a href=&quot;#问题分析&quot; class=&quot;headerlink&quot; title=&quot;问题分析&quot;&gt;&lt;/a&gt;问题分析&lt;/h3&gt;&lt;p&gt;我的报错截图如下，报错下方可以看到：&lt;code&gt;org.yaml.snakeyaml.error.YAMLException</summary>
+      
+    
+    
+    
+    <category term="开发工具" scheme="https://blog.zoutl.cn/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="IntelliJ IDEA" scheme="https://blog.zoutl.cn/tags/IntelliJ-IDEA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在字段上使用@Autowired注解时提示：Field injection is not recommended</title>
+    <link href="https://blog.zoutl.cn/445.html"/>
+    <id>https://blog.zoutl.cn/445.html</id>
+    <published>2026-05-29T11:12:53.855Z</published>
+    <updated>2026-05-29T11:12:53.855Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>之所以会出现这个提示，是因为Spring 4.0开始就不推荐使用属性注入，改为推荐<code>Setter注入</code>和<code>构造器注入</code></p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>想不出现这个提示，解决办法有4个：</p><ol><li>Setter注入</li><li>构造器注入</li><li>直接使用JDK的注解<code>@Resource</code></li><li>如果还是想继续在字段上使用@Autowired注解，又不想出现这个提示，那就修改idea的配置让它不提示</li></ol><h4 id="Setter注入（推荐）"><a href="#Setter注入（推荐）" class="headerlink" title="Setter注入（推荐）"></a>Setter注入（推荐）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> UserDao userDao;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setUserDao</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.userDao = userDao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="构造器注入"><a href="#构造器注入" class="headerlink" title="构造器注入"></a>构造器注入</h4><p>在UserServiceImpl.java注入UserDao</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> UserDao userDao;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">UserServiceImpl</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">UserServiceImpl</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.userDao = userDao;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>配置类注册UserService的bean，使用构造器方式注入</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.config;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.dao.UserDao;</span><br><span class="line"><span class="keyword">import</span> com.ledao.dao.UserDaoImpl;</span><br><span class="line"><span class="keyword">import</span> com.ledao.entity.Student;</span><br><span class="line"><span class="keyword">import</span> com.ledao.service.UserService;</span><br><span class="line"><span class="keyword">import</span> com.ledao.service.impl.UserServiceImpl;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.*;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2022-02-15 20:39</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyConfig</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> UserDao <span class="title">userDao</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> UserDaoImpl();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> UserService <span class="title">userService</span><span class="params">(UserDao userDao)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> UserServiceImpl(userDao);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="使用-Resource（最简单）"><a href="#使用-Resource（最简单）" class="headerlink" title="使用@Resource（最简单）"></a>使用@Resource（最简单）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Resource</span></span><br><span class="line"><span class="keyword">private</span> UserDao userDao;</span><br></pre></td></tr></table></figure><h4 id="修改idea配置（不推荐）"><a href="#修改idea配置（不推荐）" class="headerlink" title="修改idea配置（不推荐）"></a>修改idea配置（不推荐）</h4><p>让鼠标停留在@Autowired注解上，使用快捷键<code>ALT+回车键</code>，选择下图的第二个选项，改了之后想改回来就有点麻烦了，所以不推荐使用</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20220217024409338.png" alt="image-20220217024409338"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;之所以会出现这个提示，是因为Spring 4.0开始就不推荐使用属性注入，改为推荐&lt;code&gt;Setter注入&lt;/code&gt;和&lt;code&gt;构</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+    <category term="Spring" scheme="https://blog.zoutl.cn/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java项目部署后代码中字体设置显示中文乱码</title>
+    <link href="https://blog.zoutl.cn/593.html"/>
+    <id>https://blog.zoutl.cn/593.html</id>
+    <published>2025-04-24T01:49:35.000Z</published>
+    <updated>2026-05-29T11:12:53.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>代码中使用到<code>java.awt.Font</code>这个类，在自己的电脑上没有问题，但是在Linux上部署后出现中文乱码</p><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>Linux系统没有安装对应的字体，要想解决这个问题有两个方法：①直接在Linux系统安装对应的字体②下载字体文件到Linux系统，在代码中加载</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="下载字体文件"><a href="#下载字体文件" class="headerlink" title="下载字体文件"></a>下载字体文件</h4><p>直接在自己的电脑搜索<code>simhei.ttf</code>，找到该文件并复制到指定的位置</p><h4 id="Java代码"><a href="#Java代码" class="headerlink" title="Java代码"></a>Java代码</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加载字体文件</span></span><br><span class="line">Font font = Font.createFont(Font.TRUETYPE_FONT, <span class="keyword">new</span> File(<span class="string">&quot;E://data/coc/simhei.ttf&quot;</span>))</span><br><span class="line">        .deriveFont(Font.BOLD, (<span class="keyword">int</span>)(width * <span class="number">0.05</span>));</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;代码中使用到&lt;code&gt;java.awt.Font&lt;/code&gt;这个类，在自己的电脑上没有问题，但是在Linux上部署后出现</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端报错：has been blocked by CORS policy No Access-Control-Allow-Origin header is present on the requested resource</title>
+    <link href="https://blog.zoutl.cn/592.html"/>
+    <id>https://blog.zoutl.cn/592.html</id>
+    <published>2024-11-13T21:01:26.000Z</published>
+    <updated>2026-05-29T11:12:53.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>项目上线后，发现如果上传的文件超过1M，就会报错：<code>has been blocked by CORS policy: No &#39;Access-Control-Allow-Origin&#39; header is present on the requested resource.</code></p><h3 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h3><p>使用浏览器的开发者工具查看了上传文件报错的那个请求，状态码为：<code>413 Request Entity Too Large</code></p><p>错误代码<code>413 Request Entity Too Large</code>表示客户端尝试发送的请求体超过了服务器能够或愿意处理的大小限制，这通常发生在以下几种情况下：</p><ol><li><strong>上传大文件</strong>：当您尝试上传的文件超过了服务器设置的最大文件大小限制时</li><li><strong>POST请求体过大</strong>：当您通过POST请求发送大量数据时，如果数据超过了服务器的限制，也会出现这个错误</li></ol><p>以下是一些解决这个问题的方法：</p><ol><li><p><strong>减小请求体大小</strong>：</p><p>如果是上传文件，尝试上传一个更小的文件</p><p>如果是发送数据，检查是否可以优化数据结构或分批发送数据</p></li><li><p><strong>修改服务器配置</strong>：</p><p>如果您有权访问服务器配置，可以增加允许的最大请求体大小</p></li></ol><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>上面的第一种办法不考虑，直接修改服务器的配置增加允许的最大请求体大小</p><p>我的项目是用Spring Boot开发的，所以要去配置文件那里设置一下可以上传的单个文件的最大值为5M（默认是1M），修改这些配置后，重新启动 Spring Boot 应用程序，新的文件大小限制就会生效</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">servlet:</span></span><br><span class="line">    <span class="attr">multipart:</span></span><br><span class="line">      <span class="attr">max-file-size:</span> <span class="string">10MB</span></span><br></pre></td></tr></table></figure><p>接着去修改Nginx的默认请求体大小配置，配置文件的路径为<code>/etc/nginx/nginx.conf</code>，在下图的位置加上下面代码，改完后根据继续下面的操作重新加载Nginx的配置即可</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 允许上传的最大文件大小为5M</span></span><br><span class="line"><span class="string">client_max_body_size</span> <span class="string">5m;</span></span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241114052240336.png" alt="image-20241114052240336"></p><p>先测试配置是否有语法错误，可以使用以下命令进行测试，如果输出显示 <code>syntax is ok</code> 和 <code>test is successful</code>，说明配置文件没有问题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure><p>测试通过后，可以通过以下命令让Nginx重新加载配置文件而不中断服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;项目上线后，发现如果上传的文件超过1M，就会报错：&lt;code&gt;has been blocked by CORS policy</summary>
+      
+    
+    
+    
+    <category term="运维" scheme="https://blog.zoutl.cn/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+    <category term="Nginx" scheme="https://blog.zoutl.cn/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>部落冲突阵型小程序通过赞助获取复制次数</title>
+    <link href="https://blog.zoutl.cn/591.html"/>
+    <id>https://blog.zoutl.cn/591.html</id>
+    <published>2024-11-10T00:15:53.000Z</published>
+    <updated>2026-05-29T11:12:53.927Z</updated>
+    
+    <content type="html"><![CDATA[<p><font color="#dd0000" size="4"><strong>付钱后一定要到你复制阵型的微信小程序里面留言，不然我无法找到你的账号给你加复制次数，详情看下面</strong></font></p><h3 id="赞助后你能得到什么"><a href="#赞助后你能得到什么" class="headerlink" title="赞助后你能得到什么"></a>赞助后你能得到什么</h3><p>如果你不希望在使用阵型小程序时看到任何广告，可以考虑通过<font color="#dd0000">赞助作者获得复制次数和免广告时间</font></p><p>所谓免广告就是小程序内页面的广告全部消失，但是你打开小程序时的封面广告是无法消除的（这是因为封面广告不属于小程序内的广告）</p><p><font color="#dd0000">赞助5元及以上，每1元钱可以获得30次的复制次数和60天的无广告时间，</font>例如：赞助5元你可以获得150次的复制次数和300天的无广告时间、赞助6元你可以获得180次的复制次数和360天的无广告时间、赞助7元你可以获得210次的复制次数和420天的无广告时间，以此类推……</p><p><font color="#dd0000">赞助5元以下，每1元钱可以获得25次的复制次数和50天的无广告时间，最低需要赞助3元，赞助3元以下你不会获得复制次数和免广告时间，</font>例如：赞助2元你不会获得复制次数和免广告时间、赞助3元你可以获得75次的复制次数和150天的无广告时间、赞助4元你可以获得100次的复制次数和200天的无广告时间</p><h3 id="赞助流程"><a href="#赞助流程" class="headerlink" title="赞助流程"></a>赞助流程</h3><h4 id="用支付宝付款"><a href="#用支付宝付款" class="headerlink" title="用支付宝付款"></a>用支付宝付款</h4><p>暂不支持微信支付，支付宝收款我可以直接通过支付宝联系你，微信支付的话如果有问题我是联系不上你的</p><p><font color="#dd0000"><strong>先在这里说明一下，你付款后不会马上获得复制次数，因为我是手动给你加复制次数的，我会在12个小时内给你加复制次数，谢谢大家的理解和支持</strong></font></p><p>截图下面二维码或者点击下面二维码长按保存到手机后，打开支付宝的扫一扫，点击右下角的《相册》选择二维码图片即可付款，<font color="#dd0000"><strong>付钱后一定要到你复制阵型的微信小程序里面留言，不然我无法找到你的账号给你加复制次数</strong></font></p><img src="https://image.zoutl.cn/hexo-blog/blogImage/zhifubao.jpg" alt="zhifubao" style="zoom:33%;" /><h4 id="到小程序留言你的真实姓名"><a href="#到小程序留言你的真实姓名" class="headerlink" title="到小程序留言你的真实姓名"></a>到小程序留言你的真实姓名</h4><p><font color="#dd0000"><strong>付款后，请到你复制阵型的微信小程序的《我的》页面的《不看广告获取次数》页面的最下面，点击留言按钮</strong></font>进入《留言》页面给我留言你的真实姓名（支付宝收款看到的是你的姓名），通过你的真实姓名我可以知道是不是你赞助的，<font color="#dd0000"><strong>请一定要在小程序内给我留言，不然我无法找到你的账号给你加复制次数</strong></font></p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/%E4%B8%8B%E8%BD%BD.jpg" alt="下载"></p><h4 id="看到你的留言就会给你加次数"><a href="#看到你的留言就会给你加次数" class="headerlink" title="看到你的留言就会给你加次数"></a>看到你的留言就会给你加次数</h4><p>你付款并在小程序内留言后，我会在12个小时内给你加复制次数，请耐心等待，没加次数之前请先看广告获取复制次数，谢谢大家的理解和支持</p><p><font color="#dd0000">如果12个小时后没加时间可以去加我的QQ</font>，我的Q号是<font color="#dd0000"><strong>3519577180</strong></font>，请不要赞助后就马上加我的QQ，因为我看到你付款和留言后就会马上给你加复制次数了，除非在忙没看手机，这个时候你加我的QQ也没什么用</p><h3 id="摆阵服务"><a href="#摆阵服务" class="headerlink" title="摆阵服务"></a>摆阵服务</h3><p><font color="#dd0000"><strong>现在不接摆阵，现在不接摆阵，现在不接摆阵，现在不接摆阵</strong></font></p><p>如果你想要某个阵型又不想自己摆的话，可以加我QQ，Q号为<font color="#dd0000"><strong>3519577180</strong></font>，每次收费6元</p><p>我只摆国服16本的阵型，不摆字阵，只摆用于防守的阵型，你发图片给我，然后我把阵型根据图片摆出来把链接发给你</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;font color=&quot;#dd0000&quot; size=&quot;4&quot;&gt;&lt;strong&gt;付钱后一定要到你复制阵型的微信小程序里面留言，不然我无法找到你的账号给你加复制次数，详情看下面&lt;/strong&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;h3 id=&quot;赞助后你能得到什么&quot;&gt;&lt;a href=&quot;#赞</summary>
+      
+    
+    
+    
+    <category term="其它" scheme="https://blog.zoutl.cn/categories/%E5%85%B6%E5%AE%83/"/>
+    
+    
+    <category term="部落冲突" scheme="https://blog.zoutl.cn/tags/%E9%83%A8%E8%90%BD%E5%86%B2%E7%AA%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nginx重新部署SSL证书</title>
+    <link href="https://blog.zoutl.cn/590.html"/>
+    <id>https://blog.zoutl.cn/590.html</id>
+    <published>2024-10-07T16:39:44.000Z</published>
+    <updated>2026-05-29T11:12:53.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>现在腾讯云免费的SSL证书有效期只有3个月，每三个月就要部署一次SSL证书，写本文是为了以后的方便</p><p>腾讯云可以申请50个免费证书，当证书到期后会自动释放额度，例如：如果你的证书全部到期，那么你还是可以申请50个免费证书</p><h3 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h3><h4 id="申请证书"><a href="#申请证书" class="headerlink" title="申请证书"></a>申请证书</h4><p>选择免费证书</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241008010632595.png" alt="image-20241008010632595"></p><p>验证方式选自动，并勾选自动删除验证，其它的根据自己的情况填即可</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241008010723313.png" alt="image-20241008010723313"></p><h4 id="下载证书"><a href="#下载证书" class="headerlink" title="下载证书"></a>下载证书</h4><p>下载Nginx格式的证书</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241008010203489.png" alt="image-20241008010203489"></p><h4 id="解压证书"><a href="#解压证书" class="headerlink" title="解压证书"></a>解压证书</h4><p>解压刚才下载的压缩文件，里面会有4个文件</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20241008011049109.png" alt="image-20241008011049109"></p><h4 id="替换云服务器中的文件"><a href="#替换云服务器中的文件" class="headerlink" title="替换云服务器中的文件"></a>替换云服务器中的文件</h4><p>Nginx的配置文件一般在<code>/etc/nginx/conf.d/</code>目录下，把旧的直接删除再在把新的复制进去即可，旧的文件和新的文件的文件名应该是一样的，不一样的话就去改配置</p><h4 id="重新加载Nginx的配置文件"><a href="#重新加载Nginx的配置文件" class="headerlink" title="重新加载Nginx的配置文件"></a>重新加载Nginx的配置文件</h4><p><font color="#dd0000">不重新加载的话，生效的还会是旧的文件，即使已经删除了旧的文件</font></p><p>先测试配置是否有语法错误，可以使用以下命令进行测试，如果输出显示 <code>syntax is ok</code> 和 <code>test is successful</code>，说明配置文件没有问题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t</span><br></pre></td></tr></table></figure><p>测试通过后，可以通过以下命令让Nginx重新加载配置文件而不中断服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure><p>使用下面命令查看Nginx是否正常运行，如果输出显示绿色字体的<code>active (running)</code>，说明没有问题</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status nginx</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;现在腾讯云免费的SSL证书有效期只有3个月，每三个月就要部署一次SSL证书，写本文是为了以后的方便&lt;/p&gt;
+&lt;p&gt;腾讯云可以</summary>
+      
+    
+    
+    
+    <category term="运维" scheme="https://blog.zoutl.cn/categories/%E8%BF%90%E7%BB%B4/"/>
+    
+    
+    <category term="SSL证书" scheme="https://blog.zoutl.cn/tags/SSL%E8%AF%81%E4%B9%A6/"/>
+    
+    <category term="Nginx" scheme="https://blog.zoutl.cn/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>VS Code在开发Vue.js时F12转到定义快捷键失效的解决办法</title>
+    <link href="https://blog.zoutl.cn/589.html"/>
+    <id>https://blog.zoutl.cn/589.html</id>
+    <published>2024-03-09T13:43:26.000Z</published>
+    <updated>2026-05-29T11:12:53.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>在使用VS Code开发时，如果想从HTML代码中快速跳转到对应的JavaScript方法，可以使用F12转到定义快捷键快速跳转，但是却失效了，大大降低了开发的效率</p><h3 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h3><p>在 Vue 项目中，使用 VS Code 进行代码开发时，有时按下快捷键 F12 无法跳转到函数的定义位置。这可能是因为你的引用路径中包含了 @ 符号，而 VS Code 默认的跳转定义功能在这种情况下失效了，并且在导入时也不会出现路径提示。</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在项目根目录下新建一个名为<code>jsconfig.json</code>的新文件，文件的内容如下所示，直接全部复制进去即可</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;compilerOptions&quot;</span>: &#123;</span><br><span class="line">        <span class="attr">&quot;module&quot;</span>: <span class="string">&quot;commonjs&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;target&quot;</span>: <span class="string">&quot;es6&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;baseUrl&quot;</span>: <span class="string">&quot;.&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;paths&quot;</span>: &#123; <span class="comment">// 支持Vue组件导入后，可以f12定位</span></span><br><span class="line">            <span class="attr">&quot;@&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;./src/&quot;</span></span><br><span class="line">            ],</span><br><span class="line">            <span class="attr">&quot;@/*&quot;</span>: [</span><br><span class="line">                <span class="string">&quot;./src/*&quot;</span></span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;exclude&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;node_modules&quot;</span>,</span><br><span class="line">        <span class="string">&quot;**/node_modules/*&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;include&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;./src/**/*&quot;</span></span><br><span class="line">    ] <span class="comment">// 用于智能导入</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20240309214943750.png" alt="image-20240309214943750"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;在使用VS Code开发时，如果想从HTML代码中快速跳转到对应的JavaScript方法，可以使用F12转到定义快捷键快速</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决Java代码中的魔法值</title>
+    <link href="https://blog.zoutl.cn/588.html"/>
+    <id>https://blog.zoutl.cn/588.html</id>
+    <published>2024-03-08T04:29:35.000Z</published>
+    <updated>2026-05-29T11:12:53.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="魔法值的定义"><a href="#魔法值的定义" class="headerlink" title="魔法值的定义"></a>魔法值的定义</h3><p>未经定义的常量叫做魔法值，通常是指在代码编写时莫名出现的数字，无法直接判断数值代表的含义，必须通过联系代码上下文分析才可以明白，严重降低了代码的可读性，例如在下图中的<code>3</code>和<code>2</code>都是魔法值</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20240308123316494.png" alt="image-20240308123316494"></p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>下面代码的用户身份有三种：1代表管理员、2代表房东、3代表租户，即在数据库中只存储1、2、3，不存储实际的含义，如果想知道从数据库查询到的用户身份就会出现魔法值了，例如想知道用户身份是不是管理员就需要判断<code>user.getType()==1</code>，1就是魔法值</p><p>要消除魔法值可以定义静态常量，也可以使用枚举类，建议使用枚举类更加方便管理</p><h4 id="定义静态常量"><a href="#定义静态常量" class="headerlink" title="定义静态常量"></a>定义静态常量</h4><ol><li><p>定义，如果想定义一次可以在多个类中使用，那么请将下面代码中的<code>private</code>关键词修改为<code>public</code>，其它类想使用下面的静态常量需要先<code>import</code>导入（根据IntelliJ IDEA的提示导入即可）</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 管理员</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> USER_TYPE_ADMINISTRATOR = <span class="number">1</span>;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 房东</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> USER_TYPE_LANDLORD = <span class="number">2</span>;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 租户</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> USER_TYPE_TENANT = <span class="number">3</span>;</span><br></pre></td></tr></table></figure></li><li><p>使用</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(USER_TYPE_ADMINISTRATOR);</span><br><span class="line">    System.out.println(USER_TYPE_LANDLORD);</span><br><span class="line">    System.out.println(USER_TYPE_TENANT);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>运行结果</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20240308125254226.png" alt="image-20240308125254226"></p></li></ol><h4 id="使用枚举类"><a href="#使用枚举类" class="headerlink" title="使用枚举类"></a>使用枚举类</h4><p>如果要在IntelliJ IDEA中创建一个文件夹存放枚举类，那么该文件夹名称不能是<code>enum</code>，否则无法在该文件夹内创建枚举类（普通类也不行），建议把文件夹的名称命名为<code>enums</code></p><ol><li><p>创建枚举类</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ltx.enums;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 用户类型</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@createDate</span> 2024-03-08 12:10</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">enum</span> <span class="title">UserType</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 管理员</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Administrator(<span class="number">1</span>, <span class="string">&quot;管理员&quot;</span>),</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 房东</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Landlord(<span class="number">2</span>, <span class="string">&quot;房东&quot;</span>),</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 租户</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    Tenant(<span class="number">3</span>, <span class="string">&quot;租户&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 状态码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> code;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 描述</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String description;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 构造方法</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> code</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> description</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    UserType(<span class="keyword">int</span> code, String description) &#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">        <span class="keyword">this</span>.description = description;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取状态码</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取描述</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getDescription</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> description;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>使用</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    UserType userType1 = UserType.Administrator;</span><br><span class="line">    System.out.println(userType1.getCode());</span><br><span class="line">    System.out.println(userType1.getDescription());</span><br><span class="line">    UserType userType2 = UserType.Landlord;</span><br><span class="line">    System.out.println(userType2.getCode());</span><br><span class="line">    System.out.println(userType2.getDescription());</span><br><span class="line">    UserType userType3 = UserType.Tenant;</span><br><span class="line">    System.out.println(userType3.getCode());</span><br><span class="line">    System.out.println(userType3.getDescription());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li><li><p>运行结果</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20240308125310395.png" alt="image-20240308125310395"></p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;魔法值的定义&quot;&gt;&lt;a href=&quot;#魔法值的定义&quot; class=&quot;headerlink&quot; title=&quot;魔法值的定义&quot;&gt;&lt;/a&gt;魔法值的定义&lt;/h3&gt;&lt;p&gt;未经定义的常量叫做魔法值，通常是指在代码编写时莫名出现的数字，无法直接判断数值代表的含义，必须通过联系代码上</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>报错Caused by: java.nio.charset.MalformedInputException: Input length = 1的解决办法</title>
+    <link href="https://blog.zoutl.cn/587.html"/>
+    <id>https://blog.zoutl.cn/587.html</id>
+    <published>2024-03-06T04:12:05.000Z</published>
+    <updated>2026-05-29T11:12:53.927Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>这个报错发生在从GitHub仓库clone代码在本地部署的时候，和配置文件<code>application.yml</code>有关</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><ol><li><p>修改IntelliJ IDEA的编码为UTF-8，下图的三个地方都改掉</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20240306121612530.png" alt="image-20240306121612530"></p></li><li><p>先复制配置文件application.yml的内容，再把它删除，最后新建配置文件application.yml，把之前复制的配置内容复制进去即可</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;描述&quot;&gt;&lt;a href=&quot;#描述&quot; class=&quot;headerlink&quot; title=&quot;描述&quot;&gt;&lt;/a&gt;描述&lt;/h3&gt;&lt;p&gt;这个报错发生在从GitHub仓库clone代码在本地部署的时候，和配置文件&lt;code&gt;application.yml&lt;/code&gt;有关&lt;/p</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+    <category term="报错信息" scheme="https://blog.zoutl.cn/tags/%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端的Date类型和Java的LocalDateTime类型互相转换</title>
+    <link href="https://blog.zoutl.cn/586.html"/>
+    <id>https://blog.zoutl.cn/586.html</id>
+    <published>2024-03-02T08:07:13.000Z</published>
+    <updated>2026-05-29T11:12:53.925Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>前端操作的时间类型一般为Date类型（不是Java的Date类型），而Java则为LocalDateTime类型</p><p>前端的时间传到后端保存到数据库需要先转换成LocalDateTime类型，后端的时间显示到前端则需要转换成前端的Date类型</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><h4 id="前端的Date类型转换成后端的LocalDateTime类型"><a href="#前端的Date类型转换成后端的LocalDateTime类型" class="headerlink" title="前端的Date类型转换成后端的LocalDateTime类型"></a>前端的Date类型转换成后端的LocalDateTime类型</h4><p>首先根据前端的Date类型获得对应的时间戳（单位为秒），后端将时间戳转换成LocalDateTime类型</p><h4 id="后端的LocalDateTime类型转换成前端的Date类型"><a href="#后端的LocalDateTime类型转换成前端的Date类型" class="headerlink" title="后端的LocalDateTime类型转换成前端的Date类型"></a>后端的LocalDateTime类型转换成前端的Date类型</h4><p>首先根据后端的LocalDateTime类型获得对应的时间戳（单位为秒），前端再将前面的秒时间戳转换成毫秒时间戳（秒时间戳×1000），最后将毫秒时间戳转换成前端的Date类型</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="Date类型转换成LocalDateTime类型"><a href="#Date类型转换成LocalDateTime类型" class="headerlink" title="Date类型转换成LocalDateTime类型"></a>Date类型转换成LocalDateTime类型</h4><p>前端获得当前时间的秒时间戳，下面的getTime()获得的时间戳单位为毫秒，所以要除以1000，小数部分则通过<code>Math.floor()</code>舍去</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> timestampSeconds = <span class="built_in">Math</span>.floor(<span class="keyword">new</span> <span class="built_in">Date</span>().getTime()/<span class="number">1000</span>)</span><br></pre></td></tr></table></figure><p>后端将秒时间戳转换成LocalDateTime类型</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 前端的new Date()转换的时间戳(秒) 转换成 LocalDateTime</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> timestampSeconds</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> LocalDateTime <span class="title">timestampSecondsChangeToLocalDateTime</span><span class="params">(<span class="keyword">long</span> timestampSeconds)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    Instant instant = Instant.ofEpochSecond(timestampSeconds);</span><br><span class="line">    ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(instant, ZoneId.of(<span class="string">&quot;UTC+8&quot;</span>));</span><br><span class="line">    <span class="keyword">return</span> zonedDateTime.toLocalDateTime();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="LocalDateTime类型转换成Date类型"><a href="#LocalDateTime类型转换成Date类型" class="headerlink" title="LocalDateTime类型转换成Date类型"></a>LocalDateTime类型转换成Date类型</h4><p>后端获得当前时间的秒时间戳</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将LocalDateTime转换成时间戳(秒)</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> localDateTime</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">localDateTimeChangeToTimestampSeconds</span><span class="params">(LocalDateTime localDateTime)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> localDateTime.atZone(ZoneId.systemDefault()).toInstant().getEpochSecond();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>前端将秒时间戳转换成毫秒时间戳，再转换成Date类型，<code>timestampSeconds</code>为秒时间戳</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>(timestampSeconds*<span class="number">1000</span>)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;前端操作的时间类型一般为Date类型（不是Java的Date类型），而Java则为LocalDateTime类型&lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+    <category term="JavaScript" scheme="https://blog.zoutl.cn/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue3使用ECharts图表库</title>
+    <link href="https://blog.zoutl.cn/585.html"/>
+    <id>https://blog.zoutl.cn/585.html</id>
+    <published>2024-02-03T12:43:27.000Z</published>
+    <updated>2026-05-29T11:12:53.925Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装ECharts"><a href="#安装ECharts" class="headerlink" title="安装ECharts"></a>安装ECharts</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install echarts --save</span><br></pre></td></tr></table></figure><h3 id="在页面中使用"><a href="#在页面中使用" class="headerlink" title="在页面中使用"></a>在页面中使用</h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;echarts-box&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;myEcharts1&quot;</span> <span class="attr">:style</span>=<span class="string">&quot;&#123; height: &#x27;300px&#x27; &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;echarts-box&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;myEcharts2&quot;</span> <span class="attr">:style</span>=<span class="string">&quot;&#123; height: &#x27;300px&#x27; &#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h4><p>通过onMounted实现一打开页面就执行initChart()函数加载ECharts图表</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line"><span class="keyword">import</span> &#123; ref, onMounted &#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> echarts <span class="keyword">from</span> <span class="string">&quot;echarts&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明定义一下echart</span></span><br><span class="line"><span class="keyword">let</span> echart = echarts;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> initChart = <span class="function">() =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> chart1 = echart.init(<span class="built_in">document</span>.getElementById(<span class="string">&quot;myEcharts1&quot;</span>), <span class="string">&quot;light&quot;</span>)</span><br><span class="line">    chart1.setOption(&#123;</span><br><span class="line">        <span class="attr">title</span>: &#123;</span><br><span class="line">            <span class="attr">text</span>: <span class="string">&#x27;各个类型的人数&#x27;</span>,</span><br><span class="line">            <span class="attr">left</span>: <span class="string">&#x27;center&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">tooltip</span>: &#123;</span><br><span class="line">            <span class="attr">trigger</span>: <span class="string">&#x27;item&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">legend</span>: &#123;</span><br><span class="line">            <span class="attr">orient</span>: <span class="string">&#x27;vertical&#x27;</span>,</span><br><span class="line">            <span class="attr">bottom</span>: <span class="string">&#x27;bottom&#x27;</span>,</span><br><span class="line">            <span class="attr">show</span>: <span class="literal">false</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">series</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">name</span>: <span class="string">&#x27;被复制的总次数&#x27;</span>,</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&#x27;pie&#x27;</span>,</span><br><span class="line">                <span class="attr">radius</span>: <span class="string">&#x27;70%&#x27;</span>,</span><br><span class="line">                <span class="attr">data</span>: [</span><br><span class="line">                    &#123; <span class="attr">value</span>: <span class="number">1048</span>, <span class="attr">name</span>: <span class="string">&#x27;学生&#x27;</span> &#125;,</span><br><span class="line">                    &#123; <span class="attr">value</span>: <span class="number">735</span>, <span class="attr">name</span>: <span class="string">&#x27;教师&#x27;</span> &#125;,</span><br><span class="line">                    &#123; <span class="attr">value</span>: <span class="number">580</span>, <span class="attr">name</span>: <span class="string">&#x27;家长&#x27;</span> &#125;,</span><br><span class="line">                    &#123; <span class="attr">value</span>: <span class="number">484</span>, <span class="attr">name</span>: <span class="string">&#x27;其他&#x27;</span> &#125;</span><br><span class="line">                ],</span><br><span class="line">                <span class="attr">emphasis</span>: &#123;</span><br><span class="line">                    <span class="attr">itemStyle</span>: &#123;</span><br><span class="line">                        <span class="attr">shadowBlur</span>: <span class="number">10</span>,</span><br><span class="line">                        <span class="attr">shadowOffsetX</span>: <span class="number">0</span>,</span><br><span class="line">                        <span class="attr">shadowColor</span>: <span class="string">&#x27;rgba(0, 0, 0, 0.5)&#x27;</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> chart2 = echart.init(<span class="built_in">document</span>.getElementById(<span class="string">&quot;myEcharts2&quot;</span>), <span class="string">&quot;light&quot;</span>)</span><br><span class="line">    chart2.setOption(&#123;</span><br><span class="line">        <span class="attr">xAxis</span>: &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&#x27;category&#x27;</span>,</span><br><span class="line">            <span class="attr">data</span>: [<span class="string">&#x27;周一&#x27;</span>, <span class="string">&#x27;周二&#x27;</span>, <span class="string">&#x27;周三&#x27;</span>, <span class="string">&#x27;周四&#x27;</span>, <span class="string">&#x27;周五&#x27;</span>, <span class="string">&#x27;周六&#x27;</span>, <span class="string">&#x27;周日&#x27;</span>]</span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">yAxis</span>: &#123;</span><br><span class="line">            <span class="attr">type</span>: <span class="string">&#x27;value&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">series</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">data</span>: [<span class="number">120</span>, <span class="number">132</span>, <span class="number">101</span>, <span class="number">134</span>, <span class="number">90</span>, <span class="number">230</span>, <span class="number">210</span>],</span><br><span class="line">                <span class="attr">type</span>: <span class="string">&#x27;line&#x27;</span>,</span><br><span class="line">                <span class="attr">label</span>: &#123;</span><br><span class="line">                    <span class="attr">show</span>: <span class="literal">true</span>,</span><br><span class="line">                    <span class="attr">position</span>: <span class="string">&#x27;bottom&#x27;</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        <span class="attr">tooltip</span>: &#123;</span><br><span class="line">            <span class="attr">trigger</span>: <span class="string">&#x27;item&#x27;</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">title</span>: &#123;</span><br><span class="line">            <span class="attr">text</span>: <span class="string">&#x27;每天注册用户数&#x27;</span>,</span><br><span class="line">            <span class="attr">left</span>: <span class="string">&#x27;center&#x27;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">onMounted(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    initChart()</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><h4 id="结果截图"><a href="#结果截图" class="headerlink" title="结果截图"></a>结果截图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20240203225118605.png" alt="image-20240203225118605"></p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>ECharts图表库官网地址：<a href="https://echarts.apache.org/zh/index.html">Apache ECharts</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;安装ECharts&quot;&gt;&lt;a href=&quot;#安装ECharts&quot; class=&quot;headerlink&quot; title=&quot;安装ECharts&quot;&gt;&lt;/a&gt;安装ECharts&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
+    
+    <category term="ECharts" scheme="https://blog.zoutl.cn/tags/ECharts/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在前端格式化Element Plus表格数据</title>
+    <link href="https://blog.zoutl.cn/584.html"/>
+    <id>https://blog.zoutl.cn/584.html</id>
+    <published>2024-02-01T07:55:54.000Z</published>
+    <updated>2026-05-29T11:12:53.925Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>有时候后端返回的数据不易于阅读，需要格式化一下，虽然后端也可以格式化数据，但是在前端格式化会更加方便，且前端的代码部署起来比后端方便多了</p><h3 id="简单数据格式化"><a href="#简单数据格式化" class="headerlink" title="简单数据格式化"></a>简单数据格式化</h3><h4 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h4><p><code>2024-02-01T15:10:43</code>格式化成<code>2024-02-01 15:10:43</code></p><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><p>下面代码的<code>scope.row</code>可以拿到整行的数据</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;addDate&quot;</span> <span class="attr">label</span>=<span class="string">&quot;添加时间&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> #<span class="attr">default</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; scope.row.addDate.replace(&#x27;T&#x27;, &#x27; &#x27;) &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="复杂数据格式化"><a href="#复杂数据格式化" class="headerlink" title="复杂数据格式化"></a>复杂数据格式化</h3><h4 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h4><p><code>Wed Feb 07 2024 00:00:00 GMT+0800 (中国标准时间)</code>格式化成<code>2024-02-07 00:00:00</code></p><h4 id="HTML代码-1"><a href="#HTML代码-1" class="headerlink" title="HTML代码"></a>HTML代码</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">&quot;reserveDate&quot;</span> <span class="attr">label</span>=<span class="string">&quot;预约时间&quot;</span> <span class="attr">:formatter</span>=<span class="string">&quot;formatDate&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><h4 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 格式化日期</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;*&#125;</span> </span>row 行数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;*&#125;</span> </span>column 列数据 </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;*&#125;</span> </span>cellValue 单元格值，这个是要格式化的数据</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;*&#125;</span> </span>index 索引值 </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> formatDate = <span class="function">(<span class="params">row, column, cellValue, index</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建 Date 对象并解析原始日期字符串</span></span><br><span class="line">    <span class="keyword">var</span> originalDate = <span class="keyword">new</span> <span class="built_in">Date</span>(cellValue);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提取年、月、日、时、分、秒</span></span><br><span class="line">    <span class="keyword">var</span> year = originalDate.getFullYear();</span><br><span class="line">    <span class="keyword">var</span> month = (originalDate.getMonth() + <span class="number">1</span>).toString().padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> day = originalDate.getDate().toString().padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> hours = originalDate.getHours().toString().padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> minutes = originalDate.getMinutes().toString().padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">    <span class="keyword">var</span> seconds = originalDate.getSeconds().toString().padStart(<span class="number">2</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 构建新的格式化日期字符串</span></span><br><span class="line">    <span class="keyword">var</span> formattedDateString = <span class="string">`<span class="subst">$&#123;year&#125;</span>-<span class="subst">$&#123;month&#125;</span>-<span class="subst">$&#123;day&#125;</span> <span class="subst">$&#123;hours&#125;</span>:<span class="subst">$&#123;minutes&#125;</span>:<span class="subst">$&#123;seconds&#125;</span>`</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> formattedDateString</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;有时候后端返回的数据不易于阅读，需要格式化一下，虽然后端也可以格式化数据，但是在前端格式化会更加方便，且前端的代码部署起来比</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Element Plus" scheme="https://blog.zoutl.cn/tags/Element-Plus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue3使用v-viewer实现查看大图功能</title>
+    <link href="https://blog.zoutl.cn/583.html"/>
+    <id>https://blog.zoutl.cn/583.html</id>
+    <published>2024-01-31T09:07:09.000Z</published>
+    <updated>2026-05-29T11:12:53.925Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install v-viewer@next</span><br></pre></td></tr></table></figure><h3 id="全局引入"><a href="#全局引入" class="headerlink" title="全局引入"></a>全局引入</h3><p>在<code>main.js</code>文件中引入</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Viewer <span class="keyword">from</span> <span class="string">&#x27;v-viewer&#x27;</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&#x27;viewerjs/dist/viewer.css&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> app = createApp(App)</span><br><span class="line">app.use(Viewer).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure><h3 id="在页面中使用"><a href="#在页面中使用" class="headerlink" title="在页面中使用"></a>在页面中使用</h3><h4 id="定义options的url"><a href="#定义options的url" class="headerlink" title="定义options的url"></a>定义options的url</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> options = ref(&#123;</span><br><span class="line">    <span class="attr">url</span>: <span class="string">&#x27;data-src&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><p><code>src</code>填图片在页面中的展示图片链接（一般是略缩图），<code>data-src</code>则填大图的图片链接（一般是更清晰的原图）</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">fixed</span>=<span class="string">&quot;left&quot;</span> <span class="attr">prop</span>=<span class="string">&quot;imageName&quot;</span> <span class="attr">label</span>=<span class="string">&quot;头像&quot;</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span> <span class="attr">width</span>=<span class="string">&quot;180&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> #<span class="attr">default</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">v-viewer</span>=<span class="string">&quot;options&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">el-image</span> <span class="attr">:src</span>=<span class="string">&quot;&#x27;http://localhost:8080/images/adoption/&#x27; + scope.row.imageName&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">:data-src</span>=<span class="string">&quot;&#x27;http://localhost:8080/images/adoption/&#x27; + scope.row.imageName&quot;</span></span></span><br><span class="line"><span class="tag">                <span class="attr">style</span>=<span class="string">&quot;width: 150px&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="效果截图"><a href="#效果截图" class="headerlink" title="效果截图"></a>效果截图</h4><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20240131172548477.png" alt="image-20240131172548477"></p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>v-viewer的GitHub地址：<a href="https://github.com/mirari/v-viewer">mirari/v-viewer</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span c</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vue.js" scheme="https://blog.zoutl.cn/tags/Vue-js/"/>
+    
+    <category term="v-viewer" scheme="https://blog.zoutl.cn/tags/v-viewer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vite项目的热更新失效解决办法</title>
+    <link href="https://blog.zoutl.cn/582.html"/>
+    <id>https://blog.zoutl.cn/582.html</id>
+    <published>2024-01-27T12:28:54.000Z</published>
+    <updated>2026-05-29T11:12:53.925Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用Vite搭建的项目热更新突然失效，修改代码后需要重启项目才可以生效</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><p>Vite项目的文件路径大小写是很严谨的，如果大小写不一样，页面还是可以访问，但是修改代码后热更新就失效了，所以文件路径的大小写一定要一致</p><p>Vite项目的热更新失效，而之前没有问题，一般就是这种情况</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;使用Vite搭建的项目热更新突然失效，修改代码后需要重启项目才可以生效&lt;/p&gt;
+&lt;h3 id=&quot;解决&quot;&gt;&lt;a href=&quot;#</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Vite" scheme="https://blog.zoutl.cn/tags/Vite/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>负载均衡项目的Quartz定时任务重复执行的解决办法</title>
+    <link href="https://blog.zoutl.cn/581.html"/>
+    <id>https://blog.zoutl.cn/581.html</id>
+    <published>2024-01-02T16:11:48.000Z</published>
+    <updated>2026-05-29T11:12:53.922Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>负载均衡的项目如果用了Quartz定时任务，到了指定执行时间，定时任务就会被执行多次，而我希望只执行一次</p><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>在定时任务代码的开头，使用Redis的SETNX命令设置一个键，设置成功才继续执行下面的代码，从而实现只执行一次定时任务</p><h3 id="实现代码"><a href="#实现代码" class="headerlink" title="实现代码"></a>实现代码</h3><p>定义一个方法使用SETNX命令，这个方法给定时任务的代码使用，有注释的代码为关键代码，其上面和下面的代码为<code>打开和关闭Redis连接</code></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 使用SETNX命令设置key-value键值对</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> key     键名</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> value   值</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> seconds 秒数</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> 设置成功返回true，否则返回false</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">setKeyNxSuccess</span><span class="params">(String key, String value, <span class="keyword">int</span> seconds)</span> </span>&#123;</span><br><span class="line">    JedisPool jedisPool = getRedisLink();</span><br><span class="line">    Jedis jedis = getJedis(jedisPool);</span><br><span class="line">    <span class="comment">//setnx设置成功返回1，否则返回0</span></span><br><span class="line">    <span class="keyword">boolean</span> result = (jedis.setnx(key, value) == <span class="number">1</span>);</span><br><span class="line">    <span class="comment">//设置过期时间</span></span><br><span class="line">    setKeyTime(key, seconds);</span><br><span class="line">    closeRedis(jedisPool, jedis);</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>调用上面的代码实现只执行一次定时任务</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.ledao.quartz;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.ledao.util.RedisUtil;</span><br><span class="line"><span class="keyword">import</span> org.springframework.context.annotation.Configuration;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.EnableScheduling;</span><br><span class="line"><span class="keyword">import</span> org.springframework.scheduling.annotation.Scheduled;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> LeDao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@company</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@createDate</span> 2023-12-27 18:33</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@EnableScheduling</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AddTodayVisitorCountToDatabase</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Scheduled(cron = &quot;50 59 23 * * ?&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">work</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置一个标记,设置该标记成功后才执行下面的代码,防止重复执行</span></span><br><span class="line">        <span class="keyword">boolean</span> flag = RedisUtil.setKeyNxSuccess(<span class="string">&quot;setKeyNxSuccess&quot;</span>, <span class="string">&quot;1&quot;</span>, <span class="number">10</span>);</span><br><span class="line">        <span class="keyword">if</span> (flag) &#123;</span><br><span class="line">            <span class="comment">// 这里写业务代码</span></span><br><span class="line">            </span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(LocalDateTime.now() + <span class="string">&quot;定时任务已经执行过了&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h3&gt;&lt;p&gt;负载均衡的项目如果用了Quartz定时任务，到了指定执行时间，定时任务就会被执行多次，而我希望只执行一次&lt;/p&gt;
+&lt;h3 i</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Java" scheme="https://blog.zoutl.cn/tags/Java/"/>
+    
+    <category term="Redis" scheme="https://blog.zoutl.cn/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows系统安装Redis</title>
+    <link href="https://blog.zoutl.cn/580.html"/>
+    <id>https://blog.zoutl.cn/580.html</id>
+    <published>2023-11-26T08:46:16.000Z</published>
+    <updated>2026-05-29T11:12:53.922Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="下载压缩包"><a href="#下载压缩包" class="headerlink" title="下载压缩包"></a>下载压缩包</h3><p>下载地址为：<a href="https://github.com/tporadowski/redis/releases">Releases · tporadowski/redis (github.com)</a>，下载压缩包那个就行了</p><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20231126164913767.png" alt="image-20231126164913767"></p><h3 id="启动Redis"><a href="#启动Redis" class="headerlink" title="启动Redis"></a>启动Redis</h3><p>解压上面下载好的压缩包，然后cmd进入解压后的安装包，输入下面命令即可启动Redis，启动成功的结果如下图所示</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server.exe redis.windows.conf</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20231126165221453.png" alt="image-20231126165221453"></p><h3 id="进入Redis客户端"><a href="#进入Redis客户端" class="headerlink" title="进入Redis客户端"></a>进入Redis客户端</h3><p>上面的cmd窗口不要关闭，再次打开cmd进入上面解压后的文件夹，输入下面命令，然后就可以输入Redis命令来测试了</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli.exe -h 127.0.0.1 -p 6379</span><br></pre></td></tr></table></figure><h3 id="关闭Redis"><a href="#关闭Redis" class="headerlink" title="关闭Redis"></a>关闭Redis</h3><p>直接把上面两个cmd窗口关掉就行了</p><h3 id="PS"><a href="#PS" class="headerlink" title="PS."></a>PS.</h3><p>Java通过Jedis操作Redis前，Redis先需要设置一个访问密码，设置访问密码命令如下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CONFIG SET requirepass 123456</span><br></pre></td></tr></table></figure><p>验证密码</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">auth 123456</span><br></pre></td></tr></table></figure><p><img src="https://image.zoutl.cn/hexo-blog/blogImage/image-20231126165804627.png" alt="image-20231126165804627"></p><p>本博客参考于：<a href="https://blog.csdn.net/m0_63230155/article/details/131951639">2023最新Windows安装配置Redis教程，嘎嘎详细_redis windows最新版本-CSDN博客</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;下载压缩包&quot;&gt;&lt;a href=&quot;#下载压缩包&quot; class=&quot;headerlink&quot; title=&quot;下载压缩包&quot;&gt;&lt;/a&gt;下载压缩包&lt;/h3&gt;&lt;p&gt;下载地址为：&lt;a href=&quot;https://github.com/tporadowski/redis/releas</summary>
+      
+    
+    
+    
+    <category term="后端" scheme="https://blog.zoutl.cn/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="Windows系统" scheme="https://blog.zoutl.cn/tags/Windows%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="Redis" scheme="https://blog.zoutl.cn/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序使用data-传参的注意事项</title>
+    <link href="https://blog.zoutl.cn/579.html"/>
+    <id>https://blog.zoutl.cn/579.html</id>
+    <published>2023-11-13T22:12:23.000Z</published>
+    <updated>2026-05-29T11:12:53.922Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>如果<code>data-</code>后面接的参数名的命名格式是驼峰格式，那么我们拿数据时要把参数名的大写字母转换成小写字符</p><h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><h4 id="HTML代码"><a href="#HTML代码" class="headerlink" title="HTML代码"></a>HTML代码</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">van-button</span> <span class="attr">bind:click</span>=<span class="string">&quot;goToModifyFriendPage&quot;</span> <span class="attr">data-playerName</span>=<span class="string">&quot;&#123;&#123;item.playerName&#125;&#125;&quot;</span>&gt;</span>修改<span class="tag">&lt;/<span class="name">van-button</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h4><p>上面的HTML代码是<code>data-playerName</code>，但是通过<code>playerName</code>是拿不到数据的</p><p>必须把驼峰格式全部变成小写：<code>playername</code>，如下所示</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">goToModifyFriendPage</span>(<span class="params">e</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.target.dataset.playername);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;注意事项&quot;&gt;&lt;a href=&quot;#注意事项&quot; class=&quot;headerlink&quot; title=&quot;注意事项&quot;&gt;&lt;/a&gt;注意事项&lt;/h3&gt;&lt;p&gt;如果&lt;code&gt;data-&lt;/code&gt;后面接的参数名的命名格式是驼峰格式，那么我们拿数据时要把参数名的大写字母转换成小写字</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序实现跳转到其他页面</title>
+    <link href="https://blog.zoutl.cn/578.html"/>
+    <id>https://blog.zoutl.cn/578.html</id>
+    <published>2023-11-13T19:20:07.000Z</published>
+    <updated>2026-05-29T11:12:53.922Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>微信小程序实现跳转到其他页面可以使用<code>wx.navigateTo</code>方法，该方法保留当前页面的导航方式，用户可以通过左上角的返回按钮返回到原页面，跳转时还可以传递参数给目标页面</p><p>如果想要关闭当前页面并跳转到目标页面，可以使用<code>wx.redirectTo</code>方法</p><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><h4 id="不传递参数"><a href="#不传递参数" class="headerlink" title="不传递参数"></a>不传递参数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateTo(&#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;/pages/somePage/somePage&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><h4 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h4><p>直接在url中拼接要传递的参数</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateTo(&#123;</span><br><span class="line">  <span class="attr">url</span>: <span class="string">&#x27;/pages/somePage/somePage?id=1&amp;name=example&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>在目标页面中，通过<code>onLoad</code>生命周期函数接收这些参数</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">onLoad: <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(options.id) <span class="comment">// 输出: 1</span></span><br><span class="line">  <span class="built_in">console</span>.log(options.name) <span class="comment">// 输出: example</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;微信小程序实现跳转到其他页面可以使用&lt;code&gt;wx.navigateTo&lt;/code&gt;方法，该方法保留当前页面的导航方式，用户可以通过左上</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="微信小程序" scheme="https://blog.zoutl.cn/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Element Plus表格实现多选数据（JS实现）</title>
+    <link href="https://blog.zoutl.cn/577.html"/>
+    <id>https://blog.zoutl.cn/577.html</id>
+    <published>2023-09-12T06:17:58.000Z</published>
+    <updated>2026-05-29T11:12:53.922Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="添加el-table-column标签"><a href="#添加el-table-column标签" class="headerlink" title="添加el-table-column标签"></a>添加el-table-column标签</h3><p>添加后会出现一列单选框可以多选数据</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">type</span>=<span class="string">&quot;selection&quot;</span> <span class="attr">width</span>=<span class="string">&quot;44&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure><h3 id="el-table标签加入-selection-change属性"><a href="#el-table标签加入-selection-change属性" class="headerlink" title="el-table标签加入@selection-change属性"></a>el-table标签加入@selection-change属性</h3><p>勾选单选框时会触发@selection-change属性的selectSome方法</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table</span> <span class="attr">:data</span>=<span class="string">&quot;tableData&quot;</span> <span class="attr">stripe</span> <span class="attr">style</span>=<span class="string">&quot;width: 100%&quot;</span> <span class="attr">:border</span>=<span class="string">&quot;true&quot;</span> <span class="attr">max-height</span>=<span class="string">&quot;530&quot;</span></span></span><br><span class="line"><span class="tag">    @<span class="attr">selection-change</span>=<span class="string">&quot;selectSome&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">type</span>=<span class="string">&quot;selection&quot;</span> <span class="attr">width</span>=<span class="string">&quot;44&quot;</span> /&gt;</span></span><br><span class="line">    ......</span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table</span>&gt;</span></span><br></pre></td></tr></table></figure><h3 id="JavaScript代码"><a href="#JavaScript代码" class="headerlink" title="JavaScript代码"></a>JavaScript代码</h3><p>selectSome方法的参数value的值就是选中数据的对象集合</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> deleteIdArray = ref([])</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> selectSome = <span class="function">(<span class="params">value</span>) =&gt;</span> &#123;</span><br><span class="line">    deleteIdArray.value = []</span><br><span class="line">    <span class="keyword">if</span> (value.length !== <span class="number">0</span>) &#123;</span><br><span class="line">        ElMessage.success(<span class="string">&#x27;当前选中 &#x27;</span> + value.length + <span class="string">&#x27; 条数据&#x27;</span>)</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; value.length; i++) &#123;</span><br><span class="line">        <span class="keyword">const</span> id = value[i].id;</span><br><span class="line">        deleteIdArray.value.push(id)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> deleteSome = <span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (deleteIdArray.value.length === <span class="number">0</span>) &#123;</span><br><span class="line">        ElMessage.error(<span class="string">&#x27;请至少选择 1 条要删除的数据&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">const</span> deleteIdStr = deleteIdArray.value.join(<span class="string">&quot;,&quot;</span>)</span><br><span class="line">    <span class="keyword">let</span> params = <span class="keyword">new</span> URLSearchParams()</span><br><span class="line">    params.append(<span class="string">&quot;deleteIdStr&quot;</span>, deleteIdStr)</span><br><span class="line">    <span class="keyword">let</span> url = <span class="string">&#x27;/admin/errorSubmit/deleteSome&#x27;</span></span><br><span class="line">    <span class="keyword">const</span> res = <span class="keyword">await</span> axiosUtil.post(url, params)</span><br><span class="line">    <span class="keyword">if</span> (res.data.code === <span class="number">0</span>) &#123;</span><br><span class="line">        ElMessage.success(res.data.msg)</span><br><span class="line">        <span class="keyword">await</span> loadData()</span><br><span class="line">        deleteIdArray.value = []</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;添加el-table-column标签&quot;&gt;&lt;a href=&quot;#添加el-table-column标签&quot; class=&quot;headerlink&quot; title=&quot;添加el-table-column标签&quot;&gt;&lt;/a&gt;添加el-table-column标签&lt;/h3&gt;&lt;p&gt;添加</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://blog.zoutl.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="JavaScript" scheme="https://blog.zoutl.cn/tags/JavaScript/"/>
+    
+    <category term="Element Plus" scheme="https://blog.zoutl.cn/tags/Element-Plus/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL修改数据库和数据表的字符集以及校对规则</title>
+    <link href="https://blog.zoutl.cn/576.html"/>
+    <id>https://blog.zoutl.cn/576.html</id>
+    <published>2023-07-21T14:56:20.000Z</published>
+    <updated>2026-05-29T11:12:53.922Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><p>我一般新建数据库时，字符集选用<code>utf-8</code>，校对规则选用<code>utf8_general_ci</code></p><p>然而最近我发现如果存放的数据里面有<code>Emoji表情符号</code>时，会报错无法把数据添加到数据库中</p><h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>我查了一下utf-8字符集不支持存入Emoji表情符号，要存入Emoji表情符号则要使用<code>utf8mb4</code>字符集，然后校对规则使用<code>utf8mb4_unicode_ci</code>，所以一开始创建数据库时推荐使用<code>utf8mb4</code>字符集</p><h4 id="其它说明"><a href="#其它说明" class="headerlink" title="其它说明"></a>其它说明</h4><p>MySQL数据库的字符集以及校对规则和数据表的关系：</p><p>表默认使用数据库的字符集和校对规则，也可以选择其它的（可以和数据库的不一样），不过建议弄成一样的</p><h3 id="修改过程"><a href="#修改过程" class="headerlink" title="修改过程"></a>修改过程</h3><h4 id="先备份数据库"><a href="#先备份数据库" class="headerlink" title="先备份数据库"></a>先备份数据库</h4><p><font color="#dd0000">在进行任何修改之前，请确保对数据库进行备份，以防止意外数据丢失</font></p><h4 id="选中要操作的数据库"><a href="#选中要操作的数据库" class="headerlink" title="选中要操作的数据库"></a>选中要操作的数据库</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">USE 你的数据库名称;</span><br></pre></td></tr></table></figure><h4 id="查看字符集和校对规则"><a href="#查看字符集和校对规则" class="headerlink" title="查看字符集和校对规则"></a>查看字符集和校对规则</h4><p>修改之前先看一下当前数据库是什么字符集和校对规则</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#查看字符集</span><br><span class="line"><span class="keyword">SHOW</span> VARIABLES <span class="keyword">LIKE</span> <span class="string">&#x27;character_set_database&#x27;</span>;</span><br><span class="line"></span><br><span class="line">#查看校对规则</span><br><span class="line"><span class="keyword">SHOW</span> VARIABLES <span class="keyword">LIKE</span> <span class="string">&#x27;collation_database&#x27;</span>;</span><br></pre></td></tr></table></figure><h4 id="开始修改数据库"><a href="#开始修改数据库" class="headerlink" title="开始修改数据库"></a>开始修改数据库</h4><p>要将数据库字符集修改为 utf8mb4，并使用 utf8mb4_unicode_ci 校对规则，可以执行以下命令，然后再使用上面命令看修改后的字符集和校对规则</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> DATABASE 你的数据库名称 <span class="type">CHARACTER</span> <span class="keyword">SET</span> <span class="operator">=</span> utf8mb4 <span class="keyword">COLLATE</span> <span class="operator">=</span> utf8mb4_unicode_ci;</span><br></pre></td></tr></table></figure><h4 id="修改数据表"><a href="#修改数据表" class="headerlink" title="修改数据表"></a>修改数据表</h4><p>修改数据库的字符集和校对规则后，数据表的字符集和校对规则不会随之变化，我们可以使用下面命令修改</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 你的数据表名称 <span class="keyword">CONVERT</span> <span class="keyword">TO</span> <span class="type">CHARACTER</span> <span class="keyword">SET</span> utf8mb4 <span class="keyword">COLLATE</span> utf8mb4_unicode_ci;</span><br></pre></td></tr></table></figure><h4 id="重启MySQL服务"><a href="#重启MySQL服务" class="headerlink" title="重启MySQL服务"></a>重启MySQL服务</h4><p>一般不需要修改，我修改数据库的字符集和校对规则后不重启也生效了，如果不生效的话可以尝试重启MySQL服务</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;概况&quot;&gt;&lt;a href=&quot;#概况&quot; class=&quot;headerlink&quot; title=&quot;概况&quot;&gt;&lt;/a&gt;概况&lt;/h3&gt;&lt;h4 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h4&gt;&lt;p&gt;我一般</summary>
+      
+    
+    
+    
+    <category term="数据库" scheme="https://blog.zoutl.cn/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="MySQL" scheme="https://blog.zoutl.cn/tags/MySQL/"/>
+    
+  </entry>
+  
+</feed>
